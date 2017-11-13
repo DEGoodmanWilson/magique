@@ -1,0 +1,6 @@
+.idea/
+cmake-build-debug/
+conanbuildinfo.cmake
+conanbuildinfo.txt
+conaninfo.txt
+
