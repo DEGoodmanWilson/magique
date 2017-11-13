@@ -36,27 +36,37 @@ int main()
 
 
     // fire up a catalog
-    catalog master_catalog;
-
-    // hardcode Don's collection for now
-    collection dons_cards;
-
+    catalog master_catalog{"mtg.json"};
 
     // add endpoints
-    luna::router api;
+    luna::router api{"/"};
+    api.set_mime_type("text/json");
 
     // For now, let's just define them inline, we can move them out later.
+    api.handle_request(luna::request_method::GET, R"(/(.+))", [&](luna::request request) -> luna::response
+    {
+        try
+        {
+            auto card = master_catalog.at(request.matches[1]);
+            nlohmann::json j = card;
+            return {j.dump()};
+        }
+        catch(...)
+        {
+            return {404};
+        }
+    });
+
 
     // launch server
     luna::server server;
 
     server.add_router(api);
 
-    if(!server.start(port))
+    if (!server.start(port))
     {
         return 1;
     }
-
 
 
     return 0;
