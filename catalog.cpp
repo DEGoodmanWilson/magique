@@ -8,6 +8,12 @@
 namespace magique
 {
 
+bool case_insensitive_comp_::operator()(const std::string &a, const std::string &b) const noexcept
+{
+    return strcasecmp(a.c_str(), b.c_str()) < 0;
+}
+
+
 catalog::catalog(std::string filename)
 {
 //    card foobar{
@@ -35,6 +41,7 @@ catalog::catalog(std::string filename)
         card card;
         std::cout << c_str["name"].dump() << std::endl;
         from_json(c_str, card);
+        auto name = card.name;
         cards_by_name_[card.name] = card;
     }
 }

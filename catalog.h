@@ -11,6 +11,10 @@
 namespace magique
 {
 
+struct case_insensitive_comp_ {
+    bool operator()(const std::string& a, const std::string& b) const noexcept;
+};
+
 class catalog
 {
 public:
@@ -19,8 +23,7 @@ public:
     const card &at(std::string name);
 
 private:
-    std::map<card::id_t, card> cards_by_id_;
-    std::map<std::string, card> cards_by_name_;
+    std::map<std::string, card, case_insensitive_comp_> cards_by_name_;
 };
 
 }
