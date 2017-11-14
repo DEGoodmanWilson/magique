@@ -55,7 +55,7 @@ int main()
     pop.setMinRanges(min);
     pop.setMaxRanges(max);
     pop.setMutationRate(0.1); //TODO decrease over time.
-    pop.setCrossoverRate(0.01);
+    pop.setCrossoverRate(1.0);
     pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
     pop.setInteger(true);
     pop.setReplacementSize(pop_size/2);
@@ -74,7 +74,7 @@ int main()
     deck d{pop.getBestFitChromosome(), dons_collection};
     auto rank = d.eval();
     nlohmann::json j{d};
-    std::cout << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
     for(auto gen = 0; gen < 100; ++gen)
     {
@@ -86,7 +86,7 @@ int main()
         deck d{pop.getBestFitChromosome(), dons_collection};
         auto rank = d.eval();
         nlohmann::json j{d};
-        std::cout << gen << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+        std::cout << gen << " " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
     }
 
 

@@ -139,7 +139,10 @@ bool ga2Population::select(void)
     for (i = 0; i < _replacementSize; i += 2)
     {
         s1 = _selectFunc();
-        s2 = _selectFunc();
+        do
+        {
+            s2 = _selectFunc();
+        } while (s1 == s2);
 
         _chromosomes[s1].setParent(0, s1);
         _chromosomes[s1].setParent(1, s1);
@@ -167,15 +170,14 @@ bool ga2Population::evaluate(void)
     {
         f = _chromosomes[i].getFitness();
         _sumFitness += f;
-        if(isnan(_sumFitness))
-            std::cout << " ERROR" << std::endl;
 
         if (f > _maxFitness) _maxFitness = f;
         if (f < _minFitness) _minFitness = f;
     }
     _avgFitness = _sumFitness / (double) _size;
 
-    if(_isSorted)
+    //TODO we're sorting this too many times.
+    if (_isSorted)
     {
         std::sort(_chromosomes.begin(), _chromosomes.end());
     }
@@ -290,8 +292,7 @@ bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b)
 
     ga2Chromosome aNew(_chromoSize), bNew(_chromoSize);
 
-    //TODO this is wrong.
-    aNew = b2 + a1;
+    aNew = a1 + b2;
     bNew = a2 + b1;
     int tempParent1, tempParent2;
     tempParent1 = a.getParent(0);
@@ -379,14 +380,16 @@ int ga2Population::_selectFunc(void)
 
 bool ga2Population::_replaceFunc(void)
 {
+    for(auto &chromo : _nextGen)
+    {
+        chromo.getFitness(); //have to do this now, or the next step won't work.
+    }
     switch (_replacementType)
     {
         case GA2_REPLACE_STEADYSTATENODUPLICATES:
             return _replaceSteadyStateNoDuplicates();
-            break;
         case GA2_REPLACE_STEADYSTATE:
             return _replaceSteadyState();
-            break;
         case GA2_REPLACE_GENERATIONAL:
         default:
             return _replaceGenerational();
@@ -406,13 +409,13 @@ bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
         }
     }
 
+
     ++_crossCount;
 
     switch (_crossoverType)
     {
         case GA2_CROSSOVER_UNIFORM:
             return _crossoverUniform(a, b);
-            break;
         case GA2_CROSSOVER_ONEPOINT:
         default:
             return _crossoverOnePoint(a, b);
@@ -612,9 +615,9 @@ void ga2Population::setMinRanges(std::vector<ga2Gene> ranges)
  */
 std::vector<ga2Gene> ga2Population::getBestFitChromosome(void)
 {
-    if(_isSorted)
+    if (_isSorted)
     {
-        return _chromosomes[_chromosomes.size()-1].getGenes();
+        return _chromosomes[_chromosomes.size() - 1].getGenes();
     }
     int i{0};
     int mostFit{0};
