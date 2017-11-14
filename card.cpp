@@ -37,13 +37,14 @@ std::vector<card::type> card::types_from_string(std::string str)
 
     std::transform(str.begin(), str.end(), str.begin(), ::tolower);
 
-    if (str.find("land")) types.push_back(type::land);
-    if (str.find("creature")) types.push_back(type::creature);
-    if (str.find("artifact")) types.push_back(type::artifact);
-    if (str.find("enchantment")) types.push_back(type::enchantment);
-    if (str.find("planeswalker")) types.push_back(type::planeswalker);
-    if (str.find("instant")) types.push_back(type::instant);
-    if (str.find("sorcery")) types.push_back(type::sorcery);
+    if (str.find("basic land") != std::string::npos) types.push_back(type::basic_land);
+    else if (str.find("land") != std::string::npos) types.push_back(type::land); //don't allow to be both basic land and land
+    if (str.find("creature") != std::string::npos) types.push_back(type::creature);
+    if (str.find("artifact") != std::string::npos) types.push_back(type::artifact);
+    if (str.find("enchantment") != std::string::npos) types.push_back(type::enchantment);
+    if (str.find("planeswalker") != std::string::npos) types.push_back(type::planeswalker);
+    if (str.find("instant") != std::string::npos) types.push_back(type::instant);
+    if (str.find("sorcery") != std::string::npos) types.push_back(type::sorcery);
 
     return types;
 }
@@ -103,6 +104,9 @@ void to_json(nlohmann::json &j, const card &p)
     {
         switch (t)
         {
+            case card::type::basic_land:
+                types.emplace_back("Basic Land");
+                break;
             case card::type::land:
                 types.emplace_back("Land");
                 break;

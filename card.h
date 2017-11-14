@@ -96,23 +96,24 @@ struct card
     using id_t = uint64_t;
     enum class color
     {
-        white = 0,
-        blue = 1,
-        black = 2,
-        red = 3,
-        green = 4,
-        colorless = 5,
+        white,
+        blue,
+        black,
+        red,
+        green,
+        colorless,
     };
 
     enum class type
     {
-        land = 0,
-        creature = 1,
-        artifact = 2,
-        enchantment = 3,
-        planeswalker = 4,
-        instant = 5,
-        sorcery = 6,
+        basic_land,
+        land,
+        creature,
+        artifact,
+        enchantment,
+        planeswalker,
+        instant,
+        sorcery,
     };
 
     static std::vector<color> color_identities_from_array(std::vector<std::string> arr);

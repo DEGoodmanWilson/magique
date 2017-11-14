@@ -10,7 +10,7 @@ CONAN_BASIC_SETUP()
 
 set(SOURCE_FILES main.cpp)
 
-set(MODELS logger.cpp logger.h catalog.cpp catalog.h card.cpp card.h collection.cpp collection.h)
+set(MODELS logger.cpp logger.h catalog.cpp catalog.h card.cpp card.h collection.cpp collection.h deck.cpp deck.h)
 
 set(CONTROLLERS )
 

@@ -46,7 +46,7 @@ catalog::catalog(std::string filename)
     }
 }
 
-const card& catalog::at(std::string name)
+const card& catalog::at(std::string name) const
 {
     return cards_by_name_.at(name);
 }

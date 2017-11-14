@@ -20,7 +20,7 @@ class catalog
 public:
     catalog(std::string filename);
 
-    const card &at(std::string name);
+    const card &at(std::string name) const;
 
 private:
     std::map<std::string, card, case_insensitive_comp_> cards_by_name_;
