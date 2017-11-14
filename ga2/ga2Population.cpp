@@ -396,7 +396,7 @@ bool ga2Population::_replaceFunc(void)
 
 bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
 {
-    if (_crossoverRate != 1.0)
+    if (_crossoverRate <= 1.0)
     {
         //need a random number to compare against crossover rate
         float probability = (float) rand() / (float) RAND_MAX;

@@ -76,7 +76,7 @@ int main()
     nlohmann::json j{d};
     std::cout << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
-    for(auto gen = 0; gen < 10000; ++gen)
+    for(auto gen = 0; gen < 100; ++gen)
     {
         pop.select();
         pop.crossover();

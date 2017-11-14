@@ -23,7 +23,7 @@ collection::collection(std::string filename, const catalog &catalog) : catalog_{
         uint16_t count;
         std::string name;
         getline(tokenS, count_str, ',');
-        count = stoul(count_str);   
+        count = stoul(count_str);
         getline(tokenS, name, '"'); //clear first " char
         getline(tokenS, name, '"');
 //        name = name.substr(1,name.length()-1);
