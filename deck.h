@@ -10,6 +10,7 @@
 #include <json.hpp>
 #include "card.h"
 #include "catalog.h"
+#include "collection.h"
 
 namespace magique
 {
@@ -25,9 +26,12 @@ class deck
 public:
     deck(const std::string &filename, const catalog &catalog);
 
+    deck(const std::vector<uint64_t> &indices, const collection &collection);
+
     double eval();
 
     friend void to_json(nlohmann::json &j, const deck &p);
+
     friend void from_json(const nlohmann::json &j, deck &p);
 
 private:
@@ -39,7 +43,6 @@ private:
     uint8_t colors_;
     nlohmann::json reasons_;
 };
-
 
 
 } //namespace magique

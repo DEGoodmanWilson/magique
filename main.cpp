@@ -6,6 +6,7 @@
 #include "collection.h"
 #include "card.h"
 #include "deck.h"
+#include "ga2/ga2.h"
 
 using namespace magique;
 
@@ -39,15 +40,64 @@ int main()
     // fire up a catalog
     catalog master_catalog{"mtg.json"};
 
-//    collection dons_collection{"don.csv"};
+    collection dons_collection{"don.csv", master_catalog};
 
-    deck dons_wu_flying{"BW Flying.txt", master_catalog};
-    dons_wu_flying.eval();
+//    std::cout << dons_collection.at(0).name << std::endl;
+    auto pop_size{1000};
+    auto chromo_size = 30 - 12; //  30-card collection, with  12 lands
+    ga2Population pop{pop_size, chromo_size};
+    std::vector<ga2Gene> min, max;
+    for (auto i = 0; i < chromo_size; ++i)
+    {
+        min.push_back(0);
+        max.push_back(dons_collection.count());
+    }
+    pop.setMinRanges(min);
+    pop.setMaxRanges(max);
+    pop.setMutationRate(0.01); //TODO decrease over time.
+    pop.setCrossoverRate(0.01);
+    pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
+    pop.setInteger(true);
+    pop.setReplacementSize(pop_size/2);
+    pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
+    pop.setSelectType(GA2_SELECT_RANKED);
+    pop.setSort(true);
+    pop.setEvalFunc([&](std::vector<ga2Gene> genes) -> double
+                    {
+                        //Consuct a deck from what we have here.
+                        deck d{genes, dons_collection};
+                        return d.eval();
+                    });
 
-    nlohmann::json deck_j;
-    to_json(deck_j, dons_wu_flying);
+    pop.init();
+    pop.evaluate();
 
-    std::cout << deck_j.dump(4) << std::endl;
+    for(auto gen = 0; gen < 100; ++gen)
+    {
+        pop.select();
+        pop.crossover();
+        pop.mutate();
+        pop.replace();
+        pop.evaluate();
+//        nlohmann::json j{deck{pop.getBestFitChromosome(), dons_collection}};
+//        std::cout << j.dump() << std::endl;
+        deck d{pop.getBestFitChromosome(), dons_collection};
+        auto rank = d.eval();
+        nlohmann::json j{d};
+        std::cout << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+    }
+
+
+
+
+
+//    deck dons_wu_flying{"BW Flying.txt", master_catalog};
+//    dons_wu_flying.eval();
+//
+//    nlohmann::json deck_j;
+//    to_json(deck_j, dons_wu_flying);
+//
+//    std::cout << deck_j.dump(4) << std::endl;
 
 //    // add endpoints
 //    luna::router api{"/"};

@@ -118,9 +118,9 @@ struct card
 
     static std::vector<color> color_identities_from_array(std::vector<std::string> arr);
 
-    static std::vector<type> types_from_string(std::string str);
+    static std::vector<card::type> types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes);
 
-    std::string id;
+//    std::string id;
     std::string name;
     std::vector<type> types;
     std::vector<color> color_identity;

@@ -31,42 +31,110 @@ std::vector<card::color> card::color_identities_from_array(const std::vector<std
     return colors;
 }
 
-std::vector<card::type> card::types_from_string(std::string str)
+std::vector<card::type>
+card::types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes)
 {
-    std::vector<type> types{};
+    std::vector<type> types_arr{};
 
-    std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+    for (const auto &type : types)
+    {
+        std::string type_str = type;
+        std::transform(type_str.begin(), type_str.end(), type_str.begin(), ::tolower);
 
-    if (str.find("basic land") != std::string::npos) types.push_back(type::basic_land);
-    else if (str.find("land") != std::string::npos) types.push_back(type::land); //don't allow to be both basic land and land
-    if (str.find("creature") != std::string::npos) types.push_back(type::creature);
-    if (str.find("artifact") != std::string::npos) types.push_back(type::artifact);
-    if (str.find("enchantment") != std::string::npos) types.push_back(type::enchantment);
-    if (str.find("planeswalker") != std::string::npos) types.push_back(type::planeswalker);
-    if (str.find("instant") != std::string::npos) types.push_back(type::instant);
-    if (str.find("sorcery") != std::string::npos) types.push_back(type::sorcery);
+        if (type_str == "land")
+        {
+            bool basic_land{false};
+            for (const auto &supertype : supertypes)
+            {
+                std::string supertype_str = supertype;
+                std::transform(supertype_str.begin(), supertype_str.end(), supertype_str.begin(), ::tolower);
 
-    return types;
+                if (supertype == "basic")
+                {
+                    basic_land = true;
+                    break;
+                }
+            }
+            if (basic_land)
+            {
+                types_arr.push_back(type::basic_land);
+            }
+            else
+            {
+                types_arr.push_back(type::land);
+            }
+        }
+        else if (type_str == "creature")
+        { types_arr.push_back(type::creature); }
+        else if (type_str == "artifact")
+        { types_arr.push_back(type::artifact); }
+        else if (type_str == "enchantment")
+        { types_arr.push_back(type::enchantment); }
+        else if (type_str == "planeswalker")
+        { types_arr.push_back(type::planeswalker); }
+        else if (type_str == "instant")
+        { types_arr.push_back(type::instant); }
+        else if (type_str == "sorcery") types_arr.push_back(type::sorcery);
+
+    }
+
+
+    return types_arr;
 }
 
 void from_json(const nlohmann::json &j, card &p)
 {
-    p.id = j.at("id").get<std::string>();
     p.name = j.at("name").get<std::string>();
-    p.types = card::types_from_string(j.at("type").get<std::string>());
-    if (j["color_identity"] != nullptr)
+
+    std::vector<std::string> supertypes;
+    try
     {
-        p.color_identity = card::color_identities_from_array(j.at("color_identity").get<std::vector<std::string>>());
+        if (j.at("supertypes").is_array())
+        {
+            supertypes = j.at("supertypes").get<std::vector<std::string>>();
+        }
     }
-    p.text = (j["text"] == nullptr) ? "" : j.at("text").get<std::string>();
-    if (j["power"] != nullptr)
+    catch (std::out_of_range e)
+    {}
+
+    try
+    {
+        p.types = card::types_from_array(j.at("types").get<std::vector<std::string>>(), supertypes);
+    }
+    catch (std::out_of_range e)
+    {}
+
+
+    try
+    {
+        p.color_identity = card::color_identities_from_array(j.at("colorIdentity").get<std::vector<std::string>>());
+    }
+    catch (std::out_of_range e)
+    {}
+
+    try
+    {
+        p.text = j.at("text").get<std::string>();
+    }
+    catch (std::out_of_range e)
+    {}
+
+
+    try
     {
         p.power = j.at("power").get<std::string>();
     }
-    if (j["toughness"] != nullptr)
+    catch (std::out_of_range e)
+    {}
+
+
+    try
     {
         p.toughness = j.at("toughness").get<std::string>();
     }
+    catch (std::out_of_range e)
+    {}
+
     p.converted_mana_cost = j.at("cmc").get<uint64_t>();
 }
 
@@ -131,15 +199,19 @@ void to_json(nlohmann::json &j, const card &p)
         }
     }
     nlohmann::json power;
-    if(p.power)
+    if (p.power)
+    {
         power = *p.power;
+    }
 
     nlohmann::json toughness;
-    if(p.toughness)
+    if (p.toughness)
+    {
         toughness = *p.toughness;
+    }
 
     j = nlohmann::json{
-            {"id",             p.id},
+//            {"id",             p.id},
             {"name",           p.name},
             {"types",          types},
             {"color_identity", color_identities},

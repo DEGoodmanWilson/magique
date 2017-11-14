@@ -6,35 +6,10 @@
 #include <fstream>
 #include <sstream>
 
-template<class T>
-std::istream &ReadCsv(std::istream &myfile, std::vector<std::vector<T>> &data)
-{
-    using namespace std;
-    string row;
-    while (getline(myfile, row))
-    {
-        data.push_back(vector<T>());
-        istringstream tokenS(row);
-        string token;
-        while (getline(tokenS, token, ','))
-        {
-            istringstream valueS(token);
-            valueS.imbue(myfile.getloc());
-            T value;
-            if (valueS >> value)
-            {
-                data.back().push_back(value);
-            }
-        }
-    }
-
-    return myfile;
-}
-
 namespace magique
 {
 
-collection::collection(std::string filename)
+collection::collection(std::string filename, const catalog &catalog) : catalog_{catalog}
 {
     //load up from a CSV
     std::ifstream file{filename};
@@ -43,28 +18,47 @@ collection::collection(std::string filename)
     getline(file, row); //throw away header row;
     while (getline(file, row))
     {
-        std::vector<std::string> row_v;
         std::istringstream tokenS(row);
-        std::string token;
-        while (getline(tokenS, token, ','))
+        std::string count_str;
+        uint16_t count;
+        std::string name;
+        getline(tokenS, count_str, ',');
+        count = stoul(count_str);
+        getline(tokenS, name, '"'); //clear first " char
+        getline(tokenS, name, '"');
+//        name = name.substr(1,name.length()-1);
+
+        bool is_land = false;
+        for (const auto &type : catalog.at(name).types)
         {
-            std::istringstream valueS(token);
-            valueS.imbue(file.getloc());
-            std::string value;
-            if (valueS >> value)
+            if (type == card::type::land || type == card::type::basic_land)
             {
-                row_v.push_back(value);
+                is_land = true;
+                break;
             }
         }
-        auto qty = std::stoul(row_v[0]);
-        while (qty)
+        if (!is_land)
         {
-            cards_.push_back(row_v[1]);
-            --qty;
+            while (count)
+            {
+                cards_.push_back(name);
+                --count;
+            }
         }
     }
 
 
 }
 
+card collection::at(uint8_t loc) const
+{
+//    std::cout << (int)loc << " " << cards_.size() << " " << cards_[loc] << std::endl;
+    return catalog_.at(cards_[loc]);
 }
+
+uint8_t collection::count()
+{
+    return cards_.size();
+}
+
+} // namespace magique

@@ -33,15 +33,11 @@ catalog::catalog(std::string filename)
     std::ifstream ifs(filename);
     nlohmann::json j{ifs};
 
-    std::cout << j.type_name() << std::endl;
-
     //assume for now that it is just a vector of cards
     for(auto c_str: j)
     {
         card card;
-        std::cout << c_str["name"].dump() << std::endl;
         from_json(c_str, card);
-        auto name = card.name;
         cards_by_name_[card.name] = card;
     }
 }

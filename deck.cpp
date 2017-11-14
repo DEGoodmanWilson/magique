@@ -36,7 +36,7 @@ deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, 
     std::string row;
     while (getline(file, row))
     {
-        std::cout << row << std::endl;
+//        std::cout << row << std::endl;
         if (row[0] == '\\') continue;
         std::istringstream tokenS(row);
         std::string count_str;
@@ -51,16 +51,38 @@ deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, 
             cards_.emplace_back(c);
         }
     }
+}
 
+deck::deck(const std::vector<uint64_t> &indices, const collection &collection) : legal_{true}, rank_{0.0}, colors_{0}
+{
+    for (int i = cost_dist_.size() - 1; i >= 0; --i)
+    {
+        cost_dist_[i] = 0;
+    }
 
+    type_dist_[card::type::basic_land] = 0;
+    type_dist_[card::type::land] = 0;
+    type_dist_[card::type::creature] = 0;
+    type_dist_[card::type::artifact] = 0;
+    type_dist_[card::type::enchantment] = 0;
+    type_dist_[card::type::planeswalker] = 0;
+    type_dist_[card::type::instant] = 0;
+    type_dist_[card::type::sorcery] = 0;
+
+    for(const auto &i : indices)
+    {
+        cards_.emplace_back(collection.at(i));
+    }
 }
 
 double deck::eval()
 {
+    // TODO remove cards from deck that appear more times than in the collection!!
+
     //LEGALITIES!
 
-    // count the size of the deck. For now assume a deck size of 30.
-    int64_t count_diff = cards_.size() - 30;
+    // count the size of the deck. For now assume a deck size of 30, with 12 land
+    int64_t count_diff = cards_.size() - (30-12);
     if (count_diff < 0)
     { legal_ = false; }
     else
@@ -156,16 +178,21 @@ double deck::eval()
                 break;
             case 1:
             case 3:
-                bonus = 0;
+                bonus = -1;
                 break;
             case 4:
+                bonus = -4;
+                break;
             case 5:
+                bonus = -8;
+                break;
             case 6:
-                bonus = (colors_ - 3) * deck_sans_land.size() / 6.0; // (n-3)/6 card penalty for 4 colors
+                bonus = -15;
                 break;
         }
         rank_ += bonus;
         reasons_["colors"] = bonus;
+        reasons_["colors_seen"] = colors_seen.size();
     }
 
 
@@ -216,7 +243,7 @@ double deck::eval()
         reasons_["type_distance"] = distance;
 
     }
-    
+
     return rank_;
 }
 
