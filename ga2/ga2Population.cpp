@@ -22,6 +22,7 @@
 #include <time.h>
 #include <math.h>
 #include "ga2.h"
+#include <algorithm>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -96,26 +97,31 @@ bool ga2Population::init(void)
         newChromo.randomInit(_integer);
         newChromo.setEvalFunc(_evalFunc);
         newChromo.evaluate();
-        if (!_isSorted)
+//        if (!_isSorted)
+//        {
+        newChromo.getFitness(); //force evaluation before sort
+        _chromosomes.push_back(newChromo);
+//        }
+//        else //we have to do an insertion sort. large elements first, small last
+//        {
+//            if (_chromosomes.empty())
+//            { //if theres nothing there, just stuff it in there
+//                _chromosomes.push_back(newChromo);
+//            }
+//            else //we have to look for the right place to put it...
+//            {
+//                //get an iterator
+//                std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
+//                //loop until we find the insertion point
+//                while ((it != _chromosomes.end()) &&
+//                       (it->getFitness() > newChromo.getFitness()))
+//                    it++;
+//                _chromosomes.insert(it, newChromo);
+//            }
+//        }
+        if (_isSorted)
         {
-            _chromosomes.push_back(newChromo);
-        }
-        else //we have to do an insertion sort. large elements first, small last
-        {
-            if (_chromosomes.empty())
-            { //if theres nothing there, just stuff it in there
-                _chromosomes.push_back(newChromo);
-            }
-            else //we have to look for the right place to put it...
-            {
-                //get an iterator
-                std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
-                //loop until we find the insertion point
-                while ((it != _chromosomes.end()) &&
-                       (it->getFitness() > newChromo.getFitness()))
-                    it++;
-                _chromosomes.insert(it, newChromo);
-            }
+            std::sort(_chromosomes.begin(), _chromosomes.end());
         }
     }
     return true;
@@ -153,7 +159,7 @@ bool ga2Population::select(void)
 bool ga2Population::evaluate(void)
 {
     int i;
-    float f;
+    double f;
     _sumFitness = _avgFitness = 0.0;
     _maxFitness = -1 * (double) INT_MAX;
     _minFitness = (double) INT_MAX;
@@ -161,10 +167,18 @@ bool ga2Population::evaluate(void)
     {
         f = _chromosomes[i].getFitness();
         _sumFitness += f;
+        if(isnan(_sumFitness))
+            std::cout << " ERROR" << std::endl;
+
         if (f > _maxFitness) _maxFitness = f;
         if (f < _minFitness) _minFitness = f;
     }
     _avgFitness = _sumFitness / (double) _size;
+
+    if(_isSorted)
+    {
+        std::sort(_chromosomes.begin(), _chromosomes.end());
+    }
     return true;
 }
 
@@ -208,27 +222,35 @@ bool ga2Population::replace(void)
 //TODO this function assumes merely positive fitness values!
 int ga2Population::_selectRoulette(void)
 {
-    float partialSum = 0.0, sumFitness = 0.0;
-    float wheelPosition = 0.0;
+    double minFitness = MAXFLOAT;
+    double partialSum = 0.0, sumFitness = 0.0;
+    double wheelPosition = 0.0;
     int i;
 
     //initialize some stuff, like the total fitness of the population
     for (i = 0; i < _size; ++i)
     {
-        sumFitness += _chromosomes[i].getFitness();
+        auto f = _chromosomes[i].getFitness();
+        if (f < minFitness)
+        {
+            minFitness = f;
+        }
+        sumFitness += f;
     }
 
     //spin that wheel!
-    wheelPosition = ((float) rand() / (float) RAND_MAX) * sumFitness;
+    // The wheel ranges from minFitness to maxFitness
+    wheelPosition = ((double) rand() / (double) RAND_MAX) * sumFitness;
 
     i = -1;
     do
     {
         ++i;
-        partialSum += _chromosomes[i].getFitness();
+        auto f = _chromosomes[i].getFitness();
+        partialSum += f;
     } while ((partialSum < wheelPosition) && (i != _size - 1));
 
-    return _size - i;
+    return i;
 }
 
 int ga2Population::_selectRanked(void)
@@ -441,26 +463,13 @@ bool ga2Population::_replaceSteadyState(void)
     //note that we dont care about the replacement size
     for (i = 0; i < _nextGen.size(); ++i)
     {
-        //we have to do an insertion sort. large elements first, small last
-        if (_chromosomes.empty())
-        { //if theres nothing there, just stuff it in there
-            _chromosomes.push_back(_nextGen[i]);
-        }
-        else //we have to look for the right place to put it...
-        {
-            //get an iterator
-            std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
-            //loop until we find the insertion point
-            while ((it != _chromosomes.end()) &&
-                   (it->getFitness() > _nextGen[i].getFitness()))
-                it++;
-            _chromosomes.insert(it, _nextGen[i]);
-        }
+        _chromosomes.push_back(_nextGen[i]);
     }
+    std::sort(_chromosomes.begin(), _chromosomes.end());
     _nextGen.clear();
+
     //we have a lot of excess members. clear them.
-    while (_size != _chromosomes.size())
-        _chromosomes.pop_back();
+    _chromosomes.erase(_chromosomes.begin(), _chromosomes.begin() + _replacementSize);
 
     return true;
 }
@@ -603,9 +612,13 @@ void ga2Population::setMinRanges(std::vector<ga2Gene> ranges)
  */
 std::vector<ga2Gene> ga2Population::getBestFitChromosome(void)
 {
+    if(_isSorted)
+    {
+        return _chromosomes[_chromosomes.size()-1].getGenes();
+    }
     int i{0};
     int mostFit{0};
-    double max_fitness = -5000; //TODO
+    double max_fitness = -MAXFLOAT;
     for (i = 0; i < _size; ++i)
     {
         auto f = _chromosomes[i].getFitness();

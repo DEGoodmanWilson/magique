@@ -313,33 +313,39 @@ ga2Chromosome &ga2Chromosome::operator+(ga2Chromosome &&a)
     return *this;
 };
 
+bool ga2Chromosome::operator<(const ga2Chromosome &a) const
+{
+    return (this->_fitness < a._fitness);
+}
+
+
 /**
  * Exactly duplicates a chromosome in memory.
  */
-ga2Chromosome &ga2Chromosome::operator=(const ga2Chromosome &a)
-{
-    if (this != &a)
-    {
-        _crossSite = a._crossSite;
-        _evalFunc = a._evalFunc;
-        _fitness = a._fitness;
-        _isEvaluated = a._isEvaluated;
-        _parent[0] = a._parent[0];
-        _parent[1] = a._parent[1];
-        _size = a._size;
-        int i;
-        _geneMaxRanges.clear();
-        _geneMinRanges.clear();
-        _genes.clear();
-        for (i = 0; i < _size; ++i)
-        {
-            _geneMaxRanges.push_back(a._geneMaxRanges[i]);
-            _geneMinRanges.push_back(a._geneMinRanges[i]);
-            _genes.push_back(a._genes[i]);
-        }
-    }
-    return *this;
-}
+//ga2Chromosome &ga2Chromosome::operator=(const ga2Chromosome &a)
+//{
+//    if (this != &a)
+//    {
+//        _crossSite = a._crossSite;
+//        _evalFunc = a._evalFunc;
+//        _fitness = a._fitness;
+//        _isEvaluated = a._isEvaluated;
+//        _parent[0] = a._parent[0];
+//        _parent[1] = a._parent[1];
+//        _size = a._size;
+//        int i;
+//        _geneMaxRanges.clear();
+//        _geneMinRanges.clear();
+//        _genes.clear();
+//        for (i = 0; i < _size; ++i)
+//        {
+//            _geneMaxRanges.push_back(a._geneMaxRanges[i]);
+//            _geneMinRanges.push_back(a._geneMinRanges[i]);
+//            _genes.push_back(a._genes[i]);
+//        }
+//    }
+//    return *this;
+//}
 
 /**
  * Checks for equivalency, looking only at the contents of the

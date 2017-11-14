@@ -131,8 +131,10 @@ public:
 	ga2Chromosome& operator+(ga2Chromosome &&a);
 	ga2Chromosome& operator+(const ga2Chromosome &a);
 
+	bool operator<(const ga2Chromosome &a) const;
+
 	///Set the values of one chromosome to those of another.
-	ga2Chromosome& operator=(const ga2Chromosome &a);
+//	ga2Chromosome& operator=(const ga2Chromosome &a);
 	///Compare two chromosomes for equality.
 	bool operator==(const ga2Chromosome &a);
 	///Print the contents of a chromosome.

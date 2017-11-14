@@ -43,7 +43,7 @@ int main()
     collection dons_collection{"don.csv", master_catalog};
 
 //    std::cout << dons_collection.at(0).name << std::endl;
-    auto pop_size{1000};
+    auto pop_size{10000};
     auto chromo_size = 30 - 12; //  30-card collection, with  12 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
@@ -54,13 +54,13 @@ int main()
     }
     pop.setMinRanges(min);
     pop.setMaxRanges(max);
-    pop.setMutationRate(0.01); //TODO decrease over time.
+    pop.setMutationRate(0.1); //TODO decrease over time.
     pop.setCrossoverRate(0.01);
     pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
     pop.setInteger(true);
     pop.setReplacementSize(pop_size/2);
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
-    pop.setSelectType(GA2_SELECT_RANKED);
+    pop.setSelectType(GA2_SELECT_ROULETTE);
     pop.setSort(true);
     pop.setEvalFunc([&](std::vector<ga2Gene> genes) -> double
                     {
@@ -71,16 +71,18 @@ int main()
 
     pop.init();
     pop.evaluate();
+    deck d{pop.getBestFitChromosome(), dons_collection};
+    auto rank = d.eval();
+    nlohmann::json j{d};
+    std::cout << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
-    for(auto gen = 0; gen < 100; ++gen)
+    for(auto gen = 0; gen < 10000; ++gen)
     {
         pop.select();
         pop.crossover();
         pop.mutate();
         pop.replace();
         pop.evaluate();
-//        nlohmann::json j{deck{pop.getBestFitChromosome(), dons_collection}};
-//        std::cout << j.dump() << std::endl;
         deck d{pop.getBestFitChromosome(), dons_collection};
         auto rank = d.eval();
         nlohmann::json j{d};
@@ -90,14 +92,13 @@ int main()
 
 
 
+    deck dons_wu_flying{"BW Flying.txt", master_catalog};
+    dons_wu_flying.eval();
 
-//    deck dons_wu_flying{"BW Flying.txt", master_catalog};
-//    dons_wu_flying.eval();
-//
-//    nlohmann::json deck_j;
-//    to_json(deck_j, dons_wu_flying);
-//
-//    std::cout << deck_j.dump(4) << std::endl;
+    nlohmann::json deck_j;
+    to_json(deck_j, dons_wu_flying);
+
+    std::cout << "        " << deck_j["rank"].dump() << " " << deck_j.dump() << std::endl;
 
 //    // add endpoints
 //    luna::router api{"/"};

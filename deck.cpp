@@ -48,7 +48,17 @@ deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, 
         for (auto i = count; i > 0; --i)
         {
             card c = catalog.at(name);
-            cards_.emplace_back(c);
+            bool land{false};
+            for (const auto &t:c.types)
+            {
+                if (t == card::type::land || t == card::type::basic_land)
+                {
+                    land = true;
+                    break;
+                }
+            }
+            if(!land)
+                cards_.emplace_back(c);
         }
     }
 }
@@ -69,20 +79,28 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection) :
     type_dist_[card::type::instant] = 0;
     type_dist_[card::type::sorcery] = 0;
 
-    for(const auto &i : indices)
+    // remove any elements that appear twice
+    std::unordered_multiset<uint64_t> collection_duplicates;
+
+    for (const auto &i : indices)
     {
-        cards_.emplace_back(collection.at(i));
+        collection_duplicates.insert(i);
+        if (collection_duplicates.count(i) == 1)
+        {
+            cards_.emplace_back(collection.at(i));
+        }
     }
 }
 
 double deck::eval()
 {
+    rank_ = 30;
     // TODO remove cards from deck that appear more times than in the collection!!
 
     //LEGALITIES!
 
     // count the size of the deck. For now assume a deck size of 30, with 12 land
-    int64_t count_diff = cards_.size() - (30-12);
+    int64_t count_diff = cards_.size() - (30 - 12);
     if (count_diff < 0)
     { legal_ = false; }
     else
@@ -95,57 +113,23 @@ double deck::eval()
     // count for duplicates, ignoring basic land
     std::vector<card> deck_sans_basic_land;
     uint8_t dupe_count = 0;
+
+
+    // basic rankings; only affect ranking if the deck is legal, but there are things we want to computer anyway for diagnostics
+
+    // from this point, eliminate and lands from our calculation;
+    std::unordered_set<card::color> colors_seen;
+
+
     for (const auto &card : cards_)
     {
-        bool land{false};
-        for (const auto &type : card.types)
-        {
-            if (type == card::type::basic_land)
-            {
-                land = true;
-                break;
-            }
-        }
-        if (land) continue;
-
         dupes[card.name]++;
         if (dupes[card.name] > 4)
         {
             legal_ = false;
             ++dupe_count;
         }
-    }
 
-    rank_ -= dupe_count; // severe penalty for each dupe
-    reasons_["dupe_count"] = dupe_count;
-
-
-
-    // basic rankings; only affect ranking if the deck is legal, but there are things we want to computer anyway for diagnostics
-
-    // from this point, eliminate and lands from our calculation;
-
-    std::vector<card> deck_sans_land;
-    for (const auto &card : cards_)
-    {
-        bool land{false};
-        for (const auto &type : card.types)
-        {
-            if (type == card::type::land)
-            {
-                land = true;
-                break;
-            }
-        }
-        if (land) continue;
-
-        deck_sans_land.emplace_back(card);
-    }
-
-    std::unordered_set<card::color> colors_seen;
-    //count mana cost distribution
-    for (const auto &card : deck_sans_land)
-    {
         // mana cost distribution
         cost_dist_[card.converted_mana_cost]++;
 
@@ -163,58 +147,59 @@ double deck::eval()
         {
             type_dist_[type]++;
         }
+
     }
+
+    rank_ -= dupe_count; // severe penalty for each dupe
+    reasons_["dupe_count"] = dupe_count;
+
+    //count mana cost distribution
     colors_ = colors_seen.size();
 
 
     //calculate deviation from ideal mana color distribution
-    if (legal_)
+    double bonus;
+    switch (colors_)
     {
-        double bonus;
-        switch (colors_)
-        {
-            case 2:
-                bonus = deck_sans_land.size() / 6.0;  // 1/6 card bonus for 2 colors
-                break;
-            case 1:
-            case 3:
-                bonus = -1;
-                break;
-            case 4:
-                bonus = -4;
-                break;
-            case 5:
-                bonus = -8;
-                break;
-            case 6:
-                bonus = -15;
-                break;
-        }
-        rank_ += bonus;
-        reasons_["colors"] = bonus;
-        reasons_["colors_seen"] = colors_seen.size();
+        case 2:
+            bonus = cards_.size() / 6.0;  // 1/6 card bonus for 2 colors
+            break;
+        case 1:
+        case 3:
+            bonus = -1;
+            break;
+        case 4:
+            bonus = -4;
+            break;
+        case 5:
+            bonus = -8;
+            break;
+        case 6:
+            bonus = -15;
+            break;
     }
+    rank_ += bonus;
+    reasons_["colors"] = bonus;
+    reasons_["colors_seen"] = colors_seen.size();
 
 
     //calculate difference from ideal mana cost distribution
     // TODO this should be something specified, and depends upon the deck size
     std::array<double, 11> ideal_cmc{0.05, 0.09, 0.10, 0.18, 0.24, 0.18, 0.09, 0.05, 0.01, 0.01, 0.00};
-    float cmc_distance{0.0};
+    double cmc_distance{0.0};
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {
         auto x = (double) cost_dist_[i];
-        auto y = ideal_cmc[i] * deck_sans_land.size();
-        cmc_distance += x * x - y * y;
+        auto y = ideal_cmc[i] * cards_.size();
+        cmc_distance += (x - y) * (x - y);
     }
     cmc_distance = sqrt(cmc_distance);
 
-    if (legal_)
-    {
-        auto distance = (deck_sans_land.size() / 2.0 - cmc_distance);
-        rank_ += distance;
-        reasons_["cmc_distance"] = distance;
 
-    }
+    auto cmc_distance_score = (cards_.size() / 2.0 - cmc_distance);
+    rank_ += cmc_distance_score;
+    reasons_["cmc_distance"] = cmc_distance_score;
+
 
     // type distribution //TODO make this configurable!
     std::map<card::type, double> ideal_types{
@@ -225,24 +210,27 @@ double deck::eval()
             {card::type::instant,      0.13333},
             {card::type::sorcery,      0.10}
     };
-    float type_distance{0.0};
+    double type_distance{0.0};
     for (const auto &type : type_dist_)
     {
         // skip land
-        if(type.first == card::type::land || type.first == card::type::basic_land) continue;
+        if (type.first == card::type::land || type.first == card::type::basic_land) continue;
         auto x = (double) type_dist_.at(type.first);
-        auto y = ideal_types.at(type.first) * deck_sans_land.size();
-        type_distance += x * x - y * y;
+        auto y = ideal_types.at(type.first) * cards_.size();
+        type_distance += (x - y) * (x - y);
     }
-    type_distance = sqrt(cmc_distance);
+    type_distance = sqrt(type_distance);
 
-    if (legal_)
+    auto type_distance_score = (cards_.size() / 2.0 - type_distance);
+    rank_ += type_distance_score;
+    reasons_["type_distance"] = type_distance_score;
+
+    if (!legal_)
     {
-        auto distance = (deck_sans_land.size() / 2.0 - cmc_distance);
-        rank_ += distance;
-        reasons_["type_distance"] = distance;
-
+        rank_ -= 10;
     }
+
+    if (rank_ < 0) rank_ = 0;
 
     return rank_;
 }
