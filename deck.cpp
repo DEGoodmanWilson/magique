@@ -57,8 +57,10 @@ deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, 
                     break;
                 }
             }
-            if(!land)
+            if (!land)
+            {
                 cards_.emplace_back(c);
+            }
         }
     }
 }
@@ -95,7 +97,6 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection) :
 double deck::eval()
 {
     rank_ = 30;
-    // TODO remove cards from deck that appear more times than in the collection!!
 
     //LEGALITIES!
 
@@ -120,6 +121,8 @@ double deck::eval()
     // from this point, eliminate and lands from our calculation;
     std::unordered_set<card::color> colors_seen;
 
+    uint32_t power{0};
+    uint32_t toughness{0};
 
     for (const auto &card : cards_)
     {
@@ -148,6 +151,25 @@ double deck::eval()
             type_dist_[type]++;
         }
 
+
+        //fun stuff
+        //lets tally the str and tuf
+        if (card.power)
+        {
+            uint8_t pow;
+            if (*card.power == "*")
+                pow = 5;
+            else pow = stoul(*card.power);
+            power += pow;
+        }
+        if (card.toughness)
+        {
+            uint8_t tuf;
+            if (*card.toughness == "*")
+                tuf = 5;
+            else tuf = stoul(*card.toughness);
+            toughness += tuf;
+        }
     }
 
     rank_ -= dupe_count; // severe penalty for each dupe
@@ -162,7 +184,7 @@ double deck::eval()
     switch (colors_)
     {
         case 2:
-            bonus = cards_.size() / 6.0;  // 1/6 card bonus for 2 colors
+            bonus = 2;  // 1/6 card bonus for 2 colors
             break;
         case 1:
         case 3:
@@ -179,7 +201,7 @@ double deck::eval()
             break;
     }
     rank_ += bonus;
-    reasons_["colors"] = bonus;
+    reasons_["color_bonus"] = bonus;
     reasons_["colors_seen"] = colors_seen.size();
 
 
@@ -198,7 +220,8 @@ double deck::eval()
 
     auto cmc_distance_score = (cards_.size() / 2.0 - cmc_distance);
     rank_ += cmc_distance_score;
-    reasons_["cmc_distance"] = cmc_distance_score;
+    reasons_["cmc_distance"] = cmc_distance;
+    reasons_["cmc_distance_score"] = cmc_distance_score;
 
 
     // type distribution //TODO make this configurable!
@@ -223,7 +246,8 @@ double deck::eval()
 
     auto type_distance_score = (cards_.size() / 2.0 - type_distance);
     rank_ += type_distance_score;
-    reasons_["type_distance"] = type_distance_score;
+    reasons_["type_distance"] = type_distance;
+    reasons_["type_distance_score"] = type_distance_score;
 
     if (!legal_)
     {
@@ -231,6 +255,19 @@ double deck::eval()
     }
 
     if (rank_ < 0) rank_ = 0;
+
+
+    //// FUN STUFF!
+
+    auto avg_pow = power / cards_.size();
+    reasons_["tot_pwr"] = power;
+    reasons_["avg_pwr"] = avg_pow;
+    rank_ += avg_pow;
+
+    auto avg_tuf = toughness / cards_.size();
+    reasons_["tot_tuf"] = toughness;
+    reasons_["avg_tuf"] = avg_tuf;
+    rank_+= avg_tuf;
 
     return rank_;
 }

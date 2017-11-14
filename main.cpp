@@ -42,23 +42,23 @@ int main()
 
     collection dons_collection{"don.csv", master_catalog};
 
-//    std::cout << dons_collection.at(0).name << std::endl;
-    auto pop_size{10000};
+    std::cout << dons_collection.at(0).name << std::endl;
+    auto pop_size{1000};
     auto chromo_size = 30 - 12; //  30-card collection, with  12 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
     {
         min.push_back(0);
-        max.push_back(dons_collection.count());
+        max.push_back(dons_collection.count()-1);
     }
     pop.setMinRanges(min);
     pop.setMaxRanges(max);
-    pop.setMutationRate(0.1); //TODO decrease over time.
+    pop.setMutationRate(0.2); //TODO decrease over time.
     pop.setCrossoverRate(1.0);
     pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
     pop.setInteger(true);
-    pop.setReplacementSize(pop_size/2);
+    pop.setReplacementSize(pop_size / 2);
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
     pop.setSelectType(GA2_SELECT_ROULETTE);
     pop.setSort(true);
@@ -66,7 +66,24 @@ int main()
                     {
                         //Consuct a deck from what we have here.
                         deck d{genes, dons_collection};
-                        return d.eval();
+                        auto arb_count = 0;
+                        for (const auto &card :d.cards_)
+                        {
+                            if (card.name == "Arborback Stomper")
+                            {
+                                arb_count++;
+                            }
+                        }
+                        if(arb_count > 2)
+                        {
+                            std::cout << "PROBLEM" << std::endl;
+                            for(const auto &g : genes)
+                            {
+                                std::cout << g << " ";
+                            }
+                            std::cout << std::endl;
+                        }
+                            return d.eval();
                     });
 
     pop.init();
@@ -74,9 +91,10 @@ int main()
     deck d{pop.getBestFitChromosome(), dons_collection};
     auto rank = d.eval();
     nlohmann::json j{d};
-    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump()
+              << std::endl;
 
-    for(auto gen = 0; gen < 100; ++gen)
+    for (auto gen = 0; gen < 1000; ++gen)
     {
         pop.select();
         pop.crossover();
@@ -86,19 +104,25 @@ int main()
         deck d{pop.getBestFitChromosome(), dons_collection};
         auto rank = d.eval();
         nlohmann::json j{d};
-        std::cout << gen << " " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+        std::cout << gen << " " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump()
+                  << std::endl;
     }
-
-
 
 
     deck dons_wu_flying{"BW Flying.txt", master_catalog};
     dons_wu_flying.eval();
-
     nlohmann::json deck_j;
     to_json(deck_j, dons_wu_flying);
-
     std::cout << "        " << deck_j["rank"].dump() << " " << deck_j.dump() << std::endl;
+
+    deck bad{{12, 13, 12, 13, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5}, dons_collection};
+    bad.eval();
+    nlohmann::json deck_bad;
+    to_json(deck_bad, bad);
+    std::cout << "        " << deck_bad["rank"].dump() << " " << deck_bad.dump() << std::endl;
+
+
+
 
 //    // add endpoints
 //    luna::router api{"/"};

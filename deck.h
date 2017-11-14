@@ -34,7 +34,7 @@ public:
 
     friend void from_json(const nlohmann::json &j, deck &p);
 
-private:
+public:
     std::vector<card> cards_;
     double rank_;
     std::array<uint8_t, 11> cost_dist_;

@@ -50,7 +50,7 @@ collection::collection(std::string filename, const catalog &catalog) : catalog_{
 
 }
 
-card collection::at(uint8_t loc) const
+card collection::at(uint64_t loc) const
 {
 //    std::cout << (int)loc << " " << cards_.size() << " " << cards_[loc] << std::endl;
     return catalog_.at(cards_[loc]);
