@@ -86,7 +86,7 @@ int main()
         deck d{pop.getBestFitChromosome(), dons_collection};
         auto rank = d.eval();
         nlohmann::json j{d};
-        std::cout << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+        std::cout << gen << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
     }
 
 

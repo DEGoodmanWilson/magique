@@ -23,7 +23,7 @@ collection::collection(std::string filename, const catalog &catalog) : catalog_{
         uint16_t count;
         std::string name;
         getline(tokenS, count_str, ',');
-        count = stoul(count_str);
+        count = stoul(count_str);   
         getline(tokenS, name, '"'); //clear first " char
         getline(tokenS, name, '"');
 //        name = name.substr(1,name.length()-1);
@@ -56,7 +56,7 @@ card collection::at(uint8_t loc) const
     return catalog_.at(cards_[loc]);
 }
 
-uint8_t collection::count()
+uint64_t collection::count()
 {
     return cards_.size();
 }
