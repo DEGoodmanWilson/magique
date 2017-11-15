@@ -121,8 +121,8 @@ double deck::eval()
     // from this point, eliminate and lands from our calculation;
     std::unordered_set<card::color> colors_seen;
 
-    uint32_t power{0};
-    uint32_t toughness{0};
+    double power{0};
+    double toughness{0};
 
     for (const auto &card : cards_)
     {
@@ -170,6 +170,12 @@ double deck::eval()
             else tuf = stoul(*card.toughness);
             toughness += tuf;
         }
+
+        // TODO
+        // balanced representations of primary colors
+        // minomize casting cost (but mana curve?) relative to strength?
+        // interactions! start with flying
+        // key card(s)
     }
 
     rank_ -= dupe_count; // severe penalty for each dupe

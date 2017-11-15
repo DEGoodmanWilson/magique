@@ -42,15 +42,14 @@ int main()
 
     collection dons_collection{"don.csv", master_catalog};
 
-    std::cout << dons_collection.at(0).name << std::endl;
-    auto pop_size{1000};
+    auto pop_size{10000};
     auto chromo_size = 30 - 12; //  30-card collection, with  12 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
     {
         min.push_back(0);
-        max.push_back(dons_collection.count()-1);
+        max.push_back(dons_collection.count() - 1);
     }
     pop.setMinRanges(min);
     pop.setMaxRanges(max);
@@ -66,24 +65,7 @@ int main()
                     {
                         //Consuct a deck from what we have here.
                         deck d{genes, dons_collection};
-                        auto arb_count = 0;
-                        for (const auto &card :d.cards_)
-                        {
-                            if (card.name == "Arborback Stomper")
-                            {
-                                arb_count++;
-                            }
-                        }
-                        if(arb_count > 2)
-                        {
-                            std::cout << "PROBLEM" << std::endl;
-                            for(const auto &g : genes)
-                            {
-                                std::cout << g << " ";
-                            }
-                            std::cout << std::endl;
-                        }
-                            return d.eval();
+                        return d.eval();
                     });
 
     pop.init();
