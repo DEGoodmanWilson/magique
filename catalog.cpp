@@ -16,20 +16,6 @@ bool case_insensitive_comp_::operator()(const std::string &a, const std::string 
 
 catalog::catalog(std::string filename)
 {
-//    card foobar{
-//            0,
-//            "foobar",
-//            {card::type::creature},
-//            {card::color::red},
-//            "Does damage",
-//            4,
-//            4,
-//            1
-//    };
-//
-//    cards_by_id_[foobar.id] = foobar;
-//    cards_by_name_[foobar.name] = foobar;
-
     std::ifstream ifs(filename);
     nlohmann::json j{ifs};
 

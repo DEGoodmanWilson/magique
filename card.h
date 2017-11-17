@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <locale>
+#include <set>
 #include <json.hpp>
 #include <luna/optional.hpp>
 
@@ -118,17 +119,23 @@ struct card
 
     static std::vector<color> color_identities_from_array(std::vector<std::string> arr);
 
-    static std::vector<card::type> types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes);
+    static std::vector<card::type>
+    types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes);
 
 //    std::string id;
     std::string name;
     std::vector<type> types;
+    std::vector<std::string> subtypes;
     std::vector<color> color_identity;
     std::string text;
     std::experimental::optional<std::string> power;
     std::experimental::optional<std::string> toughness;
     uint8_t converted_mana_cost;
+
+    std::set<std::string> mechanics;
 };
+
+std::string to_string(card::type t);
 
 void to_json(nlohmann::json &j, const card &p);
 

@@ -14,6 +14,8 @@
 namespace magique
 {
 
+std::vector<card> deck::key_cards_ = {};
+
 deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, rank_{0.0}, colors_{0}
 {
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
@@ -81,8 +83,17 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection) :
     type_dist_[card::type::instant] = 0;
     type_dist_[card::type::sorcery] = 0;
 
+
     // remove any elements that appear twice
     std::unordered_multiset<uint64_t> collection_duplicates;
+
+    //add key cards first
+    for (const auto &card :key_cards_)
+    {
+        auto index = collection.index_at(card.name);
+        collection_duplicates.insert(index);
+        cards_.emplace_back(card);
+    }
 
     for (const auto &i : indices)
     {
@@ -119,10 +130,14 @@ double deck::eval()
     // basic rankings; only affect ranking if the deck is legal, but there are things we want to computer anyway for diagnostics
 
     // from this point, eliminate and lands from our calculation;
-    std::unordered_set<card::color> colors_seen;
+    std::map<card::color, uint8_t> colors_seen;
 
     double power{0};
     double toughness{0};
+
+    uint8_t colored_card_count_{0};
+
+    double interactions{0};
 
     for (const auto &card : cards_)
     {
@@ -137,12 +152,13 @@ double deck::eval()
         cost_dist_[card.converted_mana_cost]++;
 
         // color distribution
+        if (card.color_identity.size() != 0)
+        {
+            colored_card_count_++;
+        }
         for (const auto &color : card.color_identity)
         {
-            if (colors_seen.count(color) == 0)
-            {
-                colors_seen.insert(color);
-            }
+            colors_seen[color]++;
         }
 
         //type distribution
@@ -158,25 +174,64 @@ double deck::eval()
         {
             uint8_t pow;
             if (*card.power == "*")
+            {
                 pow = 5;
-            else pow = stoul(*card.power);
+            }
+            else
+            { pow = stoul(*card.power); }
             power += pow;
         }
         if (card.toughness)
         {
             uint8_t tuf;
             if (*card.toughness == "*")
+            {
                 tuf = 5;
-            else tuf = stoul(*card.toughness);
+            }
+            else
+            { tuf = stoul(*card.toughness); }
             toughness += tuf;
         }
 
+        // interactions!
+        for (const auto &card2 : cards_)
+        {
+            if (card2.name == card.name) continue;
+            //check mechanics
+            for (const auto &m : card.mechanics)
+            {
+                if (card2.mechanics.count(m))
+                {
+                    interactions += 0.04; //1 point for the interaction makes 2 points total, when we hit this combo again
+                }
+            }
+
+            //check types
+            for (const auto &t : card2.types)
+            {
+                if (t == card::type::creature) continue; //don't bother with creature types.
+                if (card.text.find(to_string(t)) != std::string::npos)
+                {
+                    interactions += 0.04; //2 point for the interaction makes 2 points total
+                }
+            }
+
+            //check subtypes
+            for (const auto &t : card2.subtypes)
+            {
+                if (card.text.find(t) != std::string::npos)
+                {
+                    interactions += 0.04; //2 point for the interaction makes 2 points total
+                }
+            }
+        }
+
         // TODO
-        // balanced representations of primary colors
         // minomize casting cost (but mana curve?) relative to strength?
-        // interactions! start with flying
-        // key card(s)
     }
+
+    rank_ += interactions;
+    reasons_["interactions"] = interactions;
 
     rank_ -= dupe_count; // severe penalty for each dupe
     reasons_["dupe_count"] = dupe_count;
@@ -184,26 +239,34 @@ double deck::eval()
     //count mana cost distribution
     colors_ = colors_seen.size();
 
+    //calculate color balance. Ideally (maybe?) all colors are equally distributed.
+    auto ideal_color_count = colored_card_count_ / colors_; // TODO this doesn't account for colorless cards!
+    double color_balance_adjustment_ = 0;
+    for (const auto &c: colors_seen)
+    {
+        color_balance_adjustment_ += abs(ideal_color_count - c.second);
+    }
+    rank_ -= color_balance_adjustment_; //TODO weight?
+    reasons_["color_balance_adjustment"] = color_balance_adjustment_;
+
 
     //calculate deviation from ideal mana color distribution
     double bonus;
     switch (colors_)
     {
         case 2:
-            bonus = 2;  // 1/6 card bonus for 2 colors
+            bonus = 0;  // 1/6 card bonus for 2 colors
             break;
         case 1:
         case 3:
-            bonus = -1;
-            break;
-        case 4:
-            bonus = -4;
-            break;
-        case 5:
             bonus = -8;
             break;
-        case 6:
-            bonus = -15;
+        case 4:
+            bonus = -16;
+            break;
+        case 5:
+        default:
+            bonus = -32;
             break;
     }
     rank_ += bonus;
@@ -273,7 +336,7 @@ double deck::eval()
     auto avg_tuf = toughness / cards_.size();
     reasons_["tot_tuf"] = toughness;
     reasons_["avg_tuf"] = avg_tuf;
-    rank_+= avg_tuf;
+    rank_ += avg_tuf;
 
     return rank_;
 }
@@ -296,13 +359,13 @@ void to_json(nlohmann::json &j, const deck &d)
             {"sorcery",      d.type_dist_.at(card::type::sorcery)}
     };
 
-    std::vector<std::string> cards;
-    for (const auto &card : d.cards_)
-    {
-        cards.push_back(card.name);
-    }
-    std::sort(cards.begin(), cards.end());
-    j["cards"] = cards;
+//    std::vector<std::string> cards;
+//    for (const auto &card : d.cards_)
+//    {
+//        cards.push_back(card.name);
+//    }
+//    std::sort(cards.begin(), cards.end());
+    j["cards"] = d.cards_;
     j["reasons"] = d.reasons_;
 }
 

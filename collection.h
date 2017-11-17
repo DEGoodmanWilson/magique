@@ -15,8 +15,8 @@ class collection
 {
 public:
     collection(std::string filename, const catalog &catalog);
-
     card at(uint64_t loc) const;
+    uint64_t index_at(std::string name) const;
     uint64_t count();
 private:
     const catalog &catalog_;

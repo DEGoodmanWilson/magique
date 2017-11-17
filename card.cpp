@@ -104,6 +104,16 @@ void from_json(const nlohmann::json &j, card &p)
     catch (std::out_of_range e)
     {}
 
+    try
+    {
+        if (j.at("subtypes").is_array())
+        {
+            p.subtypes = j.at("subtypes").get<std::vector<std::string>>();
+        }
+    }
+    catch (std::out_of_range e)
+    {}
+
 
     try
     {
@@ -136,6 +146,54 @@ void from_json(const nlohmann::json &j, card &p)
     {}
 
     p.converted_mana_cost = j.at("cmc").get<uint64_t>();
+
+    //TODO first pass at finding interesting mechanics. In fact, this should be handled externally by something smarter
+
+    // flying, reach
+    if (p.text.find("flying") != std::string::npos || p.text.find("reach") != std::string::npos)
+    {
+        p.mechanics.insert("flying");
+    }
+
+    if (p.text.find("token") != std::string::npos)
+    {
+        p.mechanics.insert("token");
+    }
+
+    if ( (p.text.find("+1/+1") != std::string::npos) ||
+            (p.text.find("+2/+2") != std::string::npos) ||
+            (p.text.find("+3/+3") != std::string::npos) ) //TODO we can do better witha regex.
+    {
+        p.mechanics.insert("buff");
+    }
+
+    if (p.text.find("-1/-1") != std::string::npos)
+    {
+        p.mechanics.insert("debuff");
+    }
+}
+
+std::string to_string(card::type t)
+{
+    switch (t)
+    {
+        case card::type::basic_land:
+            return "basic land";
+        case card::type::land:
+            return "land";
+        case card::type::creature:
+            return "creature";
+        case card::type::artifact:
+            return "artifact";
+        case card::type::enchantment:
+            return "enchantment";
+        case card::type::planeswalker:
+            return "planeswalker";
+        case card::type::instant:
+            return "instant";
+        case card::type::sorcery:
+            return "sorcery";
+    }
 }
 
 void to_json(nlohmann::json &j, const card &p)
@@ -147,8 +205,8 @@ void to_json(nlohmann::json &j, const card &p)
         switch (c)
         {
             case card::color::white:
-                break;
                 color_identities.emplace_back("White");
+                break;
             case card::color::blue:
                 color_identities.emplace_back("Blue");
                 break;
@@ -198,6 +256,12 @@ void to_json(nlohmann::json &j, const card &p)
                 break;
         }
     }
+
+    if (p.subtypes.size() > 0)
+    {
+        j["subtypes"] = p.subtypes;
+    }
+
     nlohmann::json power;
     if (p.power)
     {

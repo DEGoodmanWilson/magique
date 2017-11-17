@@ -28,6 +28,12 @@ public:
 
     deck(const std::vector<uint64_t> &indices, const collection &collection);
 
+    static void add_key_card(card key)
+    {
+        key_cards_.push_back(key);
+    }
+
+
     double eval();
 
     friend void to_json(nlohmann::json &j, const deck &p);
@@ -42,6 +48,7 @@ public:
     bool legal_;
     uint8_t colors_;
     nlohmann::json reasons_;
+    static std::vector<card> key_cards_;
 };
 
 
