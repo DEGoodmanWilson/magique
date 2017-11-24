@@ -43,10 +43,12 @@ int main()
     collection dons_collection{"don.csv", master_catalog};
 
     // pick a key card
-//    deck::add_key_card(master_catalog.at("Kefnet the Mindful"));
+    deck::add_key_card(master_catalog.at("Arborback Stomper"));
+    deck::add_key_card(master_catalog.at("Tattered Mummy"));
 
-    auto pop_size{100};
-    auto chromo_size = 30 - 12; //  30-card collection, with  12 lands
+
+    auto pop_size{1000};
+    auto chromo_size = 30 - 14; //  15-card collection, with  6 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)

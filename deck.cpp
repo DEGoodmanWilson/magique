@@ -137,7 +137,7 @@ double deck::eval()
 
     uint8_t colored_card_count_{0};
 
-    double interactions{0};
+    std::map<std::string, double> interactions;
 
     for (const auto &card : cards_)
     {
@@ -202,36 +202,64 @@ double deck::eval()
             {
                 if (card2.mechanics.count(m))
                 {
-                    interactions += 0.04; //1 point for the interaction makes 2 points total, when we hit this combo again
+                    interactions[m]++;
                 }
             }
 
-            //check types
-            for (const auto &t : card2.types)
-            {
-                if (t == card::type::creature) continue; //don't bother with creature types.
-                if (card.text.find(to_string(t)) != std::string::npos)
-                {
-                    interactions += 0.04; //2 point for the interaction makes 2 points total
-                }
-            }
+//            //check types
+//            for (const auto &t : card2.types)
+//            {
+//                if (t == card::type::creature) continue; //don't bother with creature types.
+//                if (card.text.find(to_string(t)) != std::string::npos)
+//                {
+//                    interactions[to_string(t)]++;
+//
+////                    interactions += 0.04; //2 point for the interaction makes 2 points total
+//                }
+//            }
 
-            //check subtypes
-            for (const auto &t : card2.subtypes)
-            {
-                if (card.text.find(t) != std::string::npos)
-                {
-                    interactions += 0.04; //2 point for the interaction makes 2 points total
-                }
-            }
+//            //check subtypes
+//            for (const auto &t : card2.subtypes)
+//            {
+//                if (card.text.find(t) != std::string::npos)
+//                {
+//                    interactions[t]++;
+//
+////                    interactions += 0.04; //2 point for the interaction makes 2 points total
+//                }
+//            }
         }
 
         // TODO
         // minomize casting cost (but mana curve?) relative to strength?
     }
 
-    rank_ += interactions;
-    reasons_["interactions"] = interactions;
+
+    // TODO this is all fucked up
+    double interactions_bonus{0};
+    reasons_["interactions"] = nlohmann::json{};
+    reasons_["interaction_mult"] = nlohmann::json{};
+    std::map<std::string, double> interaction_multipliers;
+    for(const auto& i : interactions)
+    {
+        if(interaction_multipliers[i.first] == 0.0) interaction_multipliers[i.first] = 1.0; //initialize
+        interaction_multipliers[i.first] += (i.second / 100.0);
+    }
+
+    for(const auto& i : interactions)
+    {
+//        double b = interaction_multipliers[i.first] * i.second;
+        double b = i.second/cards_.size();
+        reasons_["interaction_mult"][i.first]=interaction_multipliers[i.first];
+        reasons_["interactions"][i.first] = b;
+        interactions_bonus += b;
+    }
+
+
+
+
+    rank_ += interactions_bonus / cards_.size();
+    reasons_["interactions_bonus"] = interactions_bonus;
 
     rank_ -= dupe_count; // severe penalty for each dupe
     reasons_["dupe_count"] = dupe_count;
@@ -276,7 +304,7 @@ double deck::eval()
 
     //calculate difference from ideal mana cost distribution
     // TODO this should be something specified, and depends upon the deck size
-    std::array<double, 11> ideal_cmc{0.05, 0.09, 0.10, 0.18, 0.24, 0.18, 0.09, 0.05, 0.01, 0.01, 0.00};
+    std::array<double, 11> ideal_cmc{0.09, 0.09, 0.10, 0.18, 0.20, 0.18, 0.09, 0.05, 0.01, 0.01, 0.00};
     double cmc_distance{0.0};
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {

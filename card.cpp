@@ -2,6 +2,7 @@
 // Created by Don Goodman-Wilson on 13/11/2017.
 //
 
+#include <regex>
 #include "card.h"
 #include <json.hpp>
 
@@ -149,8 +150,12 @@ void from_json(const nlohmann::json &j, card &p)
 
     //TODO first pass at finding interesting mechanics. In fact, this should be handled externally by something smarter
 
+    // TODO interactions should be cumulative—the more of one kind you have, the more each gives points. We can improve on this algorithm.
+
+    // TOPO case-insensitive search?
+
     // flying, reach
-    if (p.text.find("flying") != std::string::npos || p.text.find("reach") != std::string::npos)
+    if (p.text.find("Flying") != std::string::npos || p.text.find("Reach") != std::string::npos)
     {
         p.mechanics.insert("flying");
     }
@@ -160,14 +165,23 @@ void from_json(const nlohmann::json &j, card &p)
         p.mechanics.insert("token");
     }
 
-    if ( (p.text.find("+1/+1") != std::string::npos) ||
-            (p.text.find("+2/+2") != std::string::npos) ||
-            (p.text.find("+3/+3") != std::string::npos) ) //TODO we can do better witha regex.
+    if (p.text.find("draw") != std::string::npos)
+    {
+        p.mechanics.insert("draw");
+    }
+
+    std::smatch sm;
+    if(std::regex_search(p.text, sm, std::regex{R"(\+[0-9]/\+[0-9])"}) )
     {
         p.mechanics.insert("buff");
     }
 
-    if (p.text.find("-1/-1") != std::string::npos)
+    if (p.text.find("{E}") != std::string::npos)
+    {
+        p.mechanics.insert("energy");
+    }
+
+    if(std::regex_search(p.text, sm, std::regex{R"(\-[0-9]/\-[0-9])"}) )
     {
         p.mechanics.insert("debuff");
     }
