@@ -18,7 +18,7 @@ interactions::interactions(std::string filename)
     for (auto it = interactions.begin(); it != interactions.end(); ++it)
     {
         //key is a string, value is an object mapping strings to doubles
-        interactions_store_[it.key()] = it.value().get<std::map<std::string, double>>();
+        interactions_store_[it.key()] = std::make_shared<interaction>(it.value().get<std::unordered_map<std::string, double>>());
     }
 
 }
@@ -36,7 +36,7 @@ double interactions::evaluate(const card &a, const card &b) const
         auto interactions = interactions_store_.at(ability);
 
         // in order to find abilities that interact with the _lack_ of an ability, we need to iterate through the interactions first
-        for (const auto &interaction : interactions)
+        for (const auto &interaction : *interactions)
         {
             bool negative{interaction.first[0] == '!'};
 
@@ -45,10 +45,11 @@ double interactions::evaluate(const card &a, const card &b) const
             {
                 b_ability = b_ability.substr(1);
             }
+            bool b_has_ability{b.abilities.count(b_ability) != 0};
 
             // if b has this ability…or it is an interaction with the absence of an ability, and b doesn't have it
-            if ((!negative && (b.abilities.count(b_ability) > 0)) ||
-                (negative && (b.abilities.count(b_ability) == 0)))
+            if ((!negative && b_has_ability) ||
+                (negative && !b_has_ability))
             {
                 value += interaction.second;
             }

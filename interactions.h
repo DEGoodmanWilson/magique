@@ -5,6 +5,7 @@
 #pragma once
 
 #include "catalog.h"
+#include <unordered_map>
 
 namespace magique
 {
@@ -15,6 +16,7 @@ public:
     interactions(std::string filename);
 
     double evaluate(const card &a, const card &b) const;
+    using interaction = std::unordered_map<std::string, double>;
 
 private:
 
@@ -38,7 +40,8 @@ private:
 // So for now, I am OK with this data structure, but experience will surely dictate that we should do things differently in the future.
 
     // e.g. interactions["flying"]["flying"] = 1.0;
-    std::map<std::string, std::map<std::string, double>> interactions_store_;
+
+    std::unordered_map<std::string, std::shared_ptr<interaction>> interactions_store_;
 };
 
 } // namespace magique

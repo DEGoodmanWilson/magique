@@ -49,7 +49,7 @@ int main()
 //    deck::add_key_card(master_catalog.at("Tattered Mummy"));
 
 
-    auto pop_size{100};
+    auto pop_size{1000};
     auto chromo_size = 30 - 14; //  15-card collection, with  6 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
@@ -82,7 +82,7 @@ int main()
 //    nlohmann::json j{d};
 //    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
-    for (auto gen = 0; gen < 100; ++gen)
+    for (auto gen = 0; gen < 1000; ++gen)
     {
         pop.select();
         pop.crossover();
