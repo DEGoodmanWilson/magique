@@ -45,12 +45,12 @@ int main()
     interactions interactions{"interactions.json"};
 
     // pick a key card
-//    deck::add_key_card(master_catalog.at("Arborback Stomper"));
+    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
 //    deck::add_key_card(master_catalog.at("Tattered Mummy"));
 
 
     auto pop_size{1000};
-    auto chromo_size = 30 - 14; //  15-card collection, with  6 lands
+    auto chromo_size = 30 - 13; //  15-card collection, with  6 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)

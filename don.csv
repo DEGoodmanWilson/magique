@@ -1,377 +1,368 @@
 Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
-1,"Accomplished Automaton",KLD,0.11,0,0,3,11/11/2017
-1,"Aegis Automaton",AER,0.14,0,0,0,19/11/2017
-1,"Aerial Responder",KLD,0.24,0,0,3,11/11/2017
-1,"Aeronaut Admiral",AER,0.14,0,0,0,19/11/2017
-2,"Aether Chaser",AER,0.14,0,0,0,19/11/2017
-1,"Aether Herder",AER,0.14,0,0,0,19/11/2017
-2,"Aether Inspector",AER,0.14,0,0,0,19/11/2017
-1,"Aether Poisoner",AER,0.14,0,0,0,19/11/2017
-2,"Aether Swooper",AER,0.14,0,0,0,19/11/2017
-1,"Aether Tradewinds",KLD,0.14,0,0,3,11/11/2017
-1,"Aetherborn Marauder",KLD,0.2,0,0,3,11/11/2017
-1,"Aethergeode Miner",AER,0.14,0,0,0,19/11/2017
-1,"Aetherstorm Roc",KLD,0.26,0,0,3,11/11/2017
-1,"Aetherstream Leopard",AER,0.14,0,0,0,19/11/2017
-1,"Ahn-Crop Crasher",AKH,0.12,0,0,3,11/11/2017
-1,"Air Elemental",W17,0.32,0,0,3,11/11/2017
-1,"Ajani Unyielding",AER,0.14,0,0,0,19/11/2017
-1,"Alley Evasion",AER,0.14,0,0,0,19/11/2017
-1,"Alley Evasion",AER,0.12,0,0,3,11/11/2017
-2,"Alley Strangler",AER,0.14,0,0,0,19/11/2017
-1,"Alley Strangler",AER,0.11,0,0,3,11/11/2017
-1,"Ancient Crab",AKH,0.3,0,0,3,11/11/2017
-2,"Angler Drake",AKH,0.18,0,0,3,11/11/2017
-2,"Arborback Stomper",KLD,0.18,0,0,3,11/11/2017
-2,"Audacious Infiltrator",AER,0.14,0,0,0,19/11/2017
-2,"Augmenting Automaton",AER,0.14,0,0,0,19/11/2017
-1,"Aviary Mechanic",KLD,0.1,0,0,3,11/11/2017
-1,"Baleful Ammit",AKH,0.22,0,0,3,11/11/2017
-2,"Baral, Chief of Compliance",AER,0.14,0,0,0,19/11/2017
-1,"Bastion Enforcer",AER,0.14,0,0,0,19/11/2017
-1,"Bastion Enforcer",AER,0.1,0,0,3,11/11/2017
-2,"Bastion Inventor",AER,0.14,0,0,0,19/11/2017
-1,"Bastion Inventor",AER,0.11,0,0,3,11/11/2017
-1,"Bitterblade Warrior",AKH,0.12,0,0,3,11/11/2017
-3,"Bloodhunter Bat",W17,0.3,0,0,3,11/11/2017
-1,"Bloodlust Inciter",AKH,0.12,0,0,3,11/11/2017
-1,"Blossoming Defense",KLD,1.5,0,0,3,11/11/2017
-2,"Brazen Scourge",KLD,0.2,0,0,3,11/11/2017
-1,"Built to Last",KLD,0.1,0,0,3,11/11/2017
-1,"Cartouche of Ambition",AKH,0.13,0,0,3,11/11/2017
-1,"Cartouche of Knowledge",AKH,0.14,0,0,3,11/11/2017
-2,"Cartouche of Solidarity",AKH,0.15,0,0,3,11/11/2017
-2,"Cartouche of Strength",AKH,0.14,0,0,3,11/11/2017
-2,"Cartouche of Zeal",AKH,0.15,0,0,3,11/11/2017
-1,"Cathartic Reunion",KLD,0.17,0,0,3,11/11/2017
-2,"Caught in the Brights",AER,0.14,0,0,0,19/11/2017
-1,"Censor",AKH,1.59,0,0,3,11/11/2017
-2,"Certain Death",W17,0.35,0,0,3,11/11/2017
-1,"Chandra's Pyrohelix",KLD,0.12,0,0,3,11/11/2017
-1,"Chandra's Revolution",AER,0.14,0,0,0,19/11/2017
-1,"Chandra's Revolution",AER,0.11,0,0,3,11/11/2017
-2,"Cinder Barrens",AKH,0.18,0,0,3,11/11/2017
-2,"Cogwork Assembler",AER,0.21,0,0,3,11/11/2017
-1,"Commencement of Festivities",KLD,0.13,0,0,3,11/11/2017
-2,"Compulsory Rest",AKH,0.12,0,0,3,11/11/2017
-1,"Consulate Crackdown",AER,0.14,0,0,0,19/11/2017
-1,"Conviction",AER,0.14,0,0,0,19/11/2017
-1,"Conviction",AER,0.12,0,0,3,11/11/2017
-2,"Countless Gears Renegade",AER,0.14,0,0,0,19/11/2017
-1,"Cowl Prowler",KLD,0.11,0,0,3,11/11/2017
-2,"Crocodile of the Crossing",AKH,0.2,0,0,3,11/11/2017
-2,"Cruel Finality",AER,0.14,0,0,0,19/11/2017
-1,"Curio Vendor",KLD,0.11,0,0,3,11/11/2017
-2,"Cursed Minotaur",AKH,0.13,0,0,3,11/11/2017
-1,"Daring Demolition",AER,0.14,0,0,0,19/11/2017
-1,"Daring Demolition",AER,0.12,0,0,3,11/11/2017
-1,"Dawnfeather Eagle",AER,0.14,0,0,0,19/11/2017
-1,"Dawnfeather Eagle",AER,0.12,0,0,3,11/11/2017
-1,"Decision Paralysis",AKH,0.11,0,0,3,11/11/2017
-1,"Decommission",AER,0.14,0,0,0,19/11/2017
-2,"Defiant Salvager",AER,0.14,0,0,0,19/11/2017
-1,"Destructive Tampering",AER,0.14,0,0,3,11/11/2017
-1,"Dhund Operative",KLD,0.1,0,0,3,11/11/2017
-2,"Dispersal Technician",AER,0.14,0,0,0,19/11/2017
-2,"Divine Verdict",W17,0.28,0,0,3,11/11/2017
-1,"Djeru's Resolve",AKH,0.12,0,0,3,11/11/2017
-1,"Doomed Dissenter",AKH,0.14,0,0,3,11/11/2017
-2,"Druid of the Cowl",AER,0.14,0,0,0,19/11/2017
-4,"Druid of the Cowl",AER,0.14,0,0,3,11/11/2017
-1,"Druid of the Cowl",AER,0.14,1,0,0,19/11/2017
-1,"Dukhara Peafowl",KLD,0.11,0,0,3,11/11/2017
-1,"Dune Beetle",AKH,0.13,0,0,3,11/11/2017
-1,"Durable Handicraft",KLD,0.17,0,0,3,11/11/2017
-1,"Eager Construct",KLD,0.11,0,0,3,11/11/2017
-2,"Eddytrail Hawk",KLD,0.1,0,0,3,11/11/2017
-2,"Electrify",AKH,0.12,0,0,3,11/11/2017
-1,"Electrostatic Pummeler",KLD,0.63,0,0,3,11/11/2017
-1,"Embraal Gear-Smasher",AER,0.11,0,0,3,11/11/2017
-1,"Empyreal Voyager",KLD,0.18,0,0,3,11/11/2017
-2,"Enraged Giant",AER,0.2,0,0,3,11/11/2017
-2,"Essence Extraction",KLD,0.23,0,0,3,11/11/2017
-1,"Essence Scatter",AKH,0.14,0,0,3,11/11/2017
-4,"Evolving Wilds",AKH,0.15,0,0,3,11/11/2017
-1,"Fabrication Module",KLD,0.2,0,0,3,11/11/2017
-2,"Falkenrath Reaver",W17,0.39,0,0,3,11/11/2017
-2,"Fan Bearer",AKH,0.12,0,0,3,11/11/2017
-1,"Fatal Push",AER,0.14,1,0,0,19/11/2017
-1,"Fateful Showdown",KLD,0.29,0,0,3,11/11/2017
-2,"Felidar Guardian",AER,0.14,0,0,0,19/11/2017
-1,"Fen Hauler",AER,0.14,0,0,0,19/11/2017
-1,"Festering Mummy",AKH,0.14,0,0,3,11/11/2017
-1,"Filigree Familiar",KLD,0.25,0,0,3,11/11/2017
-1,"Fireforger's Puzzleknot",KLD,0.1,0,0,3,11/11/2017
-1,"Flame Lash",KLD,0.41,0,0,3,11/11/2017
-4,"Fling",AKH,0.14,0,0,3,11/11/2017
-1,"Floodwaters",AKH,0.11,0,0,3,11/11/2017
-10,"Forest",KLD,0.14,0,0,0,19/11/2017
-2,"Forest",KLD,0.0,0,0,3,11/11/2017
-5,"Forest",KLD,0.14,0,0,0,19/11/2017
-2,"Forest",KLD,0.1,0,0,3,11/11/2017
-5,"Forest",AKH,0.0,0,0,3,11/11/2017
-8,"Forest",AKH,0.13,0,0,3,11/11/2017
-9,"Forest",AKH,0.12,0,0,3,11/11/2017
-14,"Forest",KLD,0.14,0,0,0,19/11/2017
-1,"Forest",KLD,0.1,0,0,3,11/11/2017
-8,"Forest",AKH,0.0,0,0,3,11/11/2017
-2,"Forsaken Sanctuary",AKH,0.25,0,0,3,11/11/2017
-2,"Foul Orchard",AKH,0.17,0,0,3,11/11/2017
-2,"Foundry Assembler",AER,0.14,0,0,0,19/11/2017
-1,"Foundry Assembler",AER,0.12,0,0,3,11/11/2017
-1,"Foundry Screecher",KLD,0.11,0,0,3,11/11/2017
-1,"Fourth Bridge Prowler",AER,0.14,0,0,0,19/11/2017
-1,"Fragmentize",KLD,0.15,0,0,3,11/11/2017
-1,"Frontline Rebel",AER,0.14,0,0,0,19/11/2017
-2,"Frontline Rebel",AER,0.12,0,0,3,11/11/2017
-2,"Garruk's Horde",W17,0.3,0,0,3,11/11/2017
-1,"Gearseeker Serpent",KLD,0.14,0,0,3,11/11/2017
-1,"Ghirapur Guide",KLD,0.18,0,0,3,11/11/2017
-1,"Ghirapur Osprey",AER,0.14,0,0,0,19/11/2017
-2,"Giant Spectacle",KLD,0.1,0,0,3,11/11/2017
-2,"Giant Spider",AKH,0.11,0,0,3,11/11/2017
-1,"Gifted Aetherborn",AER,2.57,0,0,3,11/11/2017
-1,"Glimmer of Genius",KLD,0.99,0,0,3,11/11/2017
-2,"Glint-Sleeve Siphoner",AER,0.14,0,0,0,19/11/2017
-2,"Glory Seeker",W17,0.39,0,0,3,11/11/2017
-3,"Graceful Cat",AKH,0.15,0,0,3,11/11/2017
-1,"Gravedigger",AKH,0.2,0,0,3,11/11/2017
-1,"Greater Sandwurm",AKH,0.11,0,0,3,11/11/2017
-1,"Gremlin Infestation",AER,0.14,0,0,0,19/11/2017
-1,"Harnessed Lightning",KLD,1.28,0,0,3,11/11/2017
-1,"Herald of the Fair",KLD,0.1,0,0,3,11/11/2017
-1,"Heroic Intervention",AER,0.14,0,0,0,19/11/2017
-2,"Highland Lake",AKH,0.31,0,0,3,11/11/2017
-1,"Highspire Artisan",KLD,0.1,0,0,3,11/11/2017
-1,"Highspire Infusion",AER,0.14,0,0,0,19/11/2017
-1,"Highspire Infusion",AER,0.14,0,0,3,11/11/2017
-1,"Hijack",KLD,0.11,0,0,3,11/11/2017
-1,"Hinterland Drake",AER,0.14,0,0,0,19/11/2017
-2,"Hinterland Drake",AER,0.12,0,0,3,11/11/2017
-1,"Hungry Flames",AER,0.14,0,0,0,19/11/2017
-2,"Hungry Flames",AER,0.24,0,0,3,11/11/2017
-1,"Hyena Pack",AKH,0.13,0,0,3,11/11/2017
-2,"Ice Over",AER,0.14,0,0,0,19/11/2017
-1,"Illusionist's Stratagem",AER,0.14,0,0,0,19/11/2017
-2,"Impeccable Timing",AKH,0.13,0,0,3,11/11/2017
-3,"Implement of Combustion",AER,0.14,0,0,0,19/11/2017
-2,"Implement of Combustion",AER,0.14,0,0,3,11/11/2017
-2,"Implement of Examination",AER,0.14,0,0,0,19/11/2017
-1,"Implement of Ferocity",AER,0.14,0,0,0,19/11/2017
-1,"Implement of Improvement",AER,0.14,0,0,0,19/11/2017
-1,"Implement of Malice",AER,0.14,0,0,0,19/11/2017
-2,"Initiate's Companion",AKH,0.15,0,0,3,11/11/2017
-4,"Inspired Charge",KLD,0.11,0,0,3,11/11/2017
-1,"Inventor's Apprentice",KLD,0.24,0,0,3,11/11/2017
-1,"Inventor's Goggles",KLD,0.13,0,0,3,11/11/2017
-1,"Ironclad Revolutionary",AER,0.14,0,0,0,19/11/2017
-1,"Irontread Crusher",AER,0.14,0,0,0,19/11/2017
-2,"Irontread Crusher",AER,0.12,0,0,3,11/11/2017
-4,"Island",AKH,0.0,0,0,3,11/11/2017
-4,"Island",AKH,0.12,0,0,3,11/11/2017
-6,"Island",AKH,0.0,0,0,3,11/11/2017
-4,"Island",AKH,0.1,0,0,3,11/11/2017
-14,"Island",KLD,0.14,0,0,0,19/11/2017
-2,"Island",KLD,0.0,0,0,3,11/11/2017
-9,"Island",KLD,0.14,0,0,0,19/11/2017
-1,"Island",KLD,0.1,0,0,3,11/11/2017
-14,"Island",KLD,0.14,0,0,0,19/11/2017
-1,"Island",KLD,0.1,0,0,3,11/11/2017
-1,"Kambal, Consul of Allocation",KLD,0.46,0,0,3,11/11/2017
-1,"Kefnet the Mindful",AKH,1.99,0,0,3,11/11/2017
-1,"Larger Than Life",KLD,0.15,0,0,3,11/11/2017
-2,"Leave in the Dust",AER,0.14,0,0,0,19/11/2017
-1,"Leave in the Dust",AER,0.11,0,0,3,11/11/2017
-1,"Lifecraft Awakening",AER,0.14,0,0,0,19/11/2017
-2,"Lifecraft Cavalry",AER,0.14,0,0,0,19/11/2017
-2,"Live Fast",KLD,0.11,0,0,3,11/11/2017
-1,"Make Obsolete",KLD,0.18,0,0,3,11/11/2017
-1,"Make Obsolete",KLD,0.35,1,0,3,11/11/2017
-3,"Malfunction",KLD,0.11,0,0,3,11/11/2017
-1,"Manticore of the Gauntlet",AKH,0.11,0,0,3,11/11/2017
-2,"Maulfist Revolutionary",AER,0.14,0,0,0,19/11/2017
-2,"Meandering River",AKH,0.24,0,0,3,11/11/2017
-1,"Merchant's Dockhand",AER,0.14,0,0,0,19/11/2017
-1,"Merciless Javelineer",AKH,0.2,0,0,3,11/11/2017
-1,"Metalspinner's Puzzleknot",KLD,0.12,0,0,3,11/11/2017
-2,"Mighty Leap",AKH,0.12,0,0,3,11/11/2017
-2,"Mobile Garrison",AER,0.14,0,0,0,19/11/2017
-1,"Mobile Garrison",AER,0.14,0,0,3,11/11/2017
-1,"Monstrous Onslaught",AER,0.19,0,0,3,11/11/2017
-6,"Mountain",KLD,0.14,0,0,0,19/11/2017
-1,"Mountain",KLD,0.1,0,0,3,11/11/2017
-8,"Mountain",AKH,0.0,0,0,3,11/11/2017
-5,"Mountain",AKH,0.0,0,0,3,11/11/2017
-11,"Mountain",KLD,0.14,0,0,0,19/11/2017
-2,"Mountain",KLD,0.1,0,0,3,11/11/2017
-12,"Mountain",KLD,0.14,0,0,0,19/11/2017
-3,"Mountain",KLD,0.1,0,0,3,11/11/2017
-9,"Mountain",AKH,0.13,0,0,3,11/11/2017
-8,"Mountain",AKH,0.14,0,0,3,11/11/2017
-1,"Narnam Cobra",KLD,0.1,0,0,3,11/11/2017
-1,"Nef-Crop Entangler",AKH,0.14,0,0,3,11/11/2017
-2,"Negate",AER,0.14,0,0,0,19/11/2017
-1,"Negate",AER,0.15,0,0,3,11/11/2017
-1,"Night Market Aeronaut",AER,0.14,0,0,0,19/11/2017
-1,"Night Market Aeronaut",AER,0.12,0,0,3,11/11/2017
-1,"Night Market Guard",AER,0.11,0,0,3,11/11/2017
-1,"Night Market Lookout",KLD,0.14,0,0,3,11/11/2017
-2,"Nightmare",W17,0.25,0,0,3,11/11/2017
-1,"Nimble Innovator",KLD,0.1,0,0,3,11/11/2017
-1,"Nimble-Blade Khenra",AKH,0.13,0,0,3,11/11/2017
-2,"Oakenform",W17,0.33,0,0,3,11/11/2017
-1,"Ornery Kudu",AKH,0.12,0,0,3,11/11/2017
-2,"Pacification Array",AER,0.14,0,0,0,19/11/2017
-1,"Painful Lesson",AKH,0.13,0,0,3,11/11/2017
-1,"Peema Outrider",KLD,0.1,0,0,3,11/11/2017
-9,"Plains",KLD,0.14,0,0,0,19/11/2017
-1,"Plains",KLD,0.1,0,0,3,11/11/2017
-9,"Plains",AKH,0.13,0,0,3,11/11/2017
-14,"Plains",KLD,0.14,0,0,0,19/11/2017
-1,"Plains",KLD,0.1,0,0,3,11/11/2017
-1,"Plains",KLD,0.14,1,0,0,19/11/2017
-8,"Plains",AKH,0.0,0,0,3,11/11/2017
-14,"Plains",KLD,0.14,0,0,0,19/11/2017
-2,"Plains",KLD,0.0,0,0,3,11/11/2017
-9,"Plains",AKH,0.11,0,0,3,11/11/2017
-6,"Plains",AKH,0.0,0,0,3,11/11/2017
-1,"Pouncing Cheetah",AKH,0.13,0,0,3,11/11/2017
-1,"Prakhata Club Security",KLD,0.1,0,0,3,11/11/2017
-1,"Precise Strike",AER,0.14,0,0,0,19/11/2017
-2,"Prey Upon",AER,0.14,0,0,0,19/11/2017
-2,"Prizefighter Construct",AER,0.14,0,0,0,19/11/2017
-1,"Prophetic Prism",KLD,0.14,0,0,3,11/11/2017
-1,"Protection of the Hekma",AKH,0.2,0,0,3,11/11/2017
-1,"Pursue Glory",AKH,0.11,0,0,3,11/11/2017
-1,"Pyramid of the Pantheon",AKH,0.41,0,0,3,11/11/2017
-1,"Quicksmith Genius",KLD,0.2,0,0,3,11/11/2017
-2,"Rabid Bite",W17,0.36,0,0,3,11/11/2017
-2,"Raise Dead",W17,0.42,0,0,3,11/11/2017
-1,"Ravenous Intruder",AER,0.14,0,0,0,19/11/2017
-1,"Reckless Racer",AER,0.14,0,0,0,19/11/2017
-2,"Refurbish",KLD,0.25,0,0,3,11/11/2017
-2,"Renegade Freighter",KLD,0.12,0,0,3,11/11/2017
-1,"Renegade Map",AER,0.14,0,0,0,19/11/2017
-2,"Renegade Map",AER,0.15,0,0,3,11/11/2017
-1,"Renegade Rallier",AER,0.14,0,0,0,19/11/2017
-1,"Renegade Tactics",KLD,0.13,0,0,3,11/11/2017
-2,"Renegade's Getaway",AER,0.14,0,0,0,19/11/2017
-1,"Reservoir Walker",AER,0.14,0,0,0,19/11/2017
-1,"Reservoir Walker",AER,0.11,0,0,3,11/11/2017
-2,"Resourceful Return",AER,0.14,0,0,0,19/11/2017
-2,"Resourceful Return",AER,0.12,0,0,3,11/11/2017
-1,"Restoration Specialist",AER,0.14,0,0,0,19/11/2017
-1,"Reverse Engineer",AER,0.14,0,0,0,19/11/2017
-1,"Revoke Privileges",KLD,0.11,0,0,3,11/11/2017
-2,"Revolutionary Rebuff",KLD,0.13,0,0,3,11/11/2017
-1,"Ridgescale Tusker",AER,0.2,0,0,3,11/11/2017
-1,"Riparian Tiger",KLD,0.11,0,0,3,11/11/2017
-1,"Rishkar's Expertise",AER,0.14,0,0,3,11/11/2017
-2,"Rogue Refiner",AER,0.14,0,0,0,19/11/2017
-3,"Rootwalla",W17,0.28,0,0,3,11/11/2017
-1,"Ruinous Gremlin",KLD,0.11,0,0,3,11/11/2017
-1,"Rush of Vitality",KLD,0.11,0,0,3,11/11/2017
-1,"Ruthless Sniper",AKH,0.2,0,0,3,11/11/2017
-1,"Sage of Shaila's Claim",KLD,0.15,0,0,3,11/11/2017
-1,"Scarab Feast",AKH,0.14,0,0,3,11/11/2017
-1,"Scattered Groves",AKH,2.3,0,0,3,11/11/2017
-1,"Scrapper Champion",AER,0.14,0,0,0,19/11/2017
-2,"Select for Inspection",KLD,0.12,0,0,3,11/11/2017
-2,"Sengir Vampire",W17,0.4,0,0,3,11/11/2017
-1,"Sequestered Stash",KLD,0.2,0,0,3,11/11/2017
-1,"Seraph of the Suns",AKH,0.2,0,0,3,11/11/2017
-2,"Serra Angel",W17,0.38,0,0,3,11/11/2017
-1,"Servo Schematic",AER,0.18,0,0,3,11/11/2017
-1,"Shadowstorm Vizier",AKH,0.2,0,0,3,11/11/2017
-1,"Shed Weakness",AKH,0.12,0,0,3,11/11/2017
-1,"Shielded Aether Thief",AER,0.14,0,0,0,19/11/2017
-1,"Shielded Aether Thief",AER,0.21,0,0,3,11/11/2017
-1,"Shipwreck Moray",AER,0.14,0,0,0,19/11/2017
-1,"Shipwreck Moray",AER,0.11,0,0,3,11/11/2017
-2,"Shivan Dragon",W17,0.39,0,0,3,11/11/2017
-2,"Shock",AER,0.14,0,0,0,19/11/2017
-5,"Shock",AER,0.15,0,0,3,11/11/2017
-2,"Silkweaver Elite",AER,0.14,0,0,0,19/11/2017
-1,"Sixth Sense",AKH,0.19,0,0,3,11/11/2017
-1,"Sky Skiff",KLD,0.11,0,0,3,11/11/2017
-2,"Skyship Plunderer",AER,0.14,0,0,0,19/11/2017
-1,"Skyship Stalker",KLD,0.27,0,0,3,11/11/2017
-2,"Sly Requisitioner",AER,0.14,0,0,0,19/11/2017
-2,"Snare Thopter",KLD,0.15,0,0,3,11/11/2017
-2,"Soulstinger",AKH,0.12,0,0,3,11/11/2017
-1,"Sphinx of Magosi",W17,0.35,0,0,3,11/11/2017
-2,"Spidery Grasp",AKH,0.13,0,0,3,11/11/2017
-2,"Spire Patrol",AER,0.14,0,0,0,19/11/2017
-3,"Spireside Infiltrator",KLD,0.11,0,0,3,11/11/2017
-2,"Stalking Tiger",W17,0.3,0,0,3,11/11/2017
-1,"Stampeding Rhino",W17,0.2,0,0,3,11/11/2017
-3,"Standing Troops",W17,0.1,0,0,3,11/11/2017
-1,"Stealer of Secrets",W17,0.32,0,0,3,11/11/2017
-2,"Stone Quarry",AKH,0.17,0,0,3,11/11/2017
-2,"Stormfront Pegasus",W17,0.17,0,0,3,11/11/2017
-2,"Submerged Boneyard",AKH,0.23,0,0,3,11/11/2017
-1,"Subtle Strike",KLD,0.11,0,0,3,11/11/2017
-1,"Sunscorched Desert",AKH,0.22,0,0,3,11/11/2017
-1,"Supernatural Stamina",AKH,0.14,0,0,3,11/11/2017
-1,"Supply Caravan",AKH,0.12,0,0,3,11/11/2017
-5,"Swamp",AKH,0.0,0,0,3,11/11/2017
-8,"Swamp",AKH,0.11,0,0,3,11/11/2017
-11,"Swamp",KLD,0.14,0,0,0,19/11/2017
-1,"Swamp",KLD,0.1,0,0,3,11/11/2017
-16,"Swamp",KLD,0.14,0,0,0,19/11/2017
-1,"Swamp",KLD,0.0,0,0,3,11/11/2017
-8,"Swamp",AKH,0.1,0,0,3,11/11/2017
-9,"Swamp",AKH,0.0,0,0,3,11/11/2017
-6,"Swamp",KLD,0.14,0,0,0,19/11/2017
-1,"Swamp",KLD,0.11,0,0,3,11/11/2017
-2,"Sweatworks Brawler",AER,0.14,0,0,0,19/11/2017
-1,"Sweatworks Brawler",AER,0.14,0,0,3,11/11/2017
-1,"Tah-Crop Elite",AKH,0.12,0,0,3,11/11/2017
-1,"Take Down",KLD,0.11,0,0,3,11/11/2017
-2,"Take into Custody",AER,0.14,0,0,0,19/11/2017
-1,"Tasseled Dromedary",KLD,0.11,0,0,3,11/11/2017
-4,"Tattered Mummy",AKH,0.57,0,0,3,11/11/2017
-1,"Terrain Elemental",KLD,0.15,0,0,3,11/11/2017
-3,"Terror of the Fairgrounds",KLD,0.11,0,0,3,11/11/2017
-1,"Tezzeret's Touch",AER,0.14,0,0,0,19/11/2017
-1,"Those Who Serve",AKH,0.12,0,0,3,11/11/2017
-1,"Thriving Grubs",KLD,0.11,0,0,3,11/11/2017
-2,"Thriving Ibex",KLD,0.11,0,0,3,11/11/2017
-2,"Thundering Giant",W17,0.31,0,0,3,11/11/2017
-2,"Timber Gorge",AKH,0.19,0,0,3,11/11/2017
-1,"Torch Gauntlet",KLD,0.11,0,0,3,11/11/2017
-2,"Tranquil Expanse",AKH,0.23,0,0,3,11/11/2017
-1,"Treasure Keeper",AER,0.14,0,0,0,19/11/2017
-1,"Trespasser's Curse",AKH,0.15,0,0,3,11/11/2017
-1,"Trial of Ambition",AKH,0.19,0,0,3,11/11/2017
-1,"Trial of Knowledge",AKH,0.21,0,0,3,11/11/2017
-1,"Trial of Solidarity",AKH,0.2,0,0,3,11/11/2017
-3,"Trial of Strength",AKH,0.2,0,0,3,11/11/2017
-1,"Trial of Zeal",AKH,0.19,0,0,3,11/11/2017
-1,"Tricks of the Trade",W17,0.3,0,0,3,11/11/2017
-2,"Unbridled Growth",AER,0.14,0,0,0,19/11/2017
-1,"Unbridled Growth",AER,0.14,0,0,3,11/11/2017
-1,"Universal Solvent",AER,0.14,0,0,0,19/11/2017
-1,"Universal Solvent",AER,0.13,0,0,3,11/11/2017
-3,"Untamed Hunger",W17,0.3,0,0,3,11/11/2017
-1,"Untethered Express",AER,0.14,0,0,0,19/11/2017
-1,"Unwavering Initiate",AKH,0.12,0,0,3,11/11/2017
-1,"Vedalken Blademaster",KLD,0.11,0,0,3,11/11/2017
-4,"Verdant Automaton",AER,0.14,0,0,0,19/11/2017
-2,"Victory's Herald",W17,0.25,0,0,3,11/11/2017
-1,"Vizier of Remedies",AKH,0.3,0,0,3,11/11/2017
-1,"Voltaic Brawler",KLD,0.29,0,0,3,11/11/2017
-1,"Warfire Javelineer",AKH,0.2,0,0,3,11/11/2017
-1,"Watchers of the Dead",AKH,0.22,0,0,3,11/11/2017
-1,"Watchful Automaton",AER,0.14,0,0,0,19/11/2017
-1,"Weaponcraft Enthusiast",KLD,0.2,0,0,3,11/11/2017
-1,"Welder Automaton",AER,0.14,0,0,0,19/11/2017
-2,"Welder Automaton",AER,0.11,0,0,3,11/11/2017
-1,"Whir of Invention",AER,0.75,0,0,3,11/11/2017
-2,"Wild Wanderer",KLD,0.11,0,0,3,11/11/2017
-1,"Winds of Rebuke",AKH,0.13,0,0,3,11/11/2017
-2,"Wing Snare",W17,0.28,0,0,3,11/11/2017
-2,"Woodland Stream",AKH,0.17,0,0,3,11/11/2017
-3,"Wrangle",AER,0.14,0,0,0,19/11/2017
-1,"Wrangle",AER,0.13,0,0,3,11/11/2017
-1,"Yahenni's Expertise",AER,0.14,0,0,0,19/11/2017
+1,"Accomplished Automaton",KLD,0.12,0,0,3,2/12/2017
+1,"Aegis Automaton",AER,0.12,0,0,0,2/12/2017
+1,"Aerial Responder",KLD,0.23,0,0,0,30/11/2017
+1,"Aerial Responder",KLD,0.23,0,0,3,2/12/2017
+1,"Aeronaut Admiral",AER,0.21,0,0,0,2/12/2017
+2,"Aether Chaser",AER,0.15,0,0,0,2/12/2017
+1,"Aether Herder",AER,0.13,0,0,0,2/12/2017
+1,"Aether Hub",KLD,1.85,0,0,0,30/11/2017
+2,"Aether Inspector",AER,0.12,0,0,0,2/12/2017
+1,"Aether Poisoner",AER,0.14,0,0,0,2/12/2017
+2,"Aether Swooper",AER,0.14,0,0,0,2/12/2017
+2,"Aether Theorist",KLD,0.12,0,0,0,30/11/2017
+1,"Aether Tradewinds",KLD,0.12,0,0,3,2/12/2017
+1,"Aetherborn Marauder",KLD,0.2,0,0,3,2/12/2017
+1,"Aethergeode Miner",AER,0.34,0,0,0,2/12/2017
+1,"Aetherstorm Roc",KLD,0.29,0,0,3,2/12/2017
+1,"Aetherstream Leopard",AER,0.13,0,0,0,2/12/2017
+1,"Ahn-Crop Crasher",AKH,0.32,0,0,3,2/12/2017
+1,"Air Elemental",W17,0.29,0,0,3,2/12/2017
+1,"Ajani Unyielding",AER,2.99,0,0,0,2/12/2017
+1,"Alley Evasion",AER,0.13,0,0,0,2/12/2017
+1,"Alley Evasion",AER,0.13,0,0,3,2/12/2017
+2,"Alley Strangler",AER,0.13,0,0,0,2/12/2017
+1,"Ancient Crab",AKH,0.13,0,0,3,2/12/2017
+2,"Angler Drake",AKH,0.2,0,0,3,2/12/2017
+1,"Appetite for the Unnatural",KLD,0.14,0,0,0,30/11/2017
+1,"Arborback Stomper",KLD,0.19,0,0,0,30/11/2017
+1,"Arborback Stomper",KLD,0.19,0,0,3,2/12/2017
+2,"Audacious Infiltrator",AER,0.13,0,0,0,2/12/2017
+2,"Augmenting Automaton",AER,0.13,0,0,0,2/12/2017
+1,"Aviary Mechanic",KLD,0.12,0,0,3,2/12/2017
+1,"Baleful Ammit",AKH,0.23,0,0,3,2/12/2017
+1,"Ballista Charger",KLD,0.35,1,0,0,30/11/2017
+2,"Baral, Chief of Compliance",AER,4.5,0,0,0,2/12/2017
+1,"Bastion Enforcer",AER,0.1,0,0,0,2/12/2017
+2,"Bastion Inventor",AER,0.13,0,0,0,2/12/2017
+1,"Bastion Inventor",AER,0.13,0,0,3,2/12/2017
+1,"Bitterblade Warrior",AKH,0.13,0,0,3,2/12/2017
+1,"Bloodhunter Bat",W17,0.29,0,0,3,2/12/2017
+1,"Bloodlust Inciter",AKH,0.12,0,0,3,2/12/2017
+1,"Blossoming Defense",KLD,1.54,0,0,3,2/12/2017
+1,"Brazen Scourge",KLD,0.2,0,0,3,2/12/2017
+1,"Built to Last",KLD,0.11,0,0,0,30/11/2017
+1,"Built to Last",KLD,0.11,0,0,3,2/12/2017
+1,"Cartouche of Ambition",AKH,0.13,0,0,3,2/12/2017
+1,"Cartouche of Knowledge",AKH,0.14,0,0,3,2/12/2017
+2,"Cartouche of Solidarity",AKH,0.15,0,0,3,2/12/2017
+2,"Cartouche of Strength",AKH,0.14,0,0,3,2/12/2017
+2,"Cartouche of Zeal",AKH,0.15,0,0,3,2/12/2017
+1,"Cataclysmic Gearhulk",KLD,1.4,0,0,0,30/11/2017
+1,"Cathartic Reunion",KLD,0.16,0,0,0,30/11/2017
+1,"Cathartic Reunion",KLD,0.16,0,0,3,2/12/2017
+2,"Caught in the Brights",AER,0.13,0,0,0,2/12/2017
+1,"Censor",AKH,1.5,0,0,3,2/12/2017
+1,"Chandra's Pyrohelix",KLD,0.13,0,0,0,30/11/2017
+1,"Chandra's Pyrohelix",KLD,0.13,0,0,3,2/12/2017
+1,"Chandra's Revolution",AER,0.12,0,0,0,2/12/2017
+1,"Chandra's Revolution",AER,0.12,0,0,3,2/12/2017
+1,"Chief of the Foundry",KLD,0.19,0,0,0,30/11/2017
+1,"Chief of the Foundry",KLD,0.49,1,0,0,30/11/2017
+2,"Cinder Barrens",AKH,0.11,0,0,3,2/12/2017
+2,"Cogwork Assembler",AER,0.22,0,0,3,2/12/2017
+1,"Cogworker's Puzzleknot",KLD,0.13,0,0,0,30/11/2017
+1,"Commencement of Festivities",KLD,0.13,0,0,0,30/11/2017
+1,"Commencement of Festivities",KLD,0.13,0,0,3,2/12/2017
+2,"Compulsory Rest",AKH,0.13,0,0,3,2/12/2017
+1,"Consulate Crackdown",AER,0.28,0,0,0,2/12/2017
+1,"Consulate Skygate",KLD,0.13,0,0,0,30/11/2017
+1,"Contraband Kingpin",KLD,0.21,0,0,0,30/11/2017
+2,"Conviction",AER,0.13,0,0,0,2/12/2017
+2,"Countless Gears Renegade",AER,0.14,0,0,0,2/12/2017
+2,"Crocodile of the Crossing",AKH,0.2,0,0,3,2/12/2017
+2,"Cruel Finality",AER,0.12,0,0,0,2/12/2017
+1,"Curio Vendor",KLD,0.12,0,0,3,2/12/2017
+1,"Cursed Minotaur",AKH,0.14,0,0,3,2/12/2017
+1,"Daring Demolition",AER,0.13,0,0,0,2/12/2017
+1,"Daring Demolition",AER,0.13,0,0,3,2/12/2017
+1,"Dawnfeather Eagle",AER,0.13,0,0,0,2/12/2017
+1,"Decision Paralysis",AKH,0.12,0,0,3,2/12/2017
+1,"Decommission",AER,0.14,0,0,0,2/12/2017
+2,"Defiant Salvager",AER,0.13,0,0,0,2/12/2017
+1,"Destructive Tampering",AER,0.13,0,0,3,2/12/2017
+1,"Dhund Operative",KLD,0.11,0,0,0,30/11/2017
+1,"Dhund Operative",KLD,0.11,0,0,3,2/12/2017
+2,"Dispersal Technician",AER,0.12,0,0,0,2/12/2017
+1,"Divine Verdict",W17,0.25,0,0,3,2/12/2017
+1,"Djeru's Resolve",AKH,0.13,0,0,3,2/12/2017
+1,"Doomed Dissenter",AKH,0.14,0,0,3,2/12/2017
+2,"Druid of the Cowl",AER,0.14,0,0,0,2/12/2017
+2,"Druid of the Cowl",AER,0.14,0,0,3,2/12/2017
+1,"Druid of the Cowl",AER,0.5,1,0,0,2/12/2017
+1,"Dukhara Peafowl",KLD,0.11,0,0,3,2/12/2017
+1,"Durable Handicraft",KLD,0.18,0,0,3,2/12/2017
+1,"Eager Construct",KLD,0.12,0,0,0,30/11/2017
+1,"Eager Construct",KLD,0.12,0,0,3,2/12/2017
+2,"Eddytrail Hawk",KLD,0.11,0,0,3,2/12/2017
+2,"Electrify",AKH,0.14,0,0,3,2/12/2017
+1,"Electrostatic Pummeler",KLD,0.53,0,0,3,2/12/2017
+2,"Elegant Edgecrafters",KLD,0.18,0,0,0,30/11/2017
+1,"Embraal Gear-Smasher",AER,0.13,0,0,3,2/12/2017
+1,"Empyreal Voyager",KLD,0.18,0,0,3,2/12/2017
+2,"Enraged Giant",AER,0.2,0,0,3,2/12/2017
+1,"Essence Extraction",KLD,0.22,0,0,0,30/11/2017
+1,"Essence Scatter",AKH,0.15,0,0,3,2/12/2017
+4,"Evolving Wilds",AKH,0.15,0,0,3,2/12/2017
+1,"Fabrication Module",KLD,0.22,0,0,3,2/12/2017
+2,"Fan Bearer",AKH,0.13,0,0,3,2/12/2017
+1,"Fatal Push",AER,27.93,1,0,0,2/12/2017
+1,"Fateful Showdown",KLD,0.3,0,0,3,2/12/2017
+2,"Felidar Guardian",AER,0.26,0,0,0,2/12/2017
+1,"Fen Hauler",AER,0.13,0,0,0,2/12/2017
+1,"Festering Mummy",AKH,0.15,0,0,3,2/12/2017
+1,"Filigree Familiar",KLD,0.25,0,0,3,2/12/2017
+1,"Fireforger's Puzzleknot",KLD,0.11,0,0,3,2/12/2017
+3,"Fling",AKH,0.14,0,0,3,2/12/2017
+1,"Floodwaters",AKH,0.13,0,0,3,2/12/2017
+2,"Forsaken Sanctuary",AKH,0.29,0,0,3,2/12/2017
+1,"Fortuitous Find",KLD,0.11,0,0,0,30/11/2017
+2,"Foul Orchard",AKH,0.17,0,0,3,2/12/2017
+2,"Foundry Assembler",AER,0.12,0,0,0,2/12/2017
+1,"Foundry Assembler",AER,0.12,0,0,3,2/12/2017
+1,"Foundry Screecher",KLD,0.11,0,0,3,2/12/2017
+1,"Fourth Bridge Prowler",AER,0.13,0,0,0,2/12/2017
+1,"Fragmentize",KLD,0.14,0,0,3,2/12/2017
+1,"Frontline Rebel",AER,0.13,0,0,0,2/12/2017
+1,"Garruk's Horde",W17,0.34,0,0,3,2/12/2017
+1,"Gearseeker Serpent",KLD,0.14,0,0,0,30/11/2017
+1,"Gearseeker Serpent",KLD,0.14,0,0,3,2/12/2017
+1,"Ghirapur Guide",KLD,0.19,0,0,3,2/12/2017
+1,"Ghirapur Osprey",AER,0.12,0,0,0,2/12/2017
+2,"Giant Spectacle",KLD,0.11,0,0,3,2/12/2017
+1,"Giant Spider",AKH,0.12,0,0,3,2/12/2017
+1,"Gifted Aetherborn",AER,2.19,0,0,3,2/12/2017
+1,"Glassblower's Puzzleknot",KLD,0.12,0,0,0,30/11/2017
+1,"Glimmer of Genius",KLD,0.93,0,0,3,2/12/2017
+2,"Glint-Sleeve Siphoner",AER,3.32,0,0,0,2/12/2017
+1,"Graceful Cat",AKH,0.15,0,0,3,2/12/2017
+1,"Greater Sandwurm",AKH,0.12,0,0,3,2/12/2017
+1,"Gremlin Infestation",AER,0.2,0,0,0,2/12/2017
+1,"Harnessed Lightning",KLD,1.19,0,0,3,2/12/2017
+1,"Herald of the Fair",KLD,0.1,0,0,3,2/12/2017
+1,"Heroic Intervention",AER,4.05,0,0,0,2/12/2017
+2,"Highland Lake",AKH,0.3,0,0,3,2/12/2017
+1,"Highspire Artisan",KLD,0.11,0,0,3,2/12/2017
+1,"Highspire Infusion",AER,0.14,0,0,0,2/12/2017
+1,"Highspire Infusion",AER,0.14,0,0,3,2/12/2017
+1,"Hijack",KLD,0.12,0,0,3,2/12/2017
+1,"Hinterland Drake",AER,0.12,0,0,0,2/12/2017
+2,"Hinterland Drake",AER,0.12,0,0,3,2/12/2017
+1,"Hungry Flames",AER,0.24,0,0,0,2/12/2017
+1,"Hungry Flames",AER,0.24,0,0,3,2/12/2017
+1,"Hunt the Weak",KLD,0.11,0,0,0,30/11/2017
+2,"Ice Over",AER,0.12,0,0,0,2/12/2017
+1,"Illusionist's Stratagem",AER,0.2,0,0,0,2/12/2017
+3,"Implement of Combustion",AER,0.14,0,0,0,2/12/2017
+2,"Implement of Combustion",AER,0.14,0,0,3,2/12/2017
+2,"Implement of Examination",AER,0.13,0,0,0,2/12/2017
+1,"Implement of Ferocity",AER,0.13,0,0,0,2/12/2017
+1,"Implement of Improvement",AER,0.14,0,0,0,2/12/2017
+1,"Implement of Malice",AER,0.13,0,0,0,2/12/2017
+2,"Initiate's Companion",AKH,0.15,0,0,3,2/12/2017
+1,"Inspired Charge",KLD,0.11,0,0,0,30/11/2017
+2,"Inspired Charge",KLD,0.11,0,0,3,2/12/2017
+1,"Inventor's Apprentice",KLD,0.24,0,0,0,30/11/2017
+1,"Inventor's Apprentice",KLD,0.24,0,0,3,2/12/2017
+1,"Inventor's Goggles",KLD,0.13,0,0,0,30/11/2017
+1,"Inventor's Goggles",KLD,0.13,0,0,3,2/12/2017
+1,"Ironclad Revolutionary",AER,0.2,0,0,0,2/12/2017
+1,"Irontread Crusher",AER,0.12,0,0,0,2/12/2017
+2,"Irontread Crusher",AER,0.12,0,0,3,2/12/2017
+1,"Janjeet Sentry",KLD,0.19,0,0,0,30/11/2017
+1,"Kambal, Consul of Allocation",KLD,0.46,0,0,3,2/12/2017
+1,"Kefnet the Mindful",AKH,1.82,0,0,3,2/12/2017
+1,"Kujar Seedsculptor",KLD,0.11,0,0,0,30/11/2017
+1,"Larger Than Life",KLD,0.15,0,0,0,30/11/2017
+1,"Larger Than Life",KLD,0.16,0,0,3,2/12/2017
+1,"Lawless Broker",KLD,0.1,0,0,0,30/11/2017
+2,"Leave in the Dust",AER,0.12,0,0,0,2/12/2017
+1,"Leave in the Dust",AER,0.12,0,0,3,2/12/2017
+1,"Lifecraft Awakening",AER,0.2,0,0,0,2/12/2017
+2,"Lifecraft Cavalry",AER,0.11,0,0,0,2/12/2017
+2,"Live Fast",KLD,0.13,0,0,3,2/12/2017
+1,"Make Obsolete",KLD,0.19,0,0,0,30/11/2017
+1,"Make Obsolete",KLD,0.18,0,0,3,2/12/2017
+1,"Make Obsolete",KLD,0.37,1,0,3,2/12/2017
+1,"Malfunction",KLD,0.11,0,0,0,30/11/2017
+3,"Malfunction",KLD,0.11,0,0,3,2/12/2017
+1,"Manticore of the Gauntlet",AKH,0.13,0,0,3,2/12/2017
+2,"Maulfist Revolutionary",AER,0.21,0,0,0,2/12/2017
+2,"Meandering River",AKH,0.24,0,0,3,2/12/2017
+1,"Merchant's Dockhand",AER,0.28,0,0,0,2/12/2017
+1,"Merciless Javelineer",AKH,0.2,0,0,3,2/12/2017
+1,"Metalspinner's Puzzleknot",KLD,0.13,0,0,3,2/12/2017
+1,"Mighty Leap",AKH,0.13,0,0,3,2/12/2017
+2,"Mind Rot",KLD,0.1,0,0,0,30/11/2017
+2,"Mobile Garrison",AER,0.14,0,0,0,2/12/2017
+1,"Mobile Garrison",AER,0.14,0,0,3,2/12/2017
+1,"Monstrous Onslaught",AER,0.2,0,0,3,2/12/2017
+1,"Morbid Curiosity",KLD,0.2,0,0,0,30/11/2017
+1,"Multiform Wonder",KLD,0.3,0,0,0,30/11/2017
+1,"Narnam Cobra",KLD,0.11,0,0,3,2/12/2017
+1,"Nef-Crop Entangler",AKH,0.14,0,0,3,2/12/2017
+2,"Negate",AER,0.15,0,0,0,2/12/2017
+1,"Negate",AER,0.15,0,0,3,2/12/2017
+1,"Night Market Aeronaut",AER,0.13,0,0,0,2/12/2017
+1,"Night Market Aeronaut",AER,0.13,0,0,3,2/12/2017
+1,"Night Market Guard",AER,0.12,0,0,3,2/12/2017
+1,"Night Market Lookout",KLD,0.14,0,0,3,2/12/2017
+1,"Nightmare",W17,0.25,0,0,3,2/12/2017
+1,"Nimble Innovator",KLD,0.11,0,0,3,2/12/2017
+1,"Nimble-Blade Khenra",AKH,0.13,0,0,3,2/12/2017
+1,"Ninth Bridge Patrol",KLD,0.11,0,0,0,30/11/2017
+1,"Oakenform",W17,0.32,0,0,3,2/12/2017
+1,"Ornery Kudu",AKH,0.13,0,0,3,2/12/2017
+1,"Oviya Pashiri, Sage Lifecrafter",KLD,0.3,0,0,0,30/11/2017
+1,"Pacification Array",AER,0.2,0,0,0,2/12/2017
+1,"Painful Lesson",AKH,0.14,0,0,3,2/12/2017
+1,"Peema Outrider",KLD,0.1,0,0,3,2/12/2017
+1,"Pia Nalaar",KLD,0.4,0,0,0,30/11/2017
+1,"Pouncing Cheetah",AKH,0.14,0,0,3,2/12/2017
+1,"Prakhata Club Security",KLD,0.11,0,0,3,2/12/2017
+1,"Precise Strike",AER,0.12,0,0,0,2/12/2017
+1,"Pressure Point",KLD,0.11,0,0,0,30/11/2017
+2,"Prey Upon",AER,0.13,0,0,0,2/12/2017
+2,"Prizefighter Construct",AER,0.13,0,0,0,2/12/2017
+2,"Prophetic Prism",KLD,0.14,0,0,0,30/11/2017
+1,"Prophetic Prism",KLD,0.14,0,0,3,2/12/2017
+1,"Protection of the Hekma",AKH,0.2,0,0,3,2/12/2017
+1,"Pursue Glory",AKH,0.12,0,0,3,2/12/2017
+1,"Pyramid of the Pantheon",AKH,0.4,0,0,3,2/12/2017
+1,"Quicksmith Genius",KLD,0.2,0,0,3,2/12/2017
+1,"Raise Dead",W17,0.39,0,0,3,2/12/2017
+1,"Ravenous Intruder",AER,0.21,0,0,0,2/12/2017
+1,"Reckless Fireweaver",KLD,0.14,0,0,0,30/11/2017
+1,"Reckless Racer",AER,0.2,0,0,0,2/12/2017
+1,"Refurbish",KLD,0.25,0,0,0,30/11/2017
+2,"Refurbish",KLD,0.25,0,0,3,2/12/2017
+2,"Renegade Freighter",KLD,0.13,0,0,3,2/12/2017
+1,"Renegade Map",AER,0.15,0,0,0,2/12/2017
+2,"Renegade Map",AER,0.15,0,0,3,2/12/2017
+1,"Renegade Rallier",AER,0.3,0,0,0,2/12/2017
+2,"Renegade's Getaway",AER,0.13,0,0,0,2/12/2017
+1,"Reservoir Walker",AER,0.12,0,0,0,2/12/2017
+1,"Reservoir Walker",AER,0.12,0,0,3,2/12/2017
+2,"Resourceful Return",AER,0.13,0,0,0,2/12/2017
+2,"Resourceful Return",AER,0.13,0,0,3,2/12/2017
+1,"Restoration Specialist",AER,0.19,0,0,0,2/12/2017
+1,"Reverse Engineer",AER,0.24,0,0,0,2/12/2017
+1,"Revoke Privileges",KLD,0.11,0,0,0,30/11/2017
+1,"Revoke Privileges",KLD,0.11,0,0,3,2/12/2017
+2,"Revolutionary Rebuff",KLD,0.13,0,0,0,30/11/2017
+2,"Revolutionary Rebuff",KLD,0.14,0,0,3,2/12/2017
+1,"Ridgescale Tusker",AER,0.2,0,0,3,2/12/2017
+1,"Riparian Tiger",KLD,0.11,0,0,0,30/11/2017
+1,"Riparian Tiger",KLD,0.11,0,0,3,2/12/2017
+1,"Rishkar's Expertise",AER,0.58,0,0,3,2/12/2017
+2,"Rogue Refiner",AER,0.77,0,0,0,2/12/2017
+1,"Rootwalla",W17,0.27,0,0,3,2/12/2017
+1,"Ruinous Gremlin",KLD,0.12,0,0,3,2/12/2017
+1,"Rush of Vitality",KLD,0.13,0,0,3,2/12/2017
+1,"Ruthless Sniper",AKH,0.2,0,0,3,2/12/2017
+2,"Sage of Shaila's Claim",KLD,0.14,0,0,0,30/11/2017
+1,"Sage of Shaila's Claim",KLD,0.15,0,0,3,2/12/2017
+1,"Scarab Feast",AKH,0.15,0,0,3,2/12/2017
+1,"Scattered Groves",AKH,2.0,0,0,3,2/12/2017
+1,"Scrapper Champion",AER,0.2,0,0,0,2/12/2017
+1,"Select for Inspection",KLD,0.12,0,0,0,30/11/2017
+2,"Select for Inspection",KLD,0.12,0,0,3,2/12/2017
+1,"Sengir Vampire",W17,0.39,0,0,3,2/12/2017
+1,"Sequestered Stash",KLD,0.2,0,0,3,2/12/2017
+1,"Seraph of the Suns",AKH,0.2,0,0,3,2/12/2017
+1,"Serra Angel",W17,0.38,0,0,3,2/12/2017
+1,"Servo Schematic",AER,0.2,0,0,3,2/12/2017
+1,"Shadowstorm Vizier",AKH,0.19,0,0,3,2/12/2017
+1,"Shed Weakness",AKH,0.13,0,0,3,2/12/2017
+1,"Shielded Aether Thief",AER,0.21,0,0,0,2/12/2017
+1,"Shielded Aether Thief",AER,0.21,0,0,3,2/12/2017
+1,"Shipwreck Moray",AER,0.12,0,0,0,2/12/2017
+1,"Shipwreck Moray",AER,0.12,0,0,3,2/12/2017
+1,"Shivan Dragon",W17,0.3,0,0,3,2/12/2017
+2,"Shock",AER,0.16,0,0,0,2/12/2017
+3,"Shock",AER,0.16,0,0,3,2/12/2017
+2,"Silkweaver Elite",AER,0.13,0,0,0,2/12/2017
+1,"Sky Skiff",KLD,0.13,0,0,3,2/12/2017
+2,"Skyship Plunderer",AER,0.25,0,0,0,2/12/2017
+1,"Skyship Stalker",KLD,0.28,0,0,0,30/11/2017
+1,"Skyship Stalker",KLD,0.28,0,0,3,2/12/2017
+2,"Sly Requisitioner",AER,0.2,0,0,0,2/12/2017
+2,"Snare Thopter",KLD,0.15,0,0,3,2/12/2017
+2,"Soulstinger",AKH,0.13,0,0,3,2/12/2017
+1,"Speedway Fanatic",KLD,0.2,0,0,0,30/11/2017
+1,"Sphinx of Magosi",W17,0.4,0,0,3,2/12/2017
+1,"Spidery Grasp",AKH,0.13,0,0,3,2/12/2017
+2,"Spire Patrol",AER,0.2,0,0,0,2/12/2017
+1,"Spireside Infiltrator",KLD,0.11,0,0,0,30/11/2017
+3,"Spireside Infiltrator",KLD,0.11,0,0,3,2/12/2017
+1,"Stalking Tiger",W17,0.3,0,0,3,2/12/2017
+1,"Standing Troops",W17,0.16,0,0,3,2/12/2017
+1,"Stealer of Secrets",W17,0.32,0,0,3,2/12/2017
+2,"Stone Quarry",AKH,0.16,0,0,3,2/12/2017
+1,"Stormfront Pegasus",W17,0.18,0,0,3,2/12/2017
+2,"Submerged Boneyard",AKH,0.22,0,0,3,2/12/2017
+1,"Subtle Strike",KLD,0.11,0,0,0,30/11/2017
+1,"Subtle Strike",KLD,0.11,0,0,3,2/12/2017
+1,"Sunscorched Desert",AKH,0.21,0,0,3,2/12/2017
+1,"Supernatural Stamina",AKH,0.14,0,0,3,2/12/2017
+1,"Supply Caravan",AKH,0.13,0,0,3,2/12/2017
+2,"Sweatworks Brawler",AER,0.14,0,0,0,2/12/2017
+1,"Sweatworks Brawler",AER,0.14,0,0,3,2/12/2017
+1,"Tah-Crop Elite",AKH,0.13,0,0,3,2/12/2017
+1,"Take Down",KLD,0.13,0,0,3,2/12/2017
+2,"Take into Custody",AER,0.13,0,0,0,2/12/2017
+2,"Tasseled Dromedary",KLD,0.11,0,0,0,30/11/2017
+1,"Tasseled Dromedary",KLD,0.12,0,0,3,2/12/2017
+2,"Tattered Mummy",AKH,0.59,0,0,3,2/12/2017
+1,"Terror of the Fairgrounds",KLD,0.11,0,0,3,2/12/2017
+1,"Tezzeret's Touch",AER,0.24,0,0,0,2/12/2017
+1,"Those Who Serve",AKH,0.12,0,0,3,2/12/2017
+1,"Thriving Grubs",KLD,0.12,0,0,0,30/11/2017
+1,"Thriving Grubs",KLD,0.13,0,0,3,2/12/2017
+2,"Thriving Ibex",KLD,0.11,0,0,3,2/12/2017
+2,"Thriving Rats",KLD,0.1,0,0,0,30/11/2017
+1,"Thundering Giant",W17,0.31,0,0,3,2/12/2017
+1,"Tidy Conclusion",KLD,0.11,0,0,0,30/11/2017
+2,"Timber Gorge",AKH,0.18,0,0,3,2/12/2017
+1,"Torch Gauntlet",KLD,0.11,0,0,0,30/11/2017
+1,"Torch Gauntlet",KLD,0.11,0,0,3,2/12/2017
+2,"Tranquil Expanse",AKH,0.23,0,0,3,2/12/2017
+1,"Treasure Keeper",AER,0.24,0,0,0,2/12/2017
+1,"Trespasser's Curse",AKH,0.15,0,0,3,2/12/2017
+1,"Trial of Ambition",AKH,0.2,0,0,3,2/12/2017
+1,"Trial of Knowledge",AKH,0.21,0,0,3,2/12/2017
+1,"Trial of Solidarity",AKH,0.2,0,0,3,2/12/2017
+3,"Trial of Strength",AKH,0.2,0,0,3,2/12/2017
+1,"Trial of Zeal",AKH,0.19,0,0,3,2/12/2017
+1,"Tricks of the Trade",W17,0.3,0,0,3,2/12/2017
+2,"Unbridled Growth",AER,0.14,0,0,0,2/12/2017
+1,"Unbridled Growth",AER,0.14,0,0,3,2/12/2017
+1,"Universal Solvent",AER,0.14,0,0,0,2/12/2017
+1,"Universal Solvent",AER,0.14,0,0,3,2/12/2017
+1,"Untamed Hunger",W17,0.3,0,0,3,2/12/2017
+1,"Untethered Express",AER,0.2,0,0,0,2/12/2017
+1,"Unwavering Initiate",AKH,0.13,0,0,3,2/12/2017
+1,"Vedalken Blademaster",KLD,0.11,0,0,3,2/12/2017
+4,"Verdant Automaton",AER,0.11,0,0,0,2/12/2017
+1,"Victory's Herald",W17,0.25,0,0,3,2/12/2017
+1,"Vizier of Remedies",AKH,0.3,0,0,3,2/12/2017
+1,"Voltaic Brawler",KLD,0.28,0,0,3,2/12/2017
+1,"Warfire Javelineer",AKH,0.2,0,0,3,2/12/2017
+1,"Watchers of the Dead",AKH,0.21,0,0,3,2/12/2017
+1,"Watchful Automaton",AER,0.13,0,0,0,2/12/2017
+1,"Weaponcraft Enthusiast",KLD,0.21,0,0,3,2/12/2017
+1,"Welder Automaton",AER,0.12,0,0,0,2/12/2017
+2,"Welder Automaton",AER,0.12,0,0,3,2/12/2017
+1,"Weldfast Monitor",KLD,0.11,0,0,0,30/11/2017
+1,"Welding Sparks",KLD,0.12,0,0,0,30/11/2017
+1,"Whir of Invention",AER,0.75,0,0,3,2/12/2017
+1,"Whirler Virtuoso",KLD,0.35,0,0,0,30/11/2017
+1,"Wild Wanderer",KLD,0.12,0,0,0,30/11/2017
+2,"Wild Wanderer",KLD,0.12,0,0,3,2/12/2017
+1,"Wily Bandar",KLD,0.13,0,0,0,30/11/2017
+1,"Winds of Rebuke",AKH,0.11,0,0,3,2/12/2017
+1,"Wing Snare",W17,0.28,0,0,3,2/12/2017
+2,"Woodland Stream",AKH,0.17,0,0,3,2/12/2017
+1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,0,30/11/2017
+3,"Wrangle",AER,0.14,0,0,0,2/12/2017
+1,"Yahenni's Expertise",AER,0.78,0,0,0,2/12/2017

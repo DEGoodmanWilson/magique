@@ -8,13 +8,13 @@
     "!flying": 1.0
   },
 
-  "grant_energy": {
-    "grant_energy": 1.0
+  "energy_source": {
+    "energy_source": 1.0
   },
 
-  "consume_energy": {
-    "grant_energy": 1.0,
-    "consume_energy": -0.5
+  "energy_sink": {
+    "energy_source": 1.0,
+    "energy_sink": -0.5
   },
 
   "revolt": {
