@@ -3,6 +3,7 @@
 //
 
 #include "catalog.h"
+#include <json.hpp>
 #include <fstream>
 
 namespace magique
@@ -14,18 +15,48 @@ bool case_insensitive_comp_::operator()(const std::string &a, const std::string 
 }
 
 
-catalog::catalog(std::string filename)
+catalog::catalog(std::string filename, std::string annotations_filename)
 {
     std::ifstream ifs(filename);
-    nlohmann::json j{ifs};
+    nlohmann::json card_list_json{ifs};
+    ifs.close();
+
+    ifs.open(annotations_filename);
+    nlohmann::json annotations{ifs};
+
+
+    /* annotations look like:
+     * {
+     *   "card_name": {
+     *     "key": value,
+     *     "key2": {
+     *       "key2valuekey": value
+     *     }
+     *   }
+     * }
+     */
+
+
 
     //assume for now that it is just a vector of cards
-    for(auto c_str: j)
+    for(auto card_json: card_list_json)
     {
-        card card;
-        from_json(c_str, card);
-        cards_by_name_[card.name] = card;
+        auto name = card_json["name"].get<std::string>();
+        //load its annotations, if any
+        try
+        {
+            const auto a = annotations[name];
+                for (auto it = a.begin(); it != a.end(); ++it)
+                {
+                    card_json[it.key()] = it.value();
+                }
+        }
+        catch (std::out_of_range e)
+        {}
+
+        cards_by_name_[name] = card_json.get<card>();
     }
+
 }
 
 const card& catalog::at(std::string name) const

@@ -1,0 +1,812 @@
+{
+  "Accomplished Automaton": {
+    "abilities": [
+      "buff_self",
+      "create_token"
+    ]
+  },
+  "Aegis Automaton": {
+    "abilities": [
+      "return_to_hand"
+    ]
+  },
+  "Aerial Responder": {
+    "abilities": [
+      "vigilance",
+      "flying",
+      "lifelink"
+    ]
+  },
+  "Aeronaut Admiral": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Aether Chaser": {
+    "abilities": [
+      "create_token",
+      "energy_sink"
+    ]
+  },
+  "Aether Herder": {
+    "abilities": [
+      "create_token",
+      "energy_sink"
+    ]
+  },
+  "Aether Inspector": {
+    "abilities": [
+      "vigilance",
+      "create_token",
+      "energy_sink"
+    ]
+  },
+  "Aether Poisoner": {
+    "abilities": [
+      "create_token",
+      "energy_sink",
+      "deathtouch"
+    ]
+  },
+  "Aether Swooper": {
+    "abilities": [
+      "flying",
+      "create_token",
+      "energy_sink"
+    ]
+  },
+  "Aether Tradewinds": {
+    "abilities": [
+      "return_to_hand"
+    ]
+  },
+  "Aetherborn Marauder": {
+    "abilities": [
+      "flying",
+      "buff_self",
+      "lifelink"
+    ]
+  },
+  "Aethergeode Miner": {
+    "abilities": [
+      "energy_sink"
+    ]
+  },
+  "Aetherstorm Roc": {
+    "abilities": [
+      "flying",
+      "buff_self",
+      "energy_sink"
+    ]
+  },
+  "Aetherstream Leopard": {
+    "abilities": [
+      "trample",
+      "buff_self",
+      "energy_sink"
+    ]
+  },
+  "Ahn-Crop Crasher": {
+    "abilities": [
+      "haste"
+    ]
+  },
+  "Air Elemental": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Ajani Unyielding": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Alley Evasion": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Angler Drake": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Arborback Stomper": {
+    "abilities": [
+      "trample"
+    ]
+  },
+  "Augmenting Automaton": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Baleful Ammit": {
+    "abilities": [
+      "debuff_other",
+      "lifelink"
+    ]
+  },
+  "Bastion Inventor": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Bitterblade Warrior": {
+    "abilities": [
+      "buff_self",
+      "deathtouch"
+    ]
+  },
+  "Bloodhunter Bat": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Blossoming Defense": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Brazen Scourge": {
+    "abilities": [
+      "haste"
+    ]
+  },
+  "Built to Last": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Cartouche of Ambition": {
+    "abilities": [
+      "buff_other",
+      "debuff_other",
+      "lifelink"
+    ]
+  },
+  "Cartouche of Knowledge": {
+    "abilities": [
+      "buff_other",
+      "grant_flying"
+    ]
+  },
+  "Cartouche of Solidarity": {
+    "abilities": [
+      "create_token",
+      "buff_other"
+    ]
+  },
+  "Cartouche of Strength": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Cartouche of Zeal": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Cogwork Assembler": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Conviction": {
+    "abilities": [
+      "buff_other,"
+    ]
+  },
+  "Countless Gears Renegade": {
+    "abilities": [
+      "revolt",
+      "create_token"
+    ]
+  },
+  "Crocodile of the Crossing": {
+    "abilities": [
+      "haste",
+      "debuff_other"
+    ]
+  },
+  "Cruel Finality": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Dawnfeather Eagle": {
+    "abilities": [
+      "flying",
+      "buff_other"
+    ]
+  },
+  "Defiant Salvager": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Dhund Operative": {
+    "abilities": [
+      "buff_self",
+      "deathtouch"
+    ]
+  },
+  "Doomed Dissenter": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Dukhara Peafowl": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Durable Handicraft": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Eddytrail Hawk": {
+    "abilities": [
+      "flying",
+      "energy_sink"
+    ]
+  },
+  "Electrostatic Pummeler": {
+    "abilities": [
+      "energy_sink"
+    ]
+  },
+  "Empyreal Voyager": {
+    "abilities": [
+      "flying",
+      "trample"
+    ]
+  },
+  "Enraged Giant": {
+    "abilities": [
+      "trample",
+      "haste",
+      "improvise"
+    ]
+  },
+  "Fabrication Module": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Fen Hauler": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Festering Mummy": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Foundry Assembler": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Foundry Screecher": {
+    "abilities": [
+      "flying",
+      "buff_self"
+    ]
+  },
+  "Fourth Bridge Prowler": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Garruk's Horde": {
+    "abilities": [
+      "trample"
+    ]
+  },
+  "Ghirapur Osprey": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Giant Spectacle": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Giant Spider": {
+    "abilities": [
+      "reach"
+    ]
+  },
+  "Gifted Aetherborn": {
+    "abilities": [
+      "lifelink",
+      "deathtouch"
+    ]
+  },
+  "Glint-Sleeve Siphoner": {
+    "abilities": [
+      "energy_sink"
+    ]
+  },
+  "Graceful Cat": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Gremlin Infestation": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Harnessed Lightning": {
+    "abilities": [
+      "energy_sink"
+    ]
+  },
+  "Herald of the Fair": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Highspire Artisan": {
+    "abilities": [
+      "reach",
+      "buff_self",
+      "create_token"
+    ]
+  },
+  "Highspire Infusion": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Hinterland Drake": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Implement of Ferocity": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Inspired Charge": {
+    "abilities": [
+      "buff_other,"
+    ]
+  },
+  "Inventor's Apprentice": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Inventor's Goggles": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Ironcla Revolutionary": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Kefnet the Mindful": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Larger Than Life": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Lifecraft Awakening": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Lifecraft Cavalry": {
+    "abilities": [
+      "trample",
+      "revolt",
+      "buff_self"
+    ]
+  },
+  "Live Fast": {
+    "abilities": [
+      "energy_source"
+    ]
+  },
+  "Make Obsolete": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Manticore of the Gauntlet": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Maulfist Revolutionary": {
+    "abilities": [
+      "trample"
+    ]
+  },
+  "Merciless Javelineer": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Mighty Leap": {
+    "abilities": [
+      "buff_other,"
+    ]
+  },
+  "Narnam Cobra": {
+    "abilities": [
+      "deathtouch"
+    ]
+  },
+  "Nef-Crop Entangler": {
+    "abilities": [
+      "trample",
+      "buff_self"
+    ]
+  },
+  "Night Market Aeronaut": {
+    "abilities": [
+      "flying",
+      "revolt",
+      "buff_self"
+    ]
+  },
+  "Nightmare": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Oakenform": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Ornery Kudu": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Peema Outrider": {
+    "abilities": [
+      "trample",
+      "buff_self",
+      "create_token"
+    ]
+  },
+  "Precise Strike": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Pursue Glory": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Ravenous Intruder": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Renegade Freighter": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Renegade Rallier": {
+    "abilities": [
+      "revolt"
+    ]
+  },
+  "Renegade's Getaway": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Reservoir Walker": {
+    "abilities": [
+      "energy_source"
+    ]
+  },
+  "Reverse Engineer": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Ridgescale Tusker": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Riparian Tiger": {
+    "abilities": [
+      "trample",
+      "buff_self",
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Rogue Refiner": {
+    "abilities": [
+      "energy_source"
+    ]
+  },
+  "Rootwalla": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Rush of Vitality": {
+    "abilities": [
+      "buff_other",
+      "lifelink"
+    ]
+  },
+  "Ruthless Sniper": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Sage of Shaila's Claim": {
+    "abilities": [
+      "energy_source"
+    ]
+  },
+  "Scrapper Champion": {
+    "abilities": [
+      "buff_self",
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Sengir Vampire": {
+    "abilities": [
+      "flying",
+      "buff_self"
+    ]
+  },
+  "Seraph of the Suns": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Serra Angel": {
+    "abilities": [
+      "vigilance",
+      "flying"
+    ]
+  },
+  "Servo Schematic": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Shadowstorm Vizier": {
+    "abilities": [
+      "flying",
+      "buff_self"
+    ]
+  },
+  "Shed Weakness": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Shielded Aether Thief": {
+    "abilities": [
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Shipwreck Moray": {
+    "abilities": [
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Shivan Dragon": {
+    "abilities": [
+      "flying",
+      "buff_self,"
+    ]
+  },
+  "Silkweaver Elite": {
+    "abilities": [
+      "reach",
+      "revolt"
+    ]
+  },
+  "Skyship Plunderer": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Skyship Stalker": {
+    "abilities": [
+      "flying",
+      "buff_self"
+    ]
+  },
+  "Sly Requisitioner": {
+    "abilities": [
+      "create_token",
+      "improvise"
+    ]
+  },
+  "Snare Thopter": {
+    "abilities": [
+      "flying",
+      "haste"
+    ]
+  },
+  "Soulstinger": {
+    "abilities": [
+      "debuff_other"
+    ]
+  },
+  "Sphinx of Magosi": {
+    "abilities": [
+      "flying",
+      "buff_self"
+    ]
+  },
+  "Spidery Grasp": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Spire Patrol": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Stampeding Rhino": {
+    "abilities": [
+      "trample"
+    ]
+  },
+  "Standing Troops": {
+    "abilities": [
+      "vigilance"
+    ]
+  },
+  "Stormfront Pegasus": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Subtle Strike": {
+    "abilities": [
+      "buff_other",
+      "debuff_other"
+    ]
+  },
+  "Supernatural Stamina": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Supply Caravan": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Sweatworks Brawler": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Tah-Crop Elite": {
+    "abilities": [
+      "flying",
+      "buff_other"
+    ]
+  },
+  "Thriving Grubs": {
+    "abilities": [
+      "buff_self",
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Thriving Ibex": {
+    "abilities": [
+      "buff_self",
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Thundering Giant": {
+    "abilities": [
+      "haste"
+    ]
+  },
+  "Torch Gauntlet": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Trial of Solidarity": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Trial of Strength": {
+    "abilities": [
+      "create_token"
+    ]
+  },
+  "Tricks of the Trade": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Untamed Hunger": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Untethered Express": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Unwavering Initiate": {
+    "abilities": [
+      "vigilance",
+      "embalm"
+    ]
+  },
+  "Verdant Automaton": {
+    "abilities": [
+      "buff_self"
+    ]
+  },
+  "Victory's Herald": {
+    "abilities": [
+      "lifelink"
+    ]
+  },
+  "Vizier of Remedies": {
+    "abilities": [
+      "buff_other"
+    ]
+  },
+  "Voltaic Brawler": {
+    "abilities": [
+      "trample",
+      "buff_self",
+      "energy_source",
+      "energy_sink"
+    ]
+  },
+  "Weaponcraft Enthusiast": {
+    "abilities": [
+      "buff_self",
+      "create_token"
+    ]
+  },
+  "Whir of Invention": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Yahenni's Expertise": {
+    "abilities": [
+      "debuff_other"
+    ]
+  }
+}

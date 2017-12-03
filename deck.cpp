@@ -16,7 +16,7 @@ namespace magique
 
 std::vector<card> deck::key_cards_ = {};
 
-deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, rank_{0.0}, colors_{0}
+deck::deck(const std::string &filename, const catalog &catalog, interactions interactions) : interactions_{interactions}, legal_{true}, rank_{0.0}, colors_{0}
 {
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {
@@ -67,7 +67,7 @@ deck::deck(const std::string &filename, const catalog &catalog) : legal_{true}, 
     }
 }
 
-deck::deck(const std::vector<uint64_t> &indices, const collection &collection) : legal_{true}, rank_{0.0}, colors_{0}
+deck::deck(const std::vector<uint64_t> &indices, const collection &collection, interactions interactions) : interactions_{interactions},  legal_{true}, rank_{0.0}, colors_{0}
 {
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {
@@ -105,7 +105,7 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection) :
     }
 }
 
-double deck::eval()
+double deck::evaluate()
 {
     rank_ = 30;
 
@@ -137,7 +137,7 @@ double deck::eval()
 
     uint8_t colored_card_count_{0};
 
-    std::map<std::string, double> interactions;
+    std::map<uint16_t, double> interaction_scores;
 
     for (const auto &card : cards_)
     {
@@ -194,40 +194,16 @@ double deck::eval()
         }
 
         // interactions!
-        for (const auto &card2 : cards_)
+        for(auto i = 0; i < cards_.size(); ++i)
         {
-            if (card2.name == card.name) continue;
-            //check mechanics
-            for (const auto &m : card.mechanics)
+            interaction_scores[i] = 0;
+
+            for(auto j = 0; j < cards_.size(); ++j)
             {
-                if (card2.mechanics.count(m))
-                {
-                    interactions[m]++;
-                }
+                if(i==j) continue; // don't compare a card to itself
+
+                interaction_scores[i] += interactions_.evaluate(cards_[i], cards_[j]);
             }
-
-//            //check types
-//            for (const auto &t : card2.types)
-//            {
-//                if (t == card::type::creature) continue; //don't bother with creature types.
-//                if (card.text.find(to_string(t)) != std::string::npos)
-//                {
-//                    interactions[to_string(t)]++;
-//
-////                    interactions += 0.04; //2 point for the interaction makes 2 points total
-//                }
-//            }
-
-//            //check subtypes
-//            for (const auto &t : card2.subtypes)
-//            {
-//                if (card.text.find(t) != std::string::npos)
-//                {
-//                    interactions[t]++;
-//
-////                    interactions += 0.04; //2 point for the interaction makes 2 points total
-//                }
-//            }
         }
 
         // TODO
@@ -238,28 +214,12 @@ double deck::eval()
     // TODO this is all fucked up
     double interactions_bonus{0};
     reasons_["interactions"] = nlohmann::json{};
-    reasons_["interaction_mult"] = nlohmann::json{};
-    std::map<std::string, double> interaction_multipliers;
-    for(const auto& i : interactions)
+    for(const auto &score : interaction_scores)
     {
-        if(interaction_multipliers[i.first] == 0.0) interaction_multipliers[i.first] = 1.0; //initialize
-        interaction_multipliers[i.first] += (i.second / 100.0);
+        interactions_bonus += score.second;
+        reasons_["interactions"][score.first] = score.second;
     }
-
-    for(const auto& i : interactions)
-    {
-//        double b = interaction_multipliers[i.first] * i.second;
-        double b = i.second/cards_.size();
-        reasons_["interaction_mult"][i.first]=interaction_multipliers[i.first];
-        reasons_["interactions"][i.first] = b;
-        interactions_bonus += b;
-    }
-
-
-
-
-    rank_ += interactions_bonus / cards_.size();
-    reasons_["interactions_bonus"] = interactions_bonus;
+    rank_ += interactions_bonus;
 
     rank_ -= dupe_count; // severe penalty for each dupe
     reasons_["dupe_count"] = dupe_count;

@@ -12,42 +12,44 @@ using namespace magique;
 
 int main()
 {
-    // set up the loggers
-    luna::set_access_logger(access_logger);
-    luna::set_error_logger(error_logger);
-
-    // determine which port to run on, default to 8080
-    auto port = 8080;
-    if (auto port_str = std::getenv("PORT"))
-    {
-        try
-        {
-            port = std::atoi(port_str);
-        }
-        catch (const std::invalid_argument &e)
-        {
-            error_logger(luna::log_level::FATAL, "Invalid port specified in env $PORT.");
-            return 1;
-        }
-        catch (const std::out_of_range &e)
-        {
-            error_logger(luna::log_level::FATAL, "Port specified in env $PORT is too large.");
-            return 1;
-        }
-    }
+//    // set up the loggers
+//    luna::set_access_logger(access_logger);
+//    luna::set_error_logger(error_logger);
+//
+//    // determine which port to run on, default to 8080
+//    auto port = 8080;
+//    if (auto port_str = std::getenv("PORT"))
+//    {
+//        try
+//        {
+//            port = std::atoi(port_str);
+//        }
+//        catch (const std::invalid_argument &e)
+//        {
+//            error_logger(luna::log_level::FATAL, "Invalid port specified in env $PORT.");
+//            return 1;
+//        }
+//        catch (const std::out_of_range &e)
+//        {
+//            error_logger(luna::log_level::FATAL, "Port specified in env $PORT is too large.");
+//            return 1;
+//        }
+//    }
 
 
     // fire up a catalog
-    catalog master_catalog{"mtg.json"};
-
+    catalog master_catalog{"mtg.json", "annotations.json"};
     collection dons_collection{"don.csv", master_catalog};
 
+    // get the interactions data
+    interactions interactions{"interactions.json"};
+
     // pick a key card
-    deck::add_key_card(master_catalog.at("Arborback Stomper"));
-    deck::add_key_card(master_catalog.at("Tattered Mummy"));
+//    deck::add_key_card(master_catalog.at("Arborback Stomper"));
+//    deck::add_key_card(master_catalog.at("Tattered Mummy"));
 
 
-    auto pop_size{1000};
+    auto pop_size{100};
     auto chromo_size = 30 - 14; //  15-card collection, with  6 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
@@ -69,18 +71,18 @@ int main()
     pop.setEvalFunc([&](std::vector<ga2Gene> genes) -> double
                     {
                         //Consuct a deck from what we have here.
-                        deck d{genes, dons_collection};
-                        return d.eval();
+                        deck d{genes, dons_collection, interactions};
+                        return d.evaluate();
                     });
 
     pop.init();
     pop.evaluate();
 //    deck d{pop.getBestFitChromosome(), dons_collection};
-//    auto rank = d.eval();
+//    auto rank = d.evaluate();
 //    nlohmann::json j{d};
 //    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
-    for (auto gen = 0; gen < 1000; ++gen)
+    for (auto gen = 0; gen < 100; ++gen)
     {
         pop.select();
         pop.crossover();
@@ -91,28 +93,28 @@ int main()
         if((gen+1) % 100 == 0)     std::cout << std::endl;
 
 //        deck d{pop.getBestFitChromosome(), dons_collection};
-//        auto rank = d.eval();
+//        auto rank = d.evaluate();
 //        nlohmann::json j{d};
 //        std::cout << gen << " " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
     }
 
     std::cout << std::endl;
 
-    deck d{pop.getBestFitChromosome(), dons_collection};
-    auto rank = d.eval();
+    deck d{pop.getBestFitChromosome(), dons_collection, interactions};
+    auto rank = d.evaluate();
     nlohmann::json j{d};
     std::cout << j.dump(4) << std::endl;
 
 
 
-//    deck dons_wu_flying{"BW Flying.txt", master_catalog};
-//    dons_wu_flying.eval();
+//    deck dons_wu_flying{"BW Flying.txt", master_catalog, interactions};
+//    dons_wu_flying.evaluate();
 //    nlohmann::json deck_j;
 //    to_json(deck_j, dons_wu_flying);
 //    std::cout << "        " << deck_j["rank"].dump() << " " << deck_j.dump() << std::endl;
 //
-//    deck bad{{12, 13, 12, 13, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5}, dons_collection};
-//    bad.eval();
+//    deck bad{{12, 13, 12, 13, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5}, dons_collection, interactions};
+//    bad.evaluate();
 //    nlohmann::json deck_bad;
 //    to_json(deck_bad, bad);
 //    std::cout << "        " << deck_bad["rank"].dump() << " " << deck_bad.dump() << std::endl;

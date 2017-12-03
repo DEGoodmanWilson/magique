@@ -148,43 +148,16 @@ void from_json(const nlohmann::json &j, card &p)
 
     p.converted_mana_cost = j.at("cmc").get<uint64_t>();
 
-    //TODO first pass at finding interesting mechanics. In fact, this should be handled externally by something smarter
-
-    // TODO interactions should be cumulative—the more of one kind you have, the more each gives points. We can improve on this algorithm.
-
-    // TOPO case-insensitive search?
-
-    // flying, reach
-    if (p.text.find("Flying") != std::string::npos || p.text.find("Reach") != std::string::npos)
+    try
     {
-        p.mechanics.insert("flying");
+        for(const auto& a : j.at("abilities").get<std::vector<std::string>>())
+        {
+            p.abilities.emplace(a);
+        }
     }
+    catch (std::out_of_range e)
+    {}
 
-    if (p.text.find("token") != std::string::npos)
-    {
-        p.mechanics.insert("token");
-    }
-
-    if (p.text.find("draw") != std::string::npos)
-    {
-        p.mechanics.insert("draw");
-    }
-
-    std::smatch sm;
-    if(std::regex_search(p.text, sm, std::regex{R"(\+[0-9]/\+[0-9])"}) )
-    {
-        p.mechanics.insert("buff");
-    }
-
-    if (p.text.find("{E}") != std::string::npos)
-    {
-        p.mechanics.insert("energy");
-    }
-
-    if(std::regex_search(p.text, sm, std::regex{R"(\-[0-9]/\-[0-9])"}) )
-    {
-        p.mechanics.insert("debuff");
-    }
 }
 
 std::string to_string(card::type t)
@@ -288,12 +261,19 @@ void to_json(nlohmann::json &j, const card &p)
         toughness = *p.toughness;
     }
 
+    nlohmann::json abilities;
+    if(p.abilities.size())
+    {
+        abilities = p.abilities;
+    }
+
     j = nlohmann::json{
 //            {"id",             p.id},
             {"name",           p.name},
             {"types",          types},
             {"color_identity", color_identities},
             {"text",           p.text},
+            {"abilities",      abilities},
             {"power",          power},
             {"toughness",      toughness},
             {"cmc",            p.converted_mana_cost}

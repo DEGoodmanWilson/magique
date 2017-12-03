@@ -132,7 +132,7 @@ struct card
     std::experimental::optional<std::string> toughness;
     uint8_t converted_mana_cost;
 
-    std::set<std::string> mechanics;
+    std::set<std::string> abilities;
 };
 
 std::string to_string(card::type t);

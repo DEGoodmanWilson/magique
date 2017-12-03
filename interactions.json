@@ -1,0 +1,39 @@
+{
+  "flying": {
+    "flying": 0.5,
+    "grant_flying": -1.0
+  },
+
+  "grant_flying": {
+    "!flying": 1.0
+  },
+
+  "grant_energy": {
+    "grant_energy": 1.0
+  },
+
+  "consume_energy": {
+    "grant_energy": 1.0,
+    "consume_energy": -0.5
+  },
+
+  "revolt": {
+    "revolt": -1.0
+  },
+
+  "create_token": {
+    "create_token": 1.0
+  },
+
+  "buff_self": {
+    "buff_other": 1.0
+  },
+
+  "buff_other": {
+    "buff_other": 1.0
+  },
+
+  "debuff_other": {
+    "debuff_other": 1.0
+  }
+}

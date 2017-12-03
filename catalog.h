@@ -11,6 +11,7 @@
 namespace magique
 {
 
+
 struct case_insensitive_comp_ {
     bool operator()(const std::string& a, const std::string& b) const noexcept;
 };
@@ -18,7 +19,7 @@ struct case_insensitive_comp_ {
 class catalog
 {
 public:
-    catalog(std::string filename);
+    catalog(std::string filename, std::string annotations_filename);
 
     const card &at(std::string name) const;
 
