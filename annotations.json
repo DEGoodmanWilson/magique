@@ -361,7 +361,8 @@
   },
   "Highspire Infusion": {
     "abilities": [
-      "buff_other"
+      "buff_other",
+      "energy_source"
     ]
   },
   "Hinterland Drake": {

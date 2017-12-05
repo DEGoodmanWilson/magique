@@ -204,6 +204,9 @@ double deck::evaluate()
 
                 interaction_scores[i] += interactions_.evaluate(cards_[i], cards_[j]);
             }
+
+            // normalize
+            interaction_scores[i] = interaction_scores[i] / cards_.size();
         }
 
         // TODO

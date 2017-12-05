@@ -1,7 +1,5 @@
 #include <iostream>
 
-#include <luna/luna.h>
-#include "logger.h"
 #include "catalog.h"
 #include "collection.h"
 #include "card.h"
@@ -12,31 +10,6 @@ using namespace magique;
 
 int main()
 {
-//    // set up the loggers
-//    luna::set_access_logger(access_logger);
-//    luna::set_error_logger(error_logger);
-//
-//    // determine which port to run on, default to 8080
-//    auto port = 8080;
-//    if (auto port_str = std::getenv("PORT"))
-//    {
-//        try
-//        {
-//            port = std::atoi(port_str);
-//        }
-//        catch (const std::invalid_argument &e)
-//        {
-//            error_logger(luna::log_level::FATAL, "Invalid port specified in env $PORT.");
-//            return 1;
-//        }
-//        catch (const std::out_of_range &e)
-//        {
-//            error_logger(luna::log_level::FATAL, "Port specified in env $PORT is too large.");
-//            return 1;
-//        }
-//    }
-
-
     // fire up a catalog
     catalog master_catalog{"mtg.json", "annotations.json"};
     collection dons_collection{"don.csv", master_catalog};
@@ -46,11 +19,9 @@ int main()
 
     // pick a key card
     deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
-//    deck::add_key_card(master_catalog.at("Tattered Mummy"));
-
 
     auto pop_size{1000};
-    auto chromo_size = 30 - 13; //  15-card collection, with  6 lands
+    auto chromo_size = 30 - 13; //  30-card collection, with 12 lands and a key card specified
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
@@ -89,7 +60,7 @@ int main()
         pop.mutate();
         pop.replace();
         pop.evaluate();
-        std::cout << ".";
+        std::cout << "." << std::flush;
         if((gen+1) % 100 == 0)     std::cout << std::endl;
 
 //        deck d{pop.getBestFitChromosome(), dons_collection};
@@ -107,6 +78,8 @@ int main()
 
 
 
+///// The code below is just to demonstrate how you can use the evaluation function to evaluate existing decks you might already have.
+
 //    deck dons_wu_flying{"BW Flying.txt", master_catalog, interactions};
 //    dons_wu_flying.evaluate();
 //    nlohmann::json deck_j;
@@ -119,38 +92,6 @@ int main()
 //    to_json(deck_bad, bad);
 //    std::cout << "        " << deck_bad["rank"].dump() << " " << deck_bad.dump() << std::endl;
 
-
-
-
-//    // add endpoints
-//    luna::router api{"/"};
-//    api.set_mime_type("text/json");
-//
-//    // For now, let's just define them inline, we can move them out later.
-//    api.handle_request(luna::request_method::GET, R"(/(.+))", [&](luna::request request) -> luna::response
-//    {
-//        try
-//        {
-//            auto card = master_catalog.at(request.matches[1]);
-//            nlohmann::json j = card;
-//            return {j.dump()};
-//        }
-//        catch(...)
-//        {
-//            return {404};
-//        }
-//    });
-//
-//
-//    // launch server
-//    luna::server server;
-//
-//    server.add_router(api);
-//
-//    if (!server.start(port))
-//    {
-//        return 1;
-//    }
 
 
     return 0;

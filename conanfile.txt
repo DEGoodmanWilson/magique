@@ -1,10 +1,12 @@
 [requires]
-luna/4.0.0@DEGoodmanWilson/stable
+# luna/4.0.0@DEGoodmanWilson/stable
 # ga2/1.0.0@DEGoodmanWilson/testing
 nl-json/2.1.1@genvidtech/1.4.0
 
-# for testing
+# for scraping
 cpr/1.2.0@DEGoodmanWilson/stable
+
+# for testing
 Catch/1.9.3@uilianries/stable
 
 [generators]

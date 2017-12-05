@@ -13,8 +13,7 @@
   },
 
   "energy_sink": {
-    "energy_source": 1.0,
-    "energy_sink": -0.5
+    "energy_source": 1.0
   },
 
   "revolt": {
