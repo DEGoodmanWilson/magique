@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "catalog.h"
-#include "collection.h"
-#include "card.h"
-#include "deck.h"
+#include "magique/catalog.h"
+#include "magique/collection.h"
+#include "magique/card.h"
+#include "magique/deck.h"
 #include "ga2/ga2.h"
 
 using namespace magique;
@@ -11,11 +11,11 @@ using namespace magique;
 int main()
 {
     // fire up a catalog
-    catalog master_catalog{"mtg.json", "annotations.json"};
-    collection dons_collection{"don.csv", master_catalog};
+    catalog master_catalog{"data/catalog.json", "data/annotations.json"};
+    collection dons_collection{"data/collection_dons.csv", master_catalog};
 
     // get the interactions data
-    interactions interactions{"interactions.json"};
+    interactions interactions{"data/interactions.json"};
 
     // pick a key card
     deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
@@ -80,7 +80,7 @@ int main()
 
 ///// The code below is just to demonstrate how you can use the evaluation function to evaluate existing decks you might already have.
 
-//    deck dons_wu_flying{"BW Flying.txt", master_catalog, interactions};
+//    deck dons_wu_flying{"data/sample decks/BW Flying.txt", master_catalog, interactions};
 //    dons_wu_flying.evaluate();
 //    nlohmann::json deck_j;
 //    to_json(deck_j, dons_wu_flying);

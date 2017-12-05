@@ -23,12 +23,12 @@ set(MAGIQUE_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/interactions.h
         )
 
-set(GA2 ga2/ga2.h
-        ga2/ga2Chromosome.h
-        ga2/ga2Chromosome.cpp
-        ga2/ga2Gene.h
-        ga2/ga2Gene.h
-        ga2/ga2Population.h
+set(GA2 ${CMAKE_SOURCE_DIR}/ga2/ga2.h
+        ${CMAKE_SOURCE_DIR}/ga2/ga2Chromosome.h
+        ${CMAKE_SOURCE_DIR}/ga2/ga2Chromosome.cpp
+        ${CMAKE_SOURCE_DIR}/ga2/ga2Gene.h
+        ${CMAKE_SOURCE_DIR}/ga2/ga2Population.h
+        ${CMAKE_SOURCE_DIR}/ga2/ga2Population.cpp
         )
 
 add_executable(${PROJECT_NAME} main.cpp ${GA2} ${MAGIQUE_SOURCE_FILES})

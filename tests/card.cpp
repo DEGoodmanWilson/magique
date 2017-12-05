@@ -9,7 +9,7 @@
 
 TEST_CASE("We can construct a card from some JSON")
 {
-    std::fstream ifs{"tests/data/holy_living_hell.json"};
+    std::fstream ifs{"tests/data/card_holy_living_hell.json"};
     nlohmann::json json_obj{ifs};
 
     auto card = json_obj.get<magique::card>();
@@ -30,7 +30,7 @@ TEST_CASE("We can construct a card from some JSON")
 
 TEST_CASE("Basic lands are lands too")
 {
-    std::fstream ifs{"tests/data/basic_land.json"};
+    std::fstream ifs{"tests/data/card_basic_land.json"};
     nlohmann::json json_obj{ifs};
 
     auto card = json_obj.get<magique::card>();
@@ -45,7 +45,7 @@ TEST_CASE("Basic lands are lands too")
 
 TEST_CASE("Non-basic lands are not basic lands, duh")
 {
-    std::fstream ifs{"tests/data/non_basic_land.json"};
+    std::fstream ifs{"tests/data/card_non_basic_land.json"};
     nlohmann::json json_obj{ifs};
 
     auto card = json_obj.get<magique::card>();

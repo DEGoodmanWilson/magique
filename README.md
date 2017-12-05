@@ -21,18 +21,18 @@ cmake -DCMAKE_BUILD_TYPE=Release .
 cmake --build .
 ```
 
-First, we need to gather all the data on all the Magic cards ever made. We're going to do that by scraping mtgapi.com. Build and run `magique_scraper` and pipe its output into a file called `mtg.json`.
+First, we need to gather all the data on all the Magic cards ever made. We're going to do that by scraping mtgapi.com. Build and run `magique_scraper` and pipe its output into a file called `data/catalog.json`.
 
 ```
-./bin/magique_scraper > mtg.json
+./bin/magique_scraper > data/catalog.json
 ```
 
-Export your collection of Magic cards into a `csv` file with the following format
+Export your collection of Magic cards into a `csv` file in the `data` directory with the following format
 ```
 Quantity,Name,other thing,another thing
 ```
 
-Be sure to leave the first line of the CSV file as the header, because the program will skip it. Look at `don.csv` for an example. This file was generated with "MTG Manager" on iOS.
+Be sure to leave the first line of the CSV file as the header, because the program will skip it. Look at `collection_dons.csv` for an example. This file was generated with "MTG Manager" on iOS.
 
 Now, because this code is a pile of flaming shit, any options you want to set will need to be manually coded into `main.cpp`. You'll need to tell it what file contains your collection (or, hell, just use my collection to get started, and leave things as they are).
 
