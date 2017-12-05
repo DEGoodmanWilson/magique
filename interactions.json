@@ -17,7 +17,8 @@
   },
 
   "revolt": {
-    "revolt": -1.0
+    "revolt": -1.0,
+    "removal_own": 1.0
   },
 
   "create_token": {

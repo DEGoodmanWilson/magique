@@ -9,33 +9,76 @@
 namespace magique
 {
 
-std::vector<card::color> card::color_identities_from_array(const std::vector<std::string> arr)
+std::set<card::color> card::color_identities_from_array(const std::set<std::string> arr)
 {
-    std::vector<color> colors{};
+    std::set<color> colors{};
     for (auto color : arr)
     {
         std::transform(color.begin(), color.end(), color.begin(), ::tolower);
 
         if (color == "w")
-        { colors.push_back(color::white); }
+        { colors.emplace(color::white); }
         else if (color == "u")
-        { colors.push_back(color::blue); }
+        { colors.emplace(color::blue); }
         else if (color == "b")
-        { colors.push_back(color::black); }
+        { colors.emplace(color::black); }
         else if (color == "r")
-        { colors.push_back(color::red); }
+        { colors.emplace(color::red); }
         else if (color == "g")
-        { colors.push_back(color::green); }
-        else if (color == "u") colors.push_back(color::colorless);
+        { colors.emplace(color::green); }
+        else if (color == "u") colors.emplace(color::colorless);
     }
 
     return colors;
 }
 
-std::vector<card::type>
-card::types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes)
+bool card::has_type(const std::string &type) const
 {
-    std::vector<type> types_arr{};
+    std::string type_str = type;
+    std::transform(type_str.begin(), type_str.end(), type_str.begin(), ::tolower);
+
+    if (type_str == "basic_land" || type_str == "basic land")
+    {
+        return types.count(type::basic_land) != 0;
+    }
+
+    if (type_str == "land")
+    {
+        return (types.count(type::basic_land) != 0) || (types.count(type::land) != 0);
+    }
+
+    if (type_str == "creature")
+    {
+        return types.count(type::creature) != 0;
+    }
+    if (type_str == "artifact")
+    {
+        return types.count(type::artifact) != 0;
+    }
+    if (type_str == "enchantment")
+    {
+        return types.count(type::enchantment) != 0;
+    }
+    if (type_str == "planeswalker")
+    {
+        return types.count(type::planeswalker) != 0;
+    }
+    if (type_str == "instant")
+    {
+        return types.count(type::instant) != 0;
+    }
+    if (type_str == "sorcery")
+    {
+        return types.count(type::sorcery) != 0;
+    }
+
+    return false;
+}
+
+std::set<card::type>
+card::types_from_array(const std::set<std::string> &types, const std::set<std::string> &supertypes)
+{
+    std::set<type> types_arr{};
 
     for (const auto &type : types)
     {
@@ -58,24 +101,24 @@ card::types_from_array(const std::vector<std::string> &types, const std::vector<
             }
             if (basic_land)
             {
-                types_arr.push_back(type::basic_land);
+                types_arr.emplace(type::basic_land);
             }
             else
             {
-                types_arr.push_back(type::land);
+                types_arr.emplace(type::land);
             }
         }
         else if (type_str == "creature")
-        { types_arr.push_back(type::creature); }
+        { types_arr.emplace(type::creature); }
         else if (type_str == "artifact")
-        { types_arr.push_back(type::artifact); }
+        { types_arr.emplace(type::artifact); }
         else if (type_str == "enchantment")
-        { types_arr.push_back(type::enchantment); }
+        { types_arr.emplace(type::enchantment); }
         else if (type_str == "planeswalker")
-        { types_arr.push_back(type::planeswalker); }
+        { types_arr.emplace(type::planeswalker); }
         else if (type_str == "instant")
-        { types_arr.push_back(type::instant); }
-        else if (type_str == "sorcery") types_arr.push_back(type::sorcery);
+        { types_arr.emplace(type::instant); }
+        else if (type_str == "sorcery") types_arr.emplace(type::sorcery);
 
     }
 
@@ -87,12 +130,12 @@ void from_json(const nlohmann::json &j, card &p)
 {
     p.name = j.at("name").get<std::string>();
 
-    std::vector<std::string> supertypes;
+    std::set<std::string> supertypes;
     try
     {
         if (j.at("supertypes").is_array())
         {
-            supertypes = j.at("supertypes").get<std::vector<std::string>>();
+            supertypes = j.at("supertypes").get<std::set<std::string>>();
         }
     }
     catch (std::out_of_range e)
@@ -100,7 +143,7 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        p.types = card::types_from_array(j.at("types").get<std::vector<std::string>>(), supertypes);
+        p.types = card::types_from_array(j.at("types").get<std::set<std::string>>(), supertypes);
     }
     catch (std::out_of_range e)
     {}
@@ -109,7 +152,7 @@ void from_json(const nlohmann::json &j, card &p)
     {
         if (j.at("subtypes").is_array())
         {
-            p.subtypes = j.at("subtypes").get<std::vector<std::string>>();
+            p.subtypes = j.at("subtypes").get<std::set<std::string>>();
         }
     }
     catch (std::out_of_range e)
@@ -118,7 +161,7 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        p.color_identity = card::color_identities_from_array(j.at("colorIdentity").get<std::vector<std::string>>());
+        p.color_identity = card::color_identities_from_array(j.at("colorIdentity").get<std::set<std::string>>());
     }
     catch (std::out_of_range e)
     {}
@@ -150,9 +193,19 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        for(const auto& a : j.at("abilities").get<std::vector<std::string>>())
+        for (const auto &a : j.at("abilities").get<std::vector<std::string>>())
         {
             p.abilities.emplace(a);
+        }
+    }
+    catch (std::out_of_range e)
+    {}
+
+    try
+    {
+        for (const auto &a : j.at("affinities").get<std::vector<std::string>>())
+        {
+            p.affinities.emplace(a);
         }
     }
     catch (std::out_of_range e)
@@ -262,7 +315,7 @@ void to_json(nlohmann::json &j, const card &p)
     }
 
     nlohmann::json abilities;
-    if(p.abilities.size())
+    if (p.abilities.size())
     {
         abilities = p.abilities;
     }

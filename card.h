@@ -117,22 +117,25 @@ struct card
         sorcery,
     };
 
-    static std::vector<color> color_identities_from_array(std::vector<std::string> arr);
+    bool has_type(const std::string &type_name) const;
 
-    static std::vector<card::type>
-    types_from_array(const std::vector<std::string> &types, const std::vector<std::string> &supertypes);
+    static std::set<color> color_identities_from_array(std::set<std::string> arr);
+
+    static std::set<card::type>
+    types_from_array(const std::set<std::string> &types, const std::set<std::string> &supertypes);
 
 //    std::string id;
     std::string name;
-    std::vector<type> types;
-    std::vector<std::string> subtypes;
-    std::vector<color> color_identity;
+    std::set<type> types;
+    std::set<std::string> subtypes;
+    std::set<color> color_identity;
     std::string text;
     std::experimental::optional<std::string> power;
     std::experimental::optional<std::string> toughness;
     uint8_t converted_mana_cost;
 
     std::set<std::string> abilities;
+    std::set<std::string> affinities;
 };
 
 std::string to_string(card::type t);

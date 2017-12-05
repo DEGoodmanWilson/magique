@@ -223,6 +223,7 @@ double deck::evaluate()
         reasons_["interactions"][score.first] = score.second;
     }
     rank_ += interactions_bonus;
+    reasons_["interactions_bonus"] = interactions_bonus;
 
     rank_ -= dupe_count; // severe penalty for each dupe
     reasons_["dupe_count"] = dupe_count;

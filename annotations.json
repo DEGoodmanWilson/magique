@@ -255,6 +255,10 @@
   "Electrostatic Pummeler": {
     "abilities": [
       "energy_sink"
+    ],
+    "affinities": [
+      "buff_other",
+      "grant_trample"
     ]
   },
   "Empyreal Voyager": {

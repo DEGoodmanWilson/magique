@@ -56,6 +56,24 @@ double interactions::evaluate(const card &a, const card &b) const
         }
     }
 
+    //iterate through card a's affinities, and see if card b satisfies them
+    for (const auto &aff: a.affinities)
+    {
+        double score{1.0};
+        std::string affinity{aff};
+        if (affinity[0] == '!') // handle negative affinities
+        {
+            affinity = affinity.substr(1);
+            score = -1.0;
+        }
+
+        // check against b's abilities, types, and subtypes
+        if (b.abilities.count(affinity) || b.has_type(affinity) || b.subtypes.count(affinity))
+        {
+            value += score;
+        }
+    }
+
     return value;
 }
 

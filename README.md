@@ -56,6 +56,7 @@ There is so much work to do. So much.
 * Refine system for representing card interactions and abilities in more interesting and nuanced ways
 * Specify key mechanics to include in a deck
 * Allow user to specify their own mana curves and card type proportions
+* Unit tests, HELLO WHY HAVEN'T I WRITTEN ANY TESTS YET? Also integration tests. And functional tests, and testing tests and other tests and all the tests
 
 ## How can I help?
 
