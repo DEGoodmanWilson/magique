@@ -279,10 +279,10 @@ double deck::evaluate()
     cmc_distance = sqrt(cmc_distance);
 
 
-    auto cmc_distance_score = (cards_.size() / 2.0 - cmc_distance);
-    rank_ += cmc_distance_score;
+//    auto cmc_distance_score = (cards_.size() / 2.0 - cmc_distance);
+    rank_ -= cmc_distance;
     reasons_["cmc_distance"] = cmc_distance;
-    reasons_["cmc_distance_score"] = cmc_distance_score;
+//    reasons_["cmc_distance_score"] = cmc_distance_score;
 
 
     // type distribution //TODO make this configurable!
@@ -305,10 +305,9 @@ double deck::evaluate()
     }
     type_distance = sqrt(type_distance);
 
-    auto type_distance_score = (cards_.size() / 2.0 - type_distance);
-    rank_ += type_distance_score;
+    rank_ -= type_distance;
     reasons_["type_distance"] = type_distance;
-    reasons_["type_distance_score"] = type_distance_score;
+//    reasons_["type_distance_score"] = type_distance_score;
 
     if (!legal_)
     {
