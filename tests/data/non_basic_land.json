@@ -1,0 +1,20 @@
+{
+  "layout": "normal",
+  "name": "City of Ass",
+  "cmc": 0,
+  "type": "Land",
+  "types": [
+    "Land"
+  ],
+  "text": "City of Ass comes into play tapped.\n{T}: Add one and one-half mana of any one color to your mana pool.",
+  "imageName": "city of ass",
+  "printings": [
+    "UNH"
+  ],
+  "legalities": [
+    {
+      "format": "Un-Sets",
+      "legality": "Legal"
+    }
+  ]
+}

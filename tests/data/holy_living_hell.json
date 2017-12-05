@@ -1,0 +1,23 @@
+{
+  "layout": "normal",
+  "name": "Holy Living Hell",
+  "manaCost": "{5}{U}{W}",
+  "cmc": 7,
+  "colors": [
+    "Blue",
+    "White"
+  ],
+  "type": "Instant Land — Human Jester",
+  "types": [
+    "Instant",
+    "Creature"
+  ],
+  "subtypes": [
+    "Human",
+    "Jester"
+  ],
+  "text": "Stand up. Leave current game, and join game to your immediate right",
+  "power": "1",
+  "toughness": "1",
+  "colorIdentity": ["U", "W"]
+}

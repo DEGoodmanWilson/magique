@@ -93,7 +93,7 @@ card::types_from_array(const std::set<std::string> &types, const std::set<std::s
                 std::string supertype_str = supertype;
                 std::transform(supertype_str.begin(), supertype_str.end(), supertype_str.begin(), ::tolower);
 
-                if (supertype == "basic")
+                if (supertype_str == "basic")
                 {
                     basic_land = true;
                     break;
@@ -103,10 +103,8 @@ card::types_from_array(const std::set<std::string> &types, const std::set<std::s
             {
                 types_arr.emplace(type::basic_land);
             }
-            else
-            {
-                types_arr.emplace(type::land);
-            }
+
+            types_arr.emplace(type::land); // basic lands are also lands
         }
         else if (type_str == "creature")
         { types_arr.emplace(type::creature); }
