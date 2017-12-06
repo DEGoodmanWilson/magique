@@ -1,3 +1,7 @@
+#include <signal.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #include <iostream>
 
 #include "magique/catalog.h"
@@ -8,8 +12,25 @@
 
 using namespace magique;
 
+bool dump_and_abort{false};
+
+void signal_handler(int s)
+{
+    dump_and_abort = true; //not gonna worry about sync because bools are atomic writable
+}
+
 int main()
 {
+    // set up signal handlers
+    struct sigaction sigIntHandler;
+
+    sigIntHandler.sa_handler = signal_handler;
+    sigemptyset(&sigIntHandler.sa_mask);
+    sigIntHandler.sa_flags = 0;
+
+    sigaction(SIGINT, &sigIntHandler, NULL);
+
+
     // fire up a catalog
     catalog master_catalog{"data/catalog.json", "data/annotations.json"};
     collection dons_collection{"data/collection_dons.csv", master_catalog};
@@ -48,10 +69,6 @@ int main()
 
     pop.init();
     pop.evaluate();
-//    deck d{pop.getBestFitChromosome(), dons_collection};
-//    auto rank = d.evaluate();
-//    nlohmann::json j{d};
-//    std::cout << "  " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
 
     for (auto gen = 0; gen < 1000; ++gen)
     {
@@ -61,12 +78,17 @@ int main()
         pop.replace();
         pop.evaluate();
         std::cout << "." << std::flush;
-        if((gen+1) % 100 == 0)     std::cout << std::endl;
+        if ((gen + 1) % 100 == 0) std::cout << std::endl;
 
-//        deck d{pop.getBestFitChromosome(), dons_collection};
-//        auto rank = d.evaluate();
-//        nlohmann::json j{d};
-//        std::cout << gen << " " << pop.getMinFitness() << " " << pop.getAvgFitness() << " " << rank << " " << j.dump() << std::endl;
+        if(dump_and_abort)
+        {
+            // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
+            deck d{pop.getBestFitChromosome(), dons_collection, interactions};
+            auto rank = d.evaluate();
+            nlohmann::json j{d};
+            std::cout << j.dump(4) << std::endl;
+            exit(1);
+        }
     }
 
     std::cout << std::endl;
