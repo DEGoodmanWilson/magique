@@ -132,7 +132,7 @@ struct card
     std::string text;
     std::experimental::optional<std::string> power;
     std::experimental::optional<std::string> toughness;
-    uint8_t converted_mana_cost;
+    uint8_t converted_mana_cost{0};
 
     std::set<std::string> abilities;
     std::set<std::string> affinities;

@@ -21,8 +21,12 @@ catalog::catalog(std::string filename, std::string annotations_filename)
     nlohmann::json card_list_json{ifs};
     ifs.close();
 
-    ifs.open(annotations_filename);
-    nlohmann::json annotations{ifs};
+    nlohmann::json annotations;
+    if(!annotations_filename.empty())
+    {
+        ifs.open(annotations_filename);
+        annotations << ifs;
+    }
 
 
     /* annotations look like:

@@ -13,6 +13,7 @@ namespace magique
 class interactions
 {
 public:
+    interactions() = default;
     interactions(std::string filename);
 
     double evaluate(const card &a, const card &b) const;

@@ -57,3 +57,16 @@ TEST_CASE("Non-basic lands are not basic lands, duh")
     REQUIRE(!card.has_type("basic land"));
     REQUIRE(card.has_type("land"));
 }
+
+TEST_CASE("Cards pickle to JSON correctly")
+{
+    magique::card card;
+    card.name = "Howdy";
+    card.types = {magique::card::type::land};
+
+    nlohmann::json card_obj = card;
+
+    std::string card_json{card_obj.dump()};
+
+    REQUIRE(card_json == R"({"cmc":0,"name":"Howdy","types":["Land"]})");
+}

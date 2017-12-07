@@ -1,6 +1,6 @@
 
 set(MAGIQUE_TESTS main.cpp
-        card.cpp)
+        card.cpp deck.cpp catalog.cpp)
 
 add_executable(magique_tests ${MAGIQUE_SOURCE_FILES} ${MAGIQUE_TESTS})
 

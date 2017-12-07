@@ -232,7 +232,7 @@ double deck::evaluate()
     colors_ = colors_seen.size();
 
     //calculate color balance. Ideally (maybe?) all colors are equally distributed.
-    auto ideal_color_count = colored_card_count_ / colors_; // TODO this doesn't account for colorless cards!
+    auto ideal_color_count = (colors_ > 0) ? colored_card_count_ / colors_ : 0; // TODO this doesn't account for colorless cards!
     double color_balance_adjustment_ = 0;
     for (const auto &c: colors_seen)
     {

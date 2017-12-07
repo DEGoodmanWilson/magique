@@ -236,8 +236,8 @@ std::string to_string(card::type t)
 
 void to_json(nlohmann::json &j, const card &p)
 {
+    j = nlohmann::json::object();
     std::vector<std::string> color_identities;
-
     for (const auto &c : p.color_identity)
     {
         switch (c)
@@ -261,6 +261,10 @@ void to_json(nlohmann::json &j, const card &p)
                 color_identities.emplace_back("Colorless");
                 break;
         }
+    }
+    if(color_identities.size())
+    {
+        j["color_identities"] = color_identities;
     }
 
     std::vector<std::string> types;
@@ -294,40 +298,44 @@ void to_json(nlohmann::json &j, const card &p)
                 break;
         }
     }
+    if(types.size())
+    {
+        j["types"] = types;
+    }
 
     if (p.subtypes.size() > 0)
     {
         j["subtypes"] = p.subtypes;
     }
 
-    nlohmann::json power;
     if (p.power)
     {
-        power = *p.power;
+        j["power"] = *p.power;
     }
 
-    nlohmann::json toughness;
     if (p.toughness)
     {
-        toughness = *p.toughness;
+        j["toughness"] = *p.toughness;
     }
 
-    nlohmann::json abilities;
     if (p.abilities.size())
     {
-        abilities = p.abilities;
+        j["abilities"] = p.abilities;
+    }
+    if (p.affinities.size())
+    {
+        j["affinities"] = p.affinities;
     }
 
-    j = nlohmann::json{
-//            {"id",             p.id},
-            {"name",           p.name},
-            {"types",          types},
-            {"color_identity", color_identities},
-            {"text",           p.text},
-            {"abilities",      abilities},
-            {"power",          power},
-            {"toughness",      toughness},
-            {"cmc",            p.converted_mana_cost}
-    };
+    j["name"] = p.name;
+
+    if(!p.text.empty())
+    {
+        j["text"] = p.text;
+    }
+
+    j["cmc"] = p.converted_mana_cost;
+
+    //TODO actual mana cost!
 }
 } //namespace magique

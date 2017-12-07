@@ -1,0 +1,4218 @@
+{
+    "Accomplished Automaton": {
+        "cmc": 7,
+        "name": "Accomplished Automaton",
+        "power": "5",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "Fabricate 1 (When this creature enters the battlefield, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "toughness": "7",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Aegis Automaton": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aegis Automaton",
+        "power": "0",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{4}{W}: Return another target creature you control to its owner's hand.",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Aerial Responder": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aerial Responder",
+        "power": "2",
+        "subtypes": [
+            "Dwarf",
+            "Soldier"
+        ],
+        "text": "Flying, vigilance, lifelink",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aeronaut Admiral": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aeronaut Admiral",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Pilot"
+        ],
+        "text": "Flying\nVehicles you control have flying.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Chaser": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Aether Chaser",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "First strike\nWhen Aether Chaser enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Aether Chaser attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Herder": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Aether Herder",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Druid",
+            "Elf"
+        ],
+        "text": "When Aether Herder enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Aether Herder attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Inspector": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aether Inspector",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Dwarf"
+        ],
+        "text": "Vigilance\nWhen Aether Inspector enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Aether Inspector attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Poisoner": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Aether Poisoner",
+        "power": "1",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nWhen Aether Poisoner enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Aether Poisoner attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Swooper": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Aether Swooper",
+        "power": "1",
+        "subtypes": [
+            "Artificer",
+            "Vedalken"
+        ],
+        "text": "Flying\nWhen Aether Swooper enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Aether Swooper attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Theorist": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Aether Theorist",
+        "power": "1",
+        "subtypes": [
+            "Rogue",
+            "Vedalken"
+        ],
+        "text": "When Aether Theorist enters the battlefield, you get {E}{E}{E} (three energy counters).\n{T}, Pay {E}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aether Tradewinds": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Aether Tradewinds",
+        "text": "Return target permanent you control and target permanent you don't control to their owners' hands.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Aetherborn Marauder": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Aetherborn Marauder",
+        "power": "2",
+        "subtypes": [
+            "Aetherborn",
+            "Rogue"
+        ],
+        "text": "Flying, lifelink\nWhen Aetherborn Marauder enters the battlefield, move any number of +1/+1 counters from other permanents you control onto Aetherborn Marauder.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aethergeode Miner": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aethergeode Miner",
+        "power": "3",
+        "subtypes": [
+            "Dwarf",
+            "Scout"
+        ],
+        "text": "Whenever Aethergeode Miner attacks, you get {E}{E} (two energy counters).\nPay {E}{E}: Exile Aethergeode Miner, then return it to the battlefield under its owner's control.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aetherstorm Roc": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aetherstorm Roc",
+        "power": "3",
+        "subtypes": [
+            "Bird"
+        ],
+        "text": "Flying\nWhenever Aetherstorm Roc or another creature enters the battlefield under your control, you get {E} (an energy counter).\nWhenever Aetherstorm Roc attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it and tap up to one target creature defending player controls.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Aetherstream Leopard": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Aetherstream Leopard",
+        "power": "2",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Trample\nWhen Aetherstream Leopard enters the battlefield, you get {E} (an energy counter).\nWhenever Aetherstream Leopard attacks, you may pay {E}. If you do, it gets +2/+0 until end of turn.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ahn-Crop Crasher": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Ahn-Crop Crasher",
+        "power": "3",
+        "subtypes": [
+            "Minotaur",
+            "Warrior"
+        ],
+        "text": "Haste\nYou may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. (An exerted creature won't untap during your next untap step.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Air Elemental": {
+        "cmc": 5,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Air Elemental",
+        "power": "4",
+        "subtypes": [
+            "Elemental"
+        ],
+        "text": "Flying",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ajani Unyielding": {
+        "cmc": 6,
+        "color_identities": [
+            "White",
+            "Green"
+        ],
+        "name": "Ajani Unyielding",
+        "subtypes": [
+            "Ajani"
+        ],
+        "text": "+2: Reveal the top three cards of your library. Put all nonland permanent cards revealed this way into your hand and the rest on the bottom of your library in any order.\n−2: Exile target creature. Its controller gains life equal to its power.\n−9: Put five +1/+1 counters on each creature you control and five loyalty counters on each other planeswalker you control.",
+        "types": [
+            "Planeswalker"
+        ]
+    },
+    "Alley Evasion": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Alley Evasion",
+        "text": "Choose one —\n• Target creature you control gets +1/+2 until end of turn.\n• Return target creature you control to its owner's hand.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Alley Strangler": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Alley Strangler",
+        "power": "2",
+        "subtypes": [
+            "Aetherborn",
+            "Rogue"
+        ],
+        "text": "Menace",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ancient Crab": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Ancient Crab",
+        "power": "1",
+        "subtypes": [
+            "Crab"
+        ],
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Angler Drake": {
+        "cmc": 6,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Angler Drake",
+        "power": "4",
+        "subtypes": [
+            "Drake"
+        ],
+        "text": "Flying\nWhen Angler Drake enters the battlefield, you may return target creature to its owner's hand.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Appetite for the Unnatural": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Appetite for the Unnatural",
+        "text": "Destroy target artifact or enchantment. You gain 2 life.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Arborback Stomper": {
+        "cmc": 5,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Arborback Stomper",
+        "power": "5",
+        "subtypes": [
+            "Beast"
+        ],
+        "text": "Trample\nWhen Arborback Stomper enters the battlefield, you gain 5 life.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Audacious Infiltrator": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Audacious Infiltrator",
+        "power": "3",
+        "subtypes": [
+            "Dwarf",
+            "Rogue"
+        ],
+        "text": "Audacious Infiltrator can't be blocked by artifact creatures.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Augmenting Automaton": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Augmenting Automaton",
+        "power": "1",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{1}{B}: Augmenting Automaton gets +1/+1 until end of turn.",
+        "toughness": "1",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Aviary Mechanic": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Aviary Mechanic",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Dwarf"
+        ],
+        "text": "When Aviary Mechanic enters the battlefield, you may return another permanent you control to its owner's hand.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Baleful Ammit": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Baleful Ammit",
+        "power": "4",
+        "subtypes": [
+            "Crocodile",
+            "Demon"
+        ],
+        "text": "Lifelink\nWhen Baleful Ammit enters the battlefield, put a -1/-1 counter on target creature you control.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ballista Charger": {
+        "cmc": 5,
+        "name": "Ballista Charger",
+        "power": "6",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Whenever Ballista Charger attacks, it deals 1 damage to target creature or player.\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "6",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Baral, Chief of Compliance": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Baral, Chief of Compliance",
+        "power": "1",
+        "subtypes": [
+            "Human",
+            "Wizard"
+        ],
+        "text": "Instant and sorcery spells you cast cost {1} less to cast.\nWhenever a spell or ability you control counters a spell, you may draw a card. If you do, discard a card.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Bastion Enforcer": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Bastion Enforcer",
+        "power": "3",
+        "subtypes": [
+            "Dwarf",
+            "Soldier"
+        ],
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Bastion Inventor": {
+        "cmc": 6,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Bastion Inventor",
+        "power": "4",
+        "subtypes": [
+            "Artificer",
+            "Vedalken"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nHexproof (This creature can't be the target of spells or abilities your opponents control.)",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Bitterblade Warrior": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Bitterblade Warrior",
+        "power": "2",
+        "subtypes": [
+            "Jackal",
+            "Warrior"
+        ],
+        "text": "You may exert Bitterblade Warrior as it attacks. When you do, it gets +1/+0 and gains deathtouch until end of turn. (An exerted creature won't untap during your next untap step.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Bloodhunter Bat": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Bloodhunter Bat",
+        "power": "2",
+        "subtypes": [
+            "Bat"
+        ],
+        "text": "Flying\nWhen Bloodhunter Bat enters the battlefield, target player loses 2 life and you gain 2 life.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Bloodlust Inciter": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Bloodlust Inciter",
+        "power": "1",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "{T}: Target creature gains haste until end of turn.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Blossoming Defense": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Blossoming Defense",
+        "text": "Target creature you control gets +2/+2 and gains hexproof until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Brazen Scourge": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Brazen Scourge",
+        "power": "3",
+        "subtypes": [
+            "Gremlin"
+        ],
+        "text": "Haste",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Built to Last": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Built to Last",
+        "text": "Target creature gets +2/+2 until end of turn. If it's an artifact creature, it gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Cartouche of Ambition": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Cartouche of Ambition",
+        "subtypes": [
+            "Aura",
+            "Cartouche"
+        ],
+        "text": "Enchant creature you control\nWhen Cartouche of Ambition enters the battlefield, you may put a -1/-1 counter on target creature.\nEnchanted creature gets +1/+1 and has lifelink.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Cartouche of Knowledge": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Cartouche of Knowledge",
+        "subtypes": [
+            "Aura",
+            "Cartouche"
+        ],
+        "text": "Enchant creature you control\nWhen Cartouche of Knowledge enters the battlefield, draw a card.\nEnchanted creature gets +1/+1 and has flying.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Cartouche of Solidarity": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Cartouche of Solidarity",
+        "subtypes": [
+            "Aura",
+            "Cartouche"
+        ],
+        "text": "Enchant creature you control\nWhen Cartouche of Solidarity enters the battlefield, create a 1/1 white Warrior creature token with vigilance.\nEnchanted creature gets +1/+1 and has first strike.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Cartouche of Strength": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Cartouche of Strength",
+        "subtypes": [
+            "Aura",
+            "Cartouche"
+        ],
+        "text": "Enchant creature you control\nWhen Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)\nEnchanted creature gets +1/+1 and has trample.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Cartouche of Zeal": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Cartouche of Zeal",
+        "subtypes": [
+            "Aura",
+            "Cartouche"
+        ],
+        "text": "Enchant creature you control\nWhen Cartouche of Zeal enters the battlefield, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Cataclysmic Gearhulk": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Cataclysmic Gearhulk",
+        "power": "4",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "Vigilance\nWhen Cataclysmic Gearhulk enters the battlefield, each player chooses an artifact, a creature, an enchantment, and a planeswalker from among the nonland permanents he or she controls, then sacrifices the rest.",
+        "toughness": "5",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Cathartic Reunion": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Cathartic Reunion",
+        "text": "As an additional cost to cast Cathartic Reunion, discard two cards.\nDraw three cards.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Caught in the Brights": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Caught in the Brights",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature can't attack or block.\nWhen a Vehicle you control attacks, exile enchanted creature.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Censor": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Censor",
+        "text": "Counter target spell unless its controller pays {1}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Chandra's Pyrohelix": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Chandra's Pyrohelix",
+        "text": "Chandra's Pyrohelix deals 2 damage divided as you choose among one or two target creatures and/or players.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Chandra's Revolution": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Chandra's Revolution",
+        "text": "Chandra's Revolution deals 4 damage to target creature. Tap target land. That land doesn't untap during its controller's next untap step.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Chief of the Foundry": {
+        "cmc": 3,
+        "name": "Chief of the Foundry",
+        "power": "2",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "Other artifact creatures you control get +1/+1.",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Cogwork Assembler": {
+        "cmc": 3,
+        "name": "Cogwork Assembler",
+        "power": "2",
+        "subtypes": [
+            "Assembly-Worker"
+        ],
+        "text": "{7}: Create a token that's a copy of target artifact. That token gains haste. Exile it at the beginning of the next end step.",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Cogworker's Puzzleknot": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Cogworker's Puzzleknot",
+        "text": "When Cogworker's Puzzleknot enters the battlefield, create a 1/1 colorless Servo artifact creature token.\n{1}{W}, Sacrifice Cogworker's Puzzleknot: Create a 1/1 colorless Servo artifact creature token.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Commencement of Festivities": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Commencement of Festivities",
+        "text": "Prevent all combat damage that would be dealt to players this turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Compulsory Rest": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Compulsory Rest",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature can't attack or block.\nEnchanted creature has \"{2}, Sacrifice this creature: You gain 2 life.\"",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Consulate Crackdown": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Consulate Crackdown",
+        "text": "When Consulate Crackdown enters the battlefield, exile all artifacts your opponents control until Consulate Crackdown leaves the battlefield.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Consulate Skygate": {
+        "cmc": 2,
+        "name": "Consulate Skygate",
+        "power": "0",
+        "subtypes": [
+            "Wall"
+        ],
+        "text": "Defender\nReach (This creature can block creatures with flying.)",
+        "toughness": "4",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Contraband Kingpin": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue",
+            "Black"
+        ],
+        "name": "Contraband Kingpin",
+        "power": "1",
+        "subtypes": [
+            "Aetherborn",
+            "Rogue"
+        ],
+        "text": "Lifelink\nWhenever an artifact enters the battlefield under your control, scry 1.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Conviction": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Conviction",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature gets +1/+3.\n{W}: Return Conviction to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Countless Gears Renegade": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Countless Gears Renegade",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Dwarf"
+        ],
+        "text": "Revolt — When Countless Gears Renegade enters the battlefield, if a permanent you controlled left the battlefield this turn, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Crocodile of the Crossing": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Crocodile of the Crossing",
+        "power": "5",
+        "subtypes": [
+            "Crocodile"
+        ],
+        "text": "Haste\nWhen Crocodile of the Crossing enters the battlefield, put a -1/-1 counter on target creature you control.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Cruel Finality": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Cruel Finality",
+        "text": "Target creature gets -2/-2 until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Curio Vendor": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Curio Vendor",
+        "power": "2",
+        "subtypes": [
+            "Vedalken"
+        ],
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Cursed Minotaur": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Cursed Minotaur",
+        "power": "3",
+        "subtypes": [
+            "Minotaur",
+            "Zombie"
+        ],
+        "text": "Menace (This creature can't be blocked except by two or more creatures.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Daring Demolition": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Daring Demolition",
+        "text": "Destroy target creature or Vehicle.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Dawnfeather Eagle": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Dawnfeather Eagle",
+        "power": "3",
+        "subtypes": [
+            "Bird"
+        ],
+        "text": "Flying\nWhen Dawnfeather Eagle enters the battlefield, creatures you control get +1/+1 and gain vigilance until end of turn.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Decision Paralysis": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Decision Paralysis",
+        "text": "Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Decommission": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Decommission",
+        "text": "Destroy target artifact or enchantment.\nRevolt — If a permanent you controlled left the battlefield this turn, you gain 3 life.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Defiant Salvager": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Defiant Salvager",
+        "power": "2",
+        "subtypes": [
+            "Aetherborn",
+            "Artificer"
+        ],
+        "text": "Sacrifice an artifact or creature: Put a +1/+1 counter on Defiant Salvager. Activate this ability only any time you could cast a sorcery.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Destructive Tampering": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Destructive Tampering",
+        "text": "Choose one —\n• Destroy target artifact.\n• Creatures without flying can't block this turn.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Dhund Operative": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Dhund Operative",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "As long as you control an artifact, Dhund Operative gets +1/+0 and has deathtouch. (Any amount of damage it deals to a creature is enough to destroy it.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Dispersal Technician": {
+        "cmc": 5,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Dispersal Technician",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Vedalken"
+        ],
+        "text": "When Dispersal Technician enters the battlefield, you may return target artifact to its owner's hand.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Divine Verdict": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Divine Verdict",
+        "text": "Destroy target attacking or blocking creature.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Djeru's Resolve": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Djeru's Resolve",
+        "text": "Untap target creature. Prevent all damage that would be dealt to it this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Doomed Dissenter": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Doomed Dissenter",
+        "power": "1",
+        "subtypes": [
+            "Human"
+        ],
+        "text": "When Doomed Dissenter dies, create a 2/2 black Zombie creature token.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Druid of the Cowl": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Druid of the Cowl",
+        "power": "1",
+        "subtypes": [
+            "Druid",
+            "Elf"
+        ],
+        "text": "{T}: Add {G} to your mana pool.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Dukhara Peafowl": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Dukhara Peafowl",
+        "power": "2",
+        "subtypes": [
+            "Bird"
+        ],
+        "text": "{U}: Dukhara Peafowl gains flying until end of turn.",
+        "toughness": "4",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Durable Handicraft": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Durable Handicraft",
+        "text": "Whenever a creature enters the battlefield under your control, you may pay {1}. If you do, put a +1/+1 counter on that creature.\n{5}{G}, Sacrifice Durable Handicraft: Put a +1/+1 counter on each creature you control.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Eager Construct": {
+        "cmc": 2,
+        "name": "Eager Construct",
+        "power": "2",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "When Eager Construct enters the battlefield, each player may scry 1. (To scry 1, look at the top card of your library, then you may put that card on the bottom of your library.)",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Eddytrail Hawk": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Eddytrail Hawk",
+        "power": "1",
+        "subtypes": [
+            "Bird"
+        ],
+        "text": "Flying\nWhen Eddytrail Hawk enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Eddytrail Hawk attacks, you may pay {E}. If you do, another target attacking creature gains flying until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Electrify": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Electrify",
+        "text": "Electrify deals 4 damage to target creature.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Electrostatic Pummeler": {
+        "cmc": 3,
+        "name": "Electrostatic Pummeler",
+        "power": "1",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "When Electrostatic Pummeler enters the battlefield, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Electrostatic Pummeler gets +X/+X until end of turn, where X is its power.",
+        "toughness": "1",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Elegant Edgecrafters": {
+        "cmc": 6,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Elegant Edgecrafters",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Elf"
+        ],
+        "text": "Elegant Edgecrafters can't be blocked by creatures with power 2 or less.\nFabricate 2 (When this creature enters the battlefield, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Embraal Gear-Smasher": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Embraal Gear-Smasher",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "{T}, Sacrifice an artifact: Embraal Gear-Smasher deals 2 damage to each opponent.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Empyreal Voyager": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue",
+            "Green"
+        ],
+        "name": "Empyreal Voyager",
+        "power": "2",
+        "subtypes": [
+            "Scout",
+            "Vedalken"
+        ],
+        "text": "Flying, trample\nWhenever Empyreal Voyager deals combat damage to a player, you get that many {E} (energy counters).",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Enraged Giant": {
+        "cmc": 6,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Enraged Giant",
+        "power": "4",
+        "subtypes": [
+            "Giant"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nTrample, haste",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Essence Extraction": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Essence Extraction",
+        "text": "Essence Extraction deals 3 damage to target creature and you gain 3 life.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Essence Scatter": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Essence Scatter",
+        "text": "Counter target creature spell.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Fabrication Module": {
+        "cmc": 3,
+        "name": "Fabrication Module",
+        "text": "Whenever you get one or more {E} (energy counters), put a +1/+1 counter on target creature you control.\n{4}, {T}: You get {E}.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Fan Bearer": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Fan Bearer",
+        "power": "1",
+        "subtypes": [
+            "Zombie"
+        ],
+        "text": "{2}, {T}: Tap target creature.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Fatal Push": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Fatal Push",
+        "text": "Destroy target creature if it has converted mana cost 2 or less.\nRevolt — Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Fateful Showdown": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Fateful Showdown",
+        "text": "Fateful Showdown deals damage to target creature or player equal to the number of cards in your hand. Discard all the cards in your hand, then draw that many cards.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Felidar Guardian": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Felidar Guardian",
+        "power": "1",
+        "subtypes": [
+            "Beast",
+            "Cat"
+        ],
+        "text": "When Felidar Guardian enters the battlefield, you may exile another target permanent you control, then return that card to the battlefield under its owner's control.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Fen Hauler": {
+        "cmc": 7,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Fen Hauler",
+        "power": "5",
+        "subtypes": [
+            "Insect"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nFen Hauler can't be blocked by artifact creatures.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Festering Mummy": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Festering Mummy",
+        "power": "1",
+        "subtypes": [
+            "Zombie"
+        ],
+        "text": "When Festering Mummy dies, you may put a -1/-1 counter on target creature.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Filigree Familiar": {
+        "cmc": 3,
+        "name": "Filigree Familiar",
+        "power": "2",
+        "subtypes": [
+            "Fox"
+        ],
+        "text": "When Filigree Familiar enters the battlefield, you gain 2 life.\nWhen Filigree Familiar dies, draw a card.",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Fireforger's Puzzleknot": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Fireforger's Puzzleknot",
+        "text": "When Fireforger's Puzzleknot enters the battlefield, it deals 1 damage to target creature or player.\n{2}{R}, Sacrifice Fireforger's Puzzleknot: It deals 1 damage to target creature or player.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Fling": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Fling",
+        "text": "As an additional cost to cast Fling, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to target creature or player.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Floodwaters": {
+        "cmc": 6,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Floodwaters",
+        "text": "Return up to two target creatures to their owners' hands.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Fortuitous Find": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Fortuitous Find",
+        "text": "Choose one or both —\n• Return target artifact card from your graveyard to your hand.\n• Return target creature card from your graveyard to your hand.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Foundry Assembler": {
+        "cmc": 5,
+        "name": "Foundry Assembler",
+        "power": "3",
+        "subtypes": [
+            "Assembly-Worker"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Foundry Screecher": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Foundry Screecher",
+        "power": "2",
+        "subtypes": [
+            "Bat"
+        ],
+        "text": "Flying\nFoundry Screecher gets +1/+0 as long as you control an artifact.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Fourth Bridge Prowler": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Fourth Bridge Prowler",
+        "power": "1",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "When Fourth Bridge Prowler enters the battlefield, you may have target creature get -1/-1 until end of turn.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Fragmentize": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Fragmentize",
+        "text": "Destroy target artifact or enchantment with converted mana cost 4 or less.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Frontline Rebel": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Frontline Rebel",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "Frontline Rebel attacks each combat if able.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Garruk's Horde": {
+        "cmc": 7,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Garruk's Horde",
+        "power": "7",
+        "subtypes": [
+            "Beast"
+        ],
+        "text": "Trample\nPlay with the top card of your library revealed.\nYou may cast the top card of your library if it's a creature card. (Do this only any time you could cast that creature card. You still pay the spell's costs.)",
+        "toughness": "7",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Gearseeker Serpent": {
+        "cmc": 7,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Gearseeker Serpent",
+        "power": "5",
+        "subtypes": [
+            "Serpent"
+        ],
+        "text": "Gearseeker Serpent costs {1} less to cast for each artifact you control.\n{5}{U}: Gearseeker Serpent can't be blocked this turn.",
+        "toughness": "6",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ghirapur Guide": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Ghirapur Guide",
+        "power": "3",
+        "subtypes": [
+            "Elf",
+            "Scout"
+        ],
+        "text": "{2}{G}: Target creature you control can't be blocked by creatures with power 2 or less this turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ghirapur Osprey": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Ghirapur Osprey",
+        "power": "2",
+        "subtypes": [
+            "Bird"
+        ],
+        "text": "Flying",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Giant Spectacle": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Giant Spectacle",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature gets +2/+1 and has menace.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Giant Spider": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Giant Spider",
+        "power": "2",
+        "subtypes": [
+            "Spider"
+        ],
+        "text": "Reach (This creature can block creatures with flying.)",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Gifted Aetherborn": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Gifted Aetherborn",
+        "power": "2",
+        "subtypes": [
+            "Aetherborn",
+            "Vampire"
+        ],
+        "text": "Deathtouch, lifelink",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Glassblower's Puzzleknot": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Glassblower's Puzzleknot",
+        "text": "When Glassblower's Puzzleknot enters the battlefield, scry 2, then you get {E}{E}. (You get two energy counters. To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)\n{2}{U}, Sacrifice Glassblower's Puzzleknot: Scry 2, then you get {E}{E}.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Glimmer of Genius": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Glimmer of Genius",
+        "text": "Scry 2, then draw two cards. You get {E}{E} (two energy counters).",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Glint-Sleeve Siphoner": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Glint-Sleeve Siphoner",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "Menace\nWhenever Glint-Sleeve Siphoner enters the battlefield or attacks, you get {E} (an energy counter).\nAt the beginning of your upkeep, you may pay {E}{E}. If you do, you draw a card and you lose 1 life.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Graceful Cat": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Graceful Cat",
+        "power": "2",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Whenever Graceful Cat attacks, it gets +1/+1 until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Greater Sandwurm": {
+        "cmc": 7,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Greater Sandwurm",
+        "power": "7",
+        "subtypes": [
+            "Wurm"
+        ],
+        "text": "Greater Sandwurm can't be blocked by creatures with power 2 or less.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+        "toughness": "7",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Gremlin Infestation": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Gremlin Infestation",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant artifact\nAt the beginning of your end step, Gremlin Infestation deals 2 damage to enchanted artifact's controller.\nWhen enchanted artifact is put into a graveyard, create a 2/2 red Gremlin creature token.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Harnessed Lightning": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Harnessed Lightning",
+        "text": "Choose target creature. You get {E}{E}{E} (three energy counters), then you may pay any amount of {E}. Harnessed Lightning deals that much damage to that creature.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Herald of the Fair": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Herald of the Fair",
+        "power": "3",
+        "subtypes": [
+            "Human"
+        ],
+        "text": "When Herald of the Fair enters the battlefield, target creature you control gets +1/+1 until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Heroic Intervention": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Heroic Intervention",
+        "text": "Permanents you control gain hexproof and indestructible until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Highspire Artisan": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Highspire Artisan",
+        "power": "0",
+        "subtypes": [
+            "Artificer",
+            "Elf"
+        ],
+        "text": "Reach (This creature can block creatures with flying.)\nFabricate 1 (When this creature enters the battlefield, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Highspire Infusion": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Highspire Infusion",
+        "text": "Target creature gets +3/+3 until end of turn. You get {E}{E} (two energy counters).",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Hijack": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Hijack",
+        "text": "Gain control of target artifact or creature until end of turn. Untap it. It gains haste until end of turn.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Hinterland Drake": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Hinterland Drake",
+        "power": "2",
+        "subtypes": [
+            "Drake"
+        ],
+        "text": "Flying\nHinterland Drake can't block artifact creatures.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Hungry Flames": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Hungry Flames",
+        "text": "Hungry Flames deals 3 damage to target creature and 2 damage to target player.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Hunt the Weak": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Hunt the Weak",
+        "text": "Put a +1/+1 counter on target creature you control. Then that creature fights target creature you don't control. (Each deals damage equal to its power to the other.)",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Ice Over": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Ice Over",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant artifact or creature\nEnchanted permanent doesn't untap during its controller's untap step.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Illusionist's Stratagem": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Illusionist's Stratagem",
+        "text": "Exile up to two target creatures you control, then return those cards to the battlefield under their owner's control.\nDraw a card.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Implement of Combustion": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Implement of Combustion",
+        "text": "{R}, Sacrifice Implement of Combustion: It deals 1 damage to target player.\nWhen Implement of Combustion is put into a graveyard from the battlefield, draw a card.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Implement of Examination": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Implement of Examination",
+        "text": "{U}, Sacrifice Implement of Examination: Draw a card.\nWhen Implement of Examination is put into a graveyard from the battlefield, draw a card.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Implement of Ferocity": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Implement of Ferocity",
+        "text": "{G}, Sacrifice Implement of Ferocity: Put a +1/+1 counter on target creature. Activate this ability only any time you could cast a sorcery.\nWhen Implement of Ferocity is put into a graveyard from the battlefield, draw a card.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Implement of Improvement": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Implement of Improvement",
+        "text": "{W}, Sacrifice Implement of Improvement: You gain 2 life.\nWhen Implement of Improvement is put into a graveyard from the battlefield, draw a card.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Implement of Malice": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Implement of Malice",
+        "text": "{B}, Sacrifice Implement of Malice: Target player discards a card. Activate this ability only any time you could cast a sorcery.\nWhen Implement of Malice is put into a graveyard from the battlefield, draw a card.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Initiate's Companion": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Initiate's Companion",
+        "power": "3",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Whenever Initiate's Companion deals combat damage to a player, untap target creature or land.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Inspired Charge": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Inspired Charge",
+        "text": "Creatures you control get +2/+1 until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Inventor's Apprentice": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Inventor's Apprentice",
+        "power": "1",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Inventor's Apprentice gets +1/+1 as long as you control an artifact.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Inventor's Goggles": {
+        "cmc": 1,
+        "name": "Inventor's Goggles",
+        "subtypes": [
+            "Equipment"
+        ],
+        "text": "Equipped creature gets +1/+2.\nWhenever an Artificer enters the battlefield under your control, you may attach Inventor's Goggles to it.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Ironclad Revolutionary": {
+        "cmc": 6,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Ironclad Revolutionary",
+        "power": "4",
+        "subtypes": [
+            "Aetherborn",
+            "Artificer"
+        ],
+        "text": "When Ironclad Revolutionary enters the battlefield, you may sacrifice an artifact. If you do, put two +1/+1 counters on Ironclad Revolutionary and each opponent loses 2 life.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Irontread Crusher": {
+        "cmc": 4,
+        "name": "Irontread Crusher",
+        "power": "6",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Crew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "6",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Janjeet Sentry": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Janjeet Sentry",
+        "power": "2",
+        "subtypes": [
+            "Soldier",
+            "Vedalken"
+        ],
+        "text": "When Janjeet Sentry enters the battlefield, you get {E}{E} (two energy counters).\n{T}, Pay {E}{E}: You may tap or untap target artifact or creature.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Kambal, Consul of Allocation": {
+        "cmc": 3,
+        "color_identities": [
+            "White",
+            "Black"
+        ],
+        "name": "Kambal, Consul of Allocation",
+        "power": "2",
+        "subtypes": [
+            "Advisor",
+            "Human"
+        ],
+        "text": "Whenever an opponent casts a noncreature spell, that player loses 2 life and you gain 2 life.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Kefnet the Mindful": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Kefnet the Mindful",
+        "power": "5",
+        "subtypes": [
+            "God"
+        ],
+        "text": "Flying, indestructible\nKefnet the Mindful can't attack or block unless you have seven or more cards in hand.\n{3}{U}: Draw a card, then you may return a land you control to its owner's hand.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Kujar Seedsculptor": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Kujar Seedsculptor",
+        "power": "1",
+        "subtypes": [
+            "Druid",
+            "Elf"
+        ],
+        "text": "When Kujar Seedsculptor enters the battlefield, put a +1/+1 counter on target creature you control.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Larger Than Life": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Larger Than Life",
+        "text": "Target creature gets +4/+4 and gains trample until end of turn.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Lawless Broker": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Lawless Broker",
+        "power": "3",
+        "subtypes": [
+            "Aetherborn",
+            "Rogue"
+        ],
+        "text": "When Lawless Broker dies, put a +1/+1 counter on target creature you control.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Leave in the Dust": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Leave in the Dust",
+        "text": "Return target nonland permanent to its owner's hand.\nDraw a card.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Lifecraft Awakening": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Lifecraft Awakening",
+        "text": "Put X +1/+1 counters on target artifact you control. If it isn't a creature or Vehicle, it becomes a 0/0 Construct artifact creature.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Lifecraft Cavalry": {
+        "cmc": 5,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Lifecraft Cavalry",
+        "power": "4",
+        "subtypes": [
+            "Elf",
+            "Warrior"
+        ],
+        "text": "Trample\nRevolt — Lifecraft Cavalry enters the battlefield with two +1/+1 counters on it if a permanent you controlled left the battlefield this turn.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Live Fast": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Live Fast",
+        "text": "You draw two cards, lose 2 life, and get {E}{E} (two energy counters).",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Make Obsolete": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Make Obsolete",
+        "text": "Creatures your opponents control get -1/-1 until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Malfunction": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Malfunction",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant artifact or creature\nWhen Malfunction enters the battlefield, tap enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Manticore of the Gauntlet": {
+        "cmc": 5,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Manticore of the Gauntlet",
+        "power": "5",
+        "subtypes": [
+            "Manticore"
+        ],
+        "text": "When Manticore of the Gauntlet enters the battlefield, put a -1/-1 counter on target creature you control. Manticore of the Gauntlet deals 3 damage to target opponent.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Maulfist Revolutionary": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Maulfist Revolutionary",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "Trample\nWhen Maulfist Revolutionary enters the battlefield or dies, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Merchant's Dockhand": {
+        "cmc": 1,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Merchant's Dockhand",
+        "power": "1",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{3}{U}, {T}, Tap X untapped artifacts you control: Look at the top X cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Merciless Javelineer": {
+        "cmc": 4,
+        "color_identities": [
+            "Black",
+            "Red"
+        ],
+        "name": "Merciless Javelineer",
+        "power": "4",
+        "subtypes": [
+            "Minotaur",
+            "Warrior"
+        ],
+        "text": "{2}, Discard a card: Put a -1/-1 counter on target creature. That creature can't block this turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Metalspinner's Puzzleknot": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Metalspinner's Puzzleknot",
+        "text": "When Metalspinner's Puzzleknot enters the battlefield, you draw a card and you lose 1 life.\n{2}{B}, Sacrifice Metalspinner's Puzzleknot: You draw a card and you lose 1 life.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Mighty Leap": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Mighty Leap",
+        "text": "Target creature gets +2/+2 and gains flying until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Mind Rot": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Mind Rot",
+        "text": "Target player discards two cards.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Mobile Garrison": {
+        "cmc": 3,
+        "name": "Mobile Garrison",
+        "power": "3",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Whenever Mobile Garrison attacks, untap another target artifact or creature you control.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "4",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Monstrous Onslaught": {
+        "cmc": 5,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Monstrous Onslaught",
+        "text": "Monstrous Onslaught deals X damage divided as you choose among any number of target creatures, where X is the greatest power among creatures you control as you cast Monstrous Onslaught.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Morbid Curiosity": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Morbid Curiosity",
+        "text": "As an additional cost to cast Morbid Curiosity, sacrifice an artifact or creature.\nDraw cards equal to the converted mana cost of the sacrificed permanent.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Multiform Wonder": {
+        "cmc": 5,
+        "name": "Multiform Wonder",
+        "power": "3",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "When Multiform Wonder enters the battlefield, you get {E}{E}{E} (three energy counters).\nPay {E}: Multiform Wonder gains your choice of flying, vigilance, or lifelink until end of turn.\nPay {E}: Multiform Wonder gets +2/-2 or -2/+2 until end of turn.",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Narnam Cobra": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Narnam Cobra",
+        "power": "2",
+        "subtypes": [
+            "Snake"
+        ],
+        "text": "{G}: Narnam Cobra gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)",
+        "toughness": "1",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Nef-Crop Entangler": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Nef-Crop Entangler",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "Trample\nYou may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature won't untap during your next untap step.)",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Negate": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Negate",
+        "text": "Counter target noncreature spell.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Night Market Aeronaut": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Night Market Aeronaut",
+        "power": "2",
+        "subtypes": [
+            "Aetherborn",
+            "Warrior"
+        ],
+        "text": "Flying\nRevolt — Night Market Aeronaut enters the battlefield with a +1/+1 counter on it if a permanent you controlled left the battlefield this turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Night Market Guard": {
+        "cmc": 3,
+        "name": "Night Market Guard",
+        "power": "3",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "Night Market Guard can block an additional creature each combat.",
+        "toughness": "1",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Night Market Lookout": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Night Market Lookout",
+        "power": "1",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "Whenever Night Market Lookout becomes tapped, each opponent loses 1 life and you gain 1 life.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Nightmare": {
+        "cmc": 6,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Nightmare",
+        "power": "*",
+        "subtypes": [
+            "Horse",
+            "Nightmare"
+        ],
+        "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nNightmare's power and toughness are each equal to the number of Swamps you control.",
+        "toughness": "*",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Nimble Innovator": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Nimble Innovator",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Vedalken"
+        ],
+        "text": "When Nimble Innovator enters the battlefield, draw a card.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Nimble-Blade Khenra": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Nimble-Blade Khenra",
+        "power": "1",
+        "subtypes": [
+            "Jackal",
+            "Warrior"
+        ],
+        "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ninth Bridge Patrol": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Ninth Bridge Patrol",
+        "power": "1",
+        "subtypes": [
+            "Dwarf",
+            "Soldier"
+        ],
+        "text": "Whenever another creature you control leaves the battlefield, put a +1/+1 counter on Ninth Bridge Patrol.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Oakenform": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Oakenform",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature gets +3/+3.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Ornery Kudu": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Ornery Kudu",
+        "power": "3",
+        "subtypes": [
+            "Antelope"
+        ],
+        "text": "When Ornery Kudu enters the battlefield, put a -1/-1 counter on target creature you control.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Oviya Pashiri, Sage Lifecrafter": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Oviya Pashiri, Sage Lifecrafter",
+        "power": "1",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "{2}{G}, {T}: Create a 1/1 colorless Servo artifact creature token.\n{4}{G}, {T}: Create an X/X colorless Construct artifact creature token, where X is the number of creatures you control.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Pacification Array": {
+        "cmc": 1,
+        "name": "Pacification Array",
+        "text": "{2}, {T}: Tap target artifact or creature.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Painful Lesson": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Painful Lesson",
+        "text": "Target player draws two cards and loses 2 life.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Peema Outrider": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Peema Outrider",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Elf"
+        ],
+        "text": "Trample\nFabricate 1 (When this creature enters the battlefield, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Pia Nalaar": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Pia Nalaar",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "When Pia Nalaar enters the battlefield, create a 1/1 colorless Thopter artifact creature token with flying.\n{1}{R}: Target artifact creature gets +1/+0 until end of turn.\n{1}, Sacrifice an artifact: Target creature can't block this turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Pouncing Cheetah": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Pouncing Cheetah",
+        "power": "3",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Flash",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Prakhata Club Security": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Prakhata Club Security",
+        "power": "3",
+        "subtypes": [
+            "Aetherborn",
+            "Warrior"
+        ],
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Precise Strike": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Precise Strike",
+        "text": "Target creature gets +1/+0 and gains first strike until end of turn.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Pressure Point": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Pressure Point",
+        "text": "Tap target creature.\nDraw a card.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Prey Upon": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Prey Upon",
+        "text": "Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Prizefighter Construct": {
+        "cmc": 5,
+        "name": "Prizefighter Construct",
+        "power": "6",
+        "subtypes": [
+            "Construct"
+        ],
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Prophetic Prism": {
+        "cmc": 2,
+        "name": "Prophetic Prism",
+        "text": "When Prophetic Prism enters the battlefield, draw a card.\n{1}, {T}: Add one mana of any color to your mana pool.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Protection of the Hekma": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Protection of the Hekma",
+        "text": "If a source an opponent controls would deal damage to you, prevent 1 of that damage.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Pursue Glory": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Pursue Glory",
+        "text": "Attacking creatures get +2/+0 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Pyramid of the Pantheon": {
+        "cmc": 1,
+        "name": "Pyramid of the Pantheon",
+        "text": "{2}, {T}: Add one mana of any color to your mana pool. Put a brick counter on Pyramid of the Pantheon.\n{T}: Add three mana of any one color to your mana pool. Activate this ability only if there are three or more brick counters on Pyramid of the Pantheon.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Quicksmith Genius": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Quicksmith Genius",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Whenever an artifact enters the battlefield under your control, you may discard a card. If you do, draw a card.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Raise Dead": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Raise Dead",
+        "text": "Return target creature card from your graveyard to your hand.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Ravenous Intruder": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Ravenous Intruder",
+        "power": "1",
+        "subtypes": [
+            "Gremlin"
+        ],
+        "text": "Sacrifice an artifact: Ravenous Intruder gets +2/+2 until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Reckless Fireweaver": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Reckless Fireweaver",
+        "power": "1",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Whenever an artifact enters the battlefield under your control, Reckless Fireweaver deals 1 damage to each opponent.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Reckless Racer": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Reckless Racer",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Pilot"
+        ],
+        "text": "First strike\nWhenever Reckless Racer becomes tapped, you may discard a card. If you do, draw a card.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Refurbish": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Refurbish",
+        "text": "Return target artifact card from your graveyard to the battlefield.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Renegade Freighter": {
+        "cmc": 3,
+        "name": "Renegade Freighter",
+        "power": "4",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Whenever Renegade Freighter attacks, it gets +1/+1 and gains trample until end of turn.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "3",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Renegade Map": {
+        "cmc": 1,
+        "name": "Renegade Map",
+        "text": "Renegade Map enters the battlefield tapped.\n{T}, Sacrifice Renegade Map: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Renegade Rallier": {
+        "cmc": 3,
+        "color_identities": [
+            "White",
+            "Green"
+        ],
+        "name": "Renegade Rallier",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "Revolt — When Renegade Rallier enters the battlefield, if a permanent you controlled left the battlefield this turn, return target permanent card with converted mana cost 2 or less from your graveyard to the battlefield.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Renegade's Getaway": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Renegade's Getaway",
+        "text": "Target permanent gains indestructible until end of turn. Create a 1/1 colorless Servo artifact creature token. (Effects that say \"destroy\" don't destroy a permanent with indestructible, and if it's a creature, it can't be destroyed by damage.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Reservoir Walker": {
+        "cmc": 5,
+        "name": "Reservoir Walker",
+        "power": "3",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "When Reservoir Walker enters the battlefield, you gain 3 life and get {E}{E}{E} (three energy counters).",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Resourceful Return": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Resourceful Return",
+        "text": "Return target creature card from your graveyard to your hand. If you control an artifact, draw a card.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Restoration Specialist": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Restoration Specialist",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Dwarf"
+        ],
+        "text": "{W}, Sacrifice Restoration Specialist: Return up to one target artifact card and up to one target enchantment card from your graveyard to your hand.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Reverse Engineer": {
+        "cmc": 5,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Reverse Engineer",
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nDraw three cards.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Revoke Privileges": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Revoke Privileges",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature can't attack, block, or crew Vehicles.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Revolutionary Rebuff": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Revolutionary Rebuff",
+        "text": "Counter target nonartifact spell unless its controller pays {2}.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Ridgescale Tusker": {
+        "cmc": 5,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Ridgescale Tusker",
+        "power": "5",
+        "subtypes": [
+            "Beast"
+        ],
+        "text": "When Ridgescale Tusker enters the battlefield, put a +1/+1 counter on each other creature you control.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Riparian Tiger": {
+        "cmc": 5,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Riparian Tiger",
+        "power": "4",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Trample\nWhen Riparian Tiger enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Riparian Tiger attacks, you may pay {E}{E}. If you do, it gets +2/+2 until end of turn.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Rishkar's Expertise": {
+        "cmc": 6,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Rishkar's Expertise",
+        "text": "Draw cards equal to the greatest power among creatures you control.\nYou may cast a card with converted mana cost 5 or less from your hand without paying its mana cost.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Rogue Refiner": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue",
+            "Green"
+        ],
+        "name": "Rogue Refiner",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "When Rogue Refiner enters the battlefield, draw a card and you get {E}{E} (two energy counters).",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Rootwalla": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Rootwalla",
+        "power": "2",
+        "subtypes": [
+            "Lizard"
+        ],
+        "text": "{1}{G}: Rootwalla gets +2/+2 until end of turn. Activate this ability only once each turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Ruinous Gremlin": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Ruinous Gremlin",
+        "power": "1",
+        "subtypes": [
+            "Gremlin"
+        ],
+        "text": "{2}{R}, Sacrifice Ruinous Gremlin: Destroy target artifact.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Rush of Vitality": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Rush of Vitality",
+        "text": "Target creature gets +1/+0 and gains lifelink and indestructible until end of turn. (Damage dealt by that creature also causes its controller to gain that much life, and it can't be destroyed by damage or effects that say \"destroy.\")",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Ruthless Sniper": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Ruthless Sniper",
+        "power": "1",
+        "subtypes": [
+            "Archer",
+            "Human"
+        ],
+        "text": "Whenever you cycle or discard a card, you may pay {1}. If you do, put a -1/-1 counter on target creature.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Sage of Shaila's Claim": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Sage of Shaila's Claim",
+        "power": "2",
+        "subtypes": [
+            "Druid",
+            "Elf"
+        ],
+        "text": "When Sage of Shaila's Claim enters the battlefield, you get {E}{E}{E} (three energy counters).",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Scarab Feast": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Scarab Feast",
+        "text": "Exile up to three target cards from a single graveyard.\nCycling {B} ({B}, Discard this card: Draw a card.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Scrapper Champion": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Scrapper Champion",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Double strike (This creature deals both first-strike and regular combat damage.)\nWhen Scrapper Champion enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Scrapper Champion attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Select for Inspection": {
+        "cmc": 1,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Select for Inspection",
+        "text": "Return target tapped creature to its owner's hand. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Sengir Vampire": {
+        "cmc": 5,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Sengir Vampire",
+        "power": "4",
+        "subtypes": [
+            "Vampire"
+        ],
+        "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 counter on Sengir Vampire.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Seraph of the Suns": {
+        "cmc": 7,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Seraph of the Suns",
+        "power": "4",
+        "subtypes": [
+            "Angel"
+        ],
+        "text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Serra Angel": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Serra Angel",
+        "power": "4",
+        "subtypes": [
+            "Angel"
+        ],
+        "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Servo Schematic": {
+        "cmc": 2,
+        "name": "Servo Schematic",
+        "text": "When Servo Schematic enters the battlefield or is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Shadowstorm Vizier": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue",
+            "Black"
+        ],
+        "name": "Shadowstorm Vizier",
+        "power": "1",
+        "subtypes": [
+            "Cleric",
+            "Human"
+        ],
+        "text": "Flying\nWhenever you cycle or discard a card, Shadowstorm Vizier gets +1/+1 until end of turn.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Shed Weakness": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Shed Weakness",
+        "text": "Target creature gets +2/+2 until end of turn. You may remove a -1/-1 counter from it.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Shielded Aether Thief": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Shielded Aether Thief",
+        "power": "0",
+        "subtypes": [
+            "Rogue",
+            "Vedalken"
+        ],
+        "text": "Flash (You may cast this spell any time you could cast an instant.)\nWhenever Shielded Aether Thief blocks, you get {E} (an energy counter).\n{T}, Pay {E}{E}{E}: Draw a card.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Shipwreck Moray": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Shipwreck Moray",
+        "power": "0",
+        "subtypes": [
+            "Fish"
+        ],
+        "text": "When Shipwreck Moray enters the battlefield, you get {E}{E}{E}{E} (four energy counters).\nPay {E}: Shipwreck Moray gets +2/-2 until end of turn.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Shivan Dragon": {
+        "cmc": 6,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Shivan Dragon",
+        "power": "5",
+        "subtypes": [
+            "Dragon"
+        ],
+        "text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{R}: Shivan Dragon gets +1/+0 until end of turn.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Shock": {
+        "cmc": 1,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Shock",
+        "text": "Shock deals 2 damage to target creature or player.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Silkweaver Elite": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Silkweaver Elite",
+        "power": "2",
+        "subtypes": [
+            "Archer",
+            "Elf"
+        ],
+        "text": "Reach (This creature can block creatures with flying.)\nRevolt — When Silkweaver Elite enters the battlefield, if a permanent you controlled left the battlefield this turn, draw a card.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Sky Skiff": {
+        "cmc": 2,
+        "name": "Sky Skiff",
+        "power": "2",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Flying\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "3",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Skyship Plunderer": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Skyship Plunderer",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Pirate"
+        ],
+        "text": "Flying\nWhenever Skyship Plunderer deals combat damage to a player, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Skyship Stalker": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Skyship Stalker",
+        "power": "3",
+        "subtypes": [
+            "Dragon"
+        ],
+        "text": "Flying\n{R}: Skyship Stalker gets +1/+0 until end of turn.\n{R}: Skyship Stalker gains first strike until end of turn.\n{R}: Skyship Stalker gains haste until end of turn.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Sly Requisitioner": {
+        "cmc": 5,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Sly Requisitioner",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nWhenever a nontoken artifact you control is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Snare Thopter": {
+        "cmc": 4,
+        "name": "Snare Thopter",
+        "power": "3",
+        "subtypes": [
+            "Thopter"
+        ],
+        "text": "Flying, haste",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Soulstinger": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Soulstinger",
+        "power": "4",
+        "subtypes": [
+            "Demon",
+            "Scorpion"
+        ],
+        "text": "When Soulstinger enters the battlefield, put two -1/-1 counters on target creature you control.\nWhen Soulstinger dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on Soulstinger.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Speedway Fanatic": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Speedway Fanatic",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Pilot"
+        ],
+        "text": "Haste\nWhenever Speedway Fanatic crews a Vehicle, that Vehicle gains haste until end of turn.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Sphinx of Magosi": {
+        "cmc": 6,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Sphinx of Magosi",
+        "power": "6",
+        "subtypes": [
+            "Sphinx"
+        ],
+        "text": "Flying\n{2}{U}: Draw a card, then put a +1/+1 counter on Sphinx of Magosi.",
+        "toughness": "6",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Spidery Grasp": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Spidery Grasp",
+        "text": "Untap target creature. It gets +2/+4 and gains reach until end of turn. (It can block creatures with flying.)",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Spire Patrol": {
+        "cmc": 4,
+        "color_identities": [
+            "White",
+            "Blue"
+        ],
+        "name": "Spire Patrol",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Soldier"
+        ],
+        "text": "Flying\nWhen Spire Patrol enters the battlefield, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Spireside Infiltrator": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Spireside Infiltrator",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "Whenever Spireside Infiltrator becomes tapped, it deals 1 damage to each opponent.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Stalking Tiger": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Stalking Tiger",
+        "power": "3",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Stalking Tiger can't be blocked by more than one creature.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Standing Troops": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Standing Troops",
+        "power": "1",
+        "subtypes": [
+            "Human",
+            "Soldier"
+        ],
+        "text": "Vigilance",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Stealer of Secrets": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Stealer of Secrets",
+        "power": "2",
+        "subtypes": [
+            "Human",
+            "Rogue"
+        ],
+        "text": "Whenever Stealer of Secrets deals combat damage to a player, draw a card.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Stormfront Pegasus": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Stormfront Pegasus",
+        "power": "2",
+        "subtypes": [
+            "Pegasus"
+        ],
+        "text": "Flying",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Subtle Strike": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Subtle Strike",
+        "text": "Choose one or both —\n• Target creature gets -1/-1 until end of turn.\n• Put a +1/+1 counter on target creature.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Supernatural Stamina": {
+        "cmc": 1,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Supernatural Stamina",
+        "text": "Until end of turn, target creature gets +2/+0 and gains \"When this creature dies, return it to the battlefield tapped under its owner's control.\"",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Supply Caravan": {
+        "cmc": 5,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Supply Caravan",
+        "power": "3",
+        "subtypes": [
+            "Camel"
+        ],
+        "text": "When Supply Caravan enters the battlefield, if you control a tapped creature, create a 1/1 white Warrior creature token with vigilance.",
+        "toughness": "5",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Sweatworks Brawler": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Sweatworks Brawler",
+        "power": "3",
+        "subtypes": [
+            "Artificer",
+            "Human"
+        ],
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nMenace",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Tah-Crop Elite": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Tah-Crop Elite",
+        "power": "2",
+        "subtypes": [
+            "Bird",
+            "Warrior"
+        ],
+        "text": "Flying\nYou may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. (An exerted creature won't untap during your next untap step.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Take Down": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Take Down",
+        "text": "Choose one —\n• Take Down deals 4 damage to target creature with flying.\n• Take Down deals 1 damage to each creature with flying.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Take into Custody": {
+        "cmc": 1,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Take into Custody",
+        "text": "Tap target creature. It doesn't untap during its controller's next untap step.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Tasseled Dromedary": {
+        "cmc": 1,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Tasseled Dromedary",
+        "power": "0",
+        "subtypes": [
+            "Camel"
+        ],
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Tattered Mummy": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Tattered Mummy",
+        "power": "1",
+        "subtypes": [
+            "Jackal",
+            "Zombie"
+        ],
+        "text": "When Tattered Mummy dies, each opponent loses 2 life.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Terror of the Fairgrounds": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Terror of the Fairgrounds",
+        "power": "5",
+        "subtypes": [
+            "Gremlin"
+        ],
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Tezzeret's Touch": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue",
+            "Black"
+        ],
+        "name": "Tezzeret's Touch",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant artifact\nEnchanted artifact is a creature with base power and toughness 5/5 in addition to its other types.\nWhen enchanted artifact is put into a graveyard, return that card to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Those Who Serve": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Those Who Serve",
+        "power": "2",
+        "subtypes": [
+            "Zombie"
+        ],
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Thriving Grubs": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Thriving Grubs",
+        "power": "2",
+        "subtypes": [
+            "Gremlin"
+        ],
+        "text": "When Thriving Grubs enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Thriving Grubs attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Thriving Ibex": {
+        "cmc": 4,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Thriving Ibex",
+        "power": "2",
+        "subtypes": [
+            "Goat"
+        ],
+        "text": "When Thriving Ibex enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Thriving Ibex attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Thriving Rats": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Thriving Rats",
+        "power": "1",
+        "subtypes": [
+            "Rat"
+        ],
+        "text": "When Thriving Rats enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Thriving Rats attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Thundering Giant": {
+        "cmc": 5,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Thundering Giant",
+        "power": "4",
+        "subtypes": [
+            "Giant"
+        ],
+        "text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Tidy Conclusion": {
+        "cmc": 5,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Tidy Conclusion",
+        "text": "Destroy target creature. You gain 1 life for each artifact you control.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Torch Gauntlet": {
+        "cmc": 2,
+        "name": "Torch Gauntlet",
+        "subtypes": [
+            "Equipment"
+        ],
+        "text": "Equipped creature gets +2/+0.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Treasure Keeper": {
+        "cmc": 4,
+        "name": "Treasure Keeper",
+        "power": "3",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "When Treasure Keeper dies, reveal cards from the top of your library until you reveal a nonland card with converted mana cost 3 or less. You may cast that card without paying its mana cost. Put all revealed cards not cast this way on the bottom of your library in a random order.",
+        "toughness": "3",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Trespasser's Curse": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Trespasser's Curse",
+        "subtypes": [
+            "Aura",
+            "Curse"
+        ],
+        "text": "Enchant player\nWhenever a creature enters the battlefield under enchanted player's control, that player loses 1 life and you gain 1 life.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Trial of Ambition": {
+        "cmc": 2,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Trial of Ambition",
+        "text": "When Trial of Ambition enters the battlefield, target opponent sacrifices a creature.\nWhen a Cartouche enters the battlefield under your control, return Trial of Ambition to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Trial of Knowledge": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Trial of Knowledge",
+        "text": "When Trial of Knowledge enters the battlefield, draw three cards, then discard a card.\nWhen a Cartouche enters the battlefield under your control, return Trial of Knowledge to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Trial of Solidarity": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Trial of Solidarity",
+        "text": "When Trial of Solidarity enters the battlefield, creatures you control get +2/+1 and gain vigilance until end of turn.\nWhen a Cartouche enters the battlefield under your control, return Trial of Solidarity to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Trial of Strength": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Trial of Strength",
+        "text": "When Trial of Strength enters the battlefield, create a 4/2 green Beast creature token.\nWhen a Cartouche enters the battlefield under your control, return Trial of Strength to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Trial of Zeal": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Trial of Zeal",
+        "text": "When Trial of Zeal enters the battlefield, it deals 3 damage to target creature or player.\nWhen a Cartouche enters the battlefield under your control, return Trial of Zeal to its owner's hand.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Tricks of the Trade": {
+        "cmc": 4,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Tricks of the Trade",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature gets +2/+0 and can't be blocked.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Unbridled Growth": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Unbridled Growth",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant land\nEnchanted land has \"{T}: Add one mana of any color to your mana pool.\"\nSacrifice Unbridled Growth: Draw a card.",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Universal Solvent": {
+        "cmc": 1,
+        "name": "Universal Solvent",
+        "text": "{7}, {T}, Sacrifice Universal Solvent: Destroy target permanent.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Untamed Hunger": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Untamed Hunger",
+        "subtypes": [
+            "Aura"
+        ],
+        "text": "Enchant creature\nEnchanted creature gets +2/+1 and has menace. (It can't be blocked except by two or more creatures.)",
+        "types": [
+            "Enchantment"
+        ]
+    },
+    "Untethered Express": {
+        "cmc": 4,
+        "name": "Untethered Express",
+        "power": "4",
+        "subtypes": [
+            "Vehicle"
+        ],
+        "text": "Trample\nWhenever Untethered Express attacks, put a +1/+1 counter on it.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "toughness": "4",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Unwavering Initiate": {
+        "cmc": 3,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Unwavering Initiate",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "Vigilance\nEmbalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery.)",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Vedalken Blademaster": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Vedalken Blademaster",
+        "power": "2",
+        "subtypes": [
+            "Soldier",
+            "Vedalken"
+        ],
+        "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Verdant Automaton": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Verdant Automaton",
+        "power": "1",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{3}{G}: Put a +1/+1 counter on Verdant Automaton.",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Victory's Herald": {
+        "cmc": 6,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Victory's Herald",
+        "power": "4",
+        "subtypes": [
+            "Angel"
+        ],
+        "text": "Flying\nWhenever Victory's Herald attacks, attacking creatures gain flying and lifelink until end of turn.",
+        "toughness": "4",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Vizier of Remedies": {
+        "cmc": 2,
+        "color_identities": [
+            "White"
+        ],
+        "name": "Vizier of Remedies",
+        "power": "2",
+        "subtypes": [
+            "Cleric",
+            "Human"
+        ],
+        "text": "If one or more -1/-1 counters would be put on a creature you control, that many -1/-1 counters minus one are put on it instead.",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Voltaic Brawler": {
+        "cmc": 2,
+        "color_identities": [
+            "Red",
+            "Green"
+        ],
+        "name": "Voltaic Brawler",
+        "power": "3",
+        "subtypes": [
+            "Human",
+            "Warrior"
+        ],
+        "text": "When Voltaic Brawler enters the battlefield, you get {E}{E} (two energy counters).\nWhenever Voltaic Brawler attacks, you may pay {E}. If you do, it gets +1/+1 and gains trample until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Warfire Javelineer": {
+        "cmc": 4,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Warfire Javelineer",
+        "power": "2",
+        "subtypes": [
+            "Minotaur",
+            "Warrior"
+        ],
+        "text": "When Warfire Javelineer enters the battlefield, it deals X damage to target creature an opponent controls, where X is the number of instant and sorcery cards in your graveyard.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Watchers of the Dead": {
+        "cmc": 2,
+        "name": "Watchers of the Dead",
+        "power": "2",
+        "subtypes": [
+            "Cat"
+        ],
+        "text": "Exile Watchers of the Dead: Each opponent chooses two cards in his or her graveyard and exiles the rest.",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Watchful Automaton": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Watchful Automaton",
+        "power": "2",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{2}{U}: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Weaponcraft Enthusiast": {
+        "cmc": 3,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Weaponcraft Enthusiast",
+        "power": "0",
+        "subtypes": [
+            "Aetherborn",
+            "Artificer"
+        ],
+        "text": "Fabricate 2 (When this creature enters the battlefield, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Welder Automaton": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Welder Automaton",
+        "power": "2",
+        "subtypes": [
+            "Construct"
+        ],
+        "text": "{3}{R}: Welder Automaton deals 1 damage to each opponent.",
+        "toughness": "1",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Weldfast Monitor": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Weldfast Monitor",
+        "power": "3",
+        "subtypes": [
+            "Lizard"
+        ],
+        "text": "{R}: Weldfast Monitor gains menace until end of turn.",
+        "toughness": "2",
+        "types": [
+            "Creature",
+            "Artifact"
+        ]
+    },
+    "Welding Sparks": {
+        "cmc": 3,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Welding Sparks",
+        "text": "Welding Sparks deals X damage to target creature, where X is 3 plus the number of artifacts you control.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Whir of Invention": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Whir of Invention",
+        "text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nSearch your library for an artifact card with converted mana cost X or less, put it onto the battlefield, then shuffle your library.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Whirler Virtuoso": {
+        "cmc": 3,
+        "color_identities": [
+            "Blue",
+            "Red"
+        ],
+        "name": "Whirler Virtuoso",
+        "power": "2",
+        "subtypes": [
+            "Artificer",
+            "Vedalken"
+        ],
+        "text": "When Whirler Virtuoso enters the battlefield, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+        "toughness": "3",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Wild Wanderer": {
+        "cmc": 4,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Wild Wanderer",
+        "power": "3",
+        "subtypes": [
+            "Druid",
+            "Elf"
+        ],
+        "text": "When Wild Wanderer enters the battlefield, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
+        "toughness": "2",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Wily Bandar": {
+        "cmc": 1,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Wily Bandar",
+        "power": "1",
+        "subtypes": [
+            "Cat",
+            "Monkey"
+        ],
+        "text": "{2}{G}: Wily Bandar gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+        "toughness": "1",
+        "types": [
+            "Creature"
+        ]
+    },
+    "Winds of Rebuke": {
+        "cmc": 2,
+        "color_identities": [
+            "Blue"
+        ],
+        "name": "Winds of Rebuke",
+        "text": "Return target nonland permanent to its owner's hand. Each player puts the top two cards of his or her library into his or her graveyard.",
+        "types": [
+            "Instant"
+        ]
+    },
+    "Wing Snare": {
+        "cmc": 3,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Wing Snare",
+        "text": "Destroy target creature with flying.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Woodweaver's Puzzleknot": {
+        "cmc": 2,
+        "color_identities": [
+            "Green"
+        ],
+        "name": "Woodweaver's Puzzleknot",
+        "text": "When Woodweaver's Puzzleknot enters the battlefield, you gain 3 life and get {E}{E}{E} (three energy counters).\n{2}{G}, Sacrifice Woodweaver's Puzzleknot: You gain 3 life and get {E}{E}{E}.",
+        "types": [
+            "Artifact"
+        ]
+    },
+    "Wrangle": {
+        "cmc": 2,
+        "color_identities": [
+            "Red"
+        ],
+        "name": "Wrangle",
+        "text": "Gain control of target creature with power 4 or less until end of turn. Untap that creature. It gains haste until end of turn.",
+        "types": [
+            "Sorcery"
+        ]
+    },
+    "Yahenni's Expertise": {
+        "cmc": 4,
+        "color_identities": [
+            "Black"
+        ],
+        "name": "Yahenni's Expertise",
+        "text": "All creatures get -3/-3 until end of turn.\nYou may cast a card with converted mana cost 3 or less from your hand without paying its mana cost.",
+        "types": [
+            "Sorcery"
+        ]
+    }
+}
