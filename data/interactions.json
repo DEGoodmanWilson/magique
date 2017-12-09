@@ -18,7 +18,10 @@
 
   "revolt": {
     "revolt": -1.0,
-    "removal_own": 1.0
+    "removal_own": 1.0,
+    "removal": 1.0,
+    "return_own_to_hand": 1.0,
+    "return_to_hand": 1.0
   },
 
   "create_token": {
@@ -35,5 +38,10 @@
 
   "debuff_other": {
     "debuff_other": 1.0
+  },
+
+  "+counter_other": {
+    "+counter_other": 0.5,
+    "+counter_self": 0.5
   }
 }

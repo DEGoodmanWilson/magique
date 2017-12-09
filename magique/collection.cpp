@@ -29,7 +29,7 @@ collection::collection(std::string filename, const catalog &catalog) : catalog_{
 //        name = name.substr(1,name.length()-1);
 
         bool is_land = false;
-        std::cout << name << std::endl;
+//        std::cout << name << std::endl;
         for (const auto &type : catalog.at(name).types)
         {
             if (type == card::type::land || type == card::type::basic_land)

@@ -1,13 +1,13 @@
 {
   "Accomplished Automaton": {
     "abilities": [
-      "buff_self",
+      "+counter_self",
       "create_token"
     ]
   },
   "Aegis Automaton": {
     "abilities": [
-      "return_to_hand"
+      "return_own_to_hand"
     ]
   },
   "Aerial Responder": {
@@ -20,16 +20,22 @@
   "Aeronaut Admiral": {
     "abilities": [
       "flying"
+    ],
+    "affinities": [
+      "vehicle"
     ]
   },
   "Aether Chaser": {
     "abilities": [
+      "first strike",
+      "energy_source",
       "create_token",
       "energy_sink"
     ]
   },
   "Aether Herder": {
     "abilities": [
+      "energy_source",
       "create_token",
       "energy_sink"
     ]
@@ -37,6 +43,7 @@
   "Aether Inspector": {
     "abilities": [
       "vigilance",
+      "energy_source",
       "create_token",
       "energy_sink"
     ]
@@ -44,6 +51,7 @@
   "Aether Poisoner": {
     "abilities": [
       "create_token",
+      "energy_source",
       "energy_sink",
       "deathtouch"
     ]
@@ -51,44 +59,59 @@
   "Aether Swooper": {
     "abilities": [
       "flying",
+      "energy_source",
       "create_token",
       "energy_sink"
     ]
   },
+  "Aether Theorist": {
+    "abilities": [
+      "energy_source",
+      "energy_sink",
+      "scry"
+    ]
+  },
   "Aether Tradewinds": {
     "abilities": [
-      "return_to_hand"
+      "return_own_to_hand",
+      "return_opponent_to_hand"
     ]
   },
   "Aetherborn Marauder": {
     "abilities": [
       "flying",
-      "buff_self",
       "lifelink"
     ]
   },
   "Aethergeode Miner": {
     "abilities": [
+      "energy_source",
       "energy_sink"
+    ],
+    "affinities": [
+      "revolt"
     ]
   },
   "Aetherstorm Roc": {
     "abilities": [
       "flying",
-      "buff_self",
+      "energy_source",
+      "+counter_self",
       "energy_sink"
     ]
   },
   "Aetherstream Leopard": {
     "abilities": [
       "trample",
+      "energy_source",
       "buff_self",
       "energy_sink"
     ]
   },
   "Ahn-Crop Crasher": {
     "abilities": [
-      "haste"
+      "haste",
+      "exert"
     ]
   },
   "Air Elemental": {
@@ -98,22 +121,51 @@
   },
   "Ajani Unyielding": {
     "abilities": [
-      "buff_other"
+      "draw_cards",
+      "removal",
+      "heal",
+      "+counter_other"
+    ],
+    "affinities": [
+      "planeswalker"
     ]
   },
   "Alley Evasion": {
     "abilities": [
-      "buff_other"
+      "buff_other",
+      "return_own_to_hand"
+    ],
+    "affinities": [
+      "creature"
+    ]
+  },
+  "Alley Strangler": {
+    "abilities": [
+      "menace"
     ]
   },
   "Angler Drake": {
     "abilities": [
-      "flying"
+      "flying",
+      "return_own_to_hand",
+      "return_opponent_to_hand"
+    ]
+  },
+  "Appetite for the Unnatural": {
+    "abilities": [
+      "removal",
+      "heal"
     ]
   },
   "Arborback Stomper": {
     "abilities": [
-      "trample"
+      "trample",
+      "heal"
+    ]
+  },
+  "Audacious Infiltrator": {
+    "abilities": [
+      "unblockable"
     ]
   },
   "Augmenting Automaton": {
