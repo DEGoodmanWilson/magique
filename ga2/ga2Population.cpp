@@ -22,7 +22,7 @@
 #include <time.h>
 #include <math.h>
 #include "ga2.h"
-#include <algorithm>
+#include <thread>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -161,18 +161,58 @@ bool ga2Population::select(void)
  */
 bool ga2Population::evaluate(void)
 {
-    int i;
-    double f;
     _sumFitness = _avgFitness = 0.0;
     _maxFitness = -1 * (double) INT_MAX;
     _minFitness = (double) INT_MAX;
-    for (i = 0; i < _size; ++i)
-    {
-        f = _chromosomes[i].getFitness();
-        _sumFitness += f;
 
-        if (f > _maxFitness) _maxFitness = f;
-        if (f < _minFitness) _minFitness = f;
+
+    // Let's do this in 16 threads. TODO make this much cleaner!!
+    std::thread threads[16];
+
+    const uint16_t thread_count{16};
+    int step = _size/thread_count;
+    int remainder = _size%thread_count;
+    double _sumFitnesses[thread_count];
+    double _avgFitnesses[thread_count];
+    double _maxFitnesses[thread_count];
+    double _minFitnesses[thread_count];
+
+    for (uint16_t t_idx = 0; t_idx < thread_count; ++t_idx)
+    {
+        threads[t_idx] = std::thread{
+                [&]()
+                {
+                    auto start = (t_idx*step);
+                    auto end = start+step;
+                    if(t_idx < remainder)
+                    {
+                        start += t_idx;
+                        end += t_idx + 1;
+                    }
+                    _sumFitnesses[t_idx] = this->_sumFitness;
+                    _avgFitnesses[t_idx] = this->_avgFitness;
+                    _maxFitnesses[t_idx] = this->_maxFitness;
+                    _minFitnesses[t_idx] = this->_minFitness;
+                    double f;
+                    for(auto i = start; i < end; ++i)
+                    {
+                        f = this->_chromosomes[start].getFitness();
+                        _sumFitnesses[t_idx] += f;
+
+                        if (f > _maxFitnesses[t_idx]) _maxFitnesses[t_idx] = f;
+                        if (f < _minFitnesses[t_idx]) _minFitnesses[t_idx] = f;
+                    }
+                    _avgFitnesses[t_idx] = _sumFitnesses[t_idx] / (double) this->_size;
+                }
+        };
+    }
+
+    for (auto t_idx = 0; t_idx < thread_count; ++t_idx)
+    {
+        threads[t_idx].join();
+        _sumFitness += _sumFitnesses[t_idx];
+        if (_maxFitnesses[t_idx] > _maxFitness) _maxFitness = _maxFitnesses[t_idx];
+        if (_minFitnesses[t_idx] < _minFitness) _minFitness = _minFitnesses[t_idx];
     }
     _avgFitness = _sumFitness / (double) _size;
 
