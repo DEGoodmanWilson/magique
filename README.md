@@ -63,3 +63,9 @@ There is so much work to do. So much.
 I'm so glad you asked. Just start digging in on anything you see that's missing that you can fix. Even just more data on how Magic cards work together would be awesome.
 
 And if you just want to show your appreciation, you can always send me a booster. Call it research ;) (Actively collecting French-language Kaladesh and Aether Revolt, but honestly cards from any expansion and in any and all languages heartily accepted!)
+
+## Notes on abilities and interactions
+
+The current system is quite broken. There is no way to distinguish "grants haste" from "grants haste until end of turn". There's no way to capture subtle things like "target create cannot block this turn". It would be nice to name an ability, and then assign attributes like "permanently", "temporarily", "only on itself", "grants to others", &c. Same with abilities that place or remove counters on targets. How should we represent "place a -1/-1 counter on target creature you own" from "remove a -1/-1 counter on target opponent creature", for example? Affinities at the moment can only disjunctions of types/subtypes; there is no way to indicate conjunctions (e.g., and especially "artifact creatures"). There's also no way to indicate strenght of ability, e.g. Fabricate 1 or Scry 2.
+
+In other words, the system of identifying mechanics and abilities, and how they interact with other cards needs _significant_ refinement. Help wanted.

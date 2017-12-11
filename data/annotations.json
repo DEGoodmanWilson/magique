@@ -110,8 +110,7 @@
   },
   "Ahn-Crop Crasher": {
     "abilities": [
-      "haste",
-      "exert"
+      "haste"
     ]
   },
   "Air Elemental": {
@@ -175,13 +174,27 @@
   },
   "Baleful Ammit": {
     "abilities": [
-      "debuff_other",
+      "-counter_other",
       "lifelink"
+    ]
+  },
+  "Ballista Charger": {
+    "abilities": [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ]
+  },
+  "Baral, Chief of Compliance": {
+    "abilities": [
+      "draw_cards",
+      "discard_cards",
+      "mana_reduction"
     ]
   },
   "Bastion Inventor": {
     "abilities": [
-      "improvise"
+      "improvise",
+      "hexproof"
     ]
   },
   "Bitterblade Warrior": {
@@ -192,12 +205,20 @@
   },
   "Bloodhunter Bat": {
     "abilities": [
-      "flying"
+      "flying",
+      "direct_damage_player",
+      "heal"
+    ]
+  },
+  "Bloodlust Inciter": {
+    "abilities": [
+      "grant_haste"
     ]
   },
   "Blossoming Defense": {
     "abilities": [
-      "buff_other"
+      "buff_other",
+      "grant_hexproof"
     ]
   },
   "Brazen Scourge": {
@@ -212,13 +233,14 @@
   },
   "Cartouche of Ambition": {
     "abilities": [
-      "buff_other",
       "debuff_other",
+      "buff_other",
       "lifelink"
     ]
   },
   "Cartouche of Knowledge": {
     "abilities": [
+      "draw_cards",
       "buff_other",
       "grant_flying"
     ]
@@ -226,22 +248,104 @@
   "Cartouche of Solidarity": {
     "abilities": [
       "create_token",
-      "buff_other"
+      "buff_other",
+      "grant_first_strike"
     ]
   },
   "Cartouche of Strength": {
     "abilities": [
-      "buff_other"
+      "buff_other",
+      "grant_trample"
     ]
   },
   "Cartouche of Zeal": {
     "abilities": [
+      "buff_other",
+      "grant_haste"
+    ]
+  },
+  "Cataclysmic Gearhulk": {
+    "abilities": [
+      "vigilance",
+      "removal"
+    ]
+  },
+  "Cathartic Reunion": {
+    "abilities": [
+      "draw_cards"
+    ]
+  },
+  "Caught in the Brights": {
+    "abilities": [
+      "grant_cannot_attack",
+      "grant_cannot_block",
+      "removal"
+    ]
+  },
+  "Censor": {
+    "abilities": [
+      "counter",
+      "cycling"
+    ]
+  },
+  "Chandra's Pyrohelix": {
+    "abilities": [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ]
+  },
+  "Chandra's Revolution": {
+    "abilities": [
+      "direct_damage_creature",
+      "force_tap_land"
+    ]
+  },
+  "Chief of the Foundry": {
+    "abilities": [
       "buff_other"
+    ],
+    "affinities": [
+      "artifact",
+      "creature"
     ]
   },
   "Cogwork Assembler": {
     "abilities": [
-      "create_token"
+      "copy_card",
+      "grant_haste"
+    ],
+    "affinities": [
+      "artifact"
+    ]
+  },
+  "Commencement of Festivities": {
+    "abilities": [
+      "prevent_damage"
+    ]
+  },
+  "Compulsory Rest": {
+    "abilities": [
+      "grant_cannot_attack",
+      "grant_cannot_block",
+      "heal",
+      "removal"
+    ]
+  },
+  "Consulate Crackdown": {
+    "abilities": [
+      "removal"
+    ]
+  },
+  "Consulate Skygate": {
+    "abilities": [
+      "defender",
+      "reach"
+    ]
+  },
+  "Contraband Kingpin": {
+    "abilities": [
+      "lifelink",
+      "scry"
     ]
   },
   "Conviction": {
@@ -258,12 +362,23 @@
   "Crocodile of the Crossing": {
     "abilities": [
       "haste",
-      "debuff_other"
+      "-counter_other"
     ]
   },
   "Cruel Finality": {
     "abilities": [
-      "debuff_other"
+      "debuff_other",
+      "scry"
+    ]
+  },
+  "Cursed Minotaur": {
+    "abilities": [
+      "menace"
+    ]
+  },
+  "Daring Demolition": {
+    "abilities": [
+      "removal"
     ]
   },
   "Dawnfeather Eagle": {
@@ -272,20 +387,69 @@
       "buff_other"
     ]
   },
+  "Decision Paralysis":
+  {
+    "abilities": [
+      "force_tap_creature"
+    ]
+  },
+  "Decommission": {
+    "abilities": [
+      "removal",
+      "revolt",
+      "heal"
+    ]
+  },
   "Defiant Salvager": {
     "abilities": [
-      "buff_self"
+      "sacrifice",
+      "+counter_self"
+    ],
+    "affinities": [
+      "artifact",
+      "creature"
+    ]
+  },
+  "Destructive Tampering": {
+    "abilities": [
+      "removal",
+      "grant_cannot_block"
     ]
   },
   "Dhund Operative": {
     "abilities": [
       "buff_self",
       "deathtouch"
+    ],
+    "affinities": [
+      "artifact"
+    ]
+  },
+  "Dispersal Technician": {
+    "abilities": [
+      "return_own_to_hand"
+    ]
+  },
+  "Divine Verdict": {
+    "abilities": [
+      "removal"
+    ]
+  },
+  "Djeru's Resolve": {
+    "abilities": [
+      "untap_creature",
+      "prevent_damage",
+      "cycling"
     ]
   },
   "Doomed Dissenter": {
     "abilities": [
       "create_token"
+    ]
+  },
+  "Druid of the Cowl": {
+    "abilities": [
+      "mana_acceleration"
     ]
   },
   "Dukhara Peafowl": {
@@ -295,9 +459,16 @@
   },
   "Durable Handicraft": {
     "abilities": [
-      "buff_other"
+      "+counter_other"
     ]
   },
+
+
+
+
+
+
+  
   "Eddytrail Hawk": {
     "abilities": [
       "flying",
