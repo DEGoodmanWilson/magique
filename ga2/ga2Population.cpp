@@ -167,9 +167,8 @@ bool ga2Population::evaluate(void)
 
 
     // Let's do this in 16 threads. TODO make this much cleaner!!
-    std::thread threads[16];
-
     const uint16_t thread_count{16};
+    std::thread threads[thread_count];
     int step = _size/thread_count;
     int remainder = _size%thread_count;
     double _sumFitnesses[thread_count];
@@ -180,7 +179,7 @@ bool ga2Population::evaluate(void)
     for (uint16_t t_idx = 0; t_idx < thread_count; ++t_idx)
     {
         threads[t_idx] = std::thread{
-                [&]()
+                [&, t_idx]()
                 {
                     auto start = (t_idx*step);
                     auto end = start+step;
@@ -189,6 +188,11 @@ bool ga2Population::evaluate(void)
                         start += t_idx;
                         end += t_idx + 1;
                     }
+                    else
+                    {
+                        start += remainder;
+                        end += remainder;
+                    }
                     _sumFitnesses[t_idx] = this->_sumFitness;
                     _avgFitnesses[t_idx] = this->_avgFitness;
                     _maxFitnesses[t_idx] = this->_maxFitness;
@@ -196,7 +200,7 @@ bool ga2Population::evaluate(void)
                     double f;
                     for(auto i = start; i < end; ++i)
                     {
-                        f = this->_chromosomes[start].getFitness();
+                        f = this->_nextGen[start].getFitness();
                         _sumFitnesses[t_idx] += f;
 
                         if (f > _maxFitnesses[t_idx]) _maxFitnesses[t_idx] = f;
@@ -219,7 +223,7 @@ bool ga2Population::evaluate(void)
     //TODO we're sorting this too many times.
     if (_isSorted)
     {
-        std::sort(_chromosomes.begin(), _chromosomes.end());
+        std::sort(_nextGen.begin(), _nextGen.end());
     }
     return true;
 }
@@ -498,10 +502,10 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 bool ga2Population::_replaceSteadyState(void)
 {
     int i;
-    if (!_isSorted)
-    {
-        return false;
-    }
+//    if (!_isSorted)
+//    {
+//        return false;
+//    }
 
     //note that we dont care about the replacement size
     for (i = 0; i < _nextGen.size(); ++i)

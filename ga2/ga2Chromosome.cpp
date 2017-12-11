@@ -313,6 +313,7 @@ ga2Chromosome &ga2Chromosome::operator+(ga2Chromosome &&a)
     return *this;
 };
 
+// TODO notice this only works when the gene has _already_ been evaluated. For now. Because const-ness
 bool ga2Chromosome::operator<(const ga2Chromosome &a) const
 {
     return (this->_fitness < a._fitness);

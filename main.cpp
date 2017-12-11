@@ -75,8 +75,8 @@ int main()
         pop.select();
         pop.crossover();
         pop.mutate();
-        pop.replace();
         pop.evaluate();
+        pop.replace();
         std::cout << "." << std::flush;
         if ((gen + 1) % 100 == 0) std::cout << std::endl;
 
