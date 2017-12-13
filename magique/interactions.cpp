@@ -35,21 +35,22 @@ double interactions::evaluate(const card &a, const card &b) const
 
         auto interactions = interactions_store_.at(ability);
 
-        // in order to find abilities that interact with the _lack_ of an ability, we need to iterate through the interactions first
+        // in order to find abilities that interact with the _lack_ of an ability or type, we need to iterate through the interactions first
         for (const auto &interaction : *interactions)
         {
             bool negative{interaction.first[0] == '!'};
 
-            auto b_ability = interaction.first;
+            auto b_interaction = interaction.first;
             if (negative)
             {
-                b_ability = b_ability.substr(1);
+                b_interaction = b_interaction.substr(1);
             }
-            bool b_has_ability{b.abilities.count(b_ability) != 0};
 
-            // if b has this ability…or it is an interaction with the absence of an ability, and b doesn't have it
-            if ((!negative && b_has_ability) ||
-                (negative && !b_has_ability))
+            bool b_has_interaction{b.abilities.count(b_interaction) || b.has_type(b_interaction) || b.subtypes.count(b_interaction)};
+
+            // if b has this ability or type…or it is an interaction with the absence of an ability or type, and b doesn't have it
+            if ((!negative && b_has_interaction) ||
+                (negative && !b_has_interaction))
             {
                 value += interaction.second;
             }

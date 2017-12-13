@@ -43,5 +43,9 @@
   "+counter_other": {
     "+counter_other": 0.5,
     "+counter_self": 0.5
+  },
+
+  "improvise": {
+    "artifact": 1.0
   }
 }
