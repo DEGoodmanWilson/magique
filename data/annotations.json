@@ -86,7 +86,8 @@
   "Aethergeode Miner": {
     "abilities": [
       "energy_source",
-      "energy_sink"
+      "energy_sink",
+      "return_to_battlefield_self"
     ],
     "affinities": [
       "revolt"
@@ -387,8 +388,7 @@
       "buff_other"
     ]
   },
-  "Decision Paralysis":
-  {
+  "Decision Paralysis": {
     "abilities": [
       "force_tap_creature"
     ]
@@ -462,32 +462,55 @@
       "+counter_other"
     ]
   },
-
-
-
-
-
-
-  
+  "Eager Construct": {
+    "abilities": [
+      "scry"
+    ]
+  },
   "Eddytrail Hawk": {
     "abilities": [
       "flying",
-      "energy_sink"
+      "energy_source",
+      "energy_sink",
+      "grant_flying"
+    ]
+  },
+  "Electrify": {
+    "abilities": [
+      "direct_damage_creature"
     ]
   },
   "Electrostatic Pummeler": {
     "abilities": [
-      "energy_sink"
+      "energy_source",
+      "energy_sink",
+      "buff_self"
     ],
     "affinities": [
       "buff_other",
       "grant_trample"
     ]
   },
+  "Elegant Edgecrafters": {
+    "abilities": [
+      "unblockable",
+      "create_token",
+      "+counter_self"
+    ]
+  },
+  "Embraal Gear-Smasher": {
+    "abilitiles": [
+      "direct_damage_player"
+    ],
+    "affinities": [
+      "artifact"
+    ]
+  },
   "Empyreal Voyager": {
     "abilities": [
       "flying",
-      "trample"
+      "trample",
+      "energy_source"
     ]
   },
   "Enraged Giant": {
@@ -497,19 +520,93 @@
       "improvise"
     ]
   },
+  "Essence Extraction": {
+    "abilities": [
+      "direct_damage_player",
+      "heal"
+    ]
+  },
+  "Essence Scatter": {
+    "abilities": [
+      "counter"
+    ]
+  },
   "Fabrication Module": {
     "abilities": [
-      "buff_other"
+      "+counter_other"
+    ],
+    "afiinities": [
+      "energy_source"
+    ]
+  },
+  "Fan Bearer": {
+    "abilities": [
+      "force_tap_creature"
+    ]
+  },
+  "Fatal Push": {
+    "abilities": [
+      "removal",
+      "revolt"
+    ]
+  },
+  "Fateful Showdown": {
+    "abilities": [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ]
+  },
+  "Felidar Guardian": {
+    "abilities": [
+      "return_to_battlefield_other"
     ]
   },
   "Fen Hauler": {
     "abilities": [
-      "improvise"
+      "improvise",
+      "unblockable"
     ]
   },
   "Festering Mummy": {
     "abilities": [
-      "debuff_other"
+      "-counter_other"
+    ]
+  },
+  "Foundry Assembler": {
+    "abilities": [
+      "improvise"
+    ]
+  },
+  "Filigree Familiar": {
+    "abilities": [
+      "heal",
+      "draw_cards"
+    ]
+  },
+  "Fireforger's Puzzleknot": {
+    "abilities": [
+      "direct_damage_player",
+      "direct_damage_creature"
+    ]
+  },
+  "Fling": {
+    "abilities": [
+      "direct_damage_player",
+      "direct_damage_creature"
+    ],
+    "affinities": [
+      "creature"
+    ]
+  },
+  "Floodwaters": {
+    "abilities": [
+      "return_to_own_hand",
+      "cycling"
+    ]
+  },
+  "Fortuitous Find": {
+    "abilities": [
+      "return_to_hand"
     ]
   },
   "Foundry Assembler": {
@@ -528,6 +625,16 @@
       "debuff_other"
     ]
   },
+  "Fragmentize": {
+    "abilities": [
+      "removal"
+    ]
+  },
+
+
+
+
+  
   "Garruk's Horde": {
     "abilities": [
       "trample"
