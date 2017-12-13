@@ -9,12 +9,6 @@
 namespace magique
 {
 
-bool case_insensitive_comp_::operator()(const std::string &a, const std::string &b) const noexcept
-{
-    return strcasecmp(a.c_str(), b.c_str()) < 0;
-}
-
-
 catalog::catalog(std::string filename, std::string annotations_filename)
 {
     std::ifstream ifs(filename);
@@ -57,14 +51,24 @@ catalog::catalog(std::string filename, std::string annotations_filename)
         }
         catch (std::out_of_range e)
         {}
-
-        cards_by_name_[name] = card_json.get<card>();
     }
 
+    cards_by_name_ = card_list_json.get<decltype(cards_by_name_)>();
 }
 
 const card& catalog::at(std::string name) const
 {
+    card c;
+    try
+    {
+        c = cards_by_name_.at(name);
+    }
+    catch(std::out_of_range e)
+    {
+        std::cout << name << std::endl;
+        throw(e);
+    }
+
     return cards_by_name_.at(name);
 }
 
