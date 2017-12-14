@@ -107,12 +107,12 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, i
 
 double deck::evaluate()
 {
-    rank_ = 30;
+    rank_ = 60;
 
     //LEGALITIES!
 
     // count the size of the deck. For now assume a deck size of 30, with 12 land
-    int64_t count_diff = cards_.size() - (30 - 12);
+    int64_t count_diff = cards_.size() - (60 - 24);
     if (count_diff < 0)
     { legal_ = false; }
     else
@@ -244,6 +244,7 @@ double deck::evaluate()
 
     //calculate deviation from ideal mana color distribution
     double bonus;
+    double deck_size_factor = cards_.size() / 30.0; //the values below are based on a 30 card deck
     switch (colors_)
     {
         case 2:
@@ -261,6 +262,7 @@ double deck::evaluate()
             bonus = -32;
             break;
     }
+    bonus *= deck_size_factor;
     rank_ += bonus;
     reasons_["color_bonus"] = bonus;
     reasons_["colors_seen"] = colors_seen.size();

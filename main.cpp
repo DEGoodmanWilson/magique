@@ -42,7 +42,7 @@ int main()
     deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
 
     auto pop_size{1000};
-    auto chromo_size = 30 - 13; //  30-card collection, with 12 lands and a key card specified
+    auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
