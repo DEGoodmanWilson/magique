@@ -16,7 +16,8 @@ namespace magique
 
 std::vector<card> deck::key_cards_ = {};
 
-deck::deck(const std::string &filename, const catalog &catalog, interactions interactions) : interactions_{interactions}, legal_{true}, rank_{0.0}, colors_{0}
+deck::deck(const std::string &filename, const catalog &catalog, interactions interactions) :
+        interactions_{interactions}, legal_{true}, rank_{0.0}, colors_{0}
 {
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {
@@ -67,7 +68,8 @@ deck::deck(const std::string &filename, const catalog &catalog, interactions int
     }
 }
 
-deck::deck(const std::vector<uint64_t> &indices, const collection &collection, interactions interactions) : interactions_{interactions},  legal_{true}, rank_{0.0}, colors_{0}
+deck::deck(const std::vector<uint64_t> &indices, const collection &collection, interactions interactions) :
+        interactions_{interactions}, legal_{true}, rank_{0.0}, colors_{0}
 {
     for (int i = cost_dist_.size() - 1; i >= 0; --i)
     {
@@ -139,6 +141,7 @@ double deck::evaluate()
 
     std::map<uint16_t, double> interaction_scores;
 
+    uint16_t i{0};
     for (const auto &card : cards_)
     {
         dupes[card.name]++;
@@ -194,30 +197,31 @@ double deck::evaluate()
         }
 
         // interactions!
-        for(auto i = 0; i < cards_.size(); ++i)
+
+        for (auto j = 0; j < cards_.size(); ++j)
         {
-            interaction_scores[i] = 0;
+            interaction_scores[j] = 0;
 
-            for(auto j = 0; j < cards_.size(); ++j)
-            {
-                if(i==j) continue; // don't compare a card to itself
+            if (i == j) continue; // don't compare a card to itself
 
-                interaction_scores[i] += interactions_.evaluate(cards_[i], cards_[j]);
-            }
-
-            // normalize
-            interaction_scores[i] = interaction_scores[i] / cards_.size();
+            interaction_scores[i] += interactions_.evaluate(card, cards_[j]);
         }
+        // normalize
+
+        interaction_scores[i] = interaction_scores[i] / cards_.size();
+
+
 
         // TODO
         // minomize casting cost (but mana curve?) relative to strength?
+        ++i;
     }
 
 
     // TODO this is all fucked up
     double interactions_bonus{0};
     reasons_["interactions"] = nlohmann::json{};
-    for(const auto &score : interaction_scores)
+    for (const auto &score : interaction_scores)
     {
         interactions_bonus += score.second;
         reasons_["interactions"][score.first] = score.second;
@@ -232,7 +236,8 @@ double deck::evaluate()
     colors_ = colors_seen.size();
 
     //calculate color balance. Ideally (maybe?) all colors are equally distributed.
-    auto ideal_color_count = (colors_ > 0) ? colored_card_count_ / colors_ : 0; // TODO this doesn't account for colorless cards!
+    auto ideal_color_count = (colors_ > 0) ? colored_card_count_ / colors_
+                                           : 0; // TODO this doesn't account for colorless cards!
     double color_balance_adjustment_ = 0;
     for (const auto &c: colors_seen)
     {
