@@ -122,7 +122,7 @@ double deck::evaluate()
     rank_ += count_diff;
     reasons_["count_diff"] = count_diff;
 
-    std::map<std::string, uint8_t> dupes;
+    std::multiset<std::string> dupes;
 
     // count for duplicates, ignoring basic land
     std::vector<card> deck_sans_basic_land;
@@ -139,13 +139,13 @@ double deck::evaluate()
 
     uint8_t colored_card_count_{0};
 
-    std::map<uint16_t, double> interaction_scores;
+    std::vector<double> interaction_scores;
 
     uint16_t i{0};
     for (const auto &card : cards_)
     {
-        dupes[card.name]++;
-        if (dupes[card.name] > 4)
+        dupes.insert(card.name);
+        if (dupes.count(card.name) > 4)
         {
             legal_ = false;
             ++dupe_count;
@@ -197,18 +197,16 @@ double deck::evaluate()
         }
 
         // interactions!
-
+        double interaction_score = 0;
         for (auto j = 0; j < cards_.size(); ++j)
         {
-            interaction_scores[j] = 0;
-
             if (i == j) continue; // don't compare a card to itself
 
-            interaction_scores[i] += interactions_.evaluate(card, cards_[j]);
+            interaction_score += interactions_.evaluate(card, cards_[j]);
         }
         // normalize
 
-        interaction_scores[i] = interaction_scores[i] / cards_.size();
+        interaction_scores.push_back(interaction_score / cards_.size());
 
 
 
@@ -221,10 +219,12 @@ double deck::evaluate()
     // TODO this is all fucked up
     double interactions_bonus{0};
     reasons_["interactions"] = nlohmann::json{};
+    i = 0;
     for (const auto &score : interaction_scores)
     {
-        interactions_bonus += score.second;
-        reasons_["interactions"][score.first] = score.second;
+        interactions_bonus += score;
+        reasons_["interactions"][i] = score;
+        ++i;
     }
     rank_ += interactions_bonus;
     reasons_["interactions_bonus"] = interactions_bonus;
@@ -249,7 +249,7 @@ double deck::evaluate()
 
     //calculate deviation from ideal mana color distribution
     double bonus;
-    double deck_size_factor = cards_.size() / 30.0; //the values below are based on a 30 card deck
+    double deck_size_factor = cards_.size() / 18.0; //the values below are based on a 30 card deck w/ 12 lands
     switch (colors_)
     {
         case 2:
@@ -257,14 +257,14 @@ double deck::evaluate()
             break;
         case 1:
         case 3:
-            bonus = -8;
+            bonus = -16;
             break;
         case 4:
-            bonus = -16;
+            bonus = -32;
             break;
         case 5:
         default:
-            bonus = -32;
+            bonus = -64;
             break;
     }
     bonus *= deck_size_factor;

@@ -198,14 +198,7 @@ double ga2Chromosome::evaluate(void)
  */
 double ga2Chromosome::getFitness(void)
 {
-    if (_isEvaluated)
-    {
-        return _fitness;
-    }
-    else
-    {
-        return evaluate();
-    }
+    return _fitness;
 }
 
 /**

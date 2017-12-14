@@ -9,6 +9,18 @@
 namespace magique
 {
 
+
+std::unordered_map<std::string, card::type> card::strings_for_types{
+        {"Basic Land",   card::type::basic_land},
+        {"Land",         card::type::land},
+        {"Creature",     card::type::creature},
+        {"Artifact",     card::type::artifact},
+        {"Enchantment",  card::type::enchantment},
+        {"Planeswalker", card::type::planeswalker},
+        {"Instant",      card::type::instant},
+        {"Sorcery",      card::type::sorcery},
+};
+
 std::set<card::color> card::color_identities_from_array(const std::set<std::string> arr)
 {
     std::set<color> colors{};
@@ -32,47 +44,14 @@ std::set<card::color> card::color_identities_from_array(const std::set<std::stri
     return colors;
 }
 
-bool card::has_type(const std::string &type) const
+bool card::has_type(const std::string &type_str) const
 {
-    std::string type_str = type;
-    std::transform(type_str.begin(), type_str.end(), type_str.begin(), ::tolower);
+    if(strings_for_types.count(type_str) == 0) return false;
+    auto t = strings_for_types.at(type_str);
 
-    if (type_str == "basic_land" || type_str == "basic land")
-    {
-        return types.count(type::basic_land) != 0;
-    }
+    if((t==type::land) && types.count(type::basic_land)) return true; // basic lands are also lands
 
-    if (type_str == "land")
-    {
-        return (types.count(type::basic_land) != 0) || (types.count(type::land) != 0);
-    }
-
-    if (type_str == "creature")
-    {
-        return types.count(type::creature) != 0;
-    }
-    if (type_str == "artifact")
-    {
-        return types.count(type::artifact) != 0;
-    }
-    if (type_str == "enchantment")
-    {
-        return types.count(type::enchantment) != 0;
-    }
-    if (type_str == "planeswalker")
-    {
-        return types.count(type::planeswalker) != 0;
-    }
-    if (type_str == "instant")
-    {
-        return types.count(type::instant) != 0;
-    }
-    if (type_str == "sorcery")
-    {
-        return types.count(type::sorcery) != 0;
-    }
-
-    return false;
+    return types.count(t) > 0;
 }
 
 std::set<card::type>

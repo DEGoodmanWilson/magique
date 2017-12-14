@@ -16,7 +16,7 @@ catalog::catalog(std::string filename, std::string annotations_filename)
     ifs.close();
 
     nlohmann::json annotations;
-    if(!annotations_filename.empty())
+    if (!annotations_filename.empty())
     {
         ifs.open(annotations_filename);
         annotations << ifs;
@@ -37,17 +37,17 @@ catalog::catalog(std::string filename, std::string annotations_filename)
 
 
     //assume for now that it is just a vector of cards
-    for(auto card_json: card_list_json)
+    for (auto &card_json: card_list_json)
     {
         auto name = card_json["name"].get<std::string>();
         //load its annotations, if any
         try
         {
             const auto a = annotations[name];
-                for (auto it = a.begin(); it != a.end(); ++it)
-                {
-                    card_json[it.key()] = it.value();
-                }
+            for (auto it = a.begin(); it != a.end(); ++it)
+            {
+                card_json[it.key()] = it.value();
+            }
         }
         catch (std::out_of_range e)
         {}
@@ -56,17 +56,17 @@ catalog::catalog(std::string filename, std::string annotations_filename)
     cards_by_name_ = card_list_json.get<decltype(cards_by_name_)>();
 }
 
-const card& catalog::at(std::string name) const
+const card &catalog::at(std::string name) const
 {
     card c;
     try
     {
         c = cards_by_name_.at(name);
     }
-    catch(std::out_of_range e)
+    catch (std::out_of_range e)
     {
         std::cout << name << std::endl;
-        throw(e);
+        throw (e);
     }
 
     return cards_by_name_.at(name);

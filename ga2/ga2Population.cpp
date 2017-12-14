@@ -88,42 +88,17 @@ bool ga2Population::init(void)
         return false;
     }
 
-    int i;
-    for (i = 0; i < _size; ++i)
+    for (auto i = 0; i < _size; ++i)
     {
         ga2Chromosome newChromo(_chromoSize);
         newChromo.setMaxRanges(_chromoMaxRanges);
         newChromo.setMinRanges(_chromoMinRanges);
         newChromo.randomInit(_integer);
         newChromo.setEvalFunc(_evalFunc);
-        newChromo.evaluate();
-//        if (!_isSorted)
-//        {
-        newChromo.getFitness(); //force evaluation before sort
+        newChromo.evaluate(); //force evaluation before sort
         _chromosomes.push_back(newChromo);
-//        }
-//        else //we have to do an insertion sort. large elements first, small last
-//        {
-//            if (_chromosomes.empty())
-//            { //if theres nothing there, just stuff it in there
-//                _chromosomes.push_back(newChromo);
-//            }
-//            else //we have to look for the right place to put it...
-//            {
-//                //get an iterator
-//                std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
-//                //loop until we find the insertion point
-//                while ((it != _chromosomes.end()) &&
-//                       (it->getFitness() > newChromo.getFitness()))
-//                    it++;
-//                _chromosomes.insert(it, newChromo);
-//            }
-//        }
-        if (_isSorted)
-        {
-            std::sort(_chromosomes.begin(), _chromosomes.end());
-        }
     }
+    std::sort(_chromosomes.begin(), _chromosomes.end());
     return true;
 }
 
@@ -304,9 +279,12 @@ bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b)
     a.setCrossSite(coPoint);
     a.setParent(0, tempParent1);
     a.setParent(1, tempParent2);
+    a.evaluate();
+
     b.setCrossSite(coPoint);
     b.setParent(0, tempParent1);
     b.setParent(1, tempParent2);
+    b.evaluate();
 
     return true;
 }
@@ -358,10 +336,11 @@ bool ga2Population::_crossoverUniform(ga2Chromosome &a, ga2Chromosome &b)
     a.setCrossSite(0); //er, no real cross site to speak of in uniform...
     a.setParent(0, tempParent1);
     a.setParent(1, tempParent2);
+    a.evaluate();
     b.setCrossSite(0);
     b.setParent(0, tempParent1);
     b.setParent(1, tempParent2);
-
+    b.evaluate();
     return true;
 }
 
@@ -380,10 +359,6 @@ int ga2Population::_selectFunc(void)
 
 bool ga2Population::_replaceFunc(void)
 {
-    for(auto &chromo : _nextGen)
-    {
-        chromo.getFitness(); //have to do this now, or the next step won't work.
-    }
     switch (_replacementType)
     {
         case GA2_REPLACE_STEADYSTATENODUPLICATES:
@@ -424,6 +399,7 @@ bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
 
 bool ga2Population::_mutateFunc(ga2Chromosome &a)
 {
+    bool dirty{false};
     int i;
     for (i = 0; i < _chromoSize; ++i)
     {
@@ -446,8 +422,10 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 
             f = (((float) rand() / (float) RAND_MAX) * range) + _chromoMinRanges[i];
             a.setGene(i, f);
+            dirty = true;
         }
     }
+    if(dirty) a.evaluate();
     return true;
 }
 
@@ -457,17 +435,7 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 //if _isSorted is false!! ie, it only works on sorted populations!!
 bool ga2Population::_replaceSteadyState(void)
 {
-    int i;
-    if (!_isSorted)
-    {
-        return false;
-    }
-
-    //note that we dont care about the replacement size
-    for (i = 0; i < _nextGen.size(); ++i)
-    {
-        _chromosomes.push_back(_nextGen[i]);
-    }
+    _chromosomes.insert(_chromosomes.end(), _nextGen.begin(), _nextGen.end());
     std::sort(_chromosomes.begin(), _chromosomes.end());
     _nextGen.clear();
 

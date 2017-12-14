@@ -8,6 +8,7 @@
 #include <vector>
 #include <locale>
 #include <set>
+#include <unordered_map>
 #include <json.hpp>
 #include <experimental/optional>
 
@@ -117,7 +118,9 @@ struct card
         sorcery,
     };
 
-    bool has_type(const std::string &type_name) const;
+    static std::unordered_map<std::string, type> strings_for_types;
+
+    bool has_type(const std::string &type_str) const;
 
     static std::set<color> color_identities_from_array(std::set<std::string> arr);
 
@@ -137,6 +140,7 @@ struct card
     std::set<std::string> abilities;
     std::set<std::string> affinities;
 };
+
 
 std::string to_string(card::type t);
 
