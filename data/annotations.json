@@ -22,7 +22,7 @@
       "flying"
     ],
     "affinities": [
-      "vehicle"
+      "Vehicle"
     ]
   },
   "Aether Chaser": {
@@ -127,7 +127,7 @@
       "+counter_other"
     ],
     "affinities": [
-      "planeswalker"
+      "Planeswalker"
     ]
   },
   "Alley Evasion": {
@@ -136,7 +136,7 @@
       "return_own_to_hand"
     ],
     "affinities": [
-      "creature"
+      "Creature"
     ]
   },
   "Alley Strangler": {
@@ -306,8 +306,8 @@
       "buff_other"
     ],
     "affinities": [
-      "artifact",
-      "creature"
+      "Artifact",
+      "Creature"
     ]
   },
   "Cogwork Assembler": {
@@ -316,7 +316,7 @@
       "grant_haste"
     ],
     "affinities": [
-      "artifact"
+      "Artifact"
     ]
   },
   "Commencement of Festivities": {
@@ -406,8 +406,8 @@
       "+counter_self"
     ],
     "affinities": [
-      "artifact",
-      "creature"
+      "Artifact",
+      "Creature"
     ]
   },
   "Destructive Tampering": {
@@ -422,7 +422,7 @@
       "deathtouch"
     ],
     "affinities": [
-      "artifact"
+      "Artifact"
     ]
   },
   "Dispersal Technician": {
@@ -503,7 +503,7 @@
       "direct_damage_player"
     ],
     "affinities": [
-      "artifact"
+      "Artifact"
     ]
   },
   "Empyreal Voyager": {
@@ -595,7 +595,7 @@
       "direct_damage_creature"
     ],
     "affinities": [
-      "creature"
+      "Creature"
     ]
   },
   "Floodwaters": {
@@ -630,14 +630,22 @@
       "removal"
     ]
   },
-
-
-
-
-  
   "Garruk's Horde": {
     "abilities": [
       "trample"
+    ]
+  },
+  "Gearseeker Serpent": {
+    "abilities": [
+      "unblockable"
+    ],
+    "affinities": [
+      "Artifact"
+    ]
+  },
+  "Ghirapur Guide": {
+    "abilities": [
+      "grant_unblockable"
     ]
   },
   "Ghirapur Osprey": {
@@ -647,7 +655,8 @@
   },
   "Giant Spectacle": {
     "abilities": [
-      "buff_other"
+      "buff_other",
+      "grant_menace"
     ]
   },
   "Giant Spider": {
@@ -661,9 +670,25 @@
       "deathtouch"
     ]
   },
+  "Glassblower's Puzzleknot": {
+    "abilities": [
+      "scry",
+      "energy_source"
+    ]
+  },
+  "Glimmer of Genius": {
+    "abilities": [
+      "scry",
+      "energy_source"
+    ]
+  },
   "Glint-Sleeve Siphoner": {
     "abilities": [
-      "energy_sink"
+      "menace",
+      "energy_source",
+      "energy_sink",
+      "draw_cards",
+      "unheal"
     ]
   },
   "Graceful Cat": {
@@ -671,11 +696,26 @@
       "buff_self"
     ]
   },
-  "Gremlin Infestation": {
+  "Greater Sandwurm": {
     "abilities": [
-      "create_token"
+      "unblockable",
+      "cycling"
     ]
   },
+  "Gremlin Infestation": {
+    "abilities": [
+      "create_token",
+      "direct_damage_player"
+    ],
+    "affinities": [
+      "Artifact"
+    ]
+  },
+
+
+
+
+  
   "Harnessed Lightning": {
     "abilities": [
       "energy_sink"
