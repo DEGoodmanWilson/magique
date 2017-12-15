@@ -77,7 +77,8 @@ int main()
         pop.mutate();
         pop.replace();
         pop.evaluate();
-        std::cout << "." << std::flush;
+//        std::cout << "." << std::flush;
+        std::cout << pop.getMinFitness() << " : " << pop.getAvgFitness() << " : " << pop.getMaxFitness() << std::endl;
         if ((gen + 1) % 100 == 0) std::cout << std::endl;
 
         if(dump_and_abort)

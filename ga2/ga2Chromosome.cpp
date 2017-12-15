@@ -196,7 +196,7 @@ double ga2Chromosome::evaluate(void)
  * by lack of fitness function. An exception should be raised or an error code
  * set or something.
  */
-double ga2Chromosome::getFitness(void)
+double ga2Chromosome::getFitness(void) const
 {
     return _fitness;
 }

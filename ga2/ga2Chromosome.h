@@ -68,7 +68,7 @@ public:
 	///Sets the size of the chromosome.
 	void setSize(int newSize) {_size = newSize; _genes.reserve(_size);};
 	///Returns the fitness of a chromosome.
-	double getFitness(void);
+	double getFitness(void) const;
 	///Sets the minimum values for each gene.
 	void setMinRanges(std::vector<ga2Gene> ranges);
 	///Sets the maximum values for each gene.

@@ -105,6 +105,7 @@ struct card
         green,
         colorless,
     };
+    static constexpr std::array<color, 6> colors = {color::white, color::blue, color::black, color::red, color::green, color::colorless};
 
     enum class type
     {
@@ -142,8 +143,12 @@ struct card
 };
 
 
-std::string to_string(card::type t);
+std::string to_string(const card::type &t);
+std::string to_string(const card::color &c);
 
+
+void to_json(nlohmann::json &j, const card::color &c);
+void to_json(nlohmann::json &j, const card::type &t);
 void to_json(nlohmann::json &j, const card &p);
 
 void from_json(const nlohmann::json &j, card &p);

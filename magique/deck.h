@@ -45,10 +45,6 @@ public:
     const interactions interactions_;
     std::vector<card> cards_;
     double rank_;
-    std::array<uint8_t, 11> cost_dist_;
-    std::map<card::type, uint8_t> type_dist_;
-    bool legal_;
-    uint8_t colors_;
     nlohmann::json reasons_;
     static std::vector<card> key_cards_;
 };

@@ -22,7 +22,7 @@
 #include <time.h>
 #include <math.h>
 #include "ga2.h"
-#include <algorithm>
+#include <numeric>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -136,26 +136,15 @@ bool ga2Population::select(void)
  */
 bool ga2Population::evaluate(void)
 {
-    int i;
-    double f;
     _sumFitness = _avgFitness = 0.0;
-    _maxFitness = -1 * (double) INT_MAX;
-    _minFitness = (double) INT_MAX;
-    for (i = 0; i < _size; ++i)
+    _maxFitness = _chromosomes[_chromosomes.size()-1].getFitness();
+    _minFitness = _chromosomes[0].getFitness();
+    for(const auto &chromo : _chromosomes)
     {
-        f = _chromosomes[i].getFitness();
-        _sumFitness += f;
-
-        if (f > _maxFitness) _maxFitness = f;
-        if (f < _minFitness) _minFitness = f;
+        _sumFitness += chromo.getFitness();
     }
     _avgFitness = _sumFitness / (double) _size;
 
-    //TODO we're sorting this too many times.
-    if (_isSorted)
-    {
-        std::sort(_chromosomes.begin(), _chromosomes.end());
-    }
     return true;
 }
 
@@ -199,21 +188,27 @@ bool ga2Population::replace(void)
 //TODO this function assumes merely positive fitness values!
 int ga2Population::_selectRoulette(void)
 {
+    // notice that this algorithm requires that all fitnesses be POSITIVE. If we have any negative fitnesses, we need to normalize, by offsetting everything
+
+
     double minFitness = MAXFLOAT;
     double partialSum = 0.0, sumFitness = 0.0;
     double wheelPosition = 0.0;
     int i;
 
+    minFitness = _chromosomes[0].getFitness(); //already sorted so this works
+    double offset{0.0};
+    if(minFitness < 0)
+    {
+        offset = -1 * minFitness;
+    }
+
     //initialize some stuff, like the total fitness of the population
     for (i = 0; i < _size; ++i)
     {
-        auto f = _chromosomes[i].getFitness();
-        if (f < minFitness)
-        {
-            minFitness = f;
-        }
-        sumFitness += f;
+        sumFitness += _chromosomes[i].getFitness() + offset;
     }
+
 
     //spin that wheel!
     // The wheel ranges from minFitness to maxFitness
@@ -223,7 +218,7 @@ int ga2Population::_selectRoulette(void)
     do
     {
         ++i;
-        auto f = _chromosomes[i].getFitness();
+        auto f = _chromosomes[i].getFitness() + offset;
         partialSum += f;
     } while ((partialSum < wheelPosition) && (i != _size - 1));
 
@@ -583,23 +578,7 @@ void ga2Population::setMinRanges(std::vector<ga2Gene> ranges)
  */
 std::vector<ga2Gene> ga2Population::getBestFitChromosome(void)
 {
-    if (_isSorted)
-    {
-        return _chromosomes[_chromosomes.size() - 1].getGenes();
-    }
-    int i{0};
-    int mostFit{0};
-    double max_fitness = -MAXFLOAT;
-    for (i = 0; i < _size; ++i)
-    {
-        auto f = _chromosomes[i].getFitness();
-        if (f >= _maxFitness)
-        {
-            max_fitness = f;
-            mostFit = i;
-        }
-    }
-    return _chromosomes[mostFit].getGenes();
+    return _chromosomes[_chromosomes.size() - 1].getGenes();
 }
 
 /**

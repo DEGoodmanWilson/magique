@@ -46,10 +46,10 @@ std::set<card::color> card::color_identities_from_array(const std::set<std::stri
 
 bool card::has_type(const std::string &type_str) const
 {
-    if(strings_for_types.count(type_str) == 0) return false;
+    if (strings_for_types.count(type_str) == 0) return false;
     auto t = strings_for_types.at(type_str);
 
-    if((t==type::land) && types.count(type::basic_land)) return true; // basic lands are also lands
+    if ((t == type::land) && types.count(type::basic_land)) return true; // basic lands are also lands
 
     return types.count(t) > 0;
 }
@@ -190,96 +190,70 @@ void from_json(const nlohmann::json &j, card &p)
 
 }
 
-std::string to_string(card::type t)
+std::string to_string(const card::type &t)
 {
     switch (t)
     {
         case card::type::basic_land:
-            return "basic land";
+            return "Basic Land";
         case card::type::land:
-            return "land";
+            return "Land";
         case card::type::creature:
-            return "creature";
+            return "Creature";
         case card::type::artifact:
-            return "artifact";
+            return "Artifact";
         case card::type::enchantment:
-            return "enchantment";
+            return "Enchantment";
         case card::type::planeswalker:
-            return "planeswalker";
+            return "Planeswalker";
         case card::type::instant:
-            return "instant";
+            return "Instant";
         case card::type::sorcery:
-            return "sorcery";
+            return "Sorcery";
     }
+}
+
+std::string to_string(const card::color &c)
+{
+    switch (c)
+    {
+        case card::color::white:
+            return "White";
+        case card::color::blue:
+            return "Blue";
+        case card::color::black:
+            return "Black";
+        case card::color::red:
+            return "Red";
+        case card::color::green:
+            return "Green";
+        case card::color::colorless:
+            return "Colorless";
+    }
+}
+
+void to_json(nlohmann::json &j, const card::color &c)
+{
+    j = to_string(c);
+}
+
+void to_json(nlohmann::json &j, const card::type &t)
+{
+    j = to_string(t);
 }
 
 void to_json(nlohmann::json &j, const card &p)
 {
     j = nlohmann::json::object();
-    std::vector<std::string> color_identities;
-    for (const auto &c : p.color_identity)
+
+    if (p.color_identity.size())
     {
-        switch (c)
-        {
-            case card::color::white:
-                color_identities.emplace_back("White");
-                break;
-            case card::color::blue:
-                color_identities.emplace_back("Blue");
-                break;
-            case card::color::black:
-                color_identities.emplace_back("Black");
-                break;
-            case card::color::red:
-                color_identities.emplace_back("Red");
-                break;
-            case card::color::green:
-                color_identities.emplace_back("Green");
-                break;
-            case card::color::colorless:
-                color_identities.emplace_back("Colorless");
-                break;
-        }
-    }
-    if(color_identities.size())
-    {
-        j["color_identities"] = color_identities;
+        j["color_identities"] = p.color_identity;
     }
 
-    std::vector<std::string> types;
-    for (const auto &t : p.types)
+    if (p.types.size())
     {
-        switch (t)
-        {
-            case card::type::basic_land:
-                types.emplace_back("Basic Land");
-                break;
-            case card::type::land:
-                types.emplace_back("Land");
-                break;
-            case card::type::creature:
-                types.emplace_back("Creature");
-                break;
-            case card::type::artifact:
-                types.emplace_back("Artifact");
-                break;
-            case card::type::enchantment:
-                types.emplace_back("Enchantment");
-                break;
-            case card::type::planeswalker:
-                types.emplace_back("Planeswalker");
-                break;
-            case card::type::instant:
-                types.emplace_back("Instant");
-                break;
-            case card::type::sorcery:
-                types.emplace_back("Sorcery");
-                break;
-        }
-    }
-    if(types.size())
-    {
-        j["types"] = types;
+        j["types"] = p.types;
     }
 
     if (p.subtypes.size() > 0)
@@ -308,7 +282,7 @@ void to_json(nlohmann::json &j, const card &p)
 
     j["name"] = p.name;
 
-    if(!p.text.empty())
+    if (!p.text.empty())
     {
         j["text"] = p.text;
     }
