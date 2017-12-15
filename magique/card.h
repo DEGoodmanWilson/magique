@@ -105,7 +105,7 @@ struct card
         green,
         colorless,
     };
-    static constexpr std::array<color, 6> colors = {color::white, color::blue, color::black, color::red, color::green, color::colorless};
+    static constexpr std::array<color, 6> all_colors = {color::white, color::blue, color::black, color::red, color::green, color::colorless};
 
     enum class type
     {
@@ -118,6 +118,8 @@ struct card
         instant,
         sorcery,
     };
+    static constexpr std::array<type, 8> all_types = {type::basic_land, type::land, type::creature, type::artifact, type::enchantment, type::planeswalker, type::instant, type::sorcery};
+
 
     static std::unordered_map<std::string, type> strings_for_types;
 

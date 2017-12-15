@@ -141,7 +141,9 @@ void from_json(const nlohmann::json &j, card &p)
         p.color_identity = card::color_identities_from_array(j.at("colorIdentity").get<std::set<std::string>>());
     }
     catch (std::out_of_range e)
-    {}
+    {
+        p.color_identity = {card::color::colorless};
+    }
 
     try
     {

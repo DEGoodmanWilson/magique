@@ -122,6 +122,11 @@ double deck::evaluate()
 
     // FIRST: LEGALITIES!
 
+
+    // the deck size is 60 - 24 (basic lands). ANything less is illegal TODO THIS MUST BE USER CONFIGURABLE!
+    uint8_t legal_deck_minimum{60-24};
+
+
     // Regardless of deck size, or anything else, a legal deck can have no more than 4 of any non-basic-land.
     // Create a multiset to track the number of each kind of card
     std::multiset<std::string> dupes;
@@ -136,7 +141,7 @@ double deck::evaluate()
     std::multiset<card::color> colors_seen;
 
     // There is an ideal—or perhaps several ideal—distributions of mana costs. You don't want too many 1-CMC or 7-CMC cards in your hand!
-    std::array<uint8_t, 11> cost_dist;
+    std::array<uint8_t, 11> cost_dist{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     // Same with the type distribution. You want a mix of creatures, instants, etc.
     std::multiset<card::type> type_dist;
@@ -223,8 +228,9 @@ double deck::evaluate()
 
             interaction_score += interactions_.evaluate(card, cards_[j]);
         }
-
-        interaction_scores.push_back(interaction_score / cards_.size()); // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+        interaction_score /= cards_.size();
+        interaction_scores.push_back(interaction_score); // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+        reasons_["interaction_scores"][card.name] = interaction_score;
 
         ++i;
     }
@@ -234,7 +240,10 @@ double deck::evaluate()
 
     rank_ = 0;
 
-    // First, let's look at dupes, Each dupe is worth -1.
+    // FIrst, let's make sure the deck size is OK. Notice that we remove duplicate references to the same physical card, so it is possible, even likely, that the deck size will be too small at first.
+    rank_ -= 2 * (legal_deck_minimum - cards_.size());
+
+    // Next, let's look at dupes, Each dupe is worth -1.
     rank_ -= dupe_count;
     reasons_["dupe_count"] = dupe_count;
 
@@ -246,148 +255,93 @@ double deck::evaluate()
     uint16_t primary_color_count{0};
     uint16_t secondary_color_count{0};
     uint16_t color_excess{0};
-    for(const auto& color : card::colors)
+    for (const auto &color : card::all_colors)
     {
         // skip colorless cards, they don't count for this
-        if(color == card::color::colorless) continue; //TODO what if we get a deck that is all one color + colorless? What then?
+        if (color == card::color::colorless)
+        {
+            continue;
+        } //TODO what if we get a deck that is all one color + colorless? What then?
         uint16_t count = colors_seen.count(color);
-        if(count > primary_color_count) {
+        if (count > primary_color_count)
+        {
             secondary_color_count = primary_color_count;
             secondary_color = primary_color;
             primary_color_count = count;
             primary_color = color;
         }
-        else if( count > secondary_color_count){
+        else if (count > secondary_color_count)
+        {
             secondary_color_count = count;
             secondary_color = color;
         }
 
     }
     // and now do it again to get the number of cards not in the primary or secondary colors
-    for(const auto& color : card::colors)
+    for (const auto &color : card::all_colors)
     {
         // skip colorless cards, they don't count for this
-        if(color == card::color::colorless) continue;
+        if (color == card::color::colorless) continue;
 
-        if(color != primary_color && color != secondary_color)
+        if (color != primary_color && color != secondary_color)
         {
             color_excess += colors_seen.count(color);
         }
     }
     // finally, add the imbalance between primary and secondary
-    color_excess += primary_color_count-secondary_color_count;
+    color_excess += primary_color_count - secondary_color_count;
 
-    rank_ -= color_excess;
+    rank_ -= 2 * color_excess;
     reasons_["color_primary"] = to_string(primary_color);
     reasons_["color_secondary"] = to_string(secondary_color);
-// TODO
- reasons_["colors_seen"] = colors_seen;
+    reasons_["colors_seen"] = colors_seen;
 
 
     // Now let's compute the distance from the ideal CMC distribution
     // TODO this should be something specified by the user
-    std::array<double, 11> ideal_cmc{0.09, 0.09, 0.10, 0.18, 0.20, 0.18, 0.09, 0.05, 0.01, 0.01, 0.00};
+    std::array<double, 11> ideal_cmc_distribution{0.09, 0.09, 0.10, 0.18, 0.20, 0.18, 0.09, 0.05, 0.01, 0.01, 0.00};
     double cmc_distance{0.0};
     for (int i = cost_dist.size() - 1; i >= 0; --i)
     {
         auto x = (double) cost_dist[i];
-        auto y = ideal_cmc[i] * cards_.size();
+        auto y = ideal_cmc_distribution[i] * cards_.size();
         cmc_distance += (x - y) * (x - y);
     }
 
     cmc_distance = sqrt(cmc_distance);
     rank_ -= cmc_distance;
     reasons_["cmc_distance"] = cmc_distance;
+    reasons_["cmc"] = cost_dist;
 
 
 
-    // Ooooh interactions, sweet!
-    double interactions_bonus{0};
-    reasons_["interactions"] = nlohmann::json{};
-    i = 0;
-    for (const auto &score : interaction_scores)
-    {
-        interactions_bonus += score;
-        reasons_["interactions"][i] = score;
-        ++i;
-    }
-    rank_ += interactions_bonus;
-    reasons_["interactions_bonus"] = interactions_bonus;
-
-
-//    //count mana cost distribution
-//    colors_ = colors_seen.size();
-//
-//    //calculate color balance. Ideally (maybe?) all colors are equally distributed.
-//    auto ideal_color_count = (colors_ > 0) ? colored_card_count_ / colors_
-//                                           : 0; // TODO this doesn't account for colorless cards!
-//    double color_balance_adjustment_ = 0;
-//    for (const auto &c: colors_seen)
-//    {
-//        color_balance_adjustment_ += abs(ideal_color_count - c.second);
-//    }
-//    rank_ -= color_balance_adjustment_; //TODO weight?
-//    reasons_["color_balance_adjustment"] = color_balance_adjustment_;
-//
-//
-//
-//
-//
-//
-//
-////    auto cmc_distance_score = (cards_.size() / 2.0 - cmc_distance);
-//    rank_ -= cmc_distance;
-//    reasons_["cmc_distance"] = cmc_distance;
-////    reasons_["cmc_distance_score"] = cmc_distance_score;
-//
-//
-//    // type distribution //TODO make this configurable!
-//    std::unordered_map<card::type, double> ideal_types{
-//            {card::type::creature,     0.600},
-//            {card::type::artifact,     0.0333},
-//            {card::type::enchantment,  0.10},
-//            {card::type::planeswalker, 0.0333},
-//            {card::type::instant,      0.13333},
-//            {card::type::sorcery,      0.10}
-//    };
-//    double type_distance{0.0};
-//    for (const auto &type : type_dist)
-//    {
-//        // skip land
-//        if (type.first == card::type::land || type.first == card::type::basic_land) continue;
-//        auto x = (double) type_dist.at(type.first);
-//        auto y = ideal_types.at(type.first) * cards_.size();
-//        type_distance += (x - y) * (x - y);
-//    }
-//    type_distance = sqrt(type_distance);
-//
-//    rank_ -= type_distance;
-//    reasons_["type_distance"] = type_distance;
-////    reasons_["type_distance_score"] = type_distance_score;
-//
-//    if (!legal_)
-//    {
-//        rank_ -= 10;
-//    }
-//
-//    if (rank_ < 0) rank_ = 0;
-
-    //    j["mana_distribution"] = d.cost_dist_;
-
-    reasons_["type_distribution"] = nlohmann::json{
-            {"basic_land",   type_dist.count(card::type::basic_land)},
-            {"land",         type_dist.count(card::type::land)},
-            {"creature",     type_dist.count(card::type::creature)},
-            {"artifact",     type_dist.count(card::type::artifact)},
-            {"enchantment",  type_dist.count(card::type::enchantment)},
-            {"planeswalker", type_dist.count(card::type::planeswalker)},
-            {"instant",      type_dist.count(card::type::instant)},
-            {"sorcery",      type_dist.count(card::type::sorcery)}
+    // type distribution
+    // TODO make this configurable!
+    std::unordered_map<card::type, double> ideal_type_distribution{
+            {card::type::creature,     0.600},
+            {card::type::artifact,     0.0333},
+            {card::type::enchantment,  0.10},
+            {card::type::planeswalker, 0.0333},
+            {card::type::instant,      0.13333},
+            {card::type::sorcery,      0.10}
     };
+    double type_distance{0.0};
+    for (const auto &type : card::all_types)
+    {
+        // skip land
+        if (type == card::type::land || type == card::type::basic_land) continue;
+        auto x = (double) type_dist.count(type);
+        auto y = ideal_type_distribution.at(type) * cards_.size();
+        type_distance += (x - y) * (x - y);
+    }
+    type_distance = sqrt(type_distance);
+
+    rank_ -= type_distance;
+    reasons_["type_distance"] = type_distance;
+    reasons_["type_distribution"] = type_dist;
 
 
-    //// FUN STUFF!
-
+    // Average power and toughness
     auto avg_pow = power / cards_.size();
     reasons_["tot_pwr"] = power;
     reasons_["avg_pwr"] = avg_pow;
@@ -397,6 +351,18 @@ double deck::evaluate()
     reasons_["tot_tuf"] = toughness;
     reasons_["avg_tuf"] = avg_tuf;
     rank_ += avg_tuf;
+
+
+    // Ooooh interactions, sweet!
+    double interactions_bonus{0};
+    i = 0;
+    for (const auto &score : interaction_scores)
+    {
+        interactions_bonus += score;
+        ++i;
+    }
+    rank_ += interactions_bonus;
+    reasons_["interactions_bonus"] = interactions_bonus;
 
     return rank_;
 }

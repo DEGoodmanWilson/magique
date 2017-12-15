@@ -41,7 +41,7 @@ int main()
     // pick a key card
     deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
 
-    auto pop_size{1000};
+    auto pop_size{5000};
     auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
@@ -56,13 +56,12 @@ int main()
     pop.setCrossoverRate(1.0);
     pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
     pop.setInteger(true);
-    pop.setReplacementSize(pop_size / 2);
+    pop.setReplacementSize(pop_size/2);
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
     pop.setSelectType(GA2_SELECT_ROULETTE);
     pop.setSort(true);
     pop.setEvalFunc([&](std::vector<ga2Gene> genes) -> double
                     {
-                        //Consuct a deck from what we have here.
                         deck d{genes, dons_collection, interactions};
                         return d.evaluate();
                     });
@@ -77,8 +76,13 @@ int main()
         pop.mutate();
         pop.replace();
         pop.evaluate();
-//        std::cout << "." << std::flush;
-        std::cout << pop.getMinFitness() << " : " << pop.getAvgFitness() << " : " << pop.getMaxFitness() << std::endl;
+        std::cout << "." << std::flush;
+//        std::cout << pop.getMinFitness() << " : " << pop.getAvgFitness() << " : " << pop.getMaxFitness() << std::endl;
+//        deck d{pop.getBestFitChromosome(), dons_collection, interactions};
+//        auto genes = pop.getBestFitChromosome();
+//        deck d{genes, dons_collection, interactions};
+//        nlohmann::json j{d};
+//        std::cout << j.dump(4) << std::endl;
         if ((gen + 1) % 100 == 0) std::cout << std::endl;
 
         if(dump_and_abort)

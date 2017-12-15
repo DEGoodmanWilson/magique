@@ -96,7 +96,7 @@ bool ga2Population::init(void)
         newChromo.randomInit(_integer);
         newChromo.setEvalFunc(_evalFunc);
         newChromo.evaluate(); //force evaluation before sort
-        _chromosomes.push_back(newChromo);
+        _chromosomes.emplace_back(newChromo);
     }
     std::sort(_chromosomes.begin(), _chromosomes.end());
     return true;
@@ -136,10 +136,11 @@ bool ga2Population::select(void)
  */
 bool ga2Population::evaluate(void)
 {
-    _sumFitness = _avgFitness = 0.0;
+    _sumFitness = 0.0;
+    _avgFitness = 0.0;
     _maxFitness = _chromosomes[_chromosomes.size()-1].getFitness();
     _minFitness = _chromosomes[0].getFitness();
-    for(const auto &chromo : _chromosomes)
+    for(auto &chromo : _chromosomes)
     {
         _sumFitness += chromo.getFitness();
     }
@@ -274,12 +275,10 @@ bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b)
     a.setCrossSite(coPoint);
     a.setParent(0, tempParent1);
     a.setParent(1, tempParent2);
-    a.evaluate();
 
     b.setCrossSite(coPoint);
     b.setParent(0, tempParent1);
     b.setParent(1, tempParent2);
-    b.evaluate();
 
     return true;
 }
@@ -331,11 +330,9 @@ bool ga2Population::_crossoverUniform(ga2Chromosome &a, ga2Chromosome &b)
     a.setCrossSite(0); //er, no real cross site to speak of in uniform...
     a.setParent(0, tempParent1);
     a.setParent(1, tempParent2);
-    a.evaluate();
     b.setCrossSite(0);
     b.setParent(0, tempParent1);
     b.setParent(1, tempParent2);
-    b.evaluate();
     return true;
 }
 
@@ -394,7 +391,6 @@ bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
 
 bool ga2Population::_mutateFunc(ga2Chromosome &a)
 {
-    bool dirty{false};
     int i;
     for (i = 0; i < _chromoSize; ++i)
     {
@@ -417,10 +413,8 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 
             f = (((float) rand() / (float) RAND_MAX) * range) + _chromoMinRanges[i];
             a.setGene(i, f);
-            dirty = true;
         }
     }
-    if(dirty) a.evaluate();
     return true;
 }
 
@@ -430,6 +424,10 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 //if _isSorted is false!! ie, it only works on sorted populations!!
 bool ga2Population::_replaceSteadyState(void)
 {
+    for(auto &chromo : _nextGen)
+    {
+        chromo.evaluate();
+    }
     _chromosomes.insert(_chromosomes.end(), _nextGen.begin(), _nextGen.end());
     std::sort(_chromosomes.begin(), _chromosomes.end());
     _nextGen.clear();
