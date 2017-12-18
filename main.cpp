@@ -33,6 +33,8 @@ int main()
 
     // fire up a catalog
     catalog master_catalog{"data/catalog.json", "data/annotations.json"};
+
+    // load up the user's personal collection
     collection dons_collection{"data/collection_dons.csv", master_catalog};
 
     // get the interactions data
@@ -41,7 +43,7 @@ int main()
     // pick a key card
 //    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
 
-    auto pop_size{5000};
+    auto pop_size{1000};
     auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
