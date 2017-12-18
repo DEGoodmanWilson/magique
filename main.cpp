@@ -39,7 +39,7 @@ int main()
     interactions interactions{"data/interactions.json"};
 
     // pick a key card
-    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
+//    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
 
     auto pop_size{5000};
     auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
