@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <iostream>
 
+#include "docopt/docopt.h"
+
 #include "magique/catalog.h"
 #include "magique/collection.h"
 #include "magique/card.h"
@@ -19,7 +21,23 @@ void signal_handler(int s)
     dump_and_abort = true; //not gonna worry about sync because bools are atomic writable
 }
 
-int main()
+
+static const char USAGE[] =
+        R"(magique.
+
+    Usage:
+      magique <collection-filename> [options] [-k <card>]...
+
+    Options:
+      -h --help     Show this screen.
+      --version     Show version.
+      -p <size> --population=<size>  Set initial population size [default: 1000]
+      -g <count> --generations=<count>  Set the number of generations to run [default: 1000]
+      -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
+)";
+
+
+int main(int argc, char **argv)
 {
     // set up signal handlers
     struct sigaction sigIntHandler;
@@ -31,19 +49,57 @@ int main()
     sigaction(SIGINT, &sigIntHandler, NULL);
 
 
+    // parse CLI options
+    std::map<std::string, docopt::value> args
+            = docopt::docopt(USAGE,
+                             {argv + 1, argv + argc},
+                             true,               // show help if requested
+                             "Naval Fate 2.0");  // version string
+
+
+    std::string collection_filename;
+    int pop_size;
+    uint64_t generations;
+    std::vector<std::string> key_cards;
+
+    for (auto const &arg : args)
+    {
+//        std::cout << arg.first << " " << arg.second << std::endl;
+        if (arg.first == "--generations") generations = arg.second.asLong();
+        else if (arg.first == "--population") pop_size = arg.second.asLong();
+        else if (arg.first == "<collection-filename>") collection_filename = arg.second.asString();
+        else if (arg.first == "--key_card") key_cards = arg.second.asStringList();
+    }
+
+//    exit(0);
+
+
+
+
     // fire up a catalog
     catalog master_catalog{"data/catalog.json", "data/annotations.json"};
 
     // load up the user's personal collection
-    collection dons_collection{"data/collection_dons.csv", master_catalog};
+    collection dons_collection{collection_filename, master_catalog};
 
     // get the interactions data
     interactions interactions{"data/interactions.json"};
 
     // pick a key card
 //    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
+    for (const auto &card : key_cards)
+    {
+        try
+        {
+            deck::add_key_card(master_catalog.at(card));
+        }
+        catch(...)
+        {
+            std::cerr << "No such card: " << card << std::endl;
+            exit(1);
+        }
+    }
 
-    auto pop_size{1000};
     auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
@@ -58,7 +114,7 @@ int main()
     pop.setCrossoverRate(1.0);
     pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
     pop.setInteger(true);
-    pop.setReplacementSize(pop_size/2);
+    pop.setReplacementSize(pop_size / 2);
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
     pop.setSelectType(GA2_SELECT_ROULETTE);
     pop.setSort(true);
@@ -71,7 +127,7 @@ int main()
     pop.init();
     pop.evaluate();
 
-    for (auto gen = 0; gen < 1000; ++gen)
+    for (auto gen = 0; gen < generations; ++gen)
     {
         pop.select();
         pop.crossover();
@@ -87,7 +143,7 @@ int main()
 //        std::cout << j.dump(4) << std::endl;
         if ((gen + 1) % 100 == 0) std::cout << std::endl;
 
-        if(dump_and_abort)
+        if (dump_and_abort)
         {
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
             deck d{pop.getBestFitChromosome(), dons_collection, interactions};
