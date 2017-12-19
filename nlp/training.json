@@ -1,0 +1,1696 @@
+{
+  "classes": [
+    [
+      "+counter_self",
+      "create_token"
+    ],
+    [
+      "return_own_to_hand"
+    ],
+    [
+      "flying",
+      "lifelink",
+      "vigilance"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "create_token",
+      "energy_sink",
+      "energy_source",
+      "first strike"
+    ],
+    [
+      "create_token",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "create_token",
+      "energy_sink",
+      "energy_source",
+      "vigilance"
+    ],
+    [
+      "create_token",
+      "deathtouch",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "create_token",
+      "energy_sink",
+      "energy_source",
+      "flying"
+    ],
+    [
+      "energy_sink",
+      "energy_source",
+      "scry"
+    ],
+    [
+      "return_opponent_to_hand",
+      "return_own_to_hand"
+    ],
+    [
+      "flying",
+      "lifelink"
+    ],
+    [
+      "energy_sink",
+      "energy_source",
+      "flicker_self"
+    ],
+    [
+      "+counter_self",
+      "energy_sink",
+      "energy_source",
+      "flying"
+    ],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source",
+      "trample"
+    ],
+    [
+      "haste"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "+counter_other",
+      "draw_cards",
+      "heal",
+      "removal"
+    ],
+    [
+      "buff_other",
+      "return_own_to_hand"
+    ],
+    [
+      "menace"
+    ],
+    [],
+    [
+      "flying",
+      "return_opponent_to_hand",
+      "return_own_to_hand"
+    ],
+    [
+      "heal",
+      "removal"
+    ],
+    [
+      "heal",
+      "trample"
+    ],
+    [
+      "unblockable"
+    ],
+    [
+      "buff_self"
+    ],
+    [
+      "return_own_to_hand"
+    ],
+    [
+      "-counter_other",
+      "lifelink"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "discard_cards",
+      "draw_cards",
+      "mana_reduction"
+    ],
+    [],
+    [
+      "hexproof",
+      "improvise"
+    ],
+    [
+      "buff_self",
+      "deathtouch"
+    ],
+    [
+      "direct_damage_player",
+      "flying",
+      "heal"
+    ],
+    [
+      "grant_haste"
+    ],
+    [
+      "buff_other",
+      "grant_hexproof"
+    ],
+    [
+      "haste"
+    ],
+    [
+      "buff_other"
+    ],
+    [
+      "buff_other",
+      "debuff_other",
+      "lifelink"
+    ],
+    [
+      "buff_other",
+      "draw_cards",
+      "grant_flying"
+    ],
+    [
+      "buff_other",
+      "create_token",
+      "grant_first_strike"
+    ],
+    [
+      "buff_other",
+      "grant_trample"
+    ],
+    [
+      "buff_other",
+      "grant_haste"
+    ],
+    [
+      "removal",
+      "vigilance"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "grant_cannot_attack",
+      "grant_cannot_block",
+      "removal"
+    ],
+    [
+      "counter",
+      "cycling"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "direct_damage_creature",
+      "force_tap_land"
+    ],
+    [
+      "buff_other"
+    ],
+    [
+      "copy_card",
+      "grant_haste"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "prevent_damage"
+    ],
+    [
+      "grant_cannot_attack",
+      "grant_cannot_block",
+      "heal",
+      "removal"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "defender",
+      "reach"
+    ],
+    [
+      "lifelink",
+      "scry"
+    ],
+    [
+      "buff_other,"
+    ],
+    [
+      "create_token",
+      "revolt"
+    ],
+    [
+      "-counter_other",
+      "haste"
+    ],
+    [
+      "debuff_other",
+      "scry"
+    ],
+    [],
+    [
+      "menace"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "buff_other",
+      "flying"
+    ],
+    [
+      "force_tap_creature"
+    ],
+    [
+      "heal",
+      "removal",
+      "revolt"
+    ],
+    [
+      "+counter_self",
+      "sacrifice"
+    ],
+    [
+      "grant_cannot_block",
+      "removal"
+    ],
+    [
+      "buff_self",
+      "deathtouch"
+    ],
+    [
+      "return_own_to_hand"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "cycling",
+      "prevent_damage",
+      "untap_creature"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "mana_acceleration"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "scry"
+    ],
+    [
+      "energy_sink",
+      "energy_source",
+      "flying",
+      "grant_flying"
+    ],
+    [
+      "direct_damage_creature"
+    ],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "+counter_self",
+      "create_token",
+      "unblockable"
+    ],
+    [],
+    [
+      "energy_source",
+      "flying",
+      "trample"
+    ],
+    [
+      "haste",
+      "improvise",
+      "trample"
+    ],
+    [
+      "direct_damage_player",
+      "heal"
+    ],
+    [
+      "counter"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "force_tap_creature"
+    ],
+    [
+      "removal",
+      "revolt"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "flicker_other"
+    ],
+    [
+      "improvise",
+      "unblockable"
+    ],
+    [
+      "-counter_other"
+    ],
+    [
+      "draw_cards",
+      "heal"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "cycling",
+      "return_to_own_hand"
+    ],
+    [
+      "return_to_own_hand"
+    ],
+    [
+      "improvise"
+    ],
+    [
+      "buff_self",
+      "flying"
+    ],
+    [
+      "debuff_other"
+    ],
+    [
+      "removal"
+    ],
+    [],
+    [
+      "trample"
+    ],
+    [
+      "unblockable"
+    ],
+    [
+      "grant_unblockable"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "buff_other",
+      "grant_menace"
+    ],
+    [
+      "reach"
+    ],
+    [
+      "deathtouch",
+      "lifelink"
+    ],
+    [
+      "energy_source",
+      "scry"
+    ],
+    [
+      "energy_source",
+      "scry"
+    ],
+    [
+      "draw_cards",
+      "energy_sink",
+      "energy_source",
+      "menace",
+      "unheal"
+    ],
+    [
+      "buff_self"
+    ],
+    [
+      "cycling",
+      "unblockable"
+    ],
+    [
+      "create_token",
+      "direct_damage_player"
+    ],
+    [
+      "direct_damage_creature",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "buff_other"
+    ],
+    [
+      "grant_hexproof",
+      "grant_indestructable"
+    ],
+    [
+      "+counter_self",
+      "create_token",
+      "reach"
+    ],
+    [
+      "buff_other",
+      "energy_source"
+    ],
+    [],
+    [
+      "flying"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "force_no_untap"
+    ],
+    [
+      "draw_cards",
+      "flicker"
+    ],
+    [
+      "direct_damage_player",
+      "draw_cards"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "+counter_other",
+      "draw_cards"
+    ],
+    [
+      "draw_cards",
+      "heal"
+    ],
+    [
+      "draw_cards",
+      "force_discard"
+    ],
+    [
+      "untap"
+    ],
+    [
+      "buff_others"
+    ],
+    [
+      "buff_self"
+    ],
+    [
+      "buff_other",
+      "equip"
+    ],
+    [
+      "+counter_self",
+      "direct_damage_player"
+    ],
+    [
+      "crew"
+    ],
+    [
+      "energy_sink",
+      "energy_source",
+      "untap"
+    ],
+    [
+      "direct_damage_player",
+      "heal"
+    ],
+    [
+      "draw_cards",
+      "flying",
+      "indestructable",
+      "return_to_own_hand"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "buff_other",
+      "grant_trample"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "draw_cards",
+      "return_to_other_hand",
+      "return_to_own_hand"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "+counter_self",
+      "revolt",
+      "trample"
+    ],
+    [
+      "direct_damage_self",
+      "draw_cards",
+      "energy_source"
+    ],
+    [
+      "debuff_other"
+    ],
+    [
+      "force_no_untap"
+    ],
+    [
+      "-counter_other",
+      "direct_damage_player"
+    ],
+    [
+      "trample"
+    ],
+    [
+      "draw_cards",
+      "scry"
+    ],
+    [
+      "-counter_other",
+      "grant_cannot_block"
+    ],
+    [
+      "direct_damage_self",
+      "draw_cards"
+    ],
+    [
+      "buff_other",
+      "grant_flying"
+    ],
+    [
+      "force_discard_cards"
+    ],
+    [
+      "crew",
+      "untap"
+    ],
+    [
+      "direct_damage_creature"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source",
+      "grant_flying",
+      "grant_lifelink",
+      "grant_vigilance"
+    ],
+    [
+      "deathtouch"
+    ],
+    [
+      "buff_self",
+      "exert"
+    ],
+    [
+      "counter"
+    ],
+    [
+      "+counter_self",
+      "flying",
+      "revolt"
+    ],
+    [
+      "multi_block"
+    ],
+    [
+      "direct_damage_player",
+      "heal"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "prowess"
+    ],
+    [
+      "+counter_self"
+    ],
+    [
+      "buff_other"
+    ],
+    [
+      "-counter_other"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "force_tap_artifact",
+      "force_tap_creature"
+    ],
+    [
+      "direct_damage_player",
+      "direct_damage_self",
+      "draw_cards"
+    ],
+    [
+      "+counter_self",
+      "create_token",
+      "trample"
+    ],
+    [
+      "buff_other",
+      "create_token",
+      "grant_cannot_block"
+    ],
+    [
+      "flash"
+    ],
+    [],
+    [
+      "buff_other",
+      "grant_first_strike"
+    ],
+    [
+      "draw_cards",
+      "force_tap_creature"
+    ],
+    [
+      "fight"
+    ],
+    [],
+    [
+      "draw_cards",
+      "mana_transmute"
+    ],
+    [
+      "prevent_damage"
+    ],
+    [
+      "buff_others",
+      "cycling"
+    ],
+    [
+      "mana_acceleration",
+      "mana_transmute"
+    ],
+    [
+      "discard_cards",
+      "draw_cards"
+    ],
+    [
+      "return_own_to_hand"
+    ],
+    [
+      "buff_self"
+    ],
+    [
+      "direct_damage_player"
+    ],
+    [
+      "discard_cards",
+      "draw_cards",
+      "first_strike"
+    ],
+    [
+      "return_to_battlefield"
+    ],
+    [
+      "buff_self",
+      "crew",
+      "trample"
+    ],
+    [
+      "tutor_land"
+    ],
+    [
+      "return_to_battlefield",
+      "revolt"
+    ],
+    [
+      "create_token",
+      "indestructible"
+    ],
+    [
+      "energy_source",
+      "heal"
+    ],
+    [
+      "draw_cards",
+      "return_to_hand"
+    ],
+    [
+      "return_to_hand"
+    ],
+    [
+      "draw_cards",
+      "improvise"
+    ],
+    [
+      "grant_cannot_attack",
+      "grant_cannot_block"
+    ],
+    [
+      "counter"
+    ],
+    [
+      "+counter_other"
+    ],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source",
+      "trample"
+    ],
+    [
+      "draw_cards",
+      "free_cast"
+    ],
+    [
+      "draw_cards",
+      "energy_sink"
+    ],
+    [
+      "buff_self"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "buff_other",
+      "grant_indestructible",
+      "grant_lifelink"
+    ],
+    [
+      "-counter_other"
+    ],
+    [
+      "energy_source"
+    ],
+    [
+      "cycling"
+    ],
+    [
+      "buff_self",
+      "double_strike",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "return_opponent_to_hand",
+      "return_own_to_hand",
+      "scry"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "flying",
+      "indestructible"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "buff_self",
+      "flying"
+    ],
+    [
+      "buff_other"
+    ],
+    [
+      "flash"
+    ],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "draw_cards",
+      "reach",
+      "revolt"
+    ],
+    [
+      "crew",
+      "flying"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "buff_self",
+      "first_strike",
+      "flying",
+      "haste"
+    ],
+    [
+      "create_token",
+      "improvise"
+    ],
+    [
+      "flying",
+      "haste"
+    ],
+    [
+      "-counter_other"
+    ],
+    [
+      "haste"
+    ],
+    [
+      "+counter_self",
+      "draw_cards",
+      "flying"
+    ],
+    [
+      "buff_other",
+      "grant_reach",
+      "untap_creature"
+    ],
+    [
+      "flying",
+      "force_no_untap",
+      "force_tap_creature"
+    ],
+    [
+      "direct_damage_player"
+    ],
+    [
+      "one_on_one"
+    ],
+    [
+      "vigilance"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "flying"
+    ],
+    [
+      "+counter_other",
+      "-counter_other"
+    ],
+    [
+      "buff_other",
+      "return_to_battlefield"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "improvise"
+    ],
+    [
+      "buff_other",
+      "exert",
+      "flying"
+    ],
+    [
+      "direct_damage_creature"
+    ],
+    [
+      "force_no_untap",
+      "force_tap"
+    ],
+    [],
+    [
+      "direct_damage_player"
+    ],
+    [],
+    [
+      "buff_other",
+      "return_to_own_hand"
+    ],
+    [],
+    [
+      "+counter_self",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "+counter_self",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "+counter_self",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "haste"
+    ],
+    [
+      "heal",
+      "removal"
+    ],
+    [
+      "buff_other",
+      "equip"
+    ],
+    [
+      "free_cast"
+    ],
+    [
+      "direct_damage_player",
+      "heal"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "draw_cards"
+    ],
+    [
+      "buff_other",
+      "grant_vigilance"
+    ],
+    [
+      "create_token"
+    ],
+    [
+      "direct_damage_creature",
+      "direct_damage_player"
+    ],
+    [
+      "buff_other",
+      "grant_unblockable"
+    ],
+    [
+      "draw_cards",
+      "mana_transmute"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "buff_other",
+      "grant_menace"
+    ],
+    [
+      "+counter_self",
+      "crew",
+      "trample"
+    ],
+    [
+      "embalm",
+      "vigilance"
+    ],
+    [
+      "prowess"
+    ],
+    [
+      "+counter_self"
+    ],
+    [
+      "flying",
+      "grant_flying",
+      "grant_lifelink"
+    ],
+    [],
+    [
+      "buff_self",
+      "energy_sink",
+      "energy_source",
+      "trample"
+    ],
+    [
+      "direct_damage_creature"
+    ],
+    [
+      "force_exile"
+    ],
+    [
+      "scry"
+    ],
+    [
+      "+counter_self",
+      "create_token"
+    ],
+    [
+      "direct_damage_player"
+    ],
+    [
+      "menace"
+    ],
+    [
+      "direct_damage_creature"
+    ],
+    [
+      "improvise"
+    ],
+    [
+      "create_token",
+      "energy_sink",
+      "energy_source"
+    ],
+    [
+      "mana_acceleration"
+    ],
+    [
+      "indestructible"
+    ],
+    [
+      "return_opponent_to_hand",
+      "return_own_to_hand"
+    ],
+    [
+      "removal"
+    ],
+    [
+      "energy_source",
+      "heal"
+    ],
+    [
+      "control"
+    ],
+    [
+      "debuff_other",
+      "free_cast"
+    ]
+  ],
+  "labels": [
+    "Accomplished Automaton",
+    "Aegis Automaton",
+    "Aerial Responder",
+    "Aeronaut Admiral",
+    "Aether Chaser",
+    "Aether Herder",
+    "Aether Inspector",
+    "Aether Poisoner",
+    "Aether Swooper",
+    "Aether Theorist",
+    "Aether Tradewinds",
+    "Aetherborn Marauder",
+    "Aethergeode Miner",
+    "Aetherstorm Roc",
+    "Aetherstream Leopard",
+    "Ahn-Crop Crasher",
+    "Air Elemental",
+    "Ajani Unyielding",
+    "Alley Evasion",
+    "Alley Strangler",
+    "Ancient Crab",
+    "Angler Drake",
+    "Appetite for the Unnatural",
+    "Arborback Stomper",
+    "Audacious Infiltrator",
+    "Augmenting Automaton",
+    "Aviary Mechanic",
+    "Baleful Ammit",
+    "Ballista Charger",
+    "Baral, Chief of Compliance",
+    "Bastion Enforcer",
+    "Bastion Inventor",
+    "Bitterblade Warrior",
+    "Bloodhunter Bat",
+    "Bloodlust Inciter",
+    "Blossoming Defense",
+    "Brazen Scourge",
+    "Built to Last",
+    "Cartouche of Ambition",
+    "Cartouche of Knowledge",
+    "Cartouche of Solidarity",
+    "Cartouche of Strength",
+    "Cartouche of Zeal",
+    "Cataclysmic Gearhulk",
+    "Cathartic Reunion",
+    "Caught in the Brights",
+    "Censor",
+    "Chandra's Pyrohelix",
+    "Chandra's Revolution",
+    "Chief of the Foundry",
+    "Cogwork Assembler",
+    "Cogworker's Puzzleknot",
+    "Commencement of Festivities",
+    "Compulsory Rest",
+    "Consulate Crackdown",
+    "Consulate Skygate",
+    "Contraband Kingpin",
+    "Conviction",
+    "Countless Gears Renegade",
+    "Crocodile of the Crossing",
+    "Cruel Finality",
+    "Curio Vendor",
+    "Cursed Minotaur",
+    "Daring Demolition",
+    "Dawnfeather Eagle",
+    "Decision Paralysis",
+    "Decommission",
+    "Defiant Salvager",
+    "Destructive Tampering",
+    "Dhund Operative",
+    "Dispersal Technician",
+    "Divine Verdict",
+    "Djeru's Resolve",
+    "Doomed Dissenter",
+    "Druid of the Cowl",
+    "Dukhara Peafowl",
+    "Durable Handicraft",
+    "Eager Construct",
+    "Eddytrail Hawk",
+    "Electrify",
+    "Electrostatic Pummeler",
+    "Elegant Edgecrafters",
+    "Embraal Gear-Smasher",
+    "Empyreal Voyager",
+    "Enraged Giant",
+    "Essence Extraction",
+    "Essence Scatter",
+    "Fabrication Module",
+    "Fan Bearer",
+    "Fatal Push",
+    "Fateful Showdown",
+    "Felidar Guardian",
+    "Fen Hauler",
+    "Festering Mummy",
+    "Filigree Familiar",
+    "Fireforger's Puzzleknot",
+    "Fling",
+    "Floodwaters",
+    "Fortuitous Find",
+    "Foundry Assembler",
+    "Foundry Screecher",
+    "Fourth Bridge Prowler",
+    "Fragmentize",
+    "Frontline Rebel",
+    "Garruk's Horde",
+    "Gearseeker Serpent",
+    "Ghirapur Guide",
+    "Ghirapur Osprey",
+    "Giant Spectacle",
+    "Giant Spider",
+    "Gifted Aetherborn",
+    "Glassblower's Puzzleknot",
+    "Glimmer of Genius",
+    "Glint-Sleeve Siphoner",
+    "Graceful Cat",
+    "Greater Sandwurm",
+    "Gremlin Infestation",
+    "Harnessed Lightning",
+    "Herald of the Fair",
+    "Heroic Intervention",
+    "Highspire Artisan",
+    "Highspire Infusion",
+    "Hijack",
+    "Hinterland Drake",
+    "Hungry Flames",
+    "Hunt the Weak",
+    "Ice Over",
+    "Illusionist's Stratagem",
+    "Implement of Combustion",
+    "Implement of Examination",
+    "Implement of Ferocity",
+    "Implement of Improvement",
+    "Implement of Malice",
+    "Initiate's Companion",
+    "Inspired Charge",
+    "Inventor's Apprentice",
+    "Inventor's Goggles",
+    "Ironclad Revolutionary",
+    "Irontread Crusher",
+    "Janjeet Sentry",
+    "Kambal, Consul of Allocation",
+    "Kefnet the Mindful",
+    "Kujar Seedsculptor",
+    "Larger Than Life",
+    "Lawless Broker",
+    "Leave in the Dust",
+    "Lifecraft Awakening",
+    "Lifecraft Cavalry",
+    "Live Fast",
+    "Make Obsolete",
+    "Malfunction",
+    "Manticore of the Gauntlet",
+    "Maulfist Revolutionary",
+    "Merchant's Dockhand",
+    "Merciless Javelineer",
+    "Metalspinner's Puzzleknot",
+    "Mighty Leap",
+    "Mind Rot",
+    "Mobile Garrison",
+    "Monstrous Onslaught",
+    "Morbid Curiosity",
+    "Multiform Wonder",
+    "Narnam Cobra",
+    "Nef-Crop Entangler",
+    "Negate",
+    "Night Market Aeronaut",
+    "Night Market Guard",
+    "Night Market Lookout",
+    "Nightmare",
+    "Nimble Innovator",
+    "Nimble-Blade Khenra",
+    "Ninth Bridge Patrol",
+    "Oakenform",
+    "Ornery Kudu",
+    "Oviya Pashiri, Sage Lifecrafter",
+    "Pacification Array",
+    "Painful Lesson",
+    "Peema Outrider",
+    "Pia Nalaar",
+    "Pouncing Cheetah",
+    "Prakhata Club Security",
+    "Precise Strike",
+    "Pressure Point",
+    "Prey Upon",
+    "Prizefighter Construct",
+    "Prophetic Prism",
+    "Protection of the Hekma",
+    "Pursue Glory",
+    "Pyramid of the Pantheon",
+    "Quicksmith Genius",
+    "Raise Dead",
+    "Ravenous Intruder",
+    "Reckless Fireweaver",
+    "Reckless Racer",
+    "Refurbish",
+    "Renegade Freighter",
+    "Renegade Map",
+    "Renegade Rallier",
+    "Renegade's Getaway",
+    "Reservoir Walker",
+    "Resourceful Return",
+    "Restoration Specialist",
+    "Reverse Engineer",
+    "Revoke Privileges",
+    "Revolutionary Rebuff",
+    "Ridgescale Tusker",
+    "Riparian Tiger",
+    "Rishkar's Expertise",
+    "Rogue Refiner",
+    "Rootwalla",
+    "Ruinous Gremlin",
+    "Rush of Vitality",
+    "Ruthless Sniper",
+    "Sage of Shaila's Claim",
+    "Scarab Feast",
+    "Scrapper Champion",
+    "Select for Inspection",
+    "Sengir Vampire",
+    "Seraph of the Suns",
+    "Serra Angel",
+    "Servo Schematic",
+    "Shadowstorm Vizier",
+    "Shed Weakness",
+    "Shielded Aether Thief",
+    "Shipwreck Moray",
+    "Shivan Dragon",
+    "Shock",
+    "Silkweaver Elite",
+    "Sky Skiff",
+    "Skyship Plunderer",
+    "Skyship Stalker",
+    "Sly Requisitioner",
+    "Snare Thopter",
+    "Soulstinger",
+    "Speedway Fanatic",
+    "Sphinx of Magosi",
+    "Spidery Grasp",
+    "Spire Patrol",
+    "Spireside Infiltrator",
+    "Stalking Tiger",
+    "Standing Troops",
+    "Stealer of Secrets",
+    "Stormfront Pegasus",
+    "Subtle Strike",
+    "Supernatural Stamina",
+    "Supply Caravan",
+    "Sweatworks Brawler",
+    "Tah-Crop Elite",
+    "Take Down",
+    "Take into Custody",
+    "Tasseled Dromedary",
+    "Tattered Mummy",
+    "Terror of the Fairgrounds",
+    "Tezzeret's Touch",
+    "Those Who Serve",
+    "Thriving Grubs",
+    "Thriving Ibex",
+    "Thriving Rats",
+    "Thundering Giant",
+    "Tidy Conclusion",
+    "Torch Gauntlet",
+    "Treasure Keeper",
+    "Trespasser's Curse",
+    "Trial of Ambition",
+    "Trial of Knowledge",
+    "Trial of Solidarity",
+    "Trial of Strength",
+    "Trial of Zeal",
+    "Tricks of the Trade",
+    "Unbridled Growth",
+    "Universal Solvent",
+    "Untamed Hunger",
+    "Untethered Express",
+    "Unwavering Initiate",
+    "Vedalken Blademaster",
+    "Verdant Automaton",
+    "Victory's Herald",
+    "Vizier of Remedies",
+    "Voltaic Brawler",
+    "Warfire Javelineer",
+    "Watchers of the Dead",
+    "Watchful Automaton",
+    "Weaponcraft Enthusiast",
+    "Welder Automaton",
+    "Weldfast Monitor",
+    "Welding Sparks",
+    "Whir of Invention",
+    "Whirler Virtuoso",
+    "Wild Wanderer",
+    "Wily Bandar",
+    "Winds of Rebuke",
+    "Wing Snare",
+    "Woodweaver's Puzzleknot",
+    "Wrangle",
+    "Yahenni's Expertise"
+  ],
+  "text": [
+    "Fabricate 1",
+    "{4}{W}: Return another target creature you control to its owner's hand.",
+    "Flying, vigilance, lifelink",
+    "Flying\nVehicles you control have flying.",
+    "First strike\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+    "When enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+    "Vigilance\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+    "Deathtouch\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+    "Flying\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, create a 1/1 colorless Servo artifact creature token.",
+    "When enters the battlefield, you get {E}{E}{E}.\n{T}, Pay {E}: Scry 1.",
+    "Return target permanent you control and target permanent you don't control to their owners' hands.",
+    "Flying, lifelink\nWhen enters the battlefield, move any number of +1/+1 counters from other permanents you control onto.",
+    "Whenever attacks, you get {E}{E}.\nPay {E}{E}: Exile, then return it to the battlefield under its owner's control.",
+    "Flying\nWhenever or another creature enters the battlefield under your control, you get {E}.\nWhenever attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it and tap up to one target creature defending player controls.",
+    "Trample\nWhen enters the battlefield, you get {E}.\nWhenever attacks, you may pay {E}. If you do, it gets +2/+0 until end of turn.",
+    "Haste\nYou may exert as it attacks. When you do, target creature can't block this turn.",
+    "Flying",
+    "+2: Reveal the top three cards of your library. Put all nonland permanent cards revealed this way into your hand and the rest on the bottom of your library in any order.\n−2: Exile target creature. Its controller gains life equal to its power.\n−9: Put five +1/+1 counters on each creature you control and five loyalty counters on each other planeswalker you control.",
+    "Choose one —\n• Target creature you control gets +1/+2 until end of turn.\n• Return target creature you control to its owner's hand.",
+    "Menace",
+    "",
+    "Flying\nWhen enters the battlefield, you may return target creature to its owner's hand.",
+    "Destroy target artifact or enchantment. You gain 2 life.",
+    "Trample\nWhen enters the battlefield, you gain 5 life.",
+    " can't be blocked by artifact creatures.",
+    "{1}{B}: gets +1/+1 until end of turn.",
+    "When enters the battlefield, you may return another permanent you control to its owner's hand.",
+    "Lifelink\nWhen enters the battlefield, put a -1/-1 counter on target creature you control.",
+    "Whenever attacks, it deals 1 damage to target creature or player.\nCrew 3",
+    "Instant and sorcery spells you cast cost {1} less to cast.\nWhenever a spell or ability you control counters a spell, you may draw a card. If you do, discard a card.",
+    "",
+    "Improvise\nHexproof",
+    "You may exert as it attacks. When you do, it gets +1/+0 and gains deathtouch until end of turn.",
+    "Flying\nWhen enters the battlefield, target player loses 2 life and you gain 2 life.",
+    "{T}: Target creature gains haste until end of turn.",
+    "Target creature you control gets +2/+2 and gains hexproof until end of turn.",
+    "Haste",
+    "Target creature gets +2/+2 until end of turn. If it's an artifact creature, it gains indestructible until end of turn.",
+    "Enchant creature you control\nWhen enters the battlefield, you may put a -1/-1 counter on target creature.\nEnchanted creature gets +1/+1 and has lifelink.",
+    "Enchant creature you control\nWhen enters the battlefield, draw a card.\nEnchanted creature gets +1/+1 and has flying.",
+    "Enchant creature you control\nWhen enters the battlefield, create a 1/1 white Warrior creature token with vigilance.\nEnchanted creature gets +1/+1 and has first strike.",
+    "Enchant creature you control\nWhen enters the battlefield, you may have enchanted creature fight target creature an opponent controls.\nEnchanted creature gets +1/+1 and has trample.",
+    "Enchant creature you control\nWhen enters the battlefield, target creature can't block this turn.\nEnchanted creature gets +1/+1 and has haste.",
+    "Vigilance\nWhen enters the battlefield, each player chooses an artifact, a creature, an enchantment, and a planeswalker from among the nonland permanents he or she controls, then sacrifices the rest.",
+    "As an additional cost to cast, discard two cards.\nDraw three cards.",
+    "Enchant creature\nEnchanted creature can't attack or block.\nWhen a Vehicle you control attacks, exile enchanted creature.",
+    "Counter target spell unless its controller pays {1}.\nCycling {U}",
+    " deals 2 damage divided as you choose among one or two target creatures and/or players.",
+    " deals 4 damage to target creature. Tap target land. That land doesn't untap during its controller's next untap step.",
+    "Other artifact creatures you control get +1/+1.",
+    "{7}: Create a token that's a copy of target artifact. That token gains haste. Exile it at the beginning of the next end step.",
+    "When enters the battlefield, create a 1/1 colorless Servo artifact creature token.\n{1}{W}, Sacrifice: Create a 1/1 colorless Servo artifact creature token.",
+    "Prevent all combat damage that would be dealt to players this turn.",
+    "Enchant creature\nEnchanted creature can't attack or block.\nEnchanted creature has \"{2}, Sacrifice this creature: You gain 2 life.\"",
+    "When enters the battlefield, exile all artifacts your opponents control until leaves the battlefield.",
+    "Defender\nReach",
+    "Lifelink\nWhenever an artifact enters the battlefield under your control, scry 1.",
+    "Enchant creature\nEnchanted creature gets +1/+3.\n{W}: Return to its owner's hand.",
+    "Revolt — When enters the battlefield, if a permanent you controlled left the battlefield this turn, create a 1/1 colorless Servo artifact creature token.",
+    "Haste\nWhen enters the battlefield, put a -1/-1 counter on target creature you control.",
+    "Target creature gets -2/-2 until end of turn. Scry 1.",
+    "",
+    "Menace",
+    "Destroy target creature or Vehicle.",
+    "Flying\nWhen enters the battlefield, creatures you control get +1/+1 and gain vigilance until end of turn.",
+    "Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
+    "Destroy target artifact or enchantment.\nRevolt — If a permanent you controlled left the battlefield this turn, you gain 3 life.",
+    "Sacrifice an artifact or creature: Put a +1/+1 counter on. Activate this ability only any time you could cast a sorcery.",
+    "Choose one —\n• Destroy target artifact.\n• Creatures without flying can't block this turn.",
+    "As long as you control an artifact, gets +1/+0 and has deathtouch.",
+    "When enters the battlefield, you may return target artifact to its owner's hand.",
+    "Destroy target attacking or blocking creature.",
+    "Untap target creature. Prevent all damage that would be dealt to it this turn.\nCycling {2}",
+    "When dies, create a 2/2 black Zombie creature token.",
+    "{T}: Add {G} to your mana pool.",
+    "{U}: gains flying until end of turn.",
+    "Whenever a creature enters the battlefield under your control, you may pay {1}. If you do, put a +1/+1 counter on that creature.\n{5}{G}, Sacrifice: Put a +1/+1 counter on each creature you control.",
+    "When enters the battlefield, each player may scry 1.",
+    "Flying\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}. If you do, another target attacking creature gains flying until end of turn.",
+    " deals 4 damage to target creature.",
+    "When enters the battlefield, you get {E}{E}{E}.\nPay {E}{E}{E}: gets +X/+X until end of turn, where X is its power.",
+    " can't be blocked by creatures with power 2 or less.\nFabricate 2",
+    "{T}, Sacrifice an artifact: deals 2 damage to each opponent.",
+    "Flying, trample\nWhenever deals combat damage to a player, you get that many {E}.",
+    "Improvise\nTrample, haste",
+    " deals 3 damage to target creature and you gain 3 life.",
+    "Counter target creature spell.",
+    "Whenever you get one or more {E}, put a +1/+1 counter on target creature you control.\n{4}, {T}: You get {E}.",
+    "{2}, {T}: Tap target creature.",
+    "Destroy target creature if it has converted mana cost 2 or less.\nRevolt — Destroy that creature if it has converted mana cost 4 or less instead if a permanent you controlled left the battlefield this turn.",
+    " deals damage to target creature or player equal to the number of cards in your hand. Discard all the cards in your hand, then draw that many cards.",
+    "When enters the battlefield, you may exile another target permanent you control, then return that card to the battlefield under its owner's control.",
+    "Improvise\n can't be blocked by artifact creatures.",
+    "When dies, you may put a -1/-1 counter on target creature.",
+    "When enters the battlefield, you gain 2 life.\nWhen dies, draw a card.",
+    "When enters the battlefield, it deals 1 damage to target creature or player.\n{2}{R}, Sacrifice: It deals 1 damage to target creature or player.",
+    "As an additional cost to cast, sacrifice a creature.\n deals damage equal to the sacrificed creature's power to target creature or player.",
+    "Return up to two target creatures to their owners' hands.\nCycling {2}",
+    "Choose one or both —\n• Return target artifact card from your graveyard to your hand.\n• Return target creature card from your graveyard to your hand.",
+    "Improvise",
+    "Flying\n gets +1/+0 as long as you control an artifact.",
+    "When enters the battlefield, you may have target creature get -1/-1 until end of turn.",
+    "Destroy target artifact or enchantment with converted mana cost 4 or less.",
+    " attacks each combat if able.",
+    "Trample\nPlay with the top card of your library revealed.\nYou may cast the top card of your library if it's a creature card.",
+    " costs {1} less to cast for each artifact you control.\n{5}{U}: can't be blocked this turn.",
+    "{2}{G}: Target creature you control can't be blocked by creatures with power 2 or less this turn.",
+    "Flying",
+    "Enchant creature\nEnchanted creature gets +2/+1 and has menace.",
+    "Reach",
+    "Deathtouch, lifelink",
+    "When enters the battlefield, scry 2, then you get {E}{E}.\n{2}{U}, Sacrifice: Scry 2, then you get {E}{E}.",
+    "Scry 2, then draw two cards. You get {E}{E}.",
+    "Menace\nWhenever enters the battlefield or attacks, you get {E}.\nAt the beginning of your upkeep, you may pay {E}{E}. If you do, you draw a card and you lose 1 life.",
+    "Whenever attacks, it gets +1/+1 until end of turn.",
+    " can't be blocked by creatures with power 2 or less.\nCycling {2}",
+    "Enchant artifact\nAt the beginning of your end step, deals 2 damage to enchanted artifact's controller.\nWhen enchanted artifact is put into a graveyard, create a 2/2 red Gremlin creature token.",
+    "Choose target creature. You get {E}{E}{E}, then you may pay any amount of {E}. deals that much damage to that creature.",
+    "When enters the battlefield, target creature you control gets +1/+1 until end of turn.",
+    "Permanents you control gain hexproof and indestructible until end of turn.",
+    "Reach\nFabricate 1",
+    "Target creature gets +3/+3 until end of turn. You get {E}{E}.",
+    "Gain control of target artifact or creature until end of turn. Untap it. It gains haste until end of turn.",
+    "Flying\n can't block artifact creatures.",
+    " deals 3 damage to target creature and 2 damage to target player.",
+    "Put a +1/+1 counter on target creature you control. Then that creature fights target creature you don't control.",
+    "Enchant artifact or creature\nEnchanted permanent doesn't untap during its controller's untap step.",
+    "Exile up to two target creatures you control, then return those cards to the battlefield under their owner's control.\nDraw a card.",
+    "{R}, Sacrifice: It deals 1 damage to target player.\nWhen is put into a graveyard from the battlefield, draw a card.",
+    "{U}, Sacrifice: Draw a card.\nWhen is put into a graveyard from the battlefield, draw a card.",
+    "{G}, Sacrifice: Put a +1/+1 counter on target creature. Activate this ability only any time you could cast a sorcery.\nWhen is put into a graveyard from the battlefield, draw a card.",
+    "{W}, Sacrifice: You gain 2 life.\nWhen is put into a graveyard from the battlefield, draw a card.",
+    "{B}, Sacrifice: Target player discards a card. Activate this ability only any time you could cast a sorcery.\nWhen is put into a graveyard from the battlefield, draw a card.",
+    "Whenever deals combat damage to a player, untap target creature or land.",
+    "Creatures you control get +2/+1 until end of turn.",
+    " gets +1/+1 as long as you control an artifact.",
+    "Equipped creature gets +1/+2.\nWhenever an Artificer enters the battlefield under your control, you may attach to it.\nEquip {2}",
+    "When enters the battlefield, you may sacrifice an artifact. If you do, put two +1/+1 counters on and each opponent loses 2 life.",
+    "Crew 3",
+    "When enters the battlefield, you get {E}{E}.\n{T}, Pay {E}{E}: You may tap or untap target artifact or creature.",
+    "Whenever an opponent casts a noncreature spell, that player loses 2 life and you gain 2 life.",
+    "Flying, indestructible\n can't attack or block unless you have seven or more cards in hand.\n{3}{U}: Draw a card, then you may return a land you control to its owner's hand.",
+    "When enters the battlefield, put a +1/+1 counter on target creature you control.",
+    "Target creature gets +4/+4 and gains trample until end of turn.",
+    "When dies, put a +1/+1 counter on target creature you control.",
+    "Return target nonland permanent to its owner's hand.\nDraw a card.",
+    "Put X +1/+1 counters on target artifact you control. If it isn't a creature or Vehicle, it becomes a 0/0 Construct artifact creature.",
+    "Trample\nRevolt — enters the battlefield with two +1/+1 counters on it if a permanent you controlled left the battlefield this turn.",
+    "You draw two cards, lose 2 life, and get {E}{E}.",
+    "Creatures your opponents control get -1/-1 until end of turn.",
+    "Enchant artifact or creature\nWhen enters the battlefield, tap enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step.",
+    "When enters the battlefield, put a -1/-1 counter on target creature you control. deals 3 damage to target opponent.",
+    "Trample\nWhen enters the battlefield or dies, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+    "{3}{U}, {T}, Tap X untapped artifacts you control: Look at the top X cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+    "{2}, Discard a card: Put a -1/-1 counter on target creature. That creature can't block this turn.",
+    "When enters the battlefield, you draw a card and you lose 1 life.\n{2}{B}, Sacrifice: You draw a card and you lose 1 life.",
+    "Target creature gets +2/+2 and gains flying until end of turn.",
+    "Target player discards two cards.",
+    "Whenever attacks, untap another target artifact or creature you control.\nCrew 2",
+    " deals X damage divided as you choose among any number of target creatures, where X is the greatest power among creatures you control as you cast.",
+    "As an additional cost to cast, sacrifice an artifact or creature.\nDraw cards equal to the converted mana cost of the sacrificed permanent.",
+    "When enters the battlefield, you get {E}{E}{E}.\nPay {E}: gains your choice of flying, vigilance, or lifelink until end of turn.\nPay {E}: gets +2/-2 or -2/+2 until end of turn.",
+    "{G}: gains deathtouch until end of turn.",
+    "Trample\nYou may exert as it attacks. When you do, it gets +1/+2 until end of turn.",
+    "Counter target noncreature spell.",
+    "Flying\nRevolt — enters the battlefield with a +1/+1 counter on it if a permanent you controlled left the battlefield this turn.",
+    " can block an additional creature each combat.",
+    "Whenever becomes tapped, each opponent loses 1 life and you gain 1 life.",
+    "Flying\n's power and toughness are each equal to the number of Swamps you control.",
+    "When enters the battlefield, draw a card.",
+    "Prowess",
+    "Whenever another creature you control leaves the battlefield, put a +1/+1 counter on.",
+    "Enchant creature\nEnchanted creature gets +3/+3.",
+    "When enters the battlefield, put a -1/-1 counter on target creature you control.",
+    "{2}{G}, {T}: Create a 1/1 colorless Servo artifact creature token.\n{4}{G}, {T}: Create an X/X colorless Construct artifact creature token, where X is the number of creatures you control.",
+    "{2}, {T}: Tap target artifact or creature.",
+    "Target player draws two cards and loses 2 life.",
+    "Trample\nFabricate 1",
+    "When enters the battlefield, create a 1/1 colorless Thopter artifact creature token with flying.\n{1}{R}: Target artifact creature gets +1/+0 until end of turn.\n{1}, Sacrifice an artifact: Target creature can't block this turn.",
+    "Flash",
+    "",
+    "Target creature gets +1/+0 and gains first strike until end of turn.",
+    "Tap target creature.\nDraw a card.",
+    "Target creature you control fights target creature you don't control.",
+    "",
+    "When enters the battlefield, draw a card.\n{1}, {T}: Add one mana of any color to your mana pool.",
+    "If a source an opponent controls would deal damage to you, prevent 1 of that damage.",
+    "Attacking creatures get +2/+0 until end of turn.\nCycling {2}",
+    "{2}, {T}: Add one mana of any color to your mana pool. Put a brick counter on.\n{T}: Add three mana of any one color to your mana pool. Activate this ability only if there are three or more brick counters on.",
+    "Whenever an artifact enters the battlefield under your control, you may discard a card. If you do, draw a card.",
+    "Return target creature card from your graveyard to your hand.",
+    "Sacrifice an artifact: gets +2/+2 until end of turn.",
+    "Whenever an artifact enters the battlefield under your control, deals 1 damage to each opponent.",
+    "First strike\nWhenever becomes tapped, you may discard a card. If you do, draw a card.",
+    "Return target artifact card from your graveyard to the battlefield.",
+    "Whenever attacks, it gets +1/+1 and gains trample until end of turn.\nCrew 2",
+    " enters the battlefield tapped.\n{T}, Sacrifice: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.",
+    "Revolt — When enters the battlefield, if a permanent you controlled left the battlefield this turn, return target permanent card with converted mana cost 2 or less from your graveyard to the battlefield.",
+    "Target permanent gains indestructible until end of turn. Create a 1/1 colorless Servo artifact creature token.",
+    "When enters the battlefield, you gain 3 life and get {E}{E}{E}.",
+    "Return target creature card from your graveyard to your hand. If you control an artifact, draw a card.",
+    "{W}, Sacrifice: Return up to one target artifact card and up to one target enchantment card from your graveyard to your hand.",
+    "Improvise\nDraw three cards.",
+    "Enchant creature\nEnchanted creature can't attack, block, or crew Vehicles.",
+    "Counter target nonartifact spell unless its controller pays {2}.",
+    "When enters the battlefield, put a +1/+1 counter on each other creature you control.",
+    "Trample\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, it gets +2/+2 until end of turn.",
+    "Draw cards equal to the greatest power among creatures you control.\nYou may cast a card with converted mana cost 5 or less from your hand without paying its mana cost.",
+    "When enters the battlefield, draw a card and you get {E}{E}.",
+    "{1}{G}: gets +2/+2 until end of turn. Activate this ability only once each turn.",
+    "{2}{R}, Sacrifice: Destroy target artifact.",
+    "Target creature gets +1/+0 and gains lifelink and indestructible until end of turn.",
+    "Whenever you cycle or discard a card, you may pay {1}. If you do, put a -1/-1 counter on target creature.",
+    "When enters the battlefield, you get {E}{E}{E}.",
+    "Exile up to three target cards from a single graveyard.\nCycling {B}",
+    "Double strike\nWhen enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+    "Return target tapped creature to its owner's hand. Scry 1.",
+    "Flying\nWhenever a creature dealt damage by this turn dies, put a +1/+1 counter on.",
+    "Flying\nIndestructible",
+    "Flying\nVigilance",
+    "When enters the battlefield or is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+    "Flying\nWhenever you cycle or discard a card, gets +1/+1 until end of turn.",
+    "Target creature gets +2/+2 until end of turn. You may remove a -1/-1 counter from it.",
+    "Flash\nWhenever blocks, you get {E}.\n{T}, Pay {E}{E}{E}: Draw a card.",
+    "When enters the battlefield, you get {E}{E}{E}{E}.\nPay {E}: gets +2/-2 until end of turn.",
+    "Flying\n{R}: gets +1/+0 until end of turn.",
+    " deals 2 damage to target creature or player.",
+    "Reach\nRevolt — When enters the battlefield, if a permanent you controlled left the battlefield this turn, draw a card.",
+    "Flying\nCrew 1",
+    "Flying\nWhenever deals combat damage to a player, for each kind of counter on target permanent or player, give that permanent or player another counter of that kind.",
+    "Flying\n{R}: gets +1/+0 until end of turn.\n{R}: gains first strike until end of turn.\n{R}: gains haste until end of turn.",
+    "Improvise\nWhenever a nontoken artifact you control is put into a graveyard from the battlefield, create a 1/1 colorless Servo artifact creature token.",
+    "Flying, haste",
+    "When enters the battlefield, put two -1/-1 counters on target creature you control.\nWhen dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on.",
+    "Haste\nWhenever crews a Vehicle, that Vehicle gains haste until end of turn.",
+    "Flying\n{2}{U}: Draw a card, then put a +1/+1 counter on.",
+    "Untap target creature. It gets +2/+4 and gains reach until end of turn.",
+    "Flying\nWhen enters the battlefield, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+    "Whenever becomes tapped, it deals 1 damage to each opponent.",
+    " can't be blocked by more than one creature.",
+    "Vigilance",
+    "Whenever deals combat damage to a player, draw a card.",
+    "Flying",
+    "Choose one or both —\n• Target creature gets -1/-1 until end of turn.\n• Put a +1/+1 counter on target creature.",
+    "Until end of turn, target creature gets +2/+0 and gains \"When this creature dies, return it to the battlefield tapped under its owner's control.\"",
+    "When enters the battlefield, if you control a tapped creature, create a 1/1 white Warrior creature token with vigilance.",
+    "Improvise\nMenace",
+    "Flying\nYou may exert as it attacks. When you do, creatures you control get +1/+1 until end of turn.",
+    "Choose one —\n• deals 4 damage to target creature with flying.\n• deals 1 damage to each creature with flying.",
+    "Tap target creature. It doesn't untap during its controller's next untap step.",
+    "",
+    "When dies, each opponent loses 2 life.",
+    "",
+    "Enchant artifact\nEnchanted artifact is a creature with base power and toughness 5/5 in addition to its other types.\nWhen enchanted artifact is put into a graveyard, return that card to its owner's hand.",
+    "",
+    "When enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+    "When enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+    "When enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}{E}. If you do, put a +1/+1 counter on it.",
+    "Haste",
+    "Destroy target creature. You gain 1 life for each artifact you control.",
+    "Equipped creature gets +2/+0.\nEquip {2}",
+    "When dies, reveal cards from the top of your library until you reveal a nonland card with converted mana cost 3 or less. You may cast that card without paying its mana cost. Put all revealed cards not cast this way on the bottom of your library in a random order.",
+    "Enchant player\nWhenever a creature enters the battlefield under enchanted player's control, that player loses 1 life and you gain 1 life.",
+    "When enters the battlefield, target opponent sacrifices a creature.\nWhen a Cartouche enters the battlefield under your control, return to its owner's hand.",
+    "When enters the battlefield, draw three cards, then discard a card.\nWhen a Cartouche enters the battlefield under your control, return to its owner's hand.",
+    "When enters the battlefield, creatures you control get +2/+1 and gain vigilance until end of turn.\nWhen a Cartouche enters the battlefield under your control, return to its owner's hand.",
+    "When enters the battlefield, create a 4/2 green Beast creature token.\nWhen a Cartouche enters the battlefield under your control, return to its owner's hand.",
+    "When enters the battlefield, it deals 3 damage to target creature or player.\nWhen a Cartouche enters the battlefield under your control, return to its owner's hand.",
+    "Enchant creature\nEnchanted creature gets +2/+0 and can't be blocked.",
+    "Enchant land\nEnchanted land has \"{T}: Add one mana of any color to your mana pool.\"\nSacrifice: Draw a card.",
+    "{7}, {T}, Sacrifice: Destroy target permanent.",
+    "Enchant creature\nEnchanted creature gets +2/+1 and has menace.",
+    "Trample\nWhenever attacks, put a +1/+1 counter on it.\nCrew 1",
+    "Vigilance\nEmbalm {4}{W}",
+    "Prowess",
+    "{3}{G}: Put a +1/+1 counter on.",
+    "Flying\nWhenever attacks, attacking creatures gain flying and lifelink until end of turn.",
+    "If one or more -1/-1 counters would be put on a creature you control, that many -1/-1 counters minus one are put on it instead.",
+    "When enters the battlefield, you get {E}{E}.\nWhenever attacks, you may pay {E}. If you do, it gets +1/+1 and gains trample until end of turn.",
+    "When enters the battlefield, it deals X damage to target creature an opponent controls, where X is the number of instant and sorcery cards in your graveyard.",
+    "Exile: Each opponent chooses two cards in his or her graveyard and exiles the rest.",
+    "{2}{U}: Scry 1.",
+    "Fabricate 2",
+    "{3}{R}: deals 1 damage to each opponent.",
+    "{R}: gains menace until end of turn.",
+    " deals X damage to target creature, where X is 3 plus the number of artifacts you control.",
+    "Improvise\nSearch your library for an artifact card with converted mana cost X or less, put it onto the battlefield, then shuffle your library.",
+    "When enters the battlefield, you get {E}{E}{E}.\nPay {E}{E}{E}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+    "When enters the battlefield, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
+    "{2}{G}: gains indestructible until end of turn.",
+    "Return target nonland permanent to its owner's hand. Each player puts the top two cards of his or her library into his or her graveyard.",
+    "Destroy target creature with flying.",
+    "When enters the battlefield, you gain 3 life and get {E}{E}{E}.\n{2}{G}, Sacrifice: You gain 3 life and get {E}{E}{E}.",
+    "Gain control of target creature with power 4 or less until end of turn. Untap that creature. It gains haste until end of turn.",
+    "All creatures get -3/-3 until end of turn.\nYou may cast a card with converted mana cost 3 or less from your hand without paying its mana cost."
+  ]
+}
