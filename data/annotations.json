@@ -517,7 +517,9 @@
     "abilities": [
       "return_own_to_hand"
     ],
-    "affinities": ["Artifact"],
+    "affinities": [
+      "Artifact"
+    ],
     "triggers": [
       "enters_the_battlefield"
     ]
@@ -1929,7 +1931,8 @@
   },
   "Weaponcraft Enthusiast": {
     "abilities": [
-      "fabricate"
+      "+counter_self",
+      "create_token"
     ],
     "triggers": [
       "enters_the_battlefield"
