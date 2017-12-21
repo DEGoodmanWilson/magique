@@ -1,5 +1,5 @@
 {
-  "classes": [
+  "abilities": [
     [
       "+counter_self",
       "create_token"
