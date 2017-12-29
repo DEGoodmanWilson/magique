@@ -23,6 +23,7 @@
 #include <math.h>
 #include "ga2.h"
 #include <numeric>
+#include "../ThreadPool/ThreadPool.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -35,8 +36,7 @@
  * Constructs a population of chromosomes, pre-allocating each.
  */
 ga2Population::ga2Population(int initialSize, int chromoSize) : _size(initialSize),
-                                                                _chromoSize(chromoSize)
-{
+                                                                _chromoSize(chromoSize) {
     //now initialize random number generator
     srand(time(NULL));
     _integer = false;
@@ -48,22 +48,17 @@ ga2Population::ga2Population(int initialSize, int chromoSize) : _size(initialSiz
 /**
  * Destructor. Duh.
  */
-ga2Population::~ga2Population()
-{
-    if (!_chromosomes.empty())
-    {
+ga2Population::~ga2Population() {
+    if (!_chromosomes.empty()) {
         _chromosomes.clear();
     }
-    if (!_nextGen.empty())
-    {
+    if (!_nextGen.empty()) {
         _nextGen.clear();
     }
-    if (!_chromoMaxRanges.empty())
-    {
+    if (!_chromoMaxRanges.empty()) {
         _chromoMaxRanges.clear();
     }
-    if (!_chromoMinRanges.empty())
-    {
+    if (!_chromoMinRanges.empty()) {
         _chromoMinRanges.clear();
     }
 }
@@ -79,17 +74,40 @@ ga2Population::~ga2Population()
  * ga2Population::setSelectType()), ga2Population::setSort() should be called
  * first.
  */
-bool ga2Population::init(void)
-{
+bool ga2Population::init(void) {
     //_chromoSize = chromoSize;
     if ((_chromoMaxRanges.size() != _chromoSize)
-        || (_chromoMinRanges.size() != _chromoSize))
-    {
+        || (_chromoMinRanges.size() != _chromoSize)) {
         return false;
     }
 
-    for (auto i = 0; i < _size; ++i)
-    {
+    // TODO move this into a helper function
+    auto num_threads = std::thread::hardware_concurrency() - 1;
+    auto task_size = _size / num_threads;
+    auto start{0};
+
+    std::vector<ThreadPool::ThreadPool::TaskFuture<void>> futures;
+    ThreadPool::ThreadSafeQueue<ga2Chromosome> chromos;
+
+    for (auto t = 0; t < num_threads; ++t) {
+        futures.emplace_back(ThreadPool::DefaultThreadPool::submitJob([&, start=start]() -> auto {
+
+            for (auto i = start; i < start + task_size; ++i) {
+                ga2Chromosome newChromo(_chromoSize);
+                newChromo.setMaxRanges(_chromoMaxRanges);
+                newChromo.setMinRanges(_chromoMinRanges);
+                newChromo.randomInit(_integer);
+                newChromo.setEvalFunc(_evalFunc);
+                newChromo.evaluate(); //force evaluation before sort
+                chromos.push(newChromo);
+            }
+        }));
+
+        start += task_size;
+    }
+
+    //do the remainder of the work in this thread;
+    for (auto i = start; i < _size; ++i) {
         ga2Chromosome newChromo(_chromoSize);
         newChromo.setMaxRanges(_chromoMaxRanges);
         newChromo.setMinRanges(_chromoMinRanges);
@@ -98,6 +116,19 @@ bool ga2Population::init(void)
         newChromo.evaluate(); //force evaluation before sort
         _chromosomes.emplace_back(newChromo);
     }
+
+    // now we need to wait for all the tasks to complete; this is not super efficient, but what are you gonna do?
+    for(auto& future : futures) {
+        future.get();
+    }
+
+    // put all the chromos processed into _chromosomes
+    ga2Chromosome chromo;
+    while(chromos.tryPop(chromo))
+    {
+        _chromosomes.emplace_back(chromo);
+    }
+
     std::sort(_chromosomes.begin(), _chromosomes.end());
     return true;
 }
@@ -106,16 +137,13 @@ bool ga2Population::init(void)
  * The selection function. Call when you are ready to select parents for
  * the next generation.
  */
-bool ga2Population::select(void)
-{
+bool ga2Population::select(void) {
     //select pairs of chromosomes and put them in nextGen
     _nextGen.clear();
     int i, s1, s2;
-    for (i = 0; i < _replacementSize; i += 2)
-    {
+    for (i = 0; i < _replacementSize; i += 2) {
         s1 = _selectFunc();
-        do
-        {
+        do {
             s2 = _selectFunc();
         } while (s1 == s2);
 
@@ -134,14 +162,12 @@ bool ga2Population::select(void)
  * If a chromosome has already been evaluated, and has not changed since,
  * it is not evaluated again.
  */
-bool ga2Population::evaluate(void)
-{
+bool ga2Population::evaluate(void) {
     _sumFitness = 0.0;
     _avgFitness = 0.0;
-    _maxFitness = _chromosomes[_chromosomes.size()-1].getFitness();
+    _maxFitness = _chromosomes[_chromosomes.size() - 1].getFitness();
     _minFitness = _chromosomes[0].getFitness();
-    for(auto &chromo : _chromosomes)
-    {
+    for (auto &chromo : _chromosomes) {
         _sumFitness += chromo.getFitness();
     }
     _avgFitness = _sumFitness / (double) _size;
@@ -153,12 +179,10 @@ bool ga2Population::evaluate(void)
  * Perform crossover after selecting new parents. The next generation is
  * stored for replacement, and can be mutated.
  */
-bool ga2Population::crossover(void)
-{
+bool ga2Population::crossover(void) {
     _crossCount = 0;
     int i;
-    for (i = 0; i < _replacementSize; i += 2)
-    {
+    for (i = 0; i < _replacementSize; i += 2) {
         _crossoverFunc(_nextGen[i], _nextGen[i + 1]);
     }
     return true;
@@ -167,12 +191,10 @@ bool ga2Population::crossover(void)
 /**
  * Mutate the next generation, created by selecting and crossover.
  */
-bool ga2Population::mutate(void)
-{
+bool ga2Population::mutate(void) {
     _mutationCount = 0;
     int i;
-    for (i = 0; i < _replacementSize; ++i)
-    {
+    for (i = 0; i < _replacementSize; ++i) {
         _mutateFunc(_nextGen[i]);
     }
     return true;
@@ -181,14 +203,12 @@ bool ga2Population::mutate(void)
 /**
  * Replace the current generation with the next generation.
  */
-bool ga2Population::replace(void)
-{
+bool ga2Population::replace(void) {
     return _replaceFunc();
 }
 
 //TODO this function assumes merely positive fitness values!
-int ga2Population::_selectRoulette(void)
-{
+int ga2Population::_selectRoulette(void) {
     // notice that this algorithm requires that all fitnesses be POSITIVE. If we have any negative fitnesses, we need to normalize, by offsetting everything
 
 
@@ -199,14 +219,12 @@ int ga2Population::_selectRoulette(void)
 
     minFitness = _chromosomes[0].getFitness(); //already sorted so this works
     double offset{0.0};
-    if(minFitness < 0)
-    {
+    if (minFitness < 0) {
         offset = -1 * minFitness;
     }
 
     //initialize some stuff, like the total fitness of the population
-    for (i = 0; i < _size; ++i)
-    {
+    for (i = 0; i < _size; ++i) {
         sumFitness += _chromosomes[i].getFitness() + offset;
     }
 
@@ -216,8 +234,7 @@ int ga2Population::_selectRoulette(void)
     wheelPosition = ((double) rand() / (double) RAND_MAX) * sumFitness;
 
     i = -1;
-    do
-    {
+    do {
         ++i;
         auto f = _chromosomes[i].getFitness() + offset;
         partialSum += f;
@@ -226,15 +243,13 @@ int ga2Population::_selectRoulette(void)
     return i;
 }
 
-int ga2Population::_selectRanked(void)
-{
+int ga2Population::_selectRanked(void) {
     float partialSum = 0.0, sumFitness = 0.0;
     float wheelPosition = 0.0;
     int i;
 
     //initialize some stuff, like the total fitness of the population
-    for (i = 0; i < _size; ++i)
-    {
+    for (i = 0; i < _size; ++i) {
         //instead of fitness, use rank!
         sumFitness += _size - i;
     }
@@ -243,8 +258,7 @@ int ga2Population::_selectRanked(void)
     wheelPosition = ((float) rand() / (float) RAND_MAX) * sumFitness;
 
     i = 0;
-    while ((i != _size - 1) && (partialSum < wheelPosition))
-    {
+    while ((i != _size - 1) && (partialSum < wheelPosition)) {
         //again, use rank, not fitness
         ++i;
         partialSum += i;
@@ -252,8 +266,7 @@ int ga2Population::_selectRanked(void)
     return i;
 }
 
-bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b)
-{
+bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b) {
     float coPoint = ((float) rand() / (float) RAND_MAX) * _chromoSize;
     ga2Chromosome a1, a2, b1, b2;
     a1 = a.grabSlice(0, coPoint);
@@ -283,35 +296,27 @@ bool ga2Population::_crossoverOnePoint(ga2Chromosome &a, ga2Chromosome &b)
     return true;
 }
 
-bool ga2Population::_crossoverUniform(ga2Chromosome &a, ga2Chromosome &b)
-{
+bool ga2Population::_crossoverUniform(ga2Chromosome &a, ga2Chromosome &b) {
     ga2Chromosome c, d;
     int flip;
     int i;
 
     //where does the first gene come from? after that, we loop.
     flip = ((float) rand() / (float) RAND_MAX) * 2;
-    if (flip)
-    {
+    if (flip) {
         c = a.grabSlice(0, 1);
         d = b.grabSlice(0, 1);
-    }
-    else
-    {
+    } else {
         c = b.grabSlice(0, 1);
         d = a.grabSlice(0, 1);
     }
     //now, loop and deal with the rest.
-    for (i = 1; i < _chromoSize; ++i)
-    {
+    for (i = 1; i < _chromoSize; ++i) {
         flip = ((float) rand() / (float) RAND_MAX) * 2;
-        if (flip)
-        {
+        if (flip) {
             c = c + (a.grabSlice(i, i + 1));
             d = d + (b.grabSlice(i, i + 1));
-        }
-        else
-        {
+        } else {
             c = c + (b.grabSlice(i, i + 1));
             d = d + (a.grabSlice(i, i + 1));
         }
@@ -336,10 +341,8 @@ bool ga2Population::_crossoverUniform(ga2Chromosome &a, ga2Chromosome &b)
     return true;
 }
 
-int ga2Population::_selectFunc(void)
-{
-    switch (_selectionType)
-    {
+int ga2Population::_selectFunc(void) {
+    switch (_selectionType) {
         case GA2_SELECT_RANKED:
             return _selectRanked();
             break;
@@ -349,10 +352,8 @@ int ga2Population::_selectFunc(void)
     }
 }
 
-bool ga2Population::_replaceFunc(void)
-{
-    switch (_replacementType)
-    {
+bool ga2Population::_replaceFunc(void) {
+    switch (_replacementType) {
         case GA2_REPLACE_STEADYSTATENODUPLICATES:
             return _replaceSteadyStateNoDuplicates();
         case GA2_REPLACE_STEADYSTATE:
@@ -364,14 +365,11 @@ bool ga2Population::_replaceFunc(void)
 
 }
 
-bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
-{
-    if (_crossoverRate <= 1.0)
-    {
+bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b) {
+    if (_crossoverRate <= 1.0) {
         //need a random number to compare against crossover rate
         float probability = (float) rand() / (float) RAND_MAX;
-        if (probability > _crossoverRate)
-        {
+        if (probability > _crossoverRate) {
             return false;
         }
     }
@@ -379,8 +377,7 @@ bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
 
     ++_crossCount;
 
-    switch (_crossoverType)
-    {
+    switch (_crossoverType) {
         case GA2_CROSSOVER_UNIFORM:
             return _crossoverUniform(a, b);
         case GA2_CROSSOVER_ONEPOINT:
@@ -389,25 +386,19 @@ bool ga2Population::_crossoverFunc(ga2Chromosome &a, ga2Chromosome &b)
     }
 }
 
-bool ga2Population::_mutateFunc(ga2Chromosome &a)
-{
+bool ga2Population::_mutateFunc(ga2Chromosome &a) {
     int i;
-    for (i = 0; i < _chromoSize; ++i)
-    {
+    for (i = 0; i < _chromoSize; ++i) {
         float probability = (float) rand() / (float) RAND_MAX;
-        if (probability <= _mutationRate)
-        {
+        if (probability <= _mutationRate) {
             //we mutate!
             ++_mutationCount;
             float range = _chromoMaxRanges[i] - _chromoMinRanges[i];
             float f;
-            if (_integer)
-            {
+            if (_integer) {
                 f = (((float) rand() / (float) RAND_MAX) * (range + 1)) + _chromoMinRanges[i];
                 f = (int) f; //trunc it down to size
-            }
-            else
-            { //no rounding
+            } else { //no rounding
                 f = (((float) rand() / (float) RAND_MAX) * range) + _chromoMinRanges[i];
             }
 
@@ -422,12 +413,40 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a)
 //note on this function:
 //it will not work (it will, in fact, return false without doing anything)
 //if _isSorted is false!! ie, it only works on sorted populations!!
-bool ga2Population::_replaceSteadyState(void)
-{
-    for(auto &chromo : _nextGen)
-    {
-        chromo.evaluate();
+bool ga2Population::_replaceSteadyState(void) {
+
+    // TODO move this into a helper function
+    auto num_threads = std::thread::hardware_concurrency() - 1;
+    auto task_size = _nextGen.size() / num_threads;
+    auto start{0};
+
+    std::vector<ThreadPool::ThreadPool::TaskFuture<void>> futures;
+    ThreadPool::ThreadSafeQueue<ga2Chromosome> chromos;
+
+    for (auto t = 0; t < num_threads; ++t) {
+        futures.emplace_back(ThreadPool::DefaultThreadPool::submitJob([&, start=start]() -> auto {
+            for (auto i = start; i < start + task_size; ++i) {
+                _nextGen[i].evaluate();
+            }
+        }));
+
+        start += task_size;
     }
+
+    //do the remainder of the work in this thread;
+    for (auto i = start; i < _size; ++i) {
+        _nextGen[i].evaluate();
+    }
+
+    // now we need to wait for all the tasks to complete; this is not super efficient, but what are you gonna do?
+    for(auto& future : futures) {
+        future.get();
+    }
+
+//    for (auto &chromo : _nextGen) {
+//        chromo.evaluate();
+//    }
+
     _chromosomes.insert(_chromosomes.end(), _nextGen.begin(), _nextGen.end());
     std::sort(_chromosomes.begin(), _chromosomes.end());
     _nextGen.clear();
@@ -438,22 +457,17 @@ bool ga2Population::_replaceSteadyState(void)
     return true;
 }
 
-bool ga2Population::_replaceSteadyStateNoDuplicates(void)
-{
+bool ga2Population::_replaceSteadyStateNoDuplicates(void) {
     int i;
-    if (!_isSorted)
-    {
+    if (!_isSorted) {
         return false;
     }
     //note that we dont care about the replacement size
-    for (i = 0; i < _nextGen.size(); ++i)
-    {
+    for (i = 0; i < _nextGen.size(); ++i) {
         //we have to do an insertion sort. large elements first, small last
-        if (_chromosomes.empty())
-        { //if theres nothing there, just stuff it in there
+        if (_chromosomes.empty()) { //if theres nothing there, just stuff it in there
             _chromosomes.push_back(_nextGen[i]);
-        }
-        else //we have to look for the right place to put it...
+        } else //we have to look for the right place to put it...
         {
             //get an iterator
             std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
@@ -481,25 +495,19 @@ bool ga2Population::_replaceSteadyStateNoDuplicates(void)
     return true;
 }
 
-bool ga2Population::_replaceGenerational(void)
-{
+bool ga2Population::_replaceGenerational(void) {
     int i;
     //if (!_isSorted)
     _chromosomes.clear(); //we dont want to clear this list if its all sorted.
     //note that we dont care about the replacement size
-    for (i = 0; i < _nextGen.size(); ++i)
-    {
-        if (!_isSorted)
-        {
+    for (i = 0; i < _nextGen.size(); ++i) {
+        if (!_isSorted) {
             _chromosomes.push_back(_nextGen[i]);
-        }
-        else //we have to do an insertion sort. large elements first, small last
+        } else //we have to do an insertion sort. large elements first, small last
         {
-            if (_chromosomes.empty())
-            { //if theres nothing there, just stuff it in there
+            if (_chromosomes.empty()) { //if theres nothing there, just stuff it in there
                 _chromosomes.push_back(_nextGen[i]);
-            }
-            else //we have to look for the right place to put it...
+            } else //we have to look for the right place to put it...
             {
                 //get an iterator
                 std::vector<ga2Chromosome>::iterator it = _chromosomes.begin();
@@ -513,8 +521,7 @@ bool ga2Population::_replaceGenerational(void)
         }
     }
     _nextGen.clear();
-    if (_isSorted)
-    { //if it is sorted, then we have a lot of excess members. clear them.
+    if (_isSorted) { //if it is sorted, then we have a lot of excess members. clear them.
         while (_size < _chromosomes.size())
             _chromosomes.pop_back();
     }
@@ -528,20 +535,16 @@ bool ga2Population::_replaceGenerational(void)
  *
  * Sets the upper bounds for each gene in the chromosome.
  */
-void ga2Population::setMaxRanges(std::vector<ga2Gene> ranges)
-{
-    if (ranges.size() != _chromoSize)
-    {
+void ga2Population::setMaxRanges(std::vector<ga2Gene> ranges) {
+    if (ranges.size() != _chromoSize) {
         return;
     }
     _chromoMaxRanges.clear();
     int i;
-    for (i = 0; i < ranges.size(); ++i)
-    {
+    for (i = 0; i < ranges.size(); ++i) {
         _chromoMaxRanges.push_back(ranges[i]);
     }
-    for (i = 0; i < _chromosomes.size(); ++i)
-    {
+    for (i = 0; i < _chromosomes.size(); ++i) {
         _chromosomes[i].setMaxRanges(ranges);
     }
 }
@@ -552,20 +555,16 @@ void ga2Population::setMaxRanges(std::vector<ga2Gene> ranges)
  *
  * Sets the lower bounds for each gene in the chromosome.
  */
-void ga2Population::setMinRanges(std::vector<ga2Gene> ranges)
-{
-    if (ranges.size() != _chromoSize)
-    {
+void ga2Population::setMinRanges(std::vector<ga2Gene> ranges) {
+    if (ranges.size() != _chromoSize) {
         return;
     }
     _chromoMinRanges.clear();
     int i;
-    for (i = 0; i < ranges.size(); ++i)
-    {
+    for (i = 0; i < ranges.size(); ++i) {
         _chromoMinRanges.push_back(ranges[i]);
     }
-    for (i = 0; i < _chromosomes.size(); ++i)
-    {
+    for (i = 0; i < _chromosomes.size(); ++i) {
         _chromosomes[i].setMinRanges(ranges);
     }
 }
@@ -574,32 +573,27 @@ void ga2Population::setMinRanges(std::vector<ga2Gene> ranges)
  * Returns a vector of genes representing the best fit chromosome in
  * the population.
  */
-std::vector<ga2Gene> ga2Population::getBestFitChromosome(void)
-{
+std::vector<ga2Gene> ga2Population::getBestFitChromosome(void) {
     return _chromosomes[_chromosomes.size() - 1].getGenes();
 }
 
 /**
  * Serialises the population to a stream.
  */
-std::ostream &operator<<(std::ostream &o, ga2Population &pop)
-{
+std::ostream &operator<<(std::ostream &o, ga2Population &pop) {
     //first output size and ranges
     o << pop._size << " " << pop._chromoSize << "\n";
     int i;
-    for (i = 0; i < pop._chromoSize; ++i)
-    {
+    for (i = 0; i < pop._chromoSize; ++i) {
         o << pop._chromoMaxRanges[i] << " ";
     }
     o << "\n";
-    for (i = 0; i < pop._chromoSize; ++i)
-    {
+    for (i = 0; i < pop._chromoSize; ++i) {
         o << pop._chromoMinRanges[i] << " ";
     }
     o << "\n";
     //now, output each chromosome
-    for (i = 0; i < pop._size; ++i)
-    {
+    for (i = 0; i < pop._size; ++i) {
         o << pop._chromosomes[i];
     }
     o << "\n";
@@ -610,8 +604,7 @@ std::ostream &operator<<(std::ostream &o, ga2Population &pop)
 /**
  * Reads a serialised population from a stream.
  */
-std::istream &operator>>(std::istream &in, ga2Population &pop)
-{
+std::istream &operator>>(std::istream &in, ga2Population &pop) {
     //first, read in sizes and ranges;
     in >> pop._size >> pop._chromoSize;
     int i;
@@ -619,19 +612,16 @@ std::istream &operator>>(std::istream &in, ga2Population &pop)
     pop._chromoMaxRanges.clear();
     pop._chromoMinRanges.clear();
     float f;
-    for (i = 0; i < pop._chromoSize; ++i)
-    {
+    for (i = 0; i < pop._chromoSize; ++i) {
         in >> f;
         pop._chromoMaxRanges.push_back(f);
     }
-    for (i = 0; i < pop._chromoSize; ++i)
-    {
+    for (i = 0; i < pop._chromoSize; ++i) {
         in >> f;
         pop._chromoMinRanges.push_back(f);
     }
     //now, grab the chromosomes themselves
-    for (i = 0; i < pop._chromoSize; ++i)
-    {
+    for (i = 0; i < pop._chromoSize; ++i) {
         ga2Chromosome c(pop._chromoSize);
         in >> c;
         c.setMaxRanges(pop._chromoMaxRanges);

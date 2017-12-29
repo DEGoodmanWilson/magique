@@ -1,17 +1,21 @@
 Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Accomplished Automaton",KLD,0.12,0,0,3,2/12/2017
+1,"Acrobatic Maneuver",KLD,0.13,0,0,3,13/12/2017
 1,"Aegis Automaton",AER,0.12,0,0,0,2/12/2017
+1,"Aegis Automaton",AER,0.12,0,0,3,25/12/2017
 1,"Aerial Responder",KLD,0.23,0,0,0,30/11/2017
-1,"Aerial Responder",KLD,0.23,0,0,3,2/12/2017
+2,"Aerial Responder",KLD,0.23,0,0,3,13/12/2017
 1,"Aeronaut Admiral",AER,0.21,0,0,0,2/12/2017
 2,"Aether Chaser",AER,0.15,0,0,0,2/12/2017
+1,"Aether Chaser",AER,0.15,0,0,3,25/12/2017
 1,"Aether Herder",AER,0.13,0,0,0,2/12/2017
 1,"Aether Hub",KLD,1.85,0,0,0,30/11/2017
 2,"Aether Inspector",AER,0.12,0,0,0,2/12/2017
+1,"Aether Meltdown",KLD,0.22,0,0,3,13/12/2017
 1,"Aether Poisoner",AER,0.14,0,0,0,2/12/2017
 2,"Aether Swooper",AER,0.14,0,0,0,2/12/2017
 2,"Aether Theorist",KLD,0.12,0,0,0,30/11/2017
-1,"Aether Tradewinds",KLD,0.12,0,0,3,2/12/2017
+2,"Aether Tradewinds",KLD,0.12,0,0,3,13/12/2017
 1,"Aetherborn Marauder",KLD,0.2,0,0,3,2/12/2017
 1,"Aethergeode Miner",AER,0.34,0,0,0,2/12/2017
 1,"Aetherstorm Roc",KLD,0.29,0,0,3,2/12/2017
@@ -27,6 +31,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Appetite for the Unnatural",KLD,0.14,0,0,0,30/11/2017
 1,"Arborback Stomper",KLD,0.19,0,0,0,30/11/2017
 1,"Arborback Stomper",KLD,0.19,0,0,3,2/12/2017
+1,"Attune with Aether",KLD,0.24,0,0,0,28/12/2017
 2,"Audacious Infiltrator",AER,0.13,0,0,0,2/12/2017
 2,"Augmenting Automaton",AER,0.13,0,0,0,2/12/2017
 1,"Aviary Mechanic",KLD,0.12,0,0,3,2/12/2017
@@ -41,7 +46,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Bloodlust Inciter",AKH,0.12,0,0,3,2/12/2017
 1,"Blossoming Defense",KLD,1.54,0,0,3,2/12/2017
 1,"Brazen Scourge",KLD,0.2,0,0,3,2/12/2017
-1,"Built to Last",KLD,0.11,0,0,0,30/11/2017
+2,"Built to Last",KLD,0.11,0,0,0,28/12/2017
 1,"Built to Last",KLD,0.11,0,0,3,2/12/2017
 1,"Cartouche of Ambition",AKH,0.13,0,0,3,2/12/2017
 1,"Cartouche of Knowledge",AKH,0.14,0,0,3,2/12/2017
@@ -50,40 +55,51 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Cartouche of Zeal",AKH,0.15,0,0,3,2/12/2017
 1,"Cataclysmic Gearhulk",KLD,1.4,0,0,0,30/11/2017
 1,"Cathartic Reunion",KLD,0.16,0,0,0,30/11/2017
+1,"Cathartic Reunion",KLD,0.15,0,0,3,13/12/2017
 1,"Cathartic Reunion",KLD,0.16,0,0,3,2/12/2017
 2,"Caught in the Brights",AER,0.13,0,0,0,2/12/2017
 1,"Censor",AKH,1.5,0,0,3,2/12/2017
 1,"Chandra's Pyrohelix",KLD,0.13,0,0,0,30/11/2017
+1,"Chandra's Pyrohelix",KLD,0.14,0,0,0,28/12/2017
 1,"Chandra's Pyrohelix",KLD,0.13,0,0,3,2/12/2017
 1,"Chandra's Revolution",AER,0.12,0,0,0,2/12/2017
 1,"Chandra's Revolution",AER,0.12,0,0,3,2/12/2017
 1,"Chief of the Foundry",KLD,0.19,0,0,0,30/11/2017
+1,"Chief of the Foundry",KLD,0.18,0,0,3,13/12/2017
 1,"Chief of the Foundry",KLD,0.49,1,0,0,30/11/2017
 2,"Cinder Barrens",AKH,0.11,0,0,3,2/12/2017
 2,"Cogwork Assembler",AER,0.22,0,0,3,2/12/2017
 1,"Cogworker's Puzzleknot",KLD,0.13,0,0,0,30/11/2017
+1,"Cogworker's Puzzleknot",KLD,0.14,0,0,0,28/12/2017
 1,"Commencement of Festivities",KLD,0.13,0,0,0,30/11/2017
-1,"Commencement of Festivities",KLD,0.13,0,0,3,2/12/2017
+2,"Commencement of Festivities",KLD,0.13,0,0,3,13/12/2017
 2,"Compulsory Rest",AKH,0.13,0,0,3,2/12/2017
 1,"Consulate Crackdown",AER,0.28,0,0,0,2/12/2017
 1,"Consulate Skygate",KLD,0.13,0,0,0,30/11/2017
 1,"Contraband Kingpin",KLD,0.21,0,0,0,30/11/2017
 2,"Conviction",AER,0.13,0,0,0,2/12/2017
 2,"Countless Gears Renegade",AER,0.14,0,0,0,2/12/2017
+1,"Countless Gears Renegade",AER,0.13,0,0,3,25/12/2017
 2,"Crocodile of the Crossing",AKH,0.2,0,0,3,2/12/2017
 2,"Cruel Finality",AER,0.12,0,0,0,2/12/2017
+1,"Cruel Finality",AER,0.13,0,0,3,25/12/2017
+1,"Curio Vendor",KLD,0.12,0,0,0,28/12/2017
 1,"Curio Vendor",KLD,0.12,0,0,3,2/12/2017
 1,"Cursed Minotaur",AKH,0.14,0,0,3,2/12/2017
 1,"Daring Demolition",AER,0.13,0,0,0,2/12/2017
 1,"Daring Demolition",AER,0.13,0,0,3,2/12/2017
 1,"Dawnfeather Eagle",AER,0.13,0,0,0,2/12/2017
 1,"Decision Paralysis",AKH,0.12,0,0,3,2/12/2017
+1,"Decoction Module",KLD,0.76,1,0,3,13/12/2017
 1,"Decommission",AER,0.14,0,0,0,2/12/2017
 2,"Defiant Salvager",AER,0.13,0,0,0,2/12/2017
 1,"Destructive Tampering",AER,0.13,0,0,3,2/12/2017
 1,"Dhund Operative",KLD,0.11,0,0,0,30/11/2017
-1,"Dhund Operative",KLD,0.11,0,0,3,2/12/2017
+1,"Dhund Operative",KLD,0.12,0,0,0,28/12/2017
+2,"Dhund Operative",KLD,0.11,0,0,3,13/12/2017
+1,"Diabolic Tutor",KLD,0.24,0,0,0,28/12/2017
 2,"Dispersal Technician",AER,0.12,0,0,0,2/12/2017
+1,"Dispersal Technician",AER,0.13,0,0,3,25/12/2017
 1,"Divine Verdict",W17,0.25,0,0,3,2/12/2017
 1,"Djeru's Resolve",AKH,0.13,0,0,3,2/12/2017
 1,"Doomed Dissenter",AKH,0.14,0,0,3,2/12/2017
@@ -91,6 +107,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Druid of the Cowl",AER,0.14,0,0,3,2/12/2017
 1,"Druid of the Cowl",AER,0.5,1,0,0,2/12/2017
 1,"Dukhara Peafowl",KLD,0.11,0,0,3,2/12/2017
+1,"Dukhara Scavenger",KLD,0.11,0,0,3,13/12/2017
 1,"Durable Handicraft",KLD,0.18,0,0,3,2/12/2017
 1,"Eager Construct",KLD,0.12,0,0,0,30/11/2017
 1,"Eager Construct",KLD,0.12,0,0,3,2/12/2017
@@ -98,6 +115,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Electrify",AKH,0.14,0,0,3,2/12/2017
 1,"Electrostatic Pummeler",KLD,0.53,0,0,3,2/12/2017
 2,"Elegant Edgecrafters",KLD,0.18,0,0,0,30/11/2017
+1,"Eliminate the Competition",KLD,0.29,0,0,3,13/12/2017
 1,"Embraal Gear-Smasher",AER,0.13,0,0,3,2/12/2017
 1,"Empyreal Voyager",KLD,0.18,0,0,3,2/12/2017
 2,"Enraged Giant",AER,0.2,0,0,3,2/12/2017
@@ -110,8 +128,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Fateful Showdown",KLD,0.3,0,0,3,2/12/2017
 2,"Felidar Guardian",AER,0.26,0,0,0,2/12/2017
 1,"Fen Hauler",AER,0.13,0,0,0,2/12/2017
+1,"Fen Hauler",AER,0.13,0,0,3,25/12/2017
 1,"Festering Mummy",AKH,0.15,0,0,3,2/12/2017
+1,"Filigree Crawler",AER,0.12,0,0,3,25/12/2017
+1,"Filigree Familiar",KLD,0.25,0,0,0,28/12/2017
 1,"Filigree Familiar",KLD,0.25,0,0,3,2/12/2017
+1,"Fireforger's Puzzleknot",KLD,0.11,0,0,0,28/12/2017
 1,"Fireforger's Puzzleknot",KLD,0.11,0,0,3,2/12/2017
 3,"Fling",AKH,0.14,0,0,3,2/12/2017
 1,"Floodwaters",AKH,0.13,0,0,3,2/12/2017
@@ -123,28 +145,35 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Foundry Screecher",KLD,0.11,0,0,3,2/12/2017
 1,"Fourth Bridge Prowler",AER,0.13,0,0,0,2/12/2017
 1,"Fragmentize",KLD,0.14,0,0,3,2/12/2017
+1,"Fretwork Colony",KLD,0.19,0,0,0,28/12/2017
 1,"Frontline Rebel",AER,0.13,0,0,0,2/12/2017
+1,"Frontline Rebel",AER,0.13,0,0,3,25/12/2017
 1,"Garruk's Horde",W17,0.34,0,0,3,2/12/2017
 1,"Gearseeker Serpent",KLD,0.14,0,0,0,30/11/2017
-1,"Gearseeker Serpent",KLD,0.14,0,0,3,2/12/2017
+2,"Gearseeker Serpent",KLD,0.14,0,0,3,13/12/2017
 1,"Ghirapur Guide",KLD,0.19,0,0,3,2/12/2017
 1,"Ghirapur Osprey",AER,0.12,0,0,0,2/12/2017
+1,"Ghirapur Osprey",AER,0.14,0,0,3,25/12/2017
 2,"Giant Spectacle",KLD,0.11,0,0,3,2/12/2017
 1,"Giant Spider",AKH,0.12,0,0,3,2/12/2017
 1,"Gifted Aetherborn",AER,2.19,0,0,3,2/12/2017
 1,"Glassblower's Puzzleknot",KLD,0.12,0,0,0,30/11/2017
+1,"Glassblower's Puzzleknot",KLD,0.13,0,0,3,13/12/2017
 1,"Glimmer of Genius",KLD,0.93,0,0,3,2/12/2017
+1,"Glint-Sleeve Artisan",KLD,0.12,0,0,3,13/12/2017
 2,"Glint-Sleeve Siphoner",AER,3.32,0,0,0,2/12/2017
 1,"Graceful Cat",AKH,0.15,0,0,3,2/12/2017
 1,"Greater Sandwurm",AKH,0.12,0,0,3,2/12/2017
 1,"Gremlin Infestation",AER,0.2,0,0,0,2/12/2017
 1,"Harnessed Lightning",KLD,1.19,0,0,3,2/12/2017
+1,"Hazardous Conditions",KLD,0.19,0,0,0,28/12/2017
 1,"Herald of the Fair",KLD,0.1,0,0,3,2/12/2017
 1,"Heroic Intervention",AER,4.05,0,0,0,2/12/2017
 2,"Highland Lake",AKH,0.3,0,0,3,2/12/2017
 1,"Highspire Artisan",KLD,0.11,0,0,3,2/12/2017
 1,"Highspire Infusion",AER,0.14,0,0,0,2/12/2017
-1,"Highspire Infusion",AER,0.14,0,0,3,2/12/2017
+2,"Highspire Infusion",AER,0.14,0,0,3,25/12/2017
+1,"Hijack",KLD,0.12,0,0,0,28/12/2017
 1,"Hijack",KLD,0.12,0,0,3,2/12/2017
 1,"Hinterland Drake",AER,0.12,0,0,0,2/12/2017
 2,"Hinterland Drake",AER,0.12,0,0,3,2/12/2017
@@ -153,33 +182,43 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Hunt the Weak",KLD,0.11,0,0,0,30/11/2017
 2,"Ice Over",AER,0.12,0,0,0,2/12/2017
 1,"Illusionist's Stratagem",AER,0.2,0,0,0,2/12/2017
+1,"Impeccable Timing",KLD,0.13,0,0,0,28/12/2017
 3,"Implement of Combustion",AER,0.14,0,0,0,2/12/2017
 2,"Implement of Combustion",AER,0.14,0,0,3,2/12/2017
 2,"Implement of Examination",AER,0.13,0,0,0,2/12/2017
+1,"Implement of Examination",AER,0.13,0,0,3,25/12/2017
 1,"Implement of Ferocity",AER,0.13,0,0,0,2/12/2017
+1,"Implement of Ferocity",AER,0.13,0,0,3,25/12/2017
 1,"Implement of Improvement",AER,0.14,0,0,0,2/12/2017
 1,"Implement of Malice",AER,0.13,0,0,0,2/12/2017
 2,"Initiate's Companion",AKH,0.15,0,0,3,2/12/2017
 1,"Inspired Charge",KLD,0.11,0,0,0,30/11/2017
 2,"Inspired Charge",KLD,0.11,0,0,3,2/12/2017
-1,"Inventor's Apprentice",KLD,0.24,0,0,0,30/11/2017
+2,"Inventor's Apprentice",KLD,0.24,0,0,0,28/12/2017
 1,"Inventor's Apprentice",KLD,0.24,0,0,3,2/12/2017
 1,"Inventor's Goggles",KLD,0.13,0,0,0,30/11/2017
 1,"Inventor's Goggles",KLD,0.13,0,0,3,2/12/2017
+1,"Inventors' Fair",KLD,0.99,0,0,3,13/12/2017
+1,"Iron League Steed",KLD,0.17,0,0,3,13/12/2017
 1,"Ironclad Revolutionary",AER,0.2,0,0,0,2/12/2017
 1,"Irontread Crusher",AER,0.12,0,0,0,2/12/2017
 2,"Irontread Crusher",AER,0.12,0,0,3,2/12/2017
 1,"Janjeet Sentry",KLD,0.19,0,0,0,30/11/2017
+1,"Janjeet Sentry",KLD,0.19,0,0,3,13/12/2017
+1,"Kambal, Consul of Allocation",KLD,0.46,0,0,0,28/12/2017
 1,"Kambal, Consul of Allocation",KLD,0.46,0,0,3,2/12/2017
 1,"Kefnet the Mindful",AKH,1.82,0,0,3,2/12/2017
 1,"Kujar Seedsculptor",KLD,0.11,0,0,0,30/11/2017
+1,"Kujar Seedsculptor",KLD,0.12,0,0,3,13/12/2017
 1,"Larger Than Life",KLD,0.15,0,0,0,30/11/2017
 1,"Larger Than Life",KLD,0.16,0,0,3,2/12/2017
 1,"Lawless Broker",KLD,0.1,0,0,0,30/11/2017
 2,"Leave in the Dust",AER,0.12,0,0,0,2/12/2017
 1,"Leave in the Dust",AER,0.12,0,0,3,2/12/2017
+1,"Leave in the Dust",AER,0.13,0,0,3,25/12/2017
 1,"Lifecraft Awakening",AER,0.2,0,0,0,2/12/2017
 2,"Lifecraft Cavalry",AER,0.11,0,0,0,2/12/2017
+1,"Lifecrafter's Gift",AER,0.2,0,0,3,25/12/2017
 2,"Live Fast",KLD,0.13,0,0,3,2/12/2017
 1,"Make Obsolete",KLD,0.19,0,0,0,30/11/2017
 1,"Make Obsolete",KLD,0.18,0,0,3,2/12/2017
@@ -188,18 +227,24 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 3,"Malfunction",KLD,0.11,0,0,3,2/12/2017
 1,"Manticore of the Gauntlet",AKH,0.13,0,0,3,2/12/2017
 2,"Maulfist Revolutionary",AER,0.21,0,0,0,2/12/2017
+1,"Maverick Thopterist",AER,0.2,0,0,3,25/12/2017
 2,"Meandering River",AKH,0.24,0,0,3,2/12/2017
+1,"Mechanized Production",AER,3.63,0,0,3,25/12/2017
 1,"Merchant's Dockhand",AER,0.28,0,0,0,2/12/2017
 1,"Merciless Javelineer",AKH,0.2,0,0,3,2/12/2017
+1,"Metallic Rebuke",AER,0.16,0,0,3,25/12/2017
 1,"Metalspinner's Puzzleknot",KLD,0.13,0,0,3,2/12/2017
 1,"Mighty Leap",AKH,0.13,0,0,3,2/12/2017
 2,"Mind Rot",KLD,0.1,0,0,0,30/11/2017
+1,"Mind Rot",KLD,0.11,0,0,0,28/12/2017
+1,"Minister of Inquiries",KLD,0.24,0,0,0,28/12/2017
 2,"Mobile Garrison",AER,0.14,0,0,0,2/12/2017
 1,"Mobile Garrison",AER,0.14,0,0,3,2/12/2017
 1,"Monstrous Onslaught",AER,0.2,0,0,3,2/12/2017
 1,"Morbid Curiosity",KLD,0.2,0,0,0,30/11/2017
 1,"Multiform Wonder",KLD,0.3,0,0,0,30/11/2017
 1,"Narnam Cobra",KLD,0.11,0,0,3,2/12/2017
+1,"Narnam Cobra",KLD,0.12,0,0,3,13/12/2017
 1,"Nef-Crop Entangler",AKH,0.14,0,0,3,2/12/2017
 2,"Negate",AER,0.15,0,0,0,2/12/2017
 1,"Negate",AER,0.15,0,0,3,2/12/2017
@@ -211,32 +256,42 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Nimble Innovator",KLD,0.11,0,0,3,2/12/2017
 1,"Nimble-Blade Khenra",AKH,0.13,0,0,3,2/12/2017
 1,"Ninth Bridge Patrol",KLD,0.11,0,0,0,30/11/2017
+1,"Ninth Bridge Patrol",KLD,0.12,0,0,3,13/12/2017
 1,"Oakenform",W17,0.32,0,0,3,2/12/2017
+1,"Oath of Ajani",AER,0.45,0,0,3,25/12/2017
 1,"Ornery Kudu",AKH,0.13,0,0,3,2/12/2017
+1,"Outland Boar",AER,0.2,0,0,3,25/12/2017
 1,"Oviya Pashiri, Sage Lifecrafter",KLD,0.3,0,0,0,30/11/2017
 1,"Pacification Array",AER,0.2,0,0,0,2/12/2017
 1,"Painful Lesson",AKH,0.14,0,0,3,2/12/2017
+1,"Peema Aether-Seer",AER,0.2,0,0,3,25/12/2017
 1,"Peema Outrider",KLD,0.1,0,0,3,2/12/2017
 1,"Pia Nalaar",KLD,0.4,0,0,0,30/11/2017
 1,"Pouncing Cheetah",AKH,0.14,0,0,3,2/12/2017
 1,"Prakhata Club Security",KLD,0.11,0,0,3,2/12/2017
+1,"Prakhata Pillar-Bug",KLD,0.11,0,0,0,28/12/2017
 1,"Precise Strike",AER,0.12,0,0,0,2/12/2017
 1,"Pressure Point",KLD,0.11,0,0,0,30/11/2017
 2,"Prey Upon",AER,0.13,0,0,0,2/12/2017
 2,"Prizefighter Construct",AER,0.13,0,0,0,2/12/2017
+1,"Prizefighter Construct",AER,0.13,0,0,3,25/12/2017
 2,"Prophetic Prism",KLD,0.14,0,0,0,30/11/2017
 1,"Prophetic Prism",KLD,0.14,0,0,3,2/12/2017
+1,"Prophetic Prism",KLD,0.15,0,0,3,13/12/2017
 1,"Protection of the Hekma",AKH,0.2,0,0,3,2/12/2017
 1,"Pursue Glory",AKH,0.12,0,0,3,2/12/2017
 1,"Pyramid of the Pantheon",AKH,0.4,0,0,3,2/12/2017
 1,"Quicksmith Genius",KLD,0.2,0,0,3,2/12/2017
 1,"Raise Dead",W17,0.39,0,0,3,2/12/2017
 1,"Ravenous Intruder",AER,0.21,0,0,0,2/12/2017
+1,"Ravenous Intruder",AER,0.22,0,0,3,25/12/2017
 1,"Reckless Fireweaver",KLD,0.14,0,0,0,30/11/2017
 1,"Reckless Racer",AER,0.2,0,0,0,2/12/2017
 1,"Refurbish",KLD,0.25,0,0,0,30/11/2017
 2,"Refurbish",KLD,0.25,0,0,3,2/12/2017
+1,"Renegade Freighter",KLD,0.14,0,0,0,28/12/2017
 2,"Renegade Freighter",KLD,0.13,0,0,3,2/12/2017
+1,"Renegade Freighter",KLD,0.14,0,0,3,13/12/2017
 1,"Renegade Map",AER,0.15,0,0,0,2/12/2017
 2,"Renegade Map",AER,0.15,0,0,3,2/12/2017
 1,"Renegade Rallier",AER,0.3,0,0,0,2/12/2017
@@ -260,12 +315,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Ruinous Gremlin",KLD,0.12,0,0,3,2/12/2017
 1,"Rush of Vitality",KLD,0.13,0,0,3,2/12/2017
 1,"Ruthless Sniper",AKH,0.2,0,0,3,2/12/2017
-2,"Sage of Shaila's Claim",KLD,0.14,0,0,0,30/11/2017
-1,"Sage of Shaila's Claim",KLD,0.15,0,0,3,2/12/2017
+3,"Sage of Shaila's Claim",KLD,0.14,0,0,0,28/12/2017
+2,"Sage of Shaila's Claim",KLD,0.15,0,0,3,13/12/2017
 1,"Scarab Feast",AKH,0.15,0,0,3,2/12/2017
 1,"Scattered Groves",AKH,2.0,0,0,3,2/12/2017
 1,"Scrapper Champion",AER,0.2,0,0,0,2/12/2017
 1,"Select for Inspection",KLD,0.12,0,0,0,30/11/2017
+2,"Select for Inspection",KLD,0.13,0,0,0,28/12/2017
 2,"Select for Inspection",KLD,0.12,0,0,3,2/12/2017
 1,"Sengir Vampire",W17,0.39,0,0,3,2/12/2017
 1,"Sequestered Stash",KLD,0.2,0,0,3,2/12/2017
@@ -278,10 +334,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Shielded Aether Thief",AER,0.21,0,0,3,2/12/2017
 1,"Shipwreck Moray",AER,0.12,0,0,0,2/12/2017
 1,"Shipwreck Moray",AER,0.12,0,0,3,2/12/2017
+1,"Shipwreck Moray",AER,0.13,0,0,3,25/12/2017
 1,"Shivan Dragon",W17,0.3,0,0,3,2/12/2017
 2,"Shock",AER,0.16,0,0,0,2/12/2017
 3,"Shock",AER,0.16,0,0,3,2/12/2017
 2,"Silkweaver Elite",AER,0.13,0,0,0,2/12/2017
+1,"Silkweaver Elite",AER,0.13,0,0,3,25/12/2017
+1,"Sky Skiff",KLD,0.13,0,0,0,28/12/2017
 1,"Sky Skiff",KLD,0.13,0,0,3,2/12/2017
 2,"Skyship Plunderer",AER,0.25,0,0,0,2/12/2017
 1,"Skyship Stalker",KLD,0.28,0,0,0,30/11/2017
@@ -295,6 +354,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Spire Patrol",AER,0.2,0,0,0,2/12/2017
 1,"Spireside Infiltrator",KLD,0.11,0,0,0,30/11/2017
 3,"Spireside Infiltrator",KLD,0.11,0,0,3,2/12/2017
+1,"Spontaneous Artist",KLD,0.11,0,0,0,28/12/2017
 1,"Stalking Tiger",W17,0.3,0,0,3,2/12/2017
 1,"Standing Troops",W17,0.16,0,0,3,2/12/2017
 1,"Stealer of Secrets",W17,0.32,0,0,3,2/12/2017
@@ -303,27 +363,31 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Submerged Boneyard",AKH,0.22,0,0,3,2/12/2017
 1,"Subtle Strike",KLD,0.11,0,0,0,30/11/2017
 1,"Subtle Strike",KLD,0.11,0,0,3,2/12/2017
+1,"Subtle Strike",KLD,0.13,0,0,3,13/12/2017
 1,"Sunscorched Desert",AKH,0.21,0,0,3,2/12/2017
 1,"Supernatural Stamina",AKH,0.14,0,0,3,2/12/2017
 1,"Supply Caravan",AKH,0.13,0,0,3,2/12/2017
 2,"Sweatworks Brawler",AER,0.14,0,0,0,2/12/2017
-1,"Sweatworks Brawler",AER,0.14,0,0,3,2/12/2017
+2,"Sweatworks Brawler",AER,0.14,0,0,3,25/12/2017
 1,"Tah-Crop Elite",AKH,0.13,0,0,3,2/12/2017
 1,"Take Down",KLD,0.13,0,0,3,2/12/2017
 2,"Take into Custody",AER,0.13,0,0,0,2/12/2017
 2,"Tasseled Dromedary",KLD,0.11,0,0,0,30/11/2017
 1,"Tasseled Dromedary",KLD,0.12,0,0,3,2/12/2017
 2,"Tattered Mummy",AKH,0.59,0,0,3,2/12/2017
-1,"Terror of the Fairgrounds",KLD,0.11,0,0,3,2/12/2017
+2,"Terror of the Fairgrounds",KLD,0.11,0,0,3,13/12/2017
 1,"Tezzeret's Touch",AER,0.24,0,0,0,2/12/2017
 1,"Those Who Serve",AKH,0.12,0,0,3,2/12/2017
 1,"Thriving Grubs",KLD,0.12,0,0,0,30/11/2017
 1,"Thriving Grubs",KLD,0.13,0,0,3,2/12/2017
+1,"Thriving Ibex",KLD,0.12,0,0,0,28/12/2017
 2,"Thriving Ibex",KLD,0.11,0,0,3,2/12/2017
 2,"Thriving Rats",KLD,0.1,0,0,0,30/11/2017
+1,"Thriving Rats",KLD,0.11,0,0,0,28/12/2017
 1,"Thundering Giant",W17,0.31,0,0,3,2/12/2017
 1,"Tidy Conclusion",KLD,0.11,0,0,0,30/11/2017
 2,"Timber Gorge",AKH,0.18,0,0,3,2/12/2017
+1,"Toolcraft Exemplar",KLD,0.47,0,0,0,28/12/2017
 1,"Torch Gauntlet",KLD,0.11,0,0,0,30/11/2017
 1,"Torch Gauntlet",KLD,0.11,0,0,3,2/12/2017
 2,"Tranquil Expanse",AKH,0.23,0,0,3,2/12/2017
@@ -342,14 +406,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Untamed Hunger",W17,0.3,0,0,3,2/12/2017
 1,"Untethered Express",AER,0.2,0,0,0,2/12/2017
 1,"Unwavering Initiate",AKH,0.13,0,0,3,2/12/2017
-1,"Vedalken Blademaster",KLD,0.11,0,0,3,2/12/2017
+2,"Vedalken Blademaster",KLD,0.11,0,0,3,13/12/2017
 4,"Verdant Automaton",AER,0.11,0,0,0,2/12/2017
+1,"Verdant Automaton",AER,0.13,0,0,3,25/12/2017
 1,"Victory's Herald",W17,0.25,0,0,3,2/12/2017
 1,"Vizier of Remedies",AKH,0.3,0,0,3,2/12/2017
 1,"Voltaic Brawler",KLD,0.28,0,0,3,2/12/2017
 1,"Warfire Javelineer",AKH,0.2,0,0,3,2/12/2017
 1,"Watchers of the Dead",AKH,0.21,0,0,3,2/12/2017
 1,"Watchful Automaton",AER,0.13,0,0,0,2/12/2017
+1,"Watchful Automaton",AER,0.14,0,0,3,25/12/2017
 1,"Weaponcraft Enthusiast",KLD,0.21,0,0,3,2/12/2017
 1,"Welder Automaton",AER,0.12,0,0,0,2/12/2017
 2,"Welder Automaton",AER,0.12,0,0,3,2/12/2017
@@ -360,9 +426,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Wild Wanderer",KLD,0.12,0,0,0,30/11/2017
 2,"Wild Wanderer",KLD,0.12,0,0,3,2/12/2017
 1,"Wily Bandar",KLD,0.13,0,0,0,30/11/2017
+1,"Wind Drake",KLD,0.12,0,0,0,28/12/2017
+1,"Wind-Kin Raiders",AER,0.2,0,0,3,25/12/2017
 1,"Winds of Rebuke",AKH,0.11,0,0,3,2/12/2017
 1,"Wing Snare",W17,0.28,0,0,3,2/12/2017
+1,"Wispweaver Angel",KLD,0.2,0,0,3,13/12/2017
 2,"Woodland Stream",AKH,0.17,0,0,3,2/12/2017
 1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,0,30/11/2017
+1,"Workshop Assistant",KLD,0.13,0,0,3,13/12/2017
 3,"Wrangle",AER,0.14,0,0,0,2/12/2017
 1,"Yahenni's Expertise",AER,0.78,0,0,0,2/12/2017

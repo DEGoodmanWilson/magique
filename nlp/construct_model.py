@@ -18,10 +18,14 @@ total_data = json.loads(json_data)
 x = total_data["text"]
 y = total_data["abilities"]
 
+# let's just do flying for now
+for item in y:
+
+
 mlb = MultiLabelBinarizer()
 y_enc = mlb.fit_transform(y)
 
-data_train, data_test, Y_train, Y_test = train_test_split(x, y_enc, test_size=0.5)
+data_train, data_test, Y_train, Y_test = train_test_split(x, y_enc, test_size=0.25)
 
 # vectorize bigrams
 print("Extracting features from the training data using a sparse vectorizer")
