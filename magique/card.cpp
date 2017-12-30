@@ -190,6 +190,16 @@ void from_json(const nlohmann::json &j, card &p)
     catch (std::out_of_range e)
     {}
 
+    try
+    {
+        for (const auto &a : j.at("triggers").get<std::vector<std::string>>())
+        {
+            p.triggers.emplace(a);
+        }
+    }
+    catch (std::out_of_range e)
+    {}
+
 }
 
 std::string to_string(const card::type &t)
@@ -280,6 +290,10 @@ void to_json(nlohmann::json &j, const card &p)
     if (p.affinities.size())
     {
         j["affinities"] = p.affinities;
+    }
+    if (p.triggers.size())
+    {
+        j["triggers"] = p.triggers;
     }
 
     j["name"] = p.name;

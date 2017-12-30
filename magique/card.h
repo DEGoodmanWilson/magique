@@ -142,6 +142,7 @@ struct card
 
     std::set<std::string> abilities;
     std::set<std::string> affinities;
+    std::set<std::string> triggers;
 };
 
 

@@ -5,6 +5,12 @@
       "create_token"
     ]
   },
+  "Acrobatic Maneuver": {
+    "abilities": [
+      "flicker_other",
+      "draw_cards"
+    ]
+  },
   "Aegis Automaton": {
     "abilities": [
       "return_own_to_hand"
@@ -12,9 +18,9 @@
   },
   "Aerial Responder": {
     "abilities": [
-      "vigilance",
       "flying",
-      "lifelink"
+      "lifelink",
+      "vigilance"
     ]
   },
   "Aeronaut Admiral": {
@@ -27,10 +33,10 @@
   },
   "Aether Chaser": {
     "abilities": [
-      "first strike",
-      "energy_source",
       "create_token",
-      "energy_sink"
+      "energy_sink",
+      "energy_source",
+      "first strike"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -38,9 +44,9 @@
   },
   "Aether Herder": {
     "abilities": [
-      "energy_source",
       "create_token",
-      "energy_sink"
+      "energy_sink",
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -48,10 +54,20 @@
   },
   "Aether Inspector": {
     "abilities": [
-      "vigilance",
-      "energy_source",
       "create_token",
-      "energy_sink"
+      "energy_sink",
+      "energy_source",
+      "vigilance"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
+  "Aether Meltdown": {
+    "abilities": [
+      "flash",
+      "energy_source",
+      "debuff_other"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -60,9 +76,9 @@
   "Aether Poisoner": {
     "abilities": [
       "create_token",
-      "energy_source",
+      "deathtouch",
       "energy_sink",
-      "deathtouch"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -70,10 +86,10 @@
   },
   "Aether Swooper": {
     "abilities": [
-      "flying",
-      "energy_source",
       "create_token",
-      "energy_sink"
+      "energy_sink",
+      "energy_source",
+      "flying"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -81,8 +97,8 @@
   },
   "Aether Theorist": {
     "abilities": [
-      "energy_source",
       "energy_sink",
+      "energy_source",
       "scry"
     ],
     "triggers": [
@@ -91,8 +107,8 @@
   },
   "Aether Tradewinds": {
     "abilities": [
-      "return_own_to_hand",
-      "return_opponent_to_hand"
+      "return_opponent_to_hand",
+      "return_own_to_hand"
     ]
   },
   "Aetherborn Marauder": {
@@ -106,8 +122,8 @@
   },
   "Aethergeode Miner": {
     "abilities": [
-      "energy_source",
       "energy_sink",
+      "energy_source",
       "flicker_self"
     ],
     "affinities": [
@@ -116,10 +132,10 @@
   },
   "Aetherstorm Roc": {
     "abilities": [
-      "flying",
-      "energy_source",
       "+counter_self",
-      "energy_sink"
+      "energy_sink",
+      "energy_source",
+      "flying"
     ],
     "affinities": [
       "Creature"
@@ -130,10 +146,10 @@
   },
   "Aetherstream Leopard": {
     "abilities": [
-      "trample",
-      "energy_source",
       "buff_self",
-      "energy_sink"
+      "energy_sink",
+      "energy_source",
+      "trample"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -151,10 +167,10 @@
   },
   "Ajani Unyielding": {
     "abilities": [
+      "+counter_other",
       "draw_cards",
-      "removal",
       "heal",
-      "+counter_other"
+      "removal"
     ],
     "affinities": [
       "Planeswalker"
@@ -177,8 +193,8 @@
   "Angler Drake": {
     "abilities": [
       "flying",
-      "return_own_to_hand",
-      "return_opponent_to_hand"
+      "return_opponent_to_hand",
+      "return_own_to_hand"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -186,17 +202,23 @@
   },
   "Appetite for the Unnatural": {
     "abilities": [
-      "removal",
-      "heal"
+      "heal",
+      "removal"
     ]
   },
   "Arborback Stomper": {
     "abilities": [
-      "trample",
-      "heal"
+      "heal",
+      "trample"
     ],
     "triggers": [
       "enters_the_battlefield"
+    ]
+  },
+  "Attune with Aether": {
+    "abilities": [
+      "tutor_land",
+      "energy_source"
     ]
   },
   "Audacious Infiltrator": {
@@ -234,15 +256,15 @@
   },
   "Baral, Chief of Compliance": {
     "abilities": [
-      "draw_cards",
       "discard_cards",
+      "draw_cards",
       "mana_reduction"
     ]
   },
   "Bastion Inventor": {
     "abilities": [
-      "improvise",
-      "hexproof"
+      "hexproof",
+      "improvise"
     ]
   },
   "Bitterblade Warrior": {
@@ -253,8 +275,8 @@
   },
   "Bloodhunter Bat": {
     "abilities": [
-      "flying",
       "direct_damage_player",
+      "flying",
       "heal"
     ],
     "triggers": [
@@ -284,8 +306,8 @@
   },
   "Cartouche of Ambition": {
     "abilities": [
-      "debuff_other",
       "buff_other",
+      "debuff_other",
       "lifelink"
     ],
     "triggers": [
@@ -294,8 +316,8 @@
   },
   "Cartouche of Knowledge": {
     "abilities": [
-      "draw_cards",
       "buff_other",
+      "draw_cards",
       "grant_flying"
     ],
     "triggers": [
@@ -304,8 +326,8 @@
   },
   "Cartouche of Solidarity": {
     "abilities": [
-      "create_token",
       "buff_other",
+      "create_token",
       "grant_first_strike"
     ],
     "triggers": [
@@ -332,8 +354,8 @@
   },
   "Cataclysmic Gearhulk": {
     "abilities": [
-      "vigilance",
-      "removal"
+      "removal",
+      "vigilance"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -438,14 +460,14 @@
   },
   "Countless Gears Renegade": {
     "abilities": [
-      "revolt",
-      "create_token"
+      "create_token",
+      "revolt"
     ]
   },
   "Crocodile of the Crossing": {
     "abilities": [
-      "haste",
-      "-counter_other"
+      "-counter_other",
+      "haste"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -469,8 +491,8 @@
   },
   "Dawnfeather Eagle": {
     "abilities": [
-      "flying",
-      "buff_other"
+      "buff_other",
+      "flying"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -481,17 +503,26 @@
       "force_tap_creature"
     ]
   },
+  "Decoction Module": {
+    "abilities": [
+      "energy_source",
+      "return_own_to_hand"
+    ],
+    "affinities": [
+      "Creature"
+    ]
+  },
   "Decommission": {
     "abilities": [
+      "heal",
       "removal",
-      "revolt",
-      "heal"
+      "revolt"
     ]
   },
   "Defiant Salvager": {
     "abilities": [
-      "sacrifice",
-      "+counter_self"
+      "+counter_self",
+      "sacrifice"
     ],
     "affinities": [
       "Artifact",
@@ -500,8 +531,8 @@
   },
   "Destructive Tampering": {
     "abilities": [
-      "removal",
-      "grant_cannot_block"
+      "grant_cannot_block",
+      "removal"
     ]
   },
   "Dhund Operative": {
@@ -511,6 +542,11 @@
     ],
     "affinities": [
       "Artifact"
+    ]
+  },
+  "Diabolic Tutor": {
+    "abilities": [
+      "tutor"
     ]
   },
   "Dispersal Technician": {
@@ -531,9 +567,9 @@
   },
   "Djeru's Resolve": {
     "abilities": [
-      "untap_creature",
+      "cycling",
       "prevent_damage",
-      "cycling"
+      "untap_creature"
     ]
   },
   "Doomed Dissenter": {
@@ -551,6 +587,14 @@
       "flying"
     ]
   },
+  "Dukhara Scavenger": {
+    "abilities": [
+      "graveyard_to_library"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
   "Durable Handicraft": {
     "abilities": [
       "+counter_other"
@@ -566,9 +610,9 @@
   },
   "Eddytrail Hawk": {
     "abilities": [
-      "flying",
-      "energy_source",
       "energy_sink",
+      "energy_source",
+      "flying",
       "grant_flying"
     ],
     "triggers": [
@@ -582,9 +626,9 @@
   },
   "Electrostatic Pummeler": {
     "abilities": [
-      "energy_source",
+      "buff_self",
       "energy_sink",
-      "buff_self"
+      "energy_source"
     ],
     "affinities": [
       "buff_other",
@@ -596,34 +640,36 @@
   },
   "Elegant Edgecrafters": {
     "abilities": [
-      "unblockable",
+      "+counter_self",
       "create_token",
-      "+counter_self"
+      "unblockable"
     ],
     "triggers": [
       "enters_the_battlefield"
     ]
   },
+  "Eliminate the Competition": {
+    "abilities": [
+      "removal"
+    ]
+  },
   "Embraal Gear-Smasher": {
-    "abilitiles": [
-      "direct_damage_player"
-    ],
     "affinities": [
       "Artifact"
     ]
   },
   "Empyreal Voyager": {
     "abilities": [
+      "energy_source",
       "flying",
-      "trample",
-      "energy_source"
+      "trample"
     ]
   },
   "Enraged Giant": {
     "abilities": [
-      "trample",
       "haste",
-      "improvise"
+      "improvise",
+      "trample"
     ]
   },
   "Essence Extraction": {
@@ -640,9 +686,6 @@
   "Fabrication Module": {
     "abilities": [
       "+counter_other"
-    ],
-    "afiinities": [
-      "energy_source"
     ]
   },
   "Fan Bearer": {
@@ -681,10 +724,15 @@
       "-counter_other"
     ]
   },
+  "Filigree Crawler": {
+    "abilities": [
+      "create_token"
+    ]
+  },
   "Filigree Familiar": {
     "abilities": [
-      "heal",
-      "draw_cards"
+      "draw_cards",
+      "heal"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -692,8 +740,8 @@
   },
   "Fireforger's Puzzleknot": {
     "abilities": [
-      "direct_damage_player",
-      "direct_damage_creature"
+      "direct_damage_creature",
+      "direct_damage_player"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -701,8 +749,8 @@
   },
   "Fling": {
     "abilities": [
-      "direct_damage_player",
-      "direct_damage_creature"
+      "direct_damage_creature",
+      "direct_damage_player"
     ],
     "affinities": [
       "Creature"
@@ -710,8 +758,8 @@
   },
   "Floodwaters": {
     "abilities": [
-      "return_to_own_hand",
-      "cycling"
+      "cycling",
+      "return_to_own_hand"
     ]
   },
   "Fortuitous Find": {
@@ -726,8 +774,8 @@
   },
   "Foundry Screecher": {
     "abilities": [
-      "flying",
-      "buff_self"
+      "buff_self",
+      "flying"
     ]
   },
   "Fourth Bridge Prowler": {
@@ -741,6 +789,12 @@
   "Fragmentize": {
     "abilities": [
       "removal"
+    ]
+  },
+  "Fretwork Colony": {
+    "abilities": [
+      "+counter_self",
+      "direct_damage_self"
     ]
   },
   "Garruk's Horde": {
@@ -779,14 +833,14 @@
   },
   "Gifted Aetherborn": {
     "abilities": [
-      "lifelink",
-      "deathtouch"
+      "deathtouch",
+      "lifelink"
     ]
   },
   "Glassblower's Puzzleknot": {
     "abilities": [
-      "scry",
-      "energy_source"
+      "energy_source",
+      "scry"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -794,16 +848,22 @@
   },
   "Glimmer of Genius": {
     "abilities": [
-      "scry",
-      "energy_source"
+      "energy_source",
+      "scry"
+    ]
+  },
+  "Glint-Sleeve Artisan": {
+    "abilities": [
+      "+counter_self",
+      "create_token"
     ]
   },
   "Glint-Sleeve Siphoner": {
     "abilities": [
-      "menace",
-      "energy_source",
-      "energy_sink",
       "draw_cards",
+      "energy_sink",
+      "energy_source",
+      "menace",
       "unheal"
     ],
     "triggers": [
@@ -817,8 +877,8 @@
   },
   "Greater Sandwurm": {
     "abilities": [
-      "unblockable",
-      "cycling"
+      "cycling",
+      "unblockable"
     ]
   },
   "Gremlin Infestation": {
@@ -832,9 +892,14 @@
   },
   "Harnessed Lightning": {
     "abilities": [
-      "energy_source",
+      "direct_damage_creature",
       "energy_sink",
-      "direct_damage_creature"
+      "energy_source"
+    ]
+  },
+  "Hazardous Conditions": {
+    "abilities": [
+      "debuff_other"
     ]
   },
   "Herald of the Fair": {
@@ -853,9 +918,9 @@
   },
   "Highspire Artisan": {
     "abilities": [
-      "reach",
       "+counter_self",
-      "create_token"
+      "create_token",
+      "reach"
     ]
   },
   "Highspire Infusion": {
@@ -865,8 +930,9 @@
     ]
   },
   "Hijack": {
-    "abilitiles": [
-      "control"
+    "abilities": [
+      "gain_control_artifact",
+      "gain_control_creature"
     ]
   },
   "Hinterland Drake": {
@@ -892,8 +958,13 @@
   },
   "Illusionist's Stratagem": {
     "abilities": [
-      "flicker",
-      "draw_cards"
+      "draw_cards",
+      "flicker_other"
+    ]
+  },
+  "Impeccable Timing": {
+    "abilities": [
+      "direct_damage_creature"
     ]
   },
   "Implement of Combustion": {
@@ -915,14 +986,14 @@
   },
   "Implement of Improvement": {
     "abilities": [
-      "heal",
-      "draw_cards"
+      "draw_cards",
+      "heal"
     ]
   },
   "Implement of Malice": {
     "abilities": [
-      "force_discard",
-      "draw_cards"
+      "draw_cards",
+      "force_discard"
     ]
   },
   "Initiate's Companion": {
@@ -952,6 +1023,13 @@
       "Artificer"
     ]
   },
+  "Iron League Steed": {
+    "abilities": [
+      "haste",
+      "+counter_self",
+      "create_token"
+    ]
+  },
   "Ironclad Revolutionary": {
     "abilities": [
       "+counter_self",
@@ -971,8 +1049,8 @@
   },
   "Janjeet Sentry": {
     "abilities": [
-      "energy_source",
       "energy_sink",
+      "energy_source",
       "untap"
     ],
     "triggers": [
@@ -987,9 +1065,9 @@
   },
   "Kefnet the Mindful": {
     "abilities": [
+      "draw_cards",
       "flying",
       "indestructable",
-      "draw_cards",
       "return_to_own_hand"
     ],
     "affinities": [
@@ -1017,9 +1095,9 @@
   },
   "Leave in the Dust": {
     "abilities": [
-      "return_to_own_hand",
+      "draw_cards",
       "return_to_other_hand",
-      "draw_cards"
+      "return_to_own_hand"
     ]
   },
   "Lifecraft Awakening": {
@@ -1029,15 +1107,24 @@
   },
   "Lifecraft Cavalry": {
     "abilities": [
-      "trample",
+      "+counter_self",
       "revolt",
+      "trample"
+    ]
+  },
+  "Lifecrafter's Gift": {
+    "abilities": [
+      "+counter_other"
+    ],
+    "affinities": [
+      "+counter_other",
       "+counter_self"
     ]
   },
   "Live Fast": {
     "abilities": [
-      "draw_cards",
       "direct_damage_self",
+      "draw_cards",
       "energy_source"
     ]
   },
@@ -1071,6 +1158,21 @@
       "enters_the_battlefield"
     ]
   },
+  "Maverick Thopterist": {
+    "abilities": [
+      "improvise",
+      "create_token"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
+  "Mechanized Production": {
+    "abilities": [
+      "copy",
+      "win_timer"
+    ]
+  },
   "Merchant's Dockhand": {
     "abilities": [
       "draw_cards",
@@ -1086,10 +1188,16 @@
       "grant_cannot_block"
     ]
   },
+  "Metallic Rebuke": {
+    "abilities": [
+      "improvise",
+      "counter"
+    ]
+  },
   "Metalspinner's Puzzleknot": {
     "abilities": [
-      "draw_cards",
-      "direct_damage_self"
+      "direct_damage_self",
+      "draw_cards"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1106,10 +1214,20 @@
       "force_discard_cards"
     ]
   },
+  "Minister of Inquiries": {
+    "abilities": [
+      "energy_source",
+      "energy_sink",
+      "library_to_graveyard"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
   "Mobile Garrison": {
     "abilities": [
-      "untap",
-      "crew"
+      "crew",
+      "untap"
     ]
   },
   "Monstrous Onslaught": {
@@ -1128,12 +1246,12 @@
   },
   "Multiform Wonder": {
     "abilities": [
-      "energy_source",
+      "buff_self",
       "energy_sink",
+      "energy_source",
       "grant_flying",
-      "grant_vigilance",
       "grant_lifelink",
-      "buff_self"
+      "grant_vigilance"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1146,8 +1264,8 @@
   },
   "Nef-Crop Entangler": {
     "abilities": [
-      "exert",
-      "buff_self"
+      "buff_self",
+      "exert"
     ]
   },
   "Negate": {
@@ -1157,9 +1275,9 @@
   },
   "Night Market Aeronaut": {
     "abilities": [
+      "+counter_self",
       "flying",
-      "revolt",
-      "+counter_self"
+      "revolt"
     ]
   },
   "Night Market Guard": {
@@ -1204,12 +1322,28 @@
       "buff_other"
     ]
   },
+  "Oath of Ajani": {
+    "abilities": [
+      "+counter_other"
+    ],
+    "affinities": [
+      "Planeswalker"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
   "Ornery Kudu": {
     "abilities": [
       "-counter_other"
     ],
     "triggers": [
       "enters_the_battlefield"
+    ]
+  },
+  "Outland Boar": {
+    "abilities": [
+      "unblockable"
     ]
   },
   "Oviya Pashiri, Sage Lifecrafter": {
@@ -1219,22 +1353,32 @@
   },
   "Pacification Array": {
     "abilities": [
-      "force_tap_creature",
-      "force_tap_artifact"
+      "force_tap_artifact",
+      "force_tap_creature"
     ]
   },
   "Painful Lesson": {
     "abilities": [
-      "draw_cards",
       "direct_damage_player",
-      "direct_damage_self"
+      "direct_damage_self",
+      "draw_cards"
+    ]
+  },
+  "Peema Aether-Seer": {
+    "abilities": [
+      "energy_source",
+      "energy_sink",
+      "force_block"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
     ]
   },
   "Peema Outrider": {
     "abilities": [
-      "trample",
+      "+counter_self",
       "create_token",
-      "+counter_self"
+      "trample"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1242,8 +1386,8 @@
   },
   "Pia Nalaar": {
     "abilities": [
-      "create_token",
       "buff_other",
+      "create_token",
       "grant_cannot_block"
     ],
     "affinities": [
@@ -1258,6 +1402,11 @@
       "flash"
     ]
   },
+  "Prakhata Pillar-Bug": {
+    "abilities": [
+      "lifelink"
+    ]
+  },
   "Precise Strike": {
     "abilities": [
       "buff_other",
@@ -1266,8 +1415,8 @@
   },
   "Pressure Point": {
     "abilities": [
-      "force_tap_creature",
-      "draw_cards"
+      "draw_cards",
+      "force_tap_creature"
     ]
   },
   "Prey Upon": {
@@ -1297,8 +1446,8 @@
   },
   "Pyramid of the Pantheon": {
     "abilities": [
-      "mana_transmute",
-      "mana_acceleration"
+      "mana_acceleration",
+      "mana_transmute"
     ]
   },
   "Quicksmith Genius": {
@@ -1329,14 +1478,14 @@
     ],
     "affinities": [
       "Artifact",
-      "flicker"
+      "flicker_other"
     ]
   },
   "Reckless Racer": {
     "abilities": [
-      "first_strike",
       "discard_cards",
-      "draw_cards"
+      "draw_cards",
+      "first_strike"
     ]
   },
   "Refurbish": {
@@ -1350,8 +1499,8 @@
   "Renegade Freighter": {
     "abilities": [
       "buff_self",
-      "trample",
-      "crew"
+      "crew",
+      "trample"
     ]
   },
   "Renegade Map": {
@@ -1361,26 +1510,26 @@
   },
   "Renegade Rallier": {
     "abilities": [
-      "revolt",
-      "return_to_battlefield"
+      "return_to_battlefield",
+      "revolt"
     ]
   },
   "Renegade's Getaway": {
     "abilities": [
-      "indestructible",
-      "create_token"
+      "create_token",
+      "indestructible"
     ]
   },
   "Reservoir Walker": {
     "abilities": [
-      "heal",
-      "energy_source"
+      "energy_source",
+      "heal"
     ]
   },
   "Resourceful Return": {
     "abilities": [
-      "return_to_hand",
-      "draw_cards"
+      "draw_cards",
+      "return_to_hand"
     ],
     "affinities": [
       "Artifact"
@@ -1393,8 +1542,8 @@
   },
   "Reverse Engineer": {
     "abilities": [
-      "improvise",
-      "draw_cards"
+      "draw_cards",
+      "improvise"
     ]
   },
   "Revoke Privileges": {
@@ -1415,10 +1564,10 @@
   },
   "Riparian Tiger": {
     "abilities": [
-      "trample",
-      "energy_source",
+      "buff_self",
       "energy_sink",
-      "buff_self"
+      "energy_source",
+      "trample"
     ]
   },
   "Rishkar's Expertise": {
@@ -1449,8 +1598,8 @@
   "Rush of Vitality": {
     "abilities": [
       "buff_other",
-      "grant_lifelink",
-      "grant_indestructible"
+      "grant_indestructible",
+      "grant_lifelink"
     ]
   },
   "Ruthless Sniper": {
@@ -1476,10 +1625,10 @@
   },
   "Scrapper Champion": {
     "abilities": [
+      "buff_self",
       "double_strike",
-      "energy_source",
       "energy_sink",
-      "buff_self"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1518,8 +1667,8 @@
   },
   "Shadowstorm Vizier": {
     "abilities": [
-      "flying",
-      "buff_self"
+      "buff_self",
+      "flying"
     ],
     "affinities": [
       "cycling"
@@ -1537,9 +1686,9 @@
   },
   "Shipwreck Moray": {
     "abilities": [
-      "energy_source",
+      "buff_self",
       "energy_sink",
-      "buff_self"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1552,21 +1701,21 @@
   },
   "Shock": {
     "abilities": [
-      "direct_damage_player",
-      "direct_damage_creature"
+      "direct_damage_creature",
+      "direct_damage_player"
     ]
   },
   "Silkweaver Elite": {
     "abilities": [
+      "draw_cards",
       "reach",
-      "revolt",
-      "draw_cards"
+      "revolt"
     ]
   },
   "Sky Skiff": {
     "abilities": [
-      "flying",
-      "crew"
+      "crew",
+      "flying"
     ]
   },
   "Skyship Plunderer": {
@@ -1576,16 +1725,16 @@
   },
   "Skyship Stalker": {
     "abilities": [
-      "flying",
       "buff_self",
       "first_strike",
+      "flying",
       "haste"
     ]
   },
   "Sly Requisitioner": {
     "abilities": [
-      "improvise",
-      "create_token"
+      "create_token",
+      "improvise"
     ],
     "affinities": [
       "Artifact"
@@ -1612,23 +1761,23 @@
   },
   "Sphinx of Magosi": {
     "abilities": [
-      "flying",
+      "+counter_self",
       "draw_cards",
-      "+counter_self"
+      "flying"
     ]
   },
   "Spidery Grasp": {
     "abilities": [
-      "untap_creature",
       "buff_other",
-      "grant_reach"
+      "grant_reach",
+      "untap_creature"
     ]
   },
   "Spire Patrol": {
     "abilities": [
       "flying",
-      "force_tap_creature",
-      "force_no_untap"
+      "force_no_untap",
+      "force_tap_creature"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1637,6 +1786,16 @@
   "Spireside Infiltrator": {
     "abilities": [
       "direct_damage_player"
+    ]
+  },
+  "Spontaneous Artist": {
+    "abilities": [
+      "energy_source",
+      "energy_sink",
+      "grant_haste"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
     ]
   },
   "Stalking Tiger": {
@@ -1661,8 +1820,8 @@
   },
   "Subtle Strike": {
     "abilities": [
-      "-counter_other",
-      "+counter_other"
+      "+counter_other",
+      "-counter_other"
     ]
   },
   "Supernatural Stamina": {
@@ -1686,9 +1845,9 @@
   },
   "Tah-Crop Elite": {
     "abilities": [
-      "flying",
+      "buff_other",
       "exert",
-      "buff_other"
+      "flying"
     ]
   },
   "Take Down": {
@@ -1698,8 +1857,8 @@
   },
   "Take into Custody": {
     "abilities": [
-      "force_tap",
-      "force_no_untap"
+      "force_no_untap",
+      "force_tap"
     ]
   },
   "Tattered Mummy": {
@@ -1718,9 +1877,9 @@
   },
   "Thriving Grubs": {
     "abilities": [
-      "energy_source",
+      "+counter_self",
       "energy_sink",
-      "+counter_self"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1728,9 +1887,9 @@
   },
   "Thriving Ibex": {
     "abilities": [
-      "energy_source",
+      "+counter_self",
       "energy_sink",
-      "+counter_self"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1738,9 +1897,9 @@
   },
   "Thriving Rats": {
     "abilities": [
-      "energy_source",
+      "+counter_self",
       "energy_sink",
-      "+counter_self"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1753,8 +1912,17 @@
   },
   "Tidy Conclusion": {
     "abilities": [
-      "removal",
-      "heal"
+      "heal",
+      "removal"
+    ],
+    "affinities": [
+      "Artifact"
+    ]
+  },
+  "Toolcraft Exemplar": {
+    "abilities": [
+      "buff_self",
+      "first_strike"
     ],
     "affinities": [
       "Artifact"
@@ -1827,8 +1995,8 @@
   },
   "Trial of Zeal": {
     "abilities": [
-      "direct_damage_player",
-      "direct_damage_creature"
+      "direct_damage_creature",
+      "direct_damage_player"
     ],
     "affinities": [
       "Cartouche"
@@ -1845,8 +2013,8 @@
   },
   "Unbridled Growth": {
     "abilities": [
-      "mana_transmute",
-      "draw_cards"
+      "draw_cards",
+      "mana_transmute"
     ]
   },
   "Universal Solvent": {
@@ -1862,15 +2030,15 @@
   },
   "Untethered Express": {
     "abilities": [
-      "trample",
       "+counter_self",
-      "crew"
+      "crew",
+      "trample"
     ]
   },
   "Unwavering Initiate": {
     "abilities": [
-      "vigilance",
-      "embalm"
+      "embalm",
+      "vigilance"
     ]
   },
   "Vedalken Blademaster": {
@@ -1893,14 +2061,11 @@
       "grant_lifelink"
     ]
   },
-  "Vizier of Remedies": {
-    "abilities": []
-  },
   "Voltaic Brawler": {
     "abilities": [
-      "energy_source",
-      "energy_sink",
       "buff_self",
+      "energy_sink",
+      "energy_source",
       "trample"
     ],
     "triggers": [
@@ -1963,9 +2128,9 @@
   },
   "Whirler Virtuoso": {
     "abilities": [
-      "energy_source",
+      "create_token",
       "energy_sink",
-      "create_token"
+      "energy_source"
     ],
     "triggers": [
       "enters_the_battlefield"
@@ -1984,10 +2149,21 @@
       "indestructible"
     ]
   },
+  "Wind Drake": {
+    "abilities": [
+      "flying"
+    ]
+  },
+  "Wind-Kin Raiders": {
+    "abilities": [
+      "improvise",
+      "flying"
+    ]
+  },
   "Winds of Rebuke": {
     "abilities": [
-      "return_own_to_hand",
-      "return_opponent_to_hand"
+      "return_opponent_to_hand",
+      "return_own_to_hand"
     ]
   },
   "Wing Snare": {
@@ -1995,13 +2171,27 @@
       "removal"
     ]
   },
-  "Woodweaver's Puzzleknot": {
+  "Wispweaver Angel": {
     "abilities": [
-      "heal",
-      "energy_source"
+      "flying",
+      "flicker_other"
     ],
     "triggers": [
       "enters_the_battlefield"
+    ]
+  },
+  "Woodweaver's Puzzleknot": {
+    "abilities": [
+      "energy_source",
+      "heal"
+    ],
+    "triggers": [
+      "enters_the_battlefield"
+    ]
+  },
+  "Workshop Assistant": {
+    "abilities": [
+      "graveyard_to_hand"
     ]
   },
   "Wrangle": {
