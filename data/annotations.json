@@ -764,7 +764,7 @@
   },
   "Fortuitous Find": {
     "abilities": [
-      "return_to_own_hand"
+      "graveyard_to_hand"
     ]
   },
   "Foundry Assembler": {
