@@ -100,7 +100,7 @@ int main(int argc, char **argv)
         }
     }
 
-    auto chromo_size = 60 - 24; //  30-card collection, with 12 lands and a key card specified
+    auto chromo_size = 60 - 26; //  60-card collection, with 26 lands
     ga2Population pop{pop_size, chromo_size};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
