@@ -272,10 +272,9 @@ namespace magique {
         std::array<double, 11> ideal_cmc_distribution{0, 9, 13, 9, 3, 0, 0, 0, 0, 0, 0};
         // normalize
         auto sum = std::accumulate(ideal_cmc_distribution.begin(), ideal_cmc_distribution.end(), 0);
-        std::for_each(ideal_cmc_distribution.begin(), ideal_cmc_distribution.end(),
-                      [=](auto &item) {
-                          item = item / sum;
-                      });
+        for (auto &item : ideal_cmc_distribution) {
+            item = item / sum;
+        }
 
         double cmc_distance{0.0};
         for (int i = cost_dist.size() - 1; i > 0; --i) // don't count zero-CMC cards
@@ -308,10 +307,9 @@ namespace magique {
                                             return value + p.second;
                                         }
         );
-        std::for_each(ideal_type_distribution.begin(), ideal_type_distribution.begin(),
-                      [=](auto &item) {
-                          item.second = item.second / type_sum;
-                      });
+        for (auto &item : ideal_type_distribution) {
+            item.second = item.second / type_sum;
+        }
 
         double type_distance{0.0};
         for (const auto &type : card::all_types) {
@@ -354,6 +352,15 @@ namespace magique {
     }
 
     void to_json(nlohmann::json &j, const deck &d) {
+
+        j["_list"] = nlohmann::json::array();
+        for(const auto& card: d.cards_)
+        {
+            j["_list"].push_back(card.name);
+        }
+        std::sort(j["_list"].begin(), j["_list"].end());
+        j["_count"] = d.cards_.size();
+
         j["rank"] = d.rank_;
         j["cards"] = d.cards_;
         j["reasons"] = d.reasons_;
