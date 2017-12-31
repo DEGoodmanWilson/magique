@@ -207,11 +207,7 @@ bool ga2Population::replace(void) {
     return _replaceFunc();
 }
 
-//TODO this function assumes merely positive fitness values!
 int ga2Population::_selectRoulette(void) {
-    // notice that this algorithm requires that all fitnesses be POSITIVE. If we have any negative fitnesses, we need to normalize, by offsetting everything
-
-
     double minFitness = MAXFLOAT;
     double partialSum = 0.0, sumFitness = 0.0;
     double wheelPosition = 0.0;
