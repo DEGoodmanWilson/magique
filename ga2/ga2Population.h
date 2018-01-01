@@ -25,6 +25,7 @@
 #include <vector>
 #include <functional>
 #include "ga2Chromosome.h"
+#include "../ThreadPool/ThreadPool.h"
 
 ///A class representing a population of chromosomes
 /**
@@ -85,9 +86,12 @@ class ga2Population
     int _crossCount;
     int _mutationCount;
 
+    ThreadPool::ThreadPool thread_pool_;
+    uint32_t num_threads_;
+
 public:
     ///The constructor.
-    ga2Population(int initialSize, int chromoSize);
+    ga2Population(int initialSize, int chromoSize, uint32_t num_threads=std::thread::hardware_concurrency() - 1);
 
     ///The destructor.
     virtual ~ga2Population();

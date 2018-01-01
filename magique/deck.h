@@ -34,12 +34,14 @@ public:
         key_cards_.push_back(key);
     }
 
-
-    double evaluate();
+    double evaluate() { return rank_; }
 
     friend void to_json(nlohmann::json &j, const deck &p);
 
     friend void from_json(const nlohmann::json &j, deck &p);
+
+    static uint16_t colors;
+    static uint16_t deck_minimum;
 
 public:
     const interactions interactions_;

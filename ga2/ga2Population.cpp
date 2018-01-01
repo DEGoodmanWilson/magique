@@ -23,7 +23,6 @@
 #include <math.h>
 #include "ga2.h"
 #include <numeric>
-#include "../ThreadPool/ThreadPool.h"
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -35,8 +34,8 @@
  *
  * Constructs a population of chromosomes, pre-allocating each.
  */
-ga2Population::ga2Population(int initialSize, int chromoSize) : _size(initialSize),
-                                                                _chromoSize(chromoSize) {
+ga2Population::ga2Population(int initialSize, int chromoSize, uint32_t num_threads) : _size(initialSize),
+                                                                _chromoSize(chromoSize), thread_pool_{num_threads}, num_threads_{num_threads} {
     //now initialize random number generator
     srand(time(NULL));
     _integer = false;
@@ -81,16 +80,14 @@ bool ga2Population::init(void) {
         return false;
     }
 
-    // TODO move this into a helper function
-    auto num_threads = std::thread::hardware_concurrency() - 1;
-    auto task_size = _size / num_threads;
+    auto task_size = (num_threads_ > 0) ? _size / num_threads_ : 0;
     auto start{0};
 
     std::vector<ThreadPool::ThreadPool::TaskFuture<void>> futures;
     ThreadPool::ThreadSafeQueue<ga2Chromosome> chromos;
 
-    for (auto t = 0; t < num_threads; ++t) {
-        futures.emplace_back(ThreadPool::DefaultThreadPool::submitJob([&, start=start]() -> auto {
+    for (auto t = 0; t < num_threads_; ++t) {
+        futures.emplace_back(thread_pool_.submit([&, start=start]() -> auto {
 
             for (auto i = start; i < start + task_size; ++i) {
                 ga2Chromosome newChromo(_chromoSize);
@@ -411,16 +408,14 @@ bool ga2Population::_mutateFunc(ga2Chromosome &a) {
 //if _isSorted is false!! ie, it only works on sorted populations!!
 bool ga2Population::_replaceSteadyState(void) {
 
-    // TODO move this into a helper function
-    auto num_threads = std::thread::hardware_concurrency() - 1;
-    auto task_size = _nextGen.size() / num_threads;
+    auto task_size = (num_threads_ > 0) ? _nextGen.size() / num_threads_ : 0;
     auto start{0};
 
     std::vector<ThreadPool::ThreadPool::TaskFuture<void>> futures;
     ThreadPool::ThreadSafeQueue<ga2Chromosome> chromos;
 
-    for (auto t = 0; t < num_threads; ++t) {
-        futures.emplace_back(ThreadPool::DefaultThreadPool::submitJob([&, start=start]() -> auto {
+    for (auto t = 0; t < num_threads_; ++t) {
+        futures.emplace_back(thread_pool_.submit([&, start=start]() -> auto {
             for (auto i = start; i < start + task_size; ++i) {
                 _nextGen[i].evaluate();
             }

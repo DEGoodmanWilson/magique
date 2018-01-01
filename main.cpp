@@ -34,6 +34,9 @@ static const char USAGE[] =
       -p <size> --population=<size>  Set initial population size [default: 1000]
       -g <count> --generations=<count>  Set the number of generations to run [default: 1000]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
+      -t <threads> --thread_num=<threads>  Set the number of threads to use, use 0 to indicate enough threads to saturate available CPUs [default: 0]
+      -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
+      -d <deck_size> --deck_size=<deck_size>  The number of non-land cards to use. [default: 34]
 )";
 
 
@@ -61,6 +64,9 @@ int main(int argc, char **argv)
     int pop_size;
     uint64_t generations;
     std::vector<std::string> key_cards;
+    uint32_t thread_num;
+    uint8_t colors;
+    uint16_t deck_size;
 
     for (auto const &arg : args)
     {
@@ -69,12 +75,28 @@ int main(int argc, char **argv)
         else if (arg.first == "--population") pop_size = arg.second.asLong();
         else if (arg.first == "<collection-filename>") collection_filename = arg.second.asString();
         else if (arg.first == "--key_card") key_cards = arg.second.asStringList();
+        else if (arg.first == "--thread_num") {
+            thread_num = arg.second.asLong();
+            if(thread_num == 0)
+            {
+                thread_num = std::thread::hardware_concurrency() - 1;
+            }
+            else
+            {
+                thread_num--; // 1 thread means no additional threads.
+            }
+        }
+        else if (arg.first == "--colors") colors = arg.second.asLong();
+        else if (arg.first == "--deck_size") deck_size = arg.second.asLong();
     }
 
 //    exit(0);
 
 
 
+    // set deck evaluation options
+    deck::colors = colors;
+    deck::deck_minimum = deck_size;
 
     // fire up a catalog
     catalog master_catalog{"data/catalog.json", "data/annotations.json"};
@@ -100,8 +122,10 @@ int main(int argc, char **argv)
         }
     }
 
-    auto chromo_size = 60 - 26; //  60-card collection, with 26 lands
-    ga2Population pop{pop_size, chromo_size};
+    double wiggle = deck_size * 0.10;
+    if(wiggle < 1.0) wiggle = 1.0;
+    auto chromo_size = deck_size + static_cast<uint16_t>(wiggle); //  add 10% extra for the GA
+    ga2Population pop{pop_size, chromo_size, thread_num};
     std::vector<ga2Gene> min, max;
     for (auto i = 0; i < chromo_size; ++i)
     {
@@ -112,7 +136,7 @@ int main(int argc, char **argv)
     pop.setMaxRanges(max);
     pop.setMutationRate(0.2); //TODO decrease over time.
     pop.setCrossoverRate(1.0);
-    pop.setCrossoverType(GA2_CROSSOVER_ONEPOINT);
+    pop.setCrossoverType(GA2_CROSSOVER_UNIFORM);
     pop.setInteger(true);
     pop.setReplacementSize(pop_size / 2);
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
