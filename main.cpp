@@ -158,7 +158,7 @@ int main(int argc, char **argv)
         pop.mutate();
         pop.replace();
         pop.evaluate();
-        std::cout << "." << std::flush;
+        std::cerr << "." << std::flush;
 //        std::cout << pop.getMinFitness() << " : " << pop.getAvgFitness() << " : " << pop.getMaxFitness() << std::endl;
 //        deck d{pop.getBestFitChromosome(), dons_collection, interactions};
 //        auto genes = pop.getBestFitChromosome();
@@ -178,7 +178,7 @@ int main(int argc, char **argv)
         }
     }
 
-    std::cout << std::endl;
+    std::cerr << std::endl;
 
     deck d{pop.getBestFitChromosome(), dons_collection, interactions};
     auto rank = d.evaluate();
