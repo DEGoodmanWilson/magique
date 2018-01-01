@@ -57,15 +57,17 @@ card collection::at(uint64_t loc) const
     return catalog_.at(cards_[loc]);
 }
 
-uint64_t collection::index_at(std::string name) const
+uint64_t collection::index_at(std::string name, int64_t index_past) const
 {
-    uint64_t i{0};
+    int64_t i{0};
     for(i = 0 ; i < cards_.size(); ++i)
     {
-        if (cards_[i] == name)
+        if ( (cards_[i] == name) && (i > index_past) )
             return i;
     }
-    return UINT64_MAX; //TODO hack
+
+    std::out_of_range e{"No card " + name};
+    throw(e);
 }
 
 uint64_t collection::count()

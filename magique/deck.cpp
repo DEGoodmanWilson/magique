@@ -136,9 +136,13 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, i
     };
 
     //add key cards first
+    std::unordered_map<std::string, int64_t> indices_seen;
     for (const auto &card :key_cards_)
     {
-        auto index = collection.index_at(card.name);
+        int64_t last_index{0};
+        if(indices_seen.count(card.name)) last_index = indices_seen[card.name];
+        auto index = collection.index_at(card.name, last_index);
+        indices_seen[card.name] = index;
         collection_duplicates.insert(index); // TODO handle multiple key cards of same name!
 
         dupes.insert(card.name);
