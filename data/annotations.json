@@ -259,6 +259,11 @@
       "discard_cards",
       "draw_cards",
       "mana_reduction"
+    ],
+    "affinities": [
+      "Instant",
+      "Sorcery",
+      "counter"
     ]
   },
   "Bastion Inventor": {
