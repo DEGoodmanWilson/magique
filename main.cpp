@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "docopt/docopt.h"
+#include "ezETAProgressBar/ezETAProgressBar.hpp"
 
 #include "magique/catalog.h"
 #include "magique/collection.h"
@@ -70,7 +71,6 @@ int main(int argc, char **argv)
 
     for (auto const &arg : args)
     {
-//        std::cout << arg.first << " " << arg.second << std::endl;
         if (arg.first == "--generations") generations = arg.second.asLong();
         else if (arg.first == "--population") pop_size = arg.second.asLong();
         else if (arg.first == "<collection-filename>") collection_filename = arg.second.asString();
@@ -90,8 +90,6 @@ int main(int argc, char **argv)
         else if (arg.first == "--deck_size") deck_size = arg.second.asLong();
     }
 
-//    exit(0);
-
 
 
     // set deck evaluation options
@@ -108,7 +106,6 @@ int main(int argc, char **argv)
     interactions interactions{"data/interactions.json"};
 
     // pick a key card
-//    deck::add_key_card(master_catalog.at("Electrostatic Pummeler"));
     for (const auto &card : key_cards)
     {
         try
@@ -151,6 +148,9 @@ int main(int argc, char **argv)
     pop.init();
     pop.evaluate();
 
+    ez::ezETAProgressBar eta(generations);
+    eta.start();
+
     for (auto gen = 0; gen < generations; ++gen)
     {
         pop.select();
@@ -158,18 +158,13 @@ int main(int argc, char **argv)
         pop.mutate();
         pop.replace();
         pop.evaluate();
-        std::cerr << "." << std::flush;
-//        std::cout << pop.getMinFitness() << " : " << pop.getAvgFitness() << " : " << pop.getMaxFitness() << std::endl;
-//        deck d{pop.getBestFitChromosome(), dons_collection, interactions};
-//        auto genes = pop.getBestFitChromosome();
-//        deck d{genes, dons_collection, interactions};
-//        nlohmann::json j{d};
-//        std::cout << j.dump(4) << std::endl;
-        if ((gen + 1) % 100 == 0) std::cout << std::endl;
+
+        ++eta;
 
         if (dump_and_abort)
         {
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
+            eta.done();
             deck d{pop.getBestFitChromosome(), dons_collection, interactions};
             auto rank = d.evaluate();
             nlohmann::json j{d};
@@ -178,7 +173,7 @@ int main(int argc, char **argv)
         }
     }
 
-    std::cerr << std::endl;
+    eta.done();
 
     deck d{pop.getBestFitChromosome(), dons_collection, interactions};
     auto rank = d.evaluate();

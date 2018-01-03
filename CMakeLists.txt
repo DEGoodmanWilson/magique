@@ -45,7 +45,11 @@ set(THREADPOOL_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/ThreadPool/ThreadPool.h
         )
 
-add_executable(${PROJECT_NAME} main.cpp ${GA2_SOURCE_FILES} ${DOCOPT_SOURCE_FILES} ${THREADPOOL_SOURCE_FILES} ${MAGIQUE_SOURCE_FILES})
+set(PROGRESSBAR_SOURCE_FILES
+        ${CMAKE_SOURCE_DIR}/ezETAProgressBar/ezETAProgressBar.hpp
+        )
+
+add_executable(${PROJECT_NAME} main.cpp ${GA2_SOURCE_FILES} ${DOCOPT_SOURCE_FILES} ${THREADPOOL_SOURCE_FILES} ${PROGRESSBAR_SOURCE_FILES} ${MAGIQUE_SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 add_subdirectory(preprocessor)
