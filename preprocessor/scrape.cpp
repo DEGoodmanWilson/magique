@@ -11,6 +11,8 @@ int main(void)
     std::string next_url{"https://api.magicthegathering.io/v1/cards"};
     bool done{false};
 
+    std::cout << "[" << std::endl;
+
     while(!done)
     {
         auto result = cpr::Get(cpr::Url{next_url});
@@ -39,7 +41,9 @@ int main(void)
         nlohmann::json temp = nlohmann::json::parse(result.text);
         for(auto card : temp["cards"])
         {
-            std::cout << card["name"] << ":" << card.dump(4) << "," << std::endl;
+            std::cout << card.dump(4) << "," << std::endl;
         }
     }
+
+    std::cout << '\b' << '\b' << std::endl << "]" << std::endl;
 }
