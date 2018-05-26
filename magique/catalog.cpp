@@ -3,8 +3,9 @@
 //
 
 #include "catalog.h"
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 #include <fstream>
+#include <iostream>
 
 namespace magique
 {

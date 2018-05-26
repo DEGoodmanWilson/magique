@@ -4,7 +4,7 @@
 
 #include <fstream>
 #include <catch.hpp>
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 #include "../magique/card.h"
 
 TEST_CASE("We can construct a card from some JSON")

@@ -4,7 +4,7 @@
 
 #include <regex>
 #include "card.h"
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 
 namespace magique
 {

@@ -1,14 +1,14 @@
 [requires]
 # luna/4.0.0@DEGoodmanWilson/stable
 # ga2/1.0.0@DEGoodmanWilson/testing
-nl-json/2.1.1@genvidtech/1.4.0
+jsonformoderncpp/[~=3.1]@vthiery/stable
 #docopt.cpp/0.6.2@hoxnox/testing
 
 # for scraping
-cpr/1.2.0@DEGoodmanWilson/stable
+cpr/[~=1.3]@DEGoodmanWilson/stable
 
 # for testing
-catch2/2.1.1@bincrafters/stable
+catch2/[~=2.1]@bincrafters/stable
 
 [generators]
 cmake

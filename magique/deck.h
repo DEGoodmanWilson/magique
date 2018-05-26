@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 #include "card.h"
 #include "catalog.h"
 #include "collection.h"

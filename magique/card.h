@@ -9,7 +9,7 @@
 #include <locale>
 #include <set>
 #include <unordered_map>
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 #include <experimental/optional>
 
 namespace magique

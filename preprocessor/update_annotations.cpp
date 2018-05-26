@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
-#include <json.hpp>
+#include <nlohmann/json.hpp>
 #include "../magique/card.h"
 #include "../magique/collection.h"
 
