@@ -67,7 +67,7 @@ There is so much work to do. So much.
 
 I'm so glad you asked. Just start digging in on anything you see that's missing that you can fix. Even just more data on how Magic cards work together would be awesome.
 
-And if you just want to show your appreciation, you can always send me a booster. Call it research ;) (Actively collecting French- and English-language Standard-legal cards, but honestly cards from any expansion and in any and all languages heartily accepted!)
+And if you just want to show your appreciation, you can always use my [Cardmarket affiliate link](https://cardmarket.com/?referrer=DEGoodmanWilson) when buying for yourself, or if you're feeling especially generous [Cardmarket coupons](https://www.cardmarket.com/en/Magic/MainPage/buyCoupons) are always welcome!
 
 ## Notes on abilities and interactions
 
