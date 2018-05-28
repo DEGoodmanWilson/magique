@@ -11,7 +11,8 @@ namespace magique
 interactions::interactions(std::string filename)
 {
     std::ifstream ifs(filename);
-    nlohmann::json interactions{ifs};
+    nlohmann::json interactions;
+    ifs >> interactions;
     ifs.close();
 
     // ok what we have is an object of interactions. The key is the interaction name.

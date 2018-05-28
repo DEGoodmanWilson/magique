@@ -97,7 +97,7 @@ int main(int argc, char **argv)
     deck::deck_minimum = deck_size;
 
     // fire up a catalog
-    catalog master_catalog{"data/catalog.json", "data/annotations.json"};
+    catalog master_catalog{"data/AllCards.json", "data/annotations.json"};
 
     // load up the user's personal collection
     collection dons_collection{collection_filename, master_catalog};

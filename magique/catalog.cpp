@@ -10,18 +10,17 @@
 namespace magique
 {
 
-catalog::catalog(std::string filename, std::string annotations_filename)
+catalog::catalog(std::string catalog_filename, std::string annotations_filename)
 {
-    std::ifstream ifs(filename);
-    nlohmann::json card_list_json{ifs};
+    std::ifstream ifs(catalog_filename);
+    nlohmann::json card_list_json;
+    ifs >> card_list_json;
     ifs.close();
 
+    ifs.open(annotations_filename);
     nlohmann::json annotations;
-    if (!annotations_filename.empty())
-    {
-        ifs.open(annotations_filename);
-        annotations << ifs;
-    }
+    ifs >> annotations;
+    ifs.close();
 
 
     /* annotations look like:
@@ -37,10 +36,11 @@ catalog::catalog(std::string filename, std::string annotations_filename)
 
 
 
-    //assume for now that it is just a vector of cards
-    for (auto &card_json: card_list_json)
+    // AllJson from MTGJSON is one large object
+    for (nlohmann::json::iterator card_kv = card_list_json.begin(); card_kv != card_list_json.end(); ++card_kv)
     {
-        auto name = card_json["name"].get<std::string>();
+        auto name = card_kv.key();
+        auto card_json = card_kv.value();
         //load its annotations, if any
         try
         {
@@ -52,9 +52,10 @@ catalog::catalog(std::string filename, std::string annotations_filename)
         }
         catch (std::out_of_range e)
         {}
+        cards_by_name_[name] = card_json.get<card>();
     }
+    //        cards_by_name_ = card_list_json.get<decltype(cards_by_name_)>();
 
-    cards_by_name_ = card_list_json.get<decltype(cards_by_name_)>();
 }
 
 const card &catalog::at(std::string name) const

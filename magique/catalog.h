@@ -14,7 +14,7 @@ namespace magique
 class catalog
 {
 public:
-    catalog(std::string filename, std::string annotations_filename="");
+    catalog(std::string catalog_filename, std::string annotations_filename);
 
     const card &at(std::string name) const;
 
