@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <algorithm>
 #include <string>
 #include <unordered_map>
 #include "card.h"
@@ -14,7 +15,7 @@ namespace magique
 class catalog
 {
 public:
-    catalog(std::string catalog_filename, std::string annotations_filename);
+    catalog(std::string path);
 
     const card &at(std::string name) const;
 

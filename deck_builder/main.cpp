@@ -27,7 +27,7 @@ static const char USAGE[] =
         R"(magique.
 
     Usage:
-      magique <collection-filename> [options] [-k <card>]...
+      magique <data-pathname> <collection-filename> [options] [-k <card>]...
 
     Options:
       -h --help     Show this screen.
@@ -61,6 +61,7 @@ int main(int argc, char **argv)
                              "Naval Fate 2.0");  // version string
 
 
+    std::string data_pathname;
     std::string collection_filename;
     int pop_size;
     uint64_t generations;
@@ -73,6 +74,7 @@ int main(int argc, char **argv)
     {
         if (arg.first == "--generations") generations = arg.second.asLong();
         else if (arg.first == "--population") pop_size = arg.second.asLong();
+        else if (arg.first == "<data-pathname>") data_pathname = arg.second.asString();
         else if (arg.first == "<collection-filename>") collection_filename = arg.second.asString();
         else if (arg.first == "--key_card") key_cards = arg.second.asStringList();
         else if (arg.first == "--thread_num") {
@@ -97,13 +99,13 @@ int main(int argc, char **argv)
     deck::deck_minimum = deck_size;
 
     // fire up a catalog
-    catalog master_catalog{"data/AllCards-x.json", "data/annotations.json"};
+    catalog master_catalog{data_pathname};
 
     // load up the user's personal collection
-    collection dons_collection{collection_filename, master_catalog};
+    collection dons_collection{data_pathname, collection_filename, master_catalog};
 
     // get the interactions data
-    interactions interactions{"data/interactions.json"};
+    interactions interactions{data_pathname};
 
     // pick a key card
     for (const auto &card : key_cards)

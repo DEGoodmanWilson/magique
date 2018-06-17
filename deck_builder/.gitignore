@@ -2,3 +2,8 @@ conanbuildinfo.cmake
 cmake-build-*/
 conanbuildinfo.txt
 conaninfo.txt
+CMakeCache.txt
+CMakeFiles/
+Makefile
+bin/
+cmake_install.cmake

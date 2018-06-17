@@ -13,8 +13,7 @@ namespace magique
 class interactions
 {
 public:
-    interactions() = default;
-    interactions(std::string filename);
+    interactions(std::string path);
 
     double evaluate(const card &a, const card &b) const;
     using interaction = std::unordered_map<std::string, double>;

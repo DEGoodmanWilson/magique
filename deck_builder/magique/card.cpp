@@ -6,6 +6,8 @@
 #include "card.h"
 #include <nlohmann/json.hpp>
 
+#include <iostream>
+
 namespace magique
 {
 
@@ -115,14 +117,14 @@ void from_json(const nlohmann::json &j, card &p)
             supertypes = j.at("supertypes").get<std::set<std::string>>();
         }
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
     try
     {
         p.types = card::types_from_array(j.at("types").get<std::set<std::string>>(), supertypes);
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
     try
@@ -132,7 +134,7 @@ void from_json(const nlohmann::json &j, card &p)
             p.subtypes = j.at("subtypes").get<std::set<std::string>>();
         }
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
 
@@ -140,7 +142,7 @@ void from_json(const nlohmann::json &j, card &p)
     {
         p.color_identity = card::color_identities_from_array(j.at("colorIdentity").get<std::set<std::string>>());
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {
         p.color_identity = {card::color::colorless};
     }
@@ -149,7 +151,7 @@ void from_json(const nlohmann::json &j, card &p)
     {
         p.text = j.at("text").get<std::string>();
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
 
@@ -157,7 +159,7 @@ void from_json(const nlohmann::json &j, card &p)
     {
         p.power = j.at("power").get<std::string>();
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
 
@@ -165,7 +167,7 @@ void from_json(const nlohmann::json &j, card &p)
     {
         p.toughness = j.at("toughness").get<std::string>();
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
     p.converted_mana_cost = j.at("cmc").get<uint64_t>();
@@ -177,7 +179,7 @@ void from_json(const nlohmann::json &j, card &p)
             p.abilities.emplace(a);
         }
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
     try
@@ -187,7 +189,7 @@ void from_json(const nlohmann::json &j, card &p)
             p.affinities.emplace(a);
         }
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
 
     try
@@ -197,9 +199,8 @@ void from_json(const nlohmann::json &j, card &p)
             p.triggers.emplace(a);
         }
     }
-    catch (nlohmann::json::out_of_range e)
+    catch (nlohmann::json::out_of_range &e)
     {}
-
 }
 
 std::string to_string(const card::type &t)

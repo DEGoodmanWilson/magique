@@ -10,14 +10,15 @@
 namespace magique
 {
 
-catalog::catalog(std::string catalog_filename, std::string annotations_filename)
+catalog::catalog(std::string path)
+    //catalog_filename, std::string annotations_filename)
 {
-    std::ifstream ifs(catalog_filename);
+    std::ifstream ifs(path + "/AllCards-x.json");
     nlohmann::json card_list_json;
     ifs >> card_list_json;
     ifs.close();
 
-    ifs.open(annotations_filename);
+    ifs.open(path + "/annotations.json");
     nlohmann::json annotations;
     ifs >> annotations;
     ifs.close();
@@ -40,6 +41,8 @@ catalog::catalog(std::string catalog_filename, std::string annotations_filename)
     for (nlohmann::json::iterator card_kv = card_list_json.begin(); card_kv != card_list_json.end(); ++card_kv)
     {
         auto name = card_kv.key();
+        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+
         auto card_json = card_kv.value();
         //load its annotations, if any
         try
@@ -60,6 +63,8 @@ catalog::catalog(std::string catalog_filename, std::string annotations_filename)
 
 const card &catalog::at(std::string name) const
 {
+    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+
     card c;
     try
     {
@@ -67,7 +72,7 @@ const card &catalog::at(std::string name) const
     }
     catch (std::out_of_range e)
     {
-        std::cout << name << std::endl;
+        std::cerr << "Could not find a card named \"" << name  << "\"" << std::endl;
         throw (e);
     }
 

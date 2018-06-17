@@ -8,9 +8,9 @@
 namespace magique
 {
 
-interactions::interactions(std::string filename)
+interactions::interactions(std::string path)
 {
-    std::ifstream ifs(filename);
+    std::ifstream ifs(path + "/interactions.json");
     nlohmann::json interactions;
     ifs >> interactions;
     ifs.close();
