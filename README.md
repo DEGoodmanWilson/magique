@@ -47,12 +47,23 @@
 6. Download decklists
 
    ```bash
-   curl https://mtgdecks.net/decks/csv/Standard > data/Standard.csv
+   curl https://mtgdecks.net/decks/csv/Standard > data/Standard.txt
+   curl https://mtgdecks.net/decks/csv/Modern > data/Modern.txt
+   curl https://mtgdecks.net/decks/csv/Commander > data/Commander.txt
+   curl https://mtgdecks.net/decks/csv/Legacy > data/Legacy.txt
+   curl https://mtgdecks.net/decks/csv/Pauper > data/Pauper.txt
+   curl https://mtgdecks.net/decks/csv/Vintage > data/Vintage.txt
+   curl https://mtgdecks.net/decks/csv/Frontier > data/Frontier.txt
+   curl https://mtgdecks.net/decks/csv/Peasant > data/Peasant.txt
+   curl https://mtgdecks.net/decks/csv/Highlander > data/Highlander.txt
    ```
 
 7. Calculate conditional probabilities of card pairs
 
-   TODO
+   ```bash
+   cd ../deck_analyzer
+   python ./ analyze.py > ../data/conditional_probabilities.json
+   ```
 
 8. Build genetic algorithm
 

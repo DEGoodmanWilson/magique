@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import gensim
 from gensim import corpora
 from six import iteritems
