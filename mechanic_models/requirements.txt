@@ -1,0 +1,5 @@
+gensim
+pprint
+nltk
+stop_words
+numpy
