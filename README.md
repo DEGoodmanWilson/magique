@@ -46,7 +46,9 @@
 
 6. Download decklists
 
-   TODO
+   ```bash
+   curl https://mtgdecks.net/decks/csv/Standard > data/Standard.csv
+   ```
 
 7. Calculate conditional probabilities of card pairs
 
@@ -66,3 +68,8 @@
    ```bash
     ./bin/magique ../data collection.csv
     ```
+
+## Thanks
+
+* To [MTG JSON](https://mtgjson.com/) for the card data.
+* To [MTG Decks](https://mtgdecks.net/) for the decklists.
