@@ -1,15 +1,19 @@
 Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Accomplished Automaton",KLD,0.12,0,0,3,2/12/2017
 1,"Acrobatic Maneuver",KLD,0.13,0,0,3,13/12/2017
+4,"Admiral's Order",RIX,0.65,0,0,0,5/4/2018
 1,"Aegis Automaton",AER,0.12,0,0,0,2/12/2017
-1,"Aegis Automaton",AER,0.12,0,0,3,25/12/2017
+2,"Aegis Automaton",AER,0.12,0,0,3,13/1/2018
 1,"Aerial Responder",KLD,0.23,0,0,0,30/11/2017
 2,"Aerial Responder",KLD,0.23,0,0,3,13/12/2017
 1,"Aeronaut Admiral",AER,0.21,0,0,0,2/12/2017
 2,"Aether Chaser",AER,0.15,0,0,0,2/12/2017
 1,"Aether Chaser",AER,0.15,0,0,3,25/12/2017
 1,"Aether Herder",AER,0.13,0,0,0,2/12/2017
+2,"Aether Hub",KLD,0.39,0,0,0,31/5/2018
 1,"Aether Hub",KLD,1.85,0,0,0,30/11/2017
+1,"Aether Hub",KLD,6.0,1,0,0,15/2/2018
+1,"Aether Hub",KLD,1.16,1,0,3,15/4/2018
 2,"Aether Inspector",AER,0.12,0,0,0,2/12/2017
 1,"Aether Meltdown",KLD,0.22,0,0,3,13/12/2017
 1,"Aether Poisoner",AER,0.14,0,0,0,2/12/2017
@@ -22,13 +26,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Aetherstream Leopard",AER,0.13,0,0,0,2/12/2017
 1,"Ahn-Crop Crasher",AKH,0.32,0,0,3,2/12/2017
 1,"Air Elemental",W17,0.29,0,0,3,2/12/2017
+1,"Airdrop Aeronauts",AER,0.16,1,0,3,25/1/2018
 1,"Ajani Unyielding",AER,2.99,0,0,0,2/12/2017
 1,"Alley Evasion",AER,0.13,0,0,0,2/12/2017
 1,"Alley Evasion",AER,0.13,0,0,3,2/12/2017
+1,"Alley Evasion",AER,0.14,0,0,3,13/1/2018
 2,"Alley Strangler",AER,0.13,0,0,0,2/12/2017
 1,"Ancient Crab",AKH,0.13,0,0,3,2/12/2017
 2,"Angler Drake",AKH,0.2,0,0,3,2/12/2017
+4,"Animation Module",KLD,0.25,0,0,0,25/2/2018
 1,"Appetite for the Unnatural",KLD,0.14,0,0,0,30/11/2017
+1,"Aradara Express",KLD,0.12,0,0,3,4/1/2018
 1,"Arborback Stomper",KLD,0.19,0,0,0,30/11/2017
 1,"Arborback Stomper",KLD,0.19,0,0,3,2/12/2017
 1,"Attune with Aether",KLD,0.24,0,0,0,28/12/2017
@@ -36,15 +44,23 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Augmenting Automaton",AER,0.13,0,0,0,2/12/2017
 1,"Aviary Mechanic",KLD,0.12,0,0,3,2/12/2017
 1,"Baleful Ammit",AKH,0.23,0,0,3,2/12/2017
+3,"Ballista Charger",KLD,0.07,0,0,3,15/2/2018
 1,"Ballista Charger",KLD,0.35,1,0,0,30/11/2017
+1,"Baral's Expertise",AER,0.0,1,0,0,5/4/2018
 2,"Baral, Chief of Compliance",AER,4.5,0,0,0,2/12/2017
+1,"Barricade Breaker",AER,0.23,0,0,3,15/4/2018
 1,"Bastion Enforcer",AER,0.1,0,0,0,2/12/2017
+1,"Bastion Enforcer",AER,0.11,0,0,3,13/1/2018
 2,"Bastion Inventor",AER,0.13,0,0,0,2/12/2017
 1,"Bastion Inventor",AER,0.13,0,0,3,2/12/2017
+1,"Bastion Mastodon",KLD,0.11,0,0,3,4/1/2018
+1,"Befuddle",DOM,0.14,1,0,3,22/4/2018
 1,"Bitterblade Warrior",AKH,0.13,0,0,3,2/12/2017
 1,"Bloodhunter Bat",W17,0.29,0,0,3,2/12/2017
 1,"Bloodlust Inciter",AKH,0.12,0,0,3,2/12/2017
 1,"Blossoming Defense",KLD,1.54,0,0,3,2/12/2017
+2,"Bomat Courier",KLD,0.54,0,0,3,25/3/2018
+1,"Botanical Sanctum",KLD,5.37,0,0,3,29/4/2018
 1,"Brazen Scourge",KLD,0.2,0,0,3,2/12/2017
 2,"Built to Last",KLD,0.11,0,0,0,28/12/2017
 1,"Built to Last",KLD,0.11,0,0,3,2/12/2017
@@ -64,13 +80,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Chandra's Pyrohelix",KLD,0.13,0,0,3,2/12/2017
 1,"Chandra's Revolution",AER,0.12,0,0,0,2/12/2017
 1,"Chandra's Revolution",AER,0.12,0,0,3,2/12/2017
+1,"Chandra's Revolution",AER,0.14,0,0,3,13/1/2018
 1,"Chief of the Foundry",KLD,0.19,0,0,0,30/11/2017
+1,"Chief of the Foundry",KLD,0.07,0,0,3,15/2/2018
 1,"Chief of the Foundry",KLD,0.18,0,0,3,13/12/2017
 1,"Chief of the Foundry",KLD,0.49,1,0,0,30/11/2017
 2,"Cinder Barrens",AKH,0.11,0,0,3,2/12/2017
 2,"Cogwork Assembler",AER,0.22,0,0,3,2/12/2017
 1,"Cogworker's Puzzleknot",KLD,0.13,0,0,0,30/11/2017
 1,"Cogworker's Puzzleknot",KLD,0.14,0,0,0,28/12/2017
+2,"Cogworker's Puzzleknot",KLD,0.2,0,0,3,15/4/2018
 1,"Commencement of Festivities",KLD,0.13,0,0,0,30/11/2017
 2,"Commencement of Festivities",KLD,0.13,0,0,3,13/12/2017
 2,"Compulsory Rest",AKH,0.13,0,0,3,2/12/2017
@@ -78,33 +97,41 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Consulate Skygate",KLD,0.13,0,0,0,30/11/2017
 1,"Contraband Kingpin",KLD,0.21,0,0,0,30/11/2017
 2,"Conviction",AER,0.13,0,0,0,2/12/2017
+1,"Conviction",AER,0.14,0,0,3,13/1/2018
 2,"Countless Gears Renegade",AER,0.14,0,0,0,2/12/2017
 1,"Countless Gears Renegade",AER,0.13,0,0,3,25/12/2017
 2,"Crocodile of the Crossing",AKH,0.2,0,0,3,2/12/2017
 2,"Cruel Finality",AER,0.12,0,0,0,2/12/2017
-1,"Cruel Finality",AER,0.13,0,0,3,25/12/2017
+2,"Cruel Finality",AER,0.13,0,0,3,13/1/2018
 1,"Curio Vendor",KLD,0.12,0,0,0,28/12/2017
 1,"Curio Vendor",KLD,0.12,0,0,3,2/12/2017
+1,"Curio Vendor",KLD,0.14,0,0,3,4/1/2018
 1,"Cursed Minotaur",AKH,0.14,0,0,3,2/12/2017
-1,"Daring Demolition",AER,0.13,0,0,0,2/12/2017
 1,"Daring Demolition",AER,0.13,0,0,3,2/12/2017
 1,"Dawnfeather Eagle",AER,0.13,0,0,0,2/12/2017
 1,"Decision Paralysis",AKH,0.12,0,0,3,2/12/2017
 1,"Decoction Module",KLD,0.76,1,0,3,13/12/2017
 1,"Decommission",AER,0.14,0,0,0,2/12/2017
 2,"Defiant Salvager",AER,0.13,0,0,0,2/12/2017
-1,"Destructive Tampering",AER,0.13,0,0,3,2/12/2017
+1,"Dematerialize",ODY,0.0,0,0,3,9/4/2018
+1,"Depala, Pilot Exemplar",KLD,0.62,1,0,0,24/4/2018
 1,"Dhund Operative",KLD,0.11,0,0,0,30/11/2017
 1,"Dhund Operative",KLD,0.12,0,0,0,28/12/2017
 2,"Dhund Operative",KLD,0.11,0,0,3,13/12/2017
+1,"Dhund Operative",KLD,0.13,0,0,3,4/1/2018
+1,"Dhund Operative",KLD,0.09,1,0,3,28/2/2018
 1,"Diabolic Tutor",KLD,0.24,0,0,0,28/12/2017
+2,"Disallow",AER,5.0,0,0,0,15/2/2018
+2,"Disallow",AER,3.37,0,0,3,5/4/2018
+1,"Disallow",AER,5.99,0,1,3,15/2/2018
 2,"Dispersal Technician",AER,0.12,0,0,0,2/12/2017
 1,"Dispersal Technician",AER,0.13,0,0,3,25/12/2017
 1,"Divine Verdict",W17,0.25,0,0,3,2/12/2017
 1,"Djeru's Resolve",AKH,0.13,0,0,3,2/12/2017
 1,"Doomed Dissenter",AKH,0.14,0,0,3,2/12/2017
+1,"Dream Tides",VIS,0.0,0,0,0,5/4/2018
 2,"Druid of the Cowl",AER,0.14,0,0,0,2/12/2017
-2,"Druid of the Cowl",AER,0.14,0,0,3,2/12/2017
+3,"Druid of the Cowl",AER,0.14,0,0,3,13/1/2018
 1,"Druid of the Cowl",AER,0.5,1,0,0,2/12/2017
 1,"Dukhara Peafowl",KLD,0.11,0,0,3,2/12/2017
 1,"Dukhara Scavenger",KLD,0.11,0,0,3,13/12/2017
@@ -113,6 +140,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Eager Construct",KLD,0.12,0,0,3,2/12/2017
 2,"Eddytrail Hawk",KLD,0.11,0,0,3,2/12/2017
 2,"Electrify",AKH,0.14,0,0,3,2/12/2017
+1,"Electrostatic Pummeler",KLD,0.37,0,0,0,21/2/2018
 1,"Electrostatic Pummeler",KLD,0.53,0,0,3,2/12/2017
 2,"Elegant Edgecrafters",KLD,0.18,0,0,0,30/11/2017
 1,"Eliminate the Competition",KLD,0.29,0,0,3,13/12/2017
@@ -120,17 +148,20 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Empyreal Voyager",KLD,0.18,0,0,3,2/12/2017
 2,"Enraged Giant",AER,0.2,0,0,3,2/12/2017
 1,"Essence Extraction",KLD,0.22,0,0,0,30/11/2017
+1,"Essence Scatter",AKH,0.07,0,0,3,9/3/2018
 1,"Essence Scatter",AKH,0.15,0,0,3,2/12/2017
-4,"Evolving Wilds",AKH,0.15,0,0,3,2/12/2017
+3,"Evolving Wilds",AKH,0.15,0,0,3,2/12/2017
+1,"Experimental Aviator",KLD,0.19,0,0,3,4/1/2018
 1,"Fabrication Module",KLD,0.22,0,0,3,2/12/2017
 2,"Fan Bearer",AKH,0.13,0,0,3,2/12/2017
-1,"Fatal Push",AER,27.93,1,0,0,2/12/2017
+2,"Fatal Push",AER,5.0,0,0,0,25/2/2018
 1,"Fateful Showdown",KLD,0.3,0,0,3,2/12/2017
 2,"Felidar Guardian",AER,0.26,0,0,0,2/12/2017
 1,"Fen Hauler",AER,0.13,0,0,0,2/12/2017
 1,"Fen Hauler",AER,0.13,0,0,3,25/12/2017
 1,"Festering Mummy",AKH,0.15,0,0,3,2/12/2017
 1,"Filigree Crawler",AER,0.12,0,0,3,25/12/2017
+1,"Filigree Crawler",AER,0.13,0,0,3,13/1/2018
 1,"Filigree Familiar",KLD,0.25,0,0,0,28/12/2017
 1,"Filigree Familiar",KLD,0.25,0,0,3,2/12/2017
 1,"Fireforger's Puzzleknot",KLD,0.11,0,0,0,28/12/2017
@@ -139,21 +170,24 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Floodwaters",AKH,0.13,0,0,3,2/12/2017
 2,"Forsaken Sanctuary",AKH,0.29,0,0,3,2/12/2017
 1,"Fortuitous Find",KLD,0.11,0,0,0,30/11/2017
+1,"Fortuitous Find",KLD,0.11,0,0,3,4/1/2018
 2,"Foul Orchard",AKH,0.17,0,0,3,2/12/2017
 2,"Foundry Assembler",AER,0.12,0,0,0,2/12/2017
 1,"Foundry Assembler",AER,0.12,0,0,3,2/12/2017
+4,"Foundry Inspector",KLD,0.41,0,0,3,15/4/2018
 1,"Foundry Screecher",KLD,0.11,0,0,3,2/12/2017
 1,"Fourth Bridge Prowler",AER,0.13,0,0,0,2/12/2017
-1,"Fragmentize",KLD,0.14,0,0,3,2/12/2017
+1,"Fourth Bridge Prowler",AER,0.13,0,0,3,13/1/2018
 1,"Fretwork Colony",KLD,0.19,0,0,0,28/12/2017
 1,"Frontline Rebel",AER,0.13,0,0,0,2/12/2017
-1,"Frontline Rebel",AER,0.13,0,0,3,25/12/2017
+2,"Frontline Rebel",AER,0.13,0,0,3,13/1/2018
 1,"Garruk's Horde",W17,0.34,0,0,3,2/12/2017
 1,"Gearseeker Serpent",KLD,0.14,0,0,0,30/11/2017
 2,"Gearseeker Serpent",KLD,0.14,0,0,3,13/12/2017
 1,"Ghirapur Guide",KLD,0.19,0,0,3,2/12/2017
 1,"Ghirapur Osprey",AER,0.12,0,0,0,2/12/2017
-1,"Ghirapur Osprey",AER,0.14,0,0,3,25/12/2017
+2,"Ghirapur Osprey",AER,0.14,0,0,3,13/1/2018
+1,"Ghirapur Osprey",AER,0.26,1,0,3,13/1/2018
 2,"Giant Spectacle",KLD,0.11,0,0,3,2/12/2017
 1,"Giant Spider",AKH,0.12,0,0,3,2/12/2017
 1,"Gifted Aetherborn",AER,2.19,0,0,3,2/12/2017
@@ -162,6 +196,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Glimmer of Genius",KLD,0.93,0,0,3,2/12/2017
 1,"Glint-Sleeve Artisan",KLD,0.12,0,0,3,13/12/2017
 2,"Glint-Sleeve Siphoner",AER,3.32,0,0,0,2/12/2017
+1,"Gonti's Machinations",AER,0.24,1,0,0,28/4/2018
 1,"Graceful Cat",AKH,0.15,0,0,3,2/12/2017
 1,"Greater Sandwurm",AKH,0.12,0,0,3,2/12/2017
 1,"Gremlin Infestation",AER,0.2,0,0,0,2/12/2017
@@ -170,11 +205,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Herald of the Fair",KLD,0.1,0,0,3,2/12/2017
 1,"Heroic Intervention",AER,4.05,0,0,0,2/12/2017
 2,"Highland Lake",AKH,0.3,0,0,3,2/12/2017
-1,"Highspire Artisan",KLD,0.11,0,0,3,2/12/2017
+2,"Highspire Artisan",KLD,0.11,0,0,3,4/1/2018
 1,"Highspire Infusion",AER,0.14,0,0,0,2/12/2017
 2,"Highspire Infusion",AER,0.14,0,0,3,25/12/2017
 1,"Hijack",KLD,0.12,0,0,0,28/12/2017
 1,"Hijack",KLD,0.12,0,0,3,2/12/2017
+1,"Hijack",KLD,0.13,0,0,3,4/1/2018
 1,"Hinterland Drake",AER,0.12,0,0,0,2/12/2017
 2,"Hinterland Drake",AER,0.12,0,0,3,2/12/2017
 1,"Hungry Flames",AER,0.24,0,0,0,2/12/2017
@@ -190,15 +226,22 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Implement of Ferocity",AER,0.13,0,0,0,2/12/2017
 1,"Implement of Ferocity",AER,0.13,0,0,3,25/12/2017
 1,"Implement of Improvement",AER,0.14,0,0,0,2/12/2017
+1,"Implement of Improvement",AER,0.14,0,0,3,13/1/2018
 1,"Implement of Malice",AER,0.13,0,0,0,2/12/2017
 2,"Initiate's Companion",AKH,0.15,0,0,3,2/12/2017
 1,"Inspired Charge",KLD,0.11,0,0,0,30/11/2017
 2,"Inspired Charge",KLD,0.11,0,0,3,2/12/2017
+1,"Inspired Charge",KLD,0.12,0,0,3,4/1/2018
+1,"Inspiring Statuary",AER,0.56,0,0,3,15/4/2018
+1,"Inspiring Vantage",KLD,3.41,0,0,0,24/4/2018
 2,"Inventor's Apprentice",KLD,0.24,0,0,0,28/12/2017
 1,"Inventor's Apprentice",KLD,0.24,0,0,3,2/12/2017
 1,"Inventor's Goggles",KLD,0.13,0,0,0,30/11/2017
 1,"Inventor's Goggles",KLD,0.13,0,0,3,2/12/2017
+1,"Inventors' Fair",KLD,0.75,0,0,3,15/2/2018
 1,"Inventors' Fair",KLD,0.99,0,0,3,13/12/2017
+2,"Inventors' Fair",KLD,1.16,0,0,3,15/4/2018
+1,"Invigorated Rampage",AER,0.25,0,0,3,13/1/2018
 1,"Iron League Steed",KLD,0.17,0,0,3,13/12/2017
 1,"Ironclad Revolutionary",AER,0.2,0,0,0,2/12/2017
 1,"Irontread Crusher",AER,0.12,0,0,0,2/12/2017
@@ -207,6 +250,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Janjeet Sentry",KLD,0.19,0,0,3,13/12/2017
 1,"Kambal, Consul of Allocation",KLD,0.46,0,0,0,28/12/2017
 1,"Kambal, Consul of Allocation",KLD,0.46,0,0,3,2/12/2017
+1,"Kari Zev's Expertise",AER,0.41,0,0,0,24/4/2018
 1,"Kefnet the Mindful",AKH,1.82,0,0,3,2/12/2017
 1,"Kujar Seedsculptor",KLD,0.11,0,0,0,30/11/2017
 1,"Kujar Seedsculptor",KLD,0.12,0,0,3,13/12/2017
@@ -219,9 +263,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Lifecraft Awakening",AER,0.2,0,0,0,2/12/2017
 2,"Lifecraft Cavalry",AER,0.11,0,0,0,2/12/2017
 1,"Lifecrafter's Gift",AER,0.2,0,0,3,25/12/2017
+1,"Lightning Runner",AER,0.37,0,0,0,24/4/2018
+1,"Live Fast",KLD,0.12,0,0,3,4/1/2018
 2,"Live Fast",KLD,0.13,0,0,3,2/12/2017
+1,"Long-Finned Skywhale",KLD,0.19,0,0,3,4/1/2018
 1,"Make Obsolete",KLD,0.19,0,0,0,30/11/2017
 1,"Make Obsolete",KLD,0.18,0,0,3,2/12/2017
+1,"Make Obsolete",KLD,0.19,0,0,3,4/1/2018
 1,"Make Obsolete",KLD,0.37,1,0,3,2/12/2017
 1,"Malfunction",KLD,0.11,0,0,0,30/11/2017
 3,"Malfunction",KLD,0.11,0,0,3,2/12/2017
@@ -229,20 +277,30 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Maulfist Revolutionary",AER,0.21,0,0,0,2/12/2017
 1,"Maverick Thopterist",AER,0.2,0,0,3,25/12/2017
 2,"Meandering River",AKH,0.24,0,0,3,2/12/2017
+1,"Mechanized Production",AER,1.0,0,0,0,25/2/2018
+1,"Mechanized Production",AER,2.51,0,0,0,9/4/2018
+1,"Mechanized Production",AER,1.75,0,0,3,15/2/2018
 1,"Mechanized Production",AER,3.63,0,0,3,25/12/2017
+1,"Mechanized Production",AER,2.8,1,0,0,15/2/2018
 1,"Merchant's Dockhand",AER,0.28,0,0,0,2/12/2017
 1,"Merciless Javelineer",AKH,0.2,0,0,3,2/12/2017
+1,"Metallic Rebuke",AER,0.04,0,0,3,15/2/2018
 1,"Metallic Rebuke",AER,0.16,0,0,3,25/12/2017
+1,"Metallic Rebuke",AER,0.17,0,0,3,13/1/2018
+1,"Metallic Rebuke",AER,0.75,1,0,0,20/2/2018
 1,"Metalspinner's Puzzleknot",KLD,0.13,0,0,3,2/12/2017
+4,"Metalwork Colossus",KLD,1.0,0,0,0,25/2/2018
 1,"Mighty Leap",AKH,0.13,0,0,3,2/12/2017
 2,"Mind Rot",KLD,0.1,0,0,0,30/11/2017
 1,"Mind Rot",KLD,0.11,0,0,0,28/12/2017
 1,"Minister of Inquiries",KLD,0.24,0,0,0,28/12/2017
+1,"Mizzium Meddler",PLPA,0.0,1,0,3,4/1/2018
 2,"Mobile Garrison",AER,0.14,0,0,0,2/12/2017
 1,"Mobile Garrison",AER,0.14,0,0,3,2/12/2017
-1,"Monstrous Onslaught",AER,0.2,0,0,3,2/12/2017
+2,"Monstrous Onslaught",AER,0.2,0,0,3,13/1/2018
 1,"Morbid Curiosity",KLD,0.2,0,0,0,30/11/2017
 1,"Multiform Wonder",KLD,0.3,0,0,0,30/11/2017
+1,"Mutiny",RIX,0.03,0,0,0,25/3/2018
 1,"Narnam Cobra",KLD,0.11,0,0,3,2/12/2017
 1,"Narnam Cobra",KLD,0.12,0,0,3,13/12/2017
 1,"Nef-Crop Entangler",AKH,0.14,0,0,3,2/12/2017
@@ -259,22 +317,34 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Ninth Bridge Patrol",KLD,0.12,0,0,3,13/12/2017
 1,"Oakenform",W17,0.32,0,0,3,2/12/2017
 1,"Oath of Ajani",AER,0.45,0,0,3,25/12/2017
+1,"Ornamental Courage",KLD,0.12,0,0,3,4/1/2018
 1,"Ornery Kudu",AKH,0.13,0,0,3,2/12/2017
+3,"Ornithopter",AER,0.1,0,0,3,15/2/2018
+1,"Ornithopter",AER,0.22,0,0,3,13/1/2018
 1,"Outland Boar",AER,0.2,0,0,3,25/12/2017
 1,"Oviya Pashiri, Sage Lifecrafter",KLD,0.3,0,0,0,30/11/2017
 1,"Pacification Array",AER,0.2,0,0,0,2/12/2017
+4,"Padeem, Consul of Innovation",KLD,0.5,0,0,0,25/2/2018
 1,"Painful Lesson",AKH,0.14,0,0,3,2/12/2017
+1,"Panharmonicon",KLD,1.91,0,0,3,15/4/2018
+1,"Paradoxical Outcome",KLD,0.45,0,0,3,4/1/2018
 1,"Peema Aether-Seer",AER,0.2,0,0,3,25/12/2017
 1,"Peema Outrider",KLD,0.1,0,0,3,2/12/2017
+1,"Perpetual Timepiece",KLD,0.2,0,0,3,4/1/2018
 1,"Pia Nalaar",KLD,0.4,0,0,0,30/11/2017
+1,"Pia's Revolution",AER,0.18,0,0,0,24/4/2018
+1,"Planar Bridge",AER,2.25,0,0,3,13/1/2018
 1,"Pouncing Cheetah",AKH,0.14,0,0,3,2/12/2017
 1,"Prakhata Club Security",KLD,0.11,0,0,3,2/12/2017
 1,"Prakhata Pillar-Bug",KLD,0.11,0,0,0,28/12/2017
 1,"Precise Strike",AER,0.12,0,0,0,2/12/2017
 1,"Pressure Point",KLD,0.11,0,0,0,30/11/2017
 2,"Prey Upon",AER,0.13,0,0,0,2/12/2017
+1,"Prey Upon",AER,0.13,0,0,3,13/1/2018
+1,"Primal Amulet",XLN,1.18,0,0,3,31/3/2018
 2,"Prizefighter Construct",AER,0.13,0,0,0,2/12/2017
 1,"Prizefighter Construct",AER,0.13,0,0,3,25/12/2017
+1,"Propeller Pioneer",KLD,0.12,0,0,3,4/1/2018
 2,"Prophetic Prism",KLD,0.14,0,0,0,30/11/2017
 1,"Prophetic Prism",KLD,0.14,0,0,3,2/12/2017
 1,"Prophetic Prism",KLD,0.15,0,0,3,13/12/2017
@@ -282,13 +352,19 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Pursue Glory",AKH,0.12,0,0,3,2/12/2017
 1,"Pyramid of the Pantheon",AKH,0.4,0,0,3,2/12/2017
 1,"Quicksmith Genius",KLD,0.2,0,0,3,2/12/2017
+1,"Quicksmith Rebel",AER,0.27,0,0,3,13/1/2018
 1,"Raise Dead",W17,0.39,0,0,3,2/12/2017
+1,"Rashmi, Eternities Crafter",KLD,0.98,0,0,3,4/1/2018
+3,"Rashmi, Eternities Crafter",KLD,1.5,0,0,3,15/2/2018
 1,"Ravenous Intruder",AER,0.21,0,0,0,2/12/2017
 1,"Ravenous Intruder",AER,0.22,0,0,3,25/12/2017
 1,"Reckless Fireweaver",KLD,0.14,0,0,0,30/11/2017
+1,"Reckless Fireweaver",KLD,0.15,0,0,3,4/1/2018
 1,"Reckless Racer",AER,0.2,0,0,0,2/12/2017
 1,"Refurbish",KLD,0.25,0,0,0,30/11/2017
+1,"Refurbish",KLD,0.07,0,0,3,15/2/2018
 2,"Refurbish",KLD,0.25,0,0,3,2/12/2017
+2,"Refurbish",KLD,0.23,1,0,0,19/2/2018
 1,"Renegade Freighter",KLD,0.14,0,0,0,28/12/2017
 2,"Renegade Freighter",KLD,0.13,0,0,3,2/12/2017
 1,"Renegade Freighter",KLD,0.14,0,0,3,13/12/2017
@@ -301,6 +377,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Resourceful Return",AER,0.13,0,0,0,2/12/2017
 2,"Resourceful Return",AER,0.13,0,0,3,2/12/2017
 1,"Restoration Specialist",AER,0.19,0,0,0,2/12/2017
+1,"Restoration Specialist",AER,0.2,0,0,3,13/1/2018
 1,"Reverse Engineer",AER,0.24,0,0,0,2/12/2017
 1,"Revoke Privileges",KLD,0.11,0,0,0,30/11/2017
 1,"Revoke Privileges",KLD,0.11,0,0,3,2/12/2017
@@ -309,7 +386,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Ridgescale Tusker",AER,0.2,0,0,3,2/12/2017
 1,"Riparian Tiger",KLD,0.11,0,0,0,30/11/2017
 1,"Riparian Tiger",KLD,0.11,0,0,3,2/12/2017
-1,"Rishkar's Expertise",AER,0.58,0,0,3,2/12/2017
+1,"Riparian Tiger",KLD,0.12,0,0,3,4/1/2018
+2,"River Heralds' Boon",XLN,0.05,0,0,3,9/3/2018
 2,"Rogue Refiner",AER,0.77,0,0,0,2/12/2017
 1,"Rootwalla",W17,0.27,0,0,3,2/12/2017
 1,"Ruinous Gremlin",KLD,0.12,0,0,3,2/12/2017
@@ -320,46 +398,61 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Scarab Feast",AKH,0.15,0,0,3,2/12/2017
 1,"Scattered Groves",AKH,2.0,0,0,3,2/12/2017
 1,"Scrapper Champion",AER,0.2,0,0,0,2/12/2017
+1,"Scrounging Bandar",AER,0.15,0,0,3,13/1/2018
+2,"Sea Legs",RIX,0.04,0,0,3,9/3/2018
 1,"Select for Inspection",KLD,0.12,0,0,0,30/11/2017
 2,"Select for Inspection",KLD,0.13,0,0,0,28/12/2017
 2,"Select for Inspection",KLD,0.12,0,0,3,2/12/2017
-1,"Sengir Vampire",W17,0.39,0,0,3,2/12/2017
+1,"Sentinel Totem",XLN,0.09,0,0,0,25/3/2018
+1,"Sequestered Stash",KLD,0.07,0,0,3,15/2/2018
 1,"Sequestered Stash",KLD,0.2,0,0,3,2/12/2017
 1,"Seraph of the Suns",AKH,0.2,0,0,3,2/12/2017
 1,"Serra Angel",W17,0.38,0,0,3,2/12/2017
 1,"Servo Schematic",AER,0.2,0,0,3,2/12/2017
+3,"Servo Schematic",AER,0.23,0,0,3,15/4/2018
 1,"Shadowstorm Vizier",AKH,0.19,0,0,3,2/12/2017
+1,"Shanna, Sisay's Legacy",DOM,0.71,1,0,0,16/6/2018
 1,"Shed Weakness",AKH,0.13,0,0,3,2/12/2017
 1,"Shielded Aether Thief",AER,0.21,0,0,0,2/12/2017
 1,"Shielded Aether Thief",AER,0.21,0,0,3,2/12/2017
 1,"Shipwreck Moray",AER,0.12,0,0,0,2/12/2017
 1,"Shipwreck Moray",AER,0.12,0,0,3,2/12/2017
 1,"Shipwreck Moray",AER,0.13,0,0,3,25/12/2017
+1,"Shipwreck Moray",AER,0.14,0,0,3,13/1/2018
 1,"Shivan Dragon",W17,0.3,0,0,3,2/12/2017
-2,"Shock",AER,0.16,0,0,0,2/12/2017
 3,"Shock",AER,0.16,0,0,3,2/12/2017
 2,"Silkweaver Elite",AER,0.13,0,0,0,2/12/2017
 1,"Silkweaver Elite",AER,0.13,0,0,3,25/12/2017
+1,"Silvergill Adept",RIX,0.95,1,0,0,28/4/2018
+1,"Silvergill Adept",RIX,1.24,1,0,0,9/3/2018
+1,"Siren Reaver",RIX,0.06,0,0,0,25/3/2018
 1,"Sky Skiff",KLD,0.13,0,0,0,28/12/2017
-1,"Sky Skiff",KLD,0.13,0,0,3,2/12/2017
+2,"Sky Skiff",KLD,0.13,0,0,3,4/1/2018
 2,"Skyship Plunderer",AER,0.25,0,0,0,2/12/2017
 1,"Skyship Stalker",KLD,0.28,0,0,0,30/11/2017
 1,"Skyship Stalker",KLD,0.28,0,0,3,2/12/2017
+1,"Skysovereign, Consul Flagship",KLD,0.88,0,0,0,24/4/2018
+1,"Slippery Scoundrel",RIX,0.17,1,0,3,28/2/2018
 2,"Sly Requisitioner",AER,0.2,0,0,0,2/12/2017
 2,"Snare Thopter",KLD,0.15,0,0,3,2/12/2017
+1,"Soul Salvage",DOM,0.09,1,0,0,29/5/2018
 2,"Soulstinger",AKH,0.13,0,0,3,2/12/2017
+1,"Spark of Creativity",KLD,0.2,0,0,3,4/1/2018
 1,"Speedway Fanatic",KLD,0.2,0,0,0,30/11/2017
 1,"Sphinx of Magosi",W17,0.4,0,0,3,2/12/2017
 1,"Spidery Grasp",AKH,0.13,0,0,3,2/12/2017
 2,"Spire Patrol",AER,0.2,0,0,0,2/12/2017
 1,"Spireside Infiltrator",KLD,0.11,0,0,0,30/11/2017
 3,"Spireside Infiltrator",KLD,0.11,0,0,3,2/12/2017
+1,"Spireside Infiltrator",KLD,0.13,0,0,3,4/1/2018
 1,"Spontaneous Artist",KLD,0.11,0,0,0,28/12/2017
 1,"Stalking Tiger",W17,0.3,0,0,3,2/12/2017
 1,"Standing Troops",W17,0.16,0,0,3,2/12/2017
 1,"Stealer of Secrets",W17,0.32,0,0,3,2/12/2017
 2,"Stone Quarry",AKH,0.16,0,0,3,2/12/2017
+1,"Storm Sculptor",XLN,0.02,0,0,0,25/3/2018
 1,"Stormfront Pegasus",W17,0.18,0,0,3,2/12/2017
+1,"Strider Harness",RIX,0.12,1,0,0,25/3/2018
 2,"Submerged Boneyard",AKH,0.22,0,0,3,2/12/2017
 1,"Subtle Strike",KLD,0.11,0,0,0,30/11/2017
 1,"Subtle Strike",KLD,0.11,0,0,3,2/12/2017
@@ -375,6 +468,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Tasseled Dromedary",KLD,0.11,0,0,0,30/11/2017
 1,"Tasseled Dromedary",KLD,0.12,0,0,3,2/12/2017
 2,"Tattered Mummy",AKH,0.59,0,0,3,2/12/2017
+1,"Temple of the False God",C17,0.19,0,0,0,27/3/2018
 2,"Terror of the Fairgrounds",KLD,0.11,0,0,3,13/12/2017
 1,"Tezzeret's Touch",AER,0.24,0,0,0,2/12/2017
 1,"Those Who Serve",AKH,0.12,0,0,3,2/12/2017
@@ -384,13 +478,15 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Thriving Ibex",KLD,0.11,0,0,3,2/12/2017
 2,"Thriving Rats",KLD,0.1,0,0,0,30/11/2017
 1,"Thriving Rats",KLD,0.11,0,0,0,28/12/2017
+1,"Thriving Turtle",KLD,0.13,0,0,3,4/1/2018
 1,"Thundering Giant",W17,0.31,0,0,3,2/12/2017
 1,"Tidy Conclusion",KLD,0.11,0,0,0,30/11/2017
-2,"Timber Gorge",AKH,0.18,0,0,3,2/12/2017
+1,"Tidy Conclusion",KLD,0.12,0,0,3,4/1/2018
+1,"Timber Gorge",AKH,0.18,0,0,3,2/12/2017
 1,"Toolcraft Exemplar",KLD,0.47,0,0,0,28/12/2017
 1,"Torch Gauntlet",KLD,0.11,0,0,0,30/11/2017
 1,"Torch Gauntlet",KLD,0.11,0,0,3,2/12/2017
-2,"Tranquil Expanse",AKH,0.23,0,0,3,2/12/2017
+1,"Tranquil Expanse",AKH,0.23,0,0,3,2/12/2017
 1,"Treasure Keeper",AER,0.24,0,0,0,2/12/2017
 1,"Trespasser's Curse",AKH,0.15,0,0,3,2/12/2017
 1,"Trial of Ambition",AKH,0.2,0,0,3,2/12/2017
@@ -399,8 +495,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 3,"Trial of Strength",AKH,0.2,0,0,3,2/12/2017
 1,"Trial of Zeal",AKH,0.19,0,0,3,2/12/2017
 1,"Tricks of the Trade",W17,0.3,0,0,3,2/12/2017
+1,"Tromokratis",PLPA,0.0,1,0,3,4/1/2018
+2,"Trophy Mage",AER,0.15,0,0,0,21/2/2018
 2,"Unbridled Growth",AER,0.14,0,0,0,2/12/2017
 1,"Unbridled Growth",AER,0.14,0,0,3,2/12/2017
+1,"Unbridled Growth",AER,0.21,1,0,3,11/2/2018
+1,"Unclaimed Territory",XLN,1.62,0,0,0,29/3/2018
 1,"Universal Solvent",AER,0.14,0,0,0,2/12/2017
 1,"Universal Solvent",AER,0.14,0,0,3,2/12/2017
 1,"Untamed Hunger",W17,0.3,0,0,3,2/12/2017
@@ -409,17 +509,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Vedalken Blademaster",KLD,0.11,0,0,3,13/12/2017
 4,"Verdant Automaton",AER,0.11,0,0,0,2/12/2017
 1,"Verdant Automaton",AER,0.13,0,0,3,25/12/2017
+1,"Veteran Motorist",KLD,0.09,0,0,0,24/4/2018
 1,"Victory's Herald",W17,0.25,0,0,3,2/12/2017
 1,"Vizier of Remedies",AKH,0.3,0,0,3,2/12/2017
+1,"Voltaic Brawler",KLD,0.26,0,0,3,4/1/2018
 1,"Voltaic Brawler",KLD,0.28,0,0,3,2/12/2017
 1,"Warfire Javelineer",AKH,0.2,0,0,3,2/12/2017
 1,"Watchers of the Dead",AKH,0.21,0,0,3,2/12/2017
 1,"Watchful Automaton",AER,0.13,0,0,0,2/12/2017
-1,"Watchful Automaton",AER,0.14,0,0,3,25/12/2017
+2,"Watchful Automaton",AER,0.14,0,0,3,13/1/2018
 1,"Weaponcraft Enthusiast",KLD,0.21,0,0,3,2/12/2017
 1,"Welder Automaton",AER,0.12,0,0,0,2/12/2017
 2,"Welder Automaton",AER,0.12,0,0,3,2/12/2017
+1,"Welder Automaton",AER,0.13,0,0,3,13/1/2018
 1,"Weldfast Monitor",KLD,0.11,0,0,0,30/11/2017
+1,"Weldfast Wingsmith",KLD,0.12,0,0,3,4/1/2018
 1,"Welding Sparks",KLD,0.12,0,0,0,30/11/2017
 1,"Whir of Invention",AER,0.75,0,0,3,2/12/2017
 1,"Whirler Virtuoso",KLD,0.35,0,0,0,30/11/2017
@@ -428,11 +532,986 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Wily Bandar",KLD,0.13,0,0,0,30/11/2017
 1,"Wind Drake",KLD,0.12,0,0,0,28/12/2017
 1,"Wind-Kin Raiders",AER,0.2,0,0,3,25/12/2017
+1,"Winding Constrictor",AER,0.59,0,0,3,13/1/2018
 1,"Winds of Rebuke",AKH,0.11,0,0,3,2/12/2017
 1,"Wing Snare",W17,0.28,0,0,3,2/12/2017
 1,"Wispweaver Angel",KLD,0.2,0,0,3,13/12/2017
 2,"Woodland Stream",AKH,0.17,0,0,3,2/12/2017
 1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,0,30/11/2017
+1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,3,4/1/2018
 1,"Workshop Assistant",KLD,0.13,0,0,3,13/12/2017
 3,"Wrangle",AER,0.14,0,0,0,2/12/2017
 1,"Yahenni's Expertise",AER,0.78,0,0,0,2/12/2017
+1,"Zahid, Djinn of the Lamp",DOM,2.36,1,0,0,28/4/2018
+1,"academy drake",DOM,0.03,0,0,3,12/5/2018
+1,"academy drake",DOM,0.06,0,0,3,22/4/2018
+1,"academy journeymage",DOM,0.05,0,0,0,12/5/2018
+1,"academy journeymage",DOM,0.06,0,0,0,29/4/2018
+1,"academy journeymage",DOM,0.05,0,0,3,17/6/2018
+1,"academy journeymage",DOM,0.06,0,0,3,22/4/2018
+1,"accomplished automaton",KLD,0.02,0,0,0,19/2/2018
+1,"accomplished automaton",KLD,0.01,0,0,3,11/2/2018
+1,"accursed horde",HOU,0.1,0,0,0,15/4/2018
+1,"acrobatic maneuver",KLD,0.05,0,0,0,19/2/2018
+1,"acrobatic maneuver",KLD,0.06,0,0,3,11/2/2018
+1,"adamant will",DOM,0.05,0,0,0,12/5/2018
+1,"adamant will",DOM,0.06,0,0,0,29/4/2018
+1,"adamant will",DOM,0.05,0,0,3,12/5/2018
+1,"adamant will",DOM,0.06,0,0,3,22/4/2018
+1,"adeliz, the cinder wind",DOM,0.15,0,0,0,29/5/2018
+1,"adeliz, the cinder wind",DOM,0.34,0,0,3,22/4/2018
+1,"admiral's order",RIX,0.41,0,0,3,4/4/2018
+1,"adventurous impulse",DOM,0.07,0,0,3,12/5/2018
+2,"aegis automaton",AER,0.05,0,0,0,25/2/2018
+1,"aerial modification",AER,0.06,0,0,0,28/4/2018
+1,"aerial modification",AER,0.05,0,0,3,27/1/2018
+1,"aeronaut admiral",AER,0.13,0,0,3,8/2/2018
+1,"aesthir glider",DOM,0.03,0,0,3,12/5/2018
+1,"aether chaser",AER,0.03,0,0,3,14/2/2018
+1,"aether herder",AER,0.04,0,0,0,20/2/2018
+1,"aether herder",AER,0.05,0,0,3,14/2/2018
+1,"aether herder",AER,0.07,0,0,3,11/2/2018
+1,"aether herder",AER,0.32,0,0,3,8/2/2018
+2,"aether hub",KLD,0.4,0,0,0,31/5/2018
+1,"aether hub",KLD,0.75,0,0,0,19/2/2018
+1,"aether inspector",AER,0.02,0,0,3,15/2/2018
+1,"aether inspector",AER,0.06,0,0,3,11/2/2018
+1,"aether inspector",AER,0.32,0,0,3,27/1/2018
+1,"aether inspector",AER,0.36,0,0,3,8/2/2018
+2,"aether poisoner",AER,0.03,0,0,3,14/2/2018
+1,"aether swooper",AER,0.04,0,0,0,20/2/2018
+1,"aether theorist",KLD,0.05,0,0,3,8/2/2018
+1,"aether tradewinds",KLD,0.02,0,0,0,12/4/2018
+1,"aether tradewinds",KLD,0.1,0,0,0,19/2/2018
+1,"aether tradewinds",KLD,0.09,0,0,3,11/2/2018
+1,"aethersphere harvester",AER,1.66,0,0,3,8/2/2018
+1,"aetherstream leopard",AER,0.03,0,0,0,20/2/2018
+1,"aethertorch renegade",KLD,0.06,0,0,3,8/2/2018
+1,"aggressive urge",RIX,0.02,0,0,0,25/3/2018
+2,"aggressive urge",RIX,0.02,0,0,3,4/4/2018
+1,"alley evasion",AER,0.02,0,0,3,11/2/2018
+1,"alley strangler",AER,0.11,0,0,3,25/1/2018
+1,"ambitious aetherborn",KLD,0.07,0,0,0,19/2/2018
+1,"ambitious aetherborn",KLD,0.03,0,0,3,28/2/2018
+2,"ancient animus",DOM,0.05,0,0,0,28/5/2018
+2,"ancient animus",DOM,0.05,0,0,3,12/5/2018
+1,"animation module",KLD,0.26,0,0,0,24/5/2018
+1,"appetite for the unnatural",KLD,0.07,0,0,0,19/2/2018
+1,"apprentice necromancer",C17,0.47,0,0,0,29/3/2018
+1,"aquatic incursion",RIX,0.06,0,0,0,25/3/2018
+1,"aradara express",KLD,0.07,0,0,0,19/2/2018
+1,"arbor armament",DOM,0.03,0,0,0,28/5/2018
+1,"arbor armament",DOM,0.05,0,0,0,12/5/2018
+1,"arborback stomper",KLD,0.07,0,0,3,8/2/2018
+1,"arcane flight",DOM,0.05,0,0,0,12/5/2018
+1,"arcane flight",DOM,0.06,0,0,3,22/4/2018
+1,"arcanis the omnipotent",C17,0.32,0,0,0,29/3/2018
+1,"archaeomancer",C17,0.13,0,0,0,29/3/2018
+1,"aryel, knight of windgrace",DOM,0.32,0,0,0,29/5/2018
+1,"aryel, knight of windgrace",DOM,0.26,0,0,3,17/6/2018
+1,"attune with aether",KLD,0.09,0,0,0,19/2/2018
+1,"attune with aether",KLD,0.09,0,0,3,11/2/2018
+2,"audacious infiltrator",AER,0.04,0,0,0,25/2/2018
+1,"audacious infiltrator",AER,0.34,0,0,3,8/2/2018
+1,"augmenting automaton",AER,0.04,0,0,0,25/2/2018
+1,"augmenting automaton",AER,0.04,0,0,3,11/2/2018
+1,"augmenting automaton",AER,0.1,0,0,3,25/1/2018
+1,"aven sentry",DOM,0.02,0,0,0,28/5/2018
+1,"aven sentry",DOM,0.03,0,0,3,22/4/2018
+1,"aviary mechanic",KLD,0.04,0,0,3,8/2/2018
+1,"azami, lady of scrolls",C17,0.22,0,0,0,29/3/2018
+1,"baffling end",RIX,0.13,0,0,0,25/3/2018
+1,"baird, steward of argive",DOM,0.2,0,0,3,22/4/2018
+1,"ballista charger",KLD,0.05,0,0,0,19/2/2018
+2,"baloth gorger",DOM,0.04,0,0,0,29/5/2018
+1,"baloth gorger",DOM,0.05,0,0,0,12/5/2018
+1,"baloth gorger",DOM,0.06,0,0,0,29/4/2018
+1,"baloth gorger",DOM,0.05,0,0,3,12/5/2018
+1,"baral's expertise",AER,0.38,0,0,3,8/2/2018
+1,"barricade breaker",AER,0.04,0,0,3,14/2/2018
+1,"barricade breaker",AER,0.06,0,0,3,8/2/2018
+1,"barricade breaker",AER,0.2,0,0,3,25/1/2018
+1,"bastion enforcer",AER,0.02,0,0,0,20/2/2018
+2,"bastion inventor",AER,0.05,0,0,0,2/6/2018
+1,"bastion inventor",AER,0.06,0,0,3,15/2/2018
+1,"bastion inventor",AER,0.07,0,0,3,27/1/2018
+1,"battle at the bridge",AER,0.23,0,0,3,11/2/2018
+1,"befuddle",DOM,0.03,0,0,0,28/5/2018
+1,"befuddle",DOM,0.07,0,0,0,29/4/2018
+1,"befuddle",DOM,0.03,0,0,3,31/5/2018
+1,"befuddle",DOM,0.08,0,0,3,22/4/2018
+1,"benalish honor guard",DOM,0.05,0,0,3,22/4/2018
+1,"blackblade reforged",DOM,3.88,1,0,3,22/4/2018
+1,"blessed light",DOM,0.04,0,0,0,29/4/2018
+2,"blessed light",DOM,0.02,0,0,3,22/4/2018
+1,"blessing of belzenlok",DOM,0.04,0,0,0,29/5/2018
+1,"blessing of belzenlok",DOM,0.05,0,0,0,12/5/2018
+1,"blessing of belzenlok",DOM,0.06,0,0,3,22/4/2018
+1,"blinding fog",XLN,0.05,0,0,3,9/3/2018
+1,"bloodline necromancer",C17,0.16,0,0,0,29/3/2018
+1,"bloodstone goblin",DOM,0.08,0,0,3,22/4/2018
+1,"bloodtallow candle",DOM,0.04,0,0,0,12/5/2018
+1,"bloodtallow candle",DOM,0.04,0,0,3,22/4/2018
+1,"blossoming defense",KLD,0.95,0,0,3,11/2/2018
+1,"body double",C17,0.27,0,0,0,29/3/2018
+1,"brass's bounty",RIX,0.15,0,0,3,28/2/2018
+1,"brazen freebooter",RIX,0.03,0,0,0,25/3/2018
+1,"brazen freebooter",RIX,0.02,0,0,3,4/4/2018
+1,"brazen freebooter",RIX,0.03,0,0,3,28/2/2018
+1,"broken bond",DOM,0.1,0,0,0,29/4/2018
+1,"broken bond",DOM,0.12,0,0,3,22/4/2018
+2,"buccaneer's bravado",RIX,0.03,0,0,3,4/4/2018
+1,"built to last",KLD,0.03,0,0,3,8/2/2018
+1,"built to smash",KLD,0.06,0,0,0,19/2/2018
+1,"built to smash",KLD,0.06,0,0,3,11/2/2018
+1,"cabal evangel",DOM,0.02,0,0,0,28/5/2018
+1,"cabal evangel",DOM,0.02,0,0,3,17/6/2018
+1,"cabal evangel",DOM,0.04,0,0,3,22/4/2018
+1,"cabal paladin",DOM,0.05,0,0,3,22/4/2018
+1,"cabal stronghold",DOM,2.03,0,0,3,22/4/2018
+1,"caligo skin-witch",DOM,0.04,0,0,0,28/5/2018
+1,"caligo skin-witch",DOM,0.05,0,0,0,29/4/2018
+1,"caligo skin-witch",DOM,0.05,0,0,3,22/4/2018
+3,"call the cavalry",DOM,0.05,0,0,0,29/5/2018
+1,"call the cavalry",DOM,0.05,0,0,3,12/5/2018
+1,"canal monitor",RIX,0.02,0,0,0,25/3/2018
+1,"canal monitor",RIX,0.02,0,0,3,4/4/2018
+1,"cancel",XLN,0.03,0,0,3,25/3/2018
+2,"cast down",DOM,0.62,0,0,3,12/5/2018
+1,"cathartic reunion",KLD,0.14,0,0,0,12/4/2018
+1,"cathartic reunion",KLD,0.12,0,0,3,28/2/2018
+1,"cathartic reunion",KLD,0.13,0,0,3,8/2/2018
+1,"caught in the brights",AER,0.03,0,0,3,11/2/2018
+1,"cauldron dance",C17,0.18,0,0,0,29/3/2018
+1,"champion of the flame",DOM,0.1,0,0,0,28/5/2018
+1,"champion of the flame",DOM,0.12,0,0,3,12/5/2018
+1,"champion of the flame",DOM,0.15,0,0,3,22/4/2018
+1,"chandra's revolution",AER,0.02,0,0,3,15/2/2018
+1,"chandra's revolution",AER,0.28,0,0,3,27/1/2018
+1,"chaos warp",C17,0.95,0,0,0,29/3/2018
+1,"charge",DOM,0.04,0,0,0,12/5/2018
+1,"charge",DOM,0.04,0,0,3,12/5/2018
+1,"charge",DOM,0.07,0,0,3,22/4/2018
+1,"chart a course",XLN,0.31,0,0,3,9/3/2018
+1,"clifftop retreat",DOM,2.52,0,0,0,28/4/2018
+1,"clone legion",C17,0.37,0,0,0,29/3/2018
+1,"cloudreader sphinx",DOM,0.04,0,0,0,28/5/2018
+1,"cloudreader sphinx",DOM,0.05,0,0,0,28/4/2018
+1,"cloudreader sphinx",DOM,0.05,0,0,3,22/4/2018
+2,"cogwork assembler",AER,0.07,0,0,3,15/2/2018
+1,"cogworker's puzzleknot",KLD,0.05,0,0,3,11/2/2018
+2,"cold-water snapper",DOM,0.03,0,0,0,29/5/2018
+1,"cold-water snapper",DOM,0.05,0,0,0,28/4/2018
+1,"cold-water snapper",DOM,0.02,0,0,3,22/4/2018
+2,"cold-water snapper",DOM,0.03,0,0,3,31/5/2018
+1,"cold-water snapper",DOM,0.04,0,0,3,12/5/2018
+1,"colossal dreadmaw",RIX,0.03,0,0,3,4/4/2018
+1,"comet storm",C17,0.28,0,0,0,29/3/2018
+1,"command tower",C17,0.42,0,0,0,29/3/2018
+1,"commander's sphere",C17,0.22,0,0,0,29/3/2018
+1,"commencement of festivities",KLD,0.04,0,0,0,12/4/2018
+2,"commencement of festivities",KLD,0.03,0,0,3,11/2/2018
+1,"commencement of festivities",KLD,0.05,0,0,3,28/2/2018
+1,"consul's shieldguard",KLD,0.05,0,0,0,19/2/2018
+1,"consulate dreadnought",AER,0.09,0,0,0,20/2/2018
+1,"consulate dreadnought",AER,0.11,0,0,3,27/1/2018
+1,"consulate dreadnought",AER,0.23,1,0,3,14/2/2018
+2,"consulate skygate",KLD,0.03,0,0,0,19/2/2018
+1,"consulate skygate",KLD,0.03,0,0,3,28/2/2018
+1,"consulate surveillance",KLD,0.07,0,0,0,19/2/2018
+2,"consulate turret",AER,0.04,0,0,0,2/6/2018
+1,"consulate turret",AER,0.11,0,0,3,25/1/2018
+1,"conviction",AER,0.09,0,0,0,25/2/2018
+1,"conviction",AER,0.12,0,0,3,25/1/2018
+1,"corpse augur",C17,0.14,0,0,0,29/3/2018
+1,"corrosive ooze",DOM,0.05,0,0,3,22/4/2018
+1,"countless gears renegade",AER,0.02,0,0,0,25/2/2018
+1,"countless gears renegade",AER,0.11,0,0,3,8/2/2018
+1,"countless gears renegade",AER,0.12,0,0,3,25/1/2018
+1,"cowl prowler",KLD,0.03,0,0,3,11/2/2018
+1,"crackdown construct",AER,0.04,0,0,0,20/2/2018
+1,"crackdown construct",AER,0.04,0,0,3,11/2/2018
+1,"crash through",HOU,0.08,0,0,0,15/4/2018
+2,"crashing tide",RIX,0.05,0,0,0,25/3/2018
+1,"crashing tide",RIX,0.04,0,0,3,4/4/2018
+1,"crashing tide",RIX,0.05,0,0,3,23/3/2018
+1,"creeping mold",KLD,0.06,0,0,0,19/2/2018
+1,"crosis's charm",C17,0.15,0,0,0,29/3/2018
+3,"cruel finality",AER,0.01,0,0,0,2/6/2018
+1,"cruel finality",AER,0.36,0,0,3,8/2/2018
+1,"crumbling necropolis",C17,0.17,0,0,0,29/3/2018
+1,"cultivator of blades",KLD,0.09,0,0,0,19/2/2018
+1,"cultivator of blades",KLD,0.1,0,0,3,11/2/2018
+1,"cultivator's caravan",KLD,0.22,0,0,3,28/2/2018
+1,"cultivator's caravan",KLD,0.24,0,0,3,11/2/2018
+1,"curator's ward",DOM,0.08,0,0,3,12/5/2018
+1,"curator's ward",DOM,0.09,0,0,3,22/4/2018
+1,"curious obsession",RIX,0.14,0,0,3,23/3/2018
+1,"curse of disturbance",C17,0.17,0,0,0,29/3/2018
+1,"curse of opulence",C17,0.23,0,0,0,29/3/2018
+1,"curse of verbosity",C17,0.22,0,0,0,29/3/2018
+2,"d'avenant trapper",DOM,0.03,0,0,0,29/5/2018
+1,"d'avenant trapper",DOM,0.06,0,0,0,28/4/2018
+1,"d'avenant trapper",DOM,0.04,0,0,3,12/5/2018
+1,"damping sphere",DOM,2.5,0,0,3,12/5/2018
+1,"damping sphere",DOM,2.94,0,0,3,22/4/2018
+1,"daredevil dragster",AER,0.05,0,0,3,8/2/2018
+1,"daring archaeologist",DOM,0.27,0,0,3,22/4/2018
+1,"daring demolition",AER,0.02,0,0,0,25/2/2018
+1,"daring demolition",AER,0.03,0,0,0,28/4/2018
+1,"daring demolition",AER,0.05,0,0,3,11/2/2018
+1,"daring demolition",AER,0.18,0,0,3,8/2/2018
+2,"dark bargain",DOM,0.05,0,0,3,12/5/2018
+1,"dark inquiry",RIX,0.05,0,0,3,4/4/2018
+1,"dark intimations",AER,0.12,0,0,3,27/1/2018
+1,"darksteel ingot",C17,0.13,0,0,0,29/3/2018
+1,"dauntless bodyguard",DOM,0.28,0,0,0,28/4/2018
+1,"dawnfeather eagle",AER,0.03,0,0,0,28/4/2018
+1,"dawnfeather eagle",AER,0.04,0,0,0,20/2/2018
+2,"dawnfeather eagle",AER,0.03,0,0,3,14/2/2018
+1,"dawnfeather eagle",AER,0.14,0,0,3,8/2/2018
+1,"deadeye harpooner",AER,0.05,0,0,0,25/2/2018
+1,"deadeye harpooner",AER,0.09,0,0,0,2/6/2018
+1,"deadeye quartermaster",XLN,0.06,0,0,3,25/3/2018
+1,"deadeye rig-hauler",RIX,0.04,0,0,0,25/3/2018
+1,"deadeye rig-hauler",RIX,0.03,0,0,3,9/3/2018
+1,"deadeye rig-hauler",RIX,0.04,0,0,3,4/4/2018
+1,"deadeye tormentor",XLN,0.04,0,0,0,25/3/2018
+1,"deadlock trap",KLD,0.08,0,0,0,19/2/2018
+1,"deathbloom thallid",DOM,0.06,0,0,0,29/5/2018
+1,"decoction module",KLD,0.1,0,0,0,19/2/2018
+3,"decoction module",KLD,0.08,0,0,3,31/5/2018
+2,"decommission",AER,0.06,0,0,0,25/2/2018
+1,"decommission",AER,0.03,0,0,3,11/2/2018
+1,"decree of pain",C17,0.91,0,0,0,29/3/2018
+1,"deep freeze",DOM,0.06,0,0,0,29/4/2018
+1,"deeproot warrior",XLN,0.03,0,0,3,9/3/2018
+1,"deeproot waters",XLN,0.11,0,0,0,25/3/2018
+1,"defiant salvager",AER,0.12,0,0,3,25/1/2018
+1,"demolish",KLD,0.03,0,0,0,19/2/2018
+1,"demolish",KLD,0.03,0,0,3,11/2/2018
+1,"demolition stomper",KLD,0.06,0,0,0,19/2/2018
+1,"demonic vigor",DOM,0.04,0,0,0,29/5/2018
+1,"demonic vigor",DOM,0.05,0,0,0,12/5/2018
+2,"demonic vigor",DOM,0.05,0,0,3,22/4/2018
+2,"depths of desire",XLN,0.03,0,0,3,9/3/2018
+1,"despair",HOU,0.28,0,0,0,15/4/2018
+1,"destructive tampering",AER,0.16,0,0,0,25/2/2018
+1,"destructive tampering",AER,0.11,0,0,3,15/2/2018
+2,"destructive tampering",AER,0.12,0,0,3,8/2/2018
+2,"destructive tampering",AER,0.13,0,0,3,25/1/2018
+2,"dhund operative",KLD,0.05,0,0,0,19/2/2018
+1,"dhund operative",KLD,0.05,0,0,3,11/2/2018
+1,"die young",KLD,0.05,0,0,3,11/2/2018
+1,"diligent excavator",DOM,0.06,0,0,0,28/5/2018
+1,"diligent excavator",DOM,0.08,0,0,3,22/4/2018
+1,"dimir aqueduct",C17,0.21,0,0,0,29/3/2018
+1,"dismal backwater",C17,0.08,0,0,0,29/3/2018
+1,"dispersal technician",AER,0.02,0,0,0,28/4/2018
+1,"dispersal technician",AER,0.3,0,0,3,8/2/2018
+1,"disposal mummy",HOU,0.02,0,0,0,15/4/2018
+1,"dive down",XLN,0.05,0,0,3,9/3/2018
+1,"divest",DOM,0.07,0,0,0,28/5/2018
+1,"divest",DOM,0.08,0,0,0,29/4/2018
+1,"divest",DOM,0.08,0,0,3,12/5/2018
+1,"divination",DOM,0.06,0,0,3,22/4/2018
+1,"divination",DOM,0.09,0,0,3,12/5/2018
+1,"divine verdict",RIX,0.02,0,0,3,4/4/2018
+1,"dramatic reversal",KLD,0.07,0,0,3,8/2/2018
+1,"dreamcaller siren",XLN,0.18,0,0,3,9/3/2018
+1,"drudge sentinel",DOM,0.02,0,0,3,12/5/2018
+2,"druid of the cowl",AER,0.05,0,0,0,25/2/2018
+2,"druid of the cowl",AER,0.05,0,0,3,15/2/2018
+1,"druid of the cowl",AER,0.06,0,0,3,27/1/2018
+1,"dual shot",XLN,0.05,0,0,0,25/3/2018
+1,"dub",DOM,0.04,0,0,0,12/5/2018
+2,"dub",DOM,0.05,0,0,0,28/4/2018
+1,"dub",DOM,0.05,0,0,3,22/4/2018
+2,"dukhara peafowl",KLD,0.02,0,0,0,19/2/2018
+1,"dukhara scavenger",KLD,0.04,0,0,0,12/4/2018
+1,"dusk charger",RIX,0.02,0,0,0,23/2/2018
+1,"dusk charger",RIX,0.02,0,0,3,28/2/2018
+1,"dusk legion zealot",RIX,0.08,0,0,3,23/3/2018
+1,"eager construct",KLD,0.04,0,0,0,19/2/2018
+1,"eager construct",KLD,0.06,0,0,3,8/2/2018
+1,"eddytrail hawk",KLD,0.04,0,0,0,19/2/2018
+1,"efficient construction",AER,0.07,0,0,0,20/2/2018
+1,"elfhame druid",DOM,0.1,0,0,3,12/5/2018
+1,"eliminate the competition",KLD,0.08,0,0,0,19/2/2018
+1,"embraal bruiser",KLD,0.07,0,0,0,19/2/2018
+2,"embraal gear-smasher",AER,0.02,0,0,0,25/2/2018
+2,"embraal gear-smasher",AER,0.04,0,0,3,11/2/2018
+1,"empyreal voyager",KLD,0.05,0,0,0,19/2/2018
+1,"engineered might",KLD,0.05,0,0,0,19/2/2018
+1,"essence extraction",KLD,0.1,0,0,0,19/2/2018
+1,"etherium-horn sorcerer",C17,0.19,0,0,0,29/3/2018
+1,"eviscerate",DOM,0.04,0,0,0,12/5/2018
+1,"eviscerate",DOM,0.63,1,0,0,29/4/2018
+1,"evolving wilds",C17,0.07,0,0,0,29/3/2018
+1,"evra, halcyon witness",DOM,0.15,0,0,0,28/5/2018
+1,"evra, halcyon witness",DOM,0.43,0,0,3,22/4/2018
+1,"excavation elephant",DOM,0.02,0,0,0,29/5/2018
+1,"excavation elephant",DOM,0.04,0,0,0,28/4/2018
+1,"excavation elephant",DOM,0.04,0,0,3,22/4/2018
+1,"exotic orchard",C17,0.34,0,0,0,29/3/2018
+2,"expel from orazca",RIX,0.07,0,0,3,9/3/2018
+4,"fabrication module",KLD,0.08,0,0,3,24/5/2018
+1,"failed inspection",KLD,0.03,0,0,0,19/2/2018
+1,"fairgrounds warden",KLD,0.1,0,0,0,12/4/2018
+1,"fairgrounds warden",KLD,0.14,0,0,0,19/2/2018
+1,"fanatical firebrand",RIX,0.07,0,0,3,28/2/2018
+1,"fanatical firebrand",RIX,0.08,0,0,3,23/3/2018
+1,"fatal push",AER,5.8,0,0,0,20/2/2018
+1,"fatal push",AER,5.76,0,0,3,14/2/2018
+1,"fathom fleet boarder",RIX,0.02,0,0,3,23/3/2018
+1,"felidar guardian",AER,0.16,0,0,3,11/2/2018
+1,"fellwar stone",C17,0.27,0,0,0,29/3/2018
+1,"fen hauler",AER,0.02,0,0,3,11/2/2018
+3,"feral abomination",DOM,0.04,0,0,0,28/5/2018
+1,"fervent strike",DOM,0.04,0,0,0,29/5/2018
+1,"fervent strike",DOM,0.06,0,0,0,28/4/2018
+1,"field of ruin",XLN,2.09,0,0,3,28/2/2018
+1,"fiery intervention",DOM,0.02,0,0,0,28/5/2018
+1,"fiery intervention",DOM,0.03,0,0,0,12/5/2018
+1,"fiery intervention",DOM,0.04,0,0,3,22/4/2018
+1,"fight with fire",DOM,0.1,0,0,0,12/5/2018
+2,"filigree crawler",AER,0.03,0,0,0,28/4/2018
+1,"filigree crawler",AER,0.02,0,0,3,11/2/2018
+1,"filigree crawler",AER,0.22,0,0,3,8/2/2018
+1,"filigree familiar",KLD,0.12,0,0,0,12/4/2018
+1,"final parting",DOM,0.09,0,0,0,29/5/2018
+1,"fire elemental",DOM,0.03,0,0,0,12/5/2018
+1,"fire elemental",DOM,0.04,0,0,3,22/4/2018
+1,"fire shrine keeper",XLN,0.07,0,0,3,28/2/2018
+1,"firefist adept",DOM,0.08,0,0,3,22/4/2018
+1,"fireforger's puzzleknot",KLD,0.01,0,0,0,19/2/2018
+2,"fireforger's puzzleknot",KLD,0.01,0,0,3,28/2/2018
+1,"flood of recollection",RIX,0.08,0,0,3,28/2/2018
+1,"forebear's blade",DOM,0.17,0,0,0,28/4/2018
+1,"forebear's blade",DOM,0.18,0,0,0,29/4/2018
+1,"forerunner of the heralds",RIX,0.1,0,0,0,25/3/2018
+1,"fortuitous find",KLD,0.04,0,0,0,19/2/2018
+1,"foul orchard",RIX,0.07,0,0,3,23/3/2018
+1,"foundry assembler",AER,0.03,0,0,0,25/2/2018
+1,"foundry assembler",AER,0.04,0,0,3,15/2/2018
+1,"foundry assembler",AER,0.15,0,0,3,8/2/2018
+1,"foundry assembler",AER,0.17,0,0,3,27/1/2018
+1,"foundry hornet",AER,0.02,0,0,0,25/2/2018
+1,"foundry screecher",KLD,0.02,0,0,3,8/2/2018
+1,"fourth bridge prowler",AER,0.07,0,0,0,20/2/2018
+1,"fragmentize",KLD,0.09,0,0,0,19/2/2018
+1,"frenzied rage",DOM,0.05,0,0,3,22/4/2018
+1,"frilled deathspitter",RIX,0.04,0,0,0,25/3/2018
+1,"frilled deathspitter",RIX,0.04,0,0,3,23/3/2018
+1,"frontline devastator",HOU,0.05,0,0,0,15/4/2018
+1,"frontline rebel",AER,0.02,0,0,0,28/4/2018
+2,"frontline rebel",AER,0.19,0,0,3,8/2/2018
+2,"fungal plots",DOM,0.13,0,0,0,29/5/2018
+1,"fungal plots",DOM,0.17,0,0,0,29/4/2018
+2,"gaea's protector",DOM,0.02,0,0,0,29/5/2018
+1,"gaea's protector",DOM,0.03,0,0,0,29/4/2018
+1,"galecaster colossus",C17,0.34,0,0,0,29/3/2018
+1,"garna, the bloodflame",DOM,0.13,0,0,0,28/4/2018
+1,"ghirapur guide",KLD,0.04,0,0,3,11/2/2018
+1,"ghirapur osprey",AER,0.02,0,0,0,2/6/2018
+1,"ghitu chronicler",DOM,0.05,0,0,0,12/5/2018
+1,"ghitu chronicler",DOM,0.04,0,0,3,22/4/2018
+1,"ghitu journeymage",DOM,0.06,0,0,0,12/5/2018
+1,"ghitu journeymage",DOM,0.08,0,0,0,29/4/2018
+1,"ghitu journeymage",DOM,0.09,0,0,3,22/4/2018
+1,"ghitu lavarunner",DOM,0.06,0,0,0,28/5/2018
+1,"ghitu lavarunner",DOM,0.07,0,0,0,29/5/2018
+1,"ghitu lavarunner",DOM,0.07,0,0,3,12/5/2018
+1,"gideon's reproach",DOM,0.04,0,0,0,29/5/2018
+2,"gideon's reproach",DOM,0.06,0,0,0,29/4/2018
+1,"gift of growth",DOM,0.04,0,0,0,28/5/2018
+1,"gift of strength",HOU,0.03,0,0,0,15/4/2018
+1,"gifted aetherborn",AER,1.44,0,0,0,20/2/2018
+1,"gilded lotus",DOM,2.36,0,0,3,22/4/2018
+2,"giltgrove stalker",RIX,0.03,0,0,0,25/3/2018
+1,"glassblower's puzzleknot",KLD,0.04,0,0,0,12/4/2018
+1,"glassblower's puzzleknot",KLD,0.07,0,0,0,19/2/2018
+1,"glassblower's puzzleknot",KLD,0.07,0,0,3,11/2/2018
+1,"gleaming barrier",RIX,0.03,0,0,0,25/3/2018
+1,"glimmer of genius",KLD,0.27,0,0,0,31/5/2018
+3,"glimmer of genius",KLD,0.27,0,0,3,24/5/2018
+3,"glint-nest crane",KLD,0.14,0,0,3,24/5/2018
+1,"glint-nest crane",KLD,0.15,0,0,3,28/2/2018
+1,"glint-sleeve artisan",KLD,0.06,0,0,0,12/4/2018
+1,"go for the throat",C17,1.06,0,0,0,29/3/2018
+1,"goblin barrage",DOM,0.07,0,0,0,12/5/2018
+1,"goblin trailblazer",RIX,0.03,0,0,0,25/3/2018
+1,"goblin trailblazer",RIX,0.04,0,0,0,23/2/2018
+1,"goblin trailblazer",RIX,0.04,0,0,3,28/2/2018
+1,"goblin warchief",DOM,0.21,0,0,0,28/4/2018
+1,"gonti's aether heart",AER,0.39,0,0,0,20/2/2018
+1,"greenbelt rampager",AER,0.6,0,0,3,11/2/2018
+1,"grixis panorama",C17,0.11,0,0,0,29/3/2018
+1,"grow from the ashes",DOM,0.07,0,0,0,29/4/2018
+1,"grow from the ashes",DOM,0.06,0,0,3,17/6/2018
+1,"gruesome fate",RIX,0.06,0,0,3,23/3/2018
+2,"guardians of koilos",DOM,0.03,0,0,0,29/5/2018
+1,"guardians of koilos",DOM,0.04,0,0,0,12/5/2018
+1,"guardians of koilos",DOM,0.06,0,0,0,29/4/2018
+1,"hallar, the firefletcher",DOM,0.08,0,0,0,12/5/2018
+1,"hallar, the firefletcher",DOM,0.11,0,0,3,22/4/2018
+1,"harbinger of the tides",C17,0.39,0,0,0,29/3/2018
+1,"havengul lich",C17,1.02,0,0,0,29/3/2018
+1,"hazardous conditions",KLD,0.04,0,0,3,11/2/2018
+1,"headwater sentries",XLN,0.03,0,0,3,9/3/2018
+1,"headwater sentries",XLN,0.05,0,0,3,25/3/2018
+1,"healing grace",DOM,0.06,0,0,3,22/4/2018
+1,"heroic intervention",AER,3.06,0,0,3,11/2/2018
+1,"hidden herbalists",AER,0.24,0,0,3,25/1/2018
+1,"hidden stockpile",AER,0.13,0,0,3,11/2/2018
+1,"highspire artisan",KLD,0.06,0,0,3,8/2/2018
+1,"highspire infusion",AER,0.02,0,0,0,2/6/2018
+1,"highspire infusion",AER,0.04,0,0,3,11/2/2018
+1,"hightide hermit",KLD,0.0,0,0,0,19/2/2018
+1,"hightide hermit",KLD,0.0,0,0,3,8/2/2018
+1,"hightide hermit",KLD,0.02,0,0,3,28/2/2018
+1,"hijack",XLN,0.06,0,0,0,25/3/2018
+1,"hijack",KLD,0.02,0,0,0,19/2/2018
+1,"hijack",KLD,0.02,0,0,3,8/2/2018
+1,"hinterland drake",AER,0.03,0,0,0,25/2/2018
+2,"hinterland drake",AER,0.01,0,0,3,15/2/2018
+1,"history of benalia",DOM,12.54,0,0,0,12/5/2018
+1,"hornswoggle",RIX,0.08,0,0,0,23/2/2018
+1,"hornswoggle",RIX,0.07,0,0,3,4/4/2018
+1,"hungry flames",AER,0.06,0,0,0,25/2/2018
+2,"hunt the weak",KLD,0.04,0,0,0,19/2/2018
+1,"hunt the weak",RIX,0.02,0,0,0,25/3/2018
+1,"hunt the weak",RIX,0.02,0,0,3,23/3/2018
+1,"ice over",AER,0.02,0,0,0,25/2/2018
+1,"ice over",AER,0.06,0,0,0,28/4/2018
+1,"ice over",AER,0.0,0,0,3,25/1/2018
+1,"ice over",AER,0.03,0,0,3,11/2/2018
+1,"ice over",AER,0.09,0,0,3,8/2/2018
+1,"illusionist's stratagem",AER,0.07,0,0,3,8/2/2018
+1,"impeccable timing",KLD,0.03,0,0,3,28/2/2018
+1,"imperial aerosaur",XLN,0.06,0,0,0,25/3/2018
+1,"implement of combustion",AER,0.04,0,0,0,20/2/2018
+2,"implement of combustion",AER,0.05,0,0,0,2/6/2018
+1,"implement of combustion",AER,0.13,0,0,3,25/1/2018
+1,"implement of examination",AER,0.02,0,0,0,25/2/2018
+1,"implement of examination",AER,0.03,0,0,3,11/2/2018
+1,"implement of ferocity",AER,0.05,0,0,0,25/2/2018
+1,"implement of ferocity",AER,0.12,0,0,3,25/1/2018
+1,"implement of improvement",AER,0.05,0,0,3,14/2/2018
+1,"implement of malice",AER,0.03,0,0,0,20/2/2018
+1,"implement of malice",AER,0.12,0,0,3,25/1/2018
+1,"inalla, archmage ritualist",C17,0.0,1,0,0,29/3/2018
+1,"inspired charge",KLD,0.02,0,0,0,19/2/2018
+1,"into the roil",C17,0.13,0,0,0,29/3/2018
+2,"inventors' fair",KLD,0.95,0,0,0,24/5/2018
+1,"invigorated rampage",AER,0.13,0,0,0,25/2/2018
+1,"invoke the divine",DOM,0.06,0,0,0,28/4/2018
+2,"invoke the divine",DOM,0.07,0,0,0,28/5/2018
+1,"invoke the divine",DOM,0.06,0,0,3,22/4/2018
+1,"irontread crusher",AER,0.05,0,0,0,20/2/2018
+1,"irontread crusher",AER,0.06,0,0,0,25/2/2018
+2,"irontread crusher",AER,0.05,0,0,3,11/2/2018
+1,"izzet boilerworks",C17,0.13,0,0,0,29/3/2018
+1,"izzet chemister",C17,0.36,0,0,0,29/3/2018
+1,"izzet chronarch",C17,0.1,0,0,0,29/3/2018
+1,"jade bearer",RIX,0.06,0,0,0,25/3/2018
+1,"jade bearer",RIX,0.05,0,0,3,9/3/2018
+1,"jade bearer",RIX,0.06,0,0,3,23/3/2018
+2,"jadecraft artisan",RIX,0.06,0,0,0,25/3/2018
+1,"jadelight ranger",RIX,6.55,0,0,0,25/3/2018
+1,"jaya's immolating inferno",DOM,0.36,0,0,3,22/4/2018
+1,"jhoira, weatherlight captain",DOM,13.44,1,0,3,22/4/2018
+1,"jodah, archmage eternal",DOM,0.47,0,0,0,29/4/2018
+1,"jodah, archmage eternal",DOM,0.52,0,0,0,28/4/2018
+1,"jousting lance",DOM,0.03,0,0,0,29/5/2018
+1,"jousting lance",DOM,0.04,0,0,3,22/4/2018
+1,"juggernaut",DOM,0.04,0,0,3,12/5/2018
+1,"juggernaut",DOM,0.05,0,0,3,17/6/2018
+1,"jungleborn pioneer",RIX,0.05,0,0,0,25/3/2018
+1,"jungleborn pioneer",RIX,0.05,0,0,3,23/3/2018
+1,"jwar isle refuge",C17,0.2,0,0,0,29/3/2018
+1,"kamahl's druidic vow",DOM,0.3,0,0,0,29/5/2018
+1,"karn's temporal sundering",DOM,0.82,0,0,0,28/4/2018
+1,"keldon overseer",DOM,0.03,0,0,0,12/5/2018
+1,"keldon overseer",DOM,0.04,0,0,0,28/4/2018
+1,"keldon raider",DOM,0.03,0,0,3,12/5/2018
+2,"keldon raider",DOM,0.04,0,0,3,22/4/2018
+1,"keldon warcaller",DOM,0.02,0,0,0,29/5/2018
+1,"keldon warcaller",DOM,0.07,0,0,0,28/4/2018
+1,"keldon warcaller",DOM,0.09,0,0,3,22/4/2018
+1,"kess, dissident mage",C17,0.0,1,0,0,29/3/2018
+1,"key to the city",KLD,0.24,0,0,0,19/2/2018
+1,"kindred dominance",C17,2.17,0,0,0,29/3/2018
+2,"kitesail corsair",RIX,0.03,0,0,3,25/3/2018
+1,"knight of grace",DOM,0.46,0,0,0,12/5/2018
+1,"knight of new benalia",DOM,0.05,0,0,0,28/5/2018
+1,"knight of new benalia",DOM,0.06,0,0,3,12/5/2018
+1,"krosan druid",DOM,0.04,0,0,0,28/5/2018
+2,"kujar seedsculptor",KLD,0.04,0,0,0,19/2/2018
+1,"kwende, pride of femeref",DOM,0.1,0,0,3,12/5/2018
+1,"larger than life",KLD,0.09,0,0,3,11/2/2018
+1,"lathnu hellion",KLD,0.14,0,0,0,19/2/2018
+1,"lathnu sailback",AER,0.01,0,0,0,2/6/2018
+1,"lathnu sailback",AER,0.02,0,0,0,20/2/2018
+1,"lawless broker",KLD,0.04,0,0,0,19/2/2018
+1,"lawless broker",KLD,0.04,0,0,3,11/2/2018
+1,"leave in the dust",AER,0.03,0,0,0,25/2/2018
+1,"leave in the dust",AER,0.03,0,0,3,11/2/2018
+1,"lifecraft cavalry",AER,0.05,0,0,0,25/2/2018
+1,"lifecraft cavalry",AER,0.1,0,0,3,25/1/2018
+1,"lifecraft cavalry",AER,0.13,0,0,3,8/2/2018
+3,"lightning runner",AER,0.34,0,0,3,24/5/2018
+1,"lingering phantom",DOM,0.17,1,0,0,29/4/2018
+1,"live fast",KLD,0.04,0,0,3,8/2/2018
+1,"llanowar elves",DOM,0.1,0,0,0,12/5/2018
+1,"llanowar elves",DOM,0.11,0,0,0,29/4/2018
+1,"llanowar elves",DOM,0.11,0,0,3,17/6/2018
+1,"llanowar envoy",DOM,0.03,0,0,0,29/5/2018
+2,"llanowar envoy",DOM,0.04,0,0,0,12/5/2018
+1,"llanowar envoy",DOM,0.02,0,0,3,17/6/2018
+1,"llanowar envoy",DOM,0.04,0,0,3,12/5/2018
+1,"llanowar scout",DOM,0.04,0,0,0,28/5/2018
+1,"longtusk cub",KLD,0.25,0,0,3,8/2/2018
+1,"looming altisaur",XLN,0.04,0,0,0,25/3/2018
+1,"luminous bonds",RIX,0.04,0,0,3,23/3/2018
+1,"lyra dawnbringer",DOM,16.89,0,0,0,28/5/2018
+1,"magus of the abyss",C17,0.18,0,0,0,29/3/2018
+1,"magus of the mind",C17,0.46,0,0,0,29/3/2018
+1,"mairsil, the pretender",C17,0.0,1,0,0,29/3/2018
+1,"make obsolete",KLD,0.05,0,0,3,8/2/2018
+1,"make obsolete",KLD,0.06,0,0,3,11/2/2018
+1,"malfunction",KLD,0.03,0,0,0,19/2/2018
+1,"mammoth spider",DOM,0.02,0,0,0,29/5/2018
+1,"mammoth spider",DOM,0.05,0,0,3,12/5/2018
+2,"marauding looter",XLN,0.06,0,0,3,9/3/2018
+1,"marchesa, the black rose",C17,0.6,0,0,0,29/3/2018
+1,"marwyn, the nurturer",DOM,0.6,0,0,3,12/5/2018
+1,"master trinketeer",KLD,0.12,0,0,3,11/2/2018
+1,"maulfist doorbuster",KLD,0.02,0,0,0,19/2/2018
+1,"maulfist doorbuster",KLD,0.02,0,0,3,11/2/2018
+1,"maulfist revolutionary",AER,0.24,0,0,3,25/1/2018
+1,"maulfist squad",KLD,0.06,0,0,0,19/2/2018
+2,"maverick thopterist",AER,0.08,0,0,0,2/6/2018
+1,"memorial to folly",DOM,0.11,0,0,0,28/4/2018
+1,"memorial to folly",DOM,0.11,0,0,3,22/4/2018
+1,"memorial to genius",DOM,0.09,0,0,0,29/5/2018
+1,"memorial to genius",DOM,0.11,0,0,0,28/4/2018
+1,"memorial to genius",DOM,0.09,0,0,3,17/6/2018
+1,"memorial to glory",DOM,0.08,0,0,0,28/5/2018
+1,"memorial to glory",DOM,0.1,0,0,3,22/4/2018
+1,"memorial to unity",DOM,0.1,0,0,3,22/4/2018
+1,"memorial to war",DOM,0.1,0,0,0,28/4/2018
+1,"memorial to war",DOM,0.1,0,0,3,22/4/2018
+1,"memory plunder",C17,0.35,0,0,0,29/3/2018
+1,"merchant of secrets",C17,0.14,0,0,0,29/3/2018
+1,"merchant's dockhand",AER,0.07,0,0,3,8/2/2018
+1,"merciless eternal",HOU,0.08,0,0,0,15/4/2018
+1,"mercurial chemister",C17,0.18,0,0,0,29/3/2018
+1,"mesa unicorn",DOM,0.05,0,0,0,28/4/2018
+1,"mesa unicorn",DOM,0.04,0,0,3,17/6/2018
+1,"mesa unicorn",DOM,0.05,0,0,3,22/4/2018
+1,"metallic mimic",AER,7.38,0,0,3,14/2/2018
+1,"metallic rebuke",AER,0.07,0,0,0,25/2/2018
+1,"metallic rebuke",AER,0.08,0,0,3,14/2/2018
+1,"metallic rebuke",AER,0.09,0,0,3,8/2/2018
+1,"metalspinner's puzzleknot",KLD,0.05,0,0,3,8/2/2018
+1,"midnight entourage",AER,0.11,0,0,3,15/2/2018
+1,"mind rot",KLD,0.04,0,0,3,11/2/2018
+1,"minister of inquiries",KLD,0.13,0,0,3,8/2/2018
+1,"mirror of the forebears",C17,0.31,0,0,0,29/3/2018
+3,"mist-cloaked herald",RIX,0.07,0,0,0,25/3/2018
+1,"mobile garrison",AER,0.04,0,0,3,11/2/2018
+1,"mobile garrison",AER,0.09,0,0,3,8/2/2018
+1,"moment of triumph",RIX,0.04,0,0,3,23/3/2018
+1,"monstrous onslaught",AER,0.08,0,0,0,25/2/2018
+1,"morbid curiosity",KLD,0.07,0,0,0,19/2/2018
+1,"mummy paramount",HOU,0.02,0,0,0,15/4/2018
+1,"mutiny",RIX,0.04,0,0,0,25/3/2018
+1,"mystifying maze",C17,0.26,0,0,0,29/3/2018
+1,"naban, dean of iteration",DOM,2.25,0,0,3,22/4/2018
+1,"natural obsolescence",AER,0.04,0,0,3,11/2/2018
+1,"natural obsolescence",AER,0.06,0,0,3,8/2/2018
+1,"naturalize",RIX,0.04,0,0,0,25/3/2018
+1,"naturalize",RIX,0.04,0,0,3,23/3/2018
+1,"navigator's compass",DOM,0.04,0,0,0,28/5/2018
+1,"navigator's compass",DOM,0.05,0,0,3,12/5/2018
+1,"navigator's compass",DOM,0.06,0,0,3,22/4/2018
+1,"necromantic selection",C17,0.23,0,0,0,29/3/2018
+1,"needletooth raptor",RIX,0.07,0,0,0,25/3/2018
+2,"negate",RIX,0.06,0,0,0,25/3/2018
+1,"negate",RIX,0.07,0,0,3,23/3/2018
+1,"negate",RIX,0.12,0,0,3,28/2/2018
+1,"negate",AER,0.05,0,0,0,25/2/2018
+2,"negate",AER,0.06,0,0,0,20/2/2018
+1,"negate",AER,0.07,0,0,3,8/2/2018
+1,"nevinyrral's disk",C17,0.54,0,0,0,29/3/2018
+1,"night market aeronaut",AER,0.01,0,0,0,2/6/2018
+2,"night market aeronaut",AER,0.03,0,0,0,25/2/2018
+2,"night market aeronaut",AER,0.15,0,0,3,8/2/2018
+1,"night market guard",AER,0.02,0,0,0,25/2/2018
+1,"night market guard",AER,0.11,0,0,3,25/1/2018
+1,"night market guard",AER,0.27,0,0,3,8/2/2018
+1,"nimble innovator",KLD,0.01,0,0,3,11/2/2018
+1,"nin, the pain artist",C17,0.4,0,0,0,29/3/2018
+1,"ninth bridge patrol",KLD,0.04,0,0,0,12/4/2018
+1,"niv-mizzet, the firemind",C17,0.49,0,0,0,29/3/2018
+1,"nivix guildmage",C17,0.07,0,0,0,29/3/2018
+1,"oathsworn vampire",RIX,0.1,0,0,3,4/4/2018
+1,"on serra's wings",DOM,0.09,0,0,0,12/5/2018
+1,"one with the wind",XLN,0.05,0,0,0,25/3/2018
+2,"one with the wind",XLN,0.05,0,0,3,25/3/2018
+1,"opportunity",C17,0.09,0,0,0,29/3/2018
+1,"opt",XLN,0.34,0,0,3,25/3/2018
+1,"opt",XLN,0.36,0,0,3,28/2/2018
+2,"opt",DOM,0.15,0,0,0,29/4/2018
+1,"opt",DOM,0.16,0,0,0,12/5/2018
+1,"opt",DOM,0.16,0,0,3,12/5/2018
+1,"orazca raptor",RIX,0.02,0,0,0,25/3/2018
+1,"ornamental courage",KLD,0.06,0,0,3,8/2/2018
+1,"ornithopter",AER,0.15,0,0,0,25/2/2018
+1,"ovalchase dragster",KLD,0.05,0,0,3,8/2/2018
+2,"overgrown armasaur",RIX,0.03,0,0,0,25/3/2018
+1,"pacification array",AER,0.07,0,0,0,25/2/2018
+1,"pardic wanderer",DOM,0.02,0,0,3,31/5/2018
+1,"pardic wanderer",DOM,0.04,0,0,3,12/5/2018
+1,"pardic wanderer",DOM,0.05,0,0,3,22/4/2018
+1,"path of ancestry",C17,1.57,0,0,0,29/3/2018
+1,"peema aether-seer",AER,0.05,0,0,3,11/2/2018
+1,"pegasus courser",DOM,0.02,0,0,0,29/4/2018
+1,"pegasus courser",DOM,0.02,0,0,3,22/4/2018
+1,"pegasus courser",DOM,0.03,0,0,3,17/6/2018
+1,"perilous predicament",AER,0.04,0,0,3,11/2/2018
+1,"pirate's prize",XLN,0.05,0,0,3,25/3/2018
+1,"polymorphist's jest",C17,0.35,0,0,0,29/3/2018
+1,"portal mage",C17,0.32,0,0,0,29/3/2018
+1,"powerstone shard",DOM,0.05,0,0,0,29/5/2018
+3,"powerstone shard",DOM,0.07,0,0,0,28/4/2018
+1,"powerstone shard",DOM,0.06,0,0,3,12/5/2018
+1,"prakhata club security",KLD,0.01,0,0,0,19/2/2018
+1,"prakhata pillar-bug",KLD,0.01,0,0,0,19/2/2018
+1,"prakhata pillar-bug",KLD,0.02,0,0,3,11/2/2018
+3,"precise strike",AER,0.02,0,0,0,25/2/2018
+2,"precise strike",AER,0.16,0,0,3,8/2/2018
+1,"precognition field",DOM,0.43,0,0,3,22/4/2018
+1,"pressure point",KLD,0.03,0,0,0,19/2/2018
+2,"prey upon",AER,0.07,0,0,0,25/2/2018
+1,"prey upon",AER,0.12,0,0,3,25/1/2018
+1,"primordial wurm",DOM,0.02,0,0,0,29/5/2018
+2,"primordial wurm",DOM,0.05,0,0,3,22/4/2018
+1,"prizefighter construct",AER,0.01,0,0,0,20/2/2018
+1,"propeller pioneer",KLD,0.05,0,0,0,19/2/2018
+1,"propeller pioneer",KLD,0.06,0,0,3,8/2/2018
+1,"puppeteer clique",C17,0.4,0,0,0,29/3/2018
+1,"quicksmith rebel",AER,0.1,0,0,0,20/2/2018
+1,"quicksmith spy",AER,0.09,0,0,0,25/2/2018
+1,"quicksmith spy",AER,0.16,0,0,0,2/6/2018
+1,"quicksmith spy",AER,0.0,0,0,3,25/1/2018
+1,"radiating lightning",DOM,0.03,0,0,0,28/5/2018
+1,"radiating lightning",DOM,0.06,0,0,0,28/4/2018
+1,"raff capashen, ship's mage",DOM,0.14,0,0,0,12/5/2018
+1,"rakdos carnarium",C17,0.11,0,0,0,29/3/2018
+1,"rakdos charm",C17,0.19,0,0,0,29/3/2018
+1,"rampaging cyclops",DOM,0.02,0,0,0,29/5/2018
+1,"raptor companion",RIX,0.03,0,0,0,25/3/2018
+1,"rat colony",DOM,0.17,0,0,0,12/5/2018
+1,"rat colony",DOM,0.23,0,0,3,22/4/2018
+1,"ravenous intruder",AER,0.09,0,0,0,28/4/2018
+1,"reality shift",C17,0.19,0,0,0,29/3/2018
+1,"reaver ambush",RIX,0.05,0,0,3,23/3/2018
+1,"reckless fireweaver",KLD,0.06,0,0,0,19/2/2018
+1,"reckless fireweaver",KLD,0.05,0,0,3,11/2/2018
+1,"reckless racer",AER,0.04,0,0,0,2/6/2018
+1,"reckless racer",AER,0.05,0,0,0,25/2/2018
+1,"reckless racer",AER,0.07,0,0,3,8/2/2018
+1,"rekindling phoenix",RIX,18.42,0,0,0,25/3/2018
+1,"release to the wind",RIX,0.22,0,0,3,23/3/2018
+1,"relentless raptor",RIX,0.1,0,0,0,25/3/2018
+1,"relic runner",DOM,0.03,0,0,0,28/4/2018
+1,"relic runner",DOM,0.04,0,0,0,12/5/2018
+1,"renegade freighter",KLD,0.04,0,0,0,12/4/2018
+1,"renegade freighter",KLD,0.04,0,0,3,8/2/2018
+1,"renegade map",AER,0.07,0,0,0,2/6/2018
+1,"renegade tactics",KLD,0.07,0,0,0,19/2/2018
+1,"renegade's getaway",AER,0.05,0,0,0,25/2/2018
+1,"renegade's getaway",AER,0.03,0,0,3,11/2/2018
+1,"renegade's getaway",AER,0.12,0,0,3,25/1/2018
+1,"rescue",DOM,0.04,0,0,0,28/5/2018
+1,"rescue",DOM,0.06,0,0,3,22/4/2018
+2,"reservoir walker",AER,0.03,0,0,0,20/2/2018
+1,"reservoir walker",AER,0.1,0,0,0,28/4/2018
+2,"reservoir walker",AER,0.04,0,0,3,15/2/2018
+2,"reservoir walker",AER,0.2,0,0,3,8/2/2018
+2,"resourceful return",AER,0.04,0,0,0,25/2/2018
+1,"resourceful return",AER,0.04,0,0,3,27/1/2018
+2,"resourceful return",AER,0.05,0,0,3,15/2/2018
+1,"resplendent griffin",RIX,0.07,0,0,3,4/4/2018
+1,"restoration specialist",AER,0.1,0,0,0,20/2/2018
+1,"restoration specialist",AER,0.11,0,0,0,25/2/2018
+1,"reverse engineer",AER,0.0,0,0,3,25/1/2018
+1,"reverse engineer",AER,0.12,0,0,3,27/1/2018
+1,"revoke privileges",KLD,0.05,0,0,0,19/2/2018
+1,"revoke privileges",KLD,0.06,0,0,3,11/2/2018
+1,"revoke privileges",KLD,0.1,0,0,3,8/2/2018
+1,"revolutionary rebuff",KLD,0.05,0,0,0,19/2/2018
+1,"revolutionary rebuff",KLD,0.06,0,0,3,11/2/2018
+1,"ridgescale tusker",AER,0.06,0,0,3,15/2/2018
+1,"ridgescale tusker",AER,0.07,0,0,3,8/2/2018
+1,"rile",XLN,0.06,0,0,0,25/3/2018
+1,"riparian tiger",KLD,0.05,0,0,0,19/2/2018
+1,"river darter",RIX,0.02,0,0,0,25/3/2018
+1,"river sneak",XLN,0.1,0,0,3,25/3/2018
+1,"river's rebuke",XLN,0.31,0,0,0,25/3/2018
+1,"ruin rat",HOU,0.09,0,0,0,15/4/2018
+1,"run aground",XLN,0.02,0,0,3,9/3/2018
+1,"run amok",DOM,0.05,0,0,3,12/5/2018
+1,"run amok",DOM,0.07,0,0,3,22/4/2018
+1,"rush of vitality",KLD,0.04,0,0,0,19/2/2018
+1,"rush of vitality",KLD,0.04,0,0,3,8/2/2018
+1,"rush of vitality",KLD,0.05,0,0,3,11/2/2018
+1,"sage of lat-nam",DOM,0.05,0,0,0,29/5/2018
+1,"sage of lat-nam",DOM,0.07,0,0,0,28/4/2018
+1,"sage of lat-nam",DOM,0.08,0,0,0,29/4/2018
+1,"sage of lat-nam",DOM,0.05,0,0,3,17/6/2018
+1,"sage of shaila's claim",KLD,0.05,0,0,0,12/4/2018
+1,"sage of shaila's claim",KLD,0.02,0,0,3,8/2/2018
+1,"saheeli's artistry",KLD,0.11,0,0,0,12/4/2018
+1,"sailor of means",XLN,0.04,0,0,0,25/3/2018
+2,"sailor of means",RIX,0.03,0,0,0,25/3/2018
+3,"sailor of means",RIX,0.03,0,0,3,4/4/2018
+1,"salivating gremlins",KLD,0.08,0,0,3,28/2/2018
+1,"salivating gremlins",KLD,0.12,0,0,3,8/2/2018
+1,"salvage scuttler",AER,0.02,0,0,3,11/2/2018
+1,"sanctum spirit",DOM,0.05,0,0,3,22/4/2018
+1,"saproling migration",DOM,0.07,0,0,0,29/5/2018
+1,"scrapper champion",AER,0.2,0,0,3,25/1/2018
+1,"scrounger of souls",HOU,0.05,0,0,0,15/4/2018
+1,"scrounging bandar",AER,0.1,0,0,0,28/4/2018
+1,"scrounging bandar",AER,0.04,0,0,3,11/2/2018
+1,"scrounging bandar",AER,0.06,0,0,3,14/2/2018
+1,"sea gate oracle",C17,0.12,0,0,0,29/3/2018
+1,"sea legs",RIX,0.05,0,0,0,25/3/2018
+2,"seal away",DOM,0.42,0,0,0,29/4/2018
+1,"seal away",DOM,0.42,0,0,3,22/4/2018
+1,"seal away",DOM,0.45,0,0,3,12/5/2018
+1,"secret salvage",AER,0.25,0,0,3,25/1/2018
+1,"secrets of the golden city",RIX,0.04,0,0,0,25/3/2018
+1,"secrets of the golden city",RIX,0.05,0,0,3,23/3/2018
+1,"see red",RIX,0.06,0,0,3,28/2/2018
+1,"seismic shift",DOM,0.04,0,0,0,28/4/2018
+2,"seismic shift",DOM,0.04,0,0,3,12/5/2018
+1,"select for inspection",KLD,0.02,0,0,0,19/2/2018
+1,"select for inspection",KLD,0.03,0,0,3,8/2/2018
+1,"sequestered stash",KLD,0.09,0,0,3,11/2/2018
+1,"serendib sorcerer",C17,0.16,0,0,0,29/3/2018
+1,"sergeant-at-arms",DOM,0.04,0,0,0,29/4/2018
+1,"sergeant-at-arms",DOM,0.04,0,0,3,22/4/2018
+1,"serra angel",DOM,0.06,0,0,0,28/5/2018
+1,"serra angel",DOM,0.09,0,0,0,29/4/2018
+1,"serra angel",DOM,0.07,0,0,3,22/4/2018
+1,"serra disciple",DOM,0.04,0,0,0,28/5/2018
+1,"serra disciple",DOM,0.04,0,0,3,17/6/2018
+1,"serra disciple",DOM,0.05,0,0,3,22/4/2018
+1,"servo schematic",AER,0.1,0,0,0,25/2/2018
+1,"shadowmage infiltrator",C17,0.24,0,0,0,29/3/2018
+1,"shake the foundations",RIX,0.08,0,0,3,23/3/2018
+1,"shanna, sisay's legacy",DOM,0.17,0,0,0,29/4/2018
+1,"shapers of nature",XLN,0.08,0,0,3,9/3/2018
+1,"shield of the realm",DOM,0.11,0,0,3,22/4/2018
+2,"shielded aether thief",AER,0.08,0,0,3,15/2/2018
+1,"shifting shadow",C17,0.42,0,0,0,29/3/2018
+2,"shipwreck looter",XLN,0.03,0,0,3,9/3/2018
+1,"shipwreck moray",AER,0.18,0,0,3,8/2/2018
+1,"shivan fire",DOM,0.05,0,0,0,29/4/2018
+2,"shivan fire",DOM,0.05,0,0,3,12/5/2018
+1,"shock",AER,0.07,0,0,0,20/2/2018
+1,"shock",AER,0.18,0,0,3,25/1/2018
+2,"short sword",DOM,0.04,0,0,3,22/4/2018
+1,"shrewd negotiation",KLD,0.03,0,0,0,19/2/2018
+1,"shrewd negotiation",KLD,0.06,0,0,0,12/4/2018
+1,"siege modification",AER,0.04,0,0,3,8/2/2018
+1,"silkweaver elite",AER,0.02,0,0,0,25/2/2018
+1,"silkweaver elite",AER,0.02,0,0,3,15/2/2018
+1,"silkweaver elite",AER,0.11,0,0,3,8/2/2018
+1,"silkweaver elite",AER,0.12,0,0,3,27/1/2018
+1,"silumgar's command",C17,0.24,0,0,0,29/3/2018
+1,"siren's ruse",XLN,0.04,0,0,3,25/3/2018
+1,"skirk prospector",DOM,0.07,0,0,0,28/5/2018
+4,"skirk prospector",DOM,0.08,0,0,0,29/4/2018
+1,"skirk prospector",DOM,0.07,0,0,3,17/6/2018
+2,"skirk prospector",DOM,0.08,0,0,3,22/4/2018
+1,"skittering surveyor",DOM,0.05,0,0,0,29/4/2018
+1,"skizzik",DOM,0.06,0,0,0,28/5/2018
+1,"sky skiff",KLD,0.05,0,0,0,19/2/2018
+2,"sky skiff",KLD,0.05,0,0,3,28/2/2018
+1,"skyship plunderer",AER,0.13,0,0,0,20/2/2018
+1,"skyship plunderer",AER,0.12,0,0,3,11/2/2018
+1,"skyswirl harrier",KLD,0.02,0,0,3,11/2/2018
+1,"skywhaler's shot",KLD,0.05,0,0,3,28/2/2018
+2,"slippery scoundrel",RIX,0.07,0,0,0,25/3/2018
+2,"sly requisitioner",AER,0.06,0,0,3,14/2/2018
+1,"smuggler's copter",KLD,2.1,0,0,3,8/2/2018
+2,"snubhorn sentry",RIX,0.03,0,0,0,25/3/2018
+1,"snubhorn sentry",RIX,0.03,0,0,3,23/3/2018
+1,"sorcerer's wand",DOM,0.09,0,0,3,22/4/2018
+1,"soul of the rapids",RIX,0.02,0,0,0,25/3/2018
+2,"soul salvage",DOM,0.05,0,0,3,22/4/2018
+1,"spark of creativity",KLD,0.09,0,0,0,19/2/2018
+1,"spark of creativity",KLD,0.06,0,0,3,11/2/2018
+3,"sparring construct",DOM,0.04,0,0,0,12/5/2018
+2,"sparring construct",DOM,0.04,0,0,3,22/4/2018
+1,"speedway fanatic",KLD,0.06,0,0,3,8/2/2018
+1,"spell pierce",XLN,0.12,0,0,0,25/3/2018
+1,"spell swindle",XLN,0.45,0,0,3,28/2/2018
+1,"spelltwine",C17,0.2,0,0,0,29/3/2018
+1,"spike-tailed ceratops",XLN,0.02,0,0,0,25/3/2018
+1,"spire patrol",AER,0.04,0,0,3,8/2/2018
+1,"spire winder",RIX,0.02,0,0,0,25/3/2018
+1,"spireside infiltrator",KLD,0.04,0,0,0,19/2/2018
+1,"spontaneous artist",KLD,0.06,0,0,0,19/2/2018
+2,"sporecrown thallid",DOM,0.16,0,0,0,28/5/2018
+2,"sporecrown thallid",DOM,0.23,0,0,0,29/4/2018
+1,"squire's devotion",RIX,0.05,0,0,3,23/3/2018
+1,"sram's expertise",AER,0.36,0,0,0,20/2/2018
+1,"sram's expertise",AER,0.47,0,0,0,28/4/2018
+1,"stampeding horncrest",RIX,0.02,0,0,0,25/3/2018
+1,"start your engines",KLD,0.06,0,0,3,11/2/2018
+1,"storm fleet arsonist",XLN,0.06,0,0,0,25/3/2018
+1,"storm fleet pyromancer",XLN,0.05,0,0,3,28/2/2018
+1,"storm fleet sprinter",RIX,0.08,0,0,0,25/3/2018
+1,"strider harness",RIX,0.07,0,0,3,28/2/2018
+1,"stronghold confessor",DOM,0.03,0,0,0,29/5/2018
+1,"stronghold confessor",DOM,0.04,0,0,3,12/5/2018
+1,"subtle strike",KLD,0.04,0,0,0,12/4/2018
+1,"sulfur falls",DOM,3.48,0,0,0,28/4/2018
+2,"swaggering corsair",RIX,0.04,0,0,0,25/3/2018
+1,"swaggering corsair",RIX,0.02,0,0,3,23/3/2018
+1,"swaggering corsair",RIX,0.03,0,0,3,28/2/2018
+1,"sweatworks brawler",AER,0.04,0,0,0,20/2/2018
+1,"swift warden",RIX,0.09,0,0,0,25/3/2018
+1,"swiftwater cliffs",C17,0.08,0,0,0,29/3/2018
+2,"sworn guardian",RIX,0.03,0,0,0,25/3/2018
+3,"syncopate",DOM,0.07,0,0,3,17/6/2018
+1,"syndicate trafficker",KLD,0.14,0,0,3,8/2/2018
+1,"taigam, sidisi's hand",C17,0.5,0,0,0,29/3/2018
+1,"take down",KLD,0.07,0,0,0,19/2/2018
+1,"take into custody",AER,0.0,0,0,3,25/1/2018
+1,"take into custody",AER,0.03,0,0,3,14/2/2018
+1,"take into custody",AER,0.12,0,0,3,27/1/2018
+1,"tasseled dromedary",KLD,0.03,0,0,0,19/2/2018
+1,"tasseled dromedary",KLD,0.07,0,0,3,11/2/2018
+1,"tasseled dromedary",KLD,0.08,0,0,3,8/2/2018
+1,"tatyova, benthic druid",DOM,0.18,0,0,0,28/4/2018
+1,"tempest djinn",DOM,0.32,0,0,0,28/5/2018
+1,"terminate",C17,0.85,0,0,0,29/3/2018
+1,"terramorphic expanse",C17,0.09,0,0,0,29/3/2018
+1,"territorial allosaurus",DOM,0.59,0,0,0,29/5/2018
+1,"terror of the fairgrounds",KLD,0.02,0,0,3,8/2/2018
+1,"tetsuko umezawa, fugitive",DOM,0.09,0,0,0,28/5/2018
+1,"tezzeret's ambition",KLD,0.03,0,0,3,11/2/2018
+1,"thallid omnivore",DOM,0.07,0,0,0,29/4/2018
+1,"thallid soothsayer",DOM,0.09,0,0,0,29/4/2018
+1,"the antiquities war",DOM,0.74,0,0,3,12/5/2018
+2,"the flame of keld",DOM,0.11,0,0,0,29/5/2018
+1,"thopter arrest",AER,0.08,0,0,0,20/2/2018
+1,"thran temporal gateway",DOM,1.36,0,0,0,12/5/2018
+1,"thrashing brontodon",RIX,0.16,0,0,0,25/3/2018
+1,"thriving grubs",KLD,0.09,0,0,3,11/2/2018
+1,"thriving ibex",KLD,0.02,0,0,3,8/2/2018
+1,"thriving rats",KLD,0.05,0,0,0,19/2/2018
+1,"thriving rats",KLD,0.07,0,0,3,8/2/2018
+1,"thriving rhino",KLD,0.04,0,0,0,19/2/2018
+1,"thriving turtle",KLD,0.05,0,0,0,19/2/2018
+2,"thriving turtle",KLD,0.04,0,0,3,31/5/2018
+2,"tiana, ship's caretaker",DOM,0.09,0,0,0,12/5/2018
+1,"tiana, ship's caretaker",DOM,0.09,0,0,3,12/5/2018
+1,"tilonalli's crown",RIX,0.04,0,0,3,23/3/2018
+1,"time of ice",DOM,0.09,0,0,0,12/5/2018
+1,"timestream navigator",RIX,1.62,0,0,0,25/3/2018
+1,"timestream navigator",RIX,1.67,0,0,3,28/2/2018
+1,"tishana's wayfinder",XLN,0.03,0,0,0,25/3/2018
+1,"tishana's wayfinder",XLN,0.04,0,0,3,9/3/2018
+1,"tolarian scholar",DOM,0.03,0,0,0,29/5/2018
+1,"tolarian scholar",DOM,0.03,0,0,3,22/4/2018
+1,"torch gauntlet",KLD,0.02,0,0,0,19/2/2018
+1,"tragic lesson",HOU,0.05,0,0,0,15/4/2018
+2,"tragic poet",DOM,0.05,0,0,0,29/5/2018
+1,"tragic poet",DOM,0.05,0,0,3,22/4/2018
+1,"treasure keeper",AER,0.25,0,0,3,25/1/2018
+1,"triumph of gerrard",DOM,0.1,0,0,0,29/4/2018
+1,"two-headed giant",DOM,0.12,0,0,3,12/5/2018
+1,"two-headed giant",DOM,0.19,0,0,3,22/4/2018
+1,"unbridled growth",AER,0.07,0,0,0,25/2/2018
+1,"unbridled growth",AER,0.07,0,0,3,11/2/2018
+1,"unbridled growth",AER,0.13,0,0,3,25/1/2018
+1,"underhanded designs",KLD,0.08,0,0,0,19/2/2018
+2,"universal solvent",AER,0.04,0,0,0,25/2/2018
+2,"universal solvent",AER,0.03,0,0,3,14/2/2018
+1,"unquenchable thirst",HOU,0.03,0,0,0,15/4/2018
+1,"unquenchable thirst",HOU,0.1,1,0,0,15/4/2018
+1,"unstable obelisk",C17,0.08,0,0,0,29/3/2018
+1,"unwind",DOM,0.09,0,0,0,28/4/2018
+3,"unwind",DOM,0.08,0,0,3,12/5/2018
+1,"urgoros, the empty one",DOM,0.08,0,0,3,22/4/2018
+1,"urza's tome",DOM,0.05,0,0,0,29/5/2018
+1,"valduk, keeper of the flame",DOM,0.09,0,0,0,29/5/2018
+1,"valduk, keeper of the flame",DOM,0.13,0,0,0,28/4/2018
+2,"vedalken blademaster",KLD,0.02,0,0,0,19/2/2018
+1,"vela the night-clad",C17,0.34,0,0,0,29/3/2018
+2,"verdant automaton",AER,0.02,0,0,0,2/6/2018
+2,"vicious offering",DOM,0.07,0,0,0,29/5/2018
+1,"vicious offering",DOM,0.06,0,0,3,22/4/2018
+1,"vindictive lich",C17,1.74,0,0,0,29/3/2018
+1,"vivid crag",C17,0.14,0,0,0,29/3/2018
+1,"vivid creek",C17,0.12,0,0,0,29/3/2018
+1,"vivid marsh",C17,0.11,0,0,0,29/3/2018
+1,"vizier of the true",HOU,0.04,0,0,0,15/4/2018
+1,"vodalian arcanist",DOM,0.04,0,0,0,28/5/2018
+2,"vodalian arcanist",DOM,0.05,0,0,3,12/5/2018
+1,"voltaic brawler",KLD,0.12,0,0,3,11/2/2018
+1,"walking ballista",AER,10.07,0,0,0,25/2/2018
+1,"warcry phoenix",DOM,0.05,0,0,0,28/5/2018
+1,"warkite marauder",RIX,1.38,0,0,0,25/3/2018
+1,"warlord's fury",DOM,0.05,0,0,0,12/5/2018
+4,"warlord's fury",DOM,0.06,0,0,0,29/5/2018
+1,"warlord's fury",DOM,0.05,0,0,3,12/5/2018
+1,"warlord's fury",DOM,0.06,0,0,3,22/4/2018
+2,"watchful automaton",AER,0.23,0,0,3,8/2/2018
+1,"waterknot",RIX,0.04,0,0,3,9/3/2018
+1,"wayward giant",KLD,0.01,0,0,0,19/2/2018
+1,"weaponcraft enthusiast",KLD,0.11,0,0,0,19/2/2018
+1,"weaponcraft enthusiast",KLD,0.09,0,0,3,8/2/2018
+1,"weatherlight",DOM,2.62,0,0,3,22/4/2018
+1,"weight of memory",DOM,0.08,0,0,3,22/4/2018
+1,"welder automaton",AER,0.01,0,0,0,20/2/2018
+1,"welding sparks",KLD,0.06,0,0,0,19/2/2018
+2,"welding sparks",KLD,0.04,0,0,3,11/2/2018
+1,"whir of invention",AER,0.74,0,0,0,25/2/2018
+2,"whir of invention",AER,0.89,0,0,3,24/5/2018
+1,"whir of invention",AER,0.93,0,0,3,31/5/2018
+3,"whirler virtuoso",KLD,0.1,0,0,0,24/5/2018
+1,"whirlermaker",KLD,0.06,0,0,3,28/2/2018
+1,"whisper, blood liturgist",DOM,0.13,0,0,3,22/4/2018
+1,"wild onslaught",DOM,0.09,0,0,0,12/5/2018
+1,"wild wanderer",KLD,0.04,0,0,0,19/2/2018
+1,"wily bandar",KLD,0.05,0,0,3,11/2/2018
+1,"wind drake",KLD,0.06,0,0,0,19/2/2018
+1,"wind drake",KLD,0.03,0,0,3,8/2/2018
+1,"wind drake",KLD,0.05,0,0,3,11/2/2018
+1,"windgrace acolyte",DOM,0.03,0,0,0,12/5/2018
+1,"windgrace acolyte",DOM,0.04,0,0,0,29/4/2018
+1,"windgrace acolyte",DOM,0.03,0,0,3,12/5/2018
+1,"windgrace acolyte",DOM,0.05,0,0,3,22/4/2018
+1,"winding constrictor",AER,0.37,0,0,0,28/4/2018
+1,"winding constrictor",AER,0.45,0,0,0,25/2/2018
+1,"wispweaver angel",KLD,0.07,0,0,3,8/2/2018
+1,"wizard's lightning",DOM,0.22,0,0,3,22/4/2018
+1,"wizard's retort",DOM,0.23,0,0,3,22/4/2018
+1,"woodland cemetery",DOM,3.22,0,0,0,12/5/2018
+1,"woodland stream",RIX,0.06,0,0,3,23/3/2018
+1,"woodweaver's puzzleknot",KLD,0.04,0,0,3,8/2/2018
+1,"worn powerstone",C17,0.17,0,0,0,29/3/2018
+1,"wrangle",AER,0.05,0,0,0,25/2/2018
+1,"wrangle",AER,0.05,0,0,3,11/2/2018
+1,"yavimaya sapherd",DOM,0.06,0,0,0,28/5/2018
+1,"zahid, djinn of the lamp",DOM,1.3,0,0,0,29/4/2018
+1,"zhalfirin void",DOM,0.3,0,0,3,22/4/2018
