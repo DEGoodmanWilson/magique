@@ -1,0 +1,4 @@
+conanbuildinfo.cmake
+cmake-build-*/
+conanbuildinfo.txt
+conaninfo.txt
