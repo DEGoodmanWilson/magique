@@ -24,7 +24,7 @@ cmake --build .
 First, we need to gather all the data on all the Magic cards ever made. We're going to do that by grabbing a JSON file from [MTG JSON](https://mtgjson.com/) (Thanks, y'all!!)
 
 ```
-curl https://mtgjson.com/json/AllCards.json.zip | tar -xf - -C data
+curl https://mtgjson.com/json/AllCards-x.json.zip | tar -xf - -C data
 ```
 
 Export your collection of Magic cards into a `csv` file in the `data` directory with the following format.
