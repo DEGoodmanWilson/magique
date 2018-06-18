@@ -25,9 +25,9 @@ void from_json(const nlohmann::json &j, deck &p);
 class deck
 {
 public:
-    deck(const std::string &filename, const catalog &catalog, interactions interactions); //TOOD we might need to do something better than a copy here!
+    deck(const std::string &filename, const catalog &catalog, const interactions &interactions); //TOOD we might need to do something better than a copy here!
 
-    deck(const std::vector<uint64_t> &indices, const collection &collection, interactions interactions);
+    deck(const std::vector<uint64_t> &indices, const collection &collection, const interactions &interactions);
 
     static void add_key_card(card key)
     {
@@ -44,7 +44,7 @@ public:
     static uint16_t deck_minimum;
 
 public:
-    const interactions interactions_;
+    const interactions &interactions_;
     std::vector<card> cards_;
     double rank_;
     nlohmann::json reasons_;

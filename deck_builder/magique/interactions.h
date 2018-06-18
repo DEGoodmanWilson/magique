@@ -5,7 +5,7 @@
 #pragma once
 
 #include "catalog.h"
-#include <unordered_map>
+#include <array>
 
 namespace magique
 {
@@ -17,8 +17,7 @@ public:
 
     double evaluate(const card &a, const card &b) const;
 private:
-    using interaction = std::unordered_map<int, double>;
-    std::unordered_map<int, interaction> interactions_store_;
+    std::array<std::array<double, 250>, 250> interactions_store_; // TODO hard-coded number of classes, ugh.
 };
 
 } // namespace magique

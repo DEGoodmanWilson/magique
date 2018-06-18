@@ -19,7 +19,7 @@ uint16_t deck::deck_minimum{60-26};
 
 std::vector<card> deck::key_cards_ = {};
 
-deck::deck(const std::string &filename, const catalog &catalog, interactions interactions) :
+deck::deck(const std::string &filename, const catalog &catalog, const interactions &interactions) :
         interactions_{interactions}, rank_{0.0}
 {
 //    for (int i = cost_dist_.size() - 1; i >= 0; --i)
@@ -71,7 +71,7 @@ deck::deck(const std::string &filename, const catalog &catalog, interactions int
     deck_minimum = cards_.size();
 }
 
-deck::deck(const std::vector<uint64_t> &indices, const collection &collection, interactions interactions) :
+deck::deck(const std::vector<uint64_t> &indices, const collection &collection, const interactions &interactions) :
         interactions_{interactions}, rank_{0.0}
 {
 

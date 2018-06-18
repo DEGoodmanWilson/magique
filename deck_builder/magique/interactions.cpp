@@ -9,22 +9,27 @@
 namespace magique
 {
 
-const std::vector<std::string> explode_(const std::string& s, const char& c)
+const std::vector<std::string> explode_(const std::string &s, const char &c)
 {
     std::string buff{""};
     std::vector<std::string> v;
 
-    for(auto n:s)
+    for (auto n:s)
     {
-        if(n != c) buff+=n; else
-        if(n == c && buff != "") { v.push_back(buff); buff = ""; }
+        if (n != c)
+        { buff += n; }
+        else if (n == c && buff != "")
+        {
+            v.push_back(buff);
+            buff = "";
+        }
     }
-    if(buff != "") v.push_back(buff);
+    if (buff != "") v.push_back(buff);
 
     return v;
 }
 
-interactions::interactions(std::string path)
+interactions::interactions(std::string path) : interactions_store_{}
 {
     // TODO let's not just hard code Standard.
     std::ifstream ifs(path + "/conditional_probabilities_standard.json");
@@ -49,21 +54,15 @@ interactions::interactions(std::string path)
 double interactions::evaluate(const card &a, const card &b) const
 {
     // Iterate over all of card a's abilities, and b's abilities, and look up the conditional probabilities
-    // SUM _0..n, 0..m p(a_n | b_m)
+    // SUM _0..m, 0..n p(a_m | b_n)
 
     double value{0.0};
 
-    for(const auto &m : a.mechanics)
+    for (const auto &m : a.mechanics)
     {
-        if(interactions_store_.count(m))
+        for (const auto &n : b.mechanics)
         {
-            for (const auto &n : b.mechanics)
-            {
-                if(interactions_store_.at(m).count(n))
-                {
-                    value += interactions_store_.at(m).at(n);
-                }
-            }
+            value += interactions_store_[m][n];
         }
     }
 
