@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./install_punkt.py
+./build_model.py > ../data/mechanics.txt
 ./tag_cards.py > ../data/card_tags.json
 ./analyze_decks.py ../data/Standard.txt > ../data/conditional_probabilities_standard.json
 ./analyze_decks.py ../data/Modern.txt > ../data/conditional_probabilities_modern.json
