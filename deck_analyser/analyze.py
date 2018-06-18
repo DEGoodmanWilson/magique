@@ -1,14 +1,23 @@
+#!/usr/bin/env python
+
 import re
 import json
 from pprint import pprint
 import itertools
+import sys
+
+if len(sys.argv) != 2:
+    print "Usage: {0} <deck-datafile>".format(sys.argv[0])
+    exit(1)
+
+datafile = sys.argv[1]
 
 decks = []
 all_appearances = 0
 mechanic_appearances = [0] * 250
 mechanic_combo_appearances = [[0 for i in range(250)] for j in range(250)] # keys are mechanic name. I'd prefer a sparse matric, but you know...
 
-with open('../data/Modern.txt', 'r') as f:
+with open(datafile, 'r') as f:
     decks = f.readlines()
 
 with open('../data/card_tags.json') as f:

@@ -62,7 +62,9 @@
 
    ```bash
    cd ../deck_analyzer
-   python ./ analyze.py > ../data/conditional_probabilities.json
+   python ./ analyze.py ../data/Standard.txt > ../data/conditional_probabilities_standard.json
+   python ./ analyze.py ../data/Modern.txt > ../data/conditional_probabilities_modern.json
+   python ./ analyze.py ../data/Commander.txt > ../data/conditional_probabilities_commander.json
    ```
 
 8. Build genetic algorithm
