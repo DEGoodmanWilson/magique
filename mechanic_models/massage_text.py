@@ -14,7 +14,7 @@ punc_regex = re.compile(r"[^\w\s{}\-\+/']", re.IGNORECASE)
 neg_regex = re.compile(r"n't", re.IGNORECASE)
 stop_regex = re.compile(r"\.", re.IGNORECASE)
 
-nltk.download('punkt')
+# nltk.download('punkt')
 sentence_tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 # en_stop = get_stop_words('en')
 en_stop = [
