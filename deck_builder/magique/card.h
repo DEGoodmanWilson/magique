@@ -89,7 +89,10 @@ namespace magique
   "image_url": "http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?multiverseid=430541&type=card",
   "set": "E01",
   "set_name": "Archenemy: Nicol Bolas",
-  "id": "d43016981b23288ff8faf3dfac674cdd1560a719"
+  "id": "d43016981b23288ff8faf3dfac674cdd1560a719",
+
+  # Added by mechanics discovery
+  "mechanics": [1, 2, 3]
 }
 */
 
@@ -140,9 +143,7 @@ struct card
     std::experimental::optional<std::string> toughness;
     uint8_t converted_mana_cost{0};
 
-    std::set<std::string> abilities;
-    std::set<std::string> affinities;
-    std::set<std::string> triggers;
+    std::vector<uint64_t> mechanics;
 };
 
 

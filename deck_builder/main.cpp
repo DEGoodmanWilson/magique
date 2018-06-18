@@ -58,7 +58,7 @@ int main(int argc, char **argv)
             = docopt::docopt(USAGE,
                              {argv + 1, argv + argc},
                              true,               // show help if requested
-                             "Naval Fate 2.0");  // version string
+                             "magique 1.0.0");  // version string
 
 
     std::string data_pathname;

@@ -174,33 +174,11 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        for (const auto &a : j.at("abilities").get<std::vector<std::string>>())
-        {
-            p.abilities.emplace(a);
-        }
+        p.mechanics = j.at("mechanics").get<std::vector<uint64_t>>();
     }
     catch (nlohmann::json::out_of_range &e)
     {}
 
-    try
-    {
-        for (const auto &a : j.at("affinities").get<std::vector<std::string>>())
-        {
-            p.affinities.emplace(a);
-        }
-    }
-    catch (nlohmann::json::out_of_range &e)
-    {}
-
-    try
-    {
-        for (const auto &a : j.at("triggers").get<std::vector<std::string>>())
-        {
-            p.triggers.emplace(a);
-        }
-    }
-    catch (nlohmann::json::out_of_range &e)
-    {}
 }
 
 std::string to_string(const card::type &t)
@@ -284,17 +262,9 @@ void to_json(nlohmann::json &j, const card &p)
         j["toughness"] = *p.toughness;
     }
 
-    if (p.abilities.size())
+    if (p.mechanics.size())
     {
-        j["abilities"] = p.abilities;
-    }
-    if (p.affinities.size())
-    {
-        j["affinities"] = p.affinities;
-    }
-    if (p.triggers.size())
-    {
-        j["triggers"] = p.triggers;
+        j["mechanics"] = p.mechanics;
     }
 
     j["name"] = p.name;

@@ -17,8 +17,6 @@ set(MAGIQUE_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/collection.h
         ${CMAKE_SOURCE_DIR}/magique/deck.cpp
         ${CMAKE_SOURCE_DIR}/magique/deck.h
-        ${CMAKE_SOURCE_DIR}/magique/deck_evaluator.cpp
-        ${CMAKE_SOURCE_DIR}/magique/deck_evaluator.h
         ${CMAKE_SOURCE_DIR}/magique/interactions.cpp
         ${CMAKE_SOURCE_DIR}/magique/interactions.h
         )

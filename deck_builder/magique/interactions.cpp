@@ -4,75 +4,66 @@
 
 #include "interactions.h"
 #include <fstream>
+#include <vector>
 
 namespace magique
 {
 
+const std::vector<std::string> explode_(const std::string& s, const char& c)
+{
+    std::string buff{""};
+    std::vector<std::string> v;
+
+    for(auto n:s)
+    {
+        if(n != c) buff+=n; else
+        if(n == c && buff != "") { v.push_back(buff); buff = ""; }
+    }
+    if(buff != "") v.push_back(buff);
+
+    return v;
+}
+
 interactions::interactions(std::string path)
 {
-    std::ifstream ifs(path + "/interactions.json");
+    // TODO let's not just hard code Standard.
+    std::ifstream ifs(path + "/conditional_probabilities_standard.json");
     nlohmann::json interactions;
     ifs >> interactions;
     ifs.close();
 
-    // ok what we have is an object of interactions. The key is the interaction name.
+    // ok what we have is an object of interactions. The key is a pair of numbers, the keys into our map.
+    // TODO make this format easier to parse!
     for (auto it = interactions.begin(); it != interactions.end(); ++it)
     {
-        //key is a string, value is an object mapping strings to doubles
-        interactions_store_[it.key()] = std::make_shared<interaction>(it.value().get<std::unordered_map<std::string, double>>());
+        //key is a string of two ints with a |, e.g. "1|2", value is a double.
+        auto keys = explode_(it.key(), '|');
+        auto m = std::atoi(keys[0].c_str());
+        auto n = std::atoi(keys[1].c_str());
+
+        interactions_store_[m][n] = it.value().get<double>();
     }
 
 }
 
 double interactions::evaluate(const card &a, const card &b) const
 {
+    // Iterate over all of card a's abilities, and b's abilities, and look up the conditional probabilities
+    // SUM _0..n, 0..m p(a_n | b_m)
+
     double value{0.0};
 
-    //iterate through card a's abilities
-    for (const auto &ability : a.abilities)
+    for(const auto &m : a.mechanics)
     {
-        //find the interactions for this ability
-        if (interactions_store_.count(ability) == 0) continue;
-
-        auto interactions = interactions_store_.at(ability);
-
-        // in order to find abilities that interact with the _lack_ of an ability or type, we need to iterate through the interactions first
-        for (const auto &interaction : *interactions)
+        if(interactions_store_.count(m))
         {
-            bool negative{interaction.first[0] == '!'};
-
-            auto b_interaction = interaction.first;
-            if (negative)
+            for (const auto &n : b.mechanics)
             {
-                b_interaction = b_interaction.substr(1);
+                if(interactions_store_.at(m).count(n))
+                {
+                    value += interactions_store_.at(m).at(n);
+                }
             }
-
-            bool b_has_interaction{b.abilities.count(b_interaction) || b.has_type(b_interaction) || b.subtypes.count(b_interaction)};
-
-            // if b has this ability or type…or it is an interaction with the absence of an ability or type, and b doesn't have it
-            if ((!negative && b_has_interaction) ||
-                (negative && !b_has_interaction))
-            {
-                value += interaction.second;
-            }
-        }
-    }
-
-    //iterate through card a's affinities, and see if card b satisfies them
-    for (const auto &aff: a.affinities)
-    {
-        double score{1.0};
-        std::string affinity{aff};
-        if (affinity[0] == '!') // handle negative affinities
-        {
-            affinity = affinity.substr(1);
-            score = -1.0;
-        }
-
-        // check against b's abilities, types, and subtypes
-        if (b.abilities.count(affinity) || b.has_type(affinity) || b.subtypes.count(affinity))
-        {
-            value += score;
         }
     }
 

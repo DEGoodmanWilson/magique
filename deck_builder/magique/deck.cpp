@@ -253,8 +253,8 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, i
                 interaction_score += interactions_.evaluate(card, cards_[j]);
             }
             interaction_score /= cards_.size();
-            interaction_scores.push_back(
-                    interaction_score); // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+            // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+            interaction_scores.push_back(interaction_score);
             reasons_["interaction_scores"][card.name] = interaction_score;
 
             ++i;

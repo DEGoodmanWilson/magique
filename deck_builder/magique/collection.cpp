@@ -10,6 +10,9 @@
 namespace magique
 {
 
+// TODO find a way to have case_insensitive std::unordered_map, instead of this ::tolower BS
+
+
 collection::collection(std::string path, std::string filename, const catalog &catalog) : catalog_{catalog}
 {
     //load up from a CSV
@@ -27,6 +30,8 @@ collection::collection(std::string path, std::string filename, const catalog &ca
         count = stoul(count_str);
         getline(tokenS, name, '"'); //clear first " char
         getline(tokenS, name, '"');
+        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+
 //        name = name.substr(1,name.length()-1);
 
         bool is_land = false;
@@ -59,6 +64,8 @@ card collection::at(uint64_t loc) const
 
 uint64_t collection::index_at(std::string name, int64_t index_past) const
 {
+    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+
     int64_t i{0};
     for(i = 0 ; i < cards_.size(); ++i)
     {
