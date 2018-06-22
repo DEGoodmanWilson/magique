@@ -72,6 +72,7 @@ uint64_t interactions::evaluate(const card &a, const card &b) const
         value = value / (a.mechanics.size() * b.mechanics.size());
     }
 
+
     return value;
 }
 

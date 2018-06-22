@@ -294,7 +294,11 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
         {
             interaction_score *= card.bonus_multiplier;
         }
+        // Cards that cost less are more valuable.
+        interaction_score /= card.converted_mana_cost;
+
         // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+
         interaction_scores.push_back(interaction_score);
         reasons_["interaction_scores"][card.name] = interaction_score;
 
