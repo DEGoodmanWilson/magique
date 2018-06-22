@@ -326,9 +326,9 @@ def massage(text, name):
 	maybe_keywords_line = text.split("\n")[0]
 	all_keywords = False
 	keywords = []
-	if(',' in maybe_keywords_line):
+	if((',' in maybe_keywords_line) or (';' in maybe_keywords_line)):
 		all_keywords = True
-		maybe_keywords = maybe_keywords_line.split(',')
+		maybe_keywords = re.split('[,;]', maybe_keywords_line)
 		#TODO make sure ALL the maybe keywords match!
 		for maybe_keyword in maybe_keywords:
 			maybe_keyword = maybe_keyword.strip()
