@@ -37,6 +37,7 @@ static const char USAGE[] =
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
       -t <threads> --thread_num=<threads>  Set the number of threads to use, use 0 to indicate enough threads to saturate available CPUs [default: 0]
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
+      -i <color_identity> --color_identity=<color_identity>  Set the color identity of the deck, using a string like "wubgr". Default value lets algorithm decide. [default: ""]
       -d <deck_size> --deck_size=<deck_size>  The number of non-land cards to use. [default: 34]
 )";
 
@@ -69,17 +70,24 @@ int main(int argc, char **argv)
     uint32_t thread_num;
     uint8_t colors;
     uint16_t deck_size;
+    std::set<card::color> color_identity;
 
     for (auto const &arg : args)
     {
-        if (arg.first == "--generations") generations = arg.second.asLong();
-        else if (arg.first == "--population") pop_size = arg.second.asLong();
-        else if (arg.first == "<data-pathname>") data_pathname = arg.second.asString();
-        else if (arg.first == "<collection-filename>") collection_filename = arg.second.asString();
-        else if (arg.first == "--key_card") key_cards = arg.second.asStringList();
-        else if (arg.first == "--thread_num") {
+        if (arg.first == "--generations")
+        { generations = arg.second.asLong(); }
+        else if (arg.first == "--population")
+        { pop_size = arg.second.asLong(); }
+        else if (arg.first == "<data-pathname>")
+        { data_pathname = arg.second.asString(); }
+        else if (arg.first == "<collection-filename>")
+        { collection_filename = arg.second.asString(); }
+        else if (arg.first == "--key_card")
+        { key_cards = arg.second.asStringList(); }
+        else if (arg.first == "--thread_num")
+        {
             thread_num = arg.second.asLong();
-            if(thread_num == 0)
+            if (thread_num == 0)
             {
                 thread_num = std::thread::hardware_concurrency() - 1;
             }
@@ -88,14 +96,49 @@ int main(int argc, char **argv)
                 thread_num--; // 1 thread means no additional threads.
             }
         }
-        else if (arg.first == "--colors") colors = arg.second.asLong();
+        else if (arg.first == "--colors")
+        { colors = arg.second.asLong(); }
+        else if (arg.first == "--color_identity")
+        {
+            auto id_str = arg.second.asString();
+            auto id_cstr = id_str.c_str();
+            for(int i = 0; i < id_str.length(); ++i)
+            {
+                switch(id_cstr[i])
+                {
+                    case 'w':
+                    case 'W':
+                        color_identity.insert(card::color::white);
+                        break;
+                    case 'u':
+                    case 'U':
+                        color_identity.insert(card::color::blue);
+                        break;
+                    case 'b':
+                    case 'B':
+                        color_identity.insert(card::color::black);
+                        break;
+                    case 'r':
+                    case 'R':
+                        color_identity.insert(card::color::red);
+                        break;
+                    case 'g':
+                    case 'G':
+                        color_identity.insert(card::color::green);
+                }
+            }
+        }
         else if (arg.first == "--deck_size") deck_size = arg.second.asLong();
     }
 
 
 
     // set deck evaluation options
+    if(colors != color_identity.size())
+        colors = color_identity.size();
+
     deck::colors = colors;
+    deck::color_identity = color_identity;
     deck::deck_minimum = deck_size;
 
     // fire up a catalog
@@ -114,7 +157,7 @@ int main(int argc, char **argv)
         {
             deck::add_key_card(master_catalog.at(card));
         }
-        catch(...)
+        catch (...)
         {
             std::cerr << "No such card: " << card << std::endl;
             exit(1);
@@ -122,7 +165,7 @@ int main(int argc, char **argv)
     }
 
     double wiggle = deck_size * 0.10;
-    if(wiggle < 1.0) wiggle = 1.0;
+    if (wiggle < 1.0) wiggle = 1.0;
     auto chromo_size = deck_size + static_cast<uint16_t>(wiggle); //  add 10% extra for the GA
     ga2Population pop{pop_size, chromo_size, thread_num};
     std::vector<ga2Gene> min, max;

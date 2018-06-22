@@ -51,19 +51,25 @@ interactions::interactions(std::string path) : interactions_store_{}
 
 }
 
-double interactions::evaluate(const card &a, const card &b) const
+uint64_t interactions::evaluate(const card &a, const card &b) const
 {
     // Iterate over all of card a's abilities, and b's abilities, and look up the conditional probabilities
     // SUM _0..m, 0..n p(a_m | b_n)
 
-    double value{0.0};
+    uint64_t value{0};
 
     for (const auto &m : a.mechanics)
     {
         for (const auto &n : b.mechanics)
         {
-            value += interactions_store_[m][n];
+            value += interactions_store_[m][n] * 100000;
         }
+    }
+
+    // TODO Should we normalize the score so that cards with _more_ mechanics don't outshine cards with fewer?
+    if (a.mechanics.size() && b.mechanics.size())
+    {
+        value = value / (a.mechanics.size() * b.mechanics.size());
     }
 
     return value;

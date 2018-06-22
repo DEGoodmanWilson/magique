@@ -144,6 +144,8 @@ struct card
     uint8_t converted_mana_cost{0};
 
     std::vector<uint64_t> mechanics;
+
+    double bonus_multiplier;
 };
 
 

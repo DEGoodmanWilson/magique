@@ -179,6 +179,7 @@ void from_json(const nlohmann::json &j, card &p)
     catch (nlohmann::json::out_of_range &e)
     {}
 
+    p.bonus_multiplier = 1.0;
 }
 
 std::string to_string(const card::type &t)

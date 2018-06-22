@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <set>
 #include <nlohmann/json.hpp>
 #include "card.h"
 #include "catalog.h"
@@ -31,6 +32,7 @@ public:
 
     static void add_key_card(card key)
     {
+        key.bonus_multiplier = 2.0;
         key_cards_.push_back(key);
     }
 
@@ -41,6 +43,7 @@ public:
     friend void from_json(const nlohmann::json &j, deck &p);
 
     static uint16_t colors;
+    static std::set<card::color> color_identity;
     static uint16_t deck_minimum;
 
 public:

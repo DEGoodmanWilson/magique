@@ -15,7 +15,8 @@ namespace magique
 {
 
 uint16_t deck::colors{2};
-uint16_t deck::deck_minimum{60-26};
+uint16_t deck::deck_minimum{60 - 26};
+std::set<card::color> deck::color_identity{};
 
 std::vector<card> deck::key_cards_ = {};
 
@@ -119,7 +120,7 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
     // This is a handy diagnostic thing. Each time we modify the evaluation, we record it here so we can dump the diagnostics as JSON later
     reasons_.clear();
 
-    std::vector<card> temp;
+    std::vector<card> expanded_deck;
 
     // remove any elements that appear twice
     std::unordered_multiset<uint64_t> collection_duplicates;
@@ -135,12 +136,26 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
             {card::color::colorless, 0}
     };
 
-    //add key cards first
+    // TODO this code is super tortured. It's pretty optimized is part of the reason why.
+    // What we are attempting to do, all in one go is:
+    // Cull any attempt to include the same physical card more than once
+    // Cull any duplicates beyond the legal limits of 4
+    // Establish what the n most dominant colors are in the deck, and cull any cards that do
+    //  not share in those color ids.
+    // I think this can be cleaned up significantly! It certainly needs to be refactored
+    //  to allow the key cards to establish the deck color identity, and only fall back on the most
+    //  numerous colors represented in the absence of a key card.
+
+    std::unordered_set<card::color> top_colors;
+    bool mandated_color_identity{false};
+
+    //add key cards first. If there are key cards, use their color identity as the prefered color identity
     std::unordered_map<std::string, int64_t> indices_seen;
     for (const auto &card :key_cards_)
     {
+        mandated_color_identity = true;
         int64_t last_index{0};
-        if(indices_seen.count(card.name)) last_index = indices_seen[card.name];
+        if (indices_seen.count(card.name)) last_index = indices_seen[card.name];
         auto index = collection.index_at(card.name, last_index);
         indices_seen[card.name] = index;
         collection_duplicates.insert(index); // TODO handle multiple key cards of same name!
@@ -150,11 +165,22 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
 
         for (const auto &color : card.color_identity)
         {
-            colors_seen[color]++;
+            top_colors.insert(color);
         }
 
-        temp.emplace_back(card);
+        expanded_deck.emplace_back(card);
     }
+
+    // see if a color identity was mandated. If so, add those colors
+    if(color_identity.size() > 0)
+    {
+        mandated_color_identity = true;
+        for(const auto &color : color_identity)
+        {
+            top_colors.insert(color);
+        }
+    }
+
 
     for (const auto &i : indices)
     {
@@ -165,36 +191,42 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
         dupes.insert(card.name);
         if (dupes.count(card.name) > 4) continue; //skip 5th+ card of same name
 
-        for (const auto &color : card.color_identity)
+        if (!mandated_color_identity)
         {
-            colors_seen[color]++;
+            for (const auto &color : card.color_identity)
+            {
+                colors_seen[color]++;
+            }
         }
-        temp.emplace_back(card);
+        expanded_deck.emplace_back(card);
     }
 
     // identify the top N colors
-    std::vector<std::pair<card::color, uint16_t>> sorted_colors;
-    for (auto color : card::all_colors)
+    if (!mandated_color_identity)
     {
-        if (color == card::color::colorless) continue;
+        std::vector<std::pair<card::color, uint16_t>> sorted_colors;
+        for (auto color : card::all_colors)
+        {
+            if (color == card::color::colorless) continue;
 
-        sorted_colors.emplace_back(std::make_pair(color, colors_seen[color]));
-    }
-    std::sort(sorted_colors.begin(), sorted_colors.end(), [](const auto &first, const auto &second)
-    {
-        return std::get<uint16_t>(first) > std::get<uint16_t>(second);
-    });
+            sorted_colors.emplace_back(std::make_pair(color, colors_seen[color]));
+        }
+        std::sort(sorted_colors.begin(), sorted_colors.end(), [](const auto &first, const auto &second)
+        {
+            return std::get<uint16_t>(first) > std::get<uint16_t>(second);
+        });
 
-    std::unordered_set<card::color> top_colors;
-    for (auto i = 0; i < colors; ++i)
-    {
-        top_colors.insert(std::get<card::color>(sorted_colors[i]));
+
+        for (auto i = 0; i < colors; ++i)
+        {
+            top_colors.insert(std::get<card::color>(sorted_colors[i]));
+        }
     }
 
     reasons_["colors"] = top_colors;
 
-    // TODO remove any cards not among the top N colors.
-    for (const auto &card : temp)
+    // Remove any cards not among the top N colors.
+    for (const auto &card : expanded_deck)
     {
         bool insert{true};
         for (const auto &color : card.color_identity)
@@ -252,7 +284,12 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
 
                 interaction_score += interactions_.evaluate(card, cards_[j]);
             }
+            interaction_score /= 100000;
             interaction_score /= cards_.size();
+            if (card.bonus_multiplier != 1.0)
+            {
+                interaction_score *= card.bonus_multiplier;
+            }
             // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
             interaction_scores.push_back(interaction_score);
             reasons_["interaction_scores"][card.name] = interaction_score;
