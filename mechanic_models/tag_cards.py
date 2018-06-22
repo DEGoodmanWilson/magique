@@ -13,9 +13,12 @@ dictionary = corpora.Dictionary.load("cards.dict")
 
 
 with open('../data/AllCards-x.json') as json_data:
-  cards = json.load(json_data)
+    cards = json.load(json_data)
 
 all_card_tags = {}
+
+with open('../data/types.json') as json_types:
+    types = json.load(json_data)
 
 # We want to do a couple of things for each card.
 # 1) we want to break apart the oracle text into sentences: Each sentence is a "document"
@@ -31,9 +34,17 @@ for name, card in cards.iteritems():
         continue
 
     if 'text' in card:
+        card_affinities = []
         card_tags = []
+
+        # check for references to creature types.
+        for type in types:
+            if type in card['text']:
+                card_affinities.append(type)
+
         sentences = massage_text.massage(card['text'], card['name'])
         for sentence in sentences:
+
             # classify the sentence
             vec = dictionary.doc2bow(sentence)
             tag_probs = model[vec]
