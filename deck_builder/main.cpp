@@ -134,7 +134,7 @@ int main(int argc, char **argv)
 
 
     // set deck evaluation options
-    if(colors != color_identity.size())
+    if(colors < color_identity.size())
         colors = color_identity.size();
 
     deck::colors = colors;
