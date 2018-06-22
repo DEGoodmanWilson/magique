@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <set>
+#include <unordered_set>
 #include <nlohmann/json.hpp>
 #include "card.h"
 #include "catalog.h"
@@ -43,7 +43,7 @@ public:
     friend void from_json(const nlohmann::json &j, deck &p);
 
     static uint16_t colors;
-    static std::set<card::color> color_identity;
+    static std::unordered_set<card::color> color_identity;
     static uint16_t deck_minimum;
 
 public:

@@ -16,7 +16,7 @@ namespace magique
 
 uint16_t deck::colors{2};
 uint16_t deck::deck_minimum{60 - 26};
-std::set<card::color> deck::color_identity{};
+std::unordered_set<card::color> deck::color_identity{};
 
 std::vector<card> deck::key_cards_ = {};
 
@@ -146,14 +146,12 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
     //  to allow the key cards to establish the deck color identity, and only fall back on the most
     //  numerous colors represented in the absence of a key card.
 
-    std::unordered_set<card::color> top_colors;
-    bool mandated_color_identity{false};
+    std::unordered_set<card::color> top_colors{color_identity};
 
-    //add key cards first. If there are key cards, use their color identity as the prefered color identity
+    //add key cards first. If there are key cards, add their color identity to the prefered color identity
     std::unordered_map<std::string, int64_t> indices_seen;
     for (const auto &card :key_cards_)
     {
-        mandated_color_identity = true;
         int64_t last_index{0};
         if (indices_seen.count(card.name)) last_index = indices_seen[card.name];
         auto index = collection.index_at(card.name, last_index);
@@ -171,16 +169,7 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
         expanded_deck.emplace_back(card);
     }
 
-    // see if a color identity was mandated. If so, add those colors
-    if (color_identity.size() > 0)
-    {
-        mandated_color_identity = true;
-        for (const auto &color : color_identity)
-        {
-            top_colors.insert(color);
-        }
-    }
-
+    bool mandated_color_identity{top_colors.size() > 0};
 
     for (const auto &i : indices)
     {
@@ -201,9 +190,12 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
         expanded_deck.emplace_back(card);
     }
 
-    // identify the top N colors
+    // identify the top N colors, if there is no mandate for a particular color id for the deck. Then use the top N colors as the deck identity
+
+    // TODO the bottleneck is here. I don't know why—this used to be plenty fast before!
     if (!mandated_color_identity)
     {
+        // identify the top N colors
         std::vector<std::pair<card::color, uint16_t>> sorted_colors;
         for (auto color : card::all_colors)
         {
@@ -216,11 +208,12 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
             return std::get<uint16_t>(first) > std::get<uint16_t>(second);
         });
 
-
         for (auto i = 0; i < colors; ++i)
         {
             top_colors.insert(std::get<card::color>(sorted_colors[i]));
         }
+
+        reasons_["colors"] = top_colors;
     }
 
     reasons_["colors"] = top_colors;

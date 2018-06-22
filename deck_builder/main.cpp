@@ -70,7 +70,7 @@ int main(int argc, char **argv)
     uint32_t thread_num;
     uint8_t colors;
     uint16_t deck_size;
-    std::set<card::color> color_identity;
+    std::unordered_set<card::color> color_identity;
 
     for (auto const &arg : args)
     {
