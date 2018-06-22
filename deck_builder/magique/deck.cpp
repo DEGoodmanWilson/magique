@@ -172,10 +172,10 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
     }
 
     // see if a color identity was mandated. If so, add those colors
-    if(color_identity.size() > 0)
+    if (color_identity.size() > 0)
     {
         mandated_color_identity = true;
-        for(const auto &color : color_identity)
+        for (const auto &color : color_identity)
         {
             top_colors.insert(color);
         }
@@ -225,7 +225,8 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
 
     reasons_["colors"] = top_colors;
 
-    // Remove any cards not among the top N colors.
+    // Remove any cards not among the top N colors, or not legal in the stated format.
+    magique::card::format format{magique::card::format::standard}; // TODO let's not hardcode this
     for (const auto &card : expanded_deck)
     {
         bool insert{true};
@@ -237,164 +238,173 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
                 break;
             }
         }
+
+        // now test legality
         if (insert)
         {
-            cards_.emplace_back(card);
-
-            // update mana cost distribution
-            cost_dist[card.converted_mana_cost]++;
-
-            // update type distribution
-            for (const auto &type : card.types)
+            if (card.legalities.count(format))
             {
-                type_dist.insert(type);
+                cards_.emplace_back(card);
             }
-
-
-            // lets tally the str and tuf
-            if (card.power)
-            {
-                if (*card.power == "*")
-                {
-                    power += 3; // because why not. We don't know what the power actually is, but ideally we can get the card pretty strong.
-                }
-                else
-                {
-                    power += stoul(*card.power);
-                }
-            }
-            if (card.toughness)
-            {
-                if (*card.toughness == "*")
-                {
-                    toughness += 3;
-                }
-                else
-                {
-                    toughness += stoul(*card.toughness);
-                }
-            }
-
-
-            // interactions!
-            double interaction_score = 0;
-            for (auto j = 0; j < cards_.size(); ++j)
-            {
-                if (i == j) continue; // don't compare a card to itself. This is why we're keeping track of i
-
-                interaction_score += interactions_.evaluate(card, cards_[j]);
-            }
-            interaction_score /= 100000;
-            interaction_score /= cards_.size();
-            if (card.bonus_multiplier != 1.0)
-            {
-                interaction_score *= card.bonus_multiplier;
-            }
-            // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
-            interaction_scores.push_back(interaction_score);
-            reasons_["interaction_scores"][card.name] = interaction_score;
-
-            ++i;
         }
-
-
-        // Now that we've gone through each card, we can now think of the deck as a whole.
-
-        rank_ = 0;
-
-        // penalty for being too small
-        if (cards_.size() < deck_minimum)
-        {
-            rank_ -= 2 * (deck_minimum - cards_.size());
-        }
-
-        // Now let's compute the distance from the ideal CMC distribution
-        // TODO this should be something specified by the user
-        // for now use the turn-4 format from https://www.channelfireball.com/articles/frank-analysis-finding-the-optimal-mana-curve-via-computer-simulation/
-        std::array<double, 11> ideal_cmc_distribution{0, 9, 13, 9, 3, 0, 0, 0, 0, 0, 0};
-        // normalize
-        auto sum = std::accumulate(ideal_cmc_distribution.begin(), ideal_cmc_distribution.end(), 0);
-        for (auto &item : ideal_cmc_distribution)
-        {
-            item = item / sum;
-        }
-
-        double cmc_distance{0.0};
-        for (int i = cost_dist.size() - 1; i > 0; --i) // don't count zero-CMC cards
-        {
-            auto x = (double) cost_dist[i];
-            auto y = ideal_cmc_distribution[i] * cards_.size();
-            cmc_distance += (x - y) * (x - y);
-        }
-
-        cmc_distance = sqrt(cmc_distance);
-        rank_ -= cmc_distance;
-        reasons_["cmc_distance"] = cmc_distance;
-        reasons_["cmc"] = cost_dist;
-
-
-
-        // type distribution
-        // TODO make this configurable!
-        std::unordered_map<card::type, double> ideal_type_distribution{
-                {card::type::creature,     16},
-                {card::type::artifact,     8},
-                {card::type::enchantment,  3},
-                {card::type::planeswalker, 1},
-                {card::type::instant,      3},
-                {card::type::sorcery,      3}
-        };
-        //normalize
-        auto type_sum = std::accumulate(ideal_type_distribution.begin(), ideal_type_distribution.end(), 0,
-                                        [](auto value, const auto &p) -> auto
-                                        {
-                                            return value + p.second;
-                                        }
-        );
-        for (auto &item : ideal_type_distribution)
-        {
-            item.second = item.second / type_sum;
-        }
-
-        double type_distance{0.0};
-        for (const auto &type : card::all_types)
-        {
-            // skip land
-            if (type == card::type::land || type == card::type::basic_land) continue;
-            auto x = (double) type_dist.count(type);
-            auto y = ideal_type_distribution.at(type) * cards_.size();
-            type_distance += (x - y) * (x - y);
-        }
-        type_distance = sqrt(type_distance);
-
-        rank_ -= type_distance;
-        reasons_["type_distance"] = type_distance;
-        reasons_["type_distribution"] = type_dist;
-
-
-        // Average power and toughness
-        auto avg_pow = power / cards_.size();
-        reasons_["tot_pwr"] = power;
-        reasons_["avg_pwr"] = avg_pow;
-        rank_ += avg_pow;
-
-        auto avg_tuf = toughness / cards_.size();
-        reasons_["tot_tuf"] = toughness;
-        reasons_["avg_tuf"] = avg_tuf;
-        rank_ += avg_tuf;
-
-
-        // Ooooh interactions, sweet!
-        double interactions_bonus{0};
-        i = 0;
-        for (const auto &score : interaction_scores)
-        {
-            interactions_bonus += score;
-            ++i;
-        }
-        rank_ += interactions_bonus;
-        reasons_["interactions_bonus"] = interactions_bonus;
     }
+
+
+    for (const auto &card : cards_)
+    {
+        // update mana cost distribution
+        cost_dist[card.converted_mana_cost]++;
+
+        // update type distribution
+        for (const auto &type : card.types)
+        {
+            type_dist.insert(type);
+        }
+
+
+        // lets tally the str and tuf
+        if (card.power)
+        {
+            if (*card.power == "*")
+            {
+                power += 3; // because why not. We don't know what the power actually is, but ideally we can get the card pretty strong.
+            }
+            else
+            {
+                power += stoul(*card.power);
+            }
+        }
+        if (card.toughness)
+        {
+            if (*card.toughness == "*")
+            {
+                toughness += 3;
+            }
+            else
+            {
+                toughness += stoul(*card.toughness);
+            }
+        }
+
+
+        // interactions!
+        double interaction_score = 0;
+        for (auto j = 0; j < cards_.size(); ++j)
+        {
+            if (i == j) continue; // don't compare a card to itself. This is why we're keeping track of i
+
+            interaction_score += interactions_.evaluate(card, cards_[j]);
+        }
+        interaction_score /= 100000;
+        interaction_score /= cards_.size();
+        if (card.bonus_multiplier != 1.0)
+        {
+            interaction_score *= card.bonus_multiplier;
+        }
+        // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
+        interaction_scores.push_back(interaction_score);
+        reasons_["interaction_scores"][card.name] = interaction_score;
+
+        ++i;
+    }
+
+
+    // Now that we've gone through each card, we can now think of the deck as a whole.
+
+    rank_ = 0;
+
+    // penalty for being too small
+    if (cards_.size() < deck_minimum)
+    {
+        rank_ -= 2 * (deck_minimum - cards_.size());
+    }
+
+    // Now let's compute the distance from the ideal CMC distribution
+    // TODO this should be something specified by the user
+    // for now use the turn-4 format from https://www.channelfireball.com/articles/frank-analysis-finding-the-optimal-mana-curve-via-computer-simulation/
+    std::array<double, 11> ideal_cmc_distribution{0, 9, 13, 9, 3, 0, 0, 0, 0, 0, 0};
+    // normalize
+    auto sum = std::accumulate(ideal_cmc_distribution.begin(), ideal_cmc_distribution.end(), 0);
+    for (auto &item : ideal_cmc_distribution)
+    {
+        item = item / sum;
+    }
+
+    double cmc_distance{0.0};
+    for (int i = cost_dist.size() - 1; i > 0; --i) // don't count zero-CMC cards
+    {
+        auto x = (double) cost_dist[i];
+        auto y = ideal_cmc_distribution[i] * cards_.size();
+        cmc_distance += (x - y) * (x - y);
+    }
+
+    cmc_distance = sqrt(cmc_distance);
+    rank_ -= cmc_distance;
+    reasons_["cmc_distance"] = cmc_distance;
+    reasons_["cmc"] = cost_dist;
+
+
+
+    // type distribution
+    // TODO make this configurable!
+    std::unordered_map<card::type, double> ideal_type_distribution{
+            {card::type::creature,     16},
+            {card::type::artifact,     8},
+            {card::type::enchantment,  3},
+            {card::type::planeswalker, 1},
+            {card::type::instant,      3},
+            {card::type::sorcery,      3}
+    };
+    //normalize
+    auto type_sum = std::accumulate(ideal_type_distribution.begin(), ideal_type_distribution.end(), 0,
+                                    [](auto value, const auto &p) -> auto
+                                    {
+                                        return value + p.second;
+                                    }
+    );
+    for (auto &item : ideal_type_distribution)
+    {
+        item.second = item.second / type_sum;
+    }
+
+    double type_distance{0.0};
+    for (const auto &type : card::all_types)
+    {
+        // skip land
+        if (type == card::type::land || type == card::type::basic_land) continue;
+        auto x = (double) type_dist.count(type);
+        auto y = ideal_type_distribution.at(type) * cards_.size();
+        type_distance += (x - y) * (x - y);
+    }
+    type_distance = sqrt(type_distance);
+
+    rank_ -= type_distance;
+    reasons_["type_distance"] = type_distance;
+    reasons_["type_distribution"] = type_dist;
+
+
+    // Average power and toughness
+    auto avg_pow = power / cards_.size();
+    reasons_["tot_pwr"] = power;
+    reasons_["avg_pwr"] = avg_pow;
+    rank_ += avg_pow;
+
+    auto avg_tuf = toughness / cards_.size();
+    reasons_["tot_tuf"] = toughness;
+    reasons_["avg_tuf"] = avg_tuf;
+    rank_ += avg_tuf;
+
+
+    // Ooooh interactions, sweet!
+    double interactions_bonus{0};
+    i = 0;
+    for (const auto &score : interaction_scores)
+    {
+        interactions_bonus += score;
+        ++i;
+    }
+    rank_ += interactions_bonus;
+    reasons_["interactions_bonus"] = interactions_bonus;
 }
 
 void to_json(nlohmann::json &j, const deck &d)

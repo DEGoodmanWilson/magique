@@ -96,6 +96,7 @@ namespace magique
 }
 */
 
+
 struct card
 {
     using id_t = uint64_t;
@@ -124,6 +125,17 @@ struct card
     static constexpr std::array<type, 8> all_types = {type::basic_land, type::land, type::creature, type::artifact, type::enchantment, type::planeswalker, type::instant, type::sorcery};
 
 
+    enum class format
+    {
+        commander,
+        legacy,
+        modern,
+        pauper,
+        standard,
+        vintage,
+        other
+    };
+
     static std::unordered_map<std::string, type> strings_for_types;
 
     bool has_type(const std::string &type_str) const;
@@ -138,6 +150,7 @@ struct card
     std::set<type> types;
     std::set<std::string> subtypes;
     std::set<color> color_identity;
+    std::set<format> legalities;
     std::string text;
     std::experimental::optional<std::string> power;
     std::experimental::optional<std::string> toughness;

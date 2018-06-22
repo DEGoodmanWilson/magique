@@ -180,6 +180,46 @@ void from_json(const nlohmann::json &j, card &p)
     {}
 
     p.bonus_multiplier = 1.0;
+
+    try
+    {
+        for (const auto &legality_json : j.at("legalities"))
+        {
+            auto format_string = legality_json.at("format").get<std::string>();
+            auto legality_string = legality_json.at("legality").get<std::string>();
+            if(legality_string == "Legal") // TODO how to handle restricted case!?
+            {
+                if (format_string == "Commander")
+                {
+                    p.legalities.insert(card::format::commander);
+                }
+                else if (format_string == "Legacy")
+                {
+                    p.legalities.insert(card::format::legacy);
+                }
+                else if (format_string == "Modern")
+                {
+                    p.legalities.insert(card::format::modern);
+                }
+                else if (format_string == "Standard")
+                {
+                    p.legalities.insert(card::format::standard);
+                }
+                else if (format_string == "Vintage")
+                {
+                    p.legalities.insert(card::format::vintage);
+                }
+                    // TODO pauper legality is handled differently!
+                else
+                {
+                    p.legalities.insert(card::format::other);
+                }
+            }
+        }
+    }
+    catch (nlohmann::json::out_of_range &e)
+    {}
+
 }
 
 std::string to_string(const card::type &t)
