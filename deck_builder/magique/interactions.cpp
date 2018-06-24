@@ -37,6 +37,12 @@ interactions::interactions(std::string path) : interactions_store_{}
     ifs >> interactions;
     ifs.close();
 
+    // TODO these should go with _cards_ not this stupid table!
+    ifs = std::ifstream(path + "/card_affinities.json");
+    nlohmann::json affinities;
+    ifs >> affinities;
+    ifs.close();
+
     // ok what we have is an object of interactions. The key is a pair of numbers, the keys into our map.
     // TODO make this format easier to parse!
     for (auto it = interactions.begin(); it != interactions.end(); ++it)
@@ -49,9 +55,10 @@ interactions::interactions(std::string path) : interactions_store_{}
         interactions_store_[m][n] = it.value().get<double>();
     }
 
+    affinities_store_ = affinities.get<decltype(affinities_store_)>();
 }
 
-uint64_t interactions::evaluate(const card &a, const card &b) const
+uint64_t interactions::evaluate_interactions(const card &a, const card &b) const
 {
     // Iterate over all of card a's abilities, and b's abilities, and look up the conditional probabilities
     // SUM _0..m, 0..n p(a_m | b_n)
@@ -72,8 +79,35 @@ uint64_t interactions::evaluate(const card &a, const card &b) const
         value = value / (a.mechanics.size() * b.mechanics.size());
     }
 
+    return value / 100000;
+}
+
+uint64_t interactions::evaluate_affinities(const card &a, const card &b) const
+{
+    // Iterate over all of card a's abilities, and b's abilities, and look up the conditional probabilities
+    // SUM _0..m, 0..n p(a_m | b_n)
+
+    uint64_t value{0};
+
+
+    if (affinities_store_.count(a.name) > 0)
+    {
+        // Get the affinities card a's rules, and any of card b's types
+        for (auto affinity : affinities_store_.at(a.name))
+        {
+            // TODO This is ridicolously ineffecient. Is there any better way to do this?
+            if (b.subtypes.count(affinity) > 0)
+            {
+                value += 1;
+            } //TODO how much!? Shouldnt this be normalized to the size of the deck?
+        }
+
+        //TODO What else should we be on the lookout for? For whether a and b _share_ affinities?
+    }
+
 
     return value;
 }
+
 
 } // namespace magique

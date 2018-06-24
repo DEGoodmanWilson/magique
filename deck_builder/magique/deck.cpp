@@ -110,7 +110,7 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
 
     // A good deck has cards that work _together_. Here are the scores for each card.
     std::vector<double> interaction_scores;
-
+    std::vector<double> affinity_scores;
 
     // FOURTH: Other shit.
 
@@ -280,27 +280,38 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
         }
 
 
-        // interactions!
+        // interactions and affinities!
         double interaction_score = 0;
+        double affinity_score = 0;
         for (auto j = 0; j < cards_.size(); ++j)
         {
             if (i == j) continue; // don't compare a card to itself. This is why we're keeping track of i
 
-            interaction_score += interactions_.evaluate(card, cards_[j]);
+            interaction_score += interactions_.evaluate_interactions(card, cards_[j]);
+            affinity_score += interactions_.evaluate_affinities(card, cards_[j]);
         }
-        interaction_score /= 100000;
+
+        //TODO this is really hard—how do we balance these two concerns? Apparently, maximizing one, minimizes the other, which I would _not_ have expected…
+        // Perhaps we can have a setting for tribal decks?
+        // Still, I wouldn't have thought these two things to be mutually exclusive…something else is going on, I think!
         interaction_score /= cards_.size();
+        affinity_score /= cards_.size();
+
+
         if (card.bonus_multiplier != 1.0)
         {
             interaction_score *= card.bonus_multiplier;
+            affinity_score *= card.bonus_multiplier;
         }
         // Cards that cost less are more valuable.
-        interaction_score /= card.converted_mana_cost;
+//        interaction_score /= card.converted_mana_cost;
 
         // if a card interacts with every other card in a deck, it will be worth 1 point, regardless of deck size
 
         interaction_scores.push_back(interaction_score);
+        affinity_scores.push_back(affinity_score);
         reasons_["interaction_scores"][card.name] = interaction_score;
+        reasons_["affinity_scores"][card.name] = affinity_score;
 
         ++i;
     }
@@ -393,15 +404,22 @@ deck::deck(const std::vector<uint64_t> &indices, const collection &collection, c
 
 
     // Ooooh interactions, sweet!
+    // TODO do this with something in <algorithms>: might be faster, certainly is cleaner.
     double interactions_bonus{0};
-    i = 0;
     for (const auto &score : interaction_scores)
     {
         interactions_bonus += score;
-        ++i;
     }
     rank_ += interactions_bonus;
     reasons_["interactions_bonus"] = interactions_bonus;
+
+    double affinities_bonus{0};
+    for (const auto &score : affinity_scores)
+    {
+        affinities_bonus += score;
+    }
+//    rank_ += affinities_bonus;
+    reasons_["affinities_bonus"] = affinities_bonus;
 }
 
 void to_json(nlohmann::json &j, const deck &d)
