@@ -11,7 +11,7 @@
 #include "magique/collection.h"
 #include "magique/card.h"
 #include "magique/deck.h"
-#include "ga2/ga2.h"
+#include <ga3/ga3.hpp>
 
 #include "magique/evaluators/power_toughness.h"
 
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 
     std::string data_pathname;
     std::string collection_filename;
-    int pop_size;
+    uint64_t pop_size;
     uint64_t generations;
     std::vector<std::string> key_cards;
     uint32_t thread_num;
@@ -104,9 +104,9 @@ int main(int argc, char **argv)
         {
             auto id_str = arg.second.asString();
             auto id_cstr = id_str.c_str();
-            for(int i = 0; i < id_str.length(); ++i)
+            for (int i = 0; i < id_str.length(); ++i)
             {
-                switch(id_cstr[i])
+                switch (id_cstr[i])
                 {
                     case 'w':
                     case 'W':
@@ -136,8 +136,10 @@ int main(int argc, char **argv)
 
 
     // set deck evaluation options
-    if(colors < color_identity.size())
+    if (colors < color_identity.size())
+    {
         colors = color_identity.size();
+    }
 
     deck::colors = colors;
     deck::color_identity = color_identity;
@@ -169,43 +171,50 @@ int main(int argc, char **argv)
     double wiggle = deck_size * 0.10;
     if (wiggle < 1.0) wiggle = 1.0;
     auto chromo_size = deck_size + static_cast<uint16_t>(wiggle); //  add 10% extra for the GA
-    ga2Population pop{pop_size, chromo_size, thread_num};
-    std::vector<ga2Gene> min, max;
+    std::vector<ga3::gene_range> ranges;
     for (auto i = 0; i < chromo_size; ++i)
     {
-        min.push_back(0);
-        max.push_back(deck::collection.count() - 1);
+        ranges.emplace_back(0, deck::collection.count() - 1);
     }
-    pop.setMinRanges(min);
-    pop.setMaxRanges(max);
-    pop.setMutationRate(0.2); //TODO decrease over time.
-    pop.setCrossoverRate(1.0);
-    pop.setCrossoverType(GA2_CROSSOVER_UNIFORM);
-    pop.setInteger(true);
-    pop.setReplacementSize(pop_size / 2);
-    pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
-    pop.setSelectType(GA2_SELECT_ROULETTE);
-    pop.setSort(true);
-    pop.setEvalFunc([&](const std::vector<ga2Gene> &genes) -> double
-                    {
+
+    ga3::population pop{pop_size, ranges, [&](const auto &genes) -> double
+    {
 //                        deck d{genes};
 //                        return d.evaluate();
-                        return 1.0;
-                    });
+        return 1.0;
+    }};
 
-    pop.init();
-    pop.evaluate();
+
+//    pop.setMinRanges(min);
+//    pop.setMaxRanges(max);
+//    pop.setMutationRate(0.2); //TODO decrease over time.
+//    pop.setCrossoverRate(1.0);
+//    pop.setCrossoverType(GA2_CROSSOVER_UNIFORM);
+//    pop.setInteger(true);
+//    pop.setReplacementSize(pop_size / 2);
+//    pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
+//    pop.setSelectType(GA2_SELECT_ROULETTE);
+//    pop.setSort(true);
+//    pop.setEvalFunc([&](const std::vector<ga2Gene> &genes) -> double
+//                    {
+////                        deck d{genes};
+////                        return d.evaluate();
+//                        return 1.0;
+//                    });
+//
+//    pop.init();
+//    pop.evaluate();
 
     ez::ezETAProgressBar eta(generations);
     eta.start();
 
     for (auto gen = 0; gen < generations; ++gen)
     {
-        pop.select();
-        pop.crossover();
-        pop.mutate();
-        pop.replace();
-        pop.evaluate();
+//        pop.select();
+//        pop.crossover();
+//        pop.mutate();
+//        pop.replace();
+//        pop.evaluate();
 
         ++eta;
 
@@ -213,20 +222,20 @@ int main(int argc, char **argv)
         {
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
             eta.done();
-            deck d{pop.getBestFitChromosome()};
-            auto rank = d.evaluate();
-            nlohmann::json j{d};
-            std::cout << j.dump(4) << std::endl;
+//            deck d{pop.getBestFitChromosome()};
+//            auto rank = d.evaluate();
+//            nlohmann::json j{d};
+//            std::cout << j.dump(4) << std::endl;
             exit(1);
         }
     }
 
     eta.done();
 
-    deck d{pop.getBestFitChromosome()};
-    auto rank = d.evaluate();
-    nlohmann::json j{d};
-    std::cout << j.dump(4) << std::endl;
+//    deck d{pop.getBestFitChromosome()};
+//    auto rank = d.evaluate();
+//    nlohmann::json j{d};
+//    std::cout << j.dump(4) << std::endl;
 
     return 0;
 }
