@@ -15,6 +15,7 @@ namespace magique
 class catalog
 {
 public:
+    catalog() = default;
     catalog(std::string path);
 
     const card &at(std::string name) const;

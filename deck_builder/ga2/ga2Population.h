@@ -41,7 +41,7 @@ class ga2Population
 {
     int _size;
 
-    std::function<double(std::vector<ga2Gene>)> _evalFunc;
+    std::function<double(const std::vector<ga2Gene> &)> _evalFunc;
 
     bool _mutateFunc(ga2Chromosome &a);
 
@@ -133,7 +133,7 @@ public:
      * Tells the Population which function to use to evaluate its
      * members.
      */
-    void setEvalFunc(std::function<double(std::vector<ga2Gene>)> func)
+    void setEvalFunc(std::function<double(const std::vector<ga2Gene> &)> func)
     { _evalFunc = func; };
 
     ///Initialise the population.

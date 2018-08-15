@@ -13,7 +13,7 @@ namespace magique
 // TODO find a way to have case_insensitive std::unordered_map, instead of this ::tolower BS
 
 
-collection::collection(std::string path, std::string filename, const catalog &catalog) : catalog_{catalog}
+collection::collection(std::string path, std::string filename, const catalog *catalog) : catalog_{catalog}
 {
     //load up from a CSV
     std::ifstream file{path + "/" + filename};
@@ -35,7 +35,7 @@ collection::collection(std::string path, std::string filename, const catalog &ca
 //        name = name.substr(1,name.length()-1);
 
         bool is_land = false;
-        for (const auto &type : catalog.at(name).types)
+        for (const auto &type : catalog->at(name).types)
         {
             if (type == card::type::land || type == card::type::basic_land)
             {
@@ -59,7 +59,7 @@ collection::collection(std::string path, std::string filename, const catalog &ca
 card collection::at(uint64_t loc) const
 {
 //    std::cout << (int)loc << " " << cards_.size() << " " << cards_[loc] << std::endl;
-    return catalog_.at(cards_[loc]);
+    return catalog_->at(cards_[loc]);
 }
 
 uint64_t collection::index_at(std::string name, int64_t index_past) const

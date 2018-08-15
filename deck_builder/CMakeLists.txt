@@ -17,8 +17,12 @@ set(MAGIQUE_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/collection.h
         ${CMAKE_SOURCE_DIR}/magique/deck.cpp
         ${CMAKE_SOURCE_DIR}/magique/deck.h
-        ${CMAKE_SOURCE_DIR}/magique/interactions.cpp
-        ${CMAKE_SOURCE_DIR}/magique/interactions.h
+        )
+
+set(EVALUATOR_SOURCE_FILES
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/types.h
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.h
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.cpp
         )
 
 set(GA2_SOURCE_FILES
@@ -47,5 +51,5 @@ set(PROGRESSBAR_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/ezETAProgressBar/ezETAProgressBar.hpp
         )
 
-add_executable(${PROJECT_NAME} main.cpp ${GA2_SOURCE_FILES} ${DOCOPT_SOURCE_FILES} ${THREADPOOL_SOURCE_FILES} ${PROGRESSBAR_SOURCE_FILES} ${MAGIQUE_SOURCE_FILES})
+add_executable(${PROJECT_NAME} main.cpp ${GA2_SOURCE_FILES} ${DOCOPT_SOURCE_FILES} ${THREADPOOL_SOURCE_FILES} ${PROGRESSBAR_SOURCE_FILES} ${MAGIQUE_SOURCE_FILES} ${EVALUATOR_SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})

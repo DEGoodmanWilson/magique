@@ -13,6 +13,8 @@
 #include "magique/deck.h"
 #include "ga2/ga2.h"
 
+#include "magique/evaluators/power_toughness.h"
+
 using namespace magique;
 
 bool dump_and_abort{false};
@@ -32,8 +34,8 @@ static const char USAGE[] =
     Options:
       -h --help     Show this screen.
       --version     Show version.
-      -p <size> --population=<size>  Set initial population size [default: 1000]
-      -g <count> --generations=<count>  Set the number of generations to run [default: 1000]
+      -p <size> --population=<size>  Set initial population size [default: 10]
+      -g <count> --generations=<count>  Set the number of generations to run [default: 10]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
       -t <threads> --thread_num=<threads>  Set the number of threads to use, use 0 to indicate enough threads to saturate available CPUs [default: 0]
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
@@ -141,14 +143,14 @@ int main(int argc, char **argv)
     deck::color_identity = color_identity;
     deck::deck_minimum = deck_size;
 
+    deck::add_evaluator(magique::evaluators::eval_power);
+    deck::add_evaluator(magique::evaluators::eval_toughness);
+
     // fire up a catalog
     catalog master_catalog{data_pathname};
 
     // load up the user's personal collection
-    collection dons_collection{data_pathname, collection_filename, master_catalog};
-
-    // get the interactions data
-    interactions interactions{data_pathname};
+    deck::collection = collection{data_pathname, collection_filename, &master_catalog};
 
     // pick a key card
     for (const auto &card : key_cards)
@@ -172,7 +174,7 @@ int main(int argc, char **argv)
     for (auto i = 0; i < chromo_size; ++i)
     {
         min.push_back(0);
-        max.push_back(dons_collection.count() - 1);
+        max.push_back(deck::collection.count() - 1);
     }
     pop.setMinRanges(min);
     pop.setMaxRanges(max);
@@ -184,10 +186,11 @@ int main(int argc, char **argv)
     pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
     pop.setSelectType(GA2_SELECT_ROULETTE);
     pop.setSort(true);
-    pop.setEvalFunc([&](std::vector<ga2Gene> genes) -> double
+    pop.setEvalFunc([&](const std::vector<ga2Gene> &genes) -> double
                     {
-                        deck d{genes, dons_collection, interactions};
-                        return d.evaluate();
+//                        deck d{genes};
+//                        return d.evaluate();
+                        return 1.0;
                     });
 
     pop.init();
@@ -210,7 +213,7 @@ int main(int argc, char **argv)
         {
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
             eta.done();
-            deck d{pop.getBestFitChromosome(), dons_collection, interactions};
+            deck d{pop.getBestFitChromosome()};
             auto rank = d.evaluate();
             nlohmann::json j{d};
             std::cout << j.dump(4) << std::endl;
@@ -220,28 +223,10 @@ int main(int argc, char **argv)
 
     eta.done();
 
-    deck d{pop.getBestFitChromosome(), dons_collection, interactions};
+    deck d{pop.getBestFitChromosome()};
     auto rank = d.evaluate();
     nlohmann::json j{d};
     std::cout << j.dump(4) << std::endl;
-
-
-
-///// The code below is just to demonstrate how you can use the evaluation function to evaluate existing decks you might already have.
-
-//    deck dons_wu_flying{"data/sample decks/BW Flying.txt", master_catalog, interactions};
-//    dons_wu_flying.evaluate();
-//    nlohmann::json deck_j;
-//    to_json(deck_j, dons_wu_flying);
-//    std::cout << "        " << deck_j["rank"].dump() << " " << deck_j.dump() << std::endl;
-//
-//    deck bad{{12, 13, 12, 13, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5}, dons_collection, interactions};
-//    bad.evaluate();
-//    nlohmann::json deck_bad;
-//    to_json(deck_bad, bad);
-//    std::cout << "        " << deck_bad["rank"].dump() << " " << deck_bad.dump() << std::endl;
-
-
 
     return 0;
 }
