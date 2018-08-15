@@ -21,7 +21,7 @@ collection deck::collection{};
 std::vector<card> deck::key_cards_{};
 std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
 
-deck::deck(const std::vector<uint64_t> &indices) :
+deck::deck(std::vector<uint64_t> indices) :
         rank_{0.0}
 {
     // First, let's establish the color identity of this deck, if it hasn't been already.
@@ -87,7 +87,7 @@ deck::deck(const std::vector<uint64_t> &indices) :
 }
 
 
-void deck::find_color_identity_(const std::vector<uint64_t> &indices)
+void deck::find_color_identity_(std::vector<uint64_t> indices)
 {
     std::unordered_set<card::color> top_colors{color_identity};
     // remove any elements that appear twice
@@ -123,7 +123,9 @@ void deck::find_color_identity_(const std::vector<uint64_t> &indices)
         }
     }
 
-    bool mandated_color_identity{top_colors.size() > 0};
+    auto size = top_colors.size();
+
+    bool mandated_color_identity{(top_colors.size() > 0)};
 
     for (const auto &i : indices)
     {

@@ -27,7 +27,7 @@ void from_json(const nlohmann::json &j, deck &p);
 class deck
 {
 public:
-    deck(const std::vector<uint64_t> &indices);
+    deck(std::vector<uint64_t> indices);
 
     static void add_key_card(card key)
     {
@@ -60,7 +60,7 @@ private:
     double rank_;
     nlohmann::json reasons_;
 
-    void find_color_identity_(const std::vector<uint64_t> &indices);
+    void find_color_identity_(std::vector<uint64_t> indices);
 };
 
 

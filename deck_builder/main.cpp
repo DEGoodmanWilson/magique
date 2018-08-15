@@ -177,12 +177,14 @@ int main(int argc, char **argv)
         ranges.emplace_back(0, deck::collection.count() - 1);
     }
 
+    ga3::chromosome::set_crossover(ga3::chromosome::crossover_kind_t::uniform); // TODO this does not belong here
+
     ga3::population pop{pop_size, ranges, [&](const auto &genes) -> double
     {
 //                        deck d{genes};
 //                        return d.evaluate();
         return 1.0;
-    }};
+    }, ga3::population::mutation_rate{0.2}, ga3::population::replacement_kind_t::steady_state, ga3::population::selection_kind_t::ranked};
 
 
 //    pop.setMinRanges(min);
@@ -210,6 +212,7 @@ int main(int argc, char **argv)
 
     for (auto gen = 0; gen < generations; ++gen)
     {
+        pop.evolve(1); // TODO pass in hooks for post-evolution execution!
 //        pop.select();
 //        pop.crossover();
 //        pop.mutate();
@@ -222,20 +225,22 @@ int main(int argc, char **argv)
         {
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
             eta.done();
-//            deck d{pop.getBestFitChromosome()};
-//            auto rank = d.evaluate();
-//            nlohmann::json j{d};
-//            std::cout << j.dump(4) << std::endl;
+            auto best_fit = pop.evaluate();
+            deck d{best_fit.get_genes()};
+            auto rank = best_fit.get_fitness();
+            nlohmann::json j{d};
+            std::cout << j.dump(4) << std::endl;
             exit(1);
         }
     }
 
     eta.done();
 
-//    deck d{pop.getBestFitChromosome()};
-//    auto rank = d.evaluate();
-//    nlohmann::json j{d};
-//    std::cout << j.dump(4) << std::endl;
+    auto best_fit = pop.evaluate();
+    deck d{best_fit.get_genes()};
+    auto rank = best_fit.get_fitness();
+    nlohmann::json j{d};
+    std::cout << j.dump(4) << std::endl;
 
     return 0;
 }
