@@ -174,33 +174,13 @@ int main(int argc, char **argv)
     {
         deck d{genes};
         return d.evaluate();
-//        return 1.0;
+
     }, ga3::population::mutation_rate{0.2},
                 ga3::population::replacement_rate{0.5},
                 ga3::population::replacement_kind_t::steady_state,
                 ga3::population::selection_kind_t::ranked,
                 ga3::chromosome::crossover_kind_t::uniform
     };
-
-//    pop.setMinRanges(min);
-//    pop.setMaxRanges(max);
-//    pop.setMutationRate(0.2); //TODO decrease over time.
-//    pop.setCrossoverRate(1.0);
-//    pop.setCrossoverType(GA2_CROSSOVER_UNIFORM);
-//    pop.setInteger(true);
-//    pop.setReplacementSize(pop_size / 2);
-//    pop.setReplaceType(GA2_REPLACE_STEADYSTATE);
-//    pop.setSelectType(GA2_SELECT_ROULETTE);
-//    pop.setSort(true);
-//    pop.setEvalFunc([&](const std::vector<ga2Gene> &genes) -> double
-//                    {
-////                        deck d{genes};
-////                        return d.evaluate();
-//                        return 1.0;
-//                    });
-//
-//    pop.init();
-//    pop.evaluate();
 
     ez::ezETAProgressBar eta(generations);
     eta.start();
@@ -222,11 +202,6 @@ int main(int argc, char **argv)
         }
 
     });
-//        pop.select();
-//        pop.crossover();
-//        pop.mutate();
-//        pop.replace();
-//        pop.evaluate();
 
     eta.done();
 
