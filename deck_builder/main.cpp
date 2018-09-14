@@ -37,7 +37,7 @@ static const char USAGE[] =
       -p <size> --population=<size>  Set initial population size [default: 10]
       -g <count> --generations=<count>  Set the number of generations to run [default: 10]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
-      -t <threads> --thread_num=<threads>  Set the number of threads to use, use 0 to indicate enough threads to saturate available CPUs [default: 0]
+      -s --single_threaded    Run in single-threaded mode
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
       -i <color_identity> --color_identity=<color_identity>  Set the color identity of the deck, using a string like "wubgr". Default value lets algorithm decide. [default: ""]
       -d <deck_size> --deck_size=<deck_size>  The number of non-land cards to use. [default: 34]
@@ -69,7 +69,6 @@ int main(int argc, char **argv)
     uint64_t pop_size;
     uint64_t generations;
     std::vector<std::string> key_cards;
-    uint32_t thread_num;
     uint8_t colors;
     uint16_t deck_size;
     std::unordered_set<card::color> color_identity;
@@ -86,17 +85,10 @@ int main(int argc, char **argv)
         { collection_filename = arg.second.asString(); }
         else if (arg.first == "--key_card")
         { key_cards = arg.second.asStringList(); }
-        else if (arg.first == "--thread_num")
+        else if (arg.first == "--single_threaded")
         {
-            thread_num = arg.second.asLong();
-            if (thread_num == 0)
-            {
-                thread_num = std::thread::hardware_concurrency() - 1;
-            }
-            else
-            {
-                thread_num--; // 1 thread means no additional threads.
-            }
+            std::cout << "Using single-threaded mode" << std::endl;
+            ga3::population::single_threaded = true;
         }
         else if (arg.first == "--colors")
         { colors = arg.second.asLong(); }
@@ -178,16 +170,17 @@ int main(int argc, char **argv)
     }
 
     ga3::population
-    pop{pop_size, ranges, [&](const auto &genes) -> double
+            pop{pop_size, ranges, [&](const auto &genes) -> double
     {
-//                        deck d{genes};
-//                        return d.evaluate();
-        return 1.0;
+        deck d{genes};
+        return d.evaluate();
+//        return 1.0;
     }, ga3::population::mutation_rate{0.2},
-        ga3::population::replacement_rate{0.5},
-        ga3::population::replacement_kind_t::steady_state,
-        ga3::population::selection_kind_t::ranked,
-        ga3::chromosome::crossover_kind_t::uniform};
+                ga3::population::replacement_rate{0.5},
+                ga3::population::replacement_kind_t::steady_state,
+                ga3::population::selection_kind_t::ranked,
+                ga3::chromosome::crossover_kind_t::uniform
+    };
 
 //    pop.setMinRanges(min);
 //    pop.setMaxRanges(max);
@@ -209,38 +202,39 @@ int main(int argc, char **argv)
 //    pop.init();
 //    pop.evaluate();
 
-            ez::ezETAProgressBar eta(generations);
-            eta.start();
+    ez::ezETAProgressBar eta(generations);
+    eta.start();
 
-                pop.evolve(generations, [&]() {
-                    ++eta;
+    pop.evolve(generations, [&]()
+    {
+        ++eta;
 
-                    if (dump_and_abort)
-                    {
-                        // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
-                        eta.done();
-                        auto best_fit = pop.evaluate();
-                        deck d{best_fit.get_genes()};
-                        auto rank = best_fit.get_fitness();
-                        nlohmann::json j{d};
-                        std::cout << j.dump(4) << std::endl;
-                        exit(1);
-                    }
+        if (dump_and_abort)
+        {
+            // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
+            eta.done();
+            auto best_fit = pop.evaluate();
+            deck d{best_fit.get_genes()};
+            auto rank = best_fit.get_fitness();
+            nlohmann::json j{d};
+            std::cout << j.dump(4) << std::endl;
+            exit(1);
+        }
 
-                });
+    });
 //        pop.select();
 //        pop.crossover();
 //        pop.mutate();
 //        pop.replace();
 //        pop.evaluate();
 
-            eta.done();
+    eta.done();
 
-            auto best_fit = pop.evaluate();
-            deck d{ best_fit.get_genes() };
-            auto rank = best_fit.get_fitness();
-            nlohmann::json j{ d };
-            std::cout << j.dump(4) << std::endl;
+    auto best_fit = pop.evaluate();
+    deck d{best_fit.get_genes()};
+    auto rank = best_fit.get_fitness();
+    nlohmann::json j{d};
+    std::cout << j.dump(4) << std::endl;
 
-            return 0;
-    }
+    return 0;
+}
