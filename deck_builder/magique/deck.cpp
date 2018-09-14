@@ -47,10 +47,10 @@ deck::deck(std::vector<uint64_t> indices) :
 
 
 
-//    for (const auto &index : indices)
-//    {
-//        cards_.emplace_back(collection.at(index));
-//    }
+    for (const auto &index : indices)
+    {
+        cards_.emplace_back(collection.at(index));
+    }
 
     // Then, evaluate the deck as a whole
 
