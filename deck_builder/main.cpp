@@ -34,6 +34,7 @@ static const char USAGE[] =
     Options:
       -h --help     Show this screen.
       --version     Show version.
+      -f <format> --format=<format>  Choose the deck format from "standard", "legacy", "modern", "commander" [default:"standard"]
       -p <size> --population=<size>  Set initial population size [default: 10]
       -g <count> --generations=<count>  Set the number of generations to run [default: 10]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
@@ -73,9 +74,16 @@ int main(int argc, char **argv)
     uint16_t deck_size;
     std::unordered_set<card::color> color_identity;
 
+    card::format format;
+
     for (auto const &arg : args)
     {
-        if (arg.first == "--generations")
+        if (arg.first == "--format")
+        {
+            //TODO
+            format = card::format::standard;
+        }
+        else if (arg.first == "--generations")
         { generations = arg.second.asLong(); }
         else if (arg.first == "--population")
         { pop_size = arg.second.asLong(); }
@@ -136,6 +144,7 @@ int main(int argc, char **argv)
     deck::colors = colors;
     deck::color_identity = color_identity;
     deck::deck_minimum = deck_size;
+    deck::format = format;
 
     deck::add_evaluator(magique::evaluators::eval_power);
     deck::add_evaluator(magique::evaluators::eval_toughness);

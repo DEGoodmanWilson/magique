@@ -16,6 +16,7 @@ namespace magique
 
 uint16_t deck::colors{2};
 uint16_t deck::deck_minimum{60 - 26};
+card::format deck::format{card::format::standard};
 std::unordered_set<card::color> deck::color_identity{};
 collection deck::collection{};
 std::vector<card> deck::key_cards_{};
@@ -65,7 +66,7 @@ deck::deck(std::vector<uint64_t> indices) :
         reasons_["cards"][card.name] = nlohmann::json::object();
         for (const auto &eval : card_evaluators_)
         {
-            auto evaluation = eval(card);
+            auto evaluation = eval(card, format);
             card_reasons.insert(evaluation.reason);
             if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
             if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;

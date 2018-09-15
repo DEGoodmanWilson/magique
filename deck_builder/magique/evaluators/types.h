@@ -19,7 +19,8 @@ struct evaluation
     std::string reason;
 };
 
-using card_evaluator = std::function<evaluation(const card&)>;
+using card_evaluator = std::function<evaluation(const card&, const card::format)>;
+using card_pair_evaluator = std::function<evaluation(const card&, const card&, const card::format)>;
 
 }
 }

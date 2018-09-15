@@ -10,7 +10,7 @@ namespace evaluators
 {
 
 
-evaluation eval_power(const card &card)
+evaluation eval_power(const card &card, card::format format)
 {
     static const auto EVALUATOR_REASON_POWER{"Power"};
     static const auto MAX_POWER{8};
@@ -38,7 +38,7 @@ evaluation eval_power(const card &card)
 }
 
 
-evaluation eval_toughness(const card &card)
+evaluation eval_toughness(const card &card, card::format format)
 {
     static const auto EVALUATOR_REASON_TOUGHNESS{"Toughness"};
     static const auto MAX_TOUGHNESS{8};

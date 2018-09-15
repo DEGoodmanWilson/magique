@@ -125,6 +125,7 @@ struct card
     static constexpr std::array<type, 8> all_types = {type::basic_land, type::land, type::creature, type::artifact, type::enchantment, type::planeswalker, type::instant, type::sorcery};
 
 
+    // TODO format is a feature of a deck, not a card, really. kinda.
     enum class format
     {
         commander,

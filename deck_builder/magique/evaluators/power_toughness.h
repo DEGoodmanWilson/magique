@@ -11,9 +11,9 @@ namespace magique
 namespace evaluators
 {
 
-evaluation eval_power(const card &card);
+evaluation eval_power(const card &card, card::format format);
 
-evaluation eval_toughness(const card &card);
+evaluation eval_toughness(const card &card, card::format format);
 
 }
 }

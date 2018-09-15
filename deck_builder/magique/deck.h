@@ -47,6 +47,8 @@ public:
 
     static uint16_t deck_minimum;
 
+    static card::format format;
+
     static void add_evaluator(evaluators::card_evaluator eval_func)
     {
         card_evaluators_.emplace_back(eval_func);
