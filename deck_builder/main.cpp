@@ -95,8 +95,11 @@ int main(int argc, char **argv)
         { key_cards = arg.second.asStringList(); }
         else if (arg.first == "--single_threaded")
         {
-            std::cout << "Using single-threaded mode" << std::endl;
-            ga3::population::single_threaded = true;
+            ga3::population::single_threaded = arg.second.asBool();
+            if (ga3::population::single_threaded)
+            {
+                std::cout << "Using single-threaded mode" << std::endl;
+            }
         }
         else if (arg.first == "--colors")
         { colors = arg.second.asLong(); }
@@ -169,9 +172,7 @@ int main(int argc, char **argv)
         }
     }
 
-    double wiggle = deck_size * 0.10;
-    if (wiggle < 1.0) wiggle = 1.0;
-    auto chromo_size = deck_size + static_cast<uint16_t>(wiggle); //  add 10% extra for the GA
+    auto chromo_size = deck_size + static_cast<uint16_t>(deck_size); //  add 10% extra for the GA
     std::vector<ga3::gene_range> ranges;
     for (auto i = 0; i < chromo_size; ++i)
     {

@@ -128,10 +128,26 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
         if (cards_.count(card.name))
         { //if we have seen this card already
             cards_[card.name].first++;
+
+            if (format == card::format::commander) // TODO or other singleton formats
+            {
+                cards_[card.name].first = 1;
+            }
+            else // constructed formats
+            {
+                if (cards_[card.name].first > 4)
+                {
+                    cards_[card.name].first = 4;
+                }
+                // TODO is it restricted in this format?
+            }
         }
         else
         {
-            cards_[card.name] = std::make_pair(1, card);
+            if (card.legalities.count(format))
+            { //only add if legal in this format.
+                cards_[card.name] = std::make_pair(1, card);
+            }
         }
 
         // handle color identity
