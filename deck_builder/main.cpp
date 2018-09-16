@@ -41,7 +41,7 @@ static const char USAGE[] =
       -s --single_threaded    Run in single-threaded mode
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
       -i <color_identity> --color_identity=<color_identity>  Set the color identity of the deck, using a string like "wubgr". Default value lets algorithm decide. [default: ""]
-      -d <deck_size> --deck_size=<deck_size>  The number of non-land cards to use. [default: 34]
+      -d <deck_size> --deck_size=<deck_size>  The number of non-land cards to use. [default: 36]
 )";
 
 
@@ -172,7 +172,7 @@ int main(int argc, char **argv)
         }
     }
 
-    auto chromo_size = deck_size + static_cast<uint16_t>(deck_size); //  add 10% extra for the GA
+    auto chromo_size = deck_size;
     std::vector<ga3::gene_range> ranges;
     for (auto i = 0; i < chromo_size; ++i)
     {

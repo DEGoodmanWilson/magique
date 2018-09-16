@@ -183,6 +183,27 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
             prefered_color_identity.insert(std::get<card::color>(sorted_colors[i]));
         }
     }
+
+    // now remove all cards not of the final color identity
+    // TODO can this be improved? ALl this color stuff feels pretty clunky.
+    std::vector<std::string> to_remove;
+    for (auto &kv : cards_)
+    {
+        for (const auto card_color : kv.second.second.color_identity)
+        {
+            if(card_color == card::color::colorless) continue;
+
+            if (prefered_color_identity.count(card_color) == 0)
+            {
+                to_remove.push_back(kv.first);
+                break;
+            }
+        }
+    }
+    for(const auto & name : to_remove)
+    {
+        cards_.erase(name);
+    }
 }
 
 void to_json(nlohmann::json &j, const deck &d)
