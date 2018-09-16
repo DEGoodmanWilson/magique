@@ -14,6 +14,7 @@
 #include <ga3/ga3.hpp>
 
 #include "magique/evaluators/power_toughness.h"
+#include "magique/evaluators/interactions.h"
 
 using namespace magique;
 
@@ -151,6 +152,7 @@ int main(int argc, char **argv)
 
     deck::add_evaluator(magique::evaluators::eval_power);
     deck::add_evaluator(magique::evaluators::eval_toughness);
+    deck::add_evaluator(magique::evaluators::interactions);
 
     // fire up a catalog
     catalog master_catalog{data_pathname};

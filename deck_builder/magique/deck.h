@@ -53,9 +53,19 @@ public:
     {
         card_evaluators_.emplace_back(eval_func);
     }
+    static void add_evaluator(evaluators::card_pair_evaluator eval_func)
+    {
+        card_pair_evaluators_.emplace_back(eval_func);
+    }
+    static void add_evaluator(evaluators::deck_evaluator eval_func)
+    {
+        deck_evaluators_.emplace_back(eval_func);
+    }
 
 private:
     static std::vector<evaluators::card_evaluator> card_evaluators_;
+    static std::vector<evaluators::card_pair_evaluator> card_pair_evaluators_;
+    static std::vector<evaluators::deck_evaluator> deck_evaluators_;
     static std::vector<card> key_cards_;
 
     //TODO use set or multiset, and count the copies of each card.

@@ -23,6 +23,8 @@ set(EVALUATOR_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/evaluators/types.h
         ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.h
         ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.cpp
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/interactions.h
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/interactions.cpp
         )
 
 set(DOCOPT_SOURCE_FILES

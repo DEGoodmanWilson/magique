@@ -21,6 +21,8 @@ std::unordered_set<card::color> deck::color_identity{};
 collection deck::collection{};
 std::vector<card> deck::key_cards_{};
 std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
+std::vector<evaluators::card_pair_evaluator> deck::card_pair_evaluators_{};
+std::vector<evaluators::deck_evaluator> deck::deck_evaluators_{};
 
 deck::deck(std::vector<uint64_t> indices) :
         rank_{0.0}
@@ -54,6 +56,41 @@ deck::deck(std::vector<uint64_t> indices) :
             reasons_["cards"][card.name][evaluation.reason] = evaluation.score;
             card_evaluations[evaluation.reason] += evaluation.score * count;
         }
+
+        // card pair—we have to hit all the card pairs now
+        if (card_pair_evaluators_.size())
+        {
+            for (const auto &kv2 : cards_)
+            {
+                const auto card_b_name = kv2.first;
+                const auto card_b = kv2.second.second;
+                reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
+                for (const auto &eval : card_pair_evaluators_)
+                {
+                    auto evaluation = eval(card, card_b, format);
+                    card_reasons.insert(evaluation.reason);
+                    if (card_divisors.count(evaluation.reason) == 0)
+                    {
+                        card_divisors[evaluation.reason] = evaluation.scale;
+                    }
+                    if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
+
+                    reasons_["cards"][card.name][card_b_name][evaluation.reason] = evaluation.score;
+                    card_evaluations[evaluation.reason] += evaluation.score * count;
+                }
+            }
+        }
+    }
+
+    for (const auto &eval : deck_evaluators_)
+    {
+        // TODO we need to be a lot more nuanced about this! The number of cards _do_ matter. And we need to be careful to only measure interactions against the same card if there is more than one in the deck!
+        auto evaluation = eval();
+        card_reasons.insert(evaluation.reason);
+        if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
+        if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
+
+        reasons_["deck"][evaluation.reason] = evaluation.score;
     }
 
     for (const auto &reason: card_reasons)
@@ -191,7 +228,7 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     {
         for (const auto card_color : kv.second.second.color_identity)
         {
-            if(card_color == card::color::colorless) continue;
+            if (card_color == card::color::colorless) continue;
 
             if (prefered_color_identity.count(card_color) == 0)
             {
@@ -200,10 +237,13 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
             }
         }
     }
-    for(const auto & name : to_remove)
+    for (const auto &name : to_remove)
     {
         cards_.erase(name);
     }
+
+    // TODO calculate mana curve
+    // TODO calculate card type distribution
 }
 
 void to_json(nlohmann::json &j, const deck &d)
