@@ -58,11 +58,12 @@ private:
     static std::vector<evaluators::card_evaluator> card_evaluators_;
     static std::vector<card> key_cards_;
 
-    std::vector<card> cards_;
+    //TODO use set or multiset, and count the copies of each card.
+    std::unordered_map<std::string, std::pair<uint16_t,card>> cards_;
     double rank_;
     nlohmann::json reasons_;
 
-    void find_color_identity_(std::vector<uint64_t> indices);
+    void build_proposed_deck_(std::vector<uint64_t> indices);
 };
 
 

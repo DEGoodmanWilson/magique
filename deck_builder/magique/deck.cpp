@@ -25,33 +25,8 @@ std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
 deck::deck(std::vector<uint64_t> indices) :
         rank_{0.0}
 {
-    // First, let's establish the color identity of this deck, if it hasn't been already.
-    find_color_identity_(indices);
-
-    // First, examine the cards in the indices, and select only certain of them to be considered, by inserting them into cards_
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    for (const auto &index : indices)
-    {
-        cards_.emplace_back(collection.at(index));
-    }
+    // First, let's cull the deck, and establish the color identity of this deck, if it hasn't been already.
+    build_proposed_deck_(indices);
 
     // Then, evaluate the deck as a whole
 
@@ -61,18 +36,23 @@ deck::deck(std::vector<uint64_t> indices) :
     std::unordered_map<std::string, double> card_evaluations{};
 
     reasons_["cards"] = nlohmann::json::object();
-    for (const auto &card : cards_)
+    for (const auto &kv : cards_)
     {
-        reasons_["cards"][card.name] = nlohmann::json::object();
+        const auto card_name = kv.first;
+        const auto card = kv.second.second;
+        const auto count = kv.second.first;
+
+        reasons_["cards"][card_name] = nlohmann::json::object();
         for (const auto &eval : card_evaluators_)
         {
-            auto evaluation = eval(card, format);
+            auto evaluation = eval(card, count, format);
             card_reasons.insert(evaluation.reason);
             if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
             if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
+            reasons_["cards"][card.name]["count"] = count;
             reasons_["cards"][card.name][evaluation.reason] = evaluation.score;
-            card_evaluations[evaluation.reason] += evaluation.score;
+            card_evaluations[evaluation.reason] += evaluation.score * count;
         }
     }
 
@@ -88,14 +68,12 @@ deck::deck(std::vector<uint64_t> indices) :
 }
 
 
-void deck::find_color_identity_(std::vector<uint64_t> indices)
+void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 {
-    std::unordered_set<card::color> top_colors{color_identity};
+    std::unordered_set<card::color> prefered_color_identity{color_identity};
     // remove any elements that appear twice
     std::unordered_multiset<uint64_t> collection_duplicates;
-    // remove any non-land cards that appear more than 4 times
-    std::multiset<std::string> dupes;
-    // remove any cards that are not among the top N colors
+    // observe the colors that we have seen in the proposed deck
     std::unordered_map<card::color, uint16_t> colors_seen{
             {card::color::white,     0},
             {card::color::blue,      0},
@@ -115,28 +93,48 @@ void deck::find_color_identity_(std::vector<uint64_t> indices)
         indices_seen[card.name] = index;
         collection_duplicates.insert(index); // TODO handle multiple key cards of same name!
 
-        dupes.insert(card.name);
-        if (dupes.count(card.name) > 4) continue; //skip 5th+ card of same name
+        if (cards_.count(card.name))
+        { //if we have seen this card already
+            if (cards_.at(card.name).first < 4)
+            { // but only insert it if we have fewer than 4 in the deck
+                cards_[card.name].first++;
+            }
+            else
+            {
+                cards_[card.name] = std::make_pair(1, card);
+            }
+        }
 
         for (const auto &color : card.color_identity)
         {
-            top_colors.insert(color);
+            prefered_color_identity.insert(color);
         }
     }
 
-    auto size = top_colors.size();
+    auto size = prefered_color_identity.size();
 
-    bool mandated_color_identity{(top_colors.size() > 0)};
+    bool mandated_color_identity{(prefered_color_identity.size() > 0)};
 
     for (const auto &i : indices)
     {
         collection_duplicates.insert(i);
         if (collection_duplicates.count(i) > 1) continue; // skip dupe references to same physical card
 
+        // what card does this index represent?
         auto card = collection.at(i);
-        dupes.insert(card.name);
-        if (dupes.count(card.name) > 4) continue; //skip 5th+ card of same name
 
+        // insert request card into deck
+        // TODO handle > 4 copies! manage restricted list, and legality too
+        if (cards_.count(card.name))
+        { //if we have seen this card already
+            cards_[card.name].first++;
+        }
+        else
+        {
+            cards_[card.name] = std::make_pair(1, card);
+        }
+
+        // handle color identity
         if (!mandated_color_identity)
         {
             for (const auto &color : card.color_identity)
@@ -166,7 +164,7 @@ void deck::find_color_identity_(std::vector<uint64_t> indices)
 
         for (auto i = 0; i < colors; ++i)
         {
-            top_colors.insert(std::get<card::color>(sorted_colors[i]));
+            prefered_color_identity.insert(std::get<card::color>(sorted_colors[i]));
         }
     }
 }
@@ -175,15 +173,21 @@ void to_json(nlohmann::json &j, const deck &d)
 {
 
     j["_list"] = nlohmann::json::array();
-    for (const auto &card: d.cards_)
+    uint16_t deck_size{0};
+    for (const auto &kv: d.cards_)
     {
-        j["_list"].push_back(card.name);
+        const auto card_name = kv.first;
+        const auto count = kv.second.first;
+        for (uint16_t i = 0; i < count; ++i)
+        {
+            j["_list"].push_back(card_name);
+        }
+        deck_size += count;
     }
     std::sort(j["_list"].begin(), j["_list"].end());
-    j["_count"] = d.cards_.size();
+    j["_count"] = deck_size;
 
     j["rank"] = d.rank_;
-//    j["cards"] = d.cards_;
     j["reasons"] = d.reasons_;
 }
 

@@ -126,6 +126,7 @@ struct card
 
 
     // TODO format is a feature of a deck, not a card, really. kinda.
+    // TODO using an enum like this prevents "block" formats
     enum class format
     {
         commander,
@@ -151,6 +152,8 @@ struct card
     std::set<type> types;
     std::set<std::string> subtypes;
     std::set<color> color_identity;
+
+    // TODO this doesn't handle the restricted list!
     std::set<format> legalities;
     std::string text;
     std::experimental::optional<std::string> power;
