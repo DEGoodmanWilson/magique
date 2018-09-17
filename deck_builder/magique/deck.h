@@ -29,13 +29,14 @@ class deck
 public:
     deck(std::vector<uint64_t> indices);
 
-    static void add_key_card(card key)
+    static void add_key_card(card *key)
     {
-        key.bonus_multiplier = 2.0;
+        key->bonus_multiplier = 2.0;
         key_cards_.push_back(key);
     }
 
-    double evaluate() { return rank_; }
+    double evaluate()
+    { return rank_; }
 
     friend void to_json(nlohmann::json &j, const deck &p);
 
@@ -53,10 +54,12 @@ public:
     {
         card_evaluators_.emplace_back(eval_func);
     }
+
     static void add_evaluator(evaluators::card_pair_evaluator eval_func)
     {
         card_pair_evaluators_.emplace_back(eval_func);
     }
+
     static void add_evaluator(evaluators::deck_evaluator eval_func)
     {
         deck_evaluators_.emplace_back(eval_func);
@@ -66,10 +69,10 @@ private:
     static std::vector<evaluators::card_evaluator> card_evaluators_;
     static std::vector<evaluators::card_pair_evaluator> card_pair_evaluators_;
     static std::vector<evaluators::deck_evaluator> deck_evaluators_;
-    static std::vector<card> key_cards_;
+    static std::vector<card *> key_cards_;
 
     //TODO use set or multiset, and count the copies of each card.
-    std::unordered_map<std::string, std::pair<uint16_t,card>> cards_;
+    std::unordered_map<std::string, std::pair<uint16_t, card *>> cards_;
     double rank_;
     nlohmann::json reasons_;
 

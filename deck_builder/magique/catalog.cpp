@@ -12,7 +12,7 @@ namespace magique
 // TODO find a way to have case_insensitive std::unordered_map, instead of this ::tolower BS
 
 catalog::catalog(std::string path)
-    //catalog_filename, std::string annotations_filename)
+//catalog_filename, std::string annotations_filename)
 {
     std::ifstream ifs(path + "/AllCards-x.json");
     nlohmann::json card_list_json;
@@ -44,22 +44,21 @@ catalog::catalog(std::string path)
 
 }
 
-const card &catalog::at(std::string name) const
+card *catalog::at(std::string name)
 {
     std::transform(name.begin(), name.end(), name.begin(), ::tolower);
 
-    card c;
     try
     {
-        c = cards_by_name_.at(name);
+        return &(cards_by_name_.at(name));
     }
-    catch (std::out_of_range e)
+    catch (std::out_of_range &e)
     {
-        std::cerr << "Could not find a card named \"" << name  << "\"" << std::endl;
+        std::cerr << "Could not find a card named \"" << name << "\"" << std::endl;
         throw (e);
     }
 
-    return cards_by_name_.at(name);
+    return nullptr; // should never get here.
 }
 
 }

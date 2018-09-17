@@ -157,7 +157,22 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        p.power = j.at("power").get<std::string>();
+        auto power = j.at("power").get<std::string>();
+        if (power[0] == '*') //examine first character because S.N.O.T.
+        {
+            p.power = -1;
+        }
+        else
+        {
+            try
+            {
+                p.power = std::stoi(power);
+            }
+            catch (std::invalid_argument &e2)
+            {
+                p.power = 0;
+            }
+        }
     }
     catch (nlohmann::json::out_of_range &e)
     {}
@@ -165,7 +180,23 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        p.toughness = j.at("toughness").get<std::string>();
+        auto toughness = j.at("toughness").get<std::string>();
+        if (toughness[0] == '*')
+        {
+            p.toughness = 0;
+        }
+        else
+        {
+            try
+            {
+                p.toughness = std::stoi(toughness);
+            }
+            catch (std::invalid_argument &e2)
+            {
+                p.toughness = 0;
+            }
+
+        }
     }
     catch (nlohmann::json::out_of_range &e)
     {}
@@ -187,7 +218,7 @@ void from_json(const nlohmann::json &j, card &p)
         {
             auto format_string = legality_json.at("format").get<std::string>();
             auto legality_string = legality_json.at("legality").get<std::string>();
-            if(legality_string == "Legal") // TODO how to handle restricted case!?
+            if (legality_string == "Legal") // TODO how to handle restricted case!?
             {
                 if (format_string == "Commander")
                 {
@@ -295,12 +326,26 @@ void to_json(nlohmann::json &j, const card &p)
 
     if (p.power)
     {
-        j["power"] = *p.power;
+        if (*p.power == -1)
+        {
+            j["power"] = "*";
+        }
+        else
+        {
+            j["power"] = std::to_string(*p.power);
+        }
     }
 
     if (p.toughness)
     {
-        j["toughness"] = *p.toughness;
+        if (*p.toughness == -1)
+        {
+            j["toughness"] = "*";
+        }
+        else
+        {
+            j["toughness"] = std::to_string(*p.toughness);
+        }
     }
 
     if (p.mechanics.size())

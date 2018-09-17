@@ -18,10 +18,10 @@ public:
     catalog() = default;
     catalog(std::string path);
 
-    const card &at(std::string name) const;
+    card *at(std::string name);
 
 private:
-    std::unordered_map<std::string, card> cards_by_name_;
+    std::unordered_map<std::string, card> cards_by_name_; // owner of all cards. Will outlive everything else.
 };
 
 }

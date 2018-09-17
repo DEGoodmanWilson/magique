@@ -10,15 +10,15 @@ namespace evaluators
 {
 
 
-evaluation eval_power(const card &card, const uint16_t count, const card::format format)
+evaluation eval_power(const card *card, const uint16_t count, const card::format format)
 {
     static const auto EVALUATOR_REASON_POWER{"Power"};
     static const auto MAX_POWER{8};
     double pow_factor{0};
 
-    if (card.power)
+    if (card->power)
     {
-        if (*card.power == "*")
+        if (*card->power == -1)
         {
             // Assume cards with pow '*' are of max power
             // because why not. We don't know what the power actually is, but ideally we can get the card pretty strong.
@@ -27,7 +27,7 @@ evaluation eval_power(const card &card, const uint16_t count, const card::format
         else
         {
             // Assume that creature power can range from 0 to 8. This is not a true assumption, of course, but we need an upper bound
-            pow_factor = stoul(*card.power);
+            pow_factor = *card->power;
             if (pow_factor > MAX_POWER) pow_factor = MAX_POWER;
         }
 
@@ -38,15 +38,15 @@ evaluation eval_power(const card &card, const uint16_t count, const card::format
 }
 
 
-evaluation eval_toughness(const card &card, const uint16_t count, const card::format format)
+evaluation eval_toughness(const card *card, const uint16_t count, const card::format format)
 {
     static const auto EVALUATOR_REASON_TOUGHNESS{"Toughness"};
     static const auto MAX_TOUGHNESS{8};
     double tough_factor{0};
 
-    if (card.toughness)
+    if (card->toughness)
     {
-        if (*card.toughness == "*")
+        if (*card->toughness == -1)
         {
             // Assume cards with pow '*' are of max toughness
             // because why not. We don't know what the toughness actually is, but ideally we can get the card pretty strong.
@@ -55,7 +55,7 @@ evaluation eval_toughness(const card &card, const uint16_t count, const card::fo
         else
         {
             // Assume that creature toughness can range from 0 to 8. This is not a true assumption, of course, but we need an upper bound
-            tough_factor = stoul(*card.toughness);
+            tough_factor = *card->toughness;
             if (tough_factor > MAX_TOUGHNESS) tough_factor = MAX_TOUGHNESS;
         }
 

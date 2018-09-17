@@ -11,7 +11,7 @@ namespace magique
 namespace evaluators
 {
 
-evaluation interactions(const card &card_a, const card &card_b, const card::format format);
+evaluation interactions(const card *card_a, const card *card_b, const card::format format);
 
 }
 }

@@ -156,8 +156,8 @@ struct card
     // TODO this doesn't handle the restricted list!
     std::set<format> legalities;
     std::string text;
-    std::experimental::optional<std::string> power;
-    std::experimental::optional<std::string> toughness;
+    std::experimental::optional<int8_t> power;
+    std::experimental::optional<int8_t> toughness;
     uint8_t converted_mana_cost{0};
 
     std::vector<uint64_t> mechanics;

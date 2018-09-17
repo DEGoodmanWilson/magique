@@ -15,12 +15,17 @@ class collection
 {
 public:
     collection() = default;
-    collection(std::string path, std::string filename, const catalog *catalog);
-    card at(uint64_t loc) const;
-    uint64_t index_at(std::string name, int64_t past_index=-1) const;
+
+    collection(std::string path, std::string filename, catalog *catalog);
+
+    card *at(uint64_t loc);
+
+    uint64_t index_at(std::string name, int64_t past_index = -1);
+
     uint64_t count();
+
 private:
-    const catalog *catalog_; // non-owning pointer
+    catalog *catalog_; // non-owning pointer
     std::vector<std::string> cards_;
 };
 

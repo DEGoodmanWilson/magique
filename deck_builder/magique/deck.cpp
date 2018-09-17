@@ -19,7 +19,7 @@ uint16_t deck::deck_minimum{60 - 26};
 card::format deck::format{card::format::standard};
 std::unordered_set<card::color> deck::color_identity{};
 collection deck::collection{};
-std::vector<card> deck::key_cards_{};
+std::vector<card *> deck::key_cards_{};
 std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
 std::vector<evaluators::card_pair_evaluator> deck::card_pair_evaluators_{};
 std::vector<evaluators::deck_evaluator> deck::deck_evaluators_{};
@@ -37,14 +37,14 @@ deck::deck(std::vector<uint64_t> indices) :
     std::unordered_map<std::string, double> card_divisors{};
     std::unordered_map<std::string, double> card_evaluations{};
 
-    reasons_["cards"] = nlohmann::json::object();
+//    reasons_["cards"] = nlohmann::json::object();
     for (const auto &kv : cards_)
     {
         const auto card_name = kv.first;
         const auto card = kv.second.second;
         const auto count = kv.second.first;
 
-        reasons_["cards"][card_name] = nlohmann::json::object();
+//        reasons_["cards"][card_name] = nlohmann::json::object();
         for (const auto &eval : card_evaluators_)
         {
             auto evaluation = eval(card, count, format);
@@ -52,8 +52,8 @@ deck::deck(std::vector<uint64_t> indices) :
             if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
             if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
-            reasons_["cards"][card.name]["count"] = count;
-            reasons_["cards"][card.name][evaluation.reason] = evaluation.score;
+//            reasons_["cards"][card->name]["count"] = count;
+//            reasons_["cards"][card->name][evaluation.reason] = evaluation.score;
             card_evaluations[evaluation.reason] += evaluation.score * count;
         }
 
@@ -64,7 +64,7 @@ deck::deck(std::vector<uint64_t> indices) :
             {
                 const auto card_b_name = kv2.first;
                 const auto card_b = kv2.second.second;
-                reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
+//                reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
                 for (const auto &eval : card_pair_evaluators_)
                 {
                     auto evaluation = eval(card, card_b, format);
@@ -75,7 +75,7 @@ deck::deck(std::vector<uint64_t> indices) :
                     }
                     if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
-                    reasons_["cards"][card.name][card_b_name][evaluation.reason] = evaluation.score;
+//                    reasons_["cards"][card->name][card_b_name][evaluation.reason] = evaluation.score;
                     card_evaluations[evaluation.reason] += evaluation.score * count;
                 }
             }
@@ -90,16 +90,16 @@ deck::deck(std::vector<uint64_t> indices) :
         if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
         if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
-        reasons_["deck"][evaluation.reason] = evaluation.score;
+//        reasons_["deck"][evaluation.reason] = evaluation.score;
     }
 
     for (const auto &reason: card_reasons)
     {
         double card_score = card_evaluations[reason];
         double normalized_card_score = card_score / card_divisors[reason];
-        reasons_[reason] = nlohmann::json::object();
-        reasons_[reason]["score"] = card_score;
-        reasons_[reason]["normalized_score"] = normalized_card_score;
+//        reasons_[reason] = nlohmann::json::object();
+//        reasons_[reason]["score"] = card_score;
+//        reasons_[reason]["normalized_score"] = normalized_card_score;
         rank_ += normalized_card_score;
     }
 }
@@ -125,24 +125,24 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     for (const auto &card :key_cards_)
     {
         int64_t last_index{0};
-        if (indices_seen.count(card.name)) last_index = indices_seen[card.name];
-        auto index = collection.index_at(card.name, last_index);
-        indices_seen[card.name] = index;
+        if (indices_seen.count(card->name)) last_index = indices_seen[card->name];
+        auto index = collection.index_at(card->name, last_index);
+        indices_seen[card->name] = index;
         collection_duplicates.insert(index); // TODO handle multiple key cards of same name!
 
-        if (cards_.count(card.name))
+        if (cards_.count(card->name))
         { //if we have seen this card already
-            if (cards_.at(card.name).first < 4)
+            if (cards_.at(card->name).first < 4)
             { // but only insert it if we have fewer than 4 in the deck
-                cards_[card.name].first++;
+                cards_[card->name].first++;
             }
             else
             {
-                cards_[card.name] = std::make_pair(1, card);
+                cards_[card->name] = std::make_pair(1, card);
             }
         }
 
-        for (const auto &color : card.color_identity)
+        for (const auto &color : card->color_identity)
         {
             prefered_color_identity.insert(color);
         }
@@ -162,35 +162,35 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 
         // insert request card into deck
         // TODO handle > 4 copies! manage restricted list, and legality too
-        if (cards_.count(card.name))
+        if (cards_.count(card->name))
         { //if we have seen this card already
-            cards_[card.name].first++;
+            cards_[card->name].first++;
 
             if (format == card::format::commander) // TODO or other singleton formats
             {
-                cards_[card.name].first = 1;
+                cards_[card->name].first = 1;
             }
             else // constructed formats
             {
-                if (cards_[card.name].first > 4)
+                if (cards_[card->name].first > 4)
                 {
-                    cards_[card.name].first = 4;
+                    cards_[card->name].first = 4;
                 }
                 // TODO is it restricted in this format?
             }
         }
         else
         {
-            if (card.legalities.count(format))
+            if (card->legalities.count(format))
             { //only add if legal in this format.
-                cards_[card.name] = std::make_pair(1, card);
+                cards_[card->name] = std::make_pair(1, card);
             }
         }
 
         // handle color identity
         if (!mandated_color_identity)
         {
-            for (const auto &color : card.color_identity)
+            for (const auto &color : card->color_identity)
             {
                 colors_seen[color]++;
             }
@@ -226,7 +226,7 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     std::vector<std::string> to_remove;
     for (auto &kv : cards_)
     {
-        for (const auto card_color : kv.second.second.color_identity)
+        for (const auto card_color : kv.second.second->color_identity)
         {
             if (card_color == card::color::colorless) continue;
 
