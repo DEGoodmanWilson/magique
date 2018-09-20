@@ -206,7 +206,7 @@ int main(int argc, char **argv)
             // If we get a sigabort signal, stop here and dump the current best-fit chromosome. Some people are just impatient
             eta.done();
             auto best_fit = pop.evaluate();
-            deck d{best_fit.get_genes()};
+            deck d{best_fit.get_genes(), true};
             auto rank = best_fit.get_fitness();
             nlohmann::json j{d};
             std::cout << j.dump(4) << std::endl;
@@ -218,7 +218,7 @@ int main(int argc, char **argv)
     eta.done();
 
     auto best_fit = pop.evaluate();
-    deck d{best_fit.get_genes()};
+    deck d{best_fit.get_genes(), true};
     auto rank = best_fit.get_fitness();
     nlohmann::json j{d};
     std::cout << j.dump(4) << std::endl;

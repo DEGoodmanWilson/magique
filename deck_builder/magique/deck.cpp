@@ -24,7 +24,7 @@ std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
 std::vector<evaluators::card_pair_evaluator> deck::card_pair_evaluators_{};
 std::vector<evaluators::deck_evaluator> deck::deck_evaluators_{};
 
-deck::deck(std::vector<uint64_t> indices) :
+deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         rank_{0.0}
 {
     // First, let's cull the deck, and establish the color identity of this deck, if it hasn't been already.
@@ -37,23 +37,25 @@ deck::deck(std::vector<uint64_t> indices) :
     std::unordered_map<std::string, double> card_divisors{};
     std::unordered_map<std::string, double> card_evaluations{};
 
-//    reasons_["cards"] = nlohmann::json::object();
+    if (calculate_reasons) reasons_["cards"] = nlohmann::json::object();
     for (const auto &kv : cards_)
     {
         const auto card_name = kv.first;
         const auto card = kv.second.second;
         const auto count = kv.second.first;
 
-//        reasons_["cards"][card_name] = nlohmann::json::object();
+        if (calculate_reasons) reasons_["cards"][card_name] = nlohmann::json::object();
         for (const auto &eval : card_evaluators_)
         {
             auto evaluation = eval(card, count, format);
             card_reasons.insert(evaluation.reason);
             if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
             if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
-
-//            reasons_["cards"][card->name]["count"] = count;
-//            reasons_["cards"][card->name][evaluation.reason] = evaluation.score;
+            if (calculate_reasons)
+            {
+                reasons_["cards"][card->name]["count"] = count;
+                reasons_["cards"][card->name][evaluation.reason] = evaluation.score;
+            }
             card_evaluations[evaluation.reason] += evaluation.score * count;
         }
 
@@ -64,7 +66,8 @@ deck::deck(std::vector<uint64_t> indices) :
             {
                 const auto card_b_name = kv2.first;
                 const auto card_b = kv2.second.second;
-//                reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
+                if (calculate_reasons) reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
+
                 for (const auto &eval : card_pair_evaluators_)
                 {
                     auto evaluation = eval(card, card_b, format);
@@ -75,7 +78,8 @@ deck::deck(std::vector<uint64_t> indices) :
                     }
                     if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
-//                    reasons_["cards"][card->name][card_b_name][evaluation.reason] = evaluation.score;
+                    if (calculate_reasons) reasons_["cards"][card->name][card_b_name][evaluation.reason] = evaluation.score;
+
                     card_evaluations[evaluation.reason] += evaluation.score * count;
                 }
             }
@@ -90,16 +94,16 @@ deck::deck(std::vector<uint64_t> indices) :
         if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
         if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
-//        reasons_["deck"][evaluation.reason] = evaluation.score;
+        reasons_["deck"][evaluation.reason] = evaluation.score;
     }
 
     for (const auto &reason: card_reasons)
     {
         double card_score = card_evaluations[reason];
         double normalized_card_score = card_score / card_divisors[reason];
-//        reasons_[reason] = nlohmann::json::object();
-//        reasons_[reason]["score"] = card_score;
-//        reasons_[reason]["normalized_score"] = normalized_card_score;
+        reasons_[reason] = nlohmann::json::object();
+        reasons_[reason]["score"] = card_score;
+        reasons_[reason]["normalized_score"] = normalized_card_score;
         rank_ += normalized_card_score;
     }
 }

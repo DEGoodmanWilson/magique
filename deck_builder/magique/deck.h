@@ -27,7 +27,7 @@ void from_json(const nlohmann::json &j, deck &p);
 class deck
 {
 public:
-    deck(std::vector<uint64_t> indices);
+    deck(std::vector<uint64_t> indices, bool calculate_reasons=false);
 
     static void add_key_card(card *key)
     {
