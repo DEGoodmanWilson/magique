@@ -11,6 +11,8 @@ namespace magique
 namespace evaluators
 {
 
+void load_edhrec(std::string path);
+
 evaluation edhrec(const card *card_a, const card *card_b, const card::format format);
 
 }

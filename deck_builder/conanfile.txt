@@ -2,6 +2,7 @@
 # ga2/1.0.0@DEGoodmanWilson/testing
 jsonformoderncpp/[~=3.1]@vthiery/stable
 ga3/[~=1.0]@DEGoodmanWilson/testing
+yaml-cpp/[~=0.6]@bincrafters/stable
 
 [generators]
 cmake

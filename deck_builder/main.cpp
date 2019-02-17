@@ -173,6 +173,8 @@ int main(int argc, char **argv)
         }
         //TODO this is not a great place to be setting the max copies per spell
         deck::max_copies = 1;
+
+        magique::evaluators::load_edhrec(data_pathname);
         deck::add_evaluator(magique::evaluators::edhrec);
     }
     else
