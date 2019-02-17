@@ -15,6 +15,7 @@
 
 #include "magique/evaluators/power_toughness.h"
 #include "magique/evaluators/interactions.h"
+#include "magique/evaluators/edhrec.h"
 
 using namespace magique;
 
@@ -38,7 +39,7 @@ static const char USAGE[] =
       -f <format> --format=<format>  Choose the deck format from "standard", "legacy", "modern", "commander" [default:"standard"]
       -p <size> --population=<size>  Set initial population size [default: 10]
       -g <count> --generations=<count>  Set the number of generations to run [default: 10]
-      -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck
+      -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck. In commander decks, this is your commander.
       -s --single_threaded    Run in single-threaded mode
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
       -i <color_identity> --color_identity=<color_identity>  Set the color identity of the deck, using a string like "wubgr". Default value lets algorithm decide. [default: ""]
@@ -75,14 +76,22 @@ int main(int argc, char **argv)
     uint16_t deck_size;
     std::unordered_set<card::color> color_identity;
 
-    card::format format;
+    card::format format{card::format::standard};
 
     for (auto const &arg : args)
     {
         if (arg.first == "--format")
         {
-            //TODO
-            format = card::format::standard;
+            //TODO other formats!
+            if (arg.second.asString() == "commander")
+            {
+                format = card::format::commander;
+                deck_size = 100;
+            }
+            else
+            {
+                format = card::format::standard;
+            }
         }
         else if (arg.first == "--generations")
         { generations = arg.second.asLong(); }
@@ -150,9 +159,25 @@ int main(int argc, char **argv)
     deck::deck_minimum = deck_size;
     deck::format = format;
 
-    deck::add_evaluator(magique::evaluators::eval_power);
-    deck::add_evaluator(magique::evaluators::eval_toughness);
-    deck::add_evaluator(magique::evaluators::interactions);
+    // TODO we should be selecting these from the command line, or a configuration file
+    if (deck::format == card::format::commander)
+    {
+        if(key_cards.size() != 1)
+        {
+            // exit with an error. TODO also check to see that the key_card is legal as a commander
+            std::cout << "Commander decks require a command to be specified with --key_card" << std::endl;
+            exit(1);
+        }
+        //TODO this is not a great place to be setting the max copies per spell
+        deck::max_copies = 1;
+        deck::add_evaluator(magique::evaluators::edhrec);
+    }
+    else
+    {
+        deck::add_evaluator(magique::evaluators::eval_power);
+        deck::add_evaluator(magique::evaluators::eval_toughness);
+        deck::add_evaluator(magique::evaluators::interactions);
+    }
 
     // fire up a catalog
     catalog master_catalog{data_pathname};

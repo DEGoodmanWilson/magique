@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl https://mtgjson.com/json/AllCards-x.json.zip | tar -xf - -C .
+curl https://mtgjson.com/json/AllCards.json > AllCards.json
 curl https://mtgdecks.net/decks/csv/Standard > Standard.txt
 curl https://mtgdecks.net/decks/csv/Modern > Modern.txt
 curl https://mtgdecks.net/decks/csv/Commander > Commander.txt

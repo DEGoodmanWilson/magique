@@ -18,15 +18,14 @@ namespace magique
 /***
 {
   "name": "Aerial Responder",
-  "multiverse_id": 430541,
   "layout": "normal",
   "names": null,
-  "mana_cost": "{1}{W}{W}",
-  "cmc": 3,
+  "manaCost": "{1}{W}{W}",
+  "convertedManaCost": 3,
   "colors": [
     "White"
   ],
-  "color_identity": [
+  "colorIdentity": [
     "W"
   ],
   "type": "Creature \u2014 Dwarf Soldier",

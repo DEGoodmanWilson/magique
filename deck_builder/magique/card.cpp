@@ -201,7 +201,7 @@ void from_json(const nlohmann::json &j, card &p)
     catch (nlohmann::json::out_of_range &e)
     {}
 
-    p.converted_mana_cost = j.at("cmc").get<uint64_t>();
+    p.converted_mana_cost = j.at("convertedManaCost").get<uint64_t>();
 
     try
     {
@@ -214,10 +214,11 @@ void from_json(const nlohmann::json &j, card &p)
 
     try
     {
-        for (const auto &legality_json : j.at("legalities"))
+        auto legalities = j.at("legalities");
+        for (nlohmann::json::iterator it = legalities.begin(); it != legalities.end(); ++it)
         {
-            auto format_string = legality_json.at("format").get<std::string>();
-            auto legality_string = legality_json.at("legality").get<std::string>();
+            auto format_string = it.key();
+            auto legality_string = it.value().get<std::string>();
             if (legality_string == "Legal") // TODO how to handle restricted case!?
             {
                 if (format_string == "Commander")
@@ -360,7 +361,7 @@ void to_json(nlohmann::json &j, const card &p)
         j["text"] = p.text;
     }
 
-    j["cmc"] = p.converted_mana_cost;
+    j["convertedManaCost"] = p.converted_mana_cost;
 
     //TODO actual mana cost!
 }

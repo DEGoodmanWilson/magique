@@ -47,6 +47,7 @@ public:
     static collection collection;
 
     static uint16_t deck_minimum;
+    static uint8_t max_copies;
 
     static card::format format;
 

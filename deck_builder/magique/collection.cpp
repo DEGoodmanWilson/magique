@@ -3,6 +3,7 @@
 //
 
 #include "collection.h"
+#include "../TextUtils/TextUtils.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -35,6 +36,19 @@ collection::collection(std::string path, std::string filename, catalog *catalog)
 //        name = name.substr(1,name.length()-1);
 
         bool is_land = false;
+        // handle split cards. In collection the are "a_b". In Catalog, they get listed seperately as "A" and "B". Canonical form is "A // B"
+        // or in the one case "Who // What // When // Where // Why"
+        if(name.find("_"))
+        {
+            std::vector<std::string> subnames;
+            TextUtils::Split('_', subnames, name);
+            name = TextUtils::Join(subnames, " // ");
+        }
+
+        // handle artwork variation. For example "boros guildgate (a)"
+        std::vector<std::string> variations{" (a)", " (b)", " (c)", " (d)", " (e)", " (f)"};
+        TextUtils::eraseSubStrings(name, variations);
+
         for (auto type : catalog->at(name)->types)
         {
             if (type == card::type::land || type == card::type::basic_land)

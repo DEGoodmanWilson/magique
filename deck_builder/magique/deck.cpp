@@ -16,6 +16,7 @@ namespace magique
 
 uint16_t deck::colors{2};
 uint16_t deck::deck_minimum{60 - 26};
+uint8_t deck::max_copies{4};
 card::format deck::format{card::format::standard};
 std::unordered_set<card::color> deck::color_identity{};
 collection deck::collection{};
@@ -136,7 +137,7 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 
         if (cards_.count(card->name))
         { //if we have seen this card already
-            if (cards_.at(card->name).first < 4)
+            if (cards_.at(card->name).first < max_copies)
             { // but only insert it if we have fewer than 4 in the deck
                 cards_[card->name].first++;
             }
@@ -165,23 +166,16 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
         auto card = collection.at(i);
 
         // insert request card into deck
-        // TODO handle > 4 copies! manage restricted list, and legality too
+        // TODO manage restricted list, and legality too
         if (cards_.count(card->name))
         { //if we have seen this card already
             cards_[card->name].first++;
 
-            if (format == card::format::commander) // TODO or other singleton formats
+            if (cards_[card->name].first > max_copies)
             {
-                cards_[card->name].first = 1;
+                cards_[card->name].first = max_copies;
             }
-            else // constructed formats
-            {
-                if (cards_[card->name].first > 4)
-                {
-                    cards_[card->name].first = 4;
-                }
-                // TODO is it restricted in this format?
-            }
+            // TODO is it restricted in this format?
         }
         else
         {

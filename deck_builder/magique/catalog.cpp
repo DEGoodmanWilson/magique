@@ -3,6 +3,7 @@
 //
 
 #include "catalog.h"
+#include "../TextUtils/TextUtils.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <iostream>
@@ -14,7 +15,7 @@ namespace magique
 catalog::catalog(std::string path)
 //catalog_filename, std::string annotations_filename)
 {
-    std::ifstream ifs(path + "/AllCards-x.json");
+    std::ifstream ifs(path + "/AllCards.json");
     nlohmann::json card_list_json;
     ifs >> card_list_json;
     ifs.close();
@@ -30,6 +31,27 @@ catalog::catalog(std::string path)
         auto name = card_kv.key();
 
         auto card_json = card_kv.value();
+
+        // ignore meld cards
+        if (card_json["layout"] == "meld")
+        {
+            continue;
+        }
+
+        // see if it is a split card. If so , use it's canonical name by joining the names in the "names" field with " // "
+        if (card_json["layout"] == "split")
+        {
+            const auto names = card_json["names"].get<std::vector<std::string>>();
+            name = TextUtils::Join(card_json["names"].get<std::vector<std::string>>(), " // ");
+            // make sure we haven't already included it
+            if (cards_by_name_.count(name))
+            {
+                continue;
+            }
+        }
+
+        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+
         //load its annotations, if any
         try
         {
@@ -38,7 +60,6 @@ catalog::catalog(std::string path)
         catch (nlohmann::json::out_of_range &e)
         {}
 
-        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
         cards_by_name_[name] = card_json.get<card>();
     }
 
