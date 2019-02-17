@@ -159,8 +159,9 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 
     for (const auto &i : indices)
     {
+        if (collection_duplicates.count(i) >= 1) continue; // skip dupe references to same physical card
+
         collection_duplicates.insert(i);
-        if (collection_duplicates.count(i) > 1) continue; // skip dupe references to same physical card
 
         // what card does this index represent?
         auto card = collection.at(i);
@@ -175,11 +176,11 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
             {
                 cards_[card->name].first = max_copies;
             }
-            // TODO is it restricted in this format?
         }
         else
         {
-            if (card->legalities.count(format))
+            // TODO handle restricted cards
+            if (card->legalities[format] == card::legality::legal)
             { //only add if legal in this format.
                 cards_[card->name] = std::make_pair(1, card);
             }

@@ -219,34 +219,76 @@ void from_json(const nlohmann::json &j, card &p)
         {
             auto format_string = it.key();
             auto legality_string = it.value().get<std::string>();
+            card::legality legality{card::legality::legal};
             if (legality_string == "Legal") // TODO how to handle restricted case!?
             {
-                if (format_string == "Commander")
-                {
-                    p.legalities.insert(card::format::commander);
-                }
-                else if (format_string == "Legacy")
-                {
-                    p.legalities.insert(card::format::legacy);
-                }
-                else if (format_string == "Modern")
-                {
-                    p.legalities.insert(card::format::modern);
-                }
-                else if (format_string == "Standard")
-                {
-                    p.legalities.insert(card::format::standard);
-                }
-                else if (format_string == "Vintage")
-                {
-                    p.legalities.insert(card::format::vintage);
-                }
-                    // TODO pauper legality is handled differently!
-                else
-                {
-                    p.legalities.insert(card::format::other);
-                }
+                legality = card::legality::legal;
             }
+            else if (legality_string == "Banned")
+            {
+                legality = card::legality::banned;
+            }
+            else if (legality_string == "Restricted")
+            {
+                legality = card::legality::restricted;
+            }
+            else
+            {
+                std::cout << legality_string << std::endl;
+                exit(1);
+            }
+            card::format format;
+            if (format_string == "commander")
+            {
+                format = card::format::commander;
+            }
+            else if (format_string == "legacy")
+            {
+                format = card::format::legacy;
+            }
+            else if (format_string == "modern")
+            {
+                format = card::format::modern;
+            }
+            else if (format_string == "standard")
+            {
+                format = card::format::standard;
+            }
+            else if (format_string == "vintage")
+            {
+                format = card::format::vintage;
+            }
+            else if (format_string == "1v1")
+            {
+                format = card::format::onevone;
+            }
+            else if (format_string == "duel")
+            {
+                format = card::format::duel;
+            }
+            else if (format_string == "penny")
+            {
+                format = card::format::penny;
+            }
+            else if (format_string == "frontier")
+            {
+                format = card::format::frontier;
+            }
+            else if (format_string == "brawl")
+            {
+                format = card::format::brawl;
+            }
+            else if (format_string == "pauper")
+            {
+                format = card::format::pauper;
+            }
+            else
+            {
+                // future
+                // oldschool
+                format = card::format::other;
+            }
+            p.legalities[format] = legality;
         }
     }
     catch (nlohmann::json::out_of_range &e)

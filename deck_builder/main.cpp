@@ -83,14 +83,17 @@ int main(int argc, char **argv)
         if (arg.first == "--format")
         {
             //TODO other formats!
-            if (arg.second.asString() == "commander")
+            if(arg.second.isString())
             {
-                format = card::format::commander;
-                deck_size = 100;
-            }
-            else
-            {
-                format = card::format::standard;
+                if (arg.second.asString() == "commander")
+                {
+                    format = card::format::commander;
+                    deck_size = 60; //plus 40 lands
+                }
+                else
+                {
+                    format = card::format::standard;
+                }
             }
         }
         else if (arg.first == "--generations")

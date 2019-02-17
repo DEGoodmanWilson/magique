@@ -108,7 +108,8 @@ struct card
         green,
         colorless,
     };
-    static constexpr std::array<color, 6> all_colors = {color::white, color::blue, color::black, color::red, color::green, color::colorless};
+    static constexpr std::array<color, 6> all_colors = {color::white, color::blue, color::black, color::red,
+                                                        color::green, color::colorless};
 
     enum class type
     {
@@ -121,7 +122,9 @@ struct card
         instant,
         sorcery,
     };
-    static constexpr std::array<type, 8> all_types = {type::basic_land, type::land, type::creature, type::artifact, type::enchantment, type::planeswalker, type::instant, type::sorcery};
+    static constexpr std::array<type, 8> all_types = {type::basic_land, type::land, type::creature, type::artifact,
+                                                      type::enchantment, type::planeswalker, type::instant,
+                                                      type::sorcery};
 
 
     // TODO format is a feature of a deck, not a card, really. kinda.
@@ -134,7 +137,19 @@ struct card
         pauper,
         standard,
         vintage,
+        onevone,
+        duel,
+        penny,
+        frontier,
+        brawl,
         other
+    };
+
+    enum class legality
+    {
+        legal,
+        banned,
+        restricted
     };
 
     static std::unordered_map<std::string, type> strings_for_types;
@@ -153,7 +168,20 @@ struct card
     std::set<color> color_identity;
 
     // TODO this doesn't handle the restricted list!
-    std::set<format> legalities;
+    std::unordered_map<format, legality> legalities{
+            {card::format::commander, card::legality::legal},
+            {card::format::legacy,    card::legality::legal},
+            {card::format::modern,    card::legality::legal},
+            {card::format::pauper,    card::legality::legal},
+            {card::format::standard,  card::legality::legal},
+            {card::format::vintage,   card::legality::legal},
+            {card::format::onevone,   card::legality::legal},
+            {card::format::duel,      card::legality::legal},
+            {card::format::penny,     card::legality::legal},
+            {card::format::frontier,     card::legality::legal},
+            {card::format::brawl,     card::legality::legal},
+            {card::format::other,     card::legality::legal}
+    };
     std::string text;
     std::experimental::optional<int8_t> power;
     std::experimental::optional<int8_t> toughness;
@@ -166,11 +194,14 @@ struct card
 
 
 std::string to_string(const card::type &t);
+
 std::string to_string(const card::color &c);
 
 
 void to_json(nlohmann::json &j, const card::color &c);
+
 void to_json(nlohmann::json &j, const card::type &t);
+
 void to_json(nlohmann::json &j, const card &p);
 
 void from_json(const nlohmann::json &j, card &p);
