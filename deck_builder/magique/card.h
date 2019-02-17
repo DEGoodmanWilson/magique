@@ -147,6 +147,7 @@ struct card
 
     enum class legality
     {
+        illegal,
         legal,
         banned,
         restricted
@@ -169,18 +170,18 @@ struct card
 
     // TODO this doesn't handle the restricted list!
     std::unordered_map<format, legality> legalities{
-            {card::format::commander, card::legality::legal},
-            {card::format::legacy,    card::legality::legal},
-            {card::format::modern,    card::legality::legal},
-            {card::format::pauper,    card::legality::legal},
-            {card::format::standard,  card::legality::legal},
-            {card::format::vintage,   card::legality::legal},
-            {card::format::onevone,   card::legality::legal},
-            {card::format::duel,      card::legality::legal},
-            {card::format::penny,     card::legality::legal},
-            {card::format::frontier,     card::legality::legal},
-            {card::format::brawl,     card::legality::legal},
-            {card::format::other,     card::legality::legal}
+            {card::format::commander, card::legality::illegal},
+            {card::format::legacy,    card::legality::illegal},
+            {card::format::modern,    card::legality::illegal},
+            {card::format::pauper,    card::legality::illegal},
+            {card::format::standard,  card::legality::illegal},
+            {card::format::vintage,   card::legality::illegal},
+            {card::format::onevone,   card::legality::illegal},
+            {card::format::duel,      card::legality::illegal},
+            {card::format::penny,     card::legality::illegal},
+            {card::format::frontier,  card::legality::illegal},
+            {card::format::brawl,     card::legality::illegal},
+            {card::format::other,     card::legality::illegal}
     };
     std::string text;
     std::experimental::optional<int8_t> power;
