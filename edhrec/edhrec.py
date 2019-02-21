@@ -1,14 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import json
-import yaml
 import sys
 import time
 import unidecode
-
-## TODO 
-## OUTPUT JSON
-## synergies needs to be an object, not an array of tuples
 
 
 def edhrec_url_normalize(name):
@@ -79,7 +74,7 @@ def evaluate_card(card_name):
   if ('card' in data.keys()) and ('tribe' in data['card'].keys()):
     our_data['tribe'] = data['card']['tribe']
 
-  our_data['synergies'] = []
+  our_data['synergies'] = {}
   if data['cardlists']:
     for cardlist in data['cardlists']:
       if cardlist['tag'] is not 'topcommanders':
@@ -88,7 +83,7 @@ def evaluate_card(card_name):
           if card_name == syn_name:
             continue
           synergy = float(card['label'].split('<br />')[-1].split()[0].strip('%'))/100
-          our_data['synergies'].append({syn_name: synergy})
+          our_data['synergies'][syn_name] = synergy
 
   return our_data
 
@@ -98,18 +93,9 @@ with open('../data/AllCards.json') as fd:
 card_names = data.keys()
 # card_names = ["Sol Ring", "Ornithopter"]
 
-# Load save point, if we have one
-try:
-  with open('../data/EDHREC.yaml') as fd:
-    edhrec_data = yaml.load(fd)
-except:
-  edhrec_data = None
-  raise
 
 seen = []
-if edhrec_data != None:
-  seen = list(edhrec_data.keys())
-print(seen, file=sys.stderr)
+cards = {}
 
 # Iterate over all the cards
 for card_name in card_names:
@@ -160,5 +146,6 @@ for card_name in card_names:
     card_data['alljson_name'] = alljson_card_name
 
   seen.append(card_name)
+  cards[card_name] = card_data
 
-  print(yaml.dump({card_name: card_data}))
+print(json.dumps(cards, indent=4))
