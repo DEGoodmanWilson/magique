@@ -37,8 +37,8 @@ static const char USAGE[] =
       -h --help     Show this screen.
       --version     Show version.
       -f <format> --format=<format>  Choose the deck format from "standard", "legacy", "modern", "commander" [default:"standard"]
-      -p <size> --population=<size>  Set initial population size [default: 10]
-      -g <count> --generations=<count>  Set the number of generations to run [default: 10]
+      -p <size> --population=<size>  Set initial population size [default: 1000]
+      -g <count> --generations=<count>  Set the number of generations to run [default: 1000]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck. In commander decks, this is your commander.
       -s --single_threaded    Run in single-threaded mode
       -c <colors> --colors=<colors>  Set the number of desired colors to use in the deck, from 1 to 5. [default: 2]
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
                 if (arg.second.asString() == "commander")
                 {
                     format = card::format::commander;
-                    deck_size = 60; //plus 40 lands
+                    deck_size = 60; //plus 40 lands // TODO minus key cards
                 }
                 else
                 {
@@ -150,6 +150,8 @@ int main(int argc, char **argv)
     }
 
 
+    deck_size -= key_cards.size();
+
 
     // set deck evaluation options
     if (colors < color_identity.size())
@@ -175,7 +177,10 @@ int main(int argc, char **argv)
         deck::max_copies = 1;
 
         magique::evaluators::load_edhrec(data_pathname);
-        deck::add_evaluator(magique::evaluators::edhrec);
+        deck::add_evaluator(magique::evaluators::edhrec_rank);
+        deck::add_evaluator(magique::evaluators::edhrec_price);
+        deck::add_evaluator(magique::evaluators::edhrec_decks);
+        deck::add_evaluator(magique::evaluators::edhrec_synergy);
     }
     else
     {

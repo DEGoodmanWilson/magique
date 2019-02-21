@@ -65,6 +65,7 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         {
             for (const auto &kv2 : cards_)
             {
+                // TODO use the physical indices to make sure we aren't comparing a card against itself.
                 const auto card_b_name = kv2.first;
                 const auto card_b = kv2.second.second;
                 if (calculate_reasons) reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
@@ -106,6 +107,11 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         reasons_[reason]["score"] = card_score;
         reasons_[reason]["normalized_score"] = normalized_card_score;
         rank_ += normalized_card_score;
+        if (rank_ < 0)
+        {
+            std::cerr << reasons_.dump() << std::endl;
+            std::cerr << "Negative rank!" << std::endl;
+        }
     }
 }
 
@@ -239,6 +245,12 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     for (const auto &name : to_remove)
     {
         cards_.erase(name);
+    }
+
+    // Finally, add the keycards back in
+    for(auto key_card : key_cards_)
+    {
+        cards_.emplace(key_card->name, std::pair<uint16_t, card *>(0, key_card));
     }
 
     // TODO calculate mana curve

@@ -376,8 +376,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Pressure Point",KLD,0.11,0,0,0,30/11/2017
 2,"Prey Upon",AER,0.13,0,0,0,2/12/2017
 1,"Prey Upon",AER,0.13,0,0,3,13/1/2018
-3,"Primal Amulet",XLN,2.0,0,0,0,11/12/2018
-1,"Primal Amulet",XLN,1.18,0,0,3,31/3/2018
+3,"Primal Amulet_Primal Wellspring",XLN,2.0,0,0,0,11/12/2018
+1,"Primal Amulet_Primal Wellspring",XLN,1.18,0,0,3,31/3/2018
 2,"Prizefighter Construct",AER,0.13,0,0,0,2/12/2017
 1,"Prizefighter Construct",AER,0.13,0,0,3,25/12/2017
 1,"Propeller Pioneer",KLD,0.12,0,0,3,4/1/2018
@@ -2134,7 +2134,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"storm fleet arsonist",XLN,0.06,0,0,0,25/3/2018
 1,"storm fleet pyromancer",XLN,0.05,0,0,3,28/2/2018
 1,"storm fleet sprinter",RIX,0.08,0,0,0,25/3/2018
-1,"storm the vault",RIX,0.63,0,0,0,3/7/2018
+1,"storm the vault_Vault of Catlacan",RIX,0.63,0,0,0,3/7/2018
 1,"strangling spores",M19,0.0,0,0,0,7/7/2018
 1,"street riot",GRN,0.04,0,0,0,23/11/2018
 1,"street riot",GRN,0.06,0,0,0,30/9/2018

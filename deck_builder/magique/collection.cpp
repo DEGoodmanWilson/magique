@@ -17,6 +17,7 @@ namespace magique
 collection::collection(std::string path, std::string filename, catalog *catalog) : catalog_{catalog}
 {
     //load up from a CSV
+    std::cerr << "Loading collection data...";
     std::ifstream file{path + "/" + filename};
 
     std::string row;
@@ -66,7 +67,7 @@ collection::collection(std::string path, std::string filename, catalog *catalog)
             }
         }
     }
-
+    std::cerr << "done." << std::endl;
 
 }
 

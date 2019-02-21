@@ -15,15 +15,19 @@ namespace magique
 catalog::catalog(std::string path)
 //catalog_filename, std::string annotations_filename)
 {
+    std::cerr << "Loading card data...";
     std::ifstream ifs(path + "/AllCards.json");
     nlohmann::json card_list_json;
     ifs >> card_list_json;
     ifs.close();
+    std::cerr << "done." << std::endl;
 
+    std::cerr << "Loading tag data...";
     ifs.open(path + "/card_tags.json");
     nlohmann::json mechanics;
     ifs >> mechanics;
     ifs.close();
+    std::cerr << "done." << std::endl;
 
     // AllJson from MTGJSON is one large object
     for (nlohmann::json::iterator card_kv = card_list_json.begin(); card_kv != card_list_json.end(); ++card_kv)
@@ -38,15 +42,18 @@ catalog::catalog(std::string path)
             continue;
         }
 
-        // see if it is a split card. If so , use it's canonical name by joining the names in the "names" field with " // "
-        if (card_json["layout"] == "split")
+        // see if it is a split or transform or other kind multi-card. If so , use it's canonical name by joining the names in the "names" field with " // "
+        if (card_json.find("names") != card_json.end())
         {
             const auto names = card_json["names"].get<std::vector<std::string>>();
-            name = TextUtils::Join(card_json["names"].get<std::vector<std::string>>(), " // ");
-            // make sure we haven't already included it
-            if (cards_by_name_.count(name))
+            if(names.size() > 1)
             {
-                continue;
+                name = TextUtils::Join(card_json["names"].get<std::vector<std::string>>(), " // ");
+                // make sure we haven't already included it
+                if (cards_by_name_.count(name))
+                {
+                    continue;
+                }
             }
         }
 

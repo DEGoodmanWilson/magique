@@ -6,6 +6,11 @@ import sys
 import time
 import unidecode
 
+## TODO 
+## OUTPUT JSON
+## synergies needs to be an object, not an array of tuples
+
+
 def edhrec_url_normalize(name):
   return unidecode.unidecode(name.lower().replace(" // ", "-").replace("'", "").replace(",", "").replace(" ", "-"))
 

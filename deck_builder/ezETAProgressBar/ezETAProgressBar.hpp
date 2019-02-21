@@ -155,7 +155,7 @@ public:
 				out.append(width-out.size(),' ');
 
 			out.append("\n");
-			std::cout << out;
+			std::cerr << out;
 			return;
 		} else {
 			duration eta = std::chrono::seconds::max();
@@ -185,8 +185,8 @@ public:
 
 			
 		out.append("\r");
-		std::cout << out;
-		std::cout.flush();
+		std::cerr << out;
+		std::cerr.flush();
 	}
 
 	private:
