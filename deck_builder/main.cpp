@@ -204,7 +204,7 @@ int main(int argc, char **argv)
         }
         catch (...)
         {
-            std::cerr << "No such card: " << card << std::endl;
+            std::cerr << "No such key card: " << card << std::endl;
             exit(1);
         }
     }

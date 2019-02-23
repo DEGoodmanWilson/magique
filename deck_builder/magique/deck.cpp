@@ -259,8 +259,7 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 
 void to_json(nlohmann::json &j, const deck &d)
 {
-
-    j["_list"] = nlohmann::json::array();
+    j = nlohmann::json{{"_list", nlohmann::json::array()}, {"_count", 0}};
     uint16_t deck_size{0};
     for (const auto &kv: d.cards_)
     {

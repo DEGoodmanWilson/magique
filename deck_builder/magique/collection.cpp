@@ -18,37 +18,19 @@ collection::collection(std::string path, std::string filename, catalog *catalog)
 {
     //load up from a CSV
     std::cerr << "Loading collection data...";
-    std::ifstream file{path + "/" + filename};
 
-    std::string row;
-    getline(file, row); //throw away header row;
-    while (getline(file, row))
+    std::ifstream ifs{path + "/" + filename};
+    nlohmann::json collection_json;
+    ifs >> collection_json;
+    ifs.close();
+
+    //    for (auto& [key, value] : collection_json.items())
+    for (auto& kv : collection_json.items())
     {
-        std::istringstream tokenS(row);
-        std::string count_str;
-        uint16_t count;
-        std::string name;
-        getline(tokenS, count_str, ',');
-        count = stoul(count_str);
-        getline(tokenS, name, '"'); //clear first " char
-        getline(tokenS, name, '"');
-        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+        std::string name{kv.key()};
+        uint16_t count{kv.value().get<decltype(count)>()};;
+        bool is_land{false};
 
-//        name = name.substr(1,name.length()-1);
-
-        bool is_land = false;
-        // handle split cards. In collection the are "a_b". In Catalog, they get listed seperately as "A" and "B". Canonical form is "A // B"
-        // or in the one case "Who // What // When // Where // Why"
-        if(name.find("_"))
-        {
-            std::vector<std::string> subnames;
-            TextUtils::Split('_', subnames, name);
-            name = TextUtils::Join(subnames, " // ");
-        }
-
-        // handle artwork variation. For example "boros guildgate (a)"
-        std::vector<std::string> variations{" (a)", " (b)", " (c)", " (d)", " (e)", " (f)"};
-        TextUtils::eraseSubStrings(name, variations);
 
         for (auto type : catalog->at(name)->types)
         {
@@ -68,7 +50,6 @@ collection::collection(std::string path, std::string filename, catalog *catalog)
         }
     }
     std::cerr << "done." << std::endl;
-
 }
 
 card *collection::at(uint64_t loc)
@@ -79,8 +60,6 @@ card *collection::at(uint64_t loc)
 
 uint64_t collection::index_at(std::string name, const int64_t index_past)
 {
-    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-
     int64_t i{0};
     for (i = 0; i < cards_.size(); ++i)
     {

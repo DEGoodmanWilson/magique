@@ -1,6 +1,9 @@
 #!/bin/bash
 
 curl https://mtgjson.com/json/AllCards.json > AllCards.json
+
+# For affinities
+# TODO get all this crap organized!
 curl https://mtgdecks.net/decks/csv/Standard > Standard.txt
 curl https://mtgdecks.net/decks/csv/Modern > Modern.txt
 curl https://mtgdecks.net/decks/csv/Commander > Commander.txt

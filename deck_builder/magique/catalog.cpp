@@ -57,8 +57,6 @@ catalog::catalog(std::string path)
             }
         }
 
-        std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-
         //load its annotations, if any
         try
         {
@@ -74,8 +72,6 @@ catalog::catalog(std::string path)
 
 card *catalog::at(std::string name)
 {
-    std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-
     try
     {
         return &(cards_by_name_.at(name));
