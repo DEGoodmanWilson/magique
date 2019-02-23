@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re
 import json
@@ -6,11 +6,12 @@ from pprint import pprint
 import itertools
 import sys
 
-if len(sys.argv) != 2:
-    print "Usage: {0} <deck-datafile>".format(sys.argv[0])
+if len(sys.argv) != 3:
+    print "Usage: {0} <deck-datafile> <tag-datafile>".format(sys.argv[0])
     exit(1)
 
 datafile = sys.argv[1]
+tagfile = sys.argv[2]
 
 decks = []
 all_appearances = 0
@@ -20,7 +21,7 @@ mechanic_combo_appearances = [[0 for i in range(250)] for j in range(250)] # key
 with open(datafile, 'r') as f:
     decks = f.readlines()
 
-with open('../data/card_tags.json') as f:
+with open(tagfile) as f:
     card_tags = json.load(f)
 
 for deck in decks:

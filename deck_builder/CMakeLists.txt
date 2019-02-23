@@ -17,14 +17,15 @@ set(MAGIQUE_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/collection.h
         ${CMAKE_SOURCE_DIR}/magique/deck.cpp
         ${CMAKE_SOURCE_DIR}/magique/deck.h
-        ${CMAKE_SOURCE_DIR}/TextUtils/TextUtils.h TextUtils/TextUtils.cpp)
+        ${CMAKE_SOURCE_DIR}/TextUtils/TextUtils.h
+        ${CMAKE_SOURCE_DIR}/TextUtils/TextUtils.cpp)
 
 set(EVALUATOR_SOURCE_FILES
         ${CMAKE_SOURCE_DIR}/magique/evaluators/types.h
         ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.h
         ${CMAKE_SOURCE_DIR}/magique/evaluators/power_toughness.cpp
-        ${CMAKE_SOURCE_DIR}/magique/evaluators/interactions.h
-        ${CMAKE_SOURCE_DIR}/magique/evaluators/interactions.cpp
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/synergies.h
+        ${CMAKE_SOURCE_DIR}/magique/evaluators/synergies.cpp
         ${CMAKE_SOURCE_DIR}/magique/evaluators/edhrec.cpp
         ${CMAKE_SOURCE_DIR}/magique/evaluators/edhrec.h)
 

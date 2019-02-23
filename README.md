@@ -12,32 +12,20 @@
 1. Download MtG card data
 
    ```bash
-   cd data
-   ./download.sh
-   ```
-
-2. Put your collection of cards as a CSV file in `data/collection.csv` with format:
-
-    ```
-    Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseData
-    ```
-
-    (This is the default file output format for MTG Manager on iOS. See `data/collection_dons.csv` for an example.)
-
-    Make sure that this file contains no basic lands.
-
-3. Install python deps
-
-    ```bash
-    cd ../mechanic_models
-    pip install -r requirements.txt
-    ```
-
-4. Build mechanics and interactions models
-
-   ```bash
    ./run.sh
    ```
+
+2. Put your collection of cards as a JSON file in `data/collection.json` as an object with card names as keys, and the quantity you own as the values. For example, if you own four `Walking Balista`s:
+
+    ```
+    {
+      "Walking Ballista": 4
+    }
+    ```
+
+    Be sure to use canonical card names, as reported on Gatherer or Scryfall. Split cards and two-sided cards will be formatted like "Driven // Despair" (Notice the spaces around the double-slashes).
+
+    If you use MTG Manager on iOS, there is a script in `data_builders/collection/mtg_manager_csv_to_json.py` that will convert collections exported from MTG Manager to the required format
 
 8. Build genetic algorithm
 
@@ -51,10 +39,11 @@
 9. Run the genetic algorithm
 
    ```bash
-    ./bin/magique ../data collection.csv
+    ./bin/magique ../data collection.json
     ```
 
 ## Thanks
 
 * To [MTG JSON](https://mtgjson.com/) for the card data.
 * To [MTG Decks](https://mtgdecks.net/) for the decklists.
+* To [EDHREC](https://edhrec.com/) for the awesome Commander data.

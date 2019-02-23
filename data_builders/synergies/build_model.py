@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import gensim
 from gensim import corpora
@@ -9,8 +9,10 @@ import massage_text
 
 # https://rstudio-pubs-static.s3.amazonaws.com/79360_850b2a69980c4488b1db95987a24867a.html
 
+datafile = sys.argv[1] # TODO check this!
+outputpath = sys.argv[2]
 
-with open('../data/AllCards-x.json') as json_data:
+with open(datafile) as json_data:
     cards = json.load(json_data)
 
 card_sentences = []
@@ -33,15 +35,15 @@ for name, card in cards.iteritems():
 
 # Construct the bags of words
 dictionary = corpora.Dictionary(card_sentences)
-dictionary.save("cards.dict")
+dictionary.save(outputpath+"/cards.dict")
 corpus = [dictionary.doc2bow(text) for text in card_sentences]
 
 # build the LDA model
 num_topics = 250
 ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=num_topics, id2word = dictionary, passes=20)
 
-pprint(ldamodel.print_topics(num_topics=num_topics, num_words=5))
+# pprint(ldamodel.print_topics(num_topics=num_topics, num_words=5))
 
-ldamodel.save("cards.lda")
+ldamodel.save(outputpath+"/cards.lda")
 
 ldamodel.get_document_topics(dictionary.doc2bow(['']) )

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import gensim
 from gensim import corpora
@@ -7,17 +7,18 @@ import json
 from pprint import pprint
 import massage_text
 
-model = gensim.models.ldamodel.LdaModel.load("cards.lda")
-dictionary = corpora.Dictionary.load("cards.dict")
+datafile = sys.argv[1] # TODO CHECK THIS
+datapath = sys.argv[2]
 
+model = gensim.models.ldamodel.LdaModel.load(datapath+"/cards.lda")
+dictionary = corpora.Dictionary.load(datapath+"/cards.dict")
 
-
-with open('../data/AllCards-x.json') as json_data:
+with open(datafile) as json_data:
     cards = json.load(json_data)
 
 all_card_tags = {}
 
-with open('../data/types.json') as json_types:
+with open(datapath+'/types.json') as json_types:
     types = json.load(json_data)
 
 # We want to do a couple of things for each card.

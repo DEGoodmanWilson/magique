@@ -8,15 +8,19 @@ import re
 
 # https://stackabuse.com/read-a-file-line-by-line-in-python/
 
+## usage:
+# mtg_manager_csv_to_json.py collection.csv ../../data
+
 def main():  
   filepath = sys.argv[1]
+  datapath = sys.argv[2]
 
   if not os.path.isfile(filepath):
     print("File path {} does not exist. Exiting...".format(filepath))
     sys.exit()
 
 # TODO load canonical card names
-  with open('normalized_card_names.json') as f:
+  with open(datapath + '/normalized_card_names.json') as f:
     normalized_card_names = json.load(f)
 
   cards = {}

@@ -12,7 +12,7 @@
 #include "card.h"
 #include "catalog.h"
 #include "collection.h"
-#include "interactions.h"
+#include "interactions.old.h"
 #include "evaluators/types.h"
 
 namespace magique

@@ -27,57 +27,24 @@ static double_t highest_price{0.0};
 static uint64_t most_decks{0};
 
 
-void load_edhrec(std::string path)
+void load_edhrec(std::string path, const magique::catalog &catalog)
 {
-//    // TODO YAML takes too long to load, do this faster by converting to JSON first
-//    std::cerr << "Loading EDHREC data...";
-//    auto edhrec_yaml = YAML::LoadFile(path + "/EDHREC.yaml");
-//    edhrec_data = edhrec_yaml.as<decltype(edhrec_data)>();
-//
-//    // calculate individual values. Find:
-//    // most expensive card
-//    // lowest ranked card
-//    // most number of decks
-//    for(const auto card : edhrec_data)
-//    {
-//        if(card.second.edhrec_rank > lowest_rank)
-//            lowest_rank = card.second.edhrec_rank;
-//        if(card.second.price > highest_price)
-//            highest_price = card.second.price;
-//        if(card.second.deck_count > most_decks)
-//            most_decks = card.second.deck_count;
-//    }
-//
-//    // TODO lower case all card names?
-//    std::cerr << "done." << std::endl;
-
-    std::cerr << "Loading EDHREC data from " + path + "/EDHREC.json ...";
-    std::ifstream ifs(path + "/EDHREC.json");
+    std::cerr << "Loading EDHREC data from " + path + "/edhrec ...";
+    std::ifstream ifs{path + "/edhrec/edhrec.json"};
     nlohmann::json edhrec_json;
     ifs >> edhrec_json;
     ifs.close();
 
     edhrec_data = edhrec_json.get<decltype(edhrec_data)>();
 
-    // calculate individual values. Find:
-    // most expensive card
-    // lowest ranked card
-    // most number of decks
-    for (const auto card : edhrec_data)
-    {
-        if (card.second.rank > lowest_rank)
-        {
-            lowest_rank = card.second.rank;
-        }
-        if (card.second.price > highest_price)
-        {
-            highest_price = card.second.price;
-        }
-        if (card.second.deck_count > most_decks)
-        {
-            most_decks = card.second.deck_count;
-        }
-    }
+    ifs = std::ifstream{path + "/edhrec/edhrec_extremes.json"};
+    nlohmann::json edhrec_extremes_json;
+    ifs >> edhrec_extremes_json;
+    ifs.close();
+
+    lowest_rank = edhrec_extremes_json["lowest_rank"].get<decltype(lowest_rank)>();
+    highest_price = edhrec_extremes_json["highest_price"].get<decltype(highest_price)>();
+    most_decks = edhrec_extremes_json["most_decks"].get<decltype(most_decks)>();
 
     std::cerr << "done." << std::endl;
 }

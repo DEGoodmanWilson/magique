@@ -20,14 +20,6 @@ catalog::catalog(std::string path)
     nlohmann::json card_list_json;
     ifs >> card_list_json;
     ifs.close();
-    std::cerr << "done." << std::endl;
-
-    std::cerr << "Loading tag data...";
-    ifs.open(path + "/card_tags.json");
-    nlohmann::json mechanics;
-    ifs >> mechanics;
-    ifs.close();
-    std::cerr << "done." << std::endl;
 
     // AllJson from MTGJSON is one large object
     for (nlohmann::json::iterator card_kv = card_list_json.begin(); card_kv != card_list_json.end(); ++card_kv)
@@ -57,17 +49,10 @@ catalog::catalog(std::string path)
             }
         }
 
-        //load its annotations, if any
-        try
-        {
-            card_json["mechanics"] = mechanics.at(name);
-        }
-        catch (nlohmann::json::out_of_range &e)
-        {}
-
         cards_by_name_[name] = card_json.get<card>();
     }
 
+    std::cerr << "done." << std::endl;
 }
 
 card *catalog::at(std::string name)

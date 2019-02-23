@@ -5,13 +5,14 @@
 #pragma once
 
 #include "types.h"
+#include "../catalog.h"
 
 namespace magique
 {
 namespace evaluators
 {
 
-void load_edhrec(std::string path);
+void load_edhrec(std::string path, const magique::catalog &catalog);
 
 evaluation edhrec_price(const card *card, const uint16_t count, const card::format format);
 evaluation edhrec_rank(const card *card, const uint16_t count, const card::format format);

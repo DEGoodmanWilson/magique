@@ -14,7 +14,7 @@
 #include <ga3/ga3.hpp>
 
 #include "magique/evaluators/power_toughness.h"
-#include "magique/evaluators/interactions.h"
+#include "magique/evaluators/synergies.h"
 #include "magique/evaluators/edhrec.h"
 
 using namespace magique;
@@ -149,7 +149,13 @@ int main(int argc, char **argv)
         else if (arg.first == "--deck_size") deck_size = arg.second.asLong();
     }
 
+    // fire up a catalog
+    catalog master_catalog{data_pathname};
 
+    // load up the user's personal collection
+    deck::collection = collection{data_pathname, collection_filename, &master_catalog};
+
+    // set up the deck
     deck_size -= key_cards.size();
 
 
@@ -176,7 +182,7 @@ int main(int argc, char **argv)
         //TODO this is not a great place to be setting the max copies per spell
         deck::max_copies = 1;
 
-        magique::evaluators::load_edhrec(data_pathname);
+        magique::evaluators::load_edhrec(data_pathname, master_catalog);
         deck::add_evaluator(magique::evaluators::edhrec_rank);
         deck::add_evaluator(magique::evaluators::edhrec_price);
         deck::add_evaluator(magique::evaluators::edhrec_decks);
@@ -186,14 +192,9 @@ int main(int argc, char **argv)
     {
         deck::add_evaluator(magique::evaluators::eval_power);
         deck::add_evaluator(magique::evaluators::eval_toughness);
-        deck::add_evaluator(magique::evaluators::interactions);
+        magique::evaluators::load_synergies(data_pathname, master_catalog);
+        deck::add_evaluator(magique::evaluators::synergies);
     }
-
-    // fire up a catalog
-    catalog master_catalog{data_pathname};
-
-    // load up the user's personal collection
-    deck::collection = collection{data_pathname, collection_filename, &master_catalog};
 
     // pick a key card
     for (const auto &card : key_cards)
@@ -243,7 +244,7 @@ int main(int argc, char **argv)
             auto best_fit = pop.evaluate();
             deck d{best_fit.get_genes(), true};
             auto rank = best_fit.get_fitness();
-            nlohmann::json j{d};
+            nlohmann::json j = d;
             std::cout << j.dump(4) << std::endl;
             exit(1);
         }
@@ -255,7 +256,8 @@ int main(int argc, char **argv)
     auto best_fit = pop.evaluate();
     deck d{best_fit.get_genes(), true};
     auto rank = best_fit.get_fitness();
-    nlohmann::json j{d};
+    nlohmann::json j = d;
+
     std::cout << j.dump(4) << std::endl;
 
     return 0;

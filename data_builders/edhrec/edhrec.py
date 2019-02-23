@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from bs4 import BeautifulSoup
 import requests
 import json
@@ -87,13 +89,14 @@ def evaluate_card(card_name):
 
   return our_data
 
-# Load card names
-with open('../data/AllCards.json') as fd:
+
+datafile = sys.argv[1] # TODO CHECK THIS
+
+with open(datafile) as fd:
   data = json.load(fd)
 card_names = data.keys()
-# card_names = ["Sol Ring", "Ornithopter"]
 
-
+# TODO Load card names so we can pick up where we left off, if need be.
 seen = []
 cards = {}
 
@@ -119,24 +122,16 @@ for card_name in card_names:
 
   # don't process a card we've already processed
   if card_name in seen:
-    print("Already seen ", card_name, file=sys.stderr)
     continue
 
   # only look at commander-legal cards
   legal = False
 
-  try:
-    if 'legalities' in data[alljson_card_name].keys():
-      legalities = data[alljson_card_name]['legalities']
-      if 'commander' in legalities:
-        if legalities['commander'] == "Legal":
-          legal = True
-  except:
-    print(card_name, file=sys.stderr)
-    print(generate_edhrec_url(card_name), file=sys.stderr)
-    print(data[alljson_card_name], file=sys.stderr)
-    raise
-
+  if 'legalities' in data[alljson_card_name].keys():
+    legalities = data[alljson_card_name]['legalities']
+    if 'commander' in legalities:
+      if legalities['commander'] == "Legal":
+        legal = True
 
   if not legal:
     continue

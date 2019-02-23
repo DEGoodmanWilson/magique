@@ -1,17 +1,25 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys  
 import os
 import json
-import csv
 
 # https://stackabuse.com/read-a-file-line-by-line-in-python/
 
 def generate_names():  
+  filepath = sys.argv[1]
+  outpath = sys.argv[2]
+
+  if not os.path.isfile(filepath):
+    print("File path {} does not exist. Exiting...".format(filepath))
+    sys.exit()
+  if not os.path.isdir(outpath):
+    print("Output path {} does not exist. Existin...".format(outpath))
+
   canonical_card_names = []
   non_canonical_card_names = {}
 
-  with open('AllCards.json') as f:
+  with open(filepath, 'r') as f:
     catalog = json.load(f)
 
   # now, let's create a list of all the normalized names.
@@ -37,9 +45,9 @@ def generate_names():
       non_canonical_card_names[canonical_name.replace(" // ", "_")] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "_").lower()] = canonical_name
 
-  with open('canonical_card_names.json', 'w') as outfile:  
+  with open(outpath+'/canonical_card_names.json', 'w') as outfile:  
     json.dump(canonical_card_names, outfile, indent=4)
-  with open('normalized_card_names.json', 'w') as outfile:  
+  with open(outpath+'/normalized_card_names.json', 'w') as outfile:  
     json.dump(non_canonical_card_names, outfile, indent=4)
 
 if __name__ == '__main__':  
