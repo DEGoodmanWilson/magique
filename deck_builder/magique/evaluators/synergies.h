@@ -12,7 +12,7 @@ namespace magique
 namespace evaluators
 {
 
-void load_synergies(std::string path, const magique::catalog &catalog);
+void load_synergies(std::string path, const magique::catalog &catalog, magique::card::format format);
 
 evaluation synergies(const card *card_a, const card *card_b, const card::format format);
 

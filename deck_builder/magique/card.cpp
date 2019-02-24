@@ -296,6 +296,53 @@ void from_json(const nlohmann::json &j, card &p)
 
 }
 
+std::string to_string(const card::format &f)
+{
+    switch (f)
+    {
+        case card::format::commander:
+            return "commander";
+            break;
+        case card::format::legacy:
+            return "legacy";
+            break;
+        case card::format::modern:
+            return "modern";
+            break;
+        case card::format::pauper:
+            return "pauper";
+            break;
+        case card::format::standard:
+            return "standard";
+            break;
+        case card::format::vintage:
+            return "vintage";
+            break;
+        case card::format::onevone:
+            return "1v1";
+            break;
+        case card::format::duel:
+            return "duel";
+            break;
+        case card::format::penny:
+            return "penny";
+            break;
+        case card::format::frontier:
+            return "frontier";
+            break;
+        case card::format::brawl:
+            return "brawl";
+            break;
+        case card::format::highlander:
+            return "highlander";
+            break;
+        case card::format::other:
+        default:
+            return "other";
+            break;
+    }
+}
+
 std::string to_string(const card::type &t)
 {
     switch (t)

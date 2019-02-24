@@ -142,6 +142,7 @@ struct card
         penny,
         frontier,
         brawl,
+        highlander,
         other
     };
 
@@ -181,6 +182,7 @@ struct card
             {card::format::penny,     card::legality::illegal},
             {card::format::frontier,  card::legality::illegal},
             {card::format::brawl,     card::legality::illegal},
+            {card::format::highlander, card::legality::legal}, // Everything is legal in highlander!
             {card::format::other,     card::legality::illegal}
     };
     std::string text;
@@ -198,6 +200,7 @@ std::string to_string(const card::type &t);
 
 std::string to_string(const card::color &c);
 
+std::string to_string(const card::format &f);
 
 void to_json(nlohmann::json &j, const card::color &c);
 
