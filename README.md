@@ -7,6 +7,9 @@
 	sudo easy_install pip
 	brew install conan
 	conan remote add vthiery https://api.bintray.com/conan/vthiery/conan-packages
+  pip install virtualenv
+	virtualenv --python=python3 venv
+  source venv/bin/activate
 	```
 
 1. Download MtG card data
@@ -40,6 +43,12 @@
 
    ```bash
     ./bin/magique ../data collection.json
+    ```
+
+10. Deactivate virtual environment
+
+    ```bash
+    deactivate
     ```
 
 ## Thanks
