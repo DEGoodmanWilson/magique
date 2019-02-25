@@ -46,6 +46,13 @@ def generate_names():
       non_canonical_card_names[canonical_name.replace(" // ", "_").lower()] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "/")] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "/").lower()] = canonical_name
+    # Sometimes, mtgdecks gives us card names like
+    # "Circle of Protection : Green (Circle of Prote" (notice the extra space before the colon)
+    # WTF
+    if "Circle of Protection:" in canonical_name:
+      rem_len = 42 - len(canonical_name)
+      new_name = (canonical_name+" ("+canonical_name[0:rem_len]).replace(": ", " : ")
+      non_canonical_card_names[new_name] = canonical_name
 
   with open(outpath+'/canonical_card_names.json', 'w') as outfile:  
     json.dump(canonical_card_names, outfile, indent=4)
