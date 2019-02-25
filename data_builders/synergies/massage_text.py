@@ -307,11 +307,13 @@ def massage(text, name):
 
 	# Exhance references to the card's name with "self"
 	text = text.replace(name, "self")
-
+	# Handle cards like "Haakon, Stromgald Scourge"
+	if ',' in name:
+	  shortname = name.split(',')[0]
+	  text = text.replace(shortname, "self")
 
 	#remove parenthetical asides
 	text = paren_regex.sub(' ', text)
-
 
 	#expand contractions
 	text = text.replace("won't", "will not")

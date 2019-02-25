@@ -44,6 +44,8 @@ def generate_names():
     if "//" in canonical_name:
       non_canonical_card_names[canonical_name.replace(" // ", "_")] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "_").lower()] = canonical_name
+      non_canonical_card_names[canonical_name.replace(" // ", "/")] = canonical_name
+      non_canonical_card_names[canonical_name.replace(" // ", "/").lower()] = canonical_name
 
   with open(outpath+'/canonical_card_names.json', 'w') as outfile:  
     json.dump(canonical_card_names, outfile, indent=4)
