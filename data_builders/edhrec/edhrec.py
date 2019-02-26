@@ -117,7 +117,7 @@ for card_name in card_names:
     # deal with split cards
     if data[card_name]['layout'] == 'split':
       card_name = " // ".join(data[card_name]['names'])
-       = data[card_name]['names'][0]
+      # url_card_name = data[card_name]['names'][0]
 
 
   # don't process a card we've already processed
