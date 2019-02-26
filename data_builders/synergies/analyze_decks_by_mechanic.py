@@ -53,7 +53,8 @@ for deck in decks:
         # Find this card's mechanics, and log them
         if card_name in card_mechanics:
             for mechanic in card_mechanics[card_name]:
-                deck_mechanics.append(mechanic)
+                if mechanic not in deck_mechanics:
+                    deck_mechanics.append(mechanic)
                 if mechanic not in mechanics_seen:
                     mechanics_seen.append(mechanic)
 
