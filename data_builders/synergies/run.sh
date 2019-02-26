@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cp types.json ../../data/synergies
+
 # download decklists
 curl https://mtgdecks.net/decks/csv/Standard > ../../data/synergies/standard.csv
 curl https://mtgdecks.net/decks/csv/Modern > ../../data/synergies/modern.csv
