@@ -39,15 +39,12 @@ for deck in decks:
     # _with_ the double quotes, ugh
     deck = deck.replace('"', '') # remove double quotes
     deck = deck.replace('\n', '') # remove the newline
-    print(deck)
 
     deck = re.split("\s?[\d]+\s", deck)[1:] # parse deck out into "Card of Death", "Scrape", "Another Card",...
 
     # Let's turn this into a list of normalized card names.
     normalized_deck = []
-    print(deck)
     for card_name in deck:
-        print(card_name)
         card_name = normalized_card_names[card_name]
 
         # mark that we have seen this card

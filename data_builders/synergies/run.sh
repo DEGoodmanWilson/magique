@@ -16,19 +16,19 @@ pip install -r requirements.txt
 ./install_punkt.py
 # tags.txt is just for human inspection
 ./build_model.py ../../data > ../../data/synergies/tags.txt
-./tag_cards.py ../../data > ../../data/synergies/card_tags.json
+./find_card_mechanics.py ../../data > ../../data/synergies/card_mechanics.json
 ./find_tribal_cards.py ../../data > ../../data/synergies/card_tribes.json
 
 # TODO use for loops here
-./analyze_decks_by_ability.py ../../data standard > ../../data/synergies/conditional_probabilities_ability_standard.json
-./analyze_decks_by_ability.py ../../data modern > ../../data/synergies/conditional_probabilities_ability_modern.json
-./analyze_decks_by_ability.py ../../data commander > ../../data/synergies/conditional_probabilities_ability_commander.json
-./analyze_decks_by_ability.py ../../data legacy > ../../data/synergies/conditional_probabilities_ability_legacy.json
-./analyze_decks_by_ability.py ../../data pauper > ../../data/synergies/conditional_probabilities_ability_pauper.json
-./analyze_decks_by_ability.py ../../data vintage > ../../data/synergies/conditional_probabilities_ability_vintage.json
-./analyze_decks_by_ability.py ../../data frontier > ../../data/synergies/conditional_probabilities_ability_frontier.json
-./analyze_decks_by_ability.py ../../data peasant > ../../data/synergies/conditional_probabilities_ability_peasant.json
-./analyze_decks_by_ability.py ../../data highlander > ../../data/synergies/conditional_probabilities_ability_highlander.json
+./analyze_decks_by_mechanic.py ../../data standard > ../../data/synergies/conditional_probabilities_mechanic_standard.json
+./analyze_decks_by_mechanic.py ../../data modern > ../../data/synergies/conditional_probabilities_mechanic_modern.json
+./analyze_decks_by_mechanic.py ../../data commander > ../../data/synergies/conditional_probabilities_mechanic_commander.json
+./analyze_decks_by_mechanic.py ../../data legacy > ../../data/synergies/conditional_probabilities_mechanic_legacy.json
+./analyze_decks_by_mechanic.py ../../data pauper > ../../data/synergies/conditional_probabilities_mechanic_pauper.json
+./analyze_decks_by_mechanic.py ../../data vintage > ../../data/synergies/conditional_probabilities_mechanic_vintage.json
+./analyze_decks_by_mechanic.py ../../data frontier > ../../data/synergies/conditional_probabilities_mechanic_frontier.json
+./analyze_decks_by_mechanic.py ../../data peasant > ../../data/synergies/conditional_probabilities_mechanic_peasant.json
+./analyze_decks_by_mechanic.py ../../data highlander > ../../data/synergies/conditional_probabilities_mechanic_highlander.json
 
 ./analyze_decks_by_card.py ../../data standard > ../../data/synergies/conditional_probabilities_card_standard.json
 ./analyze_decks_by_card.py ../../data modern > ../../data/synergies/conditional_probabilities_card_modern.json
