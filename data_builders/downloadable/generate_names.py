@@ -46,6 +46,12 @@ def generate_names():
       non_canonical_card_names[canonical_name.replace(" // ", "_").lower()] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "/")] = canonical_name
       non_canonical_card_names[canonical_name.replace(" // ", "/").lower()] = canonical_name
+    # At least two cards have quotes around their names:
+    # "Ach! Hans, Run!" and "Rumors of My Death . . ."
+    # But not everyone includes those quotes
+    if '"' in canonical_name:
+      non_canonical_card_names[canonical_name.replace('"', '')] = canonical_name
+      non_canonical_card_names[canonical_name.replace('"', '').lower()] = canonical_name      
     # Sometimes, mtgdecks gives us card names like
     # "Circle of Protection : Green (Circle of Prote" (notice the extra space before the colon)
     # WTF
