@@ -30,7 +30,7 @@ def generate_names():
     canonical_name = name
 
     # But maye we have a split card?
-    if ("names" in card.keys()) and (len(card["names"]) > 1):
+    if ("names" in card.keys()) and (len(card["names"]) > 1) and (card['layout'] != 'meld'):
       canonical_name = " // ".join(card["names"])
 
     if canonical_name not in canonical_card_names:

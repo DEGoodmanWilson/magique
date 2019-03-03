@@ -16,46 +16,33 @@ catalog::catalog(std::string path)
 //catalog_filename, std::string annotations_filename)
 {
     std::cerr << "Loading card data...";
-    std::ifstream ifs(path + "/AllCards.json");
+    std::ifstream ifs{path + "/AllCards.json"};
     nlohmann::json card_list_json;
     ifs >> card_list_json;
     ifs.close();
 
+    ifs = std::ifstream{path + "/normalized_card_names.json"};
+    nlohmann::json normalized_card_names_json;
+    ifs >> normalized_card_names_json;
+    ifs.close();
+
     // AllJson from MTGJSON is one large object
-    for (nlohmann::json::iterator card_kv = card_list_json.begin(); card_kv != card_list_json.end(); ++card_kv)
+    for (const auto& card_kv : card_list_json.items())
     {
         auto name = card_kv.key();
 
         auto card_json = card_kv.value();
 
-        // ignore meld cards
-        if (card_json["layout"] == "meld")
-        {
-            continue;
-        }
-
-        // see if it is a split or transform or other kind multi-card. If so , use it's canonical name by joining the names in the "names" field with " // "
-        if (card_json.find("names") != card_json.end())
-        {
-            const auto names = card_json["names"].get<std::vector<std::string>>();
-            if(names.size() > 1)
-            {
-                name = TextUtils::Join(card_json["names"].get<std::vector<std::string>>(), " // ");
-                // make sure we haven't already included it
-                if (cards_by_name_.count(name))
-                {
-                    continue;
-                }
-            }
-        }
-
-        cards_by_name_[name] = card_json.get<card>();
+        // normalize the card name
+        std::string normalized_card_name{normalized_card_names_json[name]};
+        cards_by_name_[normalized_card_name] = card_json.get<card>();
     }
 
+    std::cerr << "Loaded " << cards_by_name_.size() << " cards." << std::endl;
     std::cerr << "done." << std::endl;
 }
 
-card *catalog::at(std::string name)
+card *catalog::at(const std::string &name)
 {
     try
     {
@@ -66,8 +53,6 @@ card *catalog::at(std::string name)
         std::cerr << "Could not find a card named \"" << name << "\"" << std::endl;
         throw (e);
     }
-
-    return nullptr; // should never get here.
 }
 
 }

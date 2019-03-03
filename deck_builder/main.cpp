@@ -187,13 +187,18 @@ int main(int argc, char **argv)
         deck::add_evaluator(magique::evaluators::edhrec_price);
         deck::add_evaluator(magique::evaluators::edhrec_decks);
         deck::add_evaluator(magique::evaluators::edhrec_synergy);
+
+        magique::evaluators::load_synergies(data_pathname, master_catalog, format);
+        deck::add_evaluator(magique::evaluators::card_synergy);
+        deck::add_evaluator(magique::evaluators::mechanic_synergy);
     }
     else
     {
         deck::add_evaluator(magique::evaluators::eval_power);
         deck::add_evaluator(magique::evaluators::eval_toughness);
         magique::evaluators::load_synergies(data_pathname, master_catalog, format);
-        deck::add_evaluator(magique::evaluators::synergies);
+        deck::add_evaluator(magique::evaluators::card_synergy);
+        deck::add_evaluator(magique::evaluators::mechanic_synergy);
     }
 
     // pick a key card

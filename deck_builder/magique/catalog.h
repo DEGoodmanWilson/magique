@@ -19,7 +19,7 @@ public:
 
     catalog(std::string path);
 
-    card *at(std::string name);
+    card *at(const std::string &name);
 
     std::unordered_map<std::string, card>::iterator begin() noexcept
     {

@@ -12,13 +12,12 @@ def main():
     sys.exit(1)
 
   with open(filepath) as f:
-    edhrec_data = json.load(f)
-
+    cards = json.load(f)
 
   lowest_rank = 0
   highest_price = 0.0
   most_decks = 0
-  for name, card in edhrec_data.items():
+  for name, card in cards.items():
     if ('edhrec_rank' in card.keys()) and (card['edhrec_rank'] is not None) and (card['edhrec_rank'] > lowest_rank):
       lowest_rank = card['edhrec_rank']
     if ('price' in card.keys()) and (card['price'] is not None) and (card['price'] > highest_price):

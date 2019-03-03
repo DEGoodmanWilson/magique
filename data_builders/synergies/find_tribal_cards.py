@@ -13,6 +13,9 @@ datapath = sys.argv[1]
 with open(datapath + '/AllCards.json') as json_data:
     cards = json.load(json_data)
 
+with open("{0}/normalized_card_names.json".format(datapath)) as f:
+    normalized_card_names = json.load(f)
+
 all_card_synergies_and_subtypes = {}
 
 with open(datapath + '/synergies/types.json') as json_data:
@@ -29,7 +32,9 @@ for type in types:
     type_res.append(re.compile(r"\b{0}\b".format(type))) # do not ignore case!
 
 for name, card in cards.items():
-  # pprint(card)
+    # pprint(card)
+
+    card_name = normalized_card_names[name]
 
     # skip lands and tokens!
     if("token" == card['layout']):
@@ -40,7 +45,7 @@ for name, card in cards.items():
     if 'text' in card:
         card_annotations = {}
         # remove any reference to the cards name, like "Aspect of Mongoose" or "Fire Dragon"
-        text = card['text'].replace(card['name'], '')
+        text = card['text'].replace(card_name, '')
 
         # remove any reference to token creation; creating a token does not indiciate an synergy for that card type
         no_token_text = re.sub(token_re, 'creature token', text)
@@ -62,6 +67,6 @@ for name, card in cards.items():
 
         # Add them into the global object
         if(card_annotations):
-            all_card_synergies_and_subtypes[name] = card_annotations
+            all_card_synergies_and_subtypes[card_name] = card_annotations
 
 print(json.dumps(all_card_synergies_and_subtypes, indent=4, separators=(',', ': ')))

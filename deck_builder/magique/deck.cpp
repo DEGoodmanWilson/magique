@@ -28,6 +28,10 @@ std::vector<evaluators::deck_evaluator> deck::deck_evaluators_{};
 deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         rank_{0.0}
 {
+    // TODO REWRITE THIS.
+    // A deck's score should be in the range [0..n] where n is the number of cards in the deck.
+    // This means we need to normalize all scores against the number of evaluators, and the number of cards in the deck.
+
     // First, let's cull the deck, and establish the color identity of this deck, if it hasn't been already.
     build_proposed_deck_(indices);
 

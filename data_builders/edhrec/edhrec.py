@@ -7,6 +7,8 @@ import sys
 import time
 import unidecode
 
+# TODO what's wrong with Nalathni Dragon?
+
 
 def edhrec_url_normalize(name):
   return unidecode.unidecode(name.lower().replace(" // ", "-").replace("'", "").replace(",", "").replace(" ", "-"))
@@ -101,6 +103,7 @@ seen = []
 cards = {}
 
 # Iterate over all the cards
+# TODO use the normalized card name JSON file we now have available!
 for card_name in card_names:
   alljson_card_name = card_name
   #ignore backs of double-faced cards, and derive the canonical name for split cards

@@ -7,6 +7,7 @@
 #include <fstream>
 #include <vector>
 #include <unordered_map>
+#include <shared_mutex>
 
 namespace magique
 {
@@ -35,12 +36,15 @@ const std::vector<std::string> explode_(const std::string &s, const char &c)
 
 static bool have_data{false};
 
-static std::unordered_map<std::string, std::vector<uint64_t>> mechanics;
+static std::unordered_map<std::string, std::vector<uint16_t>> mechanics_;
+static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_cards_;
+static std::unordered_map<uint16_t, std::unordered_map<uint16_t, double>> conditional_probabilities_mechanics_;
+static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_card_mechanics_cache_;
+static std::unordered_map<std::string, std::vector<std::string>> tribal_synergies_;
 
-static std::array<std::array<double, 250>, 250> interactions_store_; // TODO hard-coded number of classes, ugh.
-static std::unordered_map<std::string, std::vector<std::string>> synergies_store_; // TODO hard-coded number of classes, ugh.
+static std::shared_mutex cache_mutex_;
 
-void load_synergies(std::string path, const magique::catalog &catalog, magique::card::format format)
+void load_synergies(std::string path, magique::catalog &catalog, magique::card::format format)
 {
     if ((format == magique::card::format::duel) || (format == magique::card::format::onevone) ||
         (format == magique::card::format::brawl) || (format == magique::card::format::penny))
@@ -50,64 +54,164 @@ void load_synergies(std::string path, const magique::catalog &catalog, magique::
     }
 
     have_data = true;
-
     std::cerr << "Loading tag data...";
-    std::ifstream ifs{path + "/synergies/card_tags.json"};
-    nlohmann::json mechanics_json;
-    ifs >> mechanics_json;
-    ifs.close();
 
-    // AllJson from MTGJSON is one large object
-    for (const auto& card_kv : catalog)
     {
-        auto name = card_kv.first;
-        auto card_json = card_kv.second;
-        //load its annotations, if any
-        try
-        {
-            mechanics[name] = mechanics_json[name].get<std::vector<uint64_t>>();
-        }
-        catch (nlohmann::json::out_of_range &e)
-        {}
+        std::ifstream ifs{path + "/synergies/card_mechanics.json"};
+        nlohmann::json mechanics_json;
+        ifs >> mechanics_json;
+        mechanics_ = mechanics_json.get<decltype(mechanics_)>();
+        ifs.close();
     }
 
+    {
+        std::ifstream ifs{path + "/synergies/conditional_probabilities_card_" + to_string(format) + ".json"};
+        nlohmann::json conditional_probabilities_cards_json;
+        ifs >> conditional_probabilities_cards_json;
+        conditional_probabilities_cards_ = conditional_probabilities_cards_json.get<decltype(conditional_probabilities_cards_)>();
+        ifs.close();
+    }
 
-    ifs = std::ifstream{path + "/synergies/conditional_probabilities_" + to_string(format) + ".json"};
-    nlohmann::json interactions;
-    ifs >> interactions;
-    ifs.close();
+    {
+        // TODO do we need to convert the keys from strings to ints?
+        std::ifstream ifs{path + "/synergies/conditional_probabilities_mechanic_" + to_string(format) + ".json"};
+        nlohmann::json conditional_probabilities_mechanics_json;
+        ifs >> conditional_probabilities_mechanics_json;
+        for (auto &kv : conditional_probabilities_mechanics_json.items())
+        {
+            uint16_t key1 = std::stoi(kv.key());
+            for (auto &kv2 : kv.value().items())
+            {
+                uint16_t key2 = std::stoi(kv2.key());
+                conditional_probabilities_mechanics_[key1][key2] = kv2.value().get<double>();
+            }
+        }
+        ifs.close();
+    }
 
-    ifs = std::ifstream{path + "/synergies/card_synergies.json"};
-    nlohmann::json synergies;
-    ifs >> synergies;
-    ifs.close();
+    {
+        std::ifstream ifs{path + "/synergies/card_tribes.json"};
+        nlohmann::json tribal_synergies_json;
+        ifs >> tribal_synergies_json;
+        for (auto &kv : tribal_synergies_json.items())
+        {
+            std::string card_name{kv.key()};
+            for (auto &kv2 : kv.value().items())
+            {
+                if (kv2.key() == "sub_types")
+                {
+                    for (auto &subtype : kv2.value())
+                    {
+                        catalog.at(card_name)->subtypes.emplace(subtype.get<std::string>());
+                    }
+                }
+                else if (kv2.key() == "tribes")
+                {
+                    tribal_synergies_[card_name] = kv2.value().get<std::vector<std::string>>();
+                }
+            }
+        }
 
-    // ok what we have is an object of interactions. The key is a pair of numbers, the keys into our map.
-    // TODO make this format easier to parse!
-//    for (auto it = interactions.begin(); it != interactions.end(); ++it)
-//    {
-//        //key is a string of two ints with a |, e.g. "1|2", value is a double.
-//        auto keys = explode_(it.key(), '|');
-//        auto m = std::atoi(keys[0].c_str());
-//        auto n = std::atoi(keys[1].c_str());
-//
-//        interactions_store_[m][n] = it.value().get<double>();
-//    }
-//
-//    synergies_store_ = synergies.get<decltype(synergies_store_)>();
+        ifs.close();
+    }
+
 
     std::cerr << "done." << std::endl;
 }
 
-evaluation synergies(const card *card_a, const card *card_b, const card::format format)
+evaluation card_synergy(const card *card_a, const card *card_b, const card::format format)
 {
-    if(!have_data)
+    // TODO DOn't make me do this!
+    // TODO eliminate this case
+    if (card_a->name == card_b->name)
     {
-        return {0.0, 1.0, "synergies"};
+        return {0.0, 1.0, "card synergy"};
     }
 
-    // TODO
-    return {1.0, 1.0, "synergies"};
+    if (!have_data)
+    {
+        return {0.0, 1.0, "SYNERGY DATA NOT LOADED"};
+    }
+
+    if (conditional_probabilities_cards_.count(card_a->name))
+    {
+        if (conditional_probabilities_cards_.at(card_a->name).count(card_b->name))
+        {
+            return {conditional_probabilities_cards_.at(card_a->name).at(card_b->name), 1.0, "card synergy"};
+        }
+    }
+
+    return {0.0, 1.0, "card synergy"};
+}
+
+evaluation mechanic_synergy(const card *card_a, const card *card_b, const card::format format)
+{
+    // TODO eliminate this case
+    if (card_a->name == card_b->name)
+    {
+        return {0.0, 1.0, "card synergy"};
+    }
+
+    double synergy{0.0};
+
+    bool cached{false};
+    {
+        std::shared_lock<std::shared_mutex> l{cache_mutex_};
+        if (conditional_probabilities_card_mechanics_cache_.count(card_a->name) &&
+            conditional_probabilities_card_mechanics_cache_.at(card_a->name).count(card_b->name))
+        {
+            //pull from cache
+            synergy = conditional_probabilities_card_mechanics_cache_.at(card_a->name).at(card_b->name);
+            cached = true;
+        }
+    }
+
+    if (!cached)
+    {
+        // Not that the scale will vary from card to card. We don't want to do a division each time! But the upper limit
+        // For a particular card paring is the number of mechanics they have in common.
+
+        const auto mechanics_a_count = mechanics_.count(card_a->name);
+        const auto mechanics_b_count = mechanics_.count(card_b->name);
+        if (mechanics_a_count == 0 || mechanics_b_count == 0)
+        {
+            return {0.0, 1.0, "mechanic synergy"};
+        }
+
+        const auto &mechanics_a = mechanics_.at(card_a->name);
+        const auto &mechanics_b = mechanics_.at(card_b->name);
+
+        const auto divisor = mechanics_a.size() * mechanics_b.size();
+
+
+        for (const auto &mech_a : mechanics_a)
+        {
+            for (const auto &mech_b : mechanics_b)
+            {
+                if (conditional_probabilities_mechanics_.count(mech_a))
+                {
+                    if (conditional_probabilities_mechanics_.at(mech_a).count(mech_b))
+                    {
+                        auto a = conditional_probabilities_mechanics_.at(mech_a).at(mech_b);
+                        synergy += a;
+                    }
+                }
+
+            }
+        }
+
+        // I'd much rather not do a division here. There must be a better way. But I can't think of one. So let's try cacheing
+        synergy = synergy / divisor;
+        // Let's only do this division once. By cacheing the results
+        // Not thread safe
+        {
+            std::unique_lock<std::shared_mutex> l{cache_mutex_};
+            conditional_probabilities_card_mechanics_cache_[card_a->name][card_b->name] = synergy;
+        }
+    }
+
+    // TODO why do we even return a divisor here? We should return it as part of the loading process, I think.
+    return {synergy, 1.0, "mechanic synergy"};
 }
 
 }
