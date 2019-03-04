@@ -74,6 +74,7 @@ private:
 
     //TODO use set or multiset, and count the copies of each card.
     std::unordered_map<std::string, std::pair<uint16_t, card *>> cards_;
+    uint16_t deck_size_;
     double rank_;
     nlohmann::json reasons_;
 

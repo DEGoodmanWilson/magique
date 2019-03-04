@@ -80,7 +80,7 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
                     card_reasons.insert(evaluation.reason);
                     if (card_divisors.count(evaluation.reason) == 0)
                     {
-                        card_divisors[evaluation.reason] = evaluation.scale;
+                        card_divisors[evaluation.reason] = evaluation.scale * deck_size_;
                     }
                     if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
 
@@ -254,7 +254,13 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     // Finally, add the keycards back in
     for(auto key_card : key_cards_)
     {
-        cards_.emplace(key_card->name, std::pair<uint16_t, card *>(0, key_card));
+        cards_.emplace(key_card->name, std::pair<uint16_t, card *>(1, key_card));
+    }
+
+    deck_size_ = 0;
+    for(const auto& kv : cards_)
+    {
+        deck_size_ += kv.second.first;
     }
 
     // TODO calculate mana curve
