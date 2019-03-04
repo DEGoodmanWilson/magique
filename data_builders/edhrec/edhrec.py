@@ -7,17 +7,26 @@ import sys
 import time
 import unidecode
 
-# TODO what's wrong with Nalathni Dragon?
+datapath = sys.argv[1] # TODO CHECK THIS
+
+with open(datapath + "/AllCards.json") as fd:
+  data = json.load(fd)
+
+with open(datapath + "/normalized_card_names.json") as fd:
+  normalized_card_names = json.load(fd)
+
+
+
 
 
 def edhrec_url_normalize(name):
   return unidecode.unidecode(name.lower().replace(" // ", "-").replace("'", "").replace(",", "").replace(" ", "-"))
 
 def generate_edhrec_url(name):
-#  https://edhrec.com/cards/kodamas-reach
   return "https://edhrec.com/cards/"+edhrec_url_normalize(name)
 
 def evaluate_card(card_name):
+
   done = False
   backoff = 1
   while not done:
@@ -30,7 +39,7 @@ def evaluate_card(card_name):
       time.sleep(backoff)
       backoff = backoff * 2
   if response.status_code == 404:
-    return 0, []
+    return None
 
   soup = BeautifulSoup(response.content, features="html.parser")
 
@@ -79,49 +88,31 @@ def evaluate_card(card_name):
     our_data['tribe'] = data['card']['tribe']
 
   our_data['synergies'] = {}
-  if data['cardlists']:
+  if data['cardlists'] and data['cardlists'] != None:
     for cardlist in data['cardlists']:
-      if cardlist['tag'] is not 'topcommanders':
+      if cardlist['tag'] != 'topcommanders':
         for card in cardlist['cardviews']:
-          syn_name = card['name']
+          syn_name = card['name'].split(" // ")[0] # because of cards with Partner, like Ikra Shidiqi
+          syn_name = normalized_card_names[syn_name]
           if card_name == syn_name:
             continue
           synergy = float(card['label'].split('<br />')[-1].split()[0].strip('%'))/100
           our_data['synergies'][syn_name] = synergy
-
   return our_data
 
 
-datafile = sys.argv[1] # TODO CHECK THIS
-
-with open(datafile) as fd:
-  data = json.load(fd)
 card_names = data.keys()
+# card_names = ["Abzan Beastmaster"]
+# card_names = ["Nalathni Dragon"]
 
 # TODO Load card names so we can pick up where we left off, if need be.
 seen = []
 cards = {}
 
 # Iterate over all the cards
-# TODO use the normalized card name JSON file we now have available!
 for card_name in card_names:
   alljson_card_name = card_name
-  #ignore backs of double-faced cards, and derive the canonical name for split cards
-  if 'layout' in data[card_name].keys():
-    # ignore back side of double-faced cards
-    if (data[card_name]['layout'] == 'transform') or (data[card_name]['layout'] == 'flip'):
-      if card_name != data[card_name]['names'][0]:
-        continue
-
-    # skip meld cards
-    if data[card_name]['layout'] == 'meld':
-      continue;
-
-    # deal with split cards
-    if data[card_name]['layout'] == 'split':
-      card_name = " // ".join(data[card_name]['names'])
-      # url_card_name = data[card_name]['names'][0]
-
+  card_name = normalized_card_names[card_name]
 
   # don't process a card we've already processed
   if card_name in seen:
@@ -137,9 +128,14 @@ for card_name in card_names:
         legal = True
 
   if not legal:
+    ("not legal")
     continue
 
   card_data = evaluate_card(card_name)
+
+  if card_data == None:
+    continue
+
   if alljson_card_name != card_name:
     card_data['alljson_name'] = alljson_card_name
 
