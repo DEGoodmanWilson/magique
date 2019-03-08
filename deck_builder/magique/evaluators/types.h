@@ -19,8 +19,8 @@ struct evaluation
     std::string reason;
 };
 
-using card_evaluator = std::function<evaluation(const card *, const uint16_t, const card::format)>;
-using card_pair_evaluator = std::function<evaluation(const card *, const card *, const card::format)>;
+using card_evaluator = std::function<evaluation(const card *, const uint16_t, card::format)>;
+using card_pair_evaluator = std::function<evaluation(const card *, const card *, card::format)>;
 using deck_evaluator = std::function<evaluation()>;
 
 }

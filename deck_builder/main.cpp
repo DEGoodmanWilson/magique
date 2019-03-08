@@ -191,6 +191,8 @@ int main(int argc, char **argv)
         magique::evaluators::load_synergies(data_pathname, master_catalog, format);
         deck::add_evaluator(magique::evaluators::card_synergy);
         deck::add_evaluator(magique::evaluators::mechanic_synergy);
+        // TODO some evaluators would be better off being selected at runtime.
+        deck::add_evaluator(magique::evaluators::tribal_synergy);
     }
     else
     {

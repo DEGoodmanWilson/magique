@@ -40,7 +40,7 @@ static std::unordered_map<std::string, std::vector<uint16_t>> mechanics_;
 static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_cards_;
 static std::unordered_map<uint16_t, std::unordered_map<uint16_t, double>> conditional_probabilities_mechanics_;
 static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_card_mechanics_cache_;
-static std::unordered_map<std::string, std::vector<std::string>> tribal_synergies_;
+static std::unordered_map<std::string, std::set<std::string>> tribal_synergies_;
 
 static std::shared_mutex cache_mutex_;
 
@@ -107,7 +107,7 @@ void load_synergies(std::string path, magique::catalog &catalog, magique::card::
                 }
                 else if (kv2.key() == "tribes")
                 {
-                    tribal_synergies_[card_name] = kv2.value().get<std::vector<std::string>>();
+                    tribal_synergies_[card_name] = kv2.value().get<std::set<std::string>>();
                 }
             }
         }
@@ -119,7 +119,7 @@ void load_synergies(std::string path, magique::catalog &catalog, magique::card::
     std::cerr << "done." << std::endl;
 }
 
-evaluation card_synergy(const card *card_a, const card *card_b, const card::format format)
+evaluation card_synergy(const card *card_a, const card *card_b, card::format format)
 {
     // TODO DOn't make me do this!
     // TODO eliminate this case
@@ -144,7 +144,7 @@ evaluation card_synergy(const card *card_a, const card *card_b, const card::form
     return {0.0, 1.0, "card synergy"};
 }
 
-evaluation mechanic_synergy(const card *card_a, const card *card_b, const card::format format)
+evaluation mechanic_synergy(const card *card_a, const card *card_b, card::format format)
 {
     // TODO eliminate this case
     if (card_a->name == card_b->name)
@@ -212,6 +212,20 @@ evaluation mechanic_synergy(const card *card_a, const card *card_b, const card::
 
     // TODO why do we even return a divisor here? We should return it as part of the loading process, I think.
     return {synergy, 1.0, "mechanic synergy"};
+}
+
+evaluation tribal_synergy(const card *card_a, const card *card_b, card::format format)
+{
+    // static std::unordered_map<std::string, std::vector<std::string>> tribal_synergies_;
+    if (tribal_synergies_.count(card_a->name))
+    {
+        if (tribal_synergies_.at(card_a->name).count(card_b->name))
+        {
+            return {1.0, 1.0, "tribal synergy"};
+        }
+
+    }
+    return {0.0, 1.0, "tribal synergy"};
 }
 
 }
