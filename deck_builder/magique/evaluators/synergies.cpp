@@ -241,7 +241,7 @@ evaluation tribal_synergy(const card *card_a, const card *card_b, card::format f
         {
             for (const auto &tribe_a : tribal_synergies_.at(card_a->name))
             {
-                for (const auto &tribe_b : tribal_synergies_.at(card_a->name))
+                for (const auto &tribe_b : tribal_synergies_.at(card_b->name))
                 {
                     if (tribe_a == tribe_b)
                     {
