@@ -98,23 +98,25 @@ void load_synergies(std::string path, magique::catalog &catalog, magique::card::
             std::string card_name{kv.key()};
             for (auto &kv2 : kv.value().items())
             {
-                if (kv2.key() == "sub_types")
+                if (kv2.key() == "subtypes")
                 {
-                    for (auto &subtype : kv2.value())
+                    for (const auto &subtype : kv2.value())
                     {
                         catalog.at(card_name)->subtypes.emplace(subtype.get<std::string>());
                     }
                 }
                 else if (kv2.key() == "tribes")
                 {
-                    tribal_synergies_[card_name] = kv2.value().get<std::set<std::string>>();
+                    for (const auto &name : kv2.value())
+                    {
+                        tribal_synergies_[card_name].emplace(name.get<std::string>());
+                    }
                 }
             }
         }
 
         ifs.close();
     }
-
 
     std::cerr << "done." << std::endl;
 }
@@ -216,14 +218,38 @@ evaluation mechanic_synergy(const card *card_a, const card *card_b, card::format
 
 evaluation tribal_synergy(const card *card_a, const card *card_b, card::format format)
 {
+    // TODO eliminate this case
+    if (card_a->name == card_b->name)
+    {
+        return {0.0, 1.0, "card synergy"};
+    }
+
     // static std::unordered_map<std::string, std::vector<std::string>> tribal_synergies_;
     if (tribal_synergies_.count(card_a->name))
     {
-        if (tribal_synergies_.at(card_a->name).count(card_b->name))
+        // check tribal synergies of A against subtypes in B
+        for (const auto &tribe : tribal_synergies_.at(card_a->name))
         {
-            return {1.0, 1.0, "tribal synergy"};
+            if (card_b->subtypes.count(tribe))
+            {
+                return {1.0, 1.0, "tribal synergy"};
+            }
         }
 
+        // check tribal synergies of A against tribal synergies in B
+        if (tribal_synergies_.count(card_b->name))
+        {
+            for (const auto &tribe_a : tribal_synergies_.at(card_a->name))
+            {
+                for (const auto &tribe_b : tribal_synergies_.at(card_a->name))
+                {
+                    if (tribe_a == tribe_b)
+                    {
+                        return {0.5, 1.0, "tribal synergy"};
+                    }
+                }
+            }
+        }
     }
     return {0.0, 1.0, "tribal synergy"};
 }

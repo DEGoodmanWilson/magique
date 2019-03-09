@@ -49,7 +49,6 @@ for name, card in cards.items():
 
         # remove any reference to token creation; creating a token does not indiciate an synergy for that card type
         no_token_text = re.sub(token_re, 'creature token', text)
-
         # check for references to creature types to find creature types this card has an synergy for.
         card_synergies = []
         for i in range(len(types)):
@@ -63,7 +62,7 @@ for name, card in cards.items():
         token_matches = re.search(token_re, text)
         if(token_matches != None):
             new_subtypes = token_matches.group(1)
-            card_annotations['sub_types'] = new_subtypes.split()
+            card_annotations['subtypes'] = new_subtypes.split()
 
         # Add them into the global object
         if(card_annotations):
