@@ -224,7 +224,15 @@ evaluation tribal_synergy(const card *card_a, const card *card_b, card::format f
         return {0.0, 1.0, "card synergy"};
     }
 
-    // static std::unordered_map<std::string, std::vector<std::string>> tribal_synergies_;
+    // Handle cards like "Vanquisher's Banner"
+    // TODO move to pre-processor
+    if(card_a->text.find("creature type") != std::string::npos)
+    {
+        if(card_b->types.count(card::type::creature) > 0)
+        {
+            return {1.0, 1.0, "tribal synergy"};
+        }
+    }
     if (tribal_synergies_.count(card_a->name))
     {
         // check tribal synergies of A against subtypes in B

@@ -183,24 +183,24 @@ int main(int argc, char **argv)
         deck::max_copies = 1;
 
         magique::evaluators::load_edhrec(data_pathname, master_catalog);
-        deck::add_evaluator(magique::evaluators::edhrec_rank);
-        deck::add_evaluator(magique::evaluators::edhrec_price);
-        deck::add_evaluator(magique::evaluators::edhrec_decks);
-        deck::add_evaluator(magique::evaluators::edhrec_synergy);
+        deck::add_evaluator(magique::evaluators::edhrec_rank, 2.0);
+        deck::add_evaluator(magique::evaluators::edhrec_price, 1.0);
+        deck::add_evaluator(magique::evaluators::edhrec_decks, 1.0);
+        deck::add_evaluator(magique::evaluators::edhrec_synergy, 2.0);
 
         magique::evaluators::load_synergies(data_pathname, master_catalog, format);
-        deck::add_evaluator(magique::evaluators::card_synergy);
-        deck::add_evaluator(magique::evaluators::mechanic_synergy);
+        deck::add_evaluator(magique::evaluators::card_synergy, 1.0);
+        deck::add_evaluator(magique::evaluators::mechanic_synergy, 0.1);
         // TODO some evaluators would be better off being selected at runtime.
-        deck::add_evaluator(magique::evaluators::tribal_synergy);
+        deck::add_evaluator(magique::evaluators::tribal_synergy, 2.0);
     }
     else
     {
 //        deck::add_evaluator(magique::evaluators::eval_power);
 //        deck::add_evaluator(magique::evaluators::eval_toughness);
         magique::evaluators::load_synergies(data_pathname, master_catalog, format);
-        deck::add_evaluator(magique::evaluators::card_synergy);
-        deck::add_evaluator(magique::evaluators::mechanic_synergy);
+        deck::add_evaluator(magique::evaluators::card_synergy, 1.0);
+        deck::add_evaluator(magique::evaluators::mechanic_synergy, 0.5);
     }
 
     // pick a key card

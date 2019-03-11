@@ -21,14 +21,15 @@ card::format deck::format{card::format::standard};
 std::unordered_set<card::color> deck::color_identity{};
 collection deck::collection{};
 std::vector<card *> deck::key_cards_{};
-std::vector<evaluators::card_evaluator> deck::card_evaluators_{};
-std::vector<evaluators::card_pair_evaluator> deck::card_pair_evaluators_{};
-std::vector<evaluators::deck_evaluator> deck::deck_evaluators_{};
+std::vector<std::pair<evaluators::card_evaluator, double>> deck::card_evaluators_{};
+std::vector<std::pair<evaluators::card_pair_evaluator, double>> deck::card_pair_evaluators_{};
+std::vector<std::pair<evaluators::deck_evaluator, double>> deck::deck_evaluators_{};
 
 deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         rank_{0.0}
 {
-    // TODO REWRITE THIS.
+    // TODO CACHE ALL EVALUATIONS WE'VE ALREADY SEEN!
+
     // A deck's score should be in the range [0..n] where n is the number of cards in the deck.
     // This means we need to normalize all scores against the number of evaluators, and the number of cards in the deck.
 
@@ -47,21 +48,23 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
     {
         const auto card_name = kv.first;
         const auto card = kv.second.second;
-        const auto count = kv.second.first;
+        const auto card_count = kv.second.first;
 
         if (calculate_reasons) reasons_["cards"][card_name] = nlohmann::json::object();
         for (const auto &eval : card_evaluators_)
         {
-            auto evaluation = eval(card, count, format);
+            auto evaluation = eval.first(card, card_count, format);
+            const auto weight = eval.second;
             card_reasons.insert(evaluation.reason);
-            if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
-            if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
+            if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale / weight;
             if (calculate_reasons)
             {
-                reasons_["cards"][card->name]["count"] = count;
+                reasons_["cards"][card->name]["count"] = card_count;
                 reasons_["cards"][card->name][evaluation.reason] = evaluation.score;
             }
-            card_evaluations[evaluation.reason] += evaluation.score * count;
+
+            if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
+            card_evaluations[evaluation.reason] += evaluation.score * card_count;
         }
 
         // card pair—we have to hit all the card pairs now
@@ -71,22 +74,24 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
             {
                 // TODO use the physical indices to make sure we aren't comparing a card against itself.
                 const auto card_b_name = kv2.first;
+                const auto card_b_count = kv.second.first;
                 const auto card_b = kv2.second.second;
                 if (calculate_reasons) reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
 
                 for (const auto &eval : card_pair_evaluators_)
                 {
-                    auto evaluation = eval(card, card_b, format);
+                    auto evaluation = eval.first(card, card_b, format);
+                    const auto weight = eval.second;
                     card_reasons.insert(evaluation.reason);
                     if (card_divisors.count(evaluation.reason) == 0)
                     {
-                        card_divisors[evaluation.reason] = evaluation.scale * deck_size_;
+                        card_divisors[evaluation.reason] = evaluation.scale * deck_size_ / weight;
                     }
+
+                    if (calculate_reasons) reasons_["cards"][card_name][card_b_name][evaluation.reason] = evaluation.score;
+
                     if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
-
-                    if (calculate_reasons) reasons_["cards"][card->name][card_b_name][evaluation.reason] = evaluation.score;
-
-                    card_evaluations[evaluation.reason] += evaluation.score * count;
+                    card_evaluations[evaluation.reason] += evaluation.score * card_count * card_b_count; // apply the evaluation to all copies of card_a and card_b
                 }
             }
         }
@@ -95,12 +100,14 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
     for (const auto &eval : deck_evaluators_)
     {
         // TODO we need to be a lot more nuanced about this! The number of cards _do_ matter. And we need to be careful to only measure interactions against the same card if there is more than one in the deck!
-        auto evaluation = eval();
-        card_reasons.insert(evaluation.reason);
-        if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale;
-        if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
+        auto evaluation = eval.first();
+        const auto weight = eval.second;
 
-        reasons_["deck"][evaluation.reason] = evaluation.score;
+        auto divisor = evaluation.scale / weight;
+        auto normalized_score = evaluation.score / divisor;
+        reasons_["_deck"][evaluation.reason]["score"] = evaluation.score;
+        reasons_["_deck"][evaluation.reason]["normalized_score"] = normalized_score;
+        reasons_["_deck"][evaluation.reason]["divisor"] = divisor;
     }
 
     for (const auto &reason: card_reasons)
@@ -110,11 +117,13 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         reasons_[reason] = nlohmann::json::object();
         reasons_[reason]["score"] = card_score;
         reasons_[reason]["normalized_score"] = normalized_card_score;
+        reasons_[reason]["divisor"] = card_divisors[reason];
         rank_ += normalized_card_score;
         if (rank_ < 0)
         {
             std::cerr << reasons_.dump() << std::endl;
             std::cerr << "Negative rank!" << std::endl;
+            rank_ = 0.0;
         }
     }
 }

@@ -23,7 +23,8 @@ struct edhrec_item
 
 static std::map<std::string, edhrec_item> edhrec_data;
 static uint64_t lowest_rank{0};
-static double_t highest_price{0.0};
+static double highest_price{0.0};
+static const double MAX_PRICE{25.0};
 static uint64_t most_decks{0};
 
 
@@ -43,7 +44,7 @@ void load_edhrec(std::string path, const magique::catalog &catalog)
     ifs.close();
 
     lowest_rank = edhrec_extremes_json["lowest_rank"].get<decltype(lowest_rank)>();
-    highest_price = edhrec_extremes_json["highest_price"].get<decltype(highest_price)>();
+    highest_price = MAX_PRICE; //edhrec_extremes_json["highest_price"].get<decltype(highest_price)>();
     most_decks = edhrec_extremes_json["most_decks"].get<decltype(most_decks)>();
 
     std::cerr << "done." << std::endl;
@@ -53,6 +54,7 @@ evaluation edhrec_price(const card *card, const uint16_t index, const card::form
 {
     if (edhrec_data.count(card->name))
     {
+        const auto price = (edhrec_data[card->name].price > MAX_PRICE) ? MAX_PRICE : edhrec_data[card->name].price;
         return {edhrec_data[card->name].price, highest_price, "edhrec price"};
     }
 
