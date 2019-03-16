@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <unordered_set>
+#include <shared_mutex>
 
 #include "deck.h"
 
@@ -23,107 +24,216 @@ collection deck::collection{};
 std::vector<card *> deck::key_cards_{};
 std::vector<std::pair<evaluators::card_evaluator, double>> deck::card_evaluators_{};
 std::vector<std::pair<evaluators::card_pair_evaluator, double>> deck::card_pair_evaluators_{};
-std::vector<std::pair<evaluators::deck_evaluator, double>> deck::deck_evaluators_{};
+
+std::unordered_map<std::string, std::vector<std::pair<evaluators::evaluation, double>>> card_evaluations_cache_;
+std::shared_mutex card_evaluations_cache_mutex_;
+
+std::unordered_map<std::string, std::vector<std::pair<evaluators::evaluation, double>>> card_pair_evaluations_cache_;
+std::shared_mutex card_pair_evaluations_cache_mutex_;
+
 
 deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         rank_{0.0}
 {
-    // TODO CACHE ALL EVALUATIONS WE'VE ALREADY SEEN!
-
-    // A deck's score should be in the range [0..n] where n is the number of cards in the deck.
-    // This means we need to normalize all scores against the number of evaluators, and the number of cards in the deck.
-
     // First, let's cull the deck, and establish the color identity of this deck, if it hasn't been already.
     build_proposed_deck_(indices);
 
-    // Then, evaluate the deck as a whole
-
-    // Next, evaluate the cards singly, and in pairs, and store the results
     std::unordered_set<std::string> card_reasons{};
     std::unordered_map<std::string, double> card_divisors{};
     std::unordered_map<std::string, double> card_evaluations{};
 
+    // If we're storing reasons, initialize that too (most runs won't do this)
     if (calculate_reasons) reasons_["cards"] = nlohmann::json::object();
+
+    // Next, evaluate the cards singly, and in pairs, and store the results
     for (const auto &kv : cards_)
     {
         const auto card_name = kv.first;
         const auto card = kv.second.second;
         const auto card_count = kv.second.first;
-
-        if (calculate_reasons) reasons_["cards"][card_name] = nlohmann::json::object();
-        for (const auto &eval : card_evaluators_)
+        if (calculate_reasons)
         {
-            auto evaluation = eval.first(card, card_count, format);
-            const auto weight = eval.second;
-            card_reasons.insert(evaluation.reason);
-            if (card_divisors.count(evaluation.reason) == 0) card_divisors[evaluation.reason] = evaluation.scale / weight;
-            if (calculate_reasons)
-            {
-                reasons_["cards"][card->name]["count"] = card_count;
-                reasons_["cards"][card->name][evaluation.reason] = evaluation.score;
-            }
-
-            if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
-            card_evaluations[evaluation.reason] += evaluation.score * card_count;
+            reasons_["cards"][card_name] = nlohmann::json::object();
+            reasons_["cards"][card_name]["count"] = card_count;
         }
 
-        // card pair—we have to hit all the card pairs now
-        if (card_pair_evaluators_.size())
+        // Let's evaluate this card by itself, first.
+
+        std::vector<std::pair<evaluators::evaluation, double>> single_evaluations;
+        // Have we already evaluated this card in another context? Pull it from the cache
+        bool cached{false};
+        {
+            std::shared_lock<std::shared_mutex> l{card_evaluations_cache_mutex_};
+            if (card_evaluations_cache_.count(card_name))
+            {
+                //pull from cache
+                single_evaluations = card_evaluations_cache_.at(card_name);
+                cached = true;
+            }
+        }
+        if (!cached) // we'll need to do it the hard way
+        {
+            // iterate over all the evaluators, and evaluate!
+            for (const auto &eval : card_evaluators_)
+            {
+                const auto evaluation{eval.first(card, card_count, format)};
+                const auto weight{eval.second};
+                single_evaluations.emplace_back(std::make_pair(evaluation, weight));
+
+                // this shit we need to repeat in case it is cached. TODO DRY
+                card_reasons.insert(evaluation.reason);
+                if (card_divisors.count(evaluation.reason) == 0)
+                {
+                    card_divisors[evaluation.reason] = evaluation.scale / weight;
+                }
+                if (calculate_reasons)
+                {
+                    reasons_["cards"][card_name][evaluation.reason] = evaluation.score;
+                }
+                if (card_evaluations.count(evaluation.reason) == 0)
+                {
+                    card_evaluations[evaluation.reason] = 0.0;
+                }
+                card_evaluations[evaluation.reason] += evaluation.score * card_count;
+                // DRY to here
+            }
+            {
+                // write it to cache
+                std::unique_lock<std::shared_mutex> l{card_evaluations_cache_mutex_};
+                card_evaluations_cache_[card_name] = single_evaluations;
+            }
+        }
+        else //we pulled it from cache
+        {
+            for (const auto &eval_weight : single_evaluations)
+            {
+                const auto evaluation{eval_weight.first};
+                const auto weight{eval_weight.second};
+                // this shit we need to repeat in case it is cached. TODO DRY
+                card_reasons.insert(evaluation.reason);
+                if (card_divisors.count(evaluation.reason) == 0)
+                {
+                    card_divisors[evaluation.reason] = evaluation.scale / weight;
+                }
+                if (calculate_reasons)
+                {
+                    reasons_["cards"][card_name][evaluation.reason] = evaluation.score;
+                }
+                if (card_evaluations.count(evaluation.reason) == 0)
+                {
+                    card_evaluations[evaluation.reason] = 0.0;
+                }
+                card_evaluations[evaluation.reason] += evaluation.score * card_count;
+                // DRY to here
+            }
+        }
+
+
+        // GREAT! That's the single-card evaluations. Now we need to compare this card against all the other cards.
+        if (card_pair_evaluators_.size()) // do we even have pair evaluators? If not, skip this bit
         {
             for (const auto &kv2 : cards_)
             {
-                // TODO use the physical indices to make sure we aren't comparing a card against itself.
                 const auto card_b_name = kv2.first;
+                if (card_name == card_b_name) continue; // don't evaluate a card against itself
+                const auto key{card_name + " + " + card_b_name};
                 const auto card_b_count = kv.second.first;
                 const auto card_b = kv2.second.second;
-                if (calculate_reasons) reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
-
-                for (const auto &eval : card_pair_evaluators_)
+                if (calculate_reasons)
                 {
-                    auto evaluation = eval.first(card, card_b, format);
-                    const auto weight = eval.second;
-                    card_reasons.insert(evaluation.reason);
-                    if (card_divisors.count(evaluation.reason) == 0)
+                    reasons_["cards"][card_name][card_b_name] = nlohmann::json::object();
+                    reasons_["cards"][card_name][card_b_name]["count"] = card_b_count;
+                }
+
+                std::vector<std::pair<evaluators::evaluation, double>> pair_evaluations;
+                // Have we already evaluated this card in another context? Pull it from the cache
+                bool cached{false};
+                {
+                    std::shared_lock<std::shared_mutex> l{card_pair_evaluations_cache_mutex_};
+                    if (card_pair_evaluations_cache_.count(key))
                     {
-                        card_divisors[evaluation.reason] = evaluation.scale * deck_size_ / weight;
+                        //pull from cache
+                        pair_evaluations = card_pair_evaluations_cache_.at(key);
+                        cached = true;
                     }
+                }
+                if (!cached) // we'll need to do it the hard way
+                {
 
-                    if (calculate_reasons) reasons_["cards"][card_name][card_b_name][evaluation.reason] = evaluation.score;
+                    // now, evaluate the pair the long way.
+                    for (const auto &eval : card_pair_evaluators_)
+                    {
+                        const auto evaluation = eval.first(card, card_b, format);
+                        const auto weight = eval.second;
 
-                    if (card_evaluations.count(evaluation.reason) == 0) card_evaluations[evaluation.reason] = 0.0;
-                    card_evaluations[evaluation.reason] += evaluation.score * card_count * card_b_count; // apply the evaluation to all copies of card_a and card_b
+                        // TODO DRY
+                        card_reasons.insert(evaluation.reason);
+                        if (card_divisors.count(evaluation.reason) == 0)
+                        {
+                            card_divisors[evaluation.reason] = evaluation.scale * deck_size_ / weight;
+                        }
+                        if (calculate_reasons)
+                        {
+                            reasons_["cards"][card_name][card_b_name][evaluation.reason] = evaluation.score;
+                        }
+                        if (card_evaluations.count(evaluation.reason) == 0)
+                        {
+                            card_evaluations[evaluation.reason] = 0.0;
+                        }
+                        card_evaluations[evaluation.reason] += evaluation.score * card_count * card_b_count;
+                        // apply the evaluation to all copies of card_a and card_b
+                        // TODO end DRY
+                    }
+                    {
+                        // write it to cache
+                        std::unique_lock<std::shared_mutex> l{card_pair_evaluations_cache_mutex_};
+                        card_pair_evaluations_cache_[key] = pair_evaluations;
+                    }
+                }
+                else // it was cached, we need to repeat some of the above
+                {
+                    for (const auto &eval_weight : single_evaluations)
+                    {
+                        const auto evaluation{eval_weight.first};
+                        const auto weight{eval_weight.second};
+
+                        // TODO DRY
+                        card_reasons.insert(evaluation.reason);
+                        if (card_divisors.count(evaluation.reason) == 0)
+                        {
+                            card_divisors[evaluation.reason] = evaluation.scale * deck_size_ / weight;
+                        }
+                        if (calculate_reasons)
+                        {
+                            reasons_["cards"][card_name][card_b_name][evaluation.reason] = evaluation.score;
+                        }
+                        if (card_evaluations.count(evaluation.reason) == 0)
+                        {
+                            card_evaluations[evaluation.reason] = 0.0;
+                        }
+                        card_evaluations[evaluation.reason] += evaluation.score * card_count * card_b_count;
+                        // apply the evaluation to all copies of card_a and card_b
+                        // TODO end DRY
+                    }
                 }
             }
         }
-    }
 
-    for (const auto &eval : deck_evaluators_)
-    {
-        // TODO we need to be a lot more nuanced about this! The number of cards _do_ matter. And we need to be careful to only measure interactions against the same card if there is more than one in the deck!
-        auto evaluation = eval.first();
-        const auto weight = eval.second;
-
-        auto divisor = evaluation.scale / weight;
-        auto normalized_score = evaluation.score / divisor;
-        reasons_["_deck"][evaluation.reason]["score"] = evaluation.score;
-        reasons_["_deck"][evaluation.reason]["normalized_score"] = normalized_score;
-        reasons_["_deck"][evaluation.reason]["divisor"] = divisor;
-    }
-
-    for (const auto &reason: card_reasons)
-    {
-        double card_score = card_evaluations[reason];
-        double normalized_card_score = card_score / card_divisors[reason];
-        reasons_[reason] = nlohmann::json::object();
-        reasons_[reason]["score"] = card_score;
-        reasons_[reason]["normalized_score"] = normalized_card_score;
-        reasons_[reason]["divisor"] = card_divisors[reason];
-        rank_ += normalized_card_score;
-        if (rank_ < 0)
+        for (const auto &reason: card_reasons) // TODO can't we do this without another loop? Maybe not because the division…
         {
-            std::cerr << reasons_.dump() << std::endl;
-            std::cerr << "Negative rank!" << std::endl;
-            rank_ = 0.0;
+            double card_score = card_evaluations[reason];
+            double normalized_card_score = card_score / card_divisors[reason];
+            reasons_[reason] = nlohmann::json::object();
+            reasons_[reason]["score"] = card_score;
+            reasons_[reason]["normalized_score"] = normalized_card_score;
+            reasons_[reason]["divisor"] = card_divisors[reason];
+            rank_ += normalized_card_score;
+            if (rank_ < 0)
+            {
+                std::cerr << reasons_.dump() << std::endl;
+                std::cerr << "Negative rank!" << std::endl;
+                rank_ = 0.0;
+            }
         }
     }
 }
@@ -261,13 +371,13 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
     }
 
     // Finally, add the keycards back in
-    for(auto key_card : key_cards_)
+    for (auto key_card : key_cards_)
     {
         cards_.emplace(key_card->name, std::pair<uint16_t, card *>(1, key_card));
     }
 
     deck_size_ = 0;
-    for(const auto& kv : cards_)
+    for (const auto &kv : cards_)
     {
         deck_size_ += kv.second.first;
     }
@@ -278,7 +388,8 @@ void deck::build_proposed_deck_(std::vector<uint64_t> indices)
 
 void to_json(nlohmann::json &j, const deck &d)
 {
-    j = nlohmann::json{{"_list", nlohmann::json::array()}, {"_count", 0}};
+    j = nlohmann::json{{"_list",  nlohmann::json::array()},
+                       {"_count", 0}};
     uint16_t deck_size{0};
     for (const auto &kv: d.cards_)
     {

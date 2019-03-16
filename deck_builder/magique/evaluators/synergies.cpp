@@ -39,10 +39,8 @@ static bool have_data{false};
 static std::unordered_map<std::string, std::vector<uint16_t>> mechanics_;
 static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_cards_;
 static std::unordered_map<uint16_t, std::unordered_map<uint16_t, double>> conditional_probabilities_mechanics_;
-static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_card_mechanics_cache_;
 static std::unordered_map<std::string, std::set<std::string>> tribal_synergies_;
 
-static std::shared_mutex cache_mutex_;
 
 void load_synergies(std::string path, magique::catalog &catalog, magique::card::format format)
 {
@@ -156,61 +154,40 @@ evaluation mechanic_synergy(const card *card_a, const card *card_b, card::format
 
     double synergy{0.0};
 
-    bool cached{false};
+    // Not that the scale will vary from card to card. We don't want to do a division each time! But the upper limit
+    // For a particular card paring is the number of mechanics they have in common.
+
+    const auto mechanics_a_count = mechanics_.count(card_a->name);
+    const auto mechanics_b_count = mechanics_.count(card_b->name);
+    if (mechanics_a_count == 0 || mechanics_b_count == 0)
     {
-        std::shared_lock<std::shared_mutex> l{cache_mutex_};
-        if (conditional_probabilities_card_mechanics_cache_.count(card_a->name) &&
-            conditional_probabilities_card_mechanics_cache_.at(card_a->name).count(card_b->name))
-        {
-            //pull from cache
-            synergy = conditional_probabilities_card_mechanics_cache_.at(card_a->name).at(card_b->name);
-            cached = true;
-        }
+        return {0.0, 1.0, "mechanic synergy"};
     }
 
-    if (!cached)
+    const auto &mechanics_a = mechanics_.at(card_a->name);
+    const auto &mechanics_b = mechanics_.at(card_b->name);
+
+    const auto divisor = mechanics_a.size() * mechanics_b.size();
+
+
+    for (const auto &mech_a : mechanics_a)
     {
-        // Not that the scale will vary from card to card. We don't want to do a division each time! But the upper limit
-        // For a particular card paring is the number of mechanics they have in common.
-
-        const auto mechanics_a_count = mechanics_.count(card_a->name);
-        const auto mechanics_b_count = mechanics_.count(card_b->name);
-        if (mechanics_a_count == 0 || mechanics_b_count == 0)
+        for (const auto &mech_b : mechanics_b)
         {
-            return {0.0, 1.0, "mechanic synergy"};
-        }
-
-        const auto &mechanics_a = mechanics_.at(card_a->name);
-        const auto &mechanics_b = mechanics_.at(card_b->name);
-
-        const auto divisor = mechanics_a.size() * mechanics_b.size();
-
-
-        for (const auto &mech_a : mechanics_a)
-        {
-            for (const auto &mech_b : mechanics_b)
+            if (conditional_probabilities_mechanics_.count(mech_a))
             {
-                if (conditional_probabilities_mechanics_.count(mech_a))
+                if (conditional_probabilities_mechanics_.at(mech_a).count(mech_b))
                 {
-                    if (conditional_probabilities_mechanics_.at(mech_a).count(mech_b))
-                    {
-                        auto a = conditional_probabilities_mechanics_.at(mech_a).at(mech_b);
-                        synergy += a;
-                    }
+                    auto a = conditional_probabilities_mechanics_.at(mech_a).at(mech_b);
+                    synergy += a;
                 }
-
             }
-        }
 
-        // I'd much rather not do a division here. There must be a better way. But I can't think of one. So let's try cacheing
-        synergy = synergy / divisor;
-        // Let's only do this division once. By cacheing the results
-        // Not thread safe
-        {
-            std::unique_lock<std::shared_mutex> l{cache_mutex_};
-            conditional_probabilities_card_mechanics_cache_[card_a->name][card_b->name] = synergy;
         }
     }
+
+    // I'd much rather not do a division here. There must be a better way. But I can't think of one. So let's rely on cacheing.
+    synergy = synergy / divisor;
 
     // TODO why do we even return a divisor here? We should return it as part of the loading process, I think.
     return {synergy, 1.0, "mechanic synergy"};
@@ -226,9 +203,9 @@ evaluation tribal_synergy(const card *card_a, const card *card_b, card::format f
 
     // Handle cards like "Vanquisher's Banner"
     // TODO move to pre-processor
-    if(card_a->text.find("creature type") != std::string::npos)
+    if (card_a->text.find("creature type") != std::string::npos)
     {
-        if(card_b->types.count(card::type::creature) > 0)
+        if (card_b->types.count(card::type::creature) > 0)
         {
             return {1.0, 1.0, "tribal synergy"};
         }
