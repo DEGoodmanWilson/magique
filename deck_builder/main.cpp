@@ -196,8 +196,8 @@ int main(int argc, char **argv)
     }
     else
     {
-//        deck::add_evaluator(magique::evaluators::eval_power);
-//        deck::add_evaluator(magique::evaluators::eval_toughness);
+        deck::add_evaluator(magique::evaluators::eval_power, 1.0);
+        deck::add_evaluator(magique::evaluators::eval_toughness, 1.0);
         magique::evaluators::load_synergies(data_pathname, master_catalog, format);
         deck::add_evaluator(magique::evaluators::card_synergy, 1.0);
         deck::add_evaluator(magique::evaluators::mechanic_synergy, 0.5);

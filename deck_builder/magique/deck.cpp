@@ -165,6 +165,7 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
                     {
                         const auto evaluation = eval.first(card, card_b, format);
                         const auto weight = eval.second;
+                        pair_evaluations.emplace_back(std::make_pair(evaluation, weight));
 
                         // TODO DRY
                         card_reasons.insert(evaluation.reason);
@@ -192,7 +193,7 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
                 }
                 else // it was cached, we need to repeat some of the above
                 {
-                    for (const auto &eval_weight : single_evaluations)
+                    for (const auto &eval_weight : pair_evaluations)
                     {
                         const auto evaluation{eval_weight.first};
                         const auto weight{eval_weight.second};
@@ -223,10 +224,14 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
         {
             double card_score = card_evaluations[reason];
             double normalized_card_score = card_score / card_divisors[reason];
-            reasons_[reason] = nlohmann::json::object();
-            reasons_[reason]["score"] = card_score;
-            reasons_[reason]["normalized_score"] = normalized_card_score;
-            reasons_[reason]["divisor"] = card_divisors[reason];
+            if (calculate_reasons)
+            {
+                //TODO FIX THIS
+                reasons_[reason] = nlohmann::json::object();
+                reasons_[reason]["score"] += card_score;
+                reasons_[reason]["normalized_score"] += normalized_card_score;
+                reasons_[reason]["divisor"] += card_divisors[reason];
+            }
             rank_ += normalized_card_score;
             if (rank_ < 0)
             {
