@@ -40,10 +40,14 @@ static std::unordered_map<std::string, std::vector<uint16_t>> mechanics_;
 static std::unordered_map<std::string, std::unordered_map<std::string, double>> conditional_probabilities_cards_;
 static std::unordered_map<uint16_t, std::unordered_map<uint16_t, double>> conditional_probabilities_mechanics_;
 static std::unordered_map<std::string, std::set<std::string>> tribal_synergies_;
+static std::set<std::string> key_card_names_;
 
-
-void load_synergies(std::string path, magique::catalog &catalog, magique::card::format format)
+void load_synergies(std::string path, magique::catalog &catalog, magique::card::format format, std::vector<std::string> key_card_names)
 {
+    for(const auto &name : key_card_names)
+    {
+        key_card_names_.insert(name);
+    }
     if ((format == magique::card::format::duel) || (format == magique::card::format::onevone) ||
         (format == magique::card::format::brawl) || (format == magique::card::format::penny))
     {
@@ -203,9 +207,10 @@ evaluation tribal_synergy(const card *card_a, const card *card_b, card::format f
 
     // Handle cards like "Vanquisher's Banner"
     // TODO move to pre-processor
-    if (card_a->text.find("creature type") != std::string::npos)
+    // TODO expand this, look at https://scryfall.com/search?q=o%3A%22creature+type%22&unique=cards&as=grid&order=name
+    if (card_b->text.find("choose a creature type") != std::string::npos)
     {
-        if (card_b->types.count(card::type::creature) > 0)
+        if (card_a->types.count(card::type::creature) > 0)
         {
             return {1.0, 1.0, "tribal synergy"};
         }
@@ -217,6 +222,10 @@ evaluation tribal_synergy(const card *card_a, const card *card_b, card::format f
         {
             if (card_b->subtypes.count(tribe))
             {
+                if(key_card_names_.count(card_a->name))
+                {
+                    return {2.0, 1.0, "tribal synergy"}; // TODO make the multiple configurable
+                }
                 return {1.0, 1.0, "tribal synergy"};
             }
         }

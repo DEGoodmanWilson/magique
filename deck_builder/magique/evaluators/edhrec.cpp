@@ -63,9 +63,12 @@ evaluation edhrec_price(const card *card, const uint16_t index, const card::form
 
 evaluation edhrec_rank(const card *card, const uint16_t index, const card::format format)
 {
+    // TODO FIX ON PLANE
     if (edhrec_data.count(card->name))
     {
-        return {(double)(lowest_rank - edhrec_data[card->name].rank), (double)lowest_rank, "edhrec rank"};
+        return {(double)(-(edhrec_data[card->name].rank - lowest_rank)), (double)lowest_rank, "edhrec rank"};
+//        double rank{1.0/(edhrec_data[card->name].rank)};
+//        return {rank, 1.0, "edhrec rank"};
     }
 
     return {0.0, (double)lowest_rank, "edhrec rank"};

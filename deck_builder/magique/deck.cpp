@@ -226,11 +226,17 @@ deck::deck(std::vector<uint64_t> indices, bool calculate_reasons) :
             double normalized_card_score = card_score / card_divisors[reason];
             if (calculate_reasons)
             {
-                //TODO FIX THIS
-                reasons_[reason] = nlohmann::json::object();
-                reasons_[reason]["score"] += card_score;
-                reasons_[reason]["normalized_score"] += normalized_card_score;
-                reasons_[reason]["divisor"] += card_divisors[reason];
+//                TODO FIX THIS. It is over-writing the reasons for each card, so we only see the reason for the last card.
+
+                if (reasons_[reason].is_null())
+                {
+                    reasons_[reason] = nlohmann::json::object();
+                    reasons_[reason]["score"] = 0.0;
+                    reasons_[reason]["normalized_score"] = 0.0;
+                    reasons_[reason]["divisor"] = card_divisors[reason];
+                }
+                reasons_[reason]["score"] = reasons_[reason]["score"].get<double>() + card_score;
+                reasons_[reason]["normalized_score"] = reasons_[reason]["normalized_score"].get<double>() + normalized_card_score;
             }
             rank_ += normalized_card_score;
             if (rank_ < 0)
