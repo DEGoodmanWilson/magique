@@ -4,6 +4,7 @@ cp types.json ../../data/synergies
 
 # download decklists
 curl https://mtgdecks.net/decks/csv/Standard > ../../data/synergies/standard.csv
+curl https://mtgdecks.net/decks/csv/Pioneer > ../../data/synergies/pioneer.csv
 curl https://mtgdecks.net/decks/csv/Modern > ../../data/synergies/modern.csv
 curl https://mtgdecks.net/decks/csv/Commander > ../../data/synergies/commander.csv
 curl https://mtgdecks.net/decks/csv/Legacy > ../../data/synergies/legacy.csv
@@ -14,7 +15,7 @@ curl https://mtgdecks.net/decks/csv/Peasant > ../../data/synergies/peasant.csv
 curl https://mtgdecks.net/decks/csv/Highlander > ../../data/synergies/highlander.csv
 
 # analyse decklists
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ./install_punkt.py
 # tags.txt is just for human inspection
 ./build_model.py ../../data > ../../data/synergies/tags.txt
@@ -23,6 +24,7 @@ pip install -r requirements.txt
 
 # TODO use for loops here
 ./analyze_decks_by_mechanic.py ../../data standard > ../../data/synergies/conditional_probabilities_mechanic_standard.json
+./analyze_decks_by_mechanic.py ../../data pioneer > ../../data/synergies/conditional_probabilities_mechanic_pioneer.json
 ./analyze_decks_by_mechanic.py ../../data modern > ../../data/synergies/conditional_probabilities_mechanic_modern.json
 ./analyze_decks_by_mechanic.py ../../data commander > ../../data/synergies/conditional_probabilities_mechanic_commander.json
 ./analyze_decks_by_mechanic.py ../../data legacy > ../../data/synergies/conditional_probabilities_mechanic_legacy.json
@@ -33,6 +35,7 @@ pip install -r requirements.txt
 ./analyze_decks_by_mechanic.py ../../data highlander > ../../data/synergies/conditional_probabilities_mechanic_highlander.json
 
 ./analyze_decks_by_card.py ../../data standard > ../../data/synergies/conditional_probabilities_card_standard.json
+./analyze_decks_by_card.py ../../data pioneer > ../../data/synergies/conditional_probabilities_card_pioneer.json
 ./analyze_decks_by_card.py ../../data modern > ../../data/synergies/conditional_probabilities_card_modern.json
 ./analyze_decks_by_card.py ../../data commander > ../../data/synergies/conditional_probabilities_card_commander.json
 ./analyze_decks_by_card.py ../../data legacy > ../../data/synergies/conditional_probabilities_card_legacy.json

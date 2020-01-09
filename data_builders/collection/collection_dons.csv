@@ -1,4 +1,5 @@
 Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
+1,"Academy Ruins",TSP,17.0,0,0,0,24/3/2019
 1,"Accomplished Automaton",KLD,0.12,0,0,3,2/12/2017
 1,"Acrobatic Maneuver",KLD,0.13,0,0,3,13/12/2017
 4,"Admiral's Order",RIX,0.65,0,0,0,5/4/2018
@@ -29,13 +30,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Air Elemental",W17,0.29,0,0,3,2/12/2017
 1,"Airdrop Aeronauts",AER,0.16,1,0,3,25/1/2018
 1,"Ajani Unyielding",AER,2.99,0,0,0,2/12/2017
+1,"All Is Dust",UMA,5.01,0,0,0,19/3/2019
 1,"Alley Evasion",AER,0.13,0,0,0,2/12/2017
 1,"Alley Evasion",AER,0.13,0,0,3,2/12/2017
 1,"Alley Evasion",AER,0.14,0,0,3,13/1/2018
 2,"Alley Strangler",AER,0.13,0,0,0,2/12/2017
 1,"Alley Strangler",AER,0.08,1,0,3,17/6/2018
 1,"Ancient Crab",AKH,0.13,0,0,3,2/12/2017
+1,"Angel of the Dawn",M19,0.05,0,1,4,19/3/2019
 2,"Angler Drake",AKH,0.2,0,0,3,2/12/2017
+1,"Animating Faerie // Bring to Life",PELD,0.12,0,0,0,25/12/2019
 4,"Animation Module",KLD,0.25,0,0,0,25/2/2018
 1,"Appetite for the Unnatural",KLD,0.14,0,0,0,30/11/2017
 1,"Aradara Express",KLD,0.12,0,0,3,4/1/2018
@@ -58,6 +62,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Bastion Enforcer",AER,0.11,0,0,3,13/1/2018
 2,"Bastion Inventor",AER,0.13,0,0,0,2/12/2017
 1,"Bastion Inventor",AER,0.13,0,0,3,2/12/2017
+1,"Bastion Mastodon",KLD,0.03,0,0,0,7/3/2019
 1,"Bastion Mastodon",KLD,0.11,0,0,3,4/1/2018
 3,"Beacon Bolt",GRN,0.13,0,0,3,11/12/2018
 1,"Befuddle",DOM,0.14,1,0,3,22/4/2018
@@ -70,11 +75,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Brazen Scourge",KLD,0.2,0,0,3,2/12/2017
 2,"Built to Last",KLD,0.11,0,0,0,28/12/2017
 1,"Built to Last",KLD,0.11,0,0,3,2/12/2017
+1,"Bulwark Giant",WAR,0.09,1,0,0,25/12/2019
 1,"Cartouche of Ambition",AKH,0.13,0,0,3,2/12/2017
 1,"Cartouche of Knowledge",AKH,0.14,0,0,3,2/12/2017
 2,"Cartouche of Solidarity",AKH,0.15,0,0,3,2/12/2017
 2,"Cartouche of Strength",AKH,0.14,0,0,3,2/12/2017
 2,"Cartouche of Zeal",AKH,0.15,0,0,3,2/12/2017
+1,"Cascade Bluffs",A25,5.78,0,0,6,27/4/2019
 1,"Cataclysmic Gearhulk",KLD,1.4,0,0,0,30/11/2017
 1,"Cathartic Reunion",KLD,0.16,0,0,0,30/11/2017
 1,"Cathartic Reunion",KLD,0.15,0,0,3,13/12/2017
@@ -82,6 +89,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Caught in the Brights",AER,0.13,0,0,0,2/12/2017
 1,"Censor",AKH,1.5,0,0,3,2/12/2017
 2,"Champion of the Flame",DOM,0.12,0,0,3,24/6/2018
+1,"Chandra's Ignition",ORI,0.37,0,0,3,7/3/2019
 1,"Chandra's Pyrohelix",KLD,0.13,0,0,0,30/11/2017
 1,"Chandra's Pyrohelix",KLD,0.14,0,0,0,28/12/2017
 1,"Chandra's Pyrohelix",KLD,0.13,0,0,3,2/12/2017
@@ -121,8 +129,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Cursed Minotaur",AKH,0.14,0,0,3,2/12/2017
 1,"Daring Demolition",AER,0.13,0,0,3,2/12/2017
 1,"Dark Inquiry",RIX,0.06,1,0,0,2/7/2018
+1,"Darksteel Forge",DST,7.94,0,2,3,7/3/2019
 1,"Darksteel Ingot",CM2,0.15,0,0,0,31/12/2018
 1,"Dawnfeather Eagle",AER,0.13,0,0,0,2/12/2017
+3,"Death Baron",M19,2.54,0,0,0,16/5/2019
+1,"Deathgorge Scavenger",XLN,0.0,0,0,0,10/7/2019
+2,"Deathgorge Scavenger",XLN,3.0,0,1,0,17/5/2019
 1,"Decision Paralysis",AKH,0.12,0,0,3,2/12/2017
 1,"Decoction Module",KLD,0.76,1,0,3,13/12/2017
 1,"Decommission",AER,0.14,0,0,0,2/12/2017
@@ -144,6 +156,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Djeru's Resolve",AKH,0.13,0,0,3,2/12/2017
 1,"Doomed Dissenter",AKH,0.14,0,0,3,2/12/2017
 3,"Doublecast",M19,0.1,0,0,3,11/12/2018
+1,"Dovin, Hand of Control",WAR_JP,0.0,0,0,6,4/5/2019
+1,"Dreadhorde Invasion",WAR,2.01,0,0,0,16/5/2019
+4,"Dreadmalkin",WAR,0.05,0,0,0,16/5/2019
 1,"Dream Tides",VIS,0.0,0,0,0,5/4/2018
 2,"Druid of the Cowl",AER,0.14,0,0,0,2/12/2017
 3,"Druid of the Cowl",AER,0.14,0,0,3,13/1/2018
@@ -166,6 +181,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Empyreal Voyager",KLD,0.18,0,0,3,2/12/2017
 3,"Enigma Drake",AKH,0.18,0,0,0,14/12/2018
 2,"Enraged Giant",AER,0.2,0,0,3,2/12/2017
+1,"Erratic Visionary",WAR,0.03,0,0,0,16/5/2019
 1,"Essence Extraction",KLD,0.22,0,0,0,30/11/2017
 1,"Essence Scatter",AKH,0.07,0,0,3,9/3/2018
 1,"Essence Scatter",AKH,0.15,0,0,3,2/12/2017
@@ -189,6 +205,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Fireforger's Puzzleknot",KLD,0.11,0,0,3,2/12/2017
 3,"Fling",AKH,0.14,0,0,3,2/12/2017
 1,"Floodwaters",AKH,0.13,0,0,3,2/12/2017
+1,"Flux Channeler",WAR,2.46,1,0,6,29/4/2019
+2,"Forced Landing",WAR,0.03,0,0,0,16/5/2019
 1,"Forsaken Sanctuary",AKH,0.29,0,0,3,2/12/2017
 1,"Fortuitous Find",KLD,0.11,0,0,0,30/11/2017
 1,"Fortuitous Find",KLD,0.11,0,0,3,4/1/2018
@@ -219,8 +237,10 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Glimmer of Genius",KLD,0.93,0,0,3,2/12/2017
 1,"Glint-Sleeve Artisan",KLD,0.12,0,0,3,13/12/2017
 2,"Glint-Sleeve Siphoner",AER,3.32,0,0,0,2/12/2017
+1,"Gluttonous Troll",ELD,0.32,0,0,0,25/12/2019
 1,"Gonti's Machinations",AER,0.24,1,0,0,28/4/2018
 1,"Graceful Cat",AKH,0.15,0,0,3,2/12/2017
+4,"Graveyard Marshal",M19,4.0,0,0,0,17/5/2019
 1,"Greater Sandwurm",AKH,0.12,0,0,3,2/12/2017
 1,"Gremlin Infestation",AER,0.2,0,0,0,2/12/2017
 3,"Guttersnipe",IMA,0.15,0,0,0,14/12/2018
@@ -279,9 +299,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Kambal, Consul of Allocation",KLD,0.46,0,0,0,28/12/2017
 1,"Kambal, Consul of Allocation",KLD,0.46,0,0,3,2/12/2017
 1,"Kari Zev's Expertise",AER,0.41,0,0,0,24/4/2018
+1,"Karn's Bastion",WAR,0.0,0,0,0,10/7/2019
+1,"Karn's Bastion",WAR,2.0,0,0,0,9/5/2019
+1,"Kasmina, Enigmatic Mentor",WAR_JP,0.0,0,0,6,3/5/2019
 1,"Kefnet the Mindful",AKH,1.82,0,0,3,2/12/2017
 1,"Kujar Seedsculptor",KLD,0.11,0,0,0,30/11/2017
 1,"Kujar Seedsculptor",KLD,0.12,0,0,3,13/12/2017
+1,"Kuldotha Forgemaster",SOM,2.71,0,2,3,7/3/2019
 1,"Larger Than Life",KLD,0.15,0,0,0,30/11/2017
 1,"Larger Than Life",KLD,0.16,0,0,3,2/12/2017
 1,"Lava Axe",M19,0.0,0,0,0,7/7/2018
@@ -294,8 +318,10 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Lifecraft Cavalry",AER,0.11,0,0,0,2/12/2017
 1,"Lifecrafter's Gift",AER,0.2,0,0,3,25/12/2017
 1,"Lightning Runner",AER,0.37,0,0,0,24/4/2018
+1,"Liliana, Dreadhorde General",WAR_JP,0.0,1,0,6,3/5/2019
 1,"Live Fast",KLD,0.12,0,0,3,4/1/2018
 2,"Live Fast",KLD,0.13,0,0,3,2/12/2017
+1,"Lonesome Unicorn // Rider in Need",PELD,0.2,0,0,0,25/12/2019
 1,"Long-Finned Skywhale",KLD,0.19,0,0,3,4/1/2018
 1,"Make Obsolete",KLD,0.19,0,0,0,30/11/2017
 1,"Make Obsolete",KLD,0.18,0,0,3,2/12/2017
@@ -304,6 +330,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Malfunction",KLD,0.11,0,0,0,30/11/2017
 3,"Malfunction",KLD,0.11,0,0,3,2/12/2017
 1,"Manticore of the Gauntlet",AKH,0.13,0,0,3,2/12/2017
+1,"Master of Etherium",DDF,2.27,0,1,3,7/3/2019
 2,"Maulfist Revolutionary",AER,0.21,0,0,0,2/12/2017
 1,"Maverick Thopterist",C18,0.04,0,0,0,2/9/2018
 1,"Maverick Thopterist",AER,0.2,0,0,3,25/12/2017
@@ -326,6 +353,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Mind Rot",KLD,0.1,0,0,0,30/11/2017
 1,"Mind Rot",KLD,0.11,0,0,0,28/12/2017
 1,"Minister of Inquiries",KLD,0.24,0,0,0,28/12/2017
+1,"Mirrorpool",OGW,1.78,0,0,3,7/3/2019
 1,"Mizzium Meddler",PLPA,0.0,1,0,3,4/1/2018
 2,"Mobile Garrison",AER,0.14,0,0,0,2/12/2017
 1,"Mobile Garrison",AER,0.14,0,0,3,2/12/2017
@@ -340,6 +368,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Nef-Crop Entangler",AKH,0.14,0,0,3,2/12/2017
 2,"Negate",AER,0.15,0,0,0,2/12/2017
 1,"Negate",AER,0.15,0,0,3,2/12/2017
+1,"New Horizons",WAR,0.21,1,0,6,4/5/2019
 1,"Night Market Aeronaut",AER,0.13,0,0,0,2/12/2017
 1,"Night Market Aeronaut",AER,0.13,0,0,3,2/12/2017
 1,"Night Market Guard",AER,0.12,0,0,3,2/12/2017
@@ -351,11 +380,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Ninth Bridge Patrol",KLD,0.12,0,0,3,13/12/2017
 1,"Oakenform",W17,0.32,0,0,3,2/12/2017
 1,"Oath of Ajani",AER,0.45,0,0,3,25/12/2017
+4,"Ob Nixilis's Cruelty",WAR,0.05,0,0,0,16/5/2019
+1,"Ob Nixilis, the Hate-Twisted",WAR,0.11,0,0,0,16/5/2019
+3,"Open the Graves",M19,0.3,0,0,0,16/5/2019
 1,"Ornamental Courage",KLD,0.12,0,0,3,4/1/2018
 1,"Ornery Kudu",AKH,0.13,0,0,3,2/12/2017
 3,"Ornithopter",AER,0.1,0,0,3,15/2/2018
 1,"Ornithopter",AER,0.22,0,0,3,13/1/2018
 1,"Outland Boar",AER,0.2,0,0,3,25/12/2017
+2,"Overgrown Tomb",GRN,0.0,0,0,0,10/7/2019
+1,"Overgrown Tomb",RAV,0.0,0,0,0,10/7/2019
+1,"Overgrown Tomb",RTR,0.0,0,0,0,10/7/2019
 1,"Oviya Pashiri, Sage Lifecrafter",KLD,0.3,0,0,0,30/11/2017
 1,"Pacification Array",AER,0.2,0,0,0,2/12/2017
 4,"Padeem, Consul of Innovation",KLD,0.5,0,0,0,25/2/2018
@@ -378,6 +413,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Prey Upon",AER,0.13,0,0,3,13/1/2018
 3,"Primal Amulet",XLN,2.0,0,0,0,11/12/2018
 1,"Primal Amulet",XLN,1.18,0,0,3,31/3/2018
+1,"Prismite",WAR,0.09,0,0,0,16/5/2019
 2,"Prizefighter Construct",AER,0.13,0,0,0,2/12/2017
 1,"Prizefighter Construct",AER,0.13,0,0,3,25/12/2017
 1,"Propeller Pioneer",KLD,0.12,0,0,3,4/1/2018
@@ -387,14 +423,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Protection of the Hekma",AKH,0.2,0,0,3,2/12/2017
 1,"Pursue Glory",AKH,0.12,0,0,3,2/12/2017
 1,"Pyramid of the Pantheon",AKH,0.4,0,0,3,2/12/2017
+1,"Quasiduplicate",GRN,0.25,0,0,0,7/3/2019
 1,"Quicksmith Genius",KLD,0.2,0,0,3,2/12/2017
 1,"Quicksmith Rebel",AER,0.27,0,0,3,13/1/2018
 1,"Raise Dead",W17,0.39,0,0,3,2/12/2017
+1,"Ral, Izzet Viceroy",GRN,0.0,0,0,0,11/4/2019
 1,"Rally the Peasants",UMA,0.06,0,0,0,3/1/2019
 1,"Rashmi, Eternities Crafter",KLD,0.98,0,0,3,4/1/2018
 3,"Rashmi, Eternities Crafter",KLD,1.5,0,0,3,15/2/2018
 1,"Ravenous Intruder",AER,0.21,0,0,0,2/12/2017
 1,"Ravenous Intruder",AER,0.22,0,0,3,25/12/2017
+1,"Reaper of Night // Harvest Fear",PELD,0.36,1,0,0,25/12/2019
 1,"Reckless Fireweaver",KLD,0.14,0,0,0,30/11/2017
 1,"Reckless Fireweaver",KLD,0.15,0,0,3,4/1/2018
 1,"Reckless Racer",AER,0.2,0,0,0,2/12/2017
@@ -424,14 +463,19 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Riparian Tiger",KLD,0.11,0,0,0,30/11/2017
 1,"Riparian Tiger",KLD,0.11,0,0,3,2/12/2017
 1,"Riparian Tiger",KLD,0.12,0,0,3,4/1/2018
+1,"Rite of Replication",ZEN,2.62,0,0,3,7/3/2019
 2,"River Heralds' Boon",XLN,0.05,0,0,3,9/3/2018
 2,"Rogue Refiner",AER,0.77,0,0,0,2/12/2017
 1,"Rootwalla",W17,0.27,0,0,3,2/12/2017
+1,"Rosethorn Acolyte // Seasonal Ritual",PELD,0.26,0,0,0,25/12/2019
 1,"Ruinous Gremlin",KLD,0.12,0,0,3,2/12/2017
 1,"Rush of Vitality",KLD,0.13,0,0,3,2/12/2017
+1,"Rustwing Falcon",M19,0.05,0,0,4,19/3/2019
 1,"Ruthless Sniper",AKH,0.2,0,0,3,2/12/2017
 3,"Sage of Shaila's Claim",KLD,0.14,0,0,0,28/12/2017
 2,"Sage of Shaila's Claim",KLD,0.15,0,0,3,13/12/2017
+1,"Samut, Tyrant Smasher",WAR,0.07,0,0,6,30/4/2019
+1,"Sarkhan's Catharsis",WAR,0.12,1,0,0,9/6/2019
 1,"Scarab Feast",AKH,0.15,0,0,3,2/12/2017
 1,"Scattered Groves",AKH,2.0,0,0,3,2/12/2017
 1,"Scrapper Champion",AER,0.2,0,0,0,2/12/2017
@@ -451,6 +495,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 3,"Servo Schematic",AER,0.23,0,0,3,15/4/2018
 1,"Shadowstorm Vizier",AKH,0.19,0,0,3,2/12/2017
 1,"Shanna, Sisay's Legacy",DOM,0.71,1,0,0,16/6/2018
+1,"Shapers' Sanctuary",XLN,0.0,0,0,0,10/7/2019
+2,"Shapers' Sanctuary",XLN,3.0,0,0,0,14/5/2019
 1,"Shed Weakness",AKH,0.13,0,0,3,2/12/2017
 1,"Shielded Aether Thief",AER,0.21,0,0,0,2/12/2017
 1,"Shielded Aether Thief",AER,0.21,0,0,3,2/12/2017
@@ -460,13 +506,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Shipwreck Moray",AER,0.14,0,0,3,13/1/2018
 1,"Shivan Dragon",W17,0.3,0,0,3,2/12/2017
 3,"Shock",AER,0.16,0,0,3,2/12/2017
+1,"Shrine of the Forsaken Gods",BFZ,0.43,0,0,0,7/3/2019
 2,"Silkweaver Elite",AER,0.13,0,0,0,2/12/2017
 1,"Silkweaver Elite",AER,0.13,0,0,3,25/12/2017
 1,"Silvergill Adept",RIX,0.95,1,0,0,28/4/2018
 1,"Silvergill Adept",RIX,1.24,1,0,0,9/3/2018
+1,"Simic Guildgate",RNA,0.06,0,0,6,3/5/2019
 1,"Siren Reaver",RIX,0.06,0,0,0,25/3/2018
 1,"Sky Skiff",KLD,0.13,0,0,0,28/12/2017
 2,"Sky Skiff",KLD,0.13,0,0,3,4/1/2018
+1,"Sky Theater Strix",WAR,0.19,1,0,6,4/5/2019
 2,"Skyship Plunderer",AER,0.25,0,0,0,2/12/2017
 1,"Skyship Stalker",KLD,0.28,0,0,0,30/11/2017
 1,"Skyship Stalker",KLD,0.28,0,0,3,2/12/2017
@@ -477,6 +526,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Snare Thopter",KLD,0.15,0,0,3,2/12/2017
 1,"Soul Salvage",DOM,0.09,1,0,0,29/5/2018
 2,"Soulstinger",AKH,0.13,0,0,3,2/12/2017
+2,"Spark Reaper",WAR,0.1,0,0,0,9/5/2019
 1,"Spark of Creativity",KLD,0.2,0,0,3,4/1/2018
 1,"Speedway Fanatic",KLD,0.2,0,0,0,30/11/2017
 1,"Sphinx of Magosi",W17,0.4,0,0,3,2/12/2017
@@ -489,6 +539,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Stalking Tiger",W17,0.3,0,0,3,2/12/2017
 1,"Standing Troops",W17,0.16,0,0,3,2/12/2017
 1,"Stealer of Secrets",W17,0.32,0,0,3,2/12/2017
+2,"Steam Vents",GRN,9.9,0,0,3,24/3/2019
+1,"Stolen Identity",GTC,0.5,0,0,3,7/3/2019
 2,"Stone Quarry",AKH,0.16,0,0,3,2/12/2017
 1,"Storm Sculptor",XLN,0.02,0,0,0,25/3/2018
 1,"Stormfront Pegasus",W17,0.18,0,0,3,2/12/2017
@@ -509,11 +561,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"Tasseled Dromedary",KLD,0.11,0,0,0,30/11/2017
 1,"Tasseled Dromedary",KLD,0.12,0,0,3,2/12/2017
 2,"Tattered Mummy",AKH,0.59,0,0,3,2/12/2017
+2,"Teferi, Time Raveler",WAR_JP,0.0,0,0,6,4/5/2019
 1,"Temple of the False God",C17,0.19,0,0,0,27/3/2018
 1,"Temple of the False God",DDO,0.25,0,0,0,31/12/2018
 1,"Terramorphic Expanse",CM2,0.14,0,0,0,31/12/2018
 2,"Terror of the Fairgrounds",KLD,0.11,0,0,3,13/12/2017
 1,"Tezzeret's Touch",AER,0.24,0,0,0,2/12/2017
+3,"The Haunt of Hightower",RNA,1.57,1,0,0,16/5/2019
 1,"Those Who Serve",AKH,0.12,0,0,3,2/12/2017
 1,"Thriving Grubs",KLD,0.12,0,0,0,30/11/2017
 1,"Thriving Grubs",KLD,0.13,0,0,3,2/12/2017
@@ -523,6 +577,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Thriving Rats",KLD,0.11,0,0,0,28/12/2017
 1,"Thriving Turtle",KLD,0.13,0,0,3,4/1/2018
 1,"Thundering Giant",W17,0.31,0,0,3,2/12/2017
+1,"Tibalt, Rakish Instigator",WAR,0.14,0,0,6,1/5/2019
 1,"Tidy Conclusion",KLD,0.11,0,0,0,30/11/2017
 1,"Tidy Conclusion",KLD,0.12,0,0,3,4/1/2018
 1,"Timber Gorge",AKH,0.18,0,0,3,2/12/2017
@@ -531,6 +586,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Torch Gauntlet",KLD,0.11,0,0,3,2/12/2017
 1,"Tranquil Expanse",AKH,0.23,0,0,3,2/12/2017
 1,"Treasure Keeper",AER,0.24,0,0,0,2/12/2017
+1,"Treasure Mage",DDU,0.2,0,0,0,7/3/2019
 1,"Trespasser's Curse",AKH,0.15,0,0,3,2/12/2017
 1,"Trial of Ambition",AKH,0.2,0,0,3,2/12/2017
 1,"Trial of Knowledge",AKH,0.21,0,0,3,2/12/2017
@@ -544,12 +600,14 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Unbridled Growth",AER,0.14,0,0,3,2/12/2017
 1,"Unbridled Growth",AER,0.21,1,0,3,11/2/2018
 1,"Unclaimed Territory",XLN,1.62,0,0,0,29/3/2018
+2,"Underrealm Lich",GRN,1.71,0,0,0,16/5/2019
 1,"Universal Solvent",AER,0.14,0,0,0,2/12/2017
 1,"Universal Solvent",AER,0.14,0,0,3,2/12/2017
 1,"Untamed Hunger",W17,0.3,0,0,3,2/12/2017
 1,"Untethered Express",AER,0.2,0,0,0,2/12/2017
 1,"Unwavering Initiate",AKH,0.13,0,0,3,2/12/2017
 1,"Urban Utopia",GRN,0.16,1,0,0,6/11/2018
+1,"Utvara Hellkite",C17,0.0,0,0,0,10/7/2019
 1,"Vampire Revenant",RIX,0.03,0,0,8,22/8/2018
 2,"Vedalken Blademaster",KLD,0.11,0,0,3,13/12/2017
 4,"Verdant Automaton",AER,0.11,0,0,0,2/12/2017
@@ -557,10 +615,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Veteran Motorist",KLD,0.09,0,0,0,24/4/2018
 1,"Victory's Herald",W17,0.25,0,0,3,2/12/2017
 1,"Vizier of Remedies",AKH,0.3,0,0,3,2/12/2017
+2,"Voiceless Spirit",ISD,0.05,0,0,0,7/3/2019
 1,"Voltaic Brawler",KLD,0.26,0,0,3,4/1/2018
 1,"Voltaic Brawler",KLD,0.28,0,0,3,2/12/2017
 2,"Walking Ballista",AER,10.32,0,0,0,22/8/2018
 1,"Walking Ballista",AER,12.3,0,0,0,12/9/2018
+1,"War Screecher",WAR,0.03,0,0,0,16/5/2019
 1,"Warfire Javelineer",AKH,0.2,0,0,3,2/12/2017
 1,"Watchers of the Dead",AKH,0.21,0,0,3,2/12/2017
 1,"Watchful Automaton",AER,0.13,0,0,0,2/12/2017
@@ -577,12 +637,14 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"Wild Wanderer",KLD,0.12,0,0,0,30/11/2017
 2,"Wild Wanderer",KLD,0.12,0,0,3,2/12/2017
 1,"Wily Bandar",KLD,0.13,0,0,0,30/11/2017
+1,"Wily Bandar",KLD,0.02,0,0,1,7/3/2019
 1,"Wind Drake",KLD,0.12,0,0,0,28/12/2017
 1,"Wind-Kin Raiders",AER,0.2,0,0,3,25/12/2017
 1,"Winding Constrictor",AER,0.59,0,0,3,13/1/2018
 1,"Winds of Rebuke",AKH,0.11,0,0,3,2/12/2017
 1,"Wing Snare",W17,0.28,0,0,3,2/12/2017
 1,"Wispweaver Angel",KLD,0.2,0,0,3,13/12/2017
+2,"Woodland Cemetery",DOM,2.16,0,0,0,16/5/2019
 2,"Woodland Stream",AKH,0.17,0,0,3,2/12/2017
 1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,0,30/11/2017
 1,"Woodweaver's Puzzleknot",KLD,0.15,0,0,3,4/1/2018
@@ -600,8 +662,10 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"accomplished automaton",KLD,0.02,0,0,0,19/2/2018
 1,"accomplished automaton",KLD,0.01,0,0,3,11/2/2018
 1,"accursed horde",HOU,0.1,0,0,0,15/4/2018
+1,"acolyte's reward",BNG,0.1,0,0,0,2/7/2019
 1,"acrobatic maneuver",KLD,0.05,0,0,0,19/2/2018
 1,"acrobatic maneuver",KLD,0.06,0,0,3,11/2/2018
+1,"act of treason",M20,0.04,0,0,0,1/10/2019
 1,"adamant will",DOM,0.05,0,0,0,12/5/2018
 1,"adamant will",DOM,0.06,0,0,0,29/4/2018
 1,"adamant will",DOM,0.05,0,0,3,12/5/2018
@@ -610,9 +674,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"adeliz, the cinder wind",DOM,0.34,0,0,3,22/4/2018
 1,"admiral's order",RIX,0.41,0,0,3,4/4/2018
 1,"adventurous impulse",DOM,0.07,0,0,3,12/5/2018
+1,"advocate of the beast",M14,0.09,0,0,0,2/3/2019
 1,"aegis automaton",AER,0.03,0,0,0,3/9/2018
 2,"aegis automaton",AER,0.05,0,0,0,25/2/2018
 1,"aegis of the heavens",M19,0.09,0,0,6,18/7/2018
+1,"aerial assault",M20,0.04,0,0,0,20/12/2019
 1,"aerial modification",AER,0.06,0,0,0,28/4/2018
 1,"aerial modification",AER,0.05,0,0,3,27/1/2018
 1,"aerial modification",AER,0.07,0,0,3,17/6/2018
@@ -650,8 +716,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"aggressive urge",RIX,0.02,0,0,0,25/3/2018
 2,"aggressive urge",RIX,0.03,0,0,0,3/7/2018
 2,"aggressive urge",RIX,0.02,0,0,3,4/4/2018
+1,"agonizing syphon",M20,0.03,0,0,0,1/10/2019
+4,"ahn-crop invader",WAR,0.04,0,0,6,4/5/2019
+4,"aid the fallen",WAR,0.06,0,0,6,4/5/2019
 1,"airdrop aeronauts",AER,0.04,0,0,6,18/7/2018
+1,"ajani's pridemate",WAR,0.07,0,0,6,4/5/2019
 1,"ajani's welcome",M19,0.0,0,0,0,7/7/2018
+1,"ajani, the greathearted",WAR_JP,5.98,0,0,6,3/5/2019
 1,"akroan crusader",UMA,0.04,0,0,0,3/1/2019
 1,"alley evasion",AER,0.02,0,0,3,11/2/2018
 2,"alley evasion",AER,0.04,0,0,3,17/6/2018
@@ -659,14 +730,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"alley strangler",AER,0.03,0,0,3,17/6/2018
 1,"alley strangler",AER,0.11,0,0,3,25/1/2018
 1,"alpine moon",M19,1.36,0,0,0,14/9/2018
+1,"altar's reap",M14,0.02,0,0,0,2/3/2019
 1,"ambitious aetherborn",KLD,0.07,0,0,0,19/2/2018
 1,"ambitious aetherborn",KLD,0.03,0,0,3,28/2/2018
 2,"ancient animus",DOM,0.05,0,0,0,28/5/2018
 2,"ancient animus",DOM,0.05,0,0,3,12/5/2018
 1,"ancient stone idol",C18,0.96,0,0,0,2/9/2018
+1,"angel's mercy",M13,0.02,0,0,0,2/3/2019
 1,"angelic exaltation",RNA,0.08,0,0,0,20/1/2019
+2,"angelic gift",M20,0.04,0,0,0,30/9/2019
+2,"angelic wall",M14,0.09,0,0,0,2/3/2019
+2,"angrath, captain of chaos",WAR_JP,2.51,0,0,6,4/5/2019
 1,"animation module",KLD,0.26,0,0,0,24/5/2018
+1,"anticipate",M20,0.05,0,0,0,20/12/2019
 1,"anticipate",M19,0.07,0,0,0,3/9/2018
+1,"apostle of purifying light",M20,0.1,0,0,0,5/8/2019
 1,"appetite for the unnatural",KLD,0.07,0,0,0,19/2/2018
 1,"applied biomancy",RNA,0.04,0,0,0,20/1/2019
 1,"apprentice necromancer",C17,0.47,0,0,0,29/3/2018
@@ -675,11 +753,20 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"arbor armament",DOM,0.03,0,0,0,28/5/2018
 1,"arbor armament",DOM,0.05,0,0,0,12/5/2018
 1,"arborback stomper",KLD,0.07,0,0,3,8/2/2018
+1,"arboreal grazer",WAR,0.06,0,0,6,30/4/2019
+1,"arboreal grazer",WAR,0.07,0,0,6,4/5/2019
 1,"arboretum elemental",GRN,0.07,0,0,3,8/12/2018
 1,"arcane flight",DOM,0.05,0,0,0,12/5/2018
 1,"arcane flight",DOM,0.06,0,0,3,22/4/2018
 1,"arcanis the omnipotent",C17,0.32,0,0,0,29/3/2018
+1,"arcanist's owl",ELD,0.1,0,0,0,12/10/2019
 1,"archaeomancer",C17,0.13,0,0,0,29/3/2018
+1,"archon of absolution",ELD,0.09,0,0,0,12/10/2019
+1,"arlinn's wolf",WAR,0.05,0,0,0,25/12/2019
+1,"arlinn's wolf",WAR,0.04,0,0,6,1/5/2019
+1,"arlinn's wolf",WAR,0.05,0,0,6,4/5/2019
+1,"arlinn, voice of the pack",WAR,0.1,0,0,6,4/5/2019
+1,"arlinn, voice of the pack",WAR,0.11,0,0,6,30/4/2019
 1,"armorcraft judge",KLD,0.1,0,0,3,25/6/2018
 2,"arrester's admonition",RNA,0.04,0,0,0,20/1/2019
 2,"arrester's zeal",RNA,0.05,0,0,0,20/1/2019
@@ -688,6 +775,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"artificer's assistant",DOM,0.07,0,0,6,18/7/2018
 1,"aryel, knight of windgrace",DOM,0.32,0,0,0,29/5/2018
 1,"aryel, knight of windgrace",DOM,0.26,0,0,3,17/6/2018
+1,"ashiok's skulker",WAR,0.03,0,0,0,9/6/2019
+4,"ashiok's skulker",WAR,0.04,0,0,6,4/5/2019
+1,"ashiok, dream render",WAR,0.96,0,0,6,4/5/2019
 1,"assure_assemble",GRN,0.17,0,0,0,15/10/2018
 1,"attune with aether",KLD,0.09,0,0,0,19/2/2018
 1,"attune with aether",KLD,0.09,0,0,3,11/2/2018
@@ -695,35 +785,47 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"audacious infiltrator",AER,0.04,0,0,0,25/2/2018
 3,"audacious infiltrator",AER,0.02,0,0,3,17/6/2018
 1,"audacious infiltrator",AER,0.34,0,0,3,8/2/2018
+1,"audacious thief",M20,0.04,0,0,0,1/10/2019
 1,"augmenting automaton",AER,0.04,0,0,0,25/2/2018
 1,"augmenting automaton",AER,0.08,0,0,0,12/9/2018
 1,"augmenting automaton",AER,0.09,0,0,0,3/9/2018
 1,"augmenting automaton",AER,0.02,0,0,3,17/6/2018
 1,"augmenting automaton",AER,0.04,0,0,3,11/2/2018
 1,"augmenting automaton",AER,0.1,0,0,3,25/1/2018
+1,"aven eternal",WAR,0.03,0,0,0,9/6/2019
+3,"aven eternal",WAR,0.04,0,0,6,4/5/2019
 2,"aven sentry",DOM,0.02,0,0,0,5/8/2018
 1,"aven sentry",DOM,0.03,0,0,3,22/4/2018
 1,"aviary mechanic",KLD,0.04,0,0,3,8/2/2018
 1,"azami, lady of scrolls",C17,0.22,0,0,0,29/3/2018
 2,"azorius locket",RNA,0.04,0,0,0,20/1/2019
+1,"azorius locket",RNA,0.04,0,0,6,30/4/2019
 2,"azorius skyguard",RNA,0.04,0,0,0,20/1/2019
 1,"baffling end",RIX,0.13,0,0,0,25/3/2018
 1,"baird, steward of argive",DOM,0.2,0,0,3,22/4/2018
+1,"bake into a pie",ELD,0.05,0,0,0,12/10/2019
 1,"ballista charger",KLD,0.05,0,0,0,19/2/2018
 2,"baloth gorger",DOM,0.04,0,0,0,29/5/2018
 1,"baloth gorger",DOM,0.05,0,0,0,12/5/2018
 1,"baloth gorger",DOM,0.06,0,0,0,29/4/2018
 1,"baloth gorger",DOM,0.05,0,0,3,12/5/2018
+3,"band together",WAR,0.05,0,0,6,4/5/2019
+3,"banehound",WAR,0.05,0,0,6,4/5/2019
 1,"baral's expertise",AER,0.38,0,0,3,8/2/2018
 2,"barging sergeant",GRN,0.03,0,0,0,6/11/2018
 1,"barging sergeant",GRN,0.02,0,0,3,8/12/2018
+1,"barkhide troll",M20,0.36,1,0,0,1/10/2019
 1,"barricade breaker",AER,0.04,0,0,3,14/2/2018
 1,"barricade breaker",AER,0.06,0,0,3,8/2/2018
 1,"barricade breaker",AER,0.2,0,0,3,25/1/2018
 1,"barrier of bones",GRN,0.05,0,0,0,23/11/2018
 1,"barrier of bones",GRN,0.04,0,0,3,8/12/2018
+1,"barrier of bones",GRN,0.06,0,0,6,30/4/2019
+1,"barrow witches",ELD,0.11,1,0,0,25/12/2019
+1,"bartered cow",ELD,0.02,0,0,0,12/10/2019
 2,"bartizan bats",GRN,0.02,0,0,0,13/11/2018
 1,"bartizan bats",GRN,0.03,0,0,0,6/11/2018
+1,"bartizan bats",GRN,0.01,0,0,6,30/4/2019
 1,"bastion enforcer",AER,0.02,0,0,0,20/2/2018
 1,"bastion enforcer",AER,0.03,0,0,0,3/9/2018
 1,"bastion inventor",AER,0.03,0,0,0,12/9/2018
@@ -731,37 +833,64 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"bastion inventor",AER,0.06,0,0,3,15/2/2018
 1,"bastion inventor",AER,0.07,0,0,3,27/1/2018
 1,"battle at the bridge",AER,0.23,0,0,3,11/2/2018
+2,"battlefield promotion",WAR,0.04,0,0,6,30/4/2019
+2,"battlefield promotion",WAR,0.05,0,0,6,4/5/2019
 1,"beacon bolt",GRN,0.11,0,0,0,25/11/2018
 2,"beamsplitter mage",GRN,0.07,0,0,0,18/10/2018
+1,"beanstalk giant_fertile footsteps",PELD,0.27,0,0,0,12/10/2019
 3,"beast whisperer",GRN,0.44,0,0,0,25/11/2018
 1,"befuddle",DOM,0.03,0,0,0,28/5/2018
 1,"befuddle",DOM,0.07,0,0,0,29/4/2018
 1,"befuddle",DOM,0.03,0,0,3,31/5/2018
 1,"befuddle",DOM,0.08,0,0,3,22/4/2018
+1,"befuddle",M20,0.02,0,0,0,30/9/2019
+1,"belle of the brawl",ELD,0.08,0,0,0,12/10/2019
+1,"beloved princess",ELD,0.03,0,0,0,20/12/2019
 1,"benalish honor guard",DOM,0.05,0,0,3,22/4/2018
 1,"benalish honor guard",DOM,0.04,0,0,6,18/7/2018
+1,"bioessence hydra",WAR,0.34,0,0,6,3/5/2019
 1,"blackblade reforged",DOM,3.88,1,0,3,22/4/2018
+1,"blacklance paragon",ELD,1.55,1,0,0,12/10/2019
 1,"blade instructor",GRN,0.04,0,0,3,12/12/2018
+1,"bladebrand",M20,0.04,0,0,0,5/8/2019
 1,"blasphemous act",C18,1.25,0,0,0,2/9/2018
 1,"blazing hope",RIX,0.07,0,0,0,3/7/2018
+2,"bleeding edge",WAR,0.08,0,0,6,4/5/2019
 1,"blessed light",DOM,0.04,0,0,0,29/4/2018
 2,"blessed light",DOM,0.02,0,0,3,22/4/2018
 1,"blessed light",DOM,0.03,0,0,6,18/7/2018
 1,"blessing of belzenlok",DOM,0.04,0,0,0,29/5/2018
 1,"blessing of belzenlok",DOM,0.05,0,0,0,12/5/2018
 1,"blessing of belzenlok",DOM,0.06,0,0,3,22/4/2018
+2,"blindblast",WAR,0.03,0,0,6,4/5/2019
+2,"blindblast",WAR,0.04,0,0,6,30/4/2019
 1,"blinding fog",XLN,0.05,0,0,3,9/3/2018
 1,"blinkmoth urn",C18,0.21,0,0,0,2/9/2018
+1,"blood burglar",M20,0.04,0,0,0,6/10/2019
 1,"blood operative",GRN,0.3,0,0,0,6/11/2018
+1,"blood reckoning",M13,0.14,0,0,0,2/3/2019
 1,"blood sun",RIX,1.63,0,0,0,3/7/2018
+1,"bloodfell caves",M20,0.06,0,0,0,5/8/2019
 1,"bloodline necromancer",C17,0.16,0,0,0,29/3/2018
 1,"bloodstone goblin",DOM,0.08,0,0,3,22/4/2018
 1,"bloodtallow candle",DOM,0.04,0,0,0,12/5/2018
 1,"bloodtallow candle",DOM,0.04,0,0,3,22/4/2018
+3,"bloom hulk",WAR,0.05,0,0,6,4/5/2019
 1,"blossoming defense",KLD,0.95,0,0,3,11/2/2018
+1,"blow your house down",ELD,0.03,0,0,0,12/10/2019
+1,"blow your house down",ELD,0.15,1,0,0,12/10/2019
 1,"body double",C17,0.27,0,0,0,29/3/2018
 1,"bogstomper",M19,0.02,0,0,0,30/7/2018
+1,"bolas's citadel",WAR,1.35,0,0,6,30/4/2019
+2,"bolt bend",WAR,0.09,0,0,6,4/5/2019
 4,"bombard",RIX,0.04,0,0,0,3/7/2018
+2,"bond of discipline",WAR,0.07,0,0,6,4/5/2019
+1,"bond of flourishing",WAR,0.11,0,0,6,4/5/2019
+1,"bond of insight",WAR,0.09,0,0,6,30/4/2019
+2,"bond of passion",WAR,0.06,0,0,6,4/5/2019
+1,"bond of revival",WAR,0.09,0,0,6,4/5/2019
+1,"bone splinters",M20,0.04,0,0,0,5/8/2019
+1,"boneclad necromancer",M20,0.05,0,0,0,5/8/2019
 1,"boros challenger",GRN,0.11,0,0,0,30/9/2018
 1,"boros guildgate (a)",GRN,0.04,0,0,0,13/11/2018
 1,"boros guildgate (b)",GRN,0.03,0,0,0,25/11/2018
@@ -769,15 +898,19 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"boros guildgate (b)",GRN,0.05,0,0,3,12/12/2018
 1,"boros locket",GRN,0.06,0,0,0,15/10/2018
 1,"bosh, iron golem",C18,0.16,0,0,0,2/9/2018
+1,"bountiful harvest",M13,0.02,0,0,0,2/3/2019
 1,"bounty agent",GRN,0.17,0,0,3,8/12/2018
 1,"bounty of might",GRN,0.1,0,0,0,25/11/2018
 1,"bounty of might",GRN,0.1,0,0,3,8/12/2018
 1,"brass's bounty",RIX,0.15,0,0,3,28/2/2018
 1,"brawl-bash ogre",M19,0.07,0,0,0,3/9/2018
+1,"brazen borrower_petty theft",ELD,25.9,1,0,0,25/12/2019
 1,"brazen freebooter",RIX,0.03,0,0,0,25/3/2018
 1,"brazen freebooter",RIX,0.05,0,0,0,3/7/2018
 1,"brazen freebooter",RIX,0.02,0,0,3,4/4/2018
 1,"brazen freebooter",RIX,0.03,0,0,3,28/2/2018
+2,"brightwood tracker",M20,0.03,0,0,0,20/12/2019
+1,"brimstone trebuchet",ELD,0.04,0,0,0,12/10/2019
 4,"bring to trial",RNA,0.03,0,0,0,20/1/2019
 1,"bristling boar",M19,0.0,0,0,0,7/7/2018
 1,"broken bond",DOM,0.1,0,0,0,29/4/2018
@@ -787,10 +920,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"built to last",KLD,0.03,0,0,3,8/2/2018
 1,"built to smash",KLD,0.06,0,0,0,19/2/2018
 1,"built to smash",KLD,0.06,0,0,3,11/2/2018
+4,"bulwark giant",WAR,0.03,0,0,6,4/5/2019
 1,"burglar rat",GRN,0.05,0,0,0,25/11/2018
 1,"burglar rat",GRN,0.07,0,0,0,5/10/2018
 1,"burglar rat",GRN,0.06,0,0,3,12/12/2018
 1,"buried ruin",C18,0.32,0,0,0,2/9/2018
+2,"burning prophet",WAR,0.05,0,0,6,4/5/2019
 1,"cabal evangel",DOM,0.02,0,0,0,28/5/2018
 1,"cabal evangel",DOM,0.02,0,0,3,17/6/2018
 1,"cabal evangel",DOM,0.04,0,0,3,22/4/2018
@@ -802,6 +937,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"caligo skin-witch",DOM,0.05,0,0,3,22/4/2018
 3,"call the cavalry",DOM,0.05,0,0,0,29/5/2018
 1,"call the cavalry",DOM,0.05,0,0,3,12/5/2018
+1,"callous dismissal",WAR,0.04,0,0,6,29/4/2019
+3,"callous dismissal",WAR,0.05,0,0,6,4/5/2019
 2,"canal monitor",RIX,0.02,0,0,0,3/7/2018
 1,"canal monitor",RIX,0.02,0,0,3,4/4/2018
 1,"cancel",XLN,0.03,0,0,3,25/3/2018
@@ -809,10 +946,14 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"candlelight vigil",GRN,0.05,0,0,0,14/10/2018
 1,"candlelight vigil",GRN,0.06,0,0,0,30/9/2018
 1,"candlelight vigil",GRN,0.05,0,0,3,12/12/2018
+1,"captive audience",RNA,0.88,0,0,6,30/4/2019
 2,"capture sphere",GRN,0.03,0,0,0,23/11/2018
 2,"capture sphere",GRN,0.04,0,0,0,5/10/2018
+1,"capture sphere",GRN,0.02,0,0,6,30/4/2019
 1,"cast down",DOM,0.47,0,0,0,5/8/2018
 2,"cast down",DOM,0.62,0,0,3,12/5/2018
+1,"casualties of war",WAR,0.52,0,0,6,1/5/2019
+1,"catacomb crocodile",RNA,0.05,0,0,6,30/4/2019
 1,"catalyst elemental",M19,0.0,0,0,0,7/7/2018
 1,"catalyst elemental",M19,0.06,0,0,0,30/7/2018
 1,"cathartic reunion",KLD,0.14,0,0,0,12/4/2018
@@ -822,23 +963,44 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"caught in the brights",AER,0.03,0,0,3,11/2/2018
 1,"caught in the brights",AER,0.06,0,0,3,17/6/2018
 1,"cauldron dance",C17,0.18,0,0,0,29/3/2018
+1,"cauldron familiar",ELD,0.12,0,0,0,12/10/2019
+1,"cauldron's gift",ELD,0.05,0,0,0,20/12/2019
+1,"cauldron's gift",ELD,0.13,1,0,0,25/12/2019
+1,"cavalier of flame",M20,5.65,0,0,0,20/12/2019
+1,"cavalier of gales",M20,3.67,0,0,0,5/8/2019
 1,"cavalry drillmaster",M19,0.0,0,0,0,7/7/2018
 1,"cavalry drillmaster",M19,0.05,0,0,6,18/7/2018
+1,"cavalry pegasus",THS,0.06,0,0,0,2/7/2019
 1,"centaur courser",M19,0.0,0,0,0,7/7/2018
+1,"centaur courser",M20,0.02,0,0,0,5/8/2019
+1,"centaur courser",M13,0.02,0,0,0,2/3/2019
+2,"centaur nurturer",WAR,0.04,0,0,6,4/5/2019
 2,"centaur peacemaker",GRN,0.03,0,0,0,1/1/2019
 1,"centaur peacemaker",GRN,0.05,0,0,0,15/10/2018
 1,"chainer's torment",DOM,0.07,0,0,3,25/6/2018
+2,"chainwhip cyclops",WAR,0.03,0,0,6,4/5/2019
+1,"chainwhip cyclops",WAR,0.04,0,0,6,1/5/2019
+1,"challenger troll",WAR,0.04,0,0,0,9/6/2019
 1,"chamber sentry",GRN,0.32,0,0,0,30/9/2018
 1,"champion of the flame",DOM,0.1,0,0,0,28/5/2018
 1,"champion of the flame",DOM,0.15,0,0,3,22/4/2018
+1,"chandra's embercat",M20,0.06,0,0,0,5/8/2019
+1,"chandra's outrage",M20,0.03,0,0,0,30/9/2019
+2,"chandra's pyrohelix",WAR,0.04,0,0,6,4/5/2019
+1,"chandra's pyrohelix",WAR,0.05,0,0,6,30/4/2019
 1,"chandra's pyrohelix",KLD,0.08,0,0,6,18/7/2018
 2,"chandra's revolution",AER,0.02,0,0,3,17/6/2018
 1,"chandra's revolution",AER,0.28,0,0,3,27/1/2018
+1,"chandra's triumph",WAR,0.09,0,0,6,30/4/2019
 1,"chaos warp",C17,0.95,0,0,0,29/3/2018
 1,"chaos warp",C18,0.44,0,0,0,2/9/2018
 1,"charge",DOM,0.04,0,0,0,12/5/2018
 1,"charge",DOM,0.04,0,0,3,12/5/2018
 1,"charge",DOM,0.07,0,0,3,22/4/2018
+1,"charity extractor",WAR,0.04,0,0,0,9/6/2019
+1,"charity extractor",WAR,0.03,0,0,6,4/5/2019
+2,"charity extractor",WAR,0.04,0,0,6,1/5/2019
+4,"charmed stray",WAR,0.04,0,0,6,4/5/2019
 1,"charnel troll",GRN,0.36,0,0,0,25/11/2018
 1,"chart a course",XLN,0.31,0,0,3,9/3/2018
 1,"chemister's insight",GRN,0.3,0,0,0,25/11/2018
@@ -847,14 +1009,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"child of night",GRN,0.06,0,0,0,18/10/2018
 1,"child of night",GRN,0.09,0,0,0,30/9/2018
 1,"chillbringer",RNA,0.03,0,0,0,20/1/2019
+1,"chorus of the tides",BNG,0.01,0,0,0,2/7/2019
 1,"citywatch sphinx",GRN,0.04,0,0,0,1/1/2019
 1,"citywide bust",GRN,0.19,0,0,0,23/11/2018
 4,"civic stalwart",RNA,0.03,0,0,0,20/1/2019
+1,"claim the firstborn",ELD,0.12,0,0,0,12/10/2019
 1,"cleansing nova",M19,0.0,0,0,0,7/7/2018
 4,"clear the mind",RNA,0.05,0,0,0,20/1/2019
 1,"clifftop retreat",DOM,2.52,0,0,0,28/4/2018
 1,"clone legion",C17,0.37,0,0,0,29/3/2018
 1,"cloudblazer",KLD,0.11,0,0,3,25/6/2018
+2,"cloudkin seer",M20,0.06,0,0,0,1/10/2019
 1,"cloudreader sphinx",DOM,0.04,0,0,0,28/5/2018
 1,"cloudreader sphinx",DOM,0.05,0,0,0,28/4/2018
 1,"cloudreader sphinx",DOM,0.05,0,0,3,22/4/2018
@@ -873,6 +1038,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"colossal dreadmaw",M19,0.0,0,0,0,7/7/2018
 1,"colossal majesty",M19,0.0,0,0,0,7/7/2018
 2,"colossal majesty",M19,0.12,0,0,0,14/9/2018
+1,"colossal whale",M14,0.21,0,0,0,2/3/2019
 1,"combine guildmage",RNA,0.09,0,0,0,20/1/2019
 1,"comet storm",C17,0.28,0,0,0,29/3/2018
 2,"command the storm",GRN,0.04,0,0,0,18/10/2018
@@ -880,6 +1046,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"command tower",C18,0.38,0,0,0,2/9/2018
 1,"commander's sphere",C18,0.17,0,0,0,2/9/2018
 1,"commander's sphere",C17,0.22,0,0,0,29/3/2018
+1,"commence the endgame",WAR,0.32,0,0,6,30/4/2019
 1,"commencement of festivities",KLD,0.04,0,0,0,12/4/2018
 1,"commencement of festivities",KLD,0.07,0,0,0,12/9/2018
 2,"commencement of festivities",KLD,0.03,0,0,3,11/2/2018
@@ -905,6 +1072,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"consulate turret",AER,0.04,0,0,0,2/6/2018
 1,"consulate turret",AER,0.11,0,0,3,25/1/2018
 1,"consulate turret",AER,0.04,0,0,6,18/7/2018
+3,"contentious plan",WAR,0.07,0,0,6,4/5/2019
 1,"conviction",AER,0.09,0,0,0,25/2/2018
 1,"conviction",AER,0.05,0,0,3,25/6/2018
 1,"conviction",AER,0.12,0,0,3,25/1/2018
@@ -916,6 +1084,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"countless gears renegade",AER,0.02,0,0,0,25/2/2018
 1,"countless gears renegade",AER,0.11,0,0,3,8/2/2018
 1,"countless gears renegade",AER,0.12,0,0,3,25/1/2018
+1,"courage in crisis",WAR,0.05,0,0,0,9/6/2019
+2,"courage in crisis",WAR,0.05,0,0,6,4/5/2019
+1,"courage in crisis",WAR,0.06,0,0,6,1/5/2019
 1,"coveted jewel",C18,1.27,0,0,0,2/9/2018
 1,"cowl prowler",KLD,0.02,0,0,0,12/9/2018
 1,"cowl prowler",KLD,0.03,0,0,3,11/2/2018
@@ -929,16 +1100,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"crashing tide",RIX,0.04,0,0,3,4/4/2018
 1,"crashing tide",RIX,0.05,0,0,3,23/3/2018
 1,"creeping mold",KLD,0.06,0,0,0,19/2/2018
+1,"creeping trailblazer",M20,0.12,0,0,0,1/10/2019
 1,"crosis's charm",C17,0.15,0,0,0,29/3/2018
 1,"crucible of worlds",M19,0.0,0,0,0,7/7/2018
+1,"cruel celebrant",WAR,0.18,0,0,6,4/5/2019
 3,"cruel finality",AER,0.01,0,0,0,2/6/2018
 1,"cruel finality",AER,0.05,0,0,0,12/9/2018
 1,"cruel finality",AER,0.36,0,0,3,8/2/2018
 1,"crumbling necropolis",C17,0.17,0,0,0,29/3/2018
 1,"crush contraband",GRN,0.07,0,0,0,13/11/2018
 1,"crush contraband",GRN,0.11,0,0,0,18/10/2018
+2,"crush dissent",WAR,0.06,0,0,6,4/5/2019
+1,"crush dissent",WAR,0.2,1,0,6,30/4/2019
 1,"crushing canopy",GRN,0.03,0,0,0,30/9/2018
 1,"crushing canopy",GRN,0.06,0,0,3,12/12/2018
+1,"crystal slipper",ELD,0.04,0,0,0,12/10/2019
 1,"cultivator of blades",KLD,0.09,0,0,0,19/2/2018
 1,"cultivator of blades",KLD,0.1,0,0,3,11/2/2018
 1,"cultivator's caravan",KLD,0.22,0,0,3,28/2/2018
@@ -949,14 +1125,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"curse of disturbance",C17,0.17,0,0,0,29/3/2018
 1,"curse of opulence",C17,0.23,0,0,0,29/3/2018
 1,"curse of verbosity",C17,0.22,0,0,0,29/3/2018
+1,"cyclops electromancer",WAR,0.06,0,0,6,4/5/2019
 2,"d'avenant trapper",DOM,0.03,0,0,0,29/5/2018
 1,"d'avenant trapper",DOM,0.06,0,0,0,28/4/2018
 1,"d'avenant trapper",DOM,0.04,0,0,3,12/5/2018
 1,"daggerback basilisk",M19,0.0,0,0,0,7/7/2018
 1,"daggerback basilisk",M19,0.04,0,0,0,14/9/2018
+2,"daggersail aeronaut",M20,0.04,0,0,0,20/12/2019
 1,"damping sphere",DOM,2.5,0,0,3,12/5/2018
 1,"damping sphere",DOM,2.94,0,0,3,22/4/2018
 1,"damping sphere",DOM,1.17,0,0,6,18/7/2018
+1,"dance of the manse",ELD,1.03,1,0,0,25/12/2019
 1,"daredevil dragster",AER,0.05,0,0,3,8/2/2018
 1,"daring archaeologist",DOM,0.27,0,0,3,22/4/2018
 1,"daring buccaneer",RIX,0.1,0,0,0,2/7/2018
@@ -966,6 +1145,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"daring demolition",AER,0.18,0,0,3,8/2/2018
 2,"dark bargain",DOM,0.05,0,0,3,12/5/2018
 1,"dark dabbling",UMA,0.04,0,0,0,3/1/2019
+1,"dark favor",M14,0.04,0,0,0,2/3/2019
 1,"dark inquiry",RIX,0.02,0,0,0,3/7/2018
 1,"dark inquiry",RIX,0.05,0,0,3,4/4/2018
 1,"dark intimations",AER,0.12,0,0,3,27/1/2018
@@ -975,12 +1155,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"darksteel ingot",C17,0.13,0,0,0,29/3/2018
 1,"darksteel juggernaut",C18,0.24,0,0,0,2/9/2018
 1,"dauntless bodyguard",DOM,0.28,0,0,0,28/4/2018
+4,"davriel's shadowfugue",WAR,0.05,0,0,6,4/5/2019
 1,"dawnfeather eagle",AER,0.03,0,0,0,28/4/2018
 1,"dawnfeather eagle",AER,0.04,0,0,0,20/2/2018
 1,"dawnfeather eagle",AER,0.02,0,0,3,17/6/2018
 2,"dawnfeather eagle",AER,0.03,0,0,3,14/2/2018
 1,"dawnfeather eagle",AER,0.14,0,0,3,8/2/2018
 1,"dawnfeather eagle",AER,0.08,0,0,6,18/7/2018
+1,"dawnstrike paladin",M14,0.02,0,0,0,2/3/2019
+2,"daybreak chaplain",M20,0.02,0,0,0,1/10/2019
+1,"daybreak chaplain",M20,0.04,0,0,0,5/8/2019
 1,"daybreak chaplain",M19,0.05,0,0,0,3/9/2018
 2,"dazzling lights",GRN,0.05,0,0,0,13/11/2018
 1,"dazzling lights",GRN,0.03,0,0,3,12/12/2018
@@ -995,8 +1179,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"deadlock trap",KLD,0.08,0,0,0,19/2/2018
 2,"deadly visit",GRN,0.03,0,0,0,5/10/2018
 1,"deadly visit",GRN,0.04,0,0,0,15/10/2018
+1,"deafening silence",ELD,0.5,0,0,0,12/10/2019
 1,"deathbloom thallid",DOM,0.06,0,0,0,29/5/2018
 1,"deathbloom thallid",DOM,0.05,0,0,3,25/6/2018
+1,"deathless knight",ELD,0.09,0,0,0,12/10/2019
+2,"deathsprout",WAR,0.12,0,0,6,4/5/2019
 1,"decoction module",KLD,0.1,0,0,0,19/2/2018
 3,"decoction module",KLD,0.08,0,0,3,31/5/2018
 1,"decommission",AER,0.04,0,0,0,12/9/2018
@@ -1011,7 +1198,10 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"defiant salvager",AER,0.06,0,0,0,12/9/2018
 2,"defiant salvager",AER,0.05,0,0,3,17/6/2018
 1,"defiant salvager",AER,0.12,0,0,3,25/1/2018
+1,"defiant strike",WAR,0.06,0,0,6,30/4/2019
 1,"deft dismissal",AER,0.03,0,0,3,17/6/2018
+1,"deliver unto evil",WAR,0.29,0,0,6,4/5/2019
+2,"demolish",WAR,0.06,0,0,6,4/5/2019
 1,"demolish",KLD,0.03,0,0,0,19/2/2018
 1,"demolish",KLD,0.03,0,0,3,11/2/2018
 1,"demolition stomper",KLD,0.06,0,0,0,19/2/2018
@@ -1024,14 +1214,20 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"depths of desire",XLN,0.03,0,0,3,9/3/2018
 1,"deputy of detention",RNA,2.0,0,0,0,20/1/2019
 1,"despair",HOU,0.28,0,0,0,15/4/2018
+1,"despark",WAR,0.21,0,0,6,30/4/2019
+1,"despark",WAR,0.22,0,0,6,4/5/2019
+1,"destructive digger",M20,0.03,0,0,0,6/10/2019
+1,"destructive digger",M20,0.04,0,0,0,5/8/2019
 1,"destructive tampering",AER,0.16,0,0,0,25/2/2018
 1,"destructive tampering",AER,0.11,0,0,3,15/2/2018
 2,"destructive tampering",AER,0.12,0,0,3,8/2/2018
 2,"destructive tampering",AER,0.13,0,0,3,25/1/2018
 2,"devious cover-up",GRN,0.05,0,0,0,25/11/2018
 1,"devkarin dissident",GRN,0.01,0,0,3,12/12/2018
+3,"devouring hellion",WAR,0.07,0,0,6,4/5/2019
 2,"dhund operative",KLD,0.05,0,0,0,19/2/2018
 1,"dhund operative",KLD,0.05,0,0,3,11/2/2018
+1,"didn't say please",ELD,0.06,0,0,0,12/10/2019
 1,"die young",KLD,0.02,0,0,0,12/9/2018
 1,"die young",KLD,0.05,0,0,3,11/2/2018
 1,"diligent excavator",DOM,0.06,0,0,0,28/5/2018
@@ -1054,6 +1250,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"discovery_dispersal",GRN,0.17,0,0,0,1/1/2019
 1,"disdainful stroke",GRN,0.08,0,0,0,1/1/2019
 2,"disdainful stroke",GRN,0.08,0,0,3,8/12/2018
+2,"disenchant",M20,0.06,0,0,0,5/8/2019
+2,"disenchant",M20,0.07,0,0,0,6/10/2019
 1,"dismal backwater",C17,0.08,0,0,0,29/3/2018
 1,"dismissive pyromancer",M19,0.25,0,0,0,30/7/2018
 2,"dispersal technician",AER,0.02,0,0,0,3/9/2018
@@ -1070,13 +1268,27 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"divination",M19,0.0,0,0,0,7/7/2018
 1,"divination",DOM,0.06,0,0,3,22/4/2018
 1,"divination",DOM,0.09,0,0,3,12/5/2018
+2,"divine arrow",WAR,0.03,0,0,6,4/5/2019
+1,"divine arrow",WAR,0.04,0,0,6,30/4/2019
 1,"divine verdict",RIX,0.02,0,0,0,3/7/2018
 1,"divine verdict",RIX,0.02,0,0,3,4/4/2018
+2,"domri's ambush",WAR,0.1,0,0,6,1/5/2019
+1,"domri, anarch of bolas",WAR_JP,6.68,0,0,6,3/5/2019
 1,"doublecast",M19,0.11,0,0,0,30/7/2018
 2,"douser of lights",GRN,0.01,0,0,0,1/1/2019
 1,"douser of lights",GRN,0.02,0,0,0,23/11/2018
+1,"dovin's veto",WAR,0.61,0,0,6,4/5/2019
+1,"dovin's veto",WAR,0.63,0,0,6,30/4/2019
+1,"dovin's veto",WAR,0.64,0,0,6,28/04/2019
 1,"dovin, grand arbiter",RNA,2.0,0,0,0,20/1/2019
+1,"dovin, hand of control",WAR_JP,0.0,1,0,6,3/5/2019
+1,"downpour",M13,0.06,0,0,0,2/3/2019
+1,"dragon hatchling",M14,0.17,0,0,0,2/3/2019
 1,"dramatic reversal",KLD,0.07,0,0,3,8/2/2018
+1,"drawn from dreams",M20,0.82,0,0,0,5/8/2019
+1,"dreadhorde butcher",WAR,1.46,0,0,6,30/4/2019
+1,"dreadhorde invasion",WAR,1.82,0,0,6,4/5/2019
+2,"dreadhorde twins",WAR,0.06,0,0,6,4/5/2019
 1,"dreamcaller siren",XLN,0.18,0,0,3,9/3/2018
 1,"dreamstone hedron",C18,0.07,0,0,0,2/9/2018
 1,"drudge sentinel",DOM,0.02,0,0,3,12/5/2018
@@ -1094,9 +1306,15 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"dukhara scavenger",KLD,0.06,0,0,6,18/7/2018
 1,"duplicant",C18,0.44,0,0,0,2/9/2018
 1,"duress",M19,0.0,0,0,0,7/7/2018
+2,"duress",M20,0.06,0,0,0,20/12/2019
 1,"dusk charger",RIX,0.02,0,0,0,23/2/2018
 1,"dusk charger",RIX,0.02,0,0,3,28/2/2018
 1,"dusk legion zealot",RIX,0.08,0,0,3,23/3/2018
+1,"duskmantle operative",WAR,0.03,0,0,0,9/6/2019
+2,"duskmantle operative",WAR,0.04,0,0,6,4/5/2019
+1,"dwarven mine",ELD,0.06,0,0,0,12/10/2019
+1,"dwarven mine",ELD,0.07,0,0,0,20/12/2019
+1,"dwarven mine",ELD,0.27,1,0,0,25/12/2019
 1,"dwarven priest",M19,0.0,0,0,0,7/7/2018
 1,"dwindle",M19,0.0,0,0,0,7/7/2018
 1,"dwindle",M19,0.03,0,0,0,30/7/2018
@@ -1116,29 +1334,46 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"electrostatic field",GRN,0.14,0,0,0,5/10/2018
 1,"elfhame druid",DOM,0.1,0,0,3,12/5/2018
 1,"eliminate the competition",KLD,0.08,0,0,0,19/2/2018
+1,"elite headhunter",ELD,0.04,0,0,0,20/12/2019
+1,"elvish mystic",M14,0.21,0,0,0,2/3/2019
+1,"embereth shieldbreaker_battle display",ELD,0.19,1,0,0,25/12/2019
 1,"embraal bruiser",KLD,0.07,0,0,0,19/2/2018
 2,"embraal gear-smasher",AER,0.02,0,0,0,25/2/2018
 1,"embraal gear-smasher",AER,0.03,0,0,0,12/9/2018
 2,"embraal gear-smasher",AER,0.04,0,0,3,11/2/2018
+1,"emergence zone",WAR,0.32,0,0,6,30/4/2019
 1,"empyreal voyager",KLD,0.05,0,0,0,19/2/2018
+1,"empyrean eagle",M20,0.16,0,0,0,1/10/2019
 1,"enchanter's bane",C18,0.78,0,0,0,2/9/2018
+1,"encroaching wastes",M14,0.15,0,0,0,2/3/2019
 1,"endless atlas",C18,1.35,0,0,0,2/9/2018
+2,"enforcer griffin",WAR,0.03,0,0,6,4/5/2019
 1,"engineered might",KLD,0.05,0,0,0,19/2/2018
 1,"enigma drake",M19,0.0,0,0,0,7/7/2018
+1,"enter the god-eternals",WAR,0.54,0,0,6,4/5/2019
+1,"epicure of blood",M20,0.04,0,0,0,1/10/2019
+4,"erratic visionary",WAR,0.04,0,0,6,4/5/2019
 2,"erstwhile trooper",GRN,0.04,0,0,0,25/11/2018
 1,"erstwhile trooper",GRN,0.06,0,0,0,30/9/2018
 1,"erstwhile trooper",GRN,0.04,0,0,3,12/12/2018
 1,"essence capture",RNA,0.17,0,0,0,20/1/2019
+1,"essence drain",M13,0.01,0,0,0,2/3/2019
 1,"essence extraction",KLD,0.1,0,0,0,19/2/2018
 1,"essence scatter",M19,0.0,0,0,0,7/7/2018
 1,"essence scatter",M19,0.07,0,0,0,30/7/2018
+3,"eternal skylord",WAR,0.07,0,0,6,4/5/2019
+2,"eternal taskmaster",WAR,0.09,0,0,6,4/5/2019
 1,"etherium sculptor",C18,0.1,0,0,0,2/9/2018
 1,"etherium-horn sorcerer",C17,0.19,0,0,0,29/3/2018
 1,"etrata, the silencer",GRN,0.32,0,0,3,12/12/2018
+1,"evanescent intellect",BNG,0.01,0,0,0,2/7/2019
 1,"everdawn champion",RIX,0.05,0,0,0,3/7/2018
 1,"eviscerate",DOM,0.04,0,0,0,12/5/2018
 1,"eviscerate",DOM,0.02,0,0,3,25/6/2018
 1,"eviscerate",DOM,0.63,1,0,0,29/4/2018
+2,"evolution sage",WAR,0.34,0,0,6,30/4/2019
+1,"evolving wilds",M20,0.06,0,0,0,5/8/2019
+1,"evolving wilds",M20,0.07,0,0,0,30/9/2019
 1,"evolving wilds",C17,0.07,0,0,0,29/3/2018
 1,"evra, halcyon witness",DOM,0.15,0,0,0,28/5/2018
 1,"evra, halcyon witness",DOM,0.43,0,0,3,22/4/2018
@@ -1147,6 +1382,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"excavation elephant",DOM,0.02,0,0,3,25/6/2018
 1,"excavation elephant",DOM,0.04,0,0,3,22/4/2018
 1,"exclusion mage",M19,0.0,0,0,0,7/7/2018
+1,"excoriate",BNG,0.13,0,0,0,2/7/2019
 1,"exotic orchard",C17,0.34,0,0,0,29/3/2018
 1,"expel from orazca",RIX,0.09,0,0,0,3/7/2018
 2,"expel from orazca",RIX,0.07,0,0,3,9/3/2018
@@ -1155,6 +1391,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"eyes everywhere",RNA,0.08,0,0,0,20/1/2019
 4,"fabrication module",KLD,0.08,0,0,3,24/5/2018
 1,"faerie duelist",RNA,0.04,0,0,0,20/1/2019
+1,"faerie guidemother_gift of the fae",ELD,0.05,0,0,0,12/10/2019
 1,"failed inspection",KLD,0.03,0,0,0,19/2/2018
 1,"fairgrounds warden",KLD,0.1,0,0,0,12/4/2018
 1,"fairgrounds warden",KLD,0.14,0,0,0,19/2/2018
@@ -1163,20 +1400,32 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"fatal push",AER,3.74,0,0,0,12/9/2018
 1,"fatal push",AER,5.8,0,0,0,20/2/2018
 1,"fatal push",AER,5.76,0,0,3,14/2/2018
+1,"fate unraveler",BNG,0.34,0,0,0,2/7/2019
+1,"fated retribution",BNG,0.9,1,0,0,2/7/2019
 1,"fathom fleet boarder",RIX,0.02,0,0,3,23/3/2018
+3,"fathom fleet cutthroat",M20,0.02,0,0,0,30/9/2019
 3,"fearless halberdier",GRN,0.02,0,0,0,25/11/2018
 1,"fearless halberdier",GRN,0.03,0,0,0,15/10/2018
 1,"fearless halberdier",GRN,0.06,0,0,0,30/9/2018
 1,"fearless halberdier",GRN,0.01,0,0,3,12/12/2018
+2,"fearsome temper",BNG,0.02,0,0,0,2/7/2019
+1,"feather, the redeemed",WAR,11.01,1,0,6,29/4/2019
+1,"felhide spiritbinder",BNG,0.14,0,0,0,2/7/2019
 1,"felidar guardian",AER,0.16,0,0,3,11/2/2018
 1,"fellwar stone",C17,0.27,0,0,0,29/3/2018
 1,"fen hauler",AER,0.02,0,0,3,11/2/2018
 2,"fen hauler",AER,0.06,0,0,3,17/6/2018
+1,"fencing ace",M20,0.05,0,0,0,6/10/2019
 3,"feral abomination",DOM,0.04,0,0,0,28/5/2018
+1,"feral abomination",M20,0.03,0,0,0,5/8/2019
+1,"feral abomination",M20,0.05,0,0,0,20/12/2019
+1,"feral invocation",M20,0.04,0,0,0,5/8/2019
+1,"fervent champion",PELD,3.47,0,0,0,25/12/2019
 1,"fervent strike",DOM,0.04,0,0,0,29/5/2018
 1,"fervent strike",DOM,0.06,0,0,0,28/4/2018
 1,"field creeper",M19,0.0,0,0,0,7/7/2018
 1,"field of ruin",XLN,2.09,0,0,3,28/2/2018
+1,"fierce witchstalker",ELD,0.06,0,0,0,12/10/2019
 1,"fiery finish",M19,0.04,0,0,6,18/7/2018
 1,"fiery intervention",DOM,0.02,0,0,0,28/5/2018
 1,"fiery intervention",DOM,0.03,0,0,0,12/5/2018
@@ -1188,31 +1437,49 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"filigree crawler",AER,0.22,0,0,3,8/2/2018
 1,"filigree familiar",KLD,0.12,0,0,0,12/4/2018
 1,"final parting",DOM,0.09,0,0,0,29/5/2018
+1,"finale of devastation",WAR,8.18,0,0,0,25/12/2019
 1,"find_finality",GRN,0.76,0,0,0,1/1/2019
 1,"fire elemental",DOM,0.03,0,0,0,12/5/2018
 1,"fire elemental",DOM,0.04,0,0,3,22/4/2018
 1,"fire elemental",M19,0.0,0,0,0,7/7/2018
 1,"fire elemental",M19,0.01,0,0,6,18/7/2018
+1,"fire elemental",M20,0.02,0,0,0,1/10/2019
 1,"fire shrine keeper",XLN,0.07,0,0,3,28/2/2018
 2,"fire urchin",GRN,0.03,0,0,0,25/11/2018
 1,"fire urchin",GRN,0.06,0,0,0,30/9/2018
 1,"firefist adept",DOM,0.08,0,0,3,22/4/2018
 1,"fireforger's puzzleknot",KLD,0.01,0,0,0,19/2/2018
 2,"fireforger's puzzleknot",KLD,0.01,0,0,3,28/2/2018
+1,"firemind vessel",WAR,0.1,0,0,0,9/6/2019
+1,"firemind vessel",WAR,0.13,0,0,6,1/5/2019
 1,"firemind's research",GRN,0.32,0,0,0,14/10/2018
+1,"flaxen intruder_welcome home",PELD,0.29,0,0,0,12/10/2019
 1,"flight of equenauts",GRN,0.08,0,0,0,30/9/2018
 1,"flight of equenauts",GRN,0.04,0,0,3,8/12/2018
+1,"fling",ELD,0.04,0,0,0,12/10/2019
+1,"flinthoof boar",M13,0.23,0,0,0,2/3/2019
 1,"flood of recollection",RIX,0.08,0,0,0,3/7/2018
 1,"flood of recollection",RIX,0.08,0,0,3,28/2/2018
 1,"flower_flourish",GRN,0.08,0,0,0,30/9/2018
+1,"flutterfox",ELD,0.04,0,0,0,12/10/2019
+1,"flux channeler",WAR,0.13,0,0,0,9/6/2019
+2,"flux channeler",WAR,0.16,0,0,6,1/5/2019
+2,"fog",M14,0.07,0,0,0,2/3/2019
+1,"forced landing",WAR,0.05,0,0,0,9/6/2019
+2,"forced landing",WAR,0.05,0,0,6,4/5/2019
 1,"forebear's blade",DOM,0.17,0,0,0,28/4/2018
 1,"forebear's blade",DOM,0.18,0,0,0,29/4/2018
 1,"forerunner of the heralds",RIX,0.1,0,0,0,25/3/2018
+1,"forever young",ELD,0.06,0,0,0,12/10/2019
 1,"forge of heroes",C18,0.78,0,0,0,2/9/2018
+1,"forsaken drifters",BNG,0.08,0,0,0,2/7/2019
 1,"forsaken sanctuary",M19,0.0,0,0,0,7/7/2018
 1,"forsaken sanctuary",RIX,0.09,0,0,0,2/7/2018
+1,"fortifying provisions",ELD,0.03,0,0,0,12/10/2019
+2,"fortress crab",M20,0.02,0,0,0,1/10/2019
 1,"fortuitous find",KLD,0.04,0,0,0,19/2/2018
 1,"foul orchard",RIX,0.07,0,0,3,23/3/2018
+1,"foulmire knight_profane insight",PELD,0.32,0,0,0,12/10/2019
 1,"foundry assembler",AER,0.03,0,0,0,25/2/2018
 1,"foundry assembler",AER,0.04,0,0,3,15/2/2018
 1,"foundry assembler",AER,0.15,0,0,3,8/2/2018
@@ -1228,14 +1495,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"frenzied rage",DOM,0.05,0,0,3,22/4/2018
 1,"fresh-faced recruit",GRN,0.03,0,0,0,25/11/2018
 3,"fresh-faced recruit",GRN,0.04,0,0,0,6/11/2018
+1,"fresh-faced recruit",GRN,0.05,0,0,6,30/4/2019
 1,"frilled deathspitter",RIX,0.04,0,0,0,25/3/2018
 1,"frilled deathspitter",RIX,0.04,0,0,3,23/3/2018
+1,"frilled mystic",RNA,0.17,0,0,6,30/4/2019
+1,"frilled sea serpent",M20,0.02,0,0,0,5/8/2019
+1,"frilled sea serpent",M20,0.05,0,0,0,20/12/2019
 2,"frilled sea serpent",M19,0.0,0,0,0,7/7/2018
 1,"frilled sea serpent",M19,0.02,0,0,6,18/7/2018
 1,"frontline devastator",HOU,0.05,0,0,0,15/4/2018
 1,"frontline rebel",AER,0.02,0,0,0,28/4/2018
 2,"frontline rebel",AER,0.01,0,0,3,25/6/2018
 2,"frontline rebel",AER,0.19,0,0,3,8/2/2018
+1,"frost lynx",M20,0.03,0,0,0,1/10/2019
+1,"frost lynx",M20,0.04,0,0,0,5/8/2019
+1,"fry",M20,0.32,0,0,0,6/10/2019
 1,"fungal plots",DOM,0.12,0,0,0,5/8/2018
 2,"fungal plots",DOM,0.13,0,0,0,29/5/2018
 1,"fungal plots",DOM,0.17,0,0,0,29/4/2018
@@ -1243,6 +1517,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"gaea's protector",DOM,0.03,0,0,0,29/4/2018
 1,"galecaster colossus",C17,0.34,0,0,0,29/3/2018
 2,"galloping lizrog",RNA,0.09,0,0,0,20/1/2019
+1,"garenbrig squire",ELD,0.02,0,0,0,12/10/2019
 1,"gargoyle sentinel",M19,0.06,0,0,0,14/9/2018
 1,"garna, the bloodflame",DOM,0.13,0,0,0,28/4/2018
 1,"garrison sergeant",GRN,0.02,0,0,0,30/9/2018
@@ -1250,14 +1525,18 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"garrison sergeant",GRN,0.03,0,0,3,8/12/2018
 1,"gatebreaker ram",RNA,0.08,0,0,0,20/1/2019
 1,"gatekeeper gargoyle",GRN,0.04,0,0,0,23/11/2018
+1,"gateway plaza",WAR,0.06,0,0,0,25/12/2019
+3,"gateway plaza",WAR,0.04,0,0,6,4/5/2019
 2,"gateway plaza",GRN,0.05,0,0,0,23/11/2018
 1,"gateway plaza",GRN,0.07,0,0,3,12/12/2018
 1,"gateway plaza",RNA,0.05,0,0,0,20/1/2019
 1,"gateway sneak",RNA,0.06,0,0,0,20/1/2019
+1,"gauntlets of light",M20,0.06,0,0,0,5/8/2019
 1,"gearsmith guardian",M19,0.02,0,0,6,18/7/2018
 2,"generous stray",GRN,0.04,0,0,0,25/11/2018
 1,"generous stray",GRN,0.06,0,0,0,30/9/2018
 1,"generous stray",GRN,0.07,0,0,0,5/10/2018
+1,"generous stray",GRN,0.04,0,0,6,30/4/2019
 1,"geode golem",C18,1.17,0,0,0,2/9/2018
 1,"ghastbark twins",M19,0.0,0,0,0,7/7/2018
 1,"ghirapur guide",KLD,0.04,0,0,3,11/2/2018
@@ -1273,23 +1552,37 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"ghitu lavarunner",DOM,0.07,0,0,0,29/5/2018
 1,"ghitu lavarunner",DOM,0.07,0,0,3,12/5/2018
 1,"ghostform",M19,0.0,0,0,0,7/7/2018
+1,"giant growth",WAR,0.04,0,0,0,9/6/2019
+1,"giant growth",WAR,0.04,0,0,6,28/04/2019
+2,"giant growth",WAR,0.05,0,0,6,4/5/2019
+1,"giant killer_chop down",ELD,0.25,0,0,0,12/10/2019
 1,"giant spider",M19,0.03,0,0,0,3/9/2018
 1,"giant spider",M19,0.05,0,0,0,30/7/2018
+1,"giant's skewer",ELD,0.06,0,0,0,12/10/2019
 1,"gideon's reproach",DOM,0.04,0,0,0,29/5/2018
 2,"gideon's reproach",DOM,0.06,0,0,0,29/4/2018
+3,"gideon's sacrifice",WAR,0.07,0,0,6,4/5/2019
+1,"gideon's triumph",WAR,0.1,0,0,6,30/4/2019
 1,"gift of growth",DOM,0.04,0,0,0,28/5/2018
 1,"gift of growth",DOM,0.06,0,0,6,18/7/2018
+1,"gift of paradise",M20,0.05,0,0,0,5/8/2019
+1,"gift of strength",RNA,0.02,0,0,6,30/4/2019
 1,"gift of strength",HOU,0.03,0,0,0,15/4/2018
 1,"gifted aetherborn",AER,1.44,0,0,0,20/2/2018
 1,"gifted aetherborn",AER,1.42,0,0,3,25/6/2018
 1,"gifted aetherborn",AER,1.46,0,0,3,17/6/2018
+1,"gilded goose",ELD,4.61,0,0,0,20/12/2019
+1,"gilded goose",ELD,6.38,1,0,0,12/10/2019
 1,"gilded lotus",DOM,2.36,0,0,3,22/4/2018
 2,"giltgrove stalker",RIX,0.03,0,0,0,25/3/2018
 1,"glaive of the guildpact",GRN,0.05,0,0,0,5/10/2018
+1,"glaring aegis",M20,0.04,0,0,0,5/8/2019
+1,"glass casket",ELD,0.12,0,0,0,12/10/2019
 1,"glassblower's puzzleknot",KLD,0.04,0,0,0,12/4/2018
 1,"glassblower's puzzleknot",KLD,0.07,0,0,0,19/2/2018
 1,"glassblower's puzzleknot",KLD,0.07,0,0,3,11/2/2018
 1,"gleaming barrier",RIX,0.03,0,0,0,25/3/2018
+2,"gleaming overseer",WAR,0.1,0,0,6,4/5/2019
 1,"glimmer of genius",KLD,0.27,0,0,0,31/5/2018
 3,"glimmer of genius",KLD,0.27,0,0,3,24/5/2018
 3,"glint-nest crane",KLD,0.14,0,0,3,24/5/2018
@@ -1299,6 +1592,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"glowspore shaman",GRN,0.12,0,0,0,13/11/2018
 2,"glowspore shaman",GRN,0.13,0,0,0,18/10/2018
 1,"go for the throat",C17,1.06,0,0,0,29/3/2018
+4,"goblin assailant",WAR,0.04,0,0,6,4/5/2019
+2,"goblin assault team",WAR,0.04,0,0,6,4/5/2019
 1,"goblin banneret",GRN,0.1,0,0,0,1/1/2019
 1,"goblin banneret",GRN,0.14,0,0,0,30/9/2018
 1,"goblin barrage",DOM,0.07,0,0,0,12/5/2018
@@ -1312,11 +1607,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"goblin locksmith",GRN,0.04,0,0,0,18/10/2018
 1,"goblin locksmith",GRN,0.18,1,0,3,8/12/2018
 1,"goblin motivator",M19,0.0,0,0,0,7/7/2018
+1,"goblin shortcutter",M14,0.02,0,0,0,2/3/2019
 1,"goblin trailblazer",RIX,0.03,0,0,0,25/3/2018
 1,"goblin trailblazer",RIX,0.04,0,0,0,23/2/2018
 1,"goblin trailblazer",RIX,0.04,0,0,3,28/2/2018
 1,"goblin warchief",DOM,0.21,0,0,0,28/4/2018
+1,"god-eternal bontu",WAR,3.74,0,0,6,30/4/2019
+1,"god-pharaoh's statue",WAR,0.16,0,0,6,4/5/2019
+2,"gods willing",M20,0.1,0,0,0,5/8/2019
 1,"golden demise",RIX,0.12,0,0,0,3/7/2018
+1,"golden egg",ELD,0.07,0,0,0,12/10/2019
 1,"golgari findbroker",GRN,0.13,0,0,0,23/11/2018
 1,"golgari guildgate (a)",GRN,0.03,0,0,0,13/11/2018
 1,"golgari guildgate (a)",GRN,0.05,0,0,0,14/10/2018
@@ -1328,6 +1628,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"golgari raiders",GRN,0.07,0,0,3,8/12/2018
 1,"gonti's aether heart",AER,0.39,0,0,0,20/2/2018
 1,"goreclaw, terror of qal sisma",M19,0.0,0,0,0,7/7/2018
+1,"gorging vulture",M20,0.06,0,0,0,30/9/2019
 1,"grappling sundew",GRN,0.05,0,0,0,6/11/2018
 2,"gravitic punch",GRN,0.05,0,0,0,1/1/2019
 1,"gravitic punch",GRN,0.06,0,0,0,5/10/2018
@@ -1336,16 +1637,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"greenbelt rampager",AER,0.59,0,0,3,17/6/2018
 1,"greenbelt rampager",AER,0.6,0,0,3,11/2/2018
 1,"greenwheel liberator",AER,0.19,0,0,3,17/6/2018
+1,"greenwood sentinel",M20,0.03,0,0,0,30/9/2019
 2,"greenwood sentinel",M19,0.0,0,0,0,7/7/2018
+1,"grim initiate",WAR,0.04,0,0,0,9/6/2019
+3,"grim initiate",WAR,0.05,0,0,6,4/5/2019
 1,"grixis panorama",C17,0.11,0,0,0,29/3/2018
 1,"grow from the ashes",DOM,0.07,0,0,0,29/4/2018
 1,"grow from the ashes",DOM,0.06,0,0,3,17/6/2018
+2,"growth cycle",M20,0.04,0,0,0,1/10/2019
 2,"growth spiral",RNA,0.08,0,0,0,20/1/2019
 1,"gruesome fate",RIX,0.06,0,0,0,3/7/2018
 1,"gruesome fate",RIX,0.06,0,0,3,23/3/2018
 2,"guardians of koilos",DOM,0.03,0,0,0,29/5/2018
 1,"guardians of koilos",DOM,0.04,0,0,0,12/5/2018
 1,"guardians of koilos",DOM,0.06,0,0,0,29/4/2018
+2,"guild globe",WAR,0.05,0,0,6,4/5/2019
 1,"guild summit",GRN,0.06,0,0,0,25/11/2018
 1,"guttersnipe",M19,0.0,0,0,0,7/7/2018
 1,"haazda marshal",GRN,0.09,0,0,0,13/11/2018
@@ -1356,6 +1662,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"hallar, the firefletcher",DOM,0.11,0,0,3,22/4/2018
 1,"hallowed fountain",RNA,2.0,0,0,0,20/1/2019
 1,"hammer dropper",GRN,0.04,0,0,3,12/12/2018
+1,"hanged executioner",M20,0.26,0,0,0,1/10/2019
+1,"happily ever after",ELD,0.17,0,0,0,12/10/2019
 1,"harbinger of the tides",C17,0.39,0,0,0,29/3/2018
 3,"hardy veteran",RIX,0.03,0,0,0,3/7/2018
 1,"harsh scrutiny",KLD,0.13,0,0,0,12/9/2018
@@ -1364,13 +1672,27 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"hazardous conditions",KLD,0.04,0,0,3,11/2/2018
 1,"headwater sentries",XLN,0.03,0,0,3,9/3/2018
 1,"headwater sentries",XLN,0.05,0,0,3,25/3/2018
+1,"healer of the glade",M20,0.05,0,0,0,6/10/2019
+1,"healer of the glade",M20,0.06,0,0,0,5/8/2019
 1,"healer's hawk",GRN,0.05,0,0,0,13/11/2018
 1,"healer's hawk",GRN,0.08,0,0,0,30/9/2018
 1,"healing grace",DOM,0.05,0,0,0,5/8/2018
 1,"healing grace",DOM,0.06,0,0,3,22/4/2018
+1,"heart-piercer bow",M20,0.03,0,0,0,20/12/2019
+1,"heart-piercer bow",M20,0.04,0,0,0,30/9/2019
+1,"heart-piercer bow",M20,0.05,0,0,0,5/8/2019
+1,"heartfire",WAR,0.05,0,0,6,29/4/2019
+2,"heartfire",WAR,0.06,0,0,6,4/5/2019
+1,"heartwarming redemption",WAR,0.06,0,0,0,9/6/2019
+1,"heartwarming redemption",WAR,0.1,0,0,6,4/5/2019
 1,"hedron archive",C18,0.17,0,0,0,2/9/2018
 1,"hellkite igniter",C18,0.14,0,0,0,2/9/2018
+1,"herald of the dreadhorde",WAR,0.04,0,0,6,4/5/2019
+1,"herald of the dreadhorde",WAR,0.05,0,0,6,30/4/2019
 1,"herald of the fair",KLD,0.03,0,0,0,12/9/2018
+1,"herald of the sun",M20,0.09,0,0,0,30/9/2019
+1,"heraldic banner",ELD,0.11,0,0,0,12/10/2019
+1,"heraldic banner",ELD,0.3,1,0,0,25/12/2019
 1,"heroic intervention",AER,3.06,0,0,3,11/2/2018
 1,"hidden herbalists",AER,0.24,0,0,3,25/1/2018
 1,"hidden stockpile",AER,0.14,0,0,0,12/9/2018
@@ -1394,18 +1716,26 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"hired poisoner",GRN,0.06,0,0,3,12/12/2018
 1,"history of benalia",DOM,12.54,0,0,0,12/5/2018
 1,"hitchclaw recluse",GRN,0.03,0,0,0,23/11/2018
+2,"hive stirrings",M14,0.11,0,0,0,2/3/2019
 1,"homarid explorer",DOM,0.03,0,0,3,25/6/2018
+3,"honor the god-pharaoh",WAR,0.05,0,0,6,4/5/2019
 1,"hornswoggle",RIX,0.08,0,0,0,23/2/2018
 1,"hornswoggle",RIX,0.07,0,0,3,4/4/2018
 1,"hostile minotaur",M19,0.0,0,0,0,7/7/2018
+1,"howling giant",M20,0.07,0,0,0,5/8/2019
+1,"huatli's raptor",WAR,0.16,0,0,6,30/4/2019
+2,"huatli, the sun's heart",WAR,0.14,0,0,6,4/5/2019
 4,"humongulus",RNA,0.02,0,0,0,20/1/2019
 1,"hungry flames",AER,0.06,0,0,0,25/2/2018
+1,"hunt the weak",M14,0.09,0,0,0,2/3/2019
 2,"hunt the weak",KLD,0.04,0,0,0,19/2/2018
 1,"hunt the weak",RIX,0.02,0,0,0,25/3/2018
 1,"hunt the weak",RIX,0.02,0,0,3,23/3/2018
 1,"hunted witness",GRN,0.05,0,0,0,1/1/2019
 2,"hunted witness",GRN,0.06,0,0,0,14/10/2018
 1,"hunted witness",GRN,0.06,0,0,3,8/12/2018
+1,"hypnotic sprite_mesmeric glare",ELD,0.92,1,0,0,12/10/2019
+1,"hypnotic sprite_mesmeric glare",PELD,1.75,1,0,0,25/12/2019
 1,"hypothesizzle",GRN,0.05,0,0,0,23/11/2018
 1,"hypothesizzle",GRN,0.04,0,0,3,8/12/2018
 1,"ice over",AER,0.02,0,0,0,25/2/2018
@@ -1415,6 +1745,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"ice over",AER,0.02,0,0,3,17/6/2018
 1,"ice over",AER,0.03,0,0,3,11/2/2018
 1,"ice over",AER,0.09,0,0,3,8/2/2018
+1,"icon of ancestry",M20,1.2,0,0,0,5/8/2019
+1,"icon of ancestry",M20,1.29,0,0,0,30/9/2019
+1,"ignite the beacon",WAR,0.24,0,0,6,4/5/2019
 1,"illusionist's stratagem",AER,0.09,0,0,0,12/9/2018
 1,"illusionist's stratagem",AER,0.07,0,0,3,8/2/2018
 2,"impassioned orator",RNA,0.04,0,0,0,20/1/2019
@@ -1440,8 +1773,12 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"incubation druid",RNA,2.0,1,0,0,20/1/2019
 1,"inescapable blaze",GRN,0.08,0,0,0,15/10/2018
 1,"infernal reckoning",M19,0.91,0,0,0,3/9/2018
+1,"infuriate",M20,0.06,0,0,0,5/8/2019
 1,"inkwell leviathan",C18,0.26,0,0,0,2/9/2018
+1,"insatiable appetite",ELD,0.04,0,0,0,12/10/2019
+1,"insatiable appetite",ELD,0.05,0,0,0,20/12/2019
 1,"inspired charge",KLD,0.02,0,0,0,19/2/2018
+1,"inspired charge",M20,0.02,0,0,0,30/9/2019
 1,"inspired charge",M19,0.0,0,0,0,7/7/2018
 1,"inspired charge",M19,0.02,0,0,6,18/7/2018
 1,"inspiring statuary",AER,0.32,0,0,3,25/6/2018
@@ -1451,6 +1788,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"into the roil",C17,0.13,0,0,0,29/3/2018
 2,"intrusive packbeast",GRN,0.02,0,0,0,23/11/2018
 1,"intrusive packbeast",GRN,0.11,1,0,0,18/10/2018
+1,"invade the city",WAR,0.09,0,0,6,4/5/2019
+3,"invading manticore",WAR,0.04,0,0,6,4/5/2019
+2,"invading manticore",WAR,0.05,0,0,6,30/4/2019
 1,"inventor's goggles",KLD,0.03,0,0,0,12/9/2018
 2,"inventors' fair",KLD,0.95,0,0,0,24/5/2018
 1,"invert_invent",GRN,0.07,0,0,0,30/9/2018
@@ -1461,6 +1801,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"invoke the divine",DOM,0.07,0,0,3,25/6/2018
 1,"invoke the divine",M19,0.0,0,0,0,7/7/2018
 1,"invoke the divine",M19,0.05,0,0,0,14/9/2018
+1,"ionize",GRN,0.87,0,0,6,30/4/2019
+1,"iron bully",WAR,0.05,0,0,6,4/5/2019
+2,"iron bully",WAR,0.06,0,0,6,1/5/2019
+2,"ironclad krovod",WAR,0.07,0,0,6,4/5/2019
+1,"ironclad krovod",WAR,0.16,0,0,6,30/4/2019
 1,"ironshell beetle",GRN,0.02,0,0,0,13/11/2018
 1,"ironshell beetle",GRN,0.02,0,0,3,8/12/2018
 1,"irontread crusher",AER,0.05,0,0,0,20/2/2018
@@ -1474,24 +1819,33 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"izzet guildgate",C18,0.05,0,0,0,2/9/2018
 2,"izzet guildgate (a)",GRN,0.05,0,0,0,5/10/2018
 1,"izzet guildgate (a)",GRN,0.06,0,0,3,8/12/2018
+1,"izzet guildgate (a)",GRN,0.06,0,0,6,30/4/2019
 1,"izzet guildgate (b)",GRN,0.04,0,0,0,13/11/2018
 1,"izzet guildgate (b)",GRN,0.05,0,0,0,30/9/2018
 1,"izzet guildgate (b)",GRN,0.05,0,0,3,12/12/2018
 6,"izzet locket",GRN,0.06,0,0,0,25/11/2018
 2,"izzet locket",GRN,0.06,0,0,3,8/12/2018
 1,"izzet signet",C18,0.16,0,0,0,2/9/2018
+2,"jace's triumph",WAR,0.12,0,0,6,4/5/2019
+1,"jace, wielder of mysteries",WAR,2.72,0,0,6,1/5/2019
 1,"jade bearer",RIX,0.06,0,0,0,25/3/2018
 1,"jade bearer",RIX,0.05,0,0,3,9/3/2018
 1,"jade bearer",RIX,0.06,0,0,3,23/3/2018
 1,"jadecraft artisan",RIX,0.03,0,0,0,3/7/2018
 2,"jadecraft artisan",RIX,0.06,0,0,0,25/3/2018
 1,"jadelight ranger",RIX,6.55,0,0,0,25/3/2018
+1,"jaya's greeting",WAR,0.04,0,0,0,9/6/2019
+1,"jaya's greeting",WAR,0.05,0,0,6,4/5/2019
+2,"jaya's greeting",WAR,0.06,0,0,6,1/5/2019
 1,"jaya's immolating inferno",DOM,0.36,0,0,3,22/4/2018
+2,"jaya, venerated firemage",WAR,0.1,0,0,6,4/5/2019
 1,"jhoira, weatherlight captain",DOM,13.44,1,0,3,22/4/2018
 1,"jodah, archmage eternal",DOM,0.47,0,0,0,29/4/2018
 1,"jodah, archmage eternal",DOM,0.52,0,0,0,28/4/2018
 1,"join shields",GRN,0.05,0,0,0,1/1/2019
 1,"join shields",GRN,0.06,0,0,3,12/12/2018
+1,"joust",ELD,0.08,0,0,0,12/10/2019
+1,"jousting dummy",ELD,0.03,0,0,0,12/10/2019
 1,"jousting lance",DOM,0.03,0,0,0,29/5/2018
 1,"jousting lance",DOM,0.04,0,0,3,22/4/2018
 1,"juggernaut",DOM,0.04,0,0,3,12/5/2018
@@ -1502,42 +1856,71 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"jwar isle refuge",C17,0.2,0,0,0,29/3/2018
 1,"kamahl's druidic vow",DOM,0.3,0,0,0,29/5/2018
 1,"karn's temporal sundering",DOM,0.82,0,0,0,28/4/2018
+1,"kasmina's transmutation",WAR,0.05,0,0,0,9/6/2019
+1,"kasmina's transmutation",WAR,0.05,0,0,6,1/5/2019
+1,"kasmina's transmutation",WAR,0.06,0,0,6,4/5/2019
+1,"kasmina, enigmatic mentor",WAR,0.14,0,0,0,9/6/2019
+1,"kasmina, enigmatic mentor",WAR_JP,4.09,0,0,6,4/5/2019
+3,"kaya's ghostform",WAR,0.07,0,0,6,4/5/2019
 1,"keldon overseer",DOM,0.03,0,0,0,12/5/2018
 1,"keldon overseer",DOM,0.04,0,0,0,28/4/2018
 1,"keldon raider",DOM,0.03,0,0,3,12/5/2018
 2,"keldon raider",DOM,0.04,0,0,3,22/4/2018
+1,"keldon raider",M20,0.01,0,0,0,30/9/2019
+1,"keldon raider",M20,0.02,0,0,0,5/8/2019
 1,"keldon warcaller",DOM,0.02,0,0,0,29/5/2018
 1,"keldon warcaller",DOM,0.07,0,0,0,28/4/2018
 1,"keldon warcaller",DOM,0.09,0,0,3,22/4/2018
 1,"kess, dissident mage",C17,0.0,1,0,0,29/3/2018
+1,"kethis, the hidden hand",M20,2.53,0,0,0,1/10/2019
 1,"key to the city",KLD,0.24,0,0,0,19/2/2018
 1,"kindred dominance",C17,2.17,0,0,0,29/3/2018
+4,"kiora's dambreaker",WAR,0.04,0,0,6,4/5/2019
+1,"kiora, behemoth beckoner",WAR,0.27,0,0,6,4/5/2019
 2,"kitesail corsair",RIX,0.03,0,0,3,25/3/2018
 1,"knight of autumn",GRN,4.38,0,0,0,5/10/2018
 1,"knight of grace",DOM,0.46,0,0,0,12/5/2018
 1,"knight of new benalia",DOM,0.05,0,0,0,28/5/2018
 1,"knight of new benalia",DOM,0.06,0,0,3,12/5/2018
 3,"knight of sorrows",RNA,0.03,0,0,0,20/1/2019
+1,"knight of sorrows",RNA,0.02,0,0,6,30/4/2019
+1,"knight of the keep",ELD,0.06,1,0,0,25/12/2019
 1,"knight of the stampede",RIX,0.04,0,0,0,2/7/2018
 2,"knight of the tusk",M19,0.0,0,0,0,7/7/2018
 1,"knight's pledge",M19,0.0,0,0,0,7/7/2018
 1,"knight's pledge",M19,0.0,1,0,0,7/7/2018
 1,"knightly valor",M19,0.04,0,0,0,30/7/2018
+1,"korvold, fae-cursed king",ELD,19.66,0,0,0,25/12/2019
+3,"kragma butcher",BNG,0.02,0,0,0,2/7/2019
+1,"kraken hatchling",M13,0.09,0,0,0,2/3/2019
 3,"kraul foragers",GRN,0.06,0,0,0,25/11/2018
 1,"kraul harpooner",GRN,0.12,0,0,3,8/12/2018
+1,"kraul stinger",WAR,0.02,0,0,0,9/6/2019
+2,"kraul stinger",WAR,0.05,0,0,6,4/5/2019
+1,"kraul stinger",WAR,0.07,0,0,6,30/4/2019
 1,"kraul swarm",GRN,0.05,0,0,0,23/11/2018
 1,"kraul swarm",GRN,0.13,0,0,0,5/10/2018
+3,"kronch wrangler",WAR,0.04,0,0,6,4/5/2019
 1,"krosan druid",DOM,0.04,0,0,0,28/5/2018
 2,"kujar seedsculptor",KLD,0.04,0,0,0,19/2/2018
 1,"kwende, pride of femeref",DOM,0.1,0,0,3,12/5/2018
 1,"larger than life",KLD,0.09,0,0,3,11/2/2018
+1,"lash of thorns",ELD,0.03,0,0,0,12/10/2019
 1,"lathnu hellion",KLD,0.14,0,0,0,19/2/2018
 1,"lathnu sailback",AER,0.01,0,0,0,2/6/2018
 2,"lathnu sailback",AER,0.02,0,0,0,12/9/2018
 2,"lava coil",GRN,0.15,0,0,0,5/10/2018
+2,"law-rune enforcer",WAR,0.04,0,0,6,4/5/2019
+2,"law-rune enforcer",WAR,0.05,0,0,6,1/5/2019
 1,"lawless broker",KLD,0.04,0,0,0,19/2/2018
 1,"lawless broker",KLD,0.04,0,0,3,11/2/2018
 1,"lawmage's binding",RNA,0.05,0,0,0,20/1/2019
+1,"lawmage's binding",RNA,0.05,0,0,6,30/4/2019
+1,"lazotep behemoth",WAR,0.02,0,0,0,25/12/2019
+2,"lazotep behemoth",WAR,0.03,0,0,6,4/5/2019
+1,"lazotep behemoth",WAR,0.04,0,0,6,30/4/2019
+3,"lazotep reaver",WAR,0.05,0,0,6,4/5/2019
+1,"leafkin druid",M20,0.07,0,0,0,5/8/2019
 1,"league guildmage",GRN,0.07,0,0,3,12/12/2018
 3,"leapfrog",GRN,0.02,0,0,0,25/11/2018
 1,"leave in the dust",AER,0.03,0,0,0,25/2/2018
@@ -1549,7 +1932,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"legion guildmage",GRN,0.06,0,0,0,25/11/2018
 1,"legion guildmage",GRN,0.09,0,0,0,18/10/2018
 1,"legion warboss",GRN,2.74,0,0,0,23/11/2018
+1,"leonin snarecaster",THS,0.1,0,0,0,2/7/2019
 1,"leonin vanguard",M19,0.0,0,0,0,7/7/2018
+1,"leyline of the void",M20,8.75,0,0,0,6/10/2019
+1,"leyline prowler",WAR,0.14,0,0,6,4/5/2019
+1,"leyline prowler",WAR,0.15,0,0,6,29/4/2019
 1,"lich's caress",M19,0.0,0,0,0,7/7/2018
 1,"lich's caress",M19,0.02,0,0,6,18/7/2018
 1,"lifecraft cavalry",AER,0.05,0,0,0,25/2/2018
@@ -1557,6 +1944,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"lifecraft cavalry",AER,0.13,0,0,3,8/2/2018
 3,"lightning runner",AER,0.34,0,0,3,24/5/2018
 1,"liliana's contract",M19,0.0,0,0,0,7/7/2018
+1,"liliana's triumph",WAR,0.43,0,0,0,9/6/2019
+1,"liliana's triumph",WAR,0.63,0,0,6,30/4/2019
 1,"lingering phantom",DOM,0.17,1,0,0,29/4/2018
 1,"live fast",KLD,0.04,0,0,3,8/2/2018
 1,"llanowar elves",DOM,0.1,0,0,0,12/5/2018
@@ -1568,23 +1957,32 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"llanowar envoy",DOM,0.04,0,0,3,12/5/2018
 1,"llanowar scout",DOM,0.04,0,0,0,28/5/2018
 1,"llanowar scout",DOM,0.08,0,0,6,18/7/2018
+1,"loaming shaman",M20,0.09,0,0,0,30/9/2019
+1,"locthwain gargoyle",ELD,0.04,0,0,0,12/10/2019
+2,"lonesome unicorn_rider in need",ELD,0.04,0,0,0,12/10/2019
 1,"longtusk cub",KLD,0.25,0,0,3,8/2/2018
 1,"longtusk cub",KLD,0.15,0,0,6,18/7/2018
 1,"looming altisaur",XLN,0.04,0,0,0,25/3/2018
 1,"lotleth giant",GRN,0.07,0,0,0,23/11/2018
 1,"lotus-eye mystics",UMA,0.08,0,0,0,3/1/2019
+1,"lovestruck beast_heart's desire",PELD,1.58,0,0,0,12/10/2019
+1,"loxodon lifechanter",M20,0.14,0,0,0,5/8/2019
 1,"loxodon line breaker",M19,0.05,0,0,0,14/9/2018
 1,"loxodon restorer",GRN,0.02,0,0,0,23/11/2018
 1,"loxodon restorer",GRN,0.03,0,0,0,18/10/2018
 1,"loxodon restorer",GRN,0.04,0,0,0,15/10/2018
+1,"loxodon sergeant",WAR,0.04,0,0,0,9/6/2019
+2,"loxodon sergeant",WAR,0.04,0,0,6,30/4/2019
 1,"loyal apprentice",C18,0.25,0,0,0,2/9/2018
 1,"loyal drake",C18,0.24,0,0,0,2/9/2018
+1,"loyal pegasus",M20,0.07,0,0,0,30/9/2019
 1,"luminous bonds",M19,0.07,0,0,0,14/9/2018
 1,"luminous bonds",RIX,0.04,0,0,3,23/3/2018
 1,"luminous bonds",GRN,0.05,0,0,0,30/9/2018
 1,"luminous bonds",GRN,0.06,0,0,0,18/10/2018
 1,"luminous bonds",GRN,0.03,0,0,3,11/12/2018
 1,"lyra dawnbringer",DOM,16.89,0,0,0,28/5/2018
+1,"mad ratter",ELD,0.08,0,0,0,12/10/2019
 1,"magmaquake",C18,0.14,0,0,0,2/9/2018
 1,"magnifying glass",C18,0.08,0,0,0,2/9/2018
 1,"magus of the abyss",C17,0.18,0,0,0,29/3/2018
@@ -1592,20 +1990,32 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"mairsil, the pretender",C17,0.0,1,0,0,29/3/2018
 1,"make obsolete",KLD,0.05,0,0,3,8/2/2018
 1,"make obsolete",KLD,0.06,0,0,3,11/2/2018
+2,"makeshift battalion",WAR,0.04,0,0,6,4/5/2019
 1,"malfunction",KLD,0.03,0,0,0,19/2/2018
 1,"mammoth spider",RNA,0.01,0,0,0,20/1/2019
 1,"mammoth spider",DOM,0.02,0,0,0,29/5/2018
 1,"mammoth spider",DOM,0.05,0,0,3,12/5/2018
+1,"mana geode",WAR,0.05,0,0,6,30/4/2019
+3,"mana geode",WAR,0.06,0,0,6,4/5/2019
 1,"manalith",M19,0.0,0,0,0,7/7/2018
 1,"manalith",M19,0.06,0,0,0,14/9/2018
 2,"maniacal rage",GRN,0.02,0,0,0,13/11/2018
 1,"maniacal rage",GRN,0.02,0,0,3,8/12/2018
+1,"mantle of tides",ELD,0.05,0,0,0,12/10/2019
+1,"marauder's axe",M20,0.02,0,0,0,5/8/2019
 1,"marauder's axe",M19,0.0,0,0,0,7/7/2018
 2,"marauding looter",XLN,0.06,0,0,3,9/3/2018
 1,"marchesa, the black rose",C17,0.6,0,0,0,29/3/2018
+1,"mark of the vampire",M14,0.01,0,0,0,2/3/2019
 1,"mark of the vampire",UMA,0.02,0,0,0,3/1/2019
+1,"martyr for the cause",WAR,0.05,0,0,0,9/6/2019
+2,"martyr for the cause",WAR,0.04,0,0,6,4/5/2019
 1,"marwyn, the nurturer",DOM,0.6,0,0,3,12/5/2018
+1,"mask of immolation",M20,0.07,0,0,0,5/8/2019
+1,"master splicer",M20,0.04,0,0,0,1/10/2019
+1,"master splicer",M20,0.06,0,0,0,5/8/2019
 1,"master trinketeer",KLD,0.12,0,0,3,11/2/2018
+1,"masterful replication",M20,0.16,0,0,0,5/8/2019
 1,"maulfist doorbuster",KLD,0.02,0,0,0,19/2/2018
 1,"maulfist doorbuster",KLD,0.02,0,0,3,11/2/2018
 1,"maulfist doorbuster",KLD,0.06,0,0,6,18/7/2018
@@ -1619,7 +2029,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"maximize velocity",GRN,0.05,0,0,0,30/9/2018
 1,"maximize velocity",GRN,0.06,0,0,0,23/11/2018
 1,"maximize velocity",GRN,0.06,0,0,3,8/12/2018
+1,"mayhem devil",WAR,0.08,0,0,0,9/6/2019
+1,"mayhem devil",WAR,0.09,0,0,6,1/5/2019
+1,"mayhem devil",WAR,0.1,0,0,6,4/5/2019
 1,"meandering river",M19,0.06,0,0,0,30/7/2018
+1,"medomai the ageless",THS,0.95,0,0,0,2/7/2019
 1,"memorial to folly",DOM,0.11,0,0,0,28/4/2018
 1,"memorial to folly",DOM,0.11,0,0,3,22/4/2018
 1,"memorial to genius",DOM,0.09,0,0,0,29/5/2018
@@ -1631,14 +2045,18 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"memorial to war",DOM,0.1,0,0,0,28/4/2018
 1,"memorial to war",DOM,0.1,0,0,3,22/4/2018
 1,"memory plunder",C17,0.35,0,0,0,29/3/2018
+1,"memory theft",ELD,0.02,0,0,0,12/10/2019
 1,"mephitic vapors",GRN,0.05,0,0,0,5/10/2018
 2,"mephitic vapors",GRN,0.06,0,0,0,23/11/2018
 1,"merchant of secrets",C17,0.14,0,0,0,29/3/2018
+1,"merchant of the vale_haggle",PELD,0.85,0,0,0,25/12/2019
+1,"merchant of the vale_haggle",ELD,0.07,0,0,0,12/10/2019
 1,"merchant's dockhand",AER,0.07,0,0,3,8/2/2018
 1,"merchant's dockhand",AER,0.13,0,0,3,17/6/2018
 1,"merciless eternal",HOU,0.08,0,0,0,15/4/2018
 1,"mercurial chemister",C17,0.18,0,0,0,29/3/2018
 1,"merfolk mistbinder",RIX,0.68,0,0,0,2/7/2018
+1,"merfolk secretkeeper_venture deeper",ELD,0.06,0,0,0,12/10/2019
 1,"mesa unicorn",DOM,0.05,0,0,0,28/4/2018
 1,"mesa unicorn",DOM,0.04,0,0,3,17/6/2018
 1,"mesa unicorn",DOM,0.05,0,0,3,22/4/2018
@@ -1649,53 +2067,83 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"metallic rebuke",AER,0.1,0,0,3,17/6/2018
 1,"metallic rebuke",AER,0.11,0,0,6,18/7/2018
 1,"metalspinner's puzzleknot",KLD,0.05,0,0,3,8/2/2018
+1,"metropolis sprite",M20,0.02,0,0,0,1/10/2019
+1,"metropolis sprite",M20,0.04,0,0,0,5/8/2019
 1,"midnight entourage",AER,0.11,0,0,3,15/2/2018
 1,"midnight reaper",GRN,0.39,0,0,0,6/11/2018
 1,"might of the masses",GRN,0.08,0,0,0,25/11/2018
 1,"might of the masses",GRN,0.1,0,0,0,14/10/2018
+1,"might of the masses",GRN,0.06,0,0,6,30/4/2019
+1,"might of the masses",M20,0.06,0,0,0,30/9/2019
 1,"mighty leap",M19,0.0,0,0,0,7/7/2018
 1,"mimic vat",C18,1.07,0,0,0,2/9/2018
+1,"mind rot",M20,0.02,0,0,0,30/9/2019
 1,"mind rot",M19,0.0,0,0,0,7/7/2018
+1,"mind rot",M14,0.02,0,0,0,2/3/2019
 1,"mind rot",KLD,0.04,0,0,3,11/2/2018
+1,"mind sculpt",M13,0.12,0,0,0,2/3/2019
 1,"mind stone",C18,0.16,0,0,0,2/9/2018
 1,"minister of inquiries",KLD,0.13,0,0,3,8/2/2018
 2,"ministrant of obligation",RNA,0.08,0,0,0,20/1/2019
+1,"ministrant of obligation",RNA,0.1,0,0,6,30/4/2019
+1,"minotaur skullcleaver",THS,0.25,1,0,0,2/7/2019
 1,"mirror of the forebears",C17,0.31,0,0,0,29/3/2018
 1,"mirrorworks",C18,0.82,0,0,0,2/9/2018
 3,"mist-cloaked herald",RIX,0.07,0,0,0,25/3/2018
+1,"mizzium tank",WAR,0.3,0,0,6,4/5/2019
+1,"moat piranhas",M20,0.03,0,0,0,6/10/2019
 1,"mobile garrison",AER,0.04,0,0,3,11/2/2018
 1,"mobile garrison",AER,0.08,0,0,3,17/6/2018
 1,"mobile garrison",AER,0.09,0,0,3,8/2/2018
+1,"mobilized district",WAR,0.55,0,0,6,3/5/2019
 2,"molderhulk",GRN,0.09,0,0,0,13/11/2018
+1,"moldervine reclamation",M20,0.11,0,0,0,5/8/2019
 1,"moment of craving",RIX,0.08,0,0,0,2/7/2018
+1,"moment of heroism",M20,0.02,0,0,0,1/10/2019
+1,"moment of heroism",M20,0.06,0,0,0,5/8/2019
 1,"moment of triumph",RIX,0.04,0,0,3,23/3/2018
 1,"monstrous onslaught",AER,0.08,0,0,0,25/2/2018
 3,"moodmark painter",GRN,0.04,0,0,0,25/11/2018
 1,"moodmark painter",GRN,0.05,0,0,0,18/10/2018
 1,"moodmark painter",GRN,0.06,0,0,0,15/10/2018
+1,"moonlit scavengers",ELD,0.02,0,0,0,12/10/2019
+1,"moorland inquisitor",M20,0.02,0,0,0,5/8/2019
 1,"morbid curiosity",KLD,0.07,0,0,0,19/2/2018
 2,"mountain1",C17,0.0,0,0,0,29/3/2018
 2,"mountain3",C17,0.0,0,0,0,29/3/2018
 1,"mummy paramount",HOU,0.02,0,0,0,15/4/2018
+2,"murder",M20,0.05,0,0,0,30/9/2019
 1,"murmuring mystic",GRN,0.07,0,0,0,30/9/2018
 1,"muse drake",GRN,0.02,0,0,0,6/11/2018
 1,"muse drake",GRN,0.03,0,0,0,25/11/2018
 1,"muse drake",GRN,0.05,0,0,0,5/10/2018
 1,"mutiny",RIX,0.04,0,0,0,25/3/2018
 1,"myr battlesphere",C18,0.19,0,0,0,2/9/2018
+1,"mystic forge",M20,1.35,0,0,0,5/8/2019
+2,"mystic sanctuary",ELD,0.14,0,0,0,12/10/2019
 1,"mystifying maze",C17,0.26,0,0,0,29/3/2018
 1,"naban, dean of iteration",DOM,2.25,0,0,3,22/4/2018
+4,"naga eternal",WAR,0.03,0,0,6,4/5/2019
+1,"nahiri's stoneblades",WAR,0.03,0,0,0,9/6/2019
+1,"nahiri's stoneblades",WAR,0.06,0,0,0,25/12/2019
+3,"nahiri's stoneblades",WAR,0.05,0,0,6,4/5/2019
+1,"nahiri, storm of stone",WAR,0.13,0,0,6,3/5/2019
 1,"narnam renegade",AER,0.17,0,0,6,18/7/2018
+1,"narset's reversal",WAR,1.53,0,0,6,4/5/2019
+1,"narset, parter of veils",WAR,0.29,0,0,6,1/5/2019
+1,"natural end",M20,0.02,0,0,0,6/10/2019
 1,"natural obsolescence",AER,0.03,0,0,3,17/6/2018
 1,"natural obsolescence",AER,0.04,0,0,3,11/2/2018
 1,"natural obsolescence",AER,0.06,0,0,3,8/2/2018
 1,"natural obsolescence",AER,0.02,0,0,6,18/7/2018
+1,"naturalize",M13,0.05,0,0,0,2/3/2019
 1,"naturalize",M19,0.05,0,0,0,30/7/2018
 1,"naturalize",RIX,0.04,0,0,0,25/3/2018
 1,"naturalize",RIX,0.04,0,0,3,23/3/2018
 1,"navigator's compass",DOM,0.04,0,0,0,28/5/2018
 1,"navigator's compass",DOM,0.05,0,0,3,12/5/2018
 1,"navigator's compass",DOM,0.06,0,0,3,22/4/2018
+1,"necrobite",BNG,0.01,0,0,0,2/7/2019
 1,"necromantic selection",C17,0.23,0,0,0,29/3/2018
 1,"necrotic wound",GRN,0.18,0,0,0,6/11/2018
 1,"needletooth raptor",RIX,0.07,0,0,0,25/3/2018
@@ -1707,8 +2155,14 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"negate",AER,0.06,0,0,0,20/2/2018
 2,"negate",AER,0.07,0,0,3,25/6/2018
 1,"negate",AER,0.09,0,0,6,18/7/2018
+1,"negate",M20,0.06,0,0,0,5/8/2019
+1,"negate",M20,0.07,0,0,0,30/9/2019
+2,"neheb, dreadhorde champion",WAR,2.04,1,0,6,30/4/2019
+2,"neoform",WAR,0.38,0,0,6,4/5/2019
 2,"never happened",GRN,0.05,0,0,0,14/10/2018
 1,"nevinyrral's disk",C17,0.54,0,0,0,29/3/2018
+1,"new horizons",WAR,0.04,0,0,0,9/6/2019
+4,"new horizons",WAR,0.04,0,0,6,4/5/2019
 1,"night market aeronaut",AER,0.01,0,0,0,2/6/2018
 2,"night market aeronaut",AER,0.03,0,0,0,25/2/2018
 2,"night market aeronaut",AER,0.15,0,0,3,8/2/2018
@@ -1723,17 +2177,32 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"nimble innovator",KLD,0.01,0,0,3,11/2/2018
 1,"nin, the pain artist",C17,0.4,0,0,0,29/3/2018
 1,"ninth bridge patrol",KLD,0.04,0,0,0,12/4/2018
+2,"nissa's triumph",WAR,0.12,0,0,6,4/5/2019
+1,"nissa's triumph",WAR,0.86,1,0,6,4/5/2019
 1,"niv-mizzet, the firemind",C17,0.49,0,0,0,29/3/2018
 1,"nivix guildmage",C17,0.07,0,0,0,29/3/2018
+1,"no escape",WAR,0.05,0,0,0,9/6/2019
+1,"no escape",WAR,0.06,0,0,6,4/5/2019
+1,"no escape",WAR,0.07,0,0,6,1/5/2019
+1,"noble quarry",BNG,0.07,0,0,0,2/7/2019
 3,"notion rain",GRN,0.06,0,0,0,14/10/2018
 4,"notion rain",GRN,0.07,0,0,0,13/11/2018
 2,"notion rain",GRN,0.07,0,0,3,8/12/2018
+1,"nylea's disciple",THS,0.06,0,0,0,2/7/2019
+1,"nyxborn shieldmate",BNG,0.08,0,0,0,2/7/2019
+1,"nyxborn triton",BNG,0.03,0,0,0,2/7/2019
 1,"oakenform",M19,0.0,0,0,0,7/7/2018
 1,"oakenform",M19,0.05,0,0,0,3/9/2018
+1,"oakhame ranger_bring back",ELD,0.08,0,0,0,12/10/2019
 1,"oathsworn vampire",RIX,0.12,0,0,0,3/7/2018
 1,"oathsworn vampire",RIX,0.1,0,0,3,4/4/2018
+1,"ob nixilis's cruelty",WAR,0.06,0,0,0,9/6/2019
+3,"ob nixilis's cruelty",WAR,0.06,0,0,6,4/5/2019
+1,"ob nixilis, the hate-twisted",WAR_JP,0.0,1,0,6,3/5/2019
 1,"ochran assassin",GRN,0.07,0,0,0,13/11/2018
 1,"ochran assassin",GRN,0.09,0,0,0,30/9/2018
+1,"octoprophet",M20,0.07,0,0,0,5/8/2019
+1,"ogre errant",ELD,0.03,0,0,0,12/10/2019
 1,"omenspeaker",M19,0.05,0,0,0,3/9/2018
 1,"on serra's wings",DOM,0.09,0,0,0,12/5/2018
 1,"one with the wind",XLN,0.05,0,0,0,25/3/2018
@@ -1744,6 +2213,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"opt",DOM,0.15,0,0,0,29/4/2018
 1,"opt",DOM,0.16,0,0,0,12/5/2018
 1,"opt",DOM,0.16,0,0,3,12/5/2018
+1,"oracle of bones",BNG,0.11,0,0,0,2/7/2019
 1,"orazca raptor",RIX,0.02,0,0,0,25/3/2018
 1,"orazca relic",RIX,0.06,0,0,0,3/7/2018
 2,"ornamental courage",KLD,0.06,0,0,3,25/6/2018
@@ -1751,17 +2221,26 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"ornery goblin",GRN,0.06,0,0,0,30/9/2018
 1,"ornery goblin",GRN,0.02,0,0,3,12/12/2018
 1,"ornithopter",AER,0.15,0,0,0,25/2/2018
+1,"orzhov racketeers",RNA,0.03,0,0,6,30/4/2019
+2,"outmuscle",ELD,0.04,0,0,0,12/10/2019
 1,"ovalchase dragster",KLD,0.05,0,0,3,8/2/2018
 2,"overgrown armasaur",RIX,0.03,0,0,0,25/3/2018
 1,"overgrown armasaur",RIX,0.06,0,0,0,3/7/2018
+1,"overgrowth elemental",M20,0.1,0,0,0,20/12/2019
 1,"pacification array",AER,0.07,0,0,0,25/2/2018
+1,"pacifism",M20,0.05,0,0,0,5/8/2019
+1,"pacifism",M13,0.04,0,0,0,2/3/2019
+1,"pack mastiff",M20,0.02,0,0,0,1/10/2019
 2,"pack's favor",GRN,0.02,0,0,0,25/11/2018
 2,"pack's favor",GRN,0.04,0,0,0,14/10/2018
 1,"pack's favor",GRN,0.02,0,0,3,8/12/2018
+1,"paradise druid",WAR,0.16,0,0,6,30/4/2019
 1,"pardic wanderer",DOM,0.02,0,0,3,31/5/2018
 1,"pardic wanderer",DOM,0.04,0,0,3,12/5/2018
 1,"pardic wanderer",DOM,0.05,0,0,3,22/4/2018
+1,"parhelion ii",WAR,1.11,1,0,6,1/5/2019
 3,"parhelion patrol",GRN,0.04,0,0,0,13/11/2018
+1,"parhelion patrol",GRN,0.03,0,0,6,30/4/2019
 1,"parhelion patrol",GRN,0.09,1,0,3,8/12/2018
 2,"passwall adept",GRN,0.04,0,0,0,13/11/2018
 1,"passwall adept",GRN,0.03,0,0,3,8/12/2018
@@ -1779,16 +2258,25 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"pierce the sky",DOM,0.02,0,0,0,5/8/2018
 1,"pierce the sky",DOM,0.03,0,0,3,25/6/2018
 1,"pilgrim's eye",C18,0.06,0,0,0,2/9/2018
+1,"piper of the swarm1",ELD,0.3,0,0,0,12/10/2019
 1,"pirate's prize",XLN,0.05,0,0,3,25/3/2018
 1,"pitiless gorgon",GRN,0.03,0,0,0,23/11/2018
 1,"plaguecrafter",GRN,0.16,0,0,0,30/9/2018
 1,"plaguecrafter",GRN,0.36,0,0,3,12/12/2018
+1,"plaguecrafter",GRN,0.3,0,0,6,30/4/2019
 1,"planar bridge",AER,1.29,0,0,0,12/9/2018
+1,"planewide celebration",WAR,0.21,0,0,6,4/5/2019
 2,"plummet",RIX,0.02,0,0,0,3/7/2018
+1,"plummet",M20,0.03,0,0,0,5/8/2019
+1,"plummet",M20,0.08,0,0,0,30/9/2019
 1,"poison-tip archer",M19,0.0,0,0,0,7/7/2018
+3,"pollenbright druid",WAR,0.06,0,0,6,4/5/2019
 1,"polymorphist's jest",C17,0.35,0,0,0,29/3/2018
 1,"portal mage",C17,0.32,0,0,0,29/3/2018
 1,"portcullis vine",GRN,0.05,0,0,3,8/12/2018
+1,"pouncing lynx",WAR,0.03,0,0,0,9/6/2019
+2,"pouncing lynx",WAR,0.03,0,0,6,4/5/2019
+1,"pouncing lynx",WAR,0.04,0,0,6,29/4/2019
 1,"powerstone shard",DOM,0.05,0,0,0,29/5/2018
 3,"powerstone shard",DOM,0.07,0,0,0,28/4/2018
 1,"powerstone shard",DOM,0.06,0,0,3,12/5/2018
@@ -1810,28 +2298,42 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"prey upon",GRN,0.06,0,0,0,5/10/2018
 1,"prey upon",GRN,0.15,1,0,0,25/11/2018
 1,"prey upon",UMA,0.04,0,0,0,3/1/2019
+1,"price of betrayal",WAR,0.14,0,0,6,1/5/2019
 1,"price of fame",GRN,0.12,0,0,0,1/1/2019
 1,"price of fame",GRN,0.13,0,0,0,23/11/2018
+1,"primordial wurm",WAR,0.01,0,0,0,25/12/2019
+2,"primordial wurm",WAR,0.05,0,0,6,4/5/2019
 1,"primordial wurm",DOM,0.02,0,0,0,29/5/2018
 2,"primordial wurm",DOM,0.05,0,0,3,22/4/2018
 1,"prismatic lens",C18,0.1,0,0,0,2/9/2018
+1,"prismite",M20,0.04,0,0,0,5/8/2019
+3,"prismite",WAR,0.03,0,0,6,1/5/2019
+3,"prismite",WAR,0.04,0,0,6,4/5/2019
+1,"prison realm",WAR,0.11,0,0,6,30/4/2019
+1,"prized griffin",ELD,0.03,0,0,0,12/10/2019
 1,"prizefighter construct",AER,0.01,0,0,0,20/2/2018
 1,"prizefighter construct",AER,0.02,0,0,0,12/9/2018
 2,"prizefighter construct",AER,0.02,0,0,3,25/6/2018
 1,"propeller pioneer",KLD,0.05,0,0,0,19/2/2018
 1,"propeller pioneer",KLD,0.06,0,0,3,8/2/2018
+1,"prophet of the peak",ELD,0.03,0,0,0,12/10/2019
 1,"prophetic prism",KLD,0.08,0,0,3,25/6/2018
 1,"prototype portal",C18,0.26,0,0,0,2/9/2018
+1,"prowler's helm",THS,0.14,0,0,0,2/7/2019
 3,"prowling caracal",RNA,0.03,0,0,0,20/1/2019
+1,"prowling caracal",RNA,0.01,0,0,6,30/4/2019
 1,"prowling caracal",RNA,0.0,1,0,0,20/1/2019
 1,"psychosis crawler",C18,0.23,0,0,0,2/9/2018
 1,"puppeteer clique",C17,0.4,0,0,0,29/3/2018
+1,"pyromancer's gauntlet",M14,0.16,0,0,0,2/3/2019
+1,"queen of ice_rage of winter",ELD,0.04,0,0,0,12/10/2019
 1,"quench",RNA,0.07,0,0,0,20/1/2019
 1,"quicksmith genius",KLD,0.09,0,0,0,12/9/2018
 1,"quicksmith rebel",AER,0.1,0,0,0,20/2/2018
 1,"quicksmith spy",AER,0.09,0,0,0,25/2/2018
 1,"quicksmith spy",AER,0.16,0,0,0,2/6/2018
 1,"quicksmith spy",AER,0.0,0,0,3,25/1/2018
+1,"rabid bite",M20,0.05,0,0,0,5/8/2019
 1,"rabid bite",M19,0.0,0,0,0,7/7/2018
 1,"radiating lightning",DOM,0.03,0,0,0,28/5/2018
 1,"radiating lightning",DOM,0.06,0,0,0,28/4/2018
@@ -1839,28 +2341,50 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 5,"radical idea",GRN,0.07,0,0,0,1/1/2019
 1,"radical idea",GRN,0.08,0,0,3,12/12/2018
 1,"raff capashen, ship's mage",DOM,0.14,0,0,0,12/5/2018
+2,"raging kronch",WAR,0.03,0,0,6,4/5/2019
+2,"raging kronch",WAR,0.04,0,0,6,1/5/2019
+1,"raging redcap",ELD,0.03,0,0,0,20/12/2019
+2,"raging redcap",ELD,0.04,0,0,0,12/10/2019
 1,"raging regisaur",RIX,0.09,0,0,0,3/7/2018
+1,"raised by wolves",BNG,0.15,0,0,0,2/7/2019
 1,"rakdos carnarium",C17,0.11,0,0,0,29/3/2018
 1,"rakdos charm",C17,0.19,0,0,0,29/3/2018
 1,"rakdos shred-freak",UMA,0.03,0,0,0,3/1/2019
+1,"ral's outburst",WAR,0.1,0,0,0,25/12/2019
+1,"ral's outburst",WAR,0.11,0,0,6,1/5/2019
+1,"rally of wings",WAR,0.1,0,0,0,25/12/2019
+2,"rally of wings",WAR,0.08,0,0,6,4/5/2019
 2,"rampaging cyclops",DOM,0.02,0,0,0,5/8/2018
 1,"rampaging monument",GRN,0.04,0,0,0,25/11/2018
 1,"rampaging monument",GRN,0.05,0,0,0,6/11/2018
+1,"rapacious dragon",M20,0.09,0,0,0,5/8/2019
 2,"raptor companion",RIX,0.01,0,0,0,3/7/2018
 1,"raptor companion",RIX,0.03,0,0,0,25/3/2018
 2,"rat colony",DOM,0.17,0,0,0,5/8/2018
 1,"rat colony",DOM,0.23,0,0,3,22/4/2018
 1,"ravenous intruder",AER,0.09,0,0,0,28/4/2018
+1,"ravenous rats",M13,0.08,0,0,0,2/3/2019
+1,"ravnica at war",WAR,0.23,0,0,6,30/4/2019
 1,"reality shift",C17,0.19,0,0,0,29/3/2018
+1,"realm-cloaked giant_cast off",ELD,3.36,0,0,0,12/10/2019
+1,"reaper of night_harvest fear",ELD,0.03,0,0,0,20/12/2019
+1,"reaper of night_harvest fear",ELD,0.14,1,0,0,25/12/2019
+1,"reave soul",ELD,0.04,0,0,0,12/10/2019
 1,"reaver ambush",RIX,0.05,0,0,3,23/3/2018
+1,"reckless air strike",M20,0.05,0,0,0,5/8/2019
 1,"reckless fireweaver",KLD,0.06,0,0,0,19/2/2018
 1,"reckless fireweaver",KLD,0.05,0,0,3,11/2/2018
 1,"reckless racer",AER,0.04,0,0,0,2/6/2018
 1,"reckless racer",AER,0.05,0,0,0,25/2/2018
 1,"reckless racer",AER,0.07,0,0,3,8/2/2018
 1,"recover",RIX,0.06,0,0,0,3/7/2018
+1,"redcap raiders",ELD,0.03,0,0,0,12/10/2019
+1,"reduce to ashes",M20,0.02,0,0,0,5/8/2019
 1,"rekindling phoenix",RIX,18.42,0,0,0,25/3/2018
 1,"release to the wind",RIX,0.22,0,0,3,23/3/2018
+1,"relentless advance",WAR,0.02,0,0,0,9/6/2019
+1,"relentless advance",WAR,0.05,0,0,6,3/5/2019
+1,"relentless advance",WAR,0.06,0,0,6,30/4/2019
 1,"relentless raptor",RIX,0.1,0,0,0,25/3/2018
 1,"relic runner",DOM,0.03,0,0,0,28/4/2018
 1,"relic runner",DOM,0.04,0,0,0,12/5/2018
@@ -1874,9 +2398,11 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"renegade's getaway",AER,0.05,0,0,0,25/2/2018
 1,"renegade's getaway",AER,0.03,0,0,3,11/2/2018
 1,"renegade's getaway",AER,0.12,0,0,3,25/1/2018
+1,"repeated reverberation",M20,0.19,0,0,0,30/9/2019
 1,"repudiate_replicate",RNA,2.0,1,0,0,20/1/2019
 2,"rescue",DOM,0.04,0,0,0,5/8/2018
 1,"rescue",DOM,0.06,0,0,3,22/4/2018
+1,"rescuer sphinx",WAR,0.06,0,0,6,1/5/2019
 2,"reservoir walker",AER,0.03,0,0,0,20/2/2018
 1,"reservoir walker",AER,0.1,0,0,0,28/4/2018
 2,"reservoir walker",AER,0.02,0,0,3,17/6/2018
@@ -1889,7 +2415,10 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"restoration specialist",AER,0.1,0,0,0,20/2/2018
 1,"restoration specialist",AER,0.11,0,0,0,25/2/2018
 1,"restoration specialist",AER,0.12,0,0,0,12/9/2018
+1,"retributive wand",M20,0.03,0,0,0,6/10/2019
 1,"retrofitter foundry",C18,1.56,0,0,0,2/9/2018
+2,"return to nature",WAR,0.06,0,0,6,30/4/2019
+3,"return to nature",WAR,0.07,0,0,6,4/5/2019
 1,"reverse engineer",AER,0.0,0,0,3,25/1/2018
 1,"reverse engineer",AER,0.11,0,0,3,17/6/2018
 1,"reverse engineer",AER,0.12,0,0,3,27/1/2018
@@ -1911,21 +2440,36 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"ridgescale tusker",AER,0.07,0,0,3,8/2/2018
 3,"righteous blow",GRN,0.03,0,0,0,25/11/2018
 2,"righteous blow",GRN,0.04,0,0,0,18/10/2018
+1,"righteousness",ELD,0.17,1,0,0,20/12/2019
 1,"rile",XLN,0.06,0,0,0,25/3/2018
+1,"rimrock knight_boulder rush",PELD,0.64,1,0,0,25/12/2019
+1,"rimrock knight_boulder rush",ELD,0.07,0,0,0,12/10/2019
 1,"riparian tiger",KLD,0.05,0,0,0,19/2/2018
+1,"ripscale predator",M20,0.09,0,0,0,1/10/2019
 1,"rise from the grave",M19,0.0,0,0,0,7/7/2018
 1,"rise from the grave",M19,0.07,0,0,0,3/9/2018
+1,"risen reef",M20,0.76,0,0,0,5/8/2019
+1,"rising populace",WAR,0.03,0,0,0,9/6/2019
+3,"rising populace",WAR,0.05,0,0,6,4/5/2019
 1,"risk factor",GRN,3.24,1,0,0,30/9/2018
 1,"river darter",RIX,0.02,0,0,0,25/3/2018
 1,"river sneak",XLN,0.1,0,0,3,25/3/2018
 1,"river's rebuke",XLN,0.31,0,0,0,25/3/2018
+1,"rod of ruin",M14,0.02,0,0,0,2/3/2019
 1,"rogue refiner",AER,0.14,0,0,3,17/6/2018
+1,"role reversal",WAR,0.23,0,0,6,29/4/2019
+1,"root snare",RNA,0.08,0,0,6,30/4/2019
+1,"rootwalla",M14,0.04,0,0,0,2/3/2019
 1,"rosemane centaur",GRN,0.04,0,0,0,30/9/2018
+2,"rosethorn acolyte_seasonal ritual",ELD,0.04,0,0,0,12/10/2019
+1,"rosethorn halberd",ELD,0.03,0,0,0,20/12/2019
 2,"rubblebelt boar",GRN,0.01,0,0,0,23/11/2018
+1,"rubblebelt rioters",WAR,0.08,0,0,6,4/5/2019
 1,"ruin rat",HOU,0.09,0,0,0,15/4/2018
 1,"run aground",XLN,0.02,0,0,3,9/3/2018
 1,"run amok",DOM,0.05,0,0,3,12/5/2018
 1,"run amok",DOM,0.07,0,0,3,22/4/2018
+1,"run away together",ELD,0.2,1,0,0,25/12/2019
 1,"rush of vitality",KLD,0.04,0,0,0,19/2/2018
 1,"rush of vitality",KLD,0.04,0,0,3,8/2/2018
 1,"rush of vitality",KLD,0.05,0,0,3,11/2/2018
@@ -1942,6 +2486,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"saheeli's artistry",KLD,0.11,0,0,0,12/4/2018
 1,"saheeli's artistry",C18,0.16,0,0,0,2/9/2018
 1,"saheeli's directive",C18,1.05,0,0,0,2/9/2018
+1,"saheeli's silverwing",WAR,0.06,0,0,6,4/5/2019
+1,"saheeli's silverwing",WAR,0.07,0,0,6,30/4/2019
+1,"saheeli, sublime artificer",WAR,0.78,0,0,6,4/5/2019
 1,"saheeli, the gifted",C18,4.04,1,0,0,2/9/2018
 1,"sai, master thopterist",M19,1.27,0,0,6,18/7/2018
 1,"sailor of means",XLN,0.04,0,0,0,25/3/2018
@@ -1951,32 +2498,55 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"salivating gremlins",KLD,0.08,0,0,3,28/2/2018
 1,"salivating gremlins",KLD,0.12,0,0,3,8/2/2018
 1,"salvage scuttler",AER,0.02,0,0,3,11/2/2018
+1,"salvager of ruin",M20,0.07,0,0,0,1/10/2019
+1,"salvager of ruin",M20,0.1,0,0,0,5/8/2019
+1,"samut's sprint",WAR,0.07,0,0,0,9/6/2019
+1,"samut's sprint",WAR,0.05,0,0,6,30/4/2019
+3,"samut's sprint",WAR,0.06,0,0,6,4/5/2019
+1,"samut, tyrant smasher",WAR_JP,2.47,0,0,6,3/5/2019
 1,"sanctum spirit",DOM,0.05,0,0,3,22/4/2018
+1,"sanitarium skeleton",M20,0.04,0,0,0,5/8/2019
+1,"sanitarium skeleton",M20,0.05,0,0,0,30/9/2019
 1,"saproling migration",DOM,0.07,0,0,0,29/5/2018
 1,"saproling migration",DOM,0.07,0,0,3,25/6/2018
+1,"sarkhan the masterless",WAR_JP,10.45,0,0,6,4/5/2019
+3,"sarkhan's catharsis",WAR,0.03,0,0,6,4/5/2019
 1,"satyr enchanter",M19,0.0,0,0,0,7/7/2018
+1,"satyr hedonist",THS,0.05,0,0,0,2/7/2019
+1,"satyr nyx-smith",BNG,0.07,0,0,0,2/7/2019
+1,"satyr rambler",THS,0.0,0,0,0,2/7/2019
 4,"sauroform hybrid",RNA,0.05,0,0,0,20/1/2019
 1,"scholar of stars",M19,0.0,0,0,0,7/7/2018
+1,"scorch spitter",M20,0.05,0,0,0,5/8/2019
+1,"scorching dragonfire",ELD,0.06,0,0,0,12/10/2019
+1,"scorchmark",RNA,0.01,0,0,6,30/4/2019
+2,"scoured barrens",M20,0.07,0,0,0,1/10/2019
 2,"scrabbling claws",RNA,0.1,0,0,0,20/1/2019
 1,"scrabbling claws",C18,0.12,0,0,0,2/9/2018
 1,"scrapper champion",AER,0.06,0,0,0,3/9/2018
 1,"scrapper champion",AER,0.2,0,0,3,25/1/2018
+2,"scroll thief",M14,0.02,0,0,0,2/3/2019
 1,"scrounger of souls",HOU,0.05,0,0,0,15/4/2018
 1,"scrounging bandar",AER,0.06,0,0,0,12/9/2018
 1,"scrounging bandar",AER,0.1,0,0,0,28/4/2018
 1,"scrounging bandar",AER,0.04,0,0,3,11/2/2018
 2,"scrounging bandar",AER,0.06,0,0,3,17/6/2018
 4,"scuttlegator",RNA,0.04,0,0,0,20/1/2019
+1,"scuttlemutt",M20,0.08,0,0,0,5/8/2019
+1,"scuttlemutt",M20,0.09,0,0,0,20/12/2019
 1,"scuttling doom engine",C18,0.17,0,0,0,2/9/2018
 1,"sea gate oracle",C17,0.12,0,0,0,29/3/2018
 2,"sea legs",RIX,0.05,0,0,0,3/7/2018
 2,"seal away",DOM,0.42,0,0,0,29/4/2018
 1,"seal away",DOM,0.42,0,0,3,22/4/2018
 1,"seal away",DOM,0.45,0,0,3,12/5/2018
+1,"searing blood",BNG,0.77,0,0,0,2/7/2019
+1,"season of growth",M20,0.14,0,0,0,5/8/2019
 1,"seat of the synod",C18,0.29,0,0,0,2/9/2018
 1,"secret salvage",AER,0.25,0,0,3,25/1/2018
 1,"secrets of the golden city",RIX,0.04,0,0,0,25/3/2018
 1,"secrets of the golden city",RIX,0.05,0,0,3,23/3/2018
+1,"sedge scorpion",M20,0.04,0,0,0,6/10/2019
 1,"see red",RIX,0.06,0,0,3,28/2/2018
 1,"seismic shift",DOM,0.04,0,0,0,28/4/2018
 2,"seismic shift",DOM,0.04,0,0,3,12/5/2018
@@ -2005,6 +2575,8 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"serra disciple",DOM,0.04,0,0,3,17/6/2018
 1,"serra disciple",DOM,0.05,0,0,3,22/4/2018
 1,"servo schematic",AER,0.1,0,0,0,25/2/2018
+1,"seven dwarves",ELD,0.07,0,0,0,12/10/2019
+1,"seven dwarves",ELD,0.29,1,0,0,25/12/2019
 1,"severed strands",GRN,0.04,0,0,0,1/1/2019
 1,"severed strands",GRN,0.05,0,0,0,23/11/2018
 1,"severed strands",GRN,0.07,0,0,0,30/9/2018
@@ -2020,12 +2592,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"shielded aether thief",AER,0.08,0,0,3,15/2/2018
 1,"shifting shadow",C17,0.42,0,0,0,29/3/2018
 2,"shimmer of possibility",RNA,0.05,0,0,0,20/1/2019
+1,"shining armor",ELD,0.04,0,0,0,20/12/2019
+1,"shining armor",ELD,0.1,1,0,0,25/12/2019
 2,"shipwreck looter",XLN,0.03,0,0,3,9/3/2018
 1,"shipwreck moray",AER,0.09,0,0,0,12/9/2018
 1,"shipwreck moray",AER,0.18,0,0,3,8/2/2018
 1,"shivan fire",DOM,0.05,0,0,0,29/4/2018
 2,"shivan fire",DOM,0.05,0,0,3,12/5/2018
 1,"shivan fire",DOM,0.06,0,0,6,18/7/2018
+1,"shock",M20,0.04,0,0,0,5/8/2019
+1,"shock",M20,0.06,0,0,0,6/10/2019
 1,"shock",AER,0.05,0,0,0,3/9/2018
 1,"shock",AER,0.07,0,0,0,20/2/2018
 1,"shock",AER,0.07,0,0,3,25/6/2018
@@ -2035,22 +2611,31 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"short sword",DOM,0.04,0,0,3,22/4/2018
 1,"shrewd negotiation",KLD,0.03,0,0,0,19/2/2018
 1,"shrewd negotiation",KLD,0.06,0,0,0,12/4/2018
+1,"shriekdiver",WAR,0.04,0,0,0,9/6/2019
+2,"shriekdiver",WAR,0.04,0,0,6,4/5/2019
+2,"shriekdiver",WAR,0.05,0,0,6,1/5/2019
 1,"siege modification",AER,0.04,0,0,3,8/2/2018
 3,"siege wurm",GRN,0.02,0,0,0,23/11/2018
 2,"siege wurm",GRN,0.05,0,0,3,12/12/2018
 1,"siegehorn ceratops",RIX,0.44,0,0,0,2/7/2018
+1,"signpost scarecrow",ELD,0.03,0,0,0,12/10/2019
 1,"silent dart",GRN,0.05,0,0,0,18/10/2018
 1,"silent dart",GRN,0.07,0,0,0,30/9/2018
 1,"silent dart",GRN,0.03,0,0,3,12/12/2018
+1,"silent submersible",WAR,0.16,0,0,6,4/5/2019
 1,"silhana wayfinder",RNA,0.11,0,0,0,20/1/2019
 1,"silkweaver elite",AER,0.02,0,0,0,25/2/2018
 1,"silkweaver elite",AER,0.02,0,0,3,15/2/2018
 1,"silkweaver elite",AER,0.11,0,0,3,8/2/2018
 1,"silkweaver elite",AER,0.12,0,0,3,27/1/2018
 1,"silumgar's command",C17,0.24,0,0,0,29/3/2018
+2,"silverback shaman",M20,0.04,0,0,0,1/10/2019
+1,"silverback shaman",M20,0.05,0,0,0,5/8/2019
+1,"silverflame squire_on alert",PELD,0.16,0,0,0,25/12/2019
 1,"simic guildgate1",RNA,0.04,0,0,0,20/1/2019
 3,"simic guildgate2",RNA,0.05,0,0,0,20/1/2019
 1,"simic locket",RNA,0.04,0,0,0,20/1/2019
+1,"single combat",WAR,1.25,1,0,6,29/4/2019
 1,"sinister sabotage",GRN,0.33,0,0,0,6/11/2018
 1,"siren's ruse",XLN,0.04,0,0,3,25/3/2018
 1,"skeleton archer",M19,0.0,0,0,0,7/7/2018
@@ -2059,11 +2644,15 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"skirk prospector",DOM,0.07,0,0,3,17/6/2018
 2,"skirk prospector",DOM,0.08,0,0,3,22/4/2018
 2,"skitter eel",RNA,0.04,0,0,0,20/1/2019
+1,"skitter eel",RNA,0.02,0,0,6,30/4/2019
 1,"skittering surveyor",DOM,0.05,0,0,0,29/4/2018
 1,"skizzik",DOM,0.06,0,0,0,28/5/2018
 1,"sky skiff",KLD,0.05,0,0,0,19/2/2018
 2,"sky skiff",KLD,0.05,0,0,3,28/2/2018
 1,"sky tether",RNA,0.06,0,0,0,20/1/2019
+1,"sky theater strix",WAR,0.04,0,0,0,9/6/2019
+1,"sky theater strix",WAR,0.04,0,0,6,4/5/2019
+2,"sky theater strix",WAR,0.05,0,0,6,1/5/2019
 1,"skyknight legionnaire",GRN,0.05,0,0,0,1/1/2019
 1,"skyline scout",GRN,0.05,0,0,0,30/9/2018
 1,"skyline scout",GRN,0.01,0,0,3,8/12/2018
@@ -2074,36 +2663,60 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"skyswirl harrier",KLD,0.02,0,0,3,11/2/2018
 1,"skywhaler's shot",KLD,0.05,0,0,3,28/2/2018
 1,"skywing aven",UMA,0.09,0,0,0,3/1/2019
+3,"sleep paralysis",M20,0.02,0,0,0,20/12/2019
 1,"slimebind",RNA,0.03,0,0,0,20/1/2019
 1,"slinn voda, the rising deep",DOM,0.06,0,0,0,5/8/2018
 2,"slippery scoundrel",RIX,0.07,0,0,0,25/3/2018
+1,"sliver construct",M14,0.05,0,0,0,2/3/2019
 2,"sly requisitioner",AER,0.06,0,0,3,14/2/2018
 1,"smelt-ward minotaur",GRN,0.05,0,0,0,25/11/2018
+1,"smitten swordmaster_curry favor",ELD,0.06,0,0,0,20/12/2019
+1,"smitten swordmaster_curry favor",ELD,0.07,0,0,0,12/10/2019
 1,"smuggler's copter",KLD,2.1,0,0,3,8/2/2018
 1,"snare thopter",KLD,0.05,0,0,6,18/7/2018
+4,"snarespinner",WAR,0.04,0,0,6,4/5/2019
 2,"snubhorn sentry",RIX,0.03,0,0,0,25/3/2018
 1,"snubhorn sentry",RIX,0.03,0,0,3,23/3/2018
 1,"sol ring",C18,1.1,0,0,0,2/9/2018
 1,"solemn recruit",AER,0.14,0,0,3,17/6/2018
 3,"sonic assault",GRN,0.05,0,0,0,25/11/2018
 1,"sonic assault",GRN,0.02,0,0,3,12/12/2018
+1,"sorcerer of the fang",M20,0.02,0,0,0,5/8/2019
+1,"sorcerer's broom",ELD,0.12,1,0,0,25/12/2019
 1,"sorcerer's wand",DOM,0.09,0,0,3,22/4/2018
+4,"sorin's thirst",WAR,0.05,0,0,6,4/5/2019
+1,"sorin, imperious bloodlord",M20,24.37,1,0,0,5/8/2019
+1,"soul diviner",WAR,1.63,1,0,6,29/4/2019
 1,"soul of new phyrexia",C18,0.52,0,0,0,2/9/2018
 1,"soul of the rapids",RIX,0.02,0,0,0,25/3/2018
 1,"soul of the rapids",RIX,0.04,0,0,0,3/7/2018
+1,"soul salvage",M20,0.03,0,0,0,5/8/2019
 2,"soul salvage",DOM,0.05,0,0,3,22/4/2018
 1,"sovereign's bite",M19,0.0,0,0,0,7/7/2018
+1,"spark double",WAR,0.79,0,0,6,28/04/2019
+4,"spark harvest",WAR,0.06,0,0,6,4/5/2019
 1,"spark of creativity",KLD,0.09,0,0,0,19/2/2018
 1,"spark of creativity",KLD,0.06,0,0,3,11/2/2018
+1,"spark reaper",WAR,0.05,0,0,0,9/6/2019
+1,"spark reaper",WAR,0.04,0,0,6,4/5/2019
+1,"spark reaper",WAR,0.05,0,0,6,1/5/2019
 1,"sparktongue dragon",M19,0.0,0,0,0,7/7/2018
 3,"sparring construct",DOM,0.04,0,0,0,12/5/2018
 2,"sparring construct",DOM,0.04,0,0,3,22/4/2018
+1,"spearpoint oread",THS,0.0,0,0,0,2/7/2019
+1,"spectral sailor",M20,0.23,0,0,0,5/8/2019
 1,"speedway fanatic",KLD,0.06,0,0,3,8/2/2018
 1,"speedway fanatic",KLD,0.08,0,0,3,25/6/2018
 1,"spell pierce",XLN,0.12,0,0,0,25/3/2018
 1,"spell swindle",XLN,0.45,0,0,3,28/2/2018
+2,"spellgorger weird",WAR,0.05,0,0,6,4/5/2019
+1,"spellgorger weird",WAR,0.06,0,0,6,28/04/2019
+1,"spellkeeper weird",WAR,0.04,0,0,0,25/12/2019
+2,"spellkeeper weird",WAR,0.04,0,0,6,4/5/2019
+1,"spellkeeper weird",WAR,0.2,1,0,6,4/5/2019
 1,"spelltwine",C17,0.2,0,0,0,29/3/2018
 2,"sphinx of new prahv",RNA,0.08,0,0,0,20/1/2019
+1,"sphinx's disciple",BNG,0.14,0,0,0,2/7/2019
 4,"sphinx's insight",RNA,0.05,0,0,0,20/1/2019
 1,"sphinx's insight",RNA,0.29,1,0,0,20/1/2019
 1,"spike-tailed ceratops",XLN,0.02,0,0,0,25/3/2018
@@ -2116,27 +2729,37 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"spireside infiltrator",KLD,0.04,0,0,0,19/2/2018
 1,"spireside infiltrator",KLD,0.03,0,0,6,18/7/2018
 1,"spontaneous artist",KLD,0.06,0,0,0,19/2/2018
+1,"sporecap spider",ELD,0.02,0,0,0,12/10/2019
 2,"sporecrown thallid",DOM,0.16,0,0,0,28/5/2018
 2,"sporecrown thallid",DOM,0.23,0,0,0,29/4/2018
+1,"squad captain",M20,0.04,0,0,0,5/8/2019
 1,"squire's devotion",RIX,0.05,0,0,3,23/3/2018
 1,"sram's expertise",AER,0.36,0,0,0,20/2/2018
 1,"sram's expertise",AER,0.47,0,0,0,28/4/2018
+1,"staff of the sun magus",M14,0.09,0,0,0,2/3/2019
 1,"stampeding horncrest",RIX,0.02,0,0,0,25/3/2018
 1,"star-crowned stag",M19,0.0,0,0,0,7/7/2018
 1,"star-crowned stag",M19,0.04,0,0,6,18/7/2018
 1,"start your engines",KLD,0.06,0,0,3,11/2/2018
 1,"status_statue",GRN,0.12,0,0,0,25/11/2018
+2,"steady aim",WAR,0.04,0,0,6,4/5/2019
+2,"steady aim",WAR,0.05,0,0,6,1/5/2019
+3,"stealth mission",WAR,0.06,0,0,6,4/5/2019
 1,"steam vents",GRN,6.59,0,0,0,5/10/2018
 1,"steam vents",GRN,7.63,0,0,0,13/11/2018
 1,"steam vents",GRN,8.19,0,0,3,12/12/2018
 1,"steel hellkite",C18,0.19,0,0,0,2/9/2018
 2,"steeple creeper",RNA,0.03,0,0,0,20/1/2019
 1,"stitcher's supplier",M19,0.19,0,0,0,30/7/2018
+1,"stone golem",M20,0.02,0,0,0,30/9/2019
 3,"stony strength",RNA,0.06,0,0,0,20/1/2019
 1,"storm fleet arsonist",XLN,0.06,0,0,0,25/3/2018
 1,"storm fleet pyromancer",XLN,0.05,0,0,3,28/2/2018
 1,"storm fleet sprinter",RIX,0.08,0,0,0,25/3/2018
+1,"storm strike",RNA,0.04,0,0,6,30/4/2019
+1,"storm the citadel",WAR,0.08,0,0,6,4/5/2019
 1,"storm the vault",RIX,0.63,0,0,0,3/7/2018
+1,"storrev, devkarin lich",WAR,0.4,0,0,6,4/5/2019
 1,"strangling spores",M19,0.0,0,0,0,7/7/2018
 1,"street riot",GRN,0.04,0,0,0,23/11/2018
 1,"street riot",GRN,0.06,0,0,0,30/9/2018
@@ -2144,13 +2767,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"strider harness",RIX,0.07,0,0,3,28/2/2018
 1,"stronghold confessor",DOM,0.03,0,0,0,29/5/2018
 1,"stronghold confessor",DOM,0.04,0,0,3,12/5/2018
+1,"stymied hopes",THS,0.02,0,0,0,2/7/2019
 1,"submerged boneyard",M19,0.05,0,0,6,18/7/2018
 1,"subtle strike",KLD,0.04,0,0,0,12/4/2018
+1,"sudden storm",BNG,0.01,0,0,0,2/7/2019
 1,"sulfur falls",DOM,3.48,0,0,0,28/4/2018
 1,"sulfur falls",DOM,3.76,0,0,3,25/6/2018
 1,"sumala woodshaper",GRN,0.05,0,0,0,5/10/2018
 1,"sumala woodshaper",GRN,0.04,0,0,3,12/12/2018
 1,"sun sentinel",RIX,0.03,0,0,0,3/7/2018
+2,"sunblade angel",WAR,0.09,0,0,6,1/5/2019
+1,"sundering stroke",ELD,0.19,0,0,0,12/10/2019
 2,"sure strike",GRN,0.04,0,0,0,30/9/2018
 1,"sure strike",GRN,0.05,0,0,0,14/10/2018
 1,"surge mare",M19,0.0,0,0,0,7/7/2018
@@ -2177,6 +2804,9 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"syncopate",DOM,0.06,0,0,6,18/7/2018
 2,"syndicate messenger",RNA,0.03,0,0,0,20/1/2019
 1,"syndicate trafficker",KLD,0.14,0,0,3,8/2/2018
+1,"syr carah, the bold",ELD,0.11,0,0,0,12/10/2019
+1,"syr elenora, the discerning",ELD,0.08,0,0,0,12/10/2019
+1,"syr konrad, the grim",ELD,0.12,0,0,0,20/12/2019
 1,"taigam, sidisi's hand",C17,0.5,0,0,0,29/3/2018
 1,"take down",KLD,0.07,0,0,0,19/2/2018
 1,"take down",KLD,0.05,0,0,6,18/7/2018
@@ -2184,12 +2814,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"take heart",GRN,0.07,0,0,0,5/10/2018
 1,"take heart",GRN,0.08,0,0,0,30/9/2018
 1,"take heart",GRN,0.03,0,0,3,8/12/2018
+1,"take heart",GRN,0.05,0,0,6,30/4/2019
 1,"take into custody",AER,0.0,0,0,3,25/1/2018
 1,"take into custody",AER,0.03,0,0,3,14/2/2018
 1,"take into custody",AER,0.12,0,0,3,27/1/2018
 1,"take into custody",AER,0.13,1,0,0,12/9/2018
+1,"tall as a beanstalk",ELD,0.03,0,0,0,12/10/2019
+1,"tall as a beanstalk",ELD,0.08,1,0,0,25/12/2019
 1,"talons of wildwood",M19,0.0,0,0,0,7/7/2018
 1,"talons of wildwood",M19,0.05,0,0,6,18/7/2018
+1,"talrand's invocation",M13,0.09,0,0,0,2/3/2019
+2,"tamiyo's epiphany",WAR,0.06,0,0,6,3/5/2019
 1,"tasseled dromedary",KLD,0.03,0,0,0,19/2/2018
 1,"tasseled dromedary",KLD,0.07,0,0,3,11/2/2018
 1,"tasseled dromedary",KLD,0.08,0,0,3,8/2/2018
@@ -2197,10 +2832,16 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"tatyova, benthic druid",DOM,0.18,0,0,0,28/4/2018
 1,"tatyova, benthic druid",DOM,0.18,0,0,6,18/7/2018
 1,"tawnos, urza's apprentice",C18,1.98,0,0,0,2/9/2018
+3,"tectonic rift",M20,0.02,0,0,0,1/10/2019
+5,"teferi's time twist",WAR,0.06,0,0,6,4/5/2019
+1,"teferi, time raveler",WAR,0.0,0,0,6,30/4/2019
 1,"tempest djinn",DOM,0.32,0,0,0,28/5/2018
+1,"tempting witch",ELD,0.03,0,0,0,12/10/2019
+1,"tenacious dead",M14,0.09,0,0,0,2/3/2019
 2,"tenth district guard",GRN,0.02,0,0,0,25/11/2018
 1,"tenth district guard",GRN,0.03,0,0,0,1/1/2019
 2,"tenth district guard",GRN,0.05,0,0,0,5/10/2018
+1,"tenth district legionnaire",WAR,0.11,0,0,6,30/4/2019
 3,"tenth district veteran",RNA,0.03,0,0,0,20/1/2019
 1,"terminate",C17,0.85,0,0,0,29/3/2018
 1,"terramorphic expanse",C17,0.09,0,0,0,29/3/2018
@@ -2208,13 +2849,21 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"territorial gorger",KLD,0.05,0,0,3,25/6/2018
 1,"terror of the fairgrounds",KLD,0.02,0,0,3,8/2/2018
 1,"tetsuko umezawa, fugitive",DOM,0.09,0,0,0,28/5/2018
+1,"teyo's lightshield",WAR,0.03,0,0,0,25/12/2019
+3,"teyo's lightshield",WAR,0.05,0,0,6,4/5/2019
+2,"teyo's lightshield",WAR,0.06,0,0,6,1/5/2019
+1,"teyo, the shieldmage",WAR,0.16,0,0,6,1/5/2019
 1,"tezzeret's ambition",KLD,0.03,0,0,3,11/2/2018
 1,"tezzeret's touch",AER,0.09,0,0,3,17/6/2018
 1,"thallid omnivore",DOM,0.07,0,0,0,29/4/2018
 1,"thallid soothsayer",DOM,0.09,0,0,0,29/4/2018
 1,"the antiquities war",DOM,0.74,0,0,3,12/5/2018
+1,"the elderspell",WAR,1.92,0,0,6,1/5/2019
 1,"the first eruption",DOM,0.12,0,0,6,18/7/2018
 2,"the flame of keld",DOM,0.11,0,0,0,29/5/2018
+1,"the wanderer",WAR,0.13,0,0,0,9/6/2019
+1,"the wanderer",WAR,0.18,0,0,6,4/5/2019
+2,"thicket crasher",M20,0.04,0,0,0,30/9/2019
 1,"thirst for knowledge",C18,0.23,0,0,0,2/9/2018
 1,"thopter arrest",AER,0.08,0,0,0,20/2/2018
 1,"thopter arrest",AER,0.12,0,0,3,17/6/2018
@@ -2225,11 +2874,14 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"thorn elemental",DOM,0.07,0,0,3,25/6/2018
 1,"thornhide wolves",M19,0.03,0,0,0,3/9/2018
 1,"thornhide wolves",M19,0.01,0,0,6,18/7/2018
+1,"thornwood falls",M20,0.06,0,0,0,5/8/2019
 1,"thought collapse",RNA,0.06,0,0,0,20/1/2019
+2,"thought distortion",M20,0.08,0,0,0,20/12/2019
 1,"thought erasure",GRN,0.24,0,0,3,8/12/2018
 1,"thoughtbound phantasm",GRN,0.13,0,0,0,14/10/2018
 1,"thran temporal gateway",DOM,1.36,0,0,0,12/5/2018
 1,"thrashing brontodon",RIX,0.16,0,0,0,25/3/2018
+1,"thrashing brontodon",M20,0.13,0,0,0,5/8/2019
 1,"thriving grubs",KLD,0.09,0,0,3,11/2/2018
 1,"thriving ibex",KLD,0.02,0,0,3,8/2/2018
 1,"thriving ibex",KLD,0.04,0,0,6,18/7/2018
@@ -2239,70 +2891,112 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"thriving turtle",KLD,0.05,0,0,0,19/2/2018
 2,"thriving turtle",KLD,0.04,0,0,3,31/5/2018
 1,"thud",M19,0.0,0,0,0,7/7/2018
+4,"thunder drake",WAR,0.04,0,0,6,4/5/2019
+3,"thundering ceratok",WAR,0.04,0,0,6,4/5/2019
 2,"tiana, ship's caretaker",DOM,0.09,0,0,0,12/5/2018
 1,"tiana, ship's caretaker",DOM,0.09,0,0,3,12/5/2018
 1,"tiana, ship's caretaker",DOM,0.16,0,0,3,25/6/2018
+1,"tibalt's rager",WAR,0.06,0,0,6,4/5/2019
+1,"tibalt, rakish instigator",WAR_JP,3.12,0,0,6,3/5/2019
 1,"tidings",C18,0.08,0,0,0,2/9/2018
 1,"tilonalli's crown",RIX,0.04,0,0,3,23/3/2018
 1,"tilonalli's summoner",RIX,0.24,0,0,0,3/7/2018
 1,"time of ice",DOM,0.09,0,0,0,12/5/2018
+1,"time wipe",WAR,0.39,0,0,0,9/6/2019
+1,"time wipe",WAR,0.37,0,0,6,4/5/2019
 1,"timestream navigator",RIX,1.62,0,0,0,25/3/2018
 1,"timestream navigator",RIX,1.67,0,0,3,28/2/2018
 1,"tishana's wayfinder",XLN,0.03,0,0,0,25/3/2018
 1,"tishana's wayfinder",XLN,0.04,0,0,3,9/3/2018
+1,"titan of eternal fire",THS,0.06,0,0,0,2/7/2019
 2,"titanic brawl",RNA,0.05,0,0,0,20/1/2019
 1,"tithe taker",RNA,2.0,0,0,0,20/1/2019
+1,"tithebearer giant",WAR,0.04,0,0,0,9/6/2019
+4,"tithebearer giant",WAR,0.04,0,0,6,4/5/2019
 1,"tolarian scholar",DOM,0.03,0,0,0,29/5/2018
 1,"tolarian scholar",DOM,0.03,0,0,3,22/4/2018
 1,"tolarian scholar",M19,0.0,0,0,0,7/7/2018
+2,"toll of the invasion",WAR,0.05,0,0,6,4/5/2019
+2,"tolsimir, friend to wolves",WAR,0.39,0,0,6,4/5/2019
+1,"tome raider",ELD,0.04,0,0,0,12/10/2019
+1,"tomebound lich",M20,0.13,0,0,0,30/9/2019
+1,"tomik, distinguished advokist",WAR,0.37,0,0,0,9/6/2019
+2,"topple the statue",WAR,0.05,0,0,6,4/5/2019
+1,"torbran, thane of red fell",PELD,7.29,0,0,0,25/12/2019
 1,"torch courier",GRN,0.02,0,0,0,1/1/2019
 3,"torch courier",GRN,0.05,0,0,0,23/11/2018
 1,"torch courier",GRN,0.05,0,0,3,12/12/2018
+1,"torch courier",GRN,0.07,0,0,6,30/4/2019
 1,"torch gauntlet",KLD,0.02,0,0,0,19/2/2018
 1,"torch gauntlet",KLD,0.03,0,0,3,25/6/2018
+4,"totally lost",WAR,0.04,0,0,6,4/5/2019
+1,"tournament grounds",ELD,0.62,1,0,0,25/12/2019
 1,"tragic lesson",HOU,0.05,0,0,0,15/4/2018
 2,"tragic poet",DOM,0.05,0,0,0,29/5/2018
 1,"tragic poet",DOM,0.05,0,0,3,22/4/2018
+1,"tranquil cove",M20,0.06,0,0,0,5/8/2019
 1,"traveler's amulet",RIX,0.02,0,0,0,2/7/2018
+1,"traveler's amulet",THS,0.08,0,0,0,2/7/2019
 1,"treasure keeper",AER,0.25,0,0,3,25/1/2018
 1,"treasure nabber",C18,4.25,0,0,0,2/9/2018
 1,"triumph of gerrard",DOM,0.1,0,0,0,29/4/2018
 1,"trollbred guardian",RNA,0.08,0,0,0,20/1/2019
 2,"trophy mage",AER,0.15,0,0,3,17/6/2018
+1,"truefire captain",GRN,0.08,0,0,6,30/4/2019
 2,"trumpet blast",M19,0.0,0,0,0,7/7/2018
 1,"trumpet blast",M19,0.02,0,0,6,18/7/2018
+1,"trusted pegasus",WAR,0.02,0,0,0,25/12/2019
+1,"trusted pegasus",WAR,0.03,0,0,0,9/6/2019
+1,"trusted pegasus",WAR,0.04,0,0,6,4/5/2019
+2,"trusted pegasus",WAR,0.07,0,0,6,30/4/2019
+1,"tuinvale treefolk_oaken boon",PELD,0.17,0,0,0,25/12/2019
+1,"turret ogre",WAR,0.02,0,0,0,25/12/2019
+1,"turret ogre",WAR,0.05,0,0,0,9/6/2019
+1,"turret ogre",WAR,0.04,0,0,6,4/5/2019
 4,"twilight panther",RNA,0.03,0,0,0,20/1/2019
 1,"two-headed giant",DOM,0.12,0,0,3,12/5/2018
 1,"two-headed giant",DOM,0.19,0,0,3,22/4/2018
 1,"two-headed zombie",M19,0.0,0,0,0,7/7/2018
+1,"ugin's conjurant",WAR,0.07,0,0,0,9/6/2019
+1,"ugin, the ineffable",WAR,4.29,0,0,6,4/5/2019
 1,"unbreakable formation",RNA,2.0,0,0,0,20/1/2019
 1,"unbridled growth",AER,0.07,0,0,0,25/2/2018
 2,"unbridled growth",AER,0.06,0,0,3,17/6/2018
 1,"unbridled growth",AER,0.07,0,0,3,11/2/2018
 1,"unbridled growth",AER,0.13,0,0,3,25/1/2018
+1,"unchained berserker",M20,0.05,0,0,0,30/9/2019
 2,"uncomfortable chill",M19,0.0,0,0,0,7/7/2018
 1,"undercity uprising",GRN,0.04,0,0,3,12/12/2018
 1,"underhanded designs",KLD,0.08,0,0,0,19/2/2018
 1,"underrealm lich",GRN,4.1,0,0,0,30/9/2018
 1,"unexplained disappearance",GRN,0.06,0,0,0,13/11/2018
+2,"unexplained vision",ELD,0.03,0,0,0,20/12/2019
+1,"unexplained vision",ELD,0.14,1,0,0,12/10/2019
+1,"unholy indenture",M20,0.05,0,0,0,5/8/2019
 1,"universal solvent",AER,0.03,0,0,0,12/9/2018
 2,"universal solvent",AER,0.04,0,0,0,25/2/2018
 2,"universal solvent",AER,0.03,0,0,3,14/2/2018
+1,"unlikely aid",WAR,0.04,0,0,6,4/5/2019
+1,"unlikely aid",WAR,0.05,0,0,6,30/4/2019
 1,"unmoored ego",GRN,2.29,0,0,0,30/9/2018
 1,"unquenchable thirst",HOU,0.03,0,0,0,15/4/2018
 1,"unquenchable thirst",HOU,0.1,1,0,0,15/4/2018
 1,"unstable obelisk",C18,0.11,0,0,0,2/9/2018
 1,"unstable obelisk",C17,0.08,0,0,0,29/3/2018
+1,"unsummon",M20,0.06,0,0,0,5/8/2019
+1,"unsummon",M20,0.07,0,0,0,20/12/2019
 1,"unwind",DOM,0.09,0,0,0,28/4/2018
 3,"unwind",DOM,0.08,0,0,3,12/5/2018
 1,"unwinding clock",C18,2.36,0,0,0,2/9/2018
 1,"urban utopia",GRN,0.03,0,0,0,1/1/2019
 1,"urban utopia",GRN,0.04,0,0,0,23/11/2018
 2,"urban utopia",GRN,0.05,0,0,0,18/10/2018
+1,"urban utopia",GRN,0.06,0,0,6,30/4/2019
 1,"urza's tome",DOM,0.05,0,0,0,29/5/2018
 1,"valduk, keeper of the flame",DOM,0.09,0,0,0,29/5/2018
 1,"valduk, keeper of the flame",DOM,0.13,0,0,0,28/4/2018
 1,"vampire neonate",M19,0.0,0,0,0,7/7/2018
+3,"vampire opportunist",WAR,0.04,0,0,6,4/5/2019
 1,"vampire sovereign",M19,0.0,0,0,0,7/7/2018
 1,"varchild, betrayer of kjeldor",C18,0.88,0,0,0,2/9/2018
 2,"vedalken blademaster",KLD,0.02,0,0,0,19/2/2018
@@ -2310,13 +3004,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"vedalken humiliator",C18,0.7,0,0,0,2/9/2018
 1,"vedalken mesmerist",GRN,0.01,0,0,0,13/11/2018
 3,"vedalken mesmerist",GRN,0.02,0,0,0,18/10/2018
+1,"veil of summer",M20,2.46,0,0,0,1/10/2019
 2,"veiled shade",GRN,0.02,0,0,3,12/12/2018
 1,"vela the night-clad",C17,0.34,0,0,0,29/3/2018
+1,"vengeful warchief",M20,0.05,0,0,0,5/8/2019
 2,"verdant automaton",AER,0.02,0,0,0,2/6/2018
 1,"verdant automaton",AER,0.02,0,0,3,17/6/2018
 1,"vernadi shieldmate",GRN,0.04,0,0,0,18/10/2018
 1,"vernadi shieldmate",GRN,0.05,0,0,0,15/10/2018
 1,"vessel of endless rest",C18,0.07,0,0,0,2/9/2018
+1,"vial of dragonfire",M20,0.03,0,0,0,5/8/2019
+1,"vial of dragonfire",M20,0.05,0,0,0,1/10/2019
 1,"viashino pyromancer",M19,0.08,0,0,0,14/9/2018
 2,"vicious offering",DOM,0.07,0,0,0,29/5/2018
 1,"vicious offering",DOM,0.06,0,0,3,22/4/2018
@@ -2333,21 +3031,44 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"vivid revival",GRN,0.09,0,0,0,1/1/2019
 1,"vivid revival",GRN,0.11,0,0,0,18/10/2018
 1,"vivid revival",GRN,0.09,0,0,3,12/12/2018
+3,"vivien's grizzly",WAR,0.05,0,0,6,4/5/2019
+1,"vivien, champion of the wilds",WAR,2.09,0,0,0,9/6/2019
+1,"vizier of the scorpion",WAR,0.09,0,0,6,30/4/2019
 1,"vizier of the true",HOU,0.04,0,0,0,15/4/2018
 1,"vodalian arcanist",DOM,0.04,0,0,0,28/5/2018
 2,"vodalian arcanist",DOM,0.05,0,0,3,12/5/2018
+1,"void stalker",M13,0.15,0,0,0,2/3/2019
 1,"voltaic brawler",KLD,0.1,0,0,0,12/9/2018
 1,"voltaic brawler",KLD,0.12,0,0,3,11/2/2018
+1,"vorstclaw",M20,0.02,0,0,0,6/10/2019
+4,"vraska's finisher",WAR,0.05,0,0,6,4/5/2019
 1,"vraska, golgari queen",GRN,9.36,0,0,3,8/12/2018
+1,"vraska, swarm's eminence",WAR,0.08,0,0,0,25/12/2019
+1,"vraska, swarm's eminence",WAR,0.14,0,0,6,4/5/2019
+1,"vraska, swarm's eminence",WAR_JP,5.12,0,0,6,3/5/2019
+1,"vraska, swarm's eminence",WAR_JP,0.0,1,0,6,3/5/2019
+1,"vulpine goliath",THS,0.05,0,0,0,2/7/2019
 1,"walking ballista",AER,10.07,0,0,0,25/2/2018
 1,"walking corpse",M19,0.0,0,0,0,7/7/2018
 1,"wall of lost thoughts",RNA,0.1,0,0,0,20/1/2019
 2,"wall of mist",GRN,0.04,0,0,0,25/11/2018
 3,"wall of mist",GRN,0.07,0,0,0,30/9/2018
 1,"wall of mist",GRN,0.05,0,0,3,8/12/2018
+1,"wall of mist",GRN,0.06,0,0,6,30/4/2019
 1,"wall of mist",M19,0.0,0,0,0,7/7/2018
+1,"wall of runes",WAR,0.04,0,0,0,9/6/2019
+3,"wall of runes",WAR,0.06,0,0,6,4/5/2019
+1,"wanderer's strike",WAR,0.04,0,0,0,9/6/2019
+1,"wanderer's strike",WAR,0.06,0,0,6,4/5/2019
+1,"wanderer's strike",WAR,0.07,0,0,6,1/5/2019
+1,"wandermare",ELD,0.08,0,0,0,12/10/2019
+1,"wandermare",ELD,0.13,1,0,0,25/12/2019
+4,"war screecher",WAR,0.04,0,0,6,4/5/2019
+1,"warchanter of mogis",BNG,0.05,0,0,0,2/7/2019
 1,"warcry phoenix",DOM,0.05,0,0,0,28/5/2018
 1,"warcry phoenix",DOM,0.06,0,0,6,18/7/2018
+1,"warden of evos isle",M14,0.12,0,0,0,2/3/2019
+2,"wardscale crocodile",WAR,0.04,0,0,6,4/5/2019
 1,"warkite marauder",RIX,1.38,0,0,0,25/3/2018
 1,"warlord's fury",DOM,0.05,0,0,0,12/5/2018
 4,"warlord's fury",DOM,0.06,0,0,0,29/5/2018
@@ -2367,6 +3088,7 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"waterknot",RIX,0.04,0,0,3,9/3/2018
 1,"watery grave",GRN,6.63,0,0,0,30/9/2018
 1,"wayward giant",KLD,0.01,0,0,0,19/2/2018
+1,"weapon rack",ELD,0.04,0,0,0,12/10/2019
 1,"weaponcraft enthusiast",KLD,0.11,0,0,0,19/2/2018
 1,"weaponcraft enthusiast",KLD,0.09,0,0,3,8/2/2018
 1,"weatherlight",DOM,2.62,0,0,3,22/4/2018
@@ -2389,11 +3111,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"whisper agent",GRN,0.06,0,0,3,12/12/2018
 1,"whisper, blood liturgist",DOM,0.13,0,0,3,22/4/2018
 1,"whispering snitch",GRN,0.09,0,0,0,15/10/2018
+1,"widespread brutality",WAR,0.24,0,0,6,1/5/2019
 1,"wild ceratok",GRN,0.0,0,0,0,30/9/2018
 2,"wild ceratok",GRN,0.01,0,0,0,13/11/2018
 1,"wild ceratok",GRN,0.02,0,0,0,1/1/2019
 1,"wild onslaught",DOM,0.09,0,0,0,12/5/2018
 1,"wild wanderer",KLD,0.04,0,0,0,19/2/2018
+1,"wildwood tracker",ELD,0.04,0,0,0,12/10/2019
 1,"wily bandar",KLD,0.05,0,0,3,11/2/2018
 1,"wind drake",KLD,0.06,0,0,0,19/2/2018
 1,"wind drake",KLD,0.03,0,0,3,8/2/2018
@@ -2408,11 +3132,17 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 2,"wishcoin crab",GRN,0.02,0,0,0,30/9/2018
 1,"wishcoin crab",GRN,0.03,0,0,0,23/11/2018
 1,"wispweaver angel",KLD,0.07,0,0,3,8/2/2018
+1,"witch's cottage",ELD,0.07,0,0,0,12/10/2019
+1,"witching well",ELD,0.08,0,0,0,12/10/2019
 1,"wizard's lightning",DOM,0.22,0,0,3,22/4/2018
 1,"wizard's retort",DOM,0.23,0,0,3,22/4/2018
 1,"wojek bodyguard",GRN,0.03,0,0,0,1/1/2019
 1,"wojek bodyguard",GRN,0.04,0,0,0,30/9/2018
 1,"wojek bodyguard",GRN,0.04,0,0,3,8/12/2018
+1,"wolf's quarry",ELD,0.13,1,0,0,25/12/2019
+1,"wolfkin bond",M20,0.04,0,0,0,5/8/2019
+1,"wolfrider's saddle",M20,0.08,0,0,0,5/8/2019
+1,"woodborn behemoth",M14,0.04,0,0,0,2/3/2019
 1,"woodland cemetery",DOM,3.22,0,0,0,12/5/2018
 1,"woodland stream",M19,0.0,0,0,0,7/7/2018
 1,"woodland stream",RIX,0.06,0,0,3,23/3/2018
@@ -2422,6 +3152,13 @@ Quantity,Name,Code,PurchasePrice,Foil,Condition,Language,PurchaseDate
 1,"wrangle",AER,0.05,0,0,0,25/2/2018
 1,"wrangle",AER,0.03,0,0,3,17/6/2018
 1,"wrangle",AER,0.05,0,0,3,11/2/2018
+1,"yarok's wavecrasher",M20,0.05,0,0,0,1/10/2019
+1,"yarok's wavecrasher",M20,0.2,1,0,0,6/10/2019
 1,"yavimaya sapherd",DOM,0.06,0,0,0,28/5/2018
+1,"yoked ox",THS,0.04,0,0,0,2/7/2019
+2,"yoked ox",M20,0.02,0,0,0,5/8/2019
+1,"yoked ox",M20,0.05,0,0,0,1/10/2019
+1,"youthful knight",ELD,0.03,0,0,0,12/10/2019
 1,"zahid, djinn of the lamp",DOM,1.3,0,0,0,29/4/2018
+1,"zephyr charge",M20,0.03,0,0,0,5/8/2019
 1,"zhalfirin void",DOM,0.3,0,0,3,22/4/2018

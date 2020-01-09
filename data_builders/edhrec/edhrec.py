@@ -59,13 +59,20 @@ def evaluate_card(card_name):
     return None
 
   # Here's where we parse the stuff we want out of the very tasty JSON that EDHREC provides
-  if ('card' in data.keys()) and ('cards' in data['card']) and ('edhrec_rank' in data['card']['cards'][0]['dict'].keys()):
+  if ('card' in data.keys()) and ('cards' in data['card']):
+    print("----", file=sys.stderr)
+    print (data['card']['cards'], file=sys.stderr)
+  if ('card' in data.keys()) and ('cards' in data['card']) and ('dict' in data['card']['cards'][0].keys()) and ('edhrec_rank' in data['card']['cards'][0]['dict'].keys()):
     our_data['edhrec_rank'] = data['card']['cards'][0]['dict']['edhrec_rank']
   else:
     our_data['edhrec_rank'] = None
 
   if ('card' in data.keys()) and ('label' in data['card']):
-    our_data['deck_count'] = int(data['card']['label'].split()[0])
+    split_label = data['card']['label'].split()
+    if split_label[0] == 'In':
+      our_data['deck_count'] = int(split_label[1])
+    else:
+      our_data['deck_count'] = int(split_label[0])
   else:
     our_data['deck_count'] = 0
 
@@ -88,11 +95,13 @@ def evaluate_card(card_name):
     our_data['tribe'] = data['card']['tribe']
 
   our_data['synergies'] = {}
-  if data['cardlists'] and data['cardlists'] != None:
+  if ('cardlists' in data.keys()) and (data['cardlists'] != None):
     for cardlist in data['cardlists']:
       if cardlist['tag'] != 'topcommanders':
         for card in cardlist['cardviews']:
           syn_name = card['name'].split(" // ")[0] # because of cards with Partner, like Ikra Shidiqi
+          if syn_name not in normalized_card_names.keys():
+            continue
           syn_name = normalized_card_names[syn_name]
           if card_name == syn_name:
             continue
