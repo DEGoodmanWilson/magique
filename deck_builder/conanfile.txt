@@ -1,7 +1,7 @@
 [requires]
 # ga2/1.0.0@DEGoodmanWilson/testing
 jsonformoderncpp/[~=3.1]@vthiery/stable
-ga3/[~=1.0]@DEGoodmanWilson/testing
+ga3/[~=0.1]@DEGoodmanWilson/testing
 
 [generators]
 cmake
