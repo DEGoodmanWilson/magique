@@ -3,7 +3,7 @@ bs4==0.0.1
 certifi==2018.11.29
 chardet==3.0.4
 idna==2.8
-PyYAML==3.13
+PyYAML==5.1
 requests==2.21.0
 soupsieve==1.7.3
 Unidecode==1.0.23
