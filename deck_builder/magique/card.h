@@ -10,7 +10,7 @@
 #include <set>
 #include <unordered_map>
 #include <nlohmann/json.hpp>
-#include <experimental/optional>
+#include <optional>
 
 namespace magique
 {
@@ -143,6 +143,7 @@ struct card
         frontier,
         brawl,
         highlander,
+        pioneer,
         other
     };
 
@@ -182,12 +183,13 @@ struct card
             {card::format::penny,     card::legality::illegal},
             {card::format::frontier,  card::legality::illegal},
             {card::format::brawl,     card::legality::illegal},
-            {card::format::highlander, card::legality::legal}, // Everything is legal in highlander!
-            {card::format::other,     card::legality::illegal}
+            {card::format::highlander,card::legality::legal}, // Everything is legal in highlander!
+            {card::format::pioneer,   card::legality::illegal},
+            {card::format::other,     card::legality::legal} // Just in case
     };
     std::string text;
-    std::experimental::optional<int8_t> power;
-    std::experimental::optional<int8_t> toughness;
+    std::optional<int8_t> power;
+    std::optional<int8_t> toughness;
     uint8_t converted_mana_cost{0};
 
     std::vector<uint64_t> mechanics;

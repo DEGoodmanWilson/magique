@@ -36,7 +36,7 @@ static const char USAGE[] =
     Options:
       -h --help     Show this screen.
       --version     Show version.
-      -f <format> --format=<format>  Choose the deck format from "standard", "legacy", "modern", "commander" [default:"standard"]
+      -f <format> --format=<format>  Choose the deck format from "standard", "legacy", "modern", "commander", "pioneer", etc. [default:"standard"]
       -p <size> --population=<size>  Set initial population size [default: 1000]
       -g <count> --generations=<count>  Set the number of generations to run [default: 1000]
       -k <card> --key_card=<card>  Set one or more key cards that must be included in the deck. In commander decks, this is your commander.
@@ -90,9 +90,58 @@ int main(int argc, char **argv)
                     format = card::format::commander;
                     deck_size = 60; //plus 40 lands // TODO minus key cards
                 }
-                else
+                        else if (arg.second.asString() == "legacy")
                 {
-                    format = card::format::standard;
+                            format = card::format::legacy;
+                }
+                        else if (arg.second.asString() == "modern")
+                {
+                            format = card::format::modern;
+                }
+                        else if (arg.second.asString() == "pauper")
+                {
+                            format = card::format::pauper;
+                }
+                        else if (arg.second.asString() == "standard")
+                {
+                            format = card::format::standard;
+                }
+                        else if (arg.second.asString() == "vintage")
+                {
+                            format = card::format::vintage;
+                }
+                        else if (arg.second.asString() == "onevone")
+                {
+                            format = card::format::onevone;
+                }
+                        else if (arg.second.asString() == "duel")
+                {
+                            format = card::format::duel;
+                    deck_size = 60; //plus 40 lands // TODO minus key cards
+                }
+                        else if (arg.second.asString() == "penny")
+                {
+                            format = card::format::penny;
+                }
+                        else if (arg.second.asString() == "frontier")
+                {
+                            format = card::format::frontier;
+                }
+                        else if (arg.second.asString() == "brawl")
+                {
+                            format = card::format::brawl;
+                }
+                        else if (arg.second.asString() == "highlander")
+                {
+                            format = card::format::highlander;
+                }
+                        else if (arg.second.asString() == "pioneer")
+                {
+                            format = card::format::pioneer;
+                }
+                        else
+                {
+                            format = card::format::other;
                 }
             }
         }

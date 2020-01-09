@@ -282,6 +282,10 @@ void from_json(const nlohmann::json &j, card &p)
             {
                 format = card::format::pauper;
             }
+            else if (format_string == "pioneer")
+            {
+                format = card::format::pioneer;
+            }
             else
             {
                 // future
@@ -335,6 +339,9 @@ std::string to_string(const card::format &f)
             break;
         case card::format::highlander:
             return "highlander";
+            break;
+        case card::format::pioneer:
+            return "pioneer";
             break;
         case card::format::other:
         default:
